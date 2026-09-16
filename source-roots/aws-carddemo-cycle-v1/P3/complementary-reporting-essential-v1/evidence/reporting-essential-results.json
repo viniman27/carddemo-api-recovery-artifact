@@ -1,0 +1,844 @@
+{
+  "createdUtc": "2026-09-16T11:07:00Z",
+  "eofLimits": [
+    "parser stops at physical TRANREPT EOF",
+    "CBTRN03C EOF totals branch remains source-qualified as inconclusive unless selected and observed",
+    "missing output is not treated as empty"
+  ],
+  "freezeManifests": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/frozen-inputs/date-boundaries-in-out-v1/freeze-manifest.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/frozen-inputs/empty-in-range-v1/freeze-manifest.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/frozen-inputs/card-break-two-groups-v1/freeze-manifest.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/frozen-inputs/pagination-threshold-20-v1/freeze-manifest.json"
+  ],
+  "kind": "complementary-reporting-essential-v1-results",
+  "obligationPartitionMatrix": [
+    {
+      "caseStatuses": {
+        "date-boundaries-in-out-v1": "pass"
+      },
+      "evidence": "detail order contains start-date record",
+      "group": "date",
+      "notCountsProxy": true,
+      "obligation": "R-DATE-START",
+      "partition": "inclusive start boundary",
+      "qualification": "source-grounded",
+      "relatedCases": [
+        "date-boundaries-in-out-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "date-boundaries-in-out-v1": "pass"
+      },
+      "evidence": "detail order contains end-date record",
+      "group": "date",
+      "notCountsProxy": true,
+      "obligation": "R-DATE-END",
+      "partition": "inclusive end boundary",
+      "qualification": "source-grounded",
+      "relatedCases": [
+        "date-boundaries-in-out-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "date-boundaries-in-out-v1": "pass"
+      },
+      "evidence": "before-range id absent from details",
+      "group": "date",
+      "notCountsProxy": true,
+      "obligation": "R-DATE-OUT-BEFORE",
+      "partition": "exclude before range",
+      "qualification": "source-grounded",
+      "relatedCases": [
+        "date-boundaries-in-out-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "date-boundaries-in-out-v1": "pass"
+      },
+      "evidence": "after-range id absent from details",
+      "group": "date",
+      "notCountsProxy": true,
+      "obligation": "R-DATE-OUT-AFTER",
+      "partition": "exclude after range",
+      "qualification": "source-grounded",
+      "relatedCases": [
+        "date-boundaries-in-out-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "empty-in-range-v1": "pass"
+      },
+      "evidence": "known empty/no-detail output only, no positive total claim",
+      "group": "date",
+      "notCountsProxy": true,
+      "obligation": "R-EMPTY",
+      "partition": "empty in-range partition",
+      "qualification": "runtime-observed",
+      "relatedCases": [
+        "empty-in-range-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "card-break-two-groups-v1": "pass"
+      },
+      "evidence": "detail order across two cards; totals guarded",
+      "group": "grouping",
+      "notCountsProxy": true,
+      "obligation": "R-GROUP-CARDBREAK",
+      "partition": "card/account break partition",
+      "qualification": "runtime-observed/source-limited",
+      "relatedCases": [
+        "card-break-two-groups-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "pagination-threshold-20-v1": "pass"
+      },
+      "evidence": "20 detail records and raw pagination records preserved",
+      "group": "pagination",
+      "notCountsProxy": true,
+      "obligation": "R-PAGINATION-20",
+      "partition": "WS-PAGE-SIZE=20 threshold",
+      "qualification": "source-grounded/runtime-observed",
+      "relatedCases": [
+        "pagination-threshold-20-v1"
+      ]
+    },
+    {
+      "caseStatuses": {
+        "card-break-two-groups-v1": "pass",
+        "date-boundaries-in-out-v1": "pass",
+        "pagination-threshold-20-v1": "pass"
+      },
+      "evidence": "not used as final arithmetic oracle because source adds stale TRAN-AMT on EOF path",
+      "group": "totals",
+      "notCountsProxy": true,
+      "obligation": "R-TOTALS-EOF-GUARD",
+      "partition": "EOF totals branch qualification",
+      "qualification": "inconclusive-by-source",
+      "relatedCases": [
+        "date-boundaries-in-out-v1",
+        "card-break-two-groups-v1",
+        "pagination-threshold-20-v1"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/p2b-runs/reporting-a32zkixd/audit.json",
+      "caseId": "date-boundaries-in-out-v1",
+      "expectedDetailIds": [
+        "REPORT-START-001",
+        "REPORT-END---001"
+      ],
+      "failures": [],
+      "framing": {
+        "bytes": 798,
+        "classification": "available",
+        "eofLimit": "parse stops at physical file byte length",
+        "recordCount": 6,
+        "recordSize": 133
+      },
+      "observedDetailIds": [
+        "REPORT-START-001",
+        "REPORT-END---001"
+      ],
+      "observedTotals": [],
+      "parsedReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/date-boundaries-in-out-v1.parsed.json",
+      "partitions": [
+        "date:start-boundary",
+        "date:end-boundary",
+        "date:before-out-of-range",
+        "date:after-out-of-range"
+      ],
+      "rawRecordCount": 6,
+      "rawReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/date-boundaries-in-out-v1.TRANREPT.bin",
+      "rawReportSha256": "6ad7567a25afe0bb6ae7a84bf273f5e4da9cddf2cfe00b906ceaa9903bfb12d5",
+      "responseBody": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "endText": "2022-07-31",
+                "reportLongNameText": "Daily Transaction Report",
+                "reportShortNameText": "DALYREPT",
+                "startText": "2022-07-01"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.00",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "REPORT-START-001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "2.00",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "REPORT-END---001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            }
+          ]
+        },
+        "track": "reporting"
+      },
+      "runtimeStatus": 200,
+      "status": "pass",
+      "totalQualification": "inconclusive-eof-branch"
+    },
+    {
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/p2b-runs/reporting-owt_mjj_/audit.json",
+      "caseId": "empty-in-range-v1",
+      "expectedDetailIds": [],
+      "failures": [],
+      "framing": {
+        "bytes": 0,
+        "classification": "known_empty",
+        "eofLimit": "parse stops at physical file byte length",
+        "recordCount": 0,
+        "recordSize": 133
+      },
+      "observedDetailIds": [],
+      "observedTotals": [],
+      "parsedReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/empty-in-range-v1.parsed.json",
+      "partitions": [
+        "date:none-in-range",
+        "empty-output-qualified-as-no-details-only"
+      ],
+      "rawRecordCount": 0,
+      "rawReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/empty-in-range-v1.TRANREPT.bin",
+      "rawReportSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responseBody": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": []
+        },
+        "track": "reporting"
+      },
+      "runtimeStatus": 200,
+      "status": "pass",
+      "totalQualification": "inconclusive-eof-branch"
+    },
+    {
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/p2b-runs/reporting-rgpg50pn/audit.json",
+      "caseId": "card-break-two-groups-v1",
+      "expectedDetailIds": [
+        "GROUP1-ITEM-0001",
+        "GROUP1-ITEM-0002",
+        "GROUP2-ITEM-0001",
+        "GROUP2-ITEM-0002"
+      ],
+      "failures": [],
+      "framing": {
+        "bytes": 1729,
+        "classification": "available",
+        "eofLimit": "parse stops at physical file byte length",
+        "recordCount": 13,
+        "recordSize": 133
+      },
+      "observedDetailIds": [
+        "GROUP1-ITEM-0001",
+        "GROUP1-ITEM-0002",
+        "GROUP2-ITEM-0001",
+        "GROUP2-ITEM-0002"
+      ],
+      "observedTotals": [
+        {
+          "amount": "3.33",
+          "amountText": "+          3.33",
+          "index": 6,
+          "label": "Account Total",
+          "offset": 798,
+          "rawBytes": "4163636f756e7420546f74616c2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202020332e3333202020202020202020202020202020202020202020",
+          "rawText": "Account Total....................................................................................+          3.33"
+        },
+        {
+          "amount": "15.54",
+          "amountText": "+         15.54",
+          "index": 10,
+          "label": "Page Total",
+          "offset": 1330,
+          "rawBytes": "5061676520546f74616c202e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202031352e3534202020202020202020202020202020202020202020",
+          "rawText": "Page Total ......................................................................................+         15.54"
+        },
+        {
+          "amount": "15.54",
+          "amountText": "+         15.54",
+          "index": 12,
+          "label": "Grand Total",
+          "offset": 1596,
+          "rawBytes": "4772616e6420546f74616c2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202031352e3534202020202020202020202020202020202020202020",
+          "rawText": "Grand Total......................................................................................+         15.54"
+        }
+      ],
+      "parsedReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/card-break-two-groups-v1.parsed.json",
+      "partitions": [
+        "group:first-card",
+        "group:card-break",
+        "order:multiplicity"
+      ],
+      "rawRecordCount": 13,
+      "rawReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/card-break-two-groups-v1.TRANREPT.bin",
+      "rawReportSha256": "0606e46d59559cd5f280f77a4ae7fad2cea97a65bfcaead374905e9be4fb516c",
+      "responseBody": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "endText": "2022-07-31",
+                "reportLongNameText": "Daily Transaction Report",
+                "reportShortNameText": "DALYREPT",
+                "startText": "2022-07-01"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.11",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "GROUP1-ITEM-0001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "2.22",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "GROUP1-ITEM-0002",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "account",
+                "valueText": "+          3.33"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000002",
+                "amountText": "3.33",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "GROUP2-ITEM-0001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000002",
+                "amountText": "4.44",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "GROUP2-ITEM-0002",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "page",
+                "valueText": "+         15.54"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "grand",
+                "valueText": "+         15.54"
+              }
+            }
+          ]
+        },
+        "track": "reporting"
+      },
+      "runtimeStatus": 200,
+      "status": "pass",
+      "totalQualification": "inconclusive-eof-branch"
+    },
+    {
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/p2b-runs/reporting-vmnds_8v/audit.json",
+      "caseId": "pagination-threshold-20-v1",
+      "expectedDetailIds": [
+        "PAGE20-00000000",
+        "PAGE20-00000001",
+        "PAGE20-00000002",
+        "PAGE20-00000003",
+        "PAGE20-00000004",
+        "PAGE20-00000005",
+        "PAGE20-00000006",
+        "PAGE20-00000007",
+        "PAGE20-00000008",
+        "PAGE20-00000009",
+        "PAGE20-00000010",
+        "PAGE20-00000011",
+        "PAGE20-00000012",
+        "PAGE20-00000013",
+        "PAGE20-00000014",
+        "PAGE20-00000015",
+        "PAGE20-00000016",
+        "PAGE20-00000017",
+        "PAGE20-00000018",
+        "PAGE20-00000019"
+      ],
+      "failures": [],
+      "framing": {
+        "bytes": 4389,
+        "classification": "available",
+        "eofLimit": "parse stops at physical file byte length",
+        "recordCount": 33,
+        "recordSize": 133
+      },
+      "observedDetailIds": [
+        "PAGE20-00000000",
+        "PAGE20-00000001",
+        "PAGE20-00000002",
+        "PAGE20-00000003",
+        "PAGE20-00000004",
+        "PAGE20-00000005",
+        "PAGE20-00000006",
+        "PAGE20-00000007",
+        "PAGE20-00000008",
+        "PAGE20-00000009",
+        "PAGE20-00000010",
+        "PAGE20-00000011",
+        "PAGE20-00000012",
+        "PAGE20-00000013",
+        "PAGE20-00000014",
+        "PAGE20-00000015",
+        "PAGE20-00000016",
+        "PAGE20-00000017",
+        "PAGE20-00000018",
+        "PAGE20-00000019"
+      ],
+      "observedTotals": [
+        {
+          "amount": "17.20",
+          "amountText": "+         17.20",
+          "index": 20,
+          "label": "Page Total",
+          "offset": 2660,
+          "rawBytes": "5061676520546f74616c202e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202031372e3230202020202020202020202020202020202020202020",
+          "rawText": "Page Total ......................................................................................+         17.20"
+        },
+        {
+          "amount": "5.89",
+          "amountText": "+          5.89",
+          "index": 30,
+          "label": "Page Total",
+          "offset": 3990,
+          "rawBytes": "5061676520546f74616c202e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202020352e3839202020202020202020202020202020202020202020",
+          "rawText": "Page Total ......................................................................................+          5.89"
+        },
+        {
+          "amount": "23.09",
+          "amountText": "+         23.09",
+          "index": 32,
+          "label": "Grand Total",
+          "offset": 4256,
+          "rawBytes": "4772616e6420546f74616c2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2b20202020202020202032332e3039202020202020202020202020202020202020202020",
+          "rawText": "Grand Total......................................................................................+         23.09"
+        }
+      ],
+      "parsedReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/pagination-threshold-20-v1.parsed.json",
+      "partitions": [
+        "pagination:source-page-size-20",
+        "order:multiplicity",
+        "totals:eof-guarded"
+      ],
+      "rawRecordCount": 33,
+      "rawReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/pagination-threshold-20-v1.TRANREPT.bin",
+      "rawReportSha256": "5565bf93d4307003ad280df4c67e63ae02cd4711281cd1af09bc1837120e48a5",
+      "responseBody": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "endText": "2022-07-31",
+                "reportLongNameText": "Daily Transaction Report",
+                "reportShortNameText": "DALYREPT",
+                "startText": "2022-07-01"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.00",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000000",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.01",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.02",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000002",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.03",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000003",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.04",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000004",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.05",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000005",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.06",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000006",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.07",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000007",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.08",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000008",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.09",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000009",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.10",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000010",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.11",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000011",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.12",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000012",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.13",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000013",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.14",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000014",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.15",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000015",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "page",
+                "valueText": "+         17.20"
+              }
+            },
+            {
+              "kind": "header",
+              "value": {
+                "endText": "2022-07-31",
+                "reportLongNameText": "Daily Transaction Report",
+                "reportShortNameText": "DALYREPT",
+                "startText": "2022-07-01"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.16",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000016",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.17",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000017",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.18",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000018",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "1.19",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "System",
+                "transactionId": "PAGE20-00000019",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "page",
+                "valueText": "+          5.89"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "grand",
+                "valueText": "+         23.09"
+              }
+            }
+          ]
+        },
+        "track": "reporting"
+      },
+      "runtimeStatus": 200,
+      "status": "pass",
+      "totalQualification": "inconclusive-eof-branch"
+    }
+  ],
+  "scope": "new package only; REPORTING complementary essentials; local API {} external fixture selection; no COBOL/API/contracts/main study edits",
+  "sourceFacts": {
+    "cbtrn03c_path": "app/cbl/CBTRN03C.cbl",
+    "cbtrn03c_sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+    "cvtra07y_path": "app/cpy/CVTRA07Y.cpy",
+    "cvtra07y_sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+    "date_filter_lines": [
+      170,
+      178
+    ],
+    "detail_layout_lines": [
+      15,
+      31
+    ],
+    "eof_total_lines": [
+      197,
+      204
+    ],
+    "eof_totals_has_stale_tran_amt_guard": true,
+    "page_size_source_value": 20,
+    "qualification": "source-grounded byte/order checks; final totals qualified only as inconclusive under EOF branch unless selected and observed",
+    "report_record_bytes": 133,
+    "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+    "total_layout_lines": [
+      50,
+      66
+    ],
+    "transaction_record_bytes": 350
+  },
+  "statusCounts": {
+    "pass": 4
+  }
+}

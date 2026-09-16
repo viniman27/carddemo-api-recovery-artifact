@@ -1,0 +1,24 @@
+{
+  "contract_id": "E1-2",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+  "contract_sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+  "operation_id": "generateInterestTransactions",
+  "track": "interest",
+  "request_sha256": "7ed7bcc4fed99509a7d839d8fd93ea3b65179ed7bedeee1369032007e4766914",
+  "request_policy": "schema-validated original E1 envelope; bindings resolved by local P3 technical registry; inline arrays preserved in request audit but P2b execution uses pinned file package resources",
+  "binding_policy": "opaque p3:<track>:<DD> identifiers; no public reset, telemetry, or dataset management endpoint",
+  "encoding_policy": "ASCII/GnuCOBOL -fsign=ascii for local execution; raw records preserved as base64 or 133-character strings per contract response schema",
+  "linkage_parameter_policy": "interest X(10) bytes come from request field and pinned PARMFILE; no date parsing, calendar default, rounding or suffix uniqueness invented",
+  "semantic_ambiguities": [
+    {
+      "point": "CBACT04C alternate-key account lookup when multiple card rows exist for one account",
+      "recommendation": "Do not select a card in the facade; preserve runtime-selected XREFFILE alternate-key behavior and register as an evaluation ambiguity if a case depends on which card is chosen."
+    }
+  ],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs/p2b-runs/interest-4vv1f01e/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs/p2b-runs/interest-4vv1f01e"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs/E1-2/interest/E1-2-interest-1789471029289/response.json"
+}

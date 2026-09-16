@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-SYN-nominal",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T1:SYN",
+      "parameters": {},
+      "provenance": [
+        "T1:SYN:nominal"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "bcb76b0fa365b3b5eb26e33c9532659d8ef8eced3917a5236ca280135c137a8f",
+  "suite_id": "T1"
+}

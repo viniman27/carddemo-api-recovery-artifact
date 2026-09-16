@@ -1,0 +1,371 @@
+{
+  "kind": "unified-preflight-v1-report",
+  "scope": "single executable technical preflight; not campaign; not official T1/T2/T3/T4 generation",
+  "harnessImport": {
+    "module": "campaign_harness",
+    "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "bodyCapturePatch": {
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "collect raw response bytes for original ContractChecker while preserving harness-v3 module file/hash",
+    "originalFunctionId": 4364901760
+  },
+  "prepared": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1",
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-preparation",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P3/fixture-copy-current/package",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P3/fixture-copy-current/registry.json",
+    "registry_sha256": "25842708733ebb20e8cf07f324025de1f8702213372ecb14ad3f2dd0ae1b231c",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+  },
+  "adapterEvidence": {
+    "sddInput": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/adapter-inputs/sdd-three-track-frozen-requests.json",
+    "fewshotInput": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/adapter-inputs/fewshot-post-patch-representative.txt",
+    "unionPreviewLedger": [
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-posting",
+        "action": "kept",
+        "destination": "T4-0001"
+      },
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-interest",
+        "action": "kept",
+        "destination": "T4-0002"
+      },
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-reporting",
+        "action": "kept",
+        "destination": "T4-0003"
+      },
+      {
+        "source": "FEWSHOT-SMOKE:FEWSHOT-SMOKE-E2-2-fewshot-e2-2-interest-post-patch",
+        "action": "kept",
+        "destination": "T4-0004"
+      }
+    ]
+  },
+  "runs": {
+    "sdd": {
+      "suite_id": "SDD-SMOKE",
+      "frozen": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/freeze/SDD-SMOKE.json",
+      "frozen_sha256": "68a2feec8783c633ba992a2a130d1fd9804b4ddc55a4d84a557d5c01e86bc5eb",
+      "moduleEvidence": {
+        "replayFunction": "campaign_harness.replay_suite"
+      },
+      "totals": {
+        "planned": 3,
+        "attempted": 3,
+        "completed": 3,
+        "deadline_failures": 0,
+        "transport_failures": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "expectation_passes": 3,
+        "expectation_violations": 0,
+        "expectation_inconclusive": 0
+      },
+      "receipts": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/receipts.json",
+      "applications": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications.json",
+      "checks": [
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-posting",
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-do1zbghm/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-do1zbghm/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-do1zbghm",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P3/fixture-copy-current/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 4,
+            "response_status_in_audit": 200,
+            "failure_events": []
+          }
+        },
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-interest",
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-omd7ztre/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-omd7ztre/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-omd7ztre",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P3/fixture-copy-current/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": []
+          }
+        },
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-reporting",
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-g3wcoops/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-g3wcoops/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-g3wcoops",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/isolated-cycle/aws-carddemo-cycle-v1/P3/fixture-copy-current/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": []
+          }
+        }
+      ],
+      "applications_inline": [
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-posting",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0001-900362529c6dee23",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "73a630621c0167ef4b9217d3536e79a9007c43384a935110a6fafb7d7cccd463",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 60334,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0001-900362529c6dee23",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-interest",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0002-7153fb8ac0a99eff",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "e89c2e1cadcb44ec5e8c095f4a80502c0406da6b22a929ffa08e96c240066be9",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 60422,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0002-7153fb8ac0a99eff",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "SDD-SMOKE-E3-01-stage6r3-reporting",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0003-6b8525aca63f9b8f",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "356100bc24ea290f7bfdf4092e32b16e496bebc3554afc69b8e416ec3f23d6d2",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 60490,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/sdd/replay/applications/0003-6b8525aca63f9b8f",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        }
+      ]
+    },
+    "fewshot": {
+      "suite_id": "FEWSHOT-SMOKE",
+      "frozen": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/fewshot/freeze/FEWSHOT-SMOKE.json",
+      "frozen_sha256": "3c6ab125547a9cb493e97e6168881cab361770406335a17d23b9279fc65e3df9",
+      "moduleEvidence": {
+        "replayFunction": "campaign_harness.replay_suite"
+      },
+      "totals": {
+        "planned": 1,
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "transport_failures": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "expectation_inconclusive": 0
+      },
+      "receipts": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/fewshot/replay/receipts.json",
+      "applications": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/fewshot/replay/applications.json",
+      "checks": [
+        {
+          "case_id": "FEWSHOT-SMOKE-E2-2-fewshot-e2-2-interest-post-patch",
+          "checker": {
+            "ok": true,
+            "classification": "documented_500_schema_valid",
+            "detail": {
+              "status": 500
+            }
+          },
+          "reach": {
+            "audit_found": false,
+            "reached_cobol": false
+          }
+        }
+      ],
+      "applications_inline": [
+        {
+          "case_id": "FEWSHOT-SMOKE-E2-2-fewshot-e2-2-interest-post-patch",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/fewshot/replay/applications/0001-58fe9cf2ed081139",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "0e0cbc90d76200dcb1bf40f1d6770933b593215217b23ca0c80957a7954b98b7",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "ff7dc95fdef41f4d13d62df93c7a66ae4c258eb029cf7466b3c77ee006ec6325",
+              "size": 686
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 60562,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v1/evidence-20260915T140643Z/fewshot/replay/applications/0001-58fe9cf2ed081139",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        }
+      ]
+    }
+  },
+  "gcovParserEvidence": {
+    "status": "parsed-existing-gcov-units-in-preflight-flow",
+    "sourceReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/candidate-coverage-report.json",
+    "sourceReportSha256": "1ff124c1349cf11780baded4271e555a747c14124df3d37a0111451081a07a78",
+    "invocationsParsed": 2,
+    "rows": [
+      {
+        "invocationIndex": 1,
+        "program": "CBTRN02C",
+        "unitCount": 3,
+        "mainGeneratedC": {
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+          "lines": {
+            "executed": 651,
+            "total": 1120
+          },
+          "branches": {
+            "executed": 246,
+            "taken_at_least_once": 133,
+            "total": 288
+          },
+          "calls": {
+            "executed": 94,
+            "total": 154
+          }
+        }
+      },
+      {
+        "invocationIndex": 2,
+        "program": "CBACT04C",
+        "unitCount": 3,
+        "mainGeneratedC": {
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+          "lines": {
+            "executed": 585,
+            "total": 1029
+          },
+          "branches": {
+            "executed": 214,
+            "taken_at_least_once": 116,
+            "total": 266
+          },
+          "calls": {
+            "executed": 85,
+            "total": 148
+          }
+        }
+      }
+    ],
+    "limit": "existing artifacts only; no official coverage rerun"
+  },
+  "counts": {
+    "sdd_cases": 3,
+    "fewshot_cases": 1,
+    "union_preview_cases": 4,
+    "http_completed": 4,
+    "checker_ok": 4,
+    "reached_cobol": 3,
+    "quiet_applications": 4
+  },
+  "blockersPreserved": [
+    "No campaign authorization is created by this preflight.",
+    "Coverage evidence parses existing gcov artifacts; no fresh official coverage measurement was run.",
+    "Union preview is frozen for coupling evidence only and is not an official T4 suite."
+  ],
+  "businessSourceEdited": false
+}

@@ -1,0 +1,346 @@
+{
+  "classification": "FAIL",
+  "reviewed_at_utc": "2026-09-15T12:05:49Z",
+  "scope": {
+    "task": "Independent v2 review of AWS CardDemo reference draft: close FAIL-01..06 against source and assess MBT usability.",
+    "allowed_input_roots": [
+      "reference-authoring-input-v1",
+      "reference-authoring-draft-v1",
+      "reference-independent-review-v1",
+      "reference-authoring-draft-v2"
+    ],
+    "output_root": "reference-independent-review-v2",
+    "cobol_executed": false,
+    "official_cases_or_fixtures_created": false,
+    "draft_modified": false
+  },
+  "effective_exposure": {
+    "content_used_for_findings": [
+      "reference-authoring-input-v1",
+      "reference-independent-review-v1",
+      "reference-authoring-draft-v2",
+      "reference-authoring-draft-v1 for historical comparison only"
+    ],
+    "mechanically_hashed_all_allowed_files": true,
+    "validator_executed": [
+      "python3 -m unittest discover -s reference-authoring-draft-v2/tests -v",
+      "python3 reference-authoring-draft-v2/validate_reference_model.py reference-authoring-draft-v2"
+    ],
+    "validator_results": {
+      "unit_tests": "3 tests OK",
+      "direct_validator": "PASS: 3 capabilities, 32 states, 62 transitions, 25 obligations, 6 resolved findings"
+    },
+    "exposure_exception": "One initial broad P3 file listing exposed names of non-allowed sibling artifacts and tool-supplied WORKSPACE-NOTES.md context. I did not read or use their contents for findings; this is recorded rather than hidden."
+  },
+  "filepins": [
+    {
+      "path": "reference-authoring-input-v1/README.md",
+      "bytes": 2341,
+      "sha256": "c0d2bb0e890a988ce643c0aa960933ab454e02e5db1fdd4af932e512c54b7ced"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/LICENSE",
+      "bytes": 10142,
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cbl/CBACT04C.cbl",
+      "bytes": 52479,
+      "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cbl/CBTRN02C.cbl",
+      "bytes": 58890,
+      "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cbl/CBTRN03C.cbl",
+      "bytes": 52239,
+      "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVACT01Y.cpy",
+      "bytes": 1125,
+      "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVACT03Y.cpy",
+      "bytes": 736,
+      "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA01Y.cpy",
+      "bytes": 898,
+      "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA02Y.cpy",
+      "bytes": 898,
+      "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA03Y.cpy",
+      "bytes": 655,
+      "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA04Y.cpy",
+      "bytes": 817,
+      "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA05Y.cpy",
+      "bytes": 1546,
+      "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA06Y.cpy",
+      "bytes": 1538,
+      "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/cpy/CVTRA07Y.cpy",
+      "bytes": 5758,
+      "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/jcl/COMBTRAN.jcl",
+      "bytes": 3662,
+      "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/jcl/INTCALC.jcl",
+      "bytes": 2964,
+      "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/jcl/POSTTRAN.jcl",
+      "bytes": 3246,
+      "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/jcl/TRANBKP.jcl",
+      "bytes": 5330,
+      "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/jcl/TRANREPT.jcl",
+      "bytes": 6427,
+      "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571"
+    },
+    {
+      "path": "reference-authoring-input-v1/corpus/app/proc/REPROC.prc",
+      "bytes": 2233,
+      "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f"
+    },
+    {
+      "path": "reference-authoring-input-v1/input-manifest.json",
+      "bytes": 3445,
+      "sha256": "93d178bcf5a2e50e43c6af51985f68ae0edfe6162a196883d146cb27c56a5510"
+    },
+    {
+      "path": "reference-authoring-draft-v1/README.md",
+      "bytes": 1775,
+      "sha256": "8681e53fd09e0003e5f4691b1723535511187a2aa03691a95e83e6f023f8a2e8"
+    },
+    {
+      "path": "reference-authoring-draft-v1/exposure-manifest.json",
+      "bytes": 5354,
+      "sha256": "05eeb4b98c501115ff87a3bbcba2458c71672799dce00df357b1290b150233fd"
+    },
+    {
+      "path": "reference-authoring-draft-v1/model.json",
+      "bytes": 4459,
+      "sha256": "0ca0277175d0a9746df84c7b77d9090a870315d95b951334d29dcb2c7b35920c"
+    },
+    {
+      "path": "reference-authoring-draft-v1/obligations.json",
+      "bytes": 28288,
+      "sha256": "eb1fdce18f639ef87097f871434c42925e42167c6fce18acfed35757acdf3637"
+    },
+    {
+      "path": "reference-independent-review-v1/REVIEW.md",
+      "bytes": 12755,
+      "sha256": "ec7673c1d6a86d60ae28c53006a432f425deb41493c844e47cd89826c246be11"
+    },
+    {
+      "path": "reference-independent-review-v1/review.json",
+      "bytes": 9175,
+      "sha256": "243fbd62a1950f42240f9db4983204a0670ce768838d360fab196535af06831a"
+    },
+    {
+      "path": "reference-authoring-draft-v2/README.md",
+      "bytes": 2545,
+      "sha256": "ca86a53c44d1ab6bcb200f7b541aa0705affacb56c94c4c8c9e89de03925f3a5"
+    },
+    {
+      "path": "reference-authoring-draft-v2/exposure-manifest.json",
+      "bytes": 7656,
+      "sha256": "4c30b2d5937b1a1c20dd7d7f67b75bff173e3dee534bea5529ced3a6fd2deecb"
+    },
+    {
+      "path": "reference-authoring-draft-v2/mechanical-validation-report.json",
+      "bytes": 181,
+      "sha256": "5551ed9ef2c9b6dc8e4c34555cfc06d0f9d2e0df89a5ec31d5b456d16eeafb6c"
+    },
+    {
+      "path": "reference-authoring-draft-v2/model.json",
+      "bytes": 78045,
+      "sha256": "3606a1ad54134bf59dcb30b5d2b7f3f0eb34c784725f211f4a7139de7219ae0a"
+    },
+    {
+      "path": "reference-authoring-draft-v2/obligations.json",
+      "bytes": 36500,
+      "sha256": "259dc0f60ffb0da691df81662d7487d7bc7359c0cc8455ad10cf72be9bb140b8"
+    },
+    {
+      "path": "reference-authoring-draft-v2/resolution-matrix.json",
+      "bytes": 5717,
+      "sha256": "0e94cb8772a68fa8e19b579c3fb5cc991704fa3d94f8f1c2d25e34f586bcdb4e"
+    },
+    {
+      "path": "reference-authoring-draft-v2/tests/test_validate_reference_model.py",
+      "bytes": 2130,
+      "sha256": "a192525ad6f7ad6ccad0483b15839119d61a68db93531e9875ad2cad3cc3c21d"
+    },
+    {
+      "path": "reference-authoring-draft-v2/validate_reference_model.py",
+      "bytes": 6986,
+      "sha256": "ad5e8f68a3eedb6cc19f580db1e300ed993ecf465cfbad209f286511747fee5a"
+    }
+  ],
+  "finding_closure": [
+    {
+      "id": "FAIL-01",
+      "status": "closed_as_source_obligation_not_full_mbt",
+      "basis": "CBTRN03C lines 170-178, 197-203, 248-265 support EOF totals only after the prior textual date test; v2 records unknown EOF receiver instead of universal totals. Remaining MBT issue: unknown branch is not a deterministic selectable path without external authority."
+    },
+    {
+      "id": "FAIL-02",
+      "status": "closed_against_source",
+      "basis": "CBTRN03C lines 181-184 and 306-316 call account totals only on card change; EOF lines 197-203 call page/grand totals only. v2 adds TRANREPT-OBL-008."
+    },
+    {
+      "id": "FAIL-03",
+      "status": "closed_against_source",
+      "basis": "CBTRN03C lines 170-178 NEXT SENTENCE skips to the next sentence after the loop sentence, bypassing lookup/detail/accrual lines 179-203; detail accrual lines 287-289 are not reached."
+    },
+    {
+      "id": "FAIL-04",
+      "status": "closed_against_source_with_no_durability_claim",
+      "basis": "CBTRN02C lines 424-442 call TCATBAL then ACCOUNT then TRANFILE; lines 562-578 abend on WRITE TRANFILE status not 00. v2 models write failure after prior attempted effects and does not assert commit/rollback."
+    },
+    {
+      "id": "FAIL-05",
+      "status": "closed_against_source",
+      "basis": "CBTRN02C lines 545-559 set reason 109 on ACCOUNT rewrite INVALID KEY without local abend; control returns to line 442 WRITE TRANFILE. v2 has separate continuation path."
+    },
+    {
+      "id": "FAIL-06",
+      "status": "not_closed_for_mbt_readiness",
+      "basis": "The JSON is structurally richer, but guards/effects/observables are not executable semantics sufficient for deterministic MBT selection. The mechanical validator accepts source-contradicting effect/observable mutants."
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "V2-BLOCK-01",
+      "root_cause": "The model changed representation from prose to JSON but did not define an executable transition semantics.",
+      "evidence": [
+        "effects and observables remain arbitrary strings",
+        "no state update language for counters, accumulated totals, current card/account, first flags, receiver contents, or writes",
+        "no typed valuation schema for concrete input generation"
+      ],
+      "impact": "A path selector cannot deterministically compute next states, expected outputs, or test data from the model alone."
+    },
+    {
+      "id": "V2-BLOCK-02",
+      "root_cause": "Guard AST is syntactically checked, not semantically complete.",
+      "evidence": [
+        "operators list includes gte/lte/exists/changed/first_record but only shallow validation is implemented",
+        "eq/ne/gte/lte do not check literal type/domain",
+        "unknown guard has policy text but no formal interaction with other guards"
+      ],
+      "impact": "Reachability over a finite graph is not equivalent to decidable, disjoint, satisfiable path selection."
+    },
+    {
+      "id": "V2-BLOCK-03",
+      "root_cause": "Loop bounds are labels, not traversal semantics.",
+      "evidence": [
+        "parameters maxDailyRecords/maxTcatbalRecords/maxTranRecords/maxCards exist but transitions do not decrement/increment bounded counters in machine-readable form",
+        "loops P_OPENED, I_OPENED, R_LOOP can be traversed indefinitely unless an external harness imposes limits"
+      ],
+      "impact": "The artifact proves finite graph topology, not finitability of generated executions or loop coverage criteria."
+    },
+    {
+      "id": "V2-BLOCK-04",
+      "root_cause": "Mechanical PASS is insensitive to semantic mutants.",
+      "evidence": [
+        {
+          "mutations": [
+            {
+              "transition": "POSTTRAN-T020",
+              "mutation": "invert 109/continue-to-write into abend-before-write"
+            },
+            {
+              "transition": "INTCALC-T006",
+              "mutation": "invert no-final-update-at-EOF into final ACCOUNT update"
+            },
+            {
+              "transition": "TRANREPT-T009",
+              "mutation": "invert out-of-range skip into detail/accrual"
+            }
+          ],
+          "validator_exit_code": 0,
+          "validator_stdout": {
+            "status": "PASS",
+            "errors": [],
+            "counts": {
+              "capabilities": 3,
+              "states": 32,
+              "transitions": 62,
+              "obligations": 25,
+              "blocking_findings_resolved": 6
+            }
+          },
+          "validator_stderr": ""
+        }
+      ],
+      "impact": "The current three positive tests and validator cannot demonstrate rejection of invalid MBT models."
+    },
+    {
+      "id": "V2-BLOCK-05",
+      "root_cause": "Obligation coverage is by refID presence, not source obligation satisfaction.",
+      "evidence": [
+        "transitions may point to obligationRefs while their effects/observables contradict those obligations and still validate",
+        "source anchors prove file/line existence and hash, not that the transition statement correctly interprets the lines"
+      ],
+      "impact": "resolution_matrix.decision and reference IDs cannot be used as independent proof of closure."
+    }
+  ],
+  "static_trace_samples": [
+    {
+      "id": "TRACE-TRANREPT-OUT-OF-RANGE",
+      "source": "CBTRN03C lines 170-178 then sentence period at 206; report write/accrual at 179-203 and 287-289",
+      "trace": "After READ status 00, if TRAN-PROC-TS text is outside DATEPARM range, NEXT SENTENCE transfers past the current sentence, so no lookup, no detail, no account/page accrual for that record."
+    },
+    {
+      "id": "TRACE-TRANREPT-EOF",
+      "source": "CBTRN03C lines 170-178, 197-203, 306-316",
+      "trace": "EOF is set by 1000-TRANFILE-GET-NEXT at 248-265, but the program tests TRAN-PROC-TS(1:10) before IF END-OF-FILE. If that textual test is false, totals are skipped; if true, page/grand totals occur, and account total is still not called."
+    },
+    {
+      "id": "TRACE-POSTTRAN-WRITE-FAIL",
+      "source": "CBTRN02C lines 424-442, 545-559, 562-578",
+      "trace": "Accepted transaction performs TCATBAL update, ACCOUNT update/rewrite handling, then WRITE TRANFILE. TRANFILE status not 00 abends after those attempts; ACCOUNT INVALID KEY only sets reason 109 and continues."
+    },
+    {
+      "id": "TRACE-INTCALC-EOF",
+      "source": "CBACT04C lines 188-222, 325-348, 350-370",
+      "trace": "READ status 10 sets END-OF-FILE=Y during an iteration entered with END=N; the outer ELSE with 1050 is not reached on normal EOF, and the loop exits before a final account update."
+    }
+  ],
+  "approval_condition": "Classify a later draft PASS only after FAIL-06 is resolved with executable/decidable model semantics: typed domains and valuations, guard satisfiability/disjointness checks, transition update/effect schemas (not strings), explicit loop bounding/traversal policy, source-sensitive negative/mutant tests, and conditional handling of unknown EOF without inventing receiver retention.",
+  "authorizes_campaign": false,
+  "authorizes_official_fixtures": false,
+  "human_approval_claimed": false
+}

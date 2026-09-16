@@ -1,0 +1,703 @@
+openapi: 3.1.0
+info:
+  title: CardDemo Transaction Batch Boundary
+  version: 1.0.0
+  description: |
+    Contract derived from CBTRN02C, CBACT04C, CBTRN03C, their supplied
+    copybooks and batch dependencies. The three operations invoke individual
+    program capabilities, not the complete JCL schedule.
+
+    HTTP POST, JSON envelopes, dataset binding identifiers, inline sequential
+    records and returned artifacts are chosen transport conventions. They are
+    not interfaces implemented by the COBOL source. A dataset binding identifies
+    an environment-provisioned file with the specified organization, keys and
+    access permissions; it does not create, validate, back up or repair that file.
+    Missing records and unavailable bindings remain representable failure inputs.
+
+    Structured character fields are right-padded with spaces to their PIC X
+    widths. Numeric identifier strings retain leading zeros. Decimal strings
+    encode signed fixed-point values, not floating-point numbers. Raw records
+    provide a lossless alternative, including filler and invalid numeric storage.
+    Raw record encoding and signed DISPLAY representation depend on the bound
+    COBOL runtime. No calendar, card-number, positive-amount, active-account or
+    reference-code validation is added by this contract.
+
+    Program completion, business rejection and abnormal termination are distinct.
+    HTTP 200 denotes a completed invocation, including posting with rejects.
+    HTTP 500 denotes an observed runtime failure or requested abnormal termination,
+    not a transactional rollback. No atomicity, retry, idempotency or automatic
+    recovery is promised. Artifacts and persistent changes may precede failure.
+  license:
+    name: Apache License 2.0
+    identifier: Apache-2.0
+x-uncertainties:
+  - |
+    The supplied JCL references SORT, IDCAMS and CEE3ABD; their implementations
+    and execution in the target environment are not established. REPROC also
+    references CNTLLIB(REPROCT), whose contents are not supplied.
+  - |
+    TRANBKP describes unloading, deleting and redefining the transaction master.
+    COMBTRAN describes sorting a backup plus system transactions by transaction
+    ID and loading the master. Neither is performed implicitly by these operations.
+  - |
+    TRANREPT JCL describes unloading, date filtering and sorting by card number
+    before CBTRN03C. The program operation does not assume those steps run.
+    Its SORT dates are separate from DATEPARM and its JCL has duplicate STEP05R
+    names. No schedule validity or equivalence of date sources is guaranteed.
+  - |
+    Numeric overflow has no explicit ON SIZE ERROR handling. Several working
+    totals use S9(09)V99 even though account balances use S9(10)V99. Runtime
+    behavior for overflow, invalid numeric bytes and unspecified initial storage
+    is not normalized by this contract.
+paths:
+  /transaction-postings:
+    post:
+      operationId: postDailyTransactions
+      summary: Post an ordered daily transaction stream
+      description: |
+        Runs CBTRN02C. Opens DALYTRAN INPUT, TRANFILE OUTPUT (indexed,
+        random access, transaction ID key), XREFFILE INPUT, DALYREJS OUTPUT,
+        ACCTFILE I-O and TCATBALF I-O. The source does not open TRANFILE
+        EXTEND or I-O; this is not an append-to-history guarantee. Provisioning
+        and OPEN OUTPUT behavior of an existing indexed file are runtime
+        preconditions, not a hidden backup/reload workflow.
+
+        Each successfully read daily record increments the processed count.
+        Card lookup precedes account lookup. INVALID KEY on card lookup rejects
+        with 0100, "INVALID CARD NUMBER FOUND". INVALID KEY on account lookup
+        rejects with 0101, "ACCOUNT RECORD NOT FOUND". For a found account,
+        temporary balance is currentCycleCredit - currentCycleDebit + amount
+        in S9(09)V99. A value greater than creditLimit sets 0102,
+        "OVERLIMIT TRANSACTION". Then expirationDate is compared as PIC X(10)
+        against the first ten characters of originalTimestamp. An earlier
+        expiration sets 0103, "TRANSACTION RECEIVED AFTER ACCT EXPIRATION",
+        overwriting 0102 if both apply. Equality passes both tests.
+        These lookups do not generally check all file statuses.
+
+        A rejected record writes the unchanged 350-byte input plus a four-digit
+        reason and a space-padded 76-character description. It does not enter
+        posting. Processing continues. A completed run with any rejects explicitly
+        sets COBOL RETURN-CODE to 4; no explicit zero assignment is made for a
+        reject-free run.
+
+        For a validated record, named transaction fields are copied, except
+        processingTimestamp is replaced by CURRENT-DATE in
+        YYYY-MM-DD-HH.MM.SS.hh0000 form. Input processingTimestamp is not used
+        for validation or posting. Output filler is not explicitly copied.
+
+        Persistent effects occur in this order:
+        1. Read category balance by account ID, type and category; status 23
+           creates an initialized record with balance equal to amount, otherwise
+           add amount and rewrite.
+        2. Add amount to account currentBalance. For amount >= 0 add amount to
+           currentCycleCredit; for negative amount add the negative amount to
+           currentCycleDebit. Rewrite the account.
+        3. Write the transaction keyed by its supplied ID.
+
+        Account rewrite INVALID KEY sets internal reason 0109,
+        "ACCOUNT RECORD NOT FOUND", but the caller does not revisit rejection,
+        count it as rejected or write a reject record; transaction writing still
+        follows. Other account rewrite statuses are not explicitly checked.
+        Duplicate transaction IDs are not prevalidated or deduplicated. A
+        duplicate-key write failure takes the abnormal path after preceding
+        balance effects. Processing preserves input order; later records can
+        observe earlier changes.
+      x-preconditions:
+        - Indexed master files must be provisioned and accessible in the declared modes.
+        - XREFFILE is keyed by card number; ACCTFILE by account ID; TCATBALF by account ID, type and category.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [dailyTransactions, transactionFile, crossReferenceFile, accountFile, categoryBalanceFile]
+              properties:
+                dailyTransactions:
+                  type: array
+                  description: DALYTRAN records in read order; empty input is allowed. IDs need not be unique.
+                  items:
+                    $ref: '#/components/schemas/TransactionInput'
+                transactionFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                crossReferenceFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                accountFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                categoryBalanceFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+      responses:
+        '200':
+          description: Completed, possibly with business rejects and COBOL return code 4.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostingResult'
+        '500':
+          $ref: '#/components/responses/AbnormalExecution'
+  /interest-transactions:
+    post:
+      operationId: generateInterestTransactions
+      summary: Generate sequential system interest transactions from category balances
+      description: |
+        Runs CBACT04C. Opens TCATBALF INPUT for sequential indexed-key traversal,
+        XREFFILE INPUT with account-ID alternate-key lookup, DISCGRP INPUT,
+        ACCTFILE I-O, and TRANSACT OUTPUT as a new sequential artifact.
+
+        On each account change, except the first, rewrite the previous account:
+        add accumulated monthly interest to currentBalance and set both cycle
+        credit and debit to zero. Then reset the accumulated interest, read the
+        new account and read its cross reference by account ID. Missing account
+        or cross reference is abnormal termination, not a skipped account.
+
+        For each category balance, look up disclosure rate by account group,
+        transaction type and category. Status 23 retries the lookup using the
+        space-padded group "DEFAULT" and the same type/category. Failure of this
+        default lookup is abnormal termination. A zero rate generates nothing.
+        Every nonzero rate computes balance * rate / 1200 into S9(09)V99,
+        without ROUNDED, adds the result to the account accumulator and writes
+        a transaction, including when the computed amount is zero or negative.
+        No fees are computed; the fee paragraph is unimplemented.
+
+        Generated ID is the ten-character parameter followed by a six-digit
+        counter, initially 000001, incremented only for generated transactions.
+        The parameter is not parsed as a date, and PARM-LENGTH is not checked.
+        Counter overflow has no explicit handling. Type is "01", numeric category
+        is 0005, source is "System", description starts with "Int. for a/c "
+        followed by the eleven-digit account ID. Merchant ID is zero and merchant
+        name, city and ZIP are spaces. Card number comes from the alternate-key
+        cross reference. Both timestamps use CURRENT-DATE independently of
+        the supplied ID prefix, in YYYY-MM-DD-HH.MM.SS.hh0000 form.
+
+        The final account is NOT explicitly flushed after the loop. The apparent
+        EOF update is an ELSE inside a loop tested UNTIL END-OF-FILE = 'Y';
+        once the read sets EOF, that ELSE is not reached. Thus normal execution
+        updates accounts only when a later account is encountered; the last
+        account retains its previous persistent balance and cycle amounts.
+        A single-account input can generate transactions without rewriting any
+        account. Empty input produces no transactions or account rewrites.
+
+        Category balances are not changed. Generated transactions are not posted
+        through CBTRN02C and are not automatically merged into the transaction
+        master. COMBTRAN is separate infrastructure, not an effect of this call.
+      x-preconditions:
+        - Category balances must be available as an indexed file with sequential key access.
+        - The cross-reference binding must support the declared account-ID alternate key.
+        - Account and disclosure files must support random keyed reads; account rewrites require I-O access.
+      x-uncertainties:
+        - Selection among multiple cards for one account is not resolved by the supplied alternate-key declaration and JCL.
+        - TRAN-RECORD is not initialized before each generated write; description tail and filler are not explicitly set.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [idPrefix, categoryBalanceFile, crossReferenceFile, accountFile, disclosureGroupFile]
+              properties:
+                idPrefix:
+                  type: string
+                  minLength: 10
+                  maxLength: 10
+                  description: Exact PARM-DATE PIC X(10); arbitrary characters, including spaces, are representable.
+                  examples: ['2022071800']
+                categoryBalanceFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                crossReferenceFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                accountFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                disclosureGroupFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+      responses:
+        '200':
+          description: Completed interest pass; generated records do not imply final-account persistence.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [transactions, diagnostics]
+                properties:
+                  transactions:
+                    type: array
+                    description: TRANSACT sequential output in generated order.
+                    items:
+                      $ref: '#/components/schemas/RawTransaction'
+                  diagnostics:
+                    $ref: '#/components/schemas/Diagnostics'
+                  returnCode:
+                    type: integer
+                    description: Observed runtime return code; the source does not explicitly assign one on normal completion.
+        '500':
+          $ref: '#/components/responses/AbnormalExecution'
+  /transaction-reports:
+    post:
+      operationId: generateTransactionReport
+      summary: Produce the fixed-width transaction detail report
+      description: |
+        Runs CBTRN03C on a supplied sequential transaction stream. Opens TRANFILE,
+        CARDXREF, TRANTYPE, TRANCATG and DATEPARM INPUT, and TRANREPT OUTPUT.
+        Only the first DATEPARM record is read: positions 1-10 are startDate,
+        position 11 is ignored, and positions 12-21 are endDate. Remaining
+        characters and subsequent records are unused. Empty DATEPARM sets EOF
+        before transaction processing and yields an empty report. Dates are
+        unvalidated character values; reversed or non-calendar ranges remain
+        representable.
+
+        Selection compares the first ten characters of processingTimestamp
+        inclusively to the start and end values as COBOL character fields.
+        Out-of-range input executes NEXT SENTENCE, skipping the remainder of
+        that iteration. The operation performs no sorting and no master unload.
+        CARDXREF is looked up on each selected card-number change; type and
+        type/category descriptions are looked up for each selected record.
+        INVALID KEY in any of these lookups displays the invalid key, reports
+        status 23 and calls the abnormal-termination paragraph. Other lookup
+        statuses are not generally checked.
+
+        Output records are 133 characters. Initial headings identify DALYREPT,
+        Daily Transaction Report and the date range. Detail fields are
+        transaction ID, cross-reference account ID, type, first 15 characters
+        of type description, category, first 29 characters of category
+        description, source and amount edited as -ZZZ,ZZZ,ZZZ.ZZ.
+        Totals use +ZZZ,ZZZ,ZZZ.ZZ with Page Total, Account Total or Grand Total
+        labels and dot leaders. Shorter copybook groups are space-padded.
+
+        "Account Total" is a subtotal of consecutive selected card-number
+        groups, not a regrouping by account ID. Unsorted input is accepted and
+        can yield multiple subtotals for the same card or account. It is written
+        on a selected card change, not explicitly for the final card.
+
+        Page size is a line-counter modulus of 20 checked before each detail,
+        not twenty details per page. Headers add four lines; page and account
+        totals each add two including a dashed line. Page totals accumulate
+        into the grand total and reset the page accumulator.
+
+        The date test occurs even after transaction EOF. If the retained record
+        passes the range test, the EOF branch adds its amount again to page
+        and account totals, writes page totals and then grand totals, without a
+        final account subtotal. If the retained record fails the range test,
+        NEXT SENTENCE skips that finalization. Empty transaction input depends
+        on unspecified initial TRAN-RECORD contents. This contract preserves
+        emitted report lines rather than substituting corrected aggregates.
+        No account, balance or transaction master is modified.
+      x-uncertainties:
+        - Contents retained after an unsuccessful read, including empty-input behavior, depend on the runtime; final totals are not guaranteed to equal the detail sum.
+        - The JCL SORT treats card numbers as zoned decimal, while the program treats them as PIC X(16). This operation does not impose numeric card validation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [transactions, dateParameters, crossReferenceFile, transactionTypeFile, transactionCategoryFile]
+              properties:
+                transactions:
+                  type: array
+                  description: Exact sequential order presented to CBTRN03C; empty and unsorted streams are allowed.
+                  items:
+                    $ref: '#/components/schemas/TransactionInput'
+                dateParameters:
+                  type: array
+                  description: DATEPARM stream; only the first record is read. No minimum record count.
+                  items:
+                    type: string
+                    minLength: 80
+                    maxLength: 80
+                    description: An exact 80-character DATEPARM record, including ignored characters.
+                crossReferenceFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                transactionTypeFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+                transactionCategoryFile:
+                  $ref: '#/components/schemas/DatasetBinding'
+      responses:
+        '200':
+          description: Completed report generation; output includes source control-flow and formatting behavior.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [lines, diagnostics]
+                properties:
+                  lines:
+                    $ref: '#/components/schemas/ReportLines'
+                  diagnostics:
+                    $ref: '#/components/schemas/Diagnostics'
+                  returnCode:
+                    type: integer
+                    description: Observed runtime code, not explicitly assigned on normal completion.
+        '500':
+          $ref: '#/components/responses/AbnormalExecution'
+components:
+  responses:
+    AbnormalExecution:
+      description: |
+        Runtime failure or source abnormal-termination path. Checked nonzero
+        OPEN/CLOSE statuses, unexpected sequential READ statuses, and checked
+        WRITE/REWRITE failures display diagnostics and call CEE3ABD with code
+        999 and timing 0. Sequential status 10 is normal EOF. Posting category
+        reads and primary disclosure reads also accept 23 as described by their
+        operations. Missing report references and missing interest account,
+        cross reference or default disclosure can reach this response.
+        No output cleanup or rollback is established. Failure of the external
+        termination service itself is environment-dependent.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecutionFailure'
+  schemas:
+    DatasetBinding:
+      type: string
+      description: |
+        Opaque transport identifier for an externally provisioned persistent
+        dataset. No existence or referential-integrity constraint is imposed by
+        this schema. Resolution must preserve the program's file mode, key and
+        failure behavior; it must not silently substitute an empty dataset.
+    Amount:
+      type: string
+      pattern: '^-?[0-9]{1,9}\.[0-9]{2}$'
+      description: Signed S9(09)V99 decimal, including zero and negative amounts; maximum absolute value 999999999.99.
+    AccountAmount:
+      type: string
+      pattern: '^-?[0-9]{1,10}\.[0-9]{2}$'
+      description: Signed S9(10)V99 decimal; maximum absolute value 9999999999.99.
+    AccountId:
+      type: string
+      pattern: '^[0-9]{11}$'
+    CategoryCode:
+      type: string
+      pattern: '^[0-9]{4}$'
+    Timestamp:
+      type: string
+      maxLength: 26
+      description: |
+        PIC X(26), not an RFC 3339 timestamp. Arbitrary character content is
+        representable. Input is space-padded, not calendar-validated. Generated
+        values use YYYY-MM-DD-HH.MM.SS.hh0000 from CURRENT-DATE.
+    TransactionInput:
+      oneOf:
+        - $ref: '#/components/schemas/Transaction'
+        - $ref: '#/components/schemas/RawTransaction'
+    RawTransaction:
+      type: object
+      additionalProperties: false
+      required: [recordBase64]
+      properties:
+        recordBase64:
+          type: string
+          contentEncoding: base64
+          description: |
+            Exactly 350 decoded bytes in the runtime's record encoding, without
+            sequential-file framing. Layout is CVTRA05Y/CVTRA06Y. This form
+            preserves arbitrary PIC X contents, filler, signs and malformed
+            numeric bytes. Byte length is a transport representation rule, not
+            a business validation; malformed numeric content has no specified
+            business rejection and may cause runtime failure.
+          x-decoded-byte-length: 350
+    Transaction:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - typeCode
+        - categoryCode
+        - source
+        - description
+        - amount
+        - merchantId
+        - merchantName
+        - merchantCity
+        - merchantZip
+        - cardNumber
+        - originalTimestamp
+        - processingTimestamp
+        - filler
+      properties:
+        id:
+          type: string
+          maxLength: 16
+          description: PIC X(16) indexed posting key; blank and duplicate values are not excluded.
+        typeCode:
+          type: string
+          maxLength: 2
+          description: PIC X(02); no enumeration is imposed.
+        categoryCode:
+          $ref: '#/components/schemas/CategoryCode'
+        source:
+          type: string
+          maxLength: 10
+        description:
+          type: string
+          maxLength: 100
+        amount:
+          $ref: '#/components/schemas/Amount'
+        merchantId:
+          type: string
+          pattern: '^[0-9]{9}$'
+        merchantName:
+          type: string
+          maxLength: 50
+        merchantCity:
+          type: string
+          maxLength: 50
+        merchantZip:
+          type: string
+          maxLength: 10
+        cardNumber:
+          type: string
+          maxLength: 16
+          description: PIC X(16), not restricted to digits or a card-number checksum.
+        originalTimestamp:
+          $ref: '#/components/schemas/Timestamp'
+        processingTimestamp:
+          $ref: '#/components/schemas/Timestamp'
+        filler:
+          type: string
+          maxLength: 20
+          description: Preserved on rejection; not explicitly moved into a posted or generated record.
+    PostingResult:
+      type: object
+      required: [processedCount, rejectedCount, transactions, rejects, diagnostics]
+      properties:
+        processedCount:
+          type: integer
+          minimum: 0
+          maximum: 999999999
+          description: Successfully read daily records, including rejects; PIC 9(09).
+        rejectedCount:
+          type: integer
+          minimum: 0
+          maximum: 999999999
+        returnCode:
+          type: integer
+          description: Observed COBOL RETURN-CODE; explicitly 4 if rejectedCount is positive.
+        transactions:
+          type: array
+          description: Successfully written TRANFILE records from this invocation, not a merged historical master.
+          items:
+            $ref: '#/components/schemas/RawTransaction'
+        rejects:
+          type: array
+          items:
+            $ref: '#/components/schemas/PostingReject'
+        diagnostics:
+          $ref: '#/components/schemas/Diagnostics'
+    PostingReject:
+      type: object
+      required: [inputRecord, reasonCode, reasonDescription]
+      properties:
+        inputRecord:
+          $ref: '#/components/schemas/RawTransaction'
+        reasonCode:
+          type: string
+          enum: ['0100', '0101', '0102', '0103']
+        reasonDescription:
+          type: string
+          enum:
+            - INVALID CARD NUMBER FOUND
+            - ACCOUNT RECORD NOT FOUND
+            - OVERLIMIT TRANSACTION
+            - TRANSACTION RECEIVED AFTER ACCT EXPIRATION
+          description: Transport removes trailing padding; physical trailer pads this to 76 characters.
+      description: |
+        DALYREJS physical record is 430 bytes: unchanged input 350, reason 4,
+        description 76. Reason 0109 is an internal posting-rewrite flag and
+        does not enter this stream.
+    ReportLines:
+      type: array
+      items:
+        type: string
+        minLength: 133
+        maxLength: 133
+      description: TRANREPT records in write order, with trailing spaces retained and no inserted page breaks.
+    Diagnostics:
+      type: array
+      items:
+        type: string
+      description: |
+        Observed DISPLAY output in order, including execution markers, input
+        displays, posting counts and file-status diagnostics when emitted.
+        A displayed status may use the source's four-character conversion of
+        two-byte file status. Posting reject-file close errors mistakenly move
+        XREFFILE status to the diagnostic field; no correction is promised.
+    ExecutionFailure:
+      type: object
+      required: [program, diagnostics]
+      properties:
+        program:
+          type: string
+          enum: [CBTRN02C, CBACT04C, CBTRN03C]
+        diagnostics:
+          $ref: '#/components/schemas/Diagnostics'
+        phase:
+          type: string
+          description: Observed failing paragraph or I/O action, if available.
+        fileStatus:
+          type: string
+          description: Observed status representation, if available; not necessarily a business reason.
+        requestedAbendCode:
+          type: integer
+          const: 999
+          description: Present only when the source abnormal-termination call is observed.
+        partialTransactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RawTransaction'
+        partialRejects:
+          type: array
+          items:
+            $ref: '#/components/schemas/PostingReject'
+        partialReportLines:
+          $ref: '#/components/schemas/ReportLines'
+      description: |
+        Partial artifact properties are present only when retrievable. Their
+        absence does not establish that no writes or persistent effects occurred.
+    AccountState:
+      type: object
+      description: |
+        Logical view of externally provisioned CVACT01Y records, 300 bytes,
+        keyed by accountId. This schema documents dependency state, not an
+        account maintenance API. Unmentioned fields survive successful rewrites.
+      properties:
+        accountId:
+          $ref: '#/components/schemas/AccountId'
+        activeStatus:
+          type: string
+          maxLength: 1
+          description: Not checked by these programs.
+        currentBalance:
+          $ref: '#/components/schemas/AccountAmount'
+        creditLimit:
+          $ref: '#/components/schemas/AccountAmount'
+        cashCreditLimit:
+          $ref: '#/components/schemas/AccountAmount'
+        openDate:
+          type: string
+          maxLength: 10
+        expirationDate:
+          type: string
+          maxLength: 10
+          description: ACCT-EXPIRAION-DATE; compared lexically, not parsed.
+        reissueDate:
+          type: string
+          maxLength: 10
+        currentCycleCredit:
+          $ref: '#/components/schemas/AccountAmount'
+        currentCycleDebit:
+          $ref: '#/components/schemas/AccountAmount'
+        addressZip:
+          type: string
+          maxLength: 10
+        groupId:
+          type: string
+          maxLength: 10
+        filler:
+          type: string
+          maxLength: 178
+    CrossReferenceState:
+      type: object
+      description: CVACT03Y, 50 bytes; primary card key, with account alternate key required by interest generation.
+      properties:
+        cardNumber:
+          type: string
+          maxLength: 16
+        customerId:
+          type: string
+          pattern: '^[0-9]{9}$'
+        accountId:
+          $ref: '#/components/schemas/AccountId'
+        filler:
+          type: string
+          maxLength: 14
+    CategoryBalanceState:
+      type: object
+      description: CVTRA01Y, 50 bytes; composite key is accountId, typeCode, categoryCode in that order.
+      properties:
+        accountId:
+          $ref: '#/components/schemas/AccountId'
+        typeCode:
+          type: string
+          maxLength: 2
+        categoryCode:
+          $ref: '#/components/schemas/CategoryCode'
+        balance:
+          $ref: '#/components/schemas/Amount'
+        filler:
+          type: string
+          maxLength: 22
+    DisclosureGroupState:
+      type: object
+      description: CVTRA02Y, 50 bytes; composite key is groupId, typeCode, categoryCode.
+      properties:
+        groupId:
+          type: string
+          maxLength: 10
+        typeCode:
+          type: string
+          maxLength: 2
+        categoryCode:
+          $ref: '#/components/schemas/CategoryCode'
+        interestRate:
+          type: string
+          pattern: '^-?[0-9]{1,4}\.[0-9]{2}$'
+          description: S9(04)V99; signed annual percentage divided by 1200 in monthly calculation.
+        filler:
+          type: string
+          maxLength: 28
+    TransactionTypeState:
+      type: object
+      description: CVTRA03Y, 60 bytes; keyed by typeCode.
+      properties:
+        typeCode:
+          type: string
+          maxLength: 2
+        description:
+          type: string
+          maxLength: 50
+        filler:
+          type: string
+          maxLength: 8
+    TransactionCategoryState:
+      type: object
+      description: CVTRA04Y, 60 bytes; composite key is typeCode, categoryCode.
+      properties:
+        typeCode:
+          type: string
+          maxLength: 2
+        categoryCode:
+          $ref: '#/components/schemas/CategoryCode'
+        description:
+          type: string
+          maxLength: 50
+        filler:
+          type: string
+          maxLength: 4
+x-dependency-layouts:
+  ACCTFILE:
+    schema:
+      $ref: '#/components/schemas/AccountState'
+  XREFFILE:
+    schema:
+      $ref: '#/components/schemas/CrossReferenceState'
+  CARDXREF:
+    schema:
+      $ref: '#/components/schemas/CrossReferenceState'
+  TCATBALF:
+    schema:
+      $ref: '#/components/schemas/CategoryBalanceState'
+  DISCGRP:
+    schema:
+      $ref: '#/components/schemas/DisclosureGroupState'
+  TRANTYPE:
+    schema:
+      $ref: '#/components/schemas/TransactionTypeState'
+  TRANCATG:
+    schema:
+      $ref: '#/components/schemas/TransactionCategoryState'
+  TRANFILE:
+    schema:
+      $ref: '#/components/schemas/Transaction'
+    description: Indexed OUTPUT for posting; sequential INPUT for reporting. Conversion between these is not implicit.

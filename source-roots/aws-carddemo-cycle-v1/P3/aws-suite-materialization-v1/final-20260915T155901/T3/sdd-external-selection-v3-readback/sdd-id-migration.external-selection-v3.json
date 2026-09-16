@@ -1,0 +1,36 @@
+{
+  "fromContractId": "E3-01-SDD-stage6r3",
+  "kind": "t3-sdd-external-selection-v3-local-sdd-id-migration",
+  "officialCampaign": false,
+  "operationIdentity": {
+    "identical": true,
+    "operations": [
+      {
+        "method": "POST",
+        "operationId": "posting",
+        "path": "/posting"
+      },
+      {
+        "method": "POST",
+        "operationId": "interest",
+        "path": "/interest"
+      },
+      {
+        "method": "POST",
+        "operationId": "reporting",
+        "path": "/reporting"
+      }
+    ]
+  },
+  "policy": "versioned adapter-local ID migration for copied inputs only; no upstream alias, no source edit",
+  "sourcePins": {
+    "targetContract": {
+      "bytes": 66677,
+      "id": "contract-E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a"
+    }
+  },
+  "toContractId": "E3-SDD-stage6r3",
+  "version": "sdd-external-selection-v3-id-migration"
+}

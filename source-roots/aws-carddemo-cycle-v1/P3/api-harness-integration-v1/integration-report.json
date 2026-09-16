@@ -1,0 +1,400 @@
+{
+  "kind": "api-harness-integration-v1-real-smoke",
+  "scope": "technical smoke only; not official suites/oracles",
+  "prepared": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1",
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-preparation",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "49f0cb521328e6cf26ffdacabfd04d7cae74cc0e2ab6cb4e73facd385aa41160",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+  },
+  "cases": [
+    {
+      "index": 1,
+      "arm": "sdd-p2b",
+      "contract_id": "E3-01-stage6r3",
+      "track": "posting",
+      "method": "POST",
+      "path": "/posting",
+      "request_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "contract_sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "base_url": "http://127.0.0.1:51455",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 1617,
+      "response_sha256": "4ebd71be51b1a339cb904684913cc58040c05e376a53c6f2a7ce2488aff59b8d",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-m9hqumb1/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-m9hqumb1/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-m9hqumb1",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 4,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54552,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/01-sdd-p2b-posting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/01-sdd-p2b-posting/server/server.stderr"
+    },
+    {
+      "index": 2,
+      "arm": "sdd-p2b",
+      "contract_id": "E3-01-stage6r3",
+      "track": "interest",
+      "method": "POST",
+      "path": "/interest",
+      "request_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "contract_sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "base_url": "http://127.0.0.1:51457",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 990,
+      "response_sha256": "54647933120c8144ca80738483ae9d298996718f00e6515d4d89e973943a58d4",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-0246ffue/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-0246ffue/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-0246ffue",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54681,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/02-sdd-p2b-interest/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/02-sdd-p2b-interest/server/server.stderr"
+    },
+    {
+      "index": 3,
+      "arm": "sdd-p2b",
+      "contract_id": "E3-01-stage6r3",
+      "track": "reporting",
+      "method": "POST",
+      "path": "/reporting",
+      "request_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "contract_sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "base_url": "http://127.0.0.1:51459",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 565,
+      "response_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-x6zboqwj/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-x6zboqwj/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-x6zboqwj",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54751,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/03-sdd-p2b-reporting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/03-sdd-p2b-reporting/server/server.stderr"
+    },
+    {
+      "index": 4,
+      "arm": "zero-shot-p2c",
+      "contract_id": "E1-3",
+      "track": "posting",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "request_sha256": "99c477c7c479f575334d71ec7d35056e4432349f56b12a52da5b630c67be91d6",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+      "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "base_url": "http://127.0.0.1:51461",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 1432,
+      "response_sha256": "7f7589875ebcd6646a84918d4ab39b3291919d1aa4948bcc25d47e404435e08e",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/runs/p2b-runs/posting-0tvd4ck5/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/runs/p2b-runs/posting-0tvd4ck5/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/runs/p2b-runs/posting-0tvd4ck5",
+        "workdir_under_isolated_cycle": false,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/runs/request-packages/E1-3-posting-1789478856500/registry.json",
+        "fixture_registry_isolated": false,
+        "reached_cobol": true,
+        "program_exit": 4,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54821,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/04-zero-shot-p2c-posting/server/server.stderr"
+    },
+    {
+      "index": 5,
+      "arm": "zero-shot-p2c",
+      "contract_id": "E1-3",
+      "track": "interest",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "request_sha256": "5d216108ccc3a40a439b0fe12eaf0313b052b2b1de67bd15234b41186367db17",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+      "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "base_url": "http://127.0.0.1:51463",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 745,
+      "response_sha256": "faacd3f7be3a977a5e12920ab8f19fa931c3ec68293eeb3a093b495b97f0f1f2",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/runs/p2b-runs/interest-hhfgql9q/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/runs/p2b-runs/interest-hhfgql9q/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/runs/p2b-runs/interest-hhfgql9q",
+        "workdir_under_isolated_cycle": false,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/runs/request-packages/E1-3-interest-1789478858316/registry.json",
+        "fixture_registry_isolated": false,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54916,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/05-zero-shot-p2c-interest/server/server.stderr"
+    },
+    {
+      "index": 6,
+      "arm": "zero-shot-p2c",
+      "contract_id": "E1-3",
+      "track": "reporting",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "request_sha256": "c8f8249cc6d72b88c6edc968968c475bf2b2e5e49c509fb66f7b419c7a42180e",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+      "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "base_url": "http://127.0.0.1:51465",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 1476,
+      "response_sha256": "4afc07cf3f7131db36369cf8c3eddff5f52dd5e9f3ca8f1f6a6a52aae08a5273",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/runs/p2b-runs/reporting-v8_3831_/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/runs/p2b-runs/reporting-v8_3831_/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/runs/p2b-runs/reporting-v8_3831_",
+        "workdir_under_isolated_cycle": false,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/runs/request-packages/E1-3-reporting-1789478859279/registry.json",
+        "fixture_registry_isolated": false,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54938,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/06-zero-shot-p2c-reporting/server/server.stderr"
+    },
+    {
+      "index": 7,
+      "arm": "few-shot-p2c",
+      "contract_id": "E2-2",
+      "track": "posting",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "request_sha256": "63face503cda567edfe9f8742f7027199e72ca2fed652f4aa42c1bcbb3ebe256",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "contract_sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+      "base_url": "http://127.0.0.1:51467",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 994,
+      "response_sha256": "0caf624aa22c63dd0d0871bcab3df5025f056df854a23baacb7c3fcde921dddf",
+      "checker": {
+        "ok": false,
+        "classification": "schema_violation",
+        "detail": {
+          "status": 200,
+          "errors": [
+            "'processingTimestamp' is a required property"
+          ]
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-a_k0afbz/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-a_k0afbz/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-a_k0afbz",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 4,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54946,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/07-few-shot-p2c-posting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/07-few-shot-p2c-posting/server/server.stderr"
+    },
+    {
+      "index": 8,
+      "arm": "few-shot-p2c",
+      "contract_id": "E2-2",
+      "track": "interest",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "request_sha256": "9e5c4c0254730bc070079fcf1a13cc7767642f73005b49226627e8662767a73e",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "contract_sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+      "base_url": "http://127.0.0.1:51469",
+      "status": 200,
+      "content_type": "application/json",
+      "response_bytes": 1248,
+      "response_sha256": "36d9bc69dc6653cb072671db8477600b7125bd50cddcc6e0700a2b1bab152233",
+      "checker": {
+        "ok": true,
+        "classification": "schema_valid",
+        "detail": {
+          "status": 200
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-rr7mlrvd/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-rr7mlrvd/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-rr7mlrvd",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": []
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 54983,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/08-few-shot-p2c-interest/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/08-few-shot-p2c-interest/server/server.stderr"
+    },
+    {
+      "index": 9,
+      "arm": "few-shot-p2c",
+      "contract_id": "E2-2",
+      "track": "reporting",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "request_sha256": "841888939484540b0daadc9e11de2ec9ea65f357255a02053cd1eb01db4074b3",
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "contract_sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+      "base_url": "http://127.0.0.1:51471",
+      "status": 500,
+      "content_type": "application/json",
+      "response_bytes": 1010,
+      "response_sha256": "8faa71a711901e3e7e62d118dd31d8c47976914f925630d84ed049bf12b832e3",
+      "checker": {
+        "ok": true,
+        "classification": "documented_500_schema_valid",
+        "detail": {
+          "status": 500
+        }
+      },
+      "reach": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-z7a8e4jb/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-z7a8e4jb/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-z7a8e4jb",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": false,
+        "program_exit": 12,
+        "response_status_in_audit": 500,
+        "failure_events": [
+          {
+            "kind": "local_compatibility_abort",
+            "raw": "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+            "authority": "local CEE3ABD2 compatibility diagnostic; cause/effects not inferred"
+          }
+        ]
+      },
+      "target_quiet_including_descendants": true,
+      "spawn_method": "posix_spawn_setsidshell_exec",
+      "server_pid": 55008,
+      "server_stdout": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/09-few-shot-p2c-reporting/server/server.stdout",
+      "server_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/run-output/09-few-shot-p2c-reporting/server/server.stderr"
+    }
+  ],
+  "started_utc": "2026-09-15T13:27:29Z",
+  "finished_utc": "2026-09-15T13:27:42Z",
+  "summary": {
+    "planned": 9,
+    "http_completed": 9,
+    "schema_or_documented_500_valid": 8,
+    "reached_cobol": 8,
+    "quiet": 9
+  }
+}

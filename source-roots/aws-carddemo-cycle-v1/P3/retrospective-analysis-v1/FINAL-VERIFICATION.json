@@ -1,0 +1,44 @@
+{
+  "status": "verified",
+  "applications": {
+    "official": 12700,
+    "complementary": 84
+  },
+  "verifiedInputPins": 8910,
+  "earlierExternalPinsUnchanged": 2350,
+  "sourceAnchorsVerified": 16,
+  "obligationCells": 875,
+  "contributionWithinContractTrack": {
+    "T1": 19,
+    "T2": 103,
+    "T3": 17,
+    "union": 126,
+    "exclusiveT1": 9,
+    "exclusiveT2": 93,
+    "exclusiveT3": 14,
+    "incrementalT2afterT1": 93,
+    "incrementalT3afterT12": 14,
+    "overlapT1T2": 10,
+    "overlapAll": 3
+  },
+  "complementaryCheckVerdicts": {
+    "pass": 324,
+    "failed": 22,
+    "not_exercised": 14
+  },
+  "qualification": {
+    "trials": 35,
+    "targetedFaults": 30,
+    "detectedTargeted": 30,
+    "unavailable": 4,
+    "intentionalBlindSpots": 1
+  },
+  "sourcePreservationFailures": [],
+  "limitations": [
+    "No whole-obligation completeness claim",
+    "Official 58 short/empty DATEPARM and 8 signed DISPLAY applications have no qualified success-path oracle",
+    "External few-shot/SDD audit hashes not in historical application trees; linkage uses frozen report path/invocation/cwd and audit snapshots",
+    "Logical input diversity is not behavioral diversity or statistical independence",
+    "No new business executions; output mutations are checker qualification only"
+  ]
+}

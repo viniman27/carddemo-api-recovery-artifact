@@ -1,0 +1,80 @@
+{
+  "feature_name": "canonical-data-boundary-carddemo",
+  "artifact_type": "canonical-data-boundary",
+  "pipeline_stage": 5,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/canonical-data-boundary-carddemo/requirements.md",
+  "upstream_specs": [
+    "specs/capability-semantics-carddemo/spec.json"
+  ],
+  "created_at": "2026-09-12T13:36:14-03:00",
+  "updated_at": "2026-09-12T16:59:24.077551+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-12",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 5,
+        "artifact_type": "canonical-data-boundary"
+      },
+      "artifact": {
+        "path": "specs/canonical-data-boundary-carddemo/requirements.md",
+        "sha256": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/capability-semantics-carddemo/spec.json",
+          "sha256": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-5-authorization.json",
+        "sha256": "a2f73337b5ec123d62ab41e9c058a3065f1ccf133c48e5b81f54f9a2610bfe23"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage5",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 5",
+    "pipeline-sdd-v3 stage 5 Canonical Data Boundary Spec"
+  ],
+  "generation": {
+    "original_path": "prepared/canonical-data-boundary-carddemo/execution/scope-original.md",
+    "sha256": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "model": "gpt-6-astra",
+    "status": "approved_documentary_scope"
+  }
+}

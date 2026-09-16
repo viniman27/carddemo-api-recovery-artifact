@@ -1,0 +1,59 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "p2c_request_materialized_local_only",
+  "fixtures": [
+    {
+      "fixtureId": "p2c-request-E1-3-reporting-1789506679256",
+      "track": "reporting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "CARDXREF": "CARDXREF",
+          "DATEPARM": "DATEPARM",
+          "TRANCATG": "TRANCATG",
+          "TRANFILE": "TRANFILE",
+          "TRANTYPE": "TRANTYPE"
+        },
+        "filePins": {
+          "CARDXREF": {
+            "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+            "bytes": 8192
+          },
+          "DATEPARM": {
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "bytes": 80
+          },
+          "TRANCATG": {
+            "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "bytes": 700
+          },
+          "TRANTYPE": {
+            "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "p2c-request-materialization",
+        "officialFixture": false,
+        "requestSha256": "c8f8249cc6d72b88c6edc968968c475bf2b2e5e49c509fb66f7b419c7a42180e",
+        "contractId": "E1-3"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": false
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "6e3564b0a411d39c64c14d395a67a39009c34d07917ee63ad4f2a3ada7418b5b"
+    }
+  ]
+}

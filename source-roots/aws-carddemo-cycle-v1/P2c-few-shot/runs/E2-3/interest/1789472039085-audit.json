@@ -1,0 +1,46 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-3",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+  "contractOriginalSha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+  "track": "interest",
+  "path": "/interest-generation-runs",
+  "status": 200,
+  "requestBody": {
+    "transactionIdPrefix": "INPUTCHECK"
+  },
+  "requestBodySha256": "98fc630486ff46b6a66ccb83fbfe5e8f44a31a612ca748b17c49f2ff26e25ff2",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-2ptlfd1e",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "e37aea9bac1a04eef616f74b9264b11d63b0564c9ae706cace4db30be37cea2e"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "transactions": [
+      {
+        "transactionId": "INPUTCHECK000001",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "System",
+        "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "amount": 100.0,
+        "merchantId": 0,
+        "merchantName": "",
+        "merchantCity": "",
+        "originalTimestamp": "2026-09-15-08.33.59.090000",
+        "processingTimestamp": "2026-09-15-08.33.59.090000",
+        "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "cardNumber": "4111111111111111",
+        "merchantZip": ""
+      }
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-2ptlfd1e/audit.json",
+  "durationSeconds": 0.013
+}

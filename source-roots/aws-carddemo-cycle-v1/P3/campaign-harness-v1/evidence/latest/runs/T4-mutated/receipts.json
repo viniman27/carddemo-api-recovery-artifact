@@ -1,0 +1,93 @@
+[
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0001",
+    "content_type": "application/json",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T1:t1-absent",
+      "T2:t2-duplicate"
+    ],
+    "request_identity": "b5fc65ed173d683abec52a8dfa5180e10a70820895b3362b40759e07255598c8",
+    "response_bytes": 35,
+    "response_sha256": "48edb541b9525ac5d43274eec494624a3a75cbd845cb13ee334ba8963bd44214",
+    "status": 200
+  },
+  {
+    "body_kind": "bytes",
+    "case_id": "T4-0002",
+    "content_type": "application/json",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T1:t1-empty"
+    ],
+    "request_identity": "4a03668f8b7cc89aa72c5a459ee233c448bfd9da31caa12ab75ffeb70249092d",
+    "response_bytes": 29,
+    "response_sha256": "f9414b152f5fcf779e3e3efa0ade09bbc868ec3bc8970f1300aac59acec6fdf2",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0003",
+    "content_type": "application/json",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T2:t2-distinct-expectation"
+    ],
+    "request_identity": "8fe50d77f3b5501a1ddf8cb617bae19b7f4d02894af339e460dd98680dfda25c",
+    "response_bytes": 35,
+    "response_sha256": "48edb541b9525ac5d43274eec494624a3a75cbd845cb13ee334ba8963bd44214",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0004",
+    "content_type": "application/json",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T3:t3-json-empty-object"
+    ],
+    "request_identity": "0302d0af42137e50f8ebe7a21d047ef4a9a7bf662f641af573fe6555a22f90ef",
+    "response_bytes": 31,
+    "response_sha256": "85a29ebcca817bc414da9e947ad9c16cf0e4936316f2edfc95e0449a15c3e5b8",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0005",
+    "content_type": "application/json",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/documented-500",
+    "provenance": [
+      "T3:t3-doc-500"
+    ],
+    "request_identity": "5cc2e2acad1d3c3cf11446e0e1e6dba5d45b8bf61bc2f8deba2aa7ce2d8e2121",
+    "response_bytes": 26,
+    "response_sha256": "aa8d4da425c86db6070f8716c491e139b7a38759af387c6fde3b49b888aa4875",
+    "status": 500
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0006",
+    "content_type": null,
+    "failure_class": "deadline",
+    "method": "POST",
+    "path": "/deadline",
+    "provenance": [
+      "T3:t3-deadline"
+    ],
+    "request_identity": "798906fc3207bd6cf98803bde63597071f1cc222cceef6dd8466c3dbc5a2d8da",
+    "response_bytes": 0,
+    "response_sha256": null,
+    "status": null
+  }
+]

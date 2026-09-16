@@ -1,0 +1,54 @@
+{
+  "feature_name": "capability-selection-carddemo",
+  "artifact_type": "capability-selection",
+  "pipeline_stage": 2,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/capability-selection-carddemo/requirements.md",
+  "upstream_specs": [
+    "specs/pipeline-scope-carddemo/spec.json"
+  ],
+  "created_at": "2026-09-11T14:10:57-03:00",
+  "updated_at": "2026-09-11T21:50:15.473959+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": false
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": false,
+    "gate_review_date": null,
+    "blocking_gaps": [],
+    "review": null
+  },
+  "ready_for_implementation": false,
+  "operational_chain_identity_note": "capability is an immutable operational chain id from stage 1, not a selected business capability name",
+  "selected_business_capability": null,
+  "bridge": "local-explicit-adapter-not-native-slash-command",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 2",
+    "pipeline-sdd-v3 stage 2 Capability Selection Spec"
+  ],
+  "generation": {
+    "original_path": "prepared/capability-selection-carddemo/execution/scope-original.md",
+    "sha256": "5d5f25b2bd1e080f0218fd0c5a787af93a734abf72a11307dd992c9a2ee29172",
+    "model": "gpt-6-astra",
+    "status": "generated_pending_human_review"
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "INV": {
+    "id": "p2c-E2-3-interest-1789472703721",
+    "run": "E3-01",
+    "track": "interest",
+    "request": {},
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+    "localhost_only": true,
+    "time_utc": "2026-09-15T11:45:03Z",
+    "fixture_selection_channel": "local_config"
+  },
+  "RES": {
+    "binding_components": {
+      "p2b_binding.py": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "runtime_observations.py": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+      "write_observer.c": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+      "interest_driver.cbl": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    "source_pins": {
+      "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+      "programs": [
+        "CBTRN02C",
+        "CBACT04C",
+        "CBTRN03C"
+      ],
+      "checked_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "bytes": 52479
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "bytes": 58890
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "bytes": 52239
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "bytes": 1125
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "bytes": 736
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "bytes": 655
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "bytes": 817
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "bytes": 1546
+        },
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "bytes": 1538
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "bytes": 5758
+        },
+        {
+          "path": "app/jcl/COMBTRAN.jcl",
+          "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+          "bytes": 3662
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "bytes": 2964
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "bytes": 3246
+        },
+        {
+          "path": "app/jcl/TRANBKP.jcl",
+          "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+          "bytes": 5330
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "bytes": 6427
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "bytes": 2233
+        }
+      ],
+      "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+    },
+    "fixture_policy": "external local technical fixture selection; not evaluation oracle; not extraction input; not public request",
+    "selected_fixture": {
+      "fixtureId": "interest-native-technical-v3-explicit-argument",
+      "track": "interest",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "interest/ACCTFILE",
+          "DISCGRP": "interest/DISCGRP",
+          "TCATBALF": "interest/TCATBALF",
+          "XREFFILE": "interest/XREFFILE",
+          "XREFFILE.1": "interest/XREFFILE.1",
+          "PARMFILE": "interest/PARMFILE"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+            "bytes": 8192
+          },
+          "DISCGRP": {
+            "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+            "bytes": 8192
+          },
+          "TCATBALF": {
+            "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+            "bytes": 8192
+          },
+          "XREFFILE.1": {
+            "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+            "bytes": 8192
+          },
+          "PARMFILE": {
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "bytes": 10
+          }
+        }
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "existing technical seed executable, not expected outcomes",
+        "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+        "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+        "driverParameter": "2022071800",
+        "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+        "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+        "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "36cbae0330c02ab93fc95c9830ccf5aa164e41b1d7fe2fed0e9f773ab5ef546e",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "verifiedDescriptorSha256": "36cbae0330c02ab93fc95c9830ccf5aa164e41b1d7fe2fed0e9f773ab5ef546e",
+      "resolvedFixtureFiles": {
+        "ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "DISCGRP": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "XREFFILE.1": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "PARMFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/PARMFILE"
+      }
+    },
+    "p2a_contract": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+    "requestBindingsResolved": {},
+    "externalParameter": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/PARMFILE",
+      "sha256": "4c62e8bdba67e216f863d51792ead49af809844d0d2e9d4a6fbee43a9373750d",
+      "bytes": 10,
+      "value": "INPUTCHECK",
+      "linkageParameterLength": 10,
+      "authority": "local wrapper supplies prefix byte length; COBOL does not inspect length"
+    }
+  },
+  "CAP": {
+    "captures": [
+      {
+        "label": "PARMFILE.pre_cobol",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/PARMFILE",
+        "exists": true,
+        "bytes": 10,
+        "sha256": "4c62e8bdba67e216f863d51792ead49af809844d0d2e9d4a6fbee43a9373750d"
+      },
+      {
+        "label": "p2c-interest-linkage",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/p2c-interest-linkage.json",
+        "exists": true,
+        "bytes": 112,
+        "sha256": "14dd5e4c9e2547e23c2bd2fa8958a6f22e58ffa5f6115f213cb5dbb91d84e49a"
+      },
+      {
+        "label": "TRANSACT",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/TRANSACT",
+        "exists": true,
+        "bytes": 350,
+        "sha256": "1edd9996043d48acc4a66e6456cb6db31e75274478aa81336ea4c89df41991ac"
+      }
+    ],
+    "freshness": "created in this invocation workspace",
+    "fixture_materialization": {
+      "fixtureId": "interest-native-technical-v3-explicit-argument",
+      "track": "interest",
+      "materializerKind": "local_file_package",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "files": {
+        "ACCTFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/ACCTFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        },
+        "DISCGRP": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+          "sourceBytes": 8192,
+          "sourceSha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/DISCGRP",
+          "materializedBytes": 8192,
+          "materializedSha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        },
+        "PARMFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/PARMFILE",
+          "sourceBytes": 10,
+          "sourceSha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/PARMFILE",
+          "materializedBytes": 10,
+          "materializedSha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        },
+        "TCATBALF": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+          "sourceBytes": 8192,
+          "sourceSha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/TCATBALF",
+          "materializedBytes": 8192,
+          "materializedSha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        },
+        "XREFFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/XREFFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        },
+        "XREFFILE.1": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+          "sourceBytes": 8192,
+          "sourceSha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd/XREFFILE.1",
+          "materializedBytes": 8192,
+          "materializedSha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "existing technical seed executable, not expected outcomes",
+            "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+            "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+            "driverParameter": "2022071800",
+            "parameterLimitation": "X(10) bytes supplied by resource; no calendar meaning imposed",
+            "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair.",
+            "argumentOrigin": "Explicit technical fixture bytes, migrated from historical driver; not an API default"
+          }
+        }
+      },
+      "preCobolMaterializationSnapshot": {
+        "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+        "entryCount": 6,
+        "treeSha256": "5b82284af4687dbb892406660d1539a925c0058ce019639ff10588fdf20d466f",
+        "files": [
+          {
+            "path": "ACCTFILE",
+            "bytes": 8192,
+            "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636"
+          },
+          {
+            "path": "DISCGRP",
+            "bytes": 8192,
+            "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54"
+          },
+          {
+            "path": "PARMFILE",
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+          },
+          {
+            "path": "TCATBALF",
+            "bytes": 8192,
+            "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7"
+          },
+          {
+            "path": "XREFFILE",
+            "bytes": 8192,
+            "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2"
+          },
+          {
+            "path": "XREFFILE.1",
+            "bytes": 8192,
+            "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176"
+          }
+        ]
+      }
+    },
+    "program_stdout": "P2C-PARM-LENGTH=+00010\nP2C-PARM-VALUE=INPUTCHECK\nSTART OF EXECUTION OF PROGRAM CBACT04C\n0000000000101000500001000000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\nEND OF EXECUTION OF PROGRAM CBACT04C\n",
+    "program_stderr": ""
+  },
+  "CONV": {
+    "field_mappings": [
+      {
+        "field": "GeneratedInterestTransaction",
+        "basis": "TRANSACT fixed 350-byte records; filler bytes 330:350 retained where exposed"
+      }
+    ],
+    "limits": [
+      "technical parse only",
+      "no semantic repairs",
+      "no coverage inference from build"
+    ]
+  },
+  "FAIL": {
+    "events": []
+  },
+  "STATE": {
+    "isolation": "new per-invocation directory",
+    "durability": "unknown",
+    "reset_claim": "not_attested_by_single_invocation",
+    "before": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+      "entryCount": 0,
+      "treeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "files": []
+    },
+    "pre_cobol_materialization": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+      "entryCount": 6,
+      "treeSha256": "5b82284af4687dbb892406660d1539a925c0058ce019639ff10588fdf20d466f",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636"
+        },
+        {
+          "path": "DISCGRP",
+          "bytes": 8192,
+          "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54"
+        },
+        {
+          "path": "PARMFILE",
+          "bytes": 10,
+          "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2"
+        },
+        {
+          "path": "XREFFILE.1",
+          "bytes": 8192,
+          "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176"
+        }
+      ]
+    },
+    "pre_cobol_request_materialized": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+      "entryCount": 7,
+      "treeSha256": "b235d690491f6abc6ac6250a8aa65e817b6c4edeef3318554df27f08a5e19a61",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636"
+        },
+        {
+          "path": "DISCGRP",
+          "bytes": 8192,
+          "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54"
+        },
+        {
+          "path": "PARMFILE",
+          "bytes": 10,
+          "sha256": "4c62e8bdba67e216f863d51792ead49af809844d0d2e9d4a6fbee43a9373750d"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2"
+        },
+        {
+          "path": "XREFFILE.1",
+          "bytes": 8192,
+          "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176"
+        },
+        {
+          "path": "p2c-interest-linkage.json",
+          "bytes": 112,
+          "sha256": "14dd5e4c9e2547e23c2bd2fa8958a6f22e58ffa5f6115f213cb5dbb91d84e49a"
+        }
+      ],
+      "afterRequestInputs": [
+        "PARMFILE",
+        "p2c-interest-linkage.json"
+      ],
+      "provenance": "after fixture materialization and request DALYTRAN/TRANFILE/DATEPARM/PARMFILE writes; before COBOL invocation"
+    },
+    "after": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-cavjviqd",
+      "entryCount": 8,
+      "treeSha256": "fd2766c5aac8053669962780fd72fc1e324271eb24160e4caf7a012dbc9443af",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636"
+        },
+        {
+          "path": "DISCGRP",
+          "bytes": 8192,
+          "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54"
+        },
+        {
+          "path": "PARMFILE",
+          "bytes": 10,
+          "sha256": "4c62e8bdba67e216f863d51792ead49af809844d0d2e9d4a6fbee43a9373750d"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7"
+        },
+        {
+          "path": "TRANSACT",
+          "bytes": 350,
+          "sha256": "1edd9996043d48acc4a66e6456cb6db31e75274478aa81336ea4c89df41991ac"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2"
+        },
+        {
+          "path": "XREFFILE.1",
+          "bytes": 8192,
+          "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176"
+        },
+        {
+          "path": "p2c-interest-linkage.json",
+          "bytes": 112,
+          "sha256": "14dd5e4c9e2547e23c2bd2fa8958a6f22e58ffa5f6115f213cb5dbb91d84e49a"
+        }
+      ]
+    }
+  },
+  "RESP": {
+    "status": 200,
+    "body": {
+      "track": "interest",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "outputs": {
+        "availability": "available",
+        "items": [
+          {
+            "transactionId": "INPUTCHECK000001",
+            "typeCode": "01",
+            "categoryCode": "0005",
+            "source": "System",
+            "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "amount": "00000010000",
+            "merchantId": "000000000",
+            "merchantName": "",
+            "merchantCity": "",
+            "merchantPostalText": "",
+            "cardReference": "4111111111111111",
+            "originalTimestamp": "2026-09-15-08.45.03.980000",
+            "processingTimestamp": "2026-09-15-08.45.03.980000",
+            "rawText": "INPUTCHECK000001010005System    Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000000000010000000000000                                                                                                              41111111111111112026-09-15-08.45.03.9800002026-09-15-08.45.03.980000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          }
+        ]
+      }
+    },
+    "program_exit": 0,
+    "reached_cobol": true
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "aggregate": {
+    "contracts": 7,
+    "expectedConditionsPerContract": [
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "suiteCount": 28
+  },
+  "basedOn": {
+    "manifestSha256": "d0c5135c29081460244e9454bcc3fdbf7bf4f35e7a0bcd2f7260260d63077fe9",
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1",
+    "statePreserved": "frozen_bytes_pending_runtime_readiness"
+  },
+  "counts": {
+    "T1": 88,
+    "T2": 5868,
+    "T3": 401,
+    "T4": 6357
+  },
+  "guards": [
+    "T1/T2 copied byte-for-byte from campaign-freeze-package-v1 and reloaded with campaign-harness-v3 load_frozen_suite.",
+    "T3 amendments are technical binding substitutions only, qualified by exact known placeholder values; arbitrary invalid strings and already-encoded date records are preserved.",
+    "T4 rebuilt only via campaign-harness-v3 UnionBuilder from package-v2 T1/T2/T3 suites; no replica union implementation used.",
+    "No COBOL/API/runtime/model/fuzzer execution performed by this package assembly."
+  ],
+  "kind": "campaign-freeze-package-v2",
+  "limits": [
+    "Package v2 is pending final readiness only; it is not an official campaign execution package claim.",
+    "Business data, SDD empty-object defects, and non-target invalid payload bytes are intentionally preserved.",
+    "No readiness/coverage/oracle conclusion is implied by successful freeze assembly."
+  ],
+  "officialExecutionAuthorizedOrClaimed": false,
+  "officialRuntimeStarted": false,
+  "sourceCodeProtocolPins": {
+    "amendmentScript": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-binding-closure-v1/scripts/t3_binding_amendment.py",
+    "facadeEvidence": [
+      "P2c-zero-shot accepts p3:{track}:{DD}",
+      "P2c-few-shot accepts p3-local-technical-fixture-selection:{field}",
+      "reporting REPORT maps to local DD TRANREPT"
+    ],
+    "harness": "P3/campaign-harness-v3/src/campaign_harness.py::load_frozen_suite/freeze_suite/UnionBuilder",
+    "protocol": "casos/aws-carddemo-cycle-v1/PROTOCOLO.md sections 4-5: technical operationalization and T1-T4 freeze pending P3 readiness"
+  },
+  "sourcePins": [
+    {
+      "bytes": 11566,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/MANIFEST.json",
+      "sha256": "d0c5135c29081460244e9454bcc3fdbf7bf4f35e7a0bcd2f7260260d63077fe9"
+    },
+    {
+      "bytes": 21204,
+      "condition": "T1",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-1/T1.json",
+      "sha256": "a41983e0a5898c1035d5fbd5b20c373c743d1f21328ae022227bd89d58d9e1bf"
+    },
+    {
+      "bytes": 2765994,
+      "condition": "T2",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-1/T2.json",
+      "sha256": "320969f0cf969b8a7935afbc4113e4fa54a1e8d4981ca16e8ecd63a4cb7aedec"
+    },
+    {
+      "bytes": 277047,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-1/T3.json",
+      "sha256": "f9f01697f5e41a93bd58d40c928eaf8056bccb93d749e30729a711f06edb0d79"
+    },
+    {
+      "bytes": 19147,
+      "condition": "T1",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-2/T1.json",
+      "sha256": "cd0eb0cbe7efe5145ed4f78c3971264efbf0f5e2aab9861e946f7f9ed94213e3"
+    },
+    {
+      "bytes": 2672485,
+      "condition": "T2",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-2/T2.json",
+      "sha256": "629804d8be22955ccb2c9b55d5afbecacfca8a20758d79662aa3e3a626337f6a"
+    },
+    {
+      "bytes": 259652,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-2/T3.json",
+      "sha256": "4838153cc26ea821bba8483fc3dbd29e50ba0777dbdca5ad3002417bb5a5eb14"
+    },
+    {
+      "bytes": 24463,
+      "condition": "T1",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-3/T1.json",
+      "sha256": "98e9f87e53ba5787662e8b82b4fe90024ccd990f68c9eaa274282e62dfe358dc"
+    },
+    {
+      "bytes": 1914952,
+      "condition": "T2",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-3/T2.json",
+      "sha256": "f65d43c3fafcfe1c71cc3be3a55fc46a13eefc2bea54b5a34f083a5f4ebabf39"
+    },
+    {
+      "bytes": 270981,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E1-3/T3.json",
+      "sha256": "b1268b3dff0d2ceae7d24efbf375df13015b41494eede510429b96e0e7f7b402"
+    },
+    {
+      "bytes": 34977,
+      "condition": "T1",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-1/T1.json",
+      "sha256": "15c9b9614045acd0e50ff8c894fbdeabe268f2501bd742aa4936763323f8b5cc"
+    },
+    {
+      "bytes": 1981375,
+      "condition": "T2",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-1/T2.json",
+      "sha256": "da7cfb5a2b9445794f4dbe4f655ba398e4430f62b0be5304ded696dd244f2398"
+    },
+    {
+      "bytes": 465225,
+      "cases": 33,
+      "condition": "T3",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-1/T3.json",
+      "sha256": "d89d1df3bf540f59a60865cff815a91885827c39c546f834a9947c29f8d335aa"
+    },
+    {
+      "bytes": 25311,
+      "condition": "T1",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-2/T1.json",
+      "sha256": "9617981e8a6b66b0b7395f7f672267113da2e8774043ce576585bd009b174307"
+    },
+    {
+      "bytes": 4057653,
+      "condition": "T2",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-2/T2.json",
+      "sha256": "d6b59ebb72a3c414974440864bb1443e77549a73460941394d607cfba5b32bef"
+    },
+    {
+      "bytes": 596094,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-2/T3.json",
+      "sha256": "691b1939b8ad687f96e14fa5c6994ee9116a046962d649859c12e489414d33b0"
+    },
+    {
+      "bytes": 29055,
+      "condition": "T1",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-3/T1.json",
+      "sha256": "478acd088a4d769d5af3eaeb68b00bddfa86dea8dceef06a1a990942d8384b86"
+    },
+    {
+      "bytes": 4105662,
+      "condition": "T2",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-3/T2.json",
+      "sha256": "3cfe3abe28b5562cc3fda8e284342b7cfff6d60ebc21421676c2486d12113bc2"
+    },
+    {
+      "bytes": 464916,
+      "cases": 33,
+      "condition": "T3",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E2-3/T3.json",
+      "sha256": "3ba1a319983c40d2a5919e014b4c18f6ceddbeefc75dbda5d31d95cff71deb24"
+    },
+    {
+      "bytes": 22945,
+      "condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E3-SDD-stage6r3/T1.json",
+      "sha256": "87992f08146e105731e2f90c7b81fa1963a793e7c66849bd81e1e41bd0d85792"
+    },
+    {
+      "bytes": 916756,
+      "condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E3-SDD-stage6r3/T2.json",
+      "sha256": "4713291e87a6a5835c53ba72952d1349b8f5fdd78d882234206a8b8bde08ca00"
+    },
+    {
+      "bytes": 288883,
+      "cases": 123,
+      "condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v1/E3-SDD-stage6r3/T3.json",
+      "sha256": "8bd5399da8cc0cdb17f5529a5538c0abfa2bb566cf91557122a8962f634f34e6"
+    }
+  ],
+  "state": "frozen_bytes_pending_final_readiness_no_official_execution",
+  "suites": [
+    {
+      "bytes": 21204,
+      "cases": 10,
+      "condition": "T1",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-1/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "a41983e0a5898c1035d5fbd5b20c373c743d1f21328ae022227bd89d58d9e1bf"
+    },
+    {
+      "bytes": 2765994,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-1/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "320969f0cf969b8a7935afbc4113e4fa54a1e8d4981ca16e8ecd63a4cb7aedec"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 376064,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-1/T3.json",
+      "sha256": "d7868a628ae8c64e6230e9fed864fe79738fd36334ff5593da796c81e3df21e2",
+      "technicalChangeCount": 265
+    },
+    {
+      "bytes": 3107541,
+      "cases": 963,
+      "condition": "T4",
+      "contractId": "E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-1/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "9999d6939ada4bfdde912277db684eca0b8b9afc61eda7396ccab0afce486aca"
+    },
+    {
+      "bytes": 19147,
+      "cases": 9,
+      "condition": "T1",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-2/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "cd0eb0cbe7efe5145ed4f78c3971264efbf0f5e2aab9861e946f7f9ed94213e3"
+    },
+    {
+      "bytes": 2672485,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-2/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "629804d8be22955ccb2c9b55d5afbecacfca8a20758d79662aa3e3a626337f6a"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 336104,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-2/T3.json",
+      "sha256": "1bc4d25041ee292afde0e1a599078eee549aff7cc7097957fe7c759366fe9c5d",
+      "technicalChangeCount": 184
+    },
+    {
+      "bytes": 2972007,
+      "cases": 962,
+      "condition": "T4",
+      "contractId": "E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-2/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "a90343e6ffc9e2e749f597bd43dda54c378bbac43cea7c3e3e74b808b6372e87"
+    },
+    {
+      "bytes": 24463,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-3/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "98e9f87e53ba5787662e8b82b4fe90024ccd990f68c9eaa274282e62dfe358dc"
+    },
+    {
+      "bytes": 1914952,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-3/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "f65d43c3fafcfe1c71cc3be3a55fc46a13eefc2bea54b5a34f083a5f4ebabf39"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 369687,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-3/T3.json",
+      "sha256": "179b0f42229a231c39f14b14f3a6501c284fe0759e062a233609ab023a80e306",
+      "technicalChangeCount": 265
+    },
+    {
+      "bytes": 2253350,
+      "cases": 965,
+      "condition": "T4",
+      "contractId": "E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E1-3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "4b9d10731201cb3cb96ecf5845d47cd7d1a837d0c6d2d2fe2f227081045d3fd5"
+    },
+    {
+      "bytes": 34977,
+      "cases": 18,
+      "condition": "T1",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-1/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "15c9b9614045acd0e50ff8c894fbdeabe268f2501bd742aa4936763323f8b5cc"
+    },
+    {
+      "bytes": 1981375,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-1/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "da7cfb5a2b9445794f4dbe4f655ba398e4430f62b0be5304ded696dd244f2398"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 486976,
+      "cases": 33,
+      "condition": "T3",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-1/T3.json",
+      "sha256": "3618607595b7852a10e56128ea1e3a5ee95c79350d0dd8a6259f179fdfde3326",
+      "technicalChangeCount": 0
+    },
+    {
+      "bytes": 2451348,
+      "cases": 951,
+      "condition": "T4",
+      "contractId": "E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-1/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "3ed2252a164d0fc4afe14074e0fde91996bca7d212cb919d22d011235ecb88e0"
+    },
+    {
+      "bytes": 25311,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-2/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "9617981e8a6b66b0b7395f7f672267113da2e8774043ce576585bd009b174307"
+    },
+    {
+      "bytes": 4057653,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-2/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "d6b59ebb72a3c414974440864bb1443e77549a73460941394d607cfba5b32bef"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 714164,
+      "cases": 53,
+      "condition": "T3",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-2/T3.json",
+      "sha256": "89f3aaf73efeb1a0b73693bcb28f2d37257935e6ca98dc694abffb18b77bd3d0",
+      "technicalChangeCount": 265
+    },
+    {
+      "bytes": 4741324,
+      "cases": 965,
+      "condition": "T4",
+      "contractId": "E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-2/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "df3e16bb9e5b4105b85cd4f827288f687df649a6b282a57b3169b29e59d54aa2"
+    },
+    {
+      "bytes": 29055,
+      "cases": 15,
+      "condition": "T1",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-3/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "478acd088a4d769d5af3eaeb68b00bddfa86dea8dceef06a1a990942d8384b86"
+    },
+    {
+      "bytes": 4105662,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-3/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "3cfe3abe28b5562cc3fda8e284342b7cfff6d60ebc21421676c2486d12113bc2"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 486667,
+      "cases": 33,
+      "condition": "T3",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-3/T3.json",
+      "sha256": "f4e190960269a841c1bfc33fdf9dbbbbeecaba488d2af4abcf82b6e119d10c32",
+      "technicalChangeCount": 0
+    },
+    {
+      "bytes": 4569422,
+      "cases": 948,
+      "condition": "T4",
+      "contractId": "E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E2-3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "89b8b5dfa15ead151b83b689afb926a7f90dd571d1028d5aeef078a49a75e729"
+    },
+    {
+      "bytes": 22945,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E3-SDD-stage6r3/T1.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "87992f08146e105731e2f90c7b81fa1963a793e7c66849bd81e1e41bd0d85792"
+    },
+    {
+      "bytes": 916756,
+      "cases": 468,
+      "condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E3-SDD-stage6r3/T2.json",
+      "preservedFromV1ExactBytes": true,
+      "sha256": "4713291e87a6a5835c53ba72952d1349b8f5fdd78d882234206a8b8bde08ca00"
+    },
+    {
+      "amendedFromV1": true,
+      "bytes": 374792,
+      "cases": 123,
+      "condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E3-SDD-stage6r3/T3.json",
+      "sha256": "0705bdcf768ed1681c514caf7eff79dc62ba8e309f0d675130f224d1f1bb65b6",
+      "technicalChangeCount": 0
+    },
+    {
+      "bytes": 1262512,
+      "cases": 603,
+      "condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/E3-SDD-stage6r3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "886ab89c63358ccb191df0bb5851fa461dc6aecf28b4d6b26ee704369e6d47b5"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Recuperação verificada
+
+A execução auxiliar terminou por timeout; o REPORT.md copiado da v2 é histórico, não estado atual. O coordenador executou a suíte completa: 16 testes OK. Executou --static-only --contract-id all7 --max-depth 6 --max-paths-per-capability 12, exit 0; resultado íntegro em evidence/parent-recovery-static.json. IDs SDD migrados explicitamente com prova de identidade; schemas por contrato e compilador de receitas ligados. Nenhuma suíte oficial congelada e nenhuma chamada externa/API/COBOL. Bloqueios upstream mantidos. T1 permanece dependente do consentimento de envio ainda não recebido.

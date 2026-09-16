@@ -1,0 +1,31 @@
+{
+  "kind": "p3-local-fixture-registry-schema-only",
+  "status": "draft_pending_freeze",
+  "purpose": "Configurable local fixture selection interface for review; not official fixture contents and not an oracle.",
+  "fixtures": [
+    {
+      "fixtureId": "technical-smoke-posting-local-001",
+      "track": "posting",
+      "suiteUse": "technical_smoke_only",
+      "contentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "provenance": {
+        "class": "local_synthetic_support",
+        "source": "P2b technical smoke materializer placeholder",
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "pending"
+      }
+    }
+  ],
+  "notes": [
+    "No official fixtures or expected answers are declared here.",
+    "Hashes are mandatory for real registry entries; this sample uses a placeholder hash only to validate schema wiring."
+  ]
+}

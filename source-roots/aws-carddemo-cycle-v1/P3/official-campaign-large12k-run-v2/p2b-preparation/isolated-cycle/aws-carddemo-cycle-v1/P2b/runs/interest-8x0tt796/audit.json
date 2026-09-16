@@ -1,0 +1,505 @@
+{
+  "INV": {
+    "id": "http-1789508337749",
+    "run": "E3-01",
+    "track": "interest",
+    "request": {},
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796",
+    "localhost_only": true,
+    "time_utc": "2026-09-15T21:38:57Z",
+    "fixture_selection_channel": "local_config"
+  },
+  "RES": {
+    "binding_components": {
+      "p2b_binding.py": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "runtime_observations.py": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+      "write_observer.c": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+      "interest_driver.cbl": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    "source_pins": {
+      "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+      "programs": [
+        "CBTRN02C",
+        "CBACT04C",
+        "CBTRN03C"
+      ],
+      "checked_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "bytes": 52479
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "bytes": 58890
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "bytes": 52239
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "bytes": 1125
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "bytes": 736
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "bytes": 655
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "bytes": 817
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "bytes": 1546
+        },
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "bytes": 1538
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "bytes": 5758
+        },
+        {
+          "path": "app/jcl/COMBTRAN.jcl",
+          "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+          "bytes": 3662
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "bytes": 2964
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "bytes": 3246
+        },
+        {
+          "path": "app/jcl/TRANBKP.jcl",
+          "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+          "bytes": 5330
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "bytes": 6427
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "bytes": 2233
+        }
+      ],
+      "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus"
+    },
+    "fixture_policy": "external local technical fixture selection; not evaluation oracle; not extraction input; not public request",
+    "selected_fixture": {
+      "fixtureId": "interest.copied-current-technical-smoke",
+      "track": "interest",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "package/interest/ACCTFILE",
+          "DISCGRP": "package/interest/DISCGRP",
+          "PARMFILE": "package/interest/PARMFILE",
+          "TCATBALF": "package/interest/TCATBALF",
+          "XREFFILE": "package/interest/XREFFILE",
+          "XREFFILE.1": "package/interest/XREFFILE.1"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+            "bytes": 8192
+          },
+          "DISCGRP": {
+            "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+            "bytes": 8192
+          },
+          "PARMFILE": {
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "bytes": 10
+          },
+          "TCATBALF": {
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+            "bytes": 8192
+          },
+          "XREFFILE.1": {
+            "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+        "copiedCurrent": true,
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "c402b02ba37c8d803a29ad6fe67c1eae3322cfab17516c6b9f1d4cf04d84b53f",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "verifiedDescriptorSha256": "c402b02ba37c8d803a29ad6fe67c1eae3322cfab17516c6b9f1d4cf04d84b53f",
+      "resolvedFixtureFiles": {
+        "ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/ACCTFILE",
+        "DISCGRP": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/DISCGRP",
+        "PARMFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/PARMFILE",
+        "TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/TCATBALF",
+        "XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/XREFFILE",
+        "XREFFILE.1": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/XREFFILE.1"
+      }
+    },
+    "p2a_contract": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+    "externalParameter": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/PARMFILE",
+      "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+      "bytes": 10,
+      "authority": "CBACT04C linkage X(10); explicit local resource, no date default"
+    }
+  },
+  "CAP": {
+    "captures": [
+      {
+        "label": "TRANSACT",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/TRANSACT",
+        "exists": true,
+        "bytes": 350,
+        "sha256": "c7f89aa0ed6a4a24d55c6f4387ef9f05a002b78fd3f21057dfb327f1453f9e84"
+      }
+    ],
+    "freshness": "created in this invocation workspace",
+    "fixture_materialization": {
+      "fixtureId": "interest.copied-current-technical-smoke",
+      "track": "interest",
+      "materializerKind": "local_file_package",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "files": {
+        "ACCTFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/ACCTFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/ACCTFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "DISCGRP": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/DISCGRP",
+          "sourceBytes": 8192,
+          "sourceSha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/DISCGRP",
+          "materializedBytes": 8192,
+          "materializedSha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "PARMFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/PARMFILE",
+          "sourceBytes": 10,
+          "sourceSha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/PARMFILE",
+          "materializedBytes": 10,
+          "materializedSha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "TCATBALF": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/TCATBALF",
+          "sourceBytes": 8192,
+          "sourceSha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/TCATBALF",
+          "materializedBytes": 8192,
+          "materializedSha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "XREFFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/XREFFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/XREFFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "XREFFILE.1": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/interest/XREFFILE.1",
+          "sourceBytes": 8192,
+          "sourceSha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796/XREFFILE.1",
+          "materializedBytes": 8192,
+          "materializedSha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        }
+      },
+      "preCobolMaterializationSnapshot": {
+        "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796",
+        "entryCount": 6,
+        "treeSha256": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+        "files": [
+          {
+            "path": "ACCTFILE",
+            "bytes": 8192,
+            "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+          },
+          {
+            "path": "DISCGRP",
+            "bytes": 8192,
+            "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+          },
+          {
+            "path": "PARMFILE",
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+          },
+          {
+            "path": "TCATBALF",
+            "bytes": 8192,
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+          },
+          {
+            "path": "XREFFILE",
+            "bytes": 8192,
+            "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+          },
+          {
+            "path": "XREFFILE.1",
+            "bytes": 8192,
+            "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+          }
+        ]
+      }
+    },
+    "program_stdout": "START OF EXECUTION OF PROGRAM CBACT04C\n1000000000101000500000005000                      \n1000000000201000500000007000                      \nEND OF EXECUTION OF PROGRAM CBACT04C\n",
+    "program_stderr": ""
+  },
+  "CONV": {
+    "field_mappings": [
+      {
+        "field": "GeneratedInterestTransaction",
+        "basis": "CBACT04C generated TRANSACT 350-byte records"
+      },
+      {
+        "field": "GeneratedInterestTransaction",
+        "basis": "TRANSACT 350-byte fixed records",
+        "sourceSpanEvidence": {
+          "framing": {
+            "track": "interest",
+            "provenance": "TRANFILE/TRANSACT fixed-width receiver",
+            "recordSize": 350,
+            "bytes": 350,
+            "classification": "available",
+            "recordCount": 1
+          },
+          "records": [
+            {
+              "index": 0,
+              "classification": "transaction",
+              "sourceSpan": [
+                0,
+                350
+              ],
+              "rawText": "2022071800000001010005System    Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000000000000006000000000                                                                                                              41111111111111112026-09-15-18.38.57.7600002026-09-15-18.38.57.760000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+            }
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "technical parse only",
+      "no semantic repairs",
+      "no coverage inference from build",
+      "local file packages supply exact X(10) argument; no calendar, arithmetic or uniqueness validation inferred"
+    ]
+  },
+  "FAIL": {
+    "events": []
+  },
+  "STATE": {
+    "isolation": "new per-invocation directory",
+    "durability": "unknown",
+    "reset_claim": "not_attested_by_single_invocation",
+    "before": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796",
+      "entryCount": 0,
+      "treeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "files": []
+    },
+    "pre_cobol_materialization": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796",
+      "entryCount": 6,
+      "treeSha256": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+        },
+        {
+          "path": "DISCGRP",
+          "bytes": 8192,
+          "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+        },
+        {
+          "path": "PARMFILE",
+          "bytes": 10,
+          "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+        },
+        {
+          "path": "XREFFILE.1",
+          "bytes": 8192,
+          "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+        }
+      ]
+    },
+    "after": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-8x0tt796",
+      "entryCount": 8,
+      "treeSha256": "207d04a9897755ae67bdf12c2e29ddb252f9fdfd344fb0489150a1d29437fc04",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e"
+        },
+        {
+          "path": "DISCGRP",
+          "bytes": 8192,
+          "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+        },
+        {
+          "path": "PARMFILE",
+          "bytes": 10,
+          "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+        },
+        {
+          "path": "TRANSACT",
+          "bytes": 350,
+          "sha256": "c7f89aa0ed6a4a24d55c6f4387ef9f05a002b78fd3f21057dfb327f1453f9e84"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+        },
+        {
+          "path": "XREFFILE.1",
+          "bytes": 8192,
+          "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+        },
+        {
+          "path": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+          "bytes": 3112,
+          "sha256": "52a2ed0325c62ecb8b3dbb56e565d95ca4ecdd375837b3f37f623db09cbd9518"
+        }
+      ]
+    }
+  },
+  "RESP": {
+    "status": 200,
+    "body": {
+      "track": "interest",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "outputs": {
+        "availability": "available",
+        "items": [
+          {
+            "transactionId": "2022071800000001",
+            "typeCode": "01",
+            "categoryCode": "0005",
+            "source": "System",
+            "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "amount": "00000000006",
+            "merchantId": "000000000",
+            "merchantName": "",
+            "merchantCity": "",
+            "merchantPostalText": "",
+            "cardReference": "4111111111111111",
+            "originalTimestamp": "2026-09-15-18.38.57.760000",
+            "processingTimestamp": "2026-09-15-18.38.57.760000"
+          }
+        ]
+      }
+    },
+    "program_exit": 0,
+    "reached_cobol": true
+  }
+}

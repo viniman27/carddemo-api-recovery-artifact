@@ -1,0 +1,22 @@
+{
+  "contract_id": "E1-2",
+  "track": "reporting",
+  "body": {
+    "lines": [
+      "DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  ",
+      "                                                                                                                                     ",
+      "Transaction ID   Account ID  Transaction Type   Tran Category                      Tran Source            Amount                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "REPORT-START-001 10000000001 01-Purchase        0005-Candidate category            System                   1.00                     ",
+      "REPORT-END---001 10000000001 01-Purchase        0005-Candidate category            System                   2.00                     "
+    ],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN03C",
+      "Reporting from 2022-07-01 to 2022-07-31",
+      "REPORT-START-001010005System    Reporting boundary fixture                                                                          00000000100000000001Report Merchant                                   Sometown                                          10000000  41111111111111112022-07-01-00.00.00.0000002022-07-01-00.00.00.000000                    ",
+      "REPORT-END---001010005System    Reporting boundary fixture                                                                          00000000200000000001Report Merchant                                   Sometown                                          10000000  41111111111111112022-07-01-00.00.00.0000002022-07-31-23.59.59.000000                    ",
+      "END OF EXECUTION OF PROGRAM CBTRN03C"
+    ],
+    "returnCode": 0
+  }
+}

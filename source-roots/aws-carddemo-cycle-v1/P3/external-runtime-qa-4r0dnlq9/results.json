@@ -1,0 +1,105 @@
+[
+  {
+    "track": "posting",
+    "status": 200,
+    "body": {
+      "track": "posting",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "outputs": {
+        "availability": "available",
+        "items": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": "0001",
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": "00000002500",
+            "merchantId": "000000001",
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantPostalText": "0000000000",
+            "cardReference": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2026-09-15-06.50.12.180000"
+          }
+        ]
+      },
+      "rejections": {
+        "availability": "available",
+        "items": []
+      },
+      "progress": {
+        "availability": "available",
+        "value": {
+          "processedRecordCount": 1,
+          "preliminaryRejectCount": 0
+        }
+      }
+    },
+    "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-fswjc20t/audit.json"
+  },
+  {
+    "track": "interest",
+    "status": 503,
+    "body": {
+      "track": "interest",
+      "category": "content_unavailable",
+      "completeness": "not_attested",
+      "durability": "unknown"
+    },
+    "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-ibfvlw26/audit.json"
+  },
+  {
+    "track": "reporting",
+    "status": 200,
+    "body": {
+      "track": "reporting",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "records": {
+        "availability": "available",
+        "items": [
+          {
+            "kind": "header",
+            "value": {
+              "reportShortNameText": "DALYREPT",
+              "reportLongNameText": "Daily Transaction Report",
+              "startText": "2026-09-15",
+              "endText": "2026-09-15"
+            }
+          },
+          {
+            "kind": "detail",
+            "value": {
+              "transactionId": "2022071800000001",
+              "accountReference": "00000000001",
+              "typeCode": "01",
+              "typeDescription": "System transact",
+              "categoryCode": "0005",
+              "categoryDescription": "Interest charge",
+              "source": "System",
+              "amountText": "100.00"
+            }
+          },
+          {
+            "kind": "total",
+            "value": {
+              "label": "page",
+              "valueText": "+        200.00"
+            }
+          },
+          {
+            "kind": "total",
+            "value": {
+              "label": "grand",
+              "valueText": "+        200.00"
+            }
+          }
+        ]
+      }
+    },
+    "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-8vtmvfxq/audit.json"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "blockers": [
+    "Official release/generation remains gate-closed in this CLI.",
+    "No network, campaign replay, external T1 send, COBOL/API request or oracle generation is performed by dry-run.",
+    "T3 v2 may be pinned as candidate configuration only; it is not promoted here."
+  ],
+  "contracts": 7,
+  "dryRunDefault": true,
+  "errorPolicy": {
+    "failClosedOnPinMismatch": true,
+    "generationExceptionsPreservedAsPartial": true,
+    "noRepairOfGeneratedRequests": true,
+    "noSuccessFabrication": true
+  },
+  "kind": "t2-offline-preparation-v3-plan",
+  "networkAllowed": false,
+  "officialCampaign": false,
+  "operations": 21,
+  "policy": {
+    "budgetTransfer": "disabled",
+    "budgetUnit": "operation × seed × direction",
+    "generationReplay": "disabled",
+    "hypothesisDatabase": null,
+    "hypothesisVersion": "6.168.0",
+    "occurrencesAreNotDiversity": true,
+    "perOperationPerSeed": {
+      "negative": 50,
+      "positive": 50,
+      "total": 100
+    },
+    "retries": "disabled",
+    "schemathesisVersion": "4.27.1",
+    "seeds": [
+      104729,
+      130363,
+      155921
+    ],
+    "shrinkingDuringGeneration": false,
+    "tool": "Schemathesis"
+  },
+  "registryValidation": {
+    "authorization": {
+      "campaignAuthorized": false,
+      "externalT1SendAuthorized": false,
+      "officialCampaignsStarted": false,
+      "probeAuthorizedNow": false
+    },
+    "contractCount": 7,
+    "errors": [],
+    "failedPins": [],
+    "ok": true,
+    "operationCount": 21
+  },
+  "reset": {
+    "beforeAfterHashChecks": "required_for_official_freeze",
+    "default": "fresh_dir_per_application",
+    "genericRunReset": false
+  },
+  "t3Candidate": {
+    "candidate": "P3/t3-mapping-integration-v2",
+    "promoted": false
+  },
+  "union": {
+    "independentReplica": false,
+    "order": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "status": "blocked_until_T1_T2_T3_official_suites_exist"
+  },
+  "version": "3.0-local-candidate"
+}

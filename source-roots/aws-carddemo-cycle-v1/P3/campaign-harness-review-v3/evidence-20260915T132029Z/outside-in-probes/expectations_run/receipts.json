@@ -1,0 +1,70 @@
+[
+  {
+    "body_kind": "absent",
+    "case_id": "unexpected-500",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200
+      ],
+      "status": 500
+    },
+    "expectation_result": "violation",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "PX:unexpected-500"
+    ],
+    "request_headers": [],
+    "request_identity": "bb5bb129caad42fe22f75fbb6eaa07a099e7f751291878caceb3334ef8d2e761",
+    "response_bytes": 24,
+    "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+    "status": 500
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "documented-500",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        500
+      ],
+      "status": 500
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "PX:documented-500"
+    ],
+    "request_headers": [],
+    "request_identity": "bf1ade6826962f7ceade8f1e67fa2a438fea0c971c1777dac12ef06aa7e547fe",
+    "response_bytes": 24,
+    "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+    "status": 500
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "unsupported",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "unsupported_checks": [
+        "jsonSchema"
+      ]
+    },
+    "expectation_result": "inconclusive",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "PX:unsupported"
+    ],
+    "request_headers": [],
+    "request_identity": "3113b4a703a9e3e8aea40e560943da9f8f742830b8ae330081786b6ae2513f6e",
+    "response_bytes": 24,
+    "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+    "status": 500
+  }
+]

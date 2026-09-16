@@ -1,0 +1,56 @@
+{
+  "http": [
+    {
+      "track": "interest",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4cbgz2lo/audit.json",
+      "auditSha256": "63a1ca75b86b582e4e14b7f54dc2a9a72000a3714a86fc4492fd0c2e76af1e61",
+      "observedWriteEvents": 0,
+      "parameter": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4cbgz2lo/PARMFILE",
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "bytes": 10,
+        "authority": "CBACT04C linkage X(10); explicit local resource, no date default"
+      }
+    },
+    {
+      "track": "posting",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-p72m7r6h/audit.json",
+      "auditSha256": "136130378d6b076a323406f21c1c57908dcfaa88bd493cb92372e7300382832b",
+      "observedWriteEvents": 2,
+      "parameter": null
+    },
+    {
+      "track": "reporting",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-k7j8xplj/audit.json",
+      "auditSha256": "6c67a8d128697314e373d1543b110c49b442954725cec89a9c12ddbde75fb6de",
+      "observedWriteEvents": 0,
+      "parameter": null
+    }
+  ],
+  "httpSchemaPassed": true,
+  "nonNominalPostingSchemaValid": true,
+  "failureSchemas": [
+    {
+      "track": "posting",
+      "status": 500,
+      "valid": true
+    },
+    {
+      "track": "interest",
+      "status": 500,
+      "valid": true
+    },
+    {
+      "track": "reporting",
+      "status": 500,
+      "valid": true
+    }
+  ],
+  "note": "Direct readback and hash verification. Not independent model review, campaign or business oracle."
+}

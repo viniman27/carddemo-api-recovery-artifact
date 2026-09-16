@@ -1,0 +1,148 @@
+{
+  "freezeLoadUnion": {
+    "frozenSuites": [
+      "frozen-synthetic-suites/T1.json",
+      "frozen-synthetic-suites/T2.json",
+      "frozen-synthetic-suites/T3.json"
+    ],
+    "unionCaseCount": 3,
+    "unionCaseOrder": [
+      "T4-0001",
+      "T4-0002",
+      "T4-0003"
+    ],
+    "unionLedger": [
+      {
+        "action": "kept",
+        "destination": "T4-0001",
+        "source": "T1:T1-SYN-nominal"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0002",
+        "source": "T2:T2-SYN-absent"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0003",
+        "source": "T2:T2-SYN-present-empty"
+      },
+      {
+        "action": "duplicate_merged",
+        "destination": "T4-0001",
+        "source": "T2:T2-SYN-empty-json-object"
+      },
+      {
+        "action": "duplicate_merged",
+        "destination": "T4-0001",
+        "source": "T2:T2-SYN-duplicate-empty-json-object"
+      },
+      {
+        "action": "duplicate_merged",
+        "destination": "T4-0001",
+        "source": "T3:T3-SYN-mapped-path"
+      }
+    ],
+    "unionPath": "frozen-synthetic-suites/T4-union.json"
+  },
+  "kind": "suite-adapters-preflight-v1-report",
+  "nonClaims": [
+    "not a T1 generator",
+    "not a T2 fuzzer/generator",
+    "not a T3 business oracle or abstract-id converter",
+    "not an AWS campaign runner"
+  ],
+  "pending": [
+    "T1 outbound package/content approval before any model call",
+    "schema mapping for arbitrary T1 response formats beyond explicit JSON objects/lists",
+    "official T2 frozen request production is external; this imports only already-frozen requests",
+    "T3 business-request mapping from independent MBT paths to each contract surface",
+    "operation-specific fixture package mapping and applicability classification",
+    "structural/schema checkers for official AWS replay and result interpretation",
+    "official runner/gate remains disabled until concrete freeze manifest and human decision"
+  ],
+  "realContractsRead": 7,
+  "realOperationsInventoried": 21,
+  "scope": "preflight only; no AWS generation, no LLM/API business call, no official gate enabled",
+  "t1": {
+    "acceptedCount": 1,
+    "contractId": "SYN",
+    "llm_called": false,
+    "raw_response": "Synthetic T1 preserved response. No model call was made.\n```json\n[\n  {\"id\": \"nominal\", \"operationId\": \"posting\", \"method\": \"POST\", \"path\": \"/posting\", \"body\": {}} ,\n  {\"id\": \"omitted-request\"},\n  {\"id\": \"bad-path\", \"method\": \"POST\", \"path\": \"posting\"}\n]\n```\n",
+    "rejected": [
+      {
+        "classification": "not_mapped_missing_request",
+        "id": "omitted-request",
+        "index": 1,
+        "input_keys": [
+          "id"
+        ]
+      },
+      {
+        "classification": "invalid_request",
+        "error": "path must be absolute",
+        "id": "bad-path",
+        "index": 2,
+        "input_keys": [
+          "id",
+          "method",
+          "path"
+        ]
+      }
+    ],
+    "rejectedCount": 2,
+    "repaired_omissions": false,
+    "sourcePath": "evidence-real-preflight-20260915T-synthetic/synthetic-inputs/t1-preserved-response.txt",
+    "source_bytes": 258,
+    "source_sha256": "2ce0db0b09edad797961219a3f67f25b7f47a9ed3faf6ff14f010910dd5c66cf",
+    "suiteId": "T1"
+  },
+  "t2": {
+    "acceptedCount": 4,
+    "contractId": "SYN",
+    "http_called": false,
+    "offline_import_only": true,
+    "rejected": [
+      {
+        "classification": "invalid_request",
+        "error": "path must be absolute",
+        "id": "invalid-relative-path",
+        "index": 4,
+        "input_keys": [
+          "body",
+          "id",
+          "method",
+          "operationId",
+          "path"
+        ]
+      }
+    ],
+    "rejectedCount": 1,
+    "sourcePath": "evidence-real-preflight-20260915T-synthetic/synthetic-inputs/t2-frozen-requests.json",
+    "source_bytes": 1158,
+    "source_sha256": "3cd077e00f997ead18e0bbb8393f475cbc158b57984f4b28fb66fd4f0b138e1c",
+    "suiteId": "T2"
+  },
+  "t3": {
+    "abstract_id_conversion": "blocked_without_external_mapping",
+    "acceptedCount": 1,
+    "contractId": "SYN",
+    "oracle_accessed": false,
+    "rejected": [
+      {
+        "classification": "blocked_missing_business_request_mapping",
+        "id": "abstract-transition-only",
+        "index": 1,
+        "input_keys": [
+          "id",
+          "transitionId"
+        ]
+      }
+    ],
+    "rejectedCount": 1,
+    "sourcePath": "evidence-real-preflight-20260915T-synthetic/synthetic-inputs/t3-external-paths.json",
+    "source_bytes": 372,
+    "source_sha256": "0c66741d4219135bf3a5a7d76ea48de19f595f63a7750538bf9c58059b3bbf9a",
+    "suiteId": "T3"
+  }
+}

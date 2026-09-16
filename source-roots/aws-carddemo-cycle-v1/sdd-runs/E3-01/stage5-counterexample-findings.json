@@ -1,0 +1,420 @@
+{
+  "review": "Stage5 canonical boundary source-grounded counterexample review",
+  "run_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+  "recommendation": "recommend_human_acceptance_within_conditional_documentary_scope_no_approval",
+  "approval_granted": false,
+  "execution_limits": [
+    "local document review only",
+    "no COBOL execution",
+    "no network/model generation",
+    "no source/spec/framework/quarantine modification"
+  ],
+  "counts": {
+    "reviewed_existing_inputs": 32,
+    "allowlisted_corpus_files": 19,
+    "stage4_rule_definitions": 20,
+    "stage5_rule_disposition_rows": 20,
+    "stage5_decisions": 7,
+    "stage5_canonical_types": 17,
+    "stage5_state_resource_rows": 31,
+    "stage5_outcome_variants": 20,
+    "stage5_anchor_occurrences_total": 64,
+    "stage5_explicit_full_path_anchor_occurrences": 46,
+    "stage5_shorthand_anchor_occurrences": 18,
+    "stage5_unique_anchor_ranges": 59,
+    "counterexample_cases": 20,
+    "decision_cases": 7
+  },
+  "rule_ids_stage4": [
+    "R-1",
+    "R-2",
+    "R-3",
+    "R-4",
+    "R-5",
+    "R-6",
+    "R-7",
+    "R-8",
+    "R-9",
+    "R-10",
+    "R-11",
+    "R-12",
+    "R-13",
+    "R-14",
+    "R-15",
+    "R-16",
+    "R-17",
+    "R-18",
+    "R-19",
+    "R-20"
+  ],
+  "rule_ids_stage5_matrix": [
+    "R-1",
+    "R-2",
+    "R-3",
+    "R-4",
+    "R-5",
+    "R-6",
+    "R-7",
+    "R-8",
+    "R-9",
+    "R-10",
+    "R-11",
+    "R-12",
+    "R-13",
+    "R-14",
+    "R-15",
+    "R-16",
+    "R-17",
+    "R-18",
+    "R-19",
+    "R-20"
+  ],
+  "decision_ids_stage5": [
+    "D-2",
+    "D-3",
+    "D-4",
+    "D-5",
+    "D-6",
+    "D-7",
+    "D-8"
+  ],
+  "canonical_type_names": [
+    "PostingCandidate",
+    "PostingTransaction",
+    "PostingRejection",
+    "PostingProgress",
+    "PostingAttemptState",
+    "InterestCategoryBasis",
+    "InterestDisclosureBasis",
+    "InterestIdentifierBasis",
+    "GeneratedInterestTransaction",
+    "InterestAttemptState",
+    "ReportingTransactionBasis",
+    "ReportingDateBasis",
+    "UpstreamReportSelectionBasis",
+    "ReportDetail",
+    "ReportHeaderContext",
+    "ReportTotal",
+    "ReportingAttemptState"
+  ],
+  "anchor_validation": {
+    "bounds_failures": [],
+    "authority_hash_mismatches": [],
+    "corpus_hash_mismatches": [],
+    "notes": "Boundary verification counted only 46 explicit full-path anchors; this review additionally validated 18 shorthand occurrences, for 64 occurrences / 59 unique path-ranges."
+  },
+  "hashes_before": {
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/requirements.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/prepared/canonical-data-boundary-carddemo/execution/scope-original.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/capability-semantics-carddemo/requirements.md": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/legacy-evidence-carddemo-r2/requirements.md": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/STAGE4-COUNTEREXAMPLE-REVIEW.md": "56f32db0669f3c738ed83ee0294929ca1ee0f5c76e663eb2abdbecab7e319e29",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/boundary-verification.json": "6889de9d4d63a8f011aa82f54b09a9afca39b5f13699a3e46b7e748c7c372484",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/legacy-evidence-carddemo-r2/anchor-manifest.json": "e9367c82536ccd2d7e04bcb9337369ea72ca46c1671a261232144fc325c5ffa3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/input-pins.json": "fb36d3ec8c6c139e5eeedeb768d6dc2483dea6499638a0fbd7d76f57e346cd9d",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/spec.json": "8e869738d9fe897f3118b5495775ec091f909d79d6a9aeddd36e2baadbbfcc5c",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-1-authorization.json": "0ec9d89962c088507775523f266816b5c3c13f7631c7a6409b45bc13352542da",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-2-r2-authorization.json": "22294af2fb12235297e57e4b084a729695864af895d4047eb4a630d7286ec1c9",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-3-r2-authorization.json": "d8cdf343b5ed63cdd2e83e1627a50673acdb34930ae0c63e29be0e8fb122941e",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-4-authorization.json": "405caf0960e1a13dfbc8a8965340e9f4957571b8eea0b895b09b125e21025ee9",
+    "casos/aws-carddemo-preparation/research-corpus/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+    "casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f"
+  },
+  "cases": [
+    {
+      "id": "R-1",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se a seleção post/reject ocorresse depois de efeitos de postagem ou EOF gerasse seleção por registro.",
+      "citations": "Stage4 R-1 lines 143-149; Stage5 matrix line 363; CBTRN02C.cbl:202-215,345-369.",
+      "outcome": "not_falsified",
+      "rationale": "Contador/reason reset antes de 1500; razão zero seleciona 2000, não-zero seleciona rejeição; EOF apenas seta flag."
+    },
+    {
+      "id": "R-2",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se lookup de conta não fosse guardado, igualdade rejeitasse, ou 102 não pudesse ser sobrescrito por 103.",
+      "citations": "Stage4 R-2 lines 151-157; Stage5 lines 189,253-257,364; CBTRN02C.cbl:370-422.",
+      "outcome": "not_falsified",
+      "rationale": "Guard por razão zero e comparações >= preservados; 103 posterior sobrescreve 102."
+    },
+    {
+      "id": "R-3",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se candidato original, transação postada e rejeição fossem o mesmo registro canônico ou se filler virasse obrigação.",
+      "citations": "Stage4 R-3 lines 159-165; Stage5 lines 157-159,203-208,365; CBTRN02C.cbl:424-465,692-705; CVTRA05Y.cpy:5-17; CVTRA06Y.cpy:5-17.",
+      "outcome": "not_falsified",
+      "rationale": "Campos transferidos e timestamp novo distinguem transação; rejeição move registro diário + trailer; filler não recebeu significado."
+    },
+    {
+      "id": "R-4",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se categoria fosse posterior à conta/transação, se criação e atualização fossem colapsadas, ou erro virasse rejeição preliminar.",
+      "citations": "Stage4 R-4 lines 167-173; Stage5 lines 161,309,366; CBTRN02C.cbl:440-442,467-542.",
+      "outcome": "not_falsified",
+      "rationale": "Ordem 2700 antes de 2800/2900; flag de criação e status 00/23 retidos; erro segue abend local."
+    },
+    {
+      "id": "R-5",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se valor negativo fosse absolutizado ou reason 109 incrementasse rejeição.",
+      "citations": "Stage4 R-5 lines 175-181; Stage5 lines 190,258,308,367; CBTRN02C.cbl:545-560 and caller 440-442.",
+      "outcome": "not_falsified",
+      "rationale": "ADD usa sinal; 109 é atribuído no REWRITE e o caller prossegue a 2900 em retorno normal."
+    },
+    {
+      "id": "R-6",
+      "track": "posting",
+      "falsification_scenario": "Falsificar se Stage5 prometesse atomicidade, rollback, durabilidade parcial ou RETURN-CODE zero inventado.",
+      "citations": "Stage4 R-6 lines 183-189; Stage5 lines 116-119,259-260,310,368; CBTRN02C.cbl:221-234,254-270,424-579.",
+      "outcome": "not_falsified",
+      "rationale": "Stage5 mantém tentativas ordenadas e efeitos duráveis desconhecidos; não cria contagem de postados."
+    },
+    {
+      "id": "R-7",
+      "track": "interest",
+      "falsification_scenario": "Falsificar se agrupamento fosse global garantido ou atualização de conta ocorresse por transação gerada.",
+      "citations": "Stage4 R-7 lines 191-197; Stage5 lines 167,269,318-320,369; CBACT04C.cbl:188-218,350-413.",
+      "outcome": "not_falsified",
+      "rationale": "Mudança de conta encontrada dirige update do grupo anterior; xref/disclosure são dependências internas."
+    },
+    {
+      "id": "R-8",
+      "track": "interest",
+      "falsification_scenario": "Falsificar se Stage5 inserisse flush final de conta no EOF normal ou confundisse escrita de transação com rewrite de conta.",
+      "citations": "Stage4 R-8 lines 199-205; Stage5 lines 130-132,270,319,370; CBACT04C.cbl:188-228,325-370,462-515.",
+      "outcome": "not_falsified",
+      "rationale": "Sem chamada pós-loop; EOF normal não reentra no ELSE; distinção transação/conta preservada."
+    },
+    {
+      "id": "R-9",
+      "track": "interest",
+      "falsification_scenario": "Falsificar se disclosure ausente virasse taxa zero ou fallback DEFAULT fosse indiscriminado.",
+      "citations": "Stage4 R-9 lines 207-213; Stage5 lines 168,266,321,371; CBACT04C.cbl:415-460.",
+      "outcome": "not_falsified",
+      "rationale": "Somente status 23 dispara DEFAULT; segundo read exige 00; missing não é zero."
+    },
+    {
+      "id": "R-10",
+      "track": "interest",
+      "falsification_scenario": "Falsificar se geração exigisse saldo/resultado positivo, arredondamento/política numérica fosse inventada, ou zero calculado fosse ausência.",
+      "citations": "Stage4 R-10 lines 215-221; Stage5 lines 170,222,267-268,372; CBACT04C.cbl:166-173,214-217,462-470.",
+      "outcome": "not_falsified_with_deferred_note",
+      "rationale": "Selector é taxa != 0; fórmula e receivers retidos. Nota: a linha de mapeamento 222 ancora cálculo/acúmulo, mas o guard direto está via R-10/E-12/E-14 e outcome, não no mesmo anchor local."
+    },
+    {
+      "id": "R-11",
+      "track": "interest",
+      "falsification_scenario": "Falsificar se ID gerado fosse globalmente único, PARM-DATE virasse data de relatório, merchant zero virasse valor ausente, ou fee ausente fosse global.",
+      "citations": "Stage4 R-11 lines 223-229; Stage5 lines 169-171,221,223-227,373; CBACT04C.cbl:175-180,473-520,613-626; INTCALC.jcl:20-41.",
+      "outcome": "not_falsified",
+      "rationale": "Sufixo local + parâmetro; literais e timestamp local preservados; fee limitado ao placeholder inspecionado."
+    },
+    {
+      "id": "R-12",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se data fora do intervalo fosse skip-and-continue, se DATEPARM EOF tivesse default, ou comparação viesse depois do EOF.",
+      "citations": "Stage4 R-12 lines 231-237; Stage5 lines 178,277-279,331-332,374; CBTRN03C.cbl:159-243,248-272.",
+      "outcome": "not_falsified",
+      "rationale": "NEXT SENTENCE sai da sentença do loop; DATEPARM EOF seta flag compartilhada; comparação precede teste EOF."
+    },
+    {
+      "id": "R-13",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se account-total fosse agrupado por account-id, se lookup failure apagasse saída anterior, ou card/account cardinalidade fosse inventada.",
+      "citations": "Stage4 R-13 lines 239-245; Stage5 lines 180,281,334,375; CBTRN03C.cbl:179-196,484-512.",
+      "outcome": "not_falsified",
+      "rationale": "Trigger é mudança de cartão; xref fornece conta exibida; cardinalidade e persistência seguem abertas."
+    },
+    {
+      "id": "R-14",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se totais page/account/grand fossem reconciliados num único total ou se resets fossem inferidos fora dos sites.",
+      "citations": "Stage4 R-14 lines 247-253; Stage5 lines 182,240,337-339,376; CBTRN03C.cbl:274-322,343-359.",
+      "outcome": "not_falsified",
+      "rationale": "Sites de page/account/grand e resets distintos preservados."
+    },
+    {
+      "id": "R-15",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se EOF sempre emitisse account total, sempre duplicasse último valor, ou sempre finalizasse range.",
+      "citations": "Stage4 R-15 lines 255-261; Stage5 lines 130-132,280,284,338,377; CBTRN03C.cbl:170-206,287-322.",
+      "outcome": "not_falsified",
+      "rationale": "EOF finaliza só se comparação anterior permitir; adiciona e chama page/grand, sem account-total; duplicação permanece hipótese."
+    },
+    {
+      "id": "R-16",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se page size fosse 20 detalhes, descrições fossem lossless, truncation/numeric display ignorados, ou header/detail/total virassem inputs.",
+      "citations": "Stage4 R-16 lines 263-269; Stage5 lines 137-139,180-183,237-240,340,378; CBTRN03C.cbl:274-374; CVTRA07Y.cpy:4-66.",
+      "outcome": "not_falsified",
+      "rationale": "Line counter avança em headers/totais/detalhes; receivers de descrição/valores são limitados e tratados como apresentação/proveniência."
+    },
+    {
+      "id": "R-17",
+      "track": "reporting",
+      "falsification_scenario": "Falsificar se SORT/JCL dates e DATEPARM fossem uma única autoridade ou simples interseção completa.",
+      "citations": "Stage4 R-17 lines 271-277; Stage5 lines 179,235,333,379; TRANREPT.jcl:19-80; CBTRN03C.cbl:170-177,220-243; REPROC.prc:19-29.",
+      "outcome": "not_falsified",
+      "rationale": "Stage5 mantém seleção upstream documental separada, sem override comum e com executabilidade aberta."
+    },
+    {
+      "id": "R-18",
+      "track": "all",
+      "falsification_scenario": "Falsificar se CEE3ABD tivesse semântica inventada de término/rollback/retorno ou se diagnóstico local fosse corrigido.",
+      "citations": "Stage4 R-18 lines 279-285; Stage5 lines 116-119,193,259,271,282,351,380; CBTRN02C.cbl:707-711; CBACT04C.cbl:628-632; CBTRN03C.cbl:626-630.",
+      "outcome": "not_falsified",
+      "rationale": "Stage5 limita-se a chamada externa e falha local; não inventa política de API/erro."
+    },
+    {
+      "id": "R-19",
+      "track": "all",
+      "falsification_scenario": "Falsificar se JCL/proc/contexto operacional virasse cronograma executável, identidade global de recurso ou ciclo completado.",
+      "citations": "Stage4 R-19 lines 287-293; Stage5 lines 347-350,381; POSTTRAN/INTCALC/TRANREPT/COMBTRAN/TRANBKP/REPROC anchors.",
+      "outcome": "not_falsified",
+      "rationale": "Recursos compartilhados são contexto operacional; REPROCT ausente e labels duplicados seguem gap."
+    },
+    {
+      "id": "R-20",
+      "track": "all",
+      "falsification_scenario": "Falsificar se Stage5 prometesse retry/reset/idempotência ou declarasse universalmente unsafe em vez de unknown.",
+      "citations": "Stage4 R-20 lines 295-301; Stage5 lines 297,324-325,341,347-349,382; E-5,E-9–E-12,E-14–E-19,E-32–E-34.",
+      "outcome": "not_falsified",
+      "rationale": "Repetition safety é unknown por trilha; nenhum reset/retry/compensação inventado."
+    }
+  ],
+  "decision_findings": [
+    {
+      "id": "D-2",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 100-105; R-3/R-7/R-11/R-13/R-19; source roles remain track-qualified."
+    },
+    {
+      "id": "D-3",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 107-112 and Section 6; internal resources not promoted to consumer state APIs."
+    },
+    {
+      "id": "D-4",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 114-119; R-6/R-18/R-20 preserve non-atomic and unknown failure/repetition."
+    },
+    {
+      "id": "D-5",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 121-126; numeric/identifier/temporal policies remain unresolved."
+    },
+    {
+      "id": "D-6",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 128-133; R-8/R-12/R-14/R-15 omissions not repaired."
+    },
+    {
+      "id": "D-7",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 135-140; presentation and operational details bounded."
+    },
+    {
+      "id": "D-8",
+      "status": "not_falsified",
+      "basis": "Stage5 lines 142-147; filler/declaration-only/fee placeholder not promoted while evidence retained."
+    }
+  ],
+  "blockers": [],
+  "deferred_gaps": [
+    {
+      "id": "G-15/G-20",
+      "status": "partially_addressed_by_this_review_not_closed",
+      "note": "This review supplies source-grounded review evidence and independent anchor/hash checks, but does not grant human approval or edit the Stage5 artifact."
+    },
+    {
+      "id": "G-16",
+      "status": "partially_addressed_for_review_artifacts",
+      "note": "Report/JSON are created and can be hashed; exact retention decision remains external."
+    },
+    {
+      "id": "G-17",
+      "status": "still_open",
+      "note": "Units, numeric/temporal policy, overflow, parameter validity and display truncation remain unresolved for stronger claims."
+    },
+    {
+      "id": "G-18",
+      "status": "still_open",
+      "note": "Durable effects, resource identity, isolation, reset and repetition remain unknown."
+    },
+    {
+      "id": "G-19",
+      "status": "still_open",
+      "note": "EOF storage, dates, actual job flow and numerical reporting results remain unknown."
+    }
+  ],
+  "justified_na": [
+    {
+      "topic": "API policy",
+      "justification": "Stage5 introduces no API surface/endpoint/status contract; review only checked that no API/error policy was smuggled into boundary/failure semantics."
+    },
+    {
+      "topic": "runtime outcome verification",
+      "justification": "Prohibited by task; COBOL/JCL execution was not run, so durable, EOF-buffer and numerical results remain deferred."
+    },
+    {
+      "topic": "institutional applicability",
+      "justification": "Public CardDemo corpus only; Stage5 lines 75 and D-notes correctly require separate institutional evidence."
+    }
+  ],
+  "hashes_after": {
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/requirements.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/prepared/canonical-data-boundary-carddemo/execution/scope-original.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/capability-semantics-carddemo/requirements.md": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/legacy-evidence-carddemo-r2/requirements.md": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/STAGE4-COUNTEREXAMPLE-REVIEW.md": "56f32db0669f3c738ed83ee0294929ca1ee0f5c76e663eb2abdbecab7e319e29",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/boundary-verification.json": "6889de9d4d63a8f011aa82f54b09a9afca39b5f13699a3e46b7e748c7c372484",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/legacy-evidence-carddemo-r2/anchor-manifest.json": "e9367c82536ccd2d7e04bcb9337369ea72ca46c1671a261232144fc325c5ffa3",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/input-pins.json": "fb36d3ec8c6c139e5eeedeb768d6dc2483dea6499638a0fbd7d76f57e346cd9d",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/canonical-data-boundary-carddemo/spec.json": "8e869738d9fe897f3118b5495775ec091f909d79d6a9aeddd36e2baadbbfcc5c",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-1-authorization.json": "0ec9d89962c088507775523f266816b5c3c13f7631c7a6409b45bc13352542da",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-2-r2-authorization.json": "22294af2fb12235297e57e4b084a729695864af895d4047eb4a630d7286ec1c9",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-3-r2-authorization.json": "d8cdf343b5ed63cdd2e83e1627a50673acdb34930ae0c63e29be0e8fb122941e",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/reviews/stage-4-authorization.json": "405caf0960e1a13dfbc8a8965340e9f4957571b8eea0b895b09b125e21025ee9",
+    "casos/aws-carddemo-preparation/research-corpus/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+    "casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+    "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+    "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+    "casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f"
+  },
+  "input_hashes_unchanged_after_review_artifact_write": true,
+  "created_artifacts": [
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/STAGE5-COUNTEREXAMPLE-REVIEW.md",
+    "casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/stage5-counterexample-findings.json"
+  ]
+}

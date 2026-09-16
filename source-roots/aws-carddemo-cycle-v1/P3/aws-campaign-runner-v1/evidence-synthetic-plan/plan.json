@@ -1,0 +1,83 @@
+{
+  "kind": "aws-carddemo-official-campaign-plan-v1",
+  "officialReady": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only unattempted case IDs; no replay of completed case IDs",
+    "stopPolicy": "first transport/deadline/startup/lifecycle/expectation/structural/measurement violation stops subsequent suites/cases"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "plan only; no API/COBOL execution in plan mode",
+  "suites": [
+    {
+      "caseCount": 1,
+      "cases": [
+        {
+          "businessProgram": "CBTRN02C",
+          "caseId": "PLAN-ONLY-E1-1-001",
+          "caseRequestPins": {
+            "body_b64": "e30=",
+            "body_kind": "json",
+            "bytes": 2,
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "contractId": "E1-1",
+          "operationId": "postDailyTransactions",
+          "provenance": [
+            "synthetic-plan-only:no-cobol"
+          ],
+          "request": {
+            "body_b64": "e30=",
+            "body_kind": "json",
+            "headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "method": "POST",
+            "path": "/posting-runs"
+          },
+          "suiteId": "T1",
+          "timeoutSeconds": 1.0,
+          "track": "posting"
+        }
+      ],
+      "path": "P3/aws-campaign-runner-v1/evidence-synthetic-plan/T1-plan-only.json",
+      "sha256": "27f50547396681caab947f79556e8c05a6873fa75ac4b86bf8f9782076172598",
+      "suiteId": "T1"
+    }
+  ],
+  "totals": {
+    "cases": 1,
+    "suites": 1
+  }
+}

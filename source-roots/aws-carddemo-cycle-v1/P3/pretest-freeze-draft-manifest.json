@@ -1,0 +1,219 @@
+{
+  "kind": "P3 pre-experimental freeze package DRAFT for human decision",
+  "status": "draft_ready_for_review_not_approved",
+  "created_local_date": "2026-09-14",
+  "cycle_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+  "scope_boundaries": {
+    "creates_only_under_cycle_p3": true,
+    "campaigns_executed": false,
+    "model_generation_executed": false,
+    "official_T1_T2_T3_T4_executed": false,
+    "experimental_baselines_read": false,
+    "quarantine_read": false,
+    "human_approval_recorded": false
+  },
+  "upstream_sources": [
+    {
+      "path": "PROTOCOLO.md",
+      "sha256": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7"
+    },
+    {
+      "path": "P2a/plan-binding.md",
+      "sha256": "207e18186aa173d2ef8ed8314b93a08b69886b89edb5b45d7af46bf0a7639ada"
+    },
+    {
+      "path": "P2b/FINAL-PRETEST-READINESS.md",
+      "sha256": "7f37607aca30ecde17a211fd6f590757db2af3df33cd9909dd3223ea72be91ae"
+    },
+    {
+      "path": "P2b/final-pretest-checklist.json",
+      "sha256": "e00f5e48034a6bec47dc5749727b3e589d2f28a770f69c5a84a68d5306a30fe6"
+    },
+    {
+      "path": "sdd-runs/E3-01/reviews/stage-7-r2-authorization.json",
+      "sha256": "3e3315cfb4ae05e65f9627ae3147343259d93eabf31931c3177a105c1615cb60"
+    },
+    {
+      "path": "sdd-runs/E3-01/reviews/stage-8-authorization.json",
+      "sha256": "03a84be0f630818b24b68aeeff81255c7a08350eb119dcc684d421382afa4604"
+    },
+    {
+      "path": "sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md",
+      "sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f"
+    },
+    {
+      "path": "sdd-runs/E3-01/specs/semantic-validation-carddemo/requirements.md",
+      "sha256": "de4f1781459f3bbf8c472add1166826dc9dbb6229a19b67e7ecdb85a56b2d4b6"
+    },
+    {
+      "path": "P2b/p2b_binding.py",
+      "sha256": "151cecf8fb91d0ebebc5553e61bf0cdef666eb085c3b6ab1bd26a85007447716"
+    },
+    {
+      "path": "P2b/tests/test_p2b_contract.py",
+      "sha256": "68a5110e561883970c886d72dce615a428affd805e55da22412765b823dedc03"
+    }
+  ],
+  "approved_upstream_decisions_reused_exactly": [
+    {
+      "source": "PROTOCOLO.md:36-43,53-61",
+      "decision": "P3 freezes T1/T2/T3/T4 inputs/oracles, MBT model, budgets, seeds, resets, union, denominators and analysis before official cells; every gate requires human decision."
+    },
+    {
+      "source": "PROTOCOLO.md:7,30-34",
+      "decision": "Compare zero-shot, few-shot and SDD over posting, interest and reporting, through contract-specific facade/common driver to original COBOL; non-operationalizable contracts become documented results."
+    },
+    {
+      "source": "P2a/plan-binding.md:5-13",
+      "decision": "INV/RES/CAP/CONV/FAIL/STATE/RESP evidence duties are required and distinct."
+    },
+    {
+      "source": "reviews/stage-7-r2-authorization.json",
+      "decision": "Stage7 r2 approved documentary adapter behavior only; no implementation, COBOL execution or experimental test execution authorized."
+    },
+    {
+      "source": "reviews/stage-8-authorization.json",
+      "decision": "Stage8 approved documentary semantic validation only; closes documentary SDD chain but does not certify executed tests or runtime validity."
+    },
+    {
+      "source": "P2b/FINAL-PRETEST-READINESS.md:37-60",
+      "decision": "P2b smoke acceptable as technical pretest evidence; official tests remain blocked on P3 protocol approval."
+    }
+  ],
+  "draft_proposals_pending_human_decision": {
+    "fixture_policy": "Create an official fixture registry before campaigns: every fixture has track, intended T1/T2/T3/T4 use, corpus/input provenance, exposure class, hash, reset recipe, and oracle-visibility label. Current P2b hardcoded smoke fixtures are development evidence only.",
+    "reset_isolation": "Default proposal: one fresh run directory per official case/seed unless a T3/MBT stateful sequence explicitly declares ordered steps and no inter-case reuse. Record before/after hashes for all bound resources and do not infer durable reset from process restart.",
+    "capture": "For every official invocation capture raw bytes, digest, record size/framing result, stdout/stderr, exit status, timing, and INV/RES/CAP/CONV/FAIL/STATE/RESP audit. Preserve presentation/unmapped records in evidence even when excluded from public schema.",
+    "conversion": "Freeze per-field conversion tables from Stage7 r2; any unsupported sign/encoding/framing field becomes unrepresentable/technical failure or upstream issue, not guessed output.",
+    "oracle_independence": "Use independent oracle-design roles: contract schema oracle, source/documentary obligation oracle, adapter evidence admissibility oracle, MBT reference model oracle, and analysis adjudication; no oracle may be generated solely from the contract it evaluates.",
+    "budgets_seeds_order": "Proposal: freeze budgets before generation; use deterministic seeds where tools support them; execute track order posting, interest, reporting inside each strategy/condition unless randomized order is explicitly approved and recorded; T4 is union/dependent, not a statistical replicate.",
+    "analysis": "Separate contract validity, operationalization reach, observed content/effects, conformance to contract, fidelity to legacy obligations, infrastructure failures, coverage, cost/latency/interventions. Preserve invalid/unavailable cases in denominator."
+  },
+  "requirements": {
+    "fixture_reset_isolation_capture_conversion": [
+      {
+        "id": "P3-FIX-001",
+        "status": "draft_requirement",
+        "source": "PROTOCOLO.md:13-18,43; P2a:38-49",
+        "text": "Official fixtures must be selected by a versioned registry, not by P2b smoke literals or ad hoc code paths."
+      },
+      {
+        "id": "P3-RESET-001",
+        "status": "draft_requirement",
+        "source": "PROTOCOLO.md:43; Stage7 STATE; P2a:12",
+        "text": "Each official case or declared stateful sequence must have a fresh isolated workspace and resource reset evidence; reset, isolation, durability and repetition remain separate claims."
+      },
+      {
+        "id": "P3-CAP-001",
+        "status": "draft_requirement",
+        "source": "Stage7 CAP; P2a:9; Stage8 V-3..V-11",
+        "text": "Captures must preserve raw bytes/digests and classify positive nonempty, positive empty, zero-length, missing, stale, truncated, malformed, failed, unknown meaningful and known presentation records separately."
+      },
+      {
+        "id": "P3-CONV-001",
+        "status": "draft_requirement",
+        "source": "Stage7 CONV; P2a:10; Stage8 V-11,V-14,V-20,V-26",
+        "text": "Every represented field requires a source span/path/pin/line, declaration, framing/encoding/sign basis, observed padding/width, mapped value and unresolved conflict disposition."
+      }
+    ],
+    "oracle_independence_matrix": [
+      {
+        "oracle": "O-schema",
+        "independent_of": "generated test data and COBOL runtime outcomes",
+        "authority": "Stage6 r3 OpenAPI/schema",
+        "allowed_use": "structural response validation only",
+        "not_allowed": "legacy fidelity or semantic correctness"
+      },
+      {
+        "oracle": "O-documentary-legacy",
+        "independent_of": "candidate contracts and generated tests",
+        "authority": "approved Stage3-r2/4/5/8 obligations and source anchors",
+        "allowed_use": "expected obligation design and counterexample classes",
+        "not_allowed": "inventing concrete expected output values"
+      },
+      {
+        "oracle": "O-adapter-evidence",
+        "independent_of": "public schema success",
+        "authority": "Stage7 r2 INV/RES/CAP/CONV/FAIL/STATE/RESP",
+        "allowed_use": "admissibility of runtime evidence and response justification",
+        "not_allowed": "business oracle by itself"
+      },
+      {
+        "oracle": "O-MBT-reference-model",
+        "independent_of": "contract under evaluation and test execution results",
+        "authority": "separately reviewed capability reference before campaigns",
+        "allowed_use": "T3 transitions/guards/properties",
+        "not_allowed": "generated solely from evaluated OpenAPI contract"
+      },
+      {
+        "oracle": "O-analysis-adjudication",
+        "independent_of": "tool-generated verdicts",
+        "authority": "frozen analysis rubric and human/recorded review",
+        "allowed_use": "classification of failures/limits after evidence capture",
+        "not_allowed": "changing expectations after seeing performance"
+      }
+    ],
+    "official_suite_plan_draft": {
+      "T1": "LLM scenarios under frozen categories, context, model/version, budget, seed/retry policy if supported; input visibility must be common or explicitly justified.",
+      "T2": "OpenAPI-guided fuzzing with tool/version, checker configuration, operation/seed/budget and sequence/reset policy frozen before run.",
+      "T3": "MBT from an independently reviewed capability model; expectations source and non-expressible obligations recorded before run.",
+      "T4": "Union of T1/T2/T3 by case identity/provenance with duplicate policy, reset/order rules and dependent-analysis label; not an independent replicate."
+    }
+  },
+  "missing_executable_infrastructure_next_tasks": [
+    {
+      "id": "NEXT-P3-001",
+      "blocker": "No official fixture-selection registry exists; P2b embeds smoke fixture construction in p2b_binding.py (e.g. hardcoded account/transaction/report setup).",
+      "next_task": "Implement a P3 fixture registry/selector that materializes fixtures from declared registry entries and records hashes/exposure labels without using evaluation expected outcomes."
+    },
+    {
+      "id": "NEXT-P3-002",
+      "blocker": "No official T1/T2/T3/T4 harness configuration exists for budgets, seeds, order, reset and union provenance.",
+      "next_task": "Create non-executing harness config schemas and dry validation for suite definitions; do not run campaigns."
+    },
+    {
+      "id": "NEXT-P3-003",
+      "blocker": "No independent MBT reference model/oracle authority is frozen.",
+      "next_task": "Draft MBT model and oracle authority package for human review, derived from approved documentary obligations but not from candidate contract outputs alone."
+    },
+    {
+      "id": "NEXT-P3-004",
+      "blocker": "P2b guard handles unknown meaningful report-only captures; mixed known public records plus unknown meaningful records are not escalated by current code.",
+      "next_task": "Add a pre-campaign regression and policy decision for mixed known+unknown meaningful TRANREPT records: retain known content with 500 availableContent or reject entire response, before claiming conversion closure."
+    },
+    {
+      "id": "NEXT-P3-005",
+      "blocker": "No production/concurrency/reset durability proof; P2b lifecycle only supports bounded local smoke cleanup.",
+      "next_task": "Define official lifecycle/reset evidence requirements and only then implement/read back for approved campaign harness."
+    }
+  ],
+  "human_decisions_needed": [
+    "Approve/reject official fixture exposure policy and fixture registry contents.",
+    "Approve/reset default: per-case fresh directory versus declared stateful sequences.",
+    "Select/freeze T1 model/tool visibility, scenario budget, repetitions, retry and seed policy.",
+    "Select/freeze T2 fuzzer/tool version, budgets, seeds, checkers and sequence policy.",
+    "Approve independent MBT model/oracle authority for T3.",
+    "Approve T4 union duplicate/order/reset policy and dependent-analysis treatment.",
+    "Approve analysis denominator/failure taxonomy including invalid/non-operationalizable contracts and infrastructure failures.",
+    "Decide mixed known+unknown meaningful report-record policy before conversion closure."
+  ],
+  "created_files": [
+    {
+      "path": "P3/PRETEST-FREEZE-DRAFT.md",
+      "sha256": "5637e02808da3a1c3b3770255e4a63b03131e893796842662bfbbda0f8718ee7"
+    },
+    {
+      "path": "P3/pretest-freeze-draft-manifest.json",
+      "self_hash_note": "compute externally after write; self-referential hash intentionally not embedded"
+    }
+  ],
+  "verification": {
+    "basic_checks": [
+      "manifest JSON parsed",
+      "draft contains not-approved/review-only boundary",
+      "scope flags keep campaigns/model generation/official tests false"
+    ],
+    "draft_sha256": "5637e02808da3a1c3b3770255e4a63b03131e893796842662bfbbda0f8718ee7",
+    "manifest_self_hash_note": "manifest hash must be computed externally because embedding it would change the file"
+  }
+}

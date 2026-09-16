@@ -1,0 +1,1332 @@
+{
+  "status": "partial_reviewed_draft_not_frozen",
+  "visibility": "evaluation_only_never_extraction",
+  "provenance": "Authored in coordinator context previously exposed to preflight; not a blinded independent reference",
+  "preserved_original": "evaluation-quarantine/obligations-draft.json was read but not modified",
+  "scope": "AWS CardDemo candidate evaluation reference for posting, interest transaction generation and transaction reporting; no extraction, gate approval, API/network call, or COBOL execution performed",
+  "manifest": {
+    "path": "../aws-carddemo-preparation/evidence/research-package.json",
+    "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+    "declared_files": 19,
+    "files_read_and_hash_checked": 19,
+    "manifest_hashes_ok": true
+  },
+  "records": [
+    {
+      "id": "P-01",
+      "obligation_candidate": "Classificar cada transação por validação, gravar rejeições e devolver código 4 quando houver rejeições.",
+      "caution": "Contadores e arquivo de rejeição; distinguir execução interrompida de conclusão normal.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 202,
+        "end_line": 231,
+        "excerpt_sha256": "3a93ca54004e26742c82b1d5b5c24e212a08d591a45be7feed1e92e378167ef5",
+        "original_draft_excerpt_sha256": "195440b92aab2fa9ab0936fba2f6234682049dddf3e6e20e68389e61e3dc6d9a"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "P-02",
+      "obligation_candidate": "Representar falhas de cartão sem referência (100) e conta não encontrada (101).",
+      "caution": "Não inventar validação de existência por serviço externo.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 380,
+        "end_line": 399,
+        "excerpt_sha256": "f5284c852029b743cfb14b21d6f4b6368fad6460353ac2184a76446552daeec1",
+        "original_draft_excerpt_sha256": "109d775c7e954aa4b4f6fd964e08b3cbb89f96d459e8011c8d3e0a9c41a47e59"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "P-03",
+      "obligation_candidate": "Preservar fórmula de saldo temporário e comparações inclusivas de limite e expiração.",
+      "caution": "Quando ambos falham, o código 103 pode substituir 102; não impor prioridade diferente.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 403,
+        "end_line": 420,
+        "excerpt_sha256": "fbcdaaf1fbb384011449d83a0fbe6d0e551082fa08a1c04ea2260467abb65bcc",
+        "original_draft_excerpt_sha256": "116936e79dcf7ecb001db3c6d0f3b2315987d0f4b5c7223cf7ef27a238dac5d9"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "P-04",
+      "obligation_candidate": "Preservar dados da transação e atribuir timestamp de processamento; ordem categoria → conta → escrita de transação.",
+      "caution": "Ordem não prova atomicidade; não prometer rollback.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 424,
+        "end_line": 442,
+        "excerpt_sha256": "927fb1c8abde8c18bff7d69548c366e88a4027218cfa3709298797fdb55d72a0",
+        "original_draft_excerpt_sha256": "9d5570c795b667a59aa0fec6691ccad03c2d6c8a1af26c465e175fbe384513b6"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "P-05",
+      "obligation_candidate": "Rejeição inclui registro original e trailer de validação; erro de gravação segue tratamento fatal.",
+      "caution": "Rejeição de negócio e falha de I/O são distintos.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 446,
+        "end_line": 464,
+        "excerpt_sha256": "c5c9d1e171236a38eebb413bb2cab394fb9ff8cf1c2ee95c5af1db8a933f24dc",
+        "original_draft_excerpt_sha256": "14948b15f1cb60f4d6d0842a32f793be04e85637a5fbf34308f82a57d573887c"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "P-06",
+      "obligation_candidate": "Categoria ausente pode ser criada; categoria existente segue caminho de atualização.",
+      "caution": "Confirmar ramo de atualização e layout na revisão complementar.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 467,
+        "end_line": 510,
+        "excerpt_sha256": "d272cdfe033e94d2486efcd0a703132ff4ece769cc8c05d75c15f3415cd7b03b",
+        "original_draft_excerpt_sha256": "170841a2a01719edc9a5c477862f7233d8a1f31cad3556de5fff79af8e1cbbee"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Confirmado: status 23 no TCATBAL aciona criação; status 00 aciona atualização; outros status abortam. O saldo de categoria soma DALYTRAN-AMT tanto na criação quanto atualização."
+    },
+    {
+      "id": "P-07",
+      "obligation_candidate": "Somar DALYTRAN-AMT ao saldo da conta; se DALYTRAN-AMT >= 0, somar o valor ao crédito do ciclo; se negativo, somar o próprio valor negativo ao débito do ciclo.",
+      "caution": "REWRITE inválido atribui motivo 109; não assumir que o fluxo volta automaticamente ao gravador de rejeições.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 545,
+        "end_line": 559,
+        "excerpt_sha256": "9c6be0c495d6f0a61f01b0266f7af4bd47e41b1e63e51be8e95d2163e5174f0e",
+        "original_draft_excerpt_sha256": "e75476f10c5804cab4c9b18427dfbb967e89d027d8ffb6fbd28d11b51f2cd834"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Corrigido para explicitar que o código adiciona o valor negativo ao débito, não seu módulo/valor absoluto."
+    },
+    {
+      "id": "I-01",
+      "obligation_candidate": "Processar categorias por conta e atualizar a conta anterior quando a conta muda; não alegar atualização garantida da última conta no EOF sem adjudicação humana/dinâmica.",
+      "caution": "Não assumir atualização final: o ramo ELSE com EOF deve ser analisado pelo fluxo, não pela intenção do comentário.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 188,
+        "end_line": 222,
+        "excerpt_sha256": "79f0ce8146da8d1893ecb17ebde8bd4c7322ee178a45ba525dffddc7e7d3de51",
+        "original_draft_excerpt_sha256": "c7b27bae48dcf17809ad5e5c2f5b2c037473ddf1092e7b17c7e41aad2ffcd5df"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "A leitura que encontra EOF move END-OF-FILE para 'Y' dentro da iteração; o ELSE que chamaria 1050-UPDATE-ACCOUNT após EOF aparenta não ser alcançado nesse fluxo textual."
+    },
+    {
+      "id": "I-02",
+      "obligation_candidate": "Quando invocada a atualização, adicionar juros acumulados ao saldo e zerar crédito/débito do ciclo.",
+      "caution": "Separar efeito da rotina da garantia de que será chamada para toda conta.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 350,
+        "end_line": 368,
+        "excerpt_sha256": "96db00e3d7e9f1376af264d42103ce8da13dd61162aaf987e46652c87a6670e2",
+        "original_draft_excerpt_sha256": "b428dc6b8e7dd0d44d25cab4b032d2b3fa04df32a45ef868fa0c2313153b6fb7"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "I-03",
+      "obligation_candidate": "Grupo não encontrado com status 23 consulta DEFAULT; falha no default segue caminho fatal.",
+      "caution": "Sem taxa fallback inventada pelo adaptador.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 415,
+        "end_line": 459,
+        "excerpt_sha256": "f3f76a5694a8ec481aff4fc5e706dadfd661f653e0c61212d1691392aa389f58",
+        "original_draft_excerpt_sha256": "cf7fdf6b75c465fd039da3e1e8567c86cb8c2f8d804f3f344c208fb4cbae3060"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "I-04",
+      "obligation_candidate": "Taxa igual a zero não executa os parágrafos de cálculo de juros e tarifas.",
+      "caution": "Não confundir taxa zero com ausência do registro.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 210,
+        "end_line": 217,
+        "excerpt_sha256": "0334fe376fc5860bae3bd5cf99eccd1a4e42523520d48695fcb6cebd419ba205",
+        "original_draft_excerpt_sha256": "dd1c3605d1a85cd52950e4cd3ddfd16a49c3c6e3935345abfb3a623e66048e28"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "I-05",
+      "obligation_candidate": "Calcular juros categoria×taxa/1200, acumular e gerar transação com identificador data+contador e campos definidos no código.",
+      "caution": "Precisão depende dos PIC; verificar layouts antes de fechar exemplos numéricos.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 462,
+        "end_line": 515,
+        "excerpt_sha256": "98f4288ca1fdac624dd3aaf69b2e76b4da294dc3a86578c1aeea0718a3a16110",
+        "original_draft_excerpt_sha256": "1cd200aa2782fdebd0dd04bc6367c18208c50a829c6902490f02857993b97ba5"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "I-06",
+      "obligation_candidate": "Não atribuir cobrança implementada ao placeholder de tarifas.",
+      "caution": "Exclusão fundamentada, não operação omitida pelo contrato.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 518,
+        "end_line": 520,
+        "excerpt_sha256": "8db06f498458d7e2b5936a5c47e9194cfffe497f2c1d580353716aca471b8515",
+        "original_draft_excerpt_sha256": "4826bc1c8d04d6cce8ac3cff56f23d2f422b45a0dc7ecb1ce09a338590db6a3b"
+      },
+      "review_status": "reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "R-01",
+      "obligation_candidate": "Relatório depende de duas camadas de intervalo inclusivo: SORT em JCL por TRAN-PROC-DT e filtro interno por TRAN-PROC-TS(1:10) contra DATEPARM; efeitos de NEXT SENTENCE/EOF permanecem pendentes de adjudicação.",
+      "caution": "Analisar NEXT SENTENCE e efeito de EOF; não descrever filtro apenas pelo nome do relatório.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 170,
+        "end_line": 196,
+        "excerpt_sha256": "af9c933a4d7a127669c2c3b6c3384a4eff4af2520dd5e8ac9a732669968161f8",
+        "original_draft_excerpt_sha256": "cbf8224c3fe7b1f13f1b3ba64fa325d82255b6af570f58e5501fa910b96527f8"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "R-02",
+      "obligation_candidate": "Representar cabeçalhos, detalhes, totais de página e total geral, mas não congelar sem resolver o ramo de EOF que adiciona TRAN-AMT novamente aos totais e não escreve total de conta final naquele ramo.",
+      "caution": "Correção aritmética global e término ainda exigem casos multirregistro.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 274,
+        "end_line": 321,
+        "excerpt_sha256": "56ff18b1c0f0d24e4c8cf54c5fd2f4ccc7bfe51bbda9f9215f791aea5a73e995",
+        "original_draft_excerpt_sha256": "b7efe9d21b33bff75e77287d6a15b9c1d8ba5ad2b707134ac4154dbde1289c9a"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "A revisão encontrou evidência textual de risco de totalização/término, não só necessidade genérica de teste multirregistro."
+    },
+    {
+      "id": "R-03",
+      "obligation_candidate": "Detalhe contém identificador de transação, conta via XREF, tipo/categoria e descrições truncadas pelo layout de relatório, origem e valor formatado.",
+      "caution": "Layouts de impressão e ordenação precisam de revisão complementar.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 361,
+        "end_line": 373,
+        "excerpt_sha256": "76ae5b90d92693d11545b696969be6244c0a468f6bc901dc0712ddf5b4288d64",
+        "original_draft_excerpt_sha256": "92e6ac79498ad2ade0c702ca840a300330f3e0ec451a2bdb108b37405bc545eb"
+      },
+      "review_status": "reviewed_corrected_by_source",
+      "runtime_test_in_this_cycle": false,
+      "review_note": "Âncora original conferida; obrigação mantida como candidata, não congelada."
+    },
+    {
+      "id": "L-01",
+      "obligation_candidate": "Preservar layout físico de ACCOUNT-RECORD: 300 bytes, ACCT-ID 9(11), saldos/limites S9(10)V99, datas X(10), campos de ciclo e nome literal ACCT-EXPIRAION-DATE.",
+      "caution": "Não corrigir o nome para EXPIRATION em artefatos de referência; é evidência de layout/fonte.",
+      "source": {
+        "path": "app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "start_line": 1,
+        "end_line": 17,
+        "excerpt_sha256": "b76747afaa306228b9ae3625ede49009c660a127b51684017dfa125228cc82b9"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "L-02",
+      "obligation_candidate": "Preservar layout CARD-XREF-RECORD: cartão X(16), cliente 9(09), conta 9(11), filler X(14), RECLN 50.",
+      "caution": "Não inventar campos adicionais de relacionamento cartão-conta.",
+      "source": {
+        "path": "app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "start_line": 1,
+        "end_line": 8,
+        "excerpt_sha256": "4ab03f99c8a131d8201bbb0cdfbe7a0fd02bdcf09632b4ee29de6d3da6f765ad"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "L-03",
+      "obligation_candidate": "Preservar layouts de transação mestre e diária com RECLN 350 e campos ID, tipo, categoria, fonte, descrição, valor, comerciante, cartão, timestamp de origem e processamento.",
+      "caution": "DALYTRAN e TRAN compartilham estrutura lógica, mas são arquivos/fluxos distintos.",
+      "source": {
+        "path": "app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "start_line": 1,
+        "end_line": 18,
+        "excerpt_sha256": "12cb0e39eca7aa3c561843803641a9eea6a11105e1c55cd4875d8e5ec70dc886"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "start_line": 1,
+          "end_line": 18,
+          "excerpt_sha256": "623954fc1be6817c3de727819ec6ff90f94c63f492315aa68ee608f4b0527f64"
+        }
+      ]
+    },
+    {
+      "id": "L-04",
+      "obligation_candidate": "Preservar layouts de agregação e domínio: chave de saldo por conta+tipo+categoria, saldo S9(09)V99; disclosure group por grupo+tipo+categoria com taxa S9(04)V99; descrições de tipo/categoria em arquivos separados.",
+      "caution": "Esses copybooks sustentam lookups e cálculos; não substituí-los por enumeração livre sem fonte.",
+      "source": {
+        "path": "app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "start_line": 1,
+        "end_line": 10,
+        "excerpt_sha256": "55584c6f7ca16771910fb16b27935e7fb9fd86866706727b168ea30f5495f52a"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "start_line": 1,
+          "end_line": 10,
+          "excerpt_sha256": "874b0039207ad50da2bf5f093875271ef7a792bf035bdaa957afc95886d71773"
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "start_line": 1,
+          "end_line": 7,
+          "excerpt_sha256": "288408c76c8c11d7e14a107d374bda65785bcf0da178086e47e6f1582edc4090"
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "start_line": 1,
+          "end_line": 9,
+          "excerpt_sha256": "74f5616cf8f28647f75dbbc8e74059a391c9f074df43b58e2d12b37dd18cbdcc"
+        }
+      ]
+    },
+    {
+      "id": "L-05",
+      "obligation_candidate": "Relatório de transações deve respeitar layout de 133 bytes: cabeçalho com DALYREPT/Daily Transaction Report/date range, detalhe com descrições truncadas e totais Page/Account/Grand com máscaras sinalizadas.",
+      "caution": "Layout não prova correção aritmética dos totais; apenas define formato observável.",
+      "source": {
+        "path": "app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "start_line": 4,
+        "end_line": 66,
+        "excerpt_sha256": "efcd242f1a54cc658b8311c98d88c2cafc9d1287c0de88edc5a3d1eb6c30809e"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "J-01",
+      "obligation_candidate": "POSTTRAN executa CBTRN02C contra DALYTRAN.PS, TRANSACT.VSAM.KSDS, CARDXREF, DALYREJS novo, ACCTDATA e TCATBALF; o programa abre TRANSACT como OUTPUT e ACCT/TCATBALF como I-O.",
+      "caution": "JCL diz DISP=SHR para TRANFILE/ACCTFILE/TCATBALF, mas o modo COBOL efetivo está no programa; registrar a fronteira, não normalizar.",
+      "source": {
+        "path": "app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "start_line": 19,
+        "end_line": 42,
+        "excerpt_sha256": "64f7c733a7d65f218161a50d0e411999eaa6a27658c8553bfd874d4be4f2a473"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "start_line": 29,
+          "end_line": 61,
+          "excerpt_sha256": "34bbf2cc2843a4227b151459ad879d5c96c1c42be2c1199b006f33228c1b6fb4"
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "start_line": 254,
+          "end_line": 329,
+          "excerpt_sha256": "d4b21313345020d0212cfb130bd43c0a4c579668323ba424f2448bc0fea95422"
+        }
+      ]
+    },
+    {
+      "id": "J-02",
+      "obligation_candidate": "TRANBKP primeiro descarrega TRANSACT.VSAM.KSDS para TRANSACT.BKUP(+1) via REPROC, depois apaga e redefine o cluster TRANSACT.VSAM.KSDS com chave offset 0 tamanho 16 e RECORDSIZE 350.",
+      "caution": "Esse JCL destrói/recria estado; não tratar como leitura inofensiva nem como parte implícita de POSTTRAN sem ordem humana definida.",
+      "source": {
+        "path": "app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "start_line": 19,
+        "end_line": 68,
+        "excerpt_sha256": "b32450f83b878206d02fc75a6fdee4420d6b1fe2c66c9d17b63e27a344a66d84"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "start_line": 18,
+          "end_line": 28,
+          "excerpt_sha256": "eaad9ec2b1acb23dc395b6d0a2dec82c12e4490b82772b8ecd035109f4df4e66"
+        }
+      ]
+    },
+    {
+      "id": "J-03",
+      "obligation_candidate": "INTCALC executa CBACT04C com PARM=2022071800, lê TCATBALF, CARDXREF/alternate path, ACCTDATA e DISCGRP, e grava SYSTRAN(+1) LRECL 350.",
+      "caution": "PARM fixa data-base para identificador/timestamp lógico de transações de juros; não generalizar sem parâmetro de execução definido.",
+      "source": {
+        "path": "app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "start_line": 19,
+        "end_line": 41,
+        "excerpt_sha256": "d3736a27b0de54c51ef2708b4c91eb5884c7ae75d119fe989e9e10678a9bb558"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "start_line": 176,
+          "end_line": 180,
+          "excerpt_sha256": "d7d76ff891532440ed904805fb7e631e998d34c6a4596181462a9c6b6d7dcbfa"
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "start_line": 473,
+          "end_line": 500,
+          "excerpt_sha256": "5924988d09536195a4b1e0c4347d0e1392093f2fb6e3a313e7853c46d6fbd2c7"
+        }
+      ]
+    },
+    {
+      "id": "J-04",
+      "obligation_candidate": "COMBTRAN ordena a concatenação de TRANSACT.BKUP(0) e SYSTRAN(0) por TRAN-ID crescente e carrega o resultado em TRANSACT.VSAM.KSDS via REPRO.",
+      "caution": "A ordem observável do mestre combinado vem do SORT por TRAN-ID, não da ordem de geração dos arquivos de entrada.",
+      "source": {
+        "path": "app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "start_line": 19,
+        "end_line": 49,
+        "excerpt_sha256": "07b88fa5c47b20cd6e359be9da0d28b444f352556072e6be5b288b77721b8253"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "J-05",
+      "obligation_candidate": "TRANREPT descarrega TRANSACT.VSAM.KSDS, filtra/sorta por TRAN-CARD-NUM com TRAN-PROC-DT entre datas hard-coded e depois executa CBTRN03C com DATEPARM e arquivos de descrição.",
+      "caution": "Há dupla fonte de datas: constantes de SORT e DATEPARM lido pelo programa; congelamento exige decidir qual camada é obrigação de referência.",
+      "source": {
+        "path": "app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "start_line": 19,
+        "end_line": 80,
+        "excerpt_sha256": "24db7a7caaea908e2832431b2305e79e12897530a97e99f6feac33663ed341b0"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "start_line": 220,
+          "end_line": 243,
+          "excerpt_sha256": "50bebcbaf42f685b53648ac9719b89b5f3ad96d5a513fa67cd68e5bfd89797fc"
+        }
+      ]
+    },
+    {
+      "id": "O-01",
+      "obligation_candidate": "Ordem candidata de ciclo em lote, se adotada, deve ser explicitamente humana: POSTTRAN/TRANBKP/INTCALC/COMBTRAN/TRANREPT são jobs separados e o corpus permitido não contém um scheduler que imponha sequência total.",
+      "caution": "Não transformar nomes/comentários de JCL em orquestração oficial sem decisão humana.",
+      "source": {
+        "path": "app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "start_line": 19,
+        "end_line": 23,
+        "excerpt_sha256": "20d948e18797a358587cdea7266abffe5cba8770ab59950529639c74733c8626"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/jcl/TRANBKP.jcl",
+          "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+          "start_line": 19,
+          "end_line": 23,
+          "excerpt_sha256": "c7736ff5d02085f0f47e5e9a1ea15659ca90a48d35afa8bc63f40bfceb347b3f"
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "start_line": 19,
+          "end_line": 22,
+          "excerpt_sha256": "5a323c74c8fb1adae9070e3b813b49b6f5f894de7d6d15f335274f30b01e4f60"
+        },
+        {
+          "path": "app/jcl/COMBTRAN.jcl",
+          "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+          "start_line": 19,
+          "end_line": 22,
+          "excerpt_sha256": "86e25031e47a60734108a93297c54c7642f50deefb633bda80ff2f78119d97aa"
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "start_line": 19,
+          "end_line": 23,
+          "excerpt_sha256": "ef92014a19991eb12397a3fcbb7b80d74d3efebe5d71cb7f3998a5ed2a323b04"
+        }
+      ],
+      "human_decision_needed": [
+        "Definir ordem oficial do ciclo AWS CardDemo ou manter cada job como obrigação separada."
+      ]
+    },
+    {
+      "id": "E-01",
+      "obligation_candidate": "Falhas de abertura/leitura/gravação/fechamento tratadas nos programas seguem padrão fatal: exibir mensagem, mover FILE STATUS para IO-STATUS, exibir status normalizado e chamar CEE3ABD com ABCODE 999.",
+      "caution": "Não mapear essas falhas para rejeições de negócio ou retorno 4; são término anormal.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 707,
+        "end_line": 725,
+        "excerpt_sha256": "b2db216823c02b4322aeb95149066980aeafe2b59ff014245ac9e10615526fc4"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "start_line": 628,
+          "end_line": 647,
+          "excerpt_sha256": "2654f7c830305969e32c612b0ac848b5ef80ed7a521b28976b100e1c5615e2ed"
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "start_line": 626,
+          "end_line": 645,
+          "excerpt_sha256": "e3954002370baed851046c8586e769a454c10f1128f657c103eb25cf373b323f"
+        }
+      ]
+    },
+    {
+      "id": "E-02",
+      "obligation_candidate": "Em CBTRN02C, erro ao fechar DALYREJS exibe mensagem de DAILY REJECTS FILE, mas move XREFFILE-STATUS para IO-STATUS, não DALYREJS-STATUS.",
+      "caution": "Registrar como comportamento/código observado ou defeito textual; não corrigir silenciosamente na referência.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 637,
+        "end_line": 651,
+        "excerpt_sha256": "dc6fd54ecb93977def59bd4b33d590ffe4574ae6bc5fcffdcb1391ce617ac855"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "human_decision_needed": [
+        "Decidir se a referência deve exigir compatibilidade com o bug de status ou apenas documentá-lo como limitação."
+      ]
+    },
+    {
+      "id": "E-03",
+      "obligation_candidate": "Lookups inválidos no relatório (cartão, tipo, categoria) são fatais por INVALID KEY com IO-STATUS 23 e CEE3ABD; não produzem linha omitida nem marcador de desconhecido.",
+      "caution": "Diferente de rejeições de POSTTRAN: aqui a geração do relatório aborta.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 484,
+        "end_line": 511,
+        "excerpt_sha256": "4f0abfb44a2f65addeee901b1fab71be07bb15ede639d079c19b0748bcc3568b"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "E-04",
+      "obligation_candidate": "CBACT04C trata falta de conta/XREF como erro fatal após READ, mas falta de disclosure group status 23 tenta DEFAULT; falha no DEFAULT é fatal.",
+      "caution": "Não inventar fallback de taxa nem continuação com conta ausente.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 372,
+        "end_line": 412,
+        "excerpt_sha256": "39751db790ae520df4aecb8319e35411e78d97637c5954f0de47e854478dd37b"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "start_line": 415,
+          "end_line": 459,
+          "excerpt_sha256": "f3f76a5694a8ec481aff4fc5e706dadfd661f653e0c61212d1691392aa389f58"
+        }
+      ]
+    },
+    {
+      "id": "T-01",
+      "obligation_candidate": "CBTRN02C em término normal fecha DALYTRAN, TRANSACT, XREF, DALYREJS, ACCTFILE e TCATBALF, exibe contadores e define RETURN-CODE 4 apenas se WS-REJECT-COUNT > 0.",
+      "caution": "RETURN-CODE 4 não representa falha fatal; falhas fatais chamam CEE3ABD.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 221,
+        "end_line": 234,
+        "excerpt_sha256": "77c6ae53ed3f3232cd917bb88feccaa2bc62dd7ef9e5334c517390b98f89588a"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "start_line": 582,
+          "end_line": 690,
+          "excerpt_sha256": "df325097e270317551383aab22e9f526d27568d79ead7039a7f252ce45ce417b"
+        }
+      ]
+    },
+    {
+      "id": "T-02",
+      "obligation_candidate": "CBACT04C abre TCATBALF, XREF, DISCGRP, ACCTFILE e TRANSACT nessa ordem e fecha na mesma família de recursos antes de GOBACK; porém a atualização da última conta no EOF é lacuna/bloqueante textual.",
+      "caution": "Não congelar promessa de atualização final de todas as contas sem decisão/teste; esta revisão não executou COBOL.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 180,
+        "end_line": 232,
+        "excerpt_sha256": "847e96050bca3b1054434dc0d1fbaf29a232b1c8e101d8cebd9f157e836f542c"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "start_line": 325,
+          "end_line": 347,
+          "excerpt_sha256": "2a185f941270cd2a5afddfd0b1ffa8c88c38fa45014b740b4aa62f911f81ba92"
+        }
+      ],
+      "human_decision_needed": [
+        "Adjudicar semanticamente o ramo de EOF/última conta por especialista ou teste controlado fora desta tarefa."
+      ]
+    },
+    {
+      "id": "T-03",
+      "obligation_candidate": "CBTRN03C abre arquivos, lê DATEPARM antes do loop e, no EOF do TRANFILE, escreve page/grand totals; há risco textual de adicionar TRAN-AMT do registro anterior no EOF e de não escrever account total final.",
+      "caution": "Bloqueante para congelar totais de relatório como oráculo; exige adjudicação humana/dinâmica.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 159,
+        "end_line": 217,
+        "excerpt_sha256": "8cede08bb26ab18a7aa43c27cd1582929cc12d38ff29b399699019aaa1065971"
+      },
+      "review_status": "added_reviewed_candidate_by_source",
+      "runtime_test_in_this_cycle": false,
+      "secondary_sources": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "start_line": 248,
+          "end_line": 321,
+          "excerpt_sha256": "5d7b10875f92e8004819ca1fc8b1f205045ac820581577cf2f069b8d38b05de7"
+        }
+      ],
+      "human_decision_needed": [
+        "Decidir se o comportamento de EOF/totais deve ser preservado literalmente, tratado como bug, ou verificado por execução posterior."
+      ]
+    }
+  ],
+  "count": 34,
+  "anchor_check": {
+    "programmatic_check": "sha256(file bytes) and sha256(joined source lines with trailing newline) recomputed from research-corpus",
+    "all_manifest_hashes_ok": true,
+    "all_record_anchors_ok": true,
+    "checked_record_count": 34,
+    "checked_anchor_count": 54,
+    "details": [
+      {
+        "id": "P-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 202,
+            "end_line": 231,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "195440b92aab2fa9ab0936fba2f6234682049dddf3e6e20e68389e61e3dc6d9a"
+          }
+        ]
+      },
+      {
+        "id": "P-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 380,
+            "end_line": 399,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "109d775c7e954aa4b4f6fd964e08b3cbb89f96d459e8011c8d3e0a9c41a47e59"
+          }
+        ]
+      },
+      {
+        "id": "P-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 403,
+            "end_line": 420,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "116936e79dcf7ecb001db3c6d0f3b2315987d0f4b5c7223cf7ef27a238dac5d9"
+          }
+        ]
+      },
+      {
+        "id": "P-04",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 424,
+            "end_line": 442,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "9d5570c795b667a59aa0fec6691ccad03c2d6c8a1af26c465e175fbe384513b6"
+          }
+        ]
+      },
+      {
+        "id": "P-05",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 446,
+            "end_line": 464,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "14948b15f1cb60f4d6d0842a32f793be04e85637a5fbf34308f82a57d573887c"
+          }
+        ]
+      },
+      {
+        "id": "P-06",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 467,
+            "end_line": 510,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "170841a2a01719edc9a5c477862f7233d8a1f31cad3556de5fff79af8e1cbbee"
+          }
+        ]
+      },
+      {
+        "id": "P-07",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 545,
+            "end_line": 559,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "e75476f10c5804cab4c9b18427dfbb967e89d027d8ffb6fbd28d11b51f2cd834"
+          }
+        ]
+      },
+      {
+        "id": "I-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 188,
+            "end_line": 222,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "c7b27bae48dcf17809ad5e5c2f5b2c037473ddf1092e7b17c7e41aad2ffcd5df"
+          }
+        ]
+      },
+      {
+        "id": "I-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 350,
+            "end_line": 368,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "b428dc6b8e7dd0d44d25cab4b032d2b3fa04df32a45ef868fa0c2313153b6fb7"
+          }
+        ]
+      },
+      {
+        "id": "I-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 415,
+            "end_line": 459,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "cf7fdf6b75c465fd039da3e1e8567c86cb8c2f8d804f3f344c208fb4cbae3060"
+          }
+        ]
+      },
+      {
+        "id": "I-04",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 210,
+            "end_line": 217,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "dd1c3605d1a85cd52950e4cd3ddfd16a49c3c6e3935345abfb3a623e66048e28"
+          }
+        ]
+      },
+      {
+        "id": "I-05",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 462,
+            "end_line": 515,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "1cd200aa2782fdebd0dd04bc6367c18208c50a829c6902490f02857993b97ba5"
+          }
+        ]
+      },
+      {
+        "id": "I-06",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 518,
+            "end_line": 520,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "4826bc1c8d04d6cce8ac3cff56f23d2f422b45a0dc7ecb1ce09a338590db6a3b"
+          }
+        ]
+      },
+      {
+        "id": "R-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 170,
+            "end_line": 196,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "cbf8224c3fe7b1f13f1b3ba64fa325d82255b6af570f58e5501fa910b96527f8"
+          }
+        ]
+      },
+      {
+        "id": "R-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 274,
+            "end_line": 321,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "b7efe9d21b33bff75e77287d6a15b9c1d8ba5ad2b707134ac4154dbde1289c9a"
+          }
+        ]
+      },
+      {
+        "id": "R-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 361,
+            "end_line": 373,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true,
+            "original_draft_excerpt_sha256_replaced": "92e6ac79498ad2ade0c702ca840a300330f3e0ec451a2bdb108b37405bc545eb"
+          }
+        ]
+      },
+      {
+        "id": "L-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cpy/CVACT01Y.cpy",
+            "start_line": 1,
+            "end_line": 17,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "L-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cpy/CVACT03Y.cpy",
+            "start_line": 1,
+            "end_line": 8,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "L-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cpy/CVTRA05Y.cpy",
+            "start_line": 1,
+            "end_line": 18,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cpy/CVTRA06Y.cpy",
+            "start_line": 1,
+            "end_line": 18,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "L-04",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cpy/CVTRA01Y.cpy",
+            "start_line": 1,
+            "end_line": 10,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cpy/CVTRA02Y.cpy",
+            "start_line": 1,
+            "end_line": 10,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cpy/CVTRA03Y.cpy",
+            "start_line": 1,
+            "end_line": 7,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cpy/CVTRA04Y.cpy",
+            "start_line": 1,
+            "end_line": 9,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "L-05",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "start_line": 4,
+            "end_line": 66,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "J-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/POSTTRAN.jcl",
+            "start_line": 19,
+            "end_line": 42,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 29,
+            "end_line": 61,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 254,
+            "end_line": 329,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "J-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/TRANBKP.jcl",
+            "start_line": 19,
+            "end_line": 68,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/proc/REPROC.prc",
+            "start_line": 18,
+            "end_line": 28,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "J-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/INTCALC.jcl",
+            "start_line": 19,
+            "end_line": 41,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 176,
+            "end_line": 180,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 473,
+            "end_line": 500,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "J-04",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/COMBTRAN.jcl",
+            "start_line": 19,
+            "end_line": 49,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "J-05",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/TRANREPT.jcl",
+            "start_line": 19,
+            "end_line": 80,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 220,
+            "end_line": 243,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "O-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/jcl/POSTTRAN.jcl",
+            "start_line": 19,
+            "end_line": 23,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/jcl/TRANBKP.jcl",
+            "start_line": 19,
+            "end_line": 23,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/jcl/INTCALC.jcl",
+            "start_line": 19,
+            "end_line": 22,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/jcl/COMBTRAN.jcl",
+            "start_line": 19,
+            "end_line": 22,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/jcl/TRANREPT.jcl",
+            "start_line": 19,
+            "end_line": 23,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "E-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 707,
+            "end_line": 725,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 628,
+            "end_line": 647,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 626,
+            "end_line": 645,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "E-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 637,
+            "end_line": 651,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "E-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 484,
+            "end_line": 511,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "E-04",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 372,
+            "end_line": 412,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 415,
+            "end_line": 459,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "T-01",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 221,
+            "end_line": 234,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "start_line": 582,
+            "end_line": 690,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "T-02",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 180,
+            "end_line": 232,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "start_line": 325,
+            "end_line": 347,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      },
+      {
+        "id": "T-03",
+        "ok": true,
+        "anchors": [
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 159,
+            "end_line": 217,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          },
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "start_line": 248,
+            "end_line": 321,
+            "file_sha256_ok": true,
+            "excerpt_sha256_ok": true
+          }
+        ]
+      }
+    ]
+  },
+  "remaining": [
+    "independent/human review before freeze",
+    "decidir ordem oficial do ciclo entre jobs JCL ou manter obrigações separadas",
+    "adjudicar CBACT04C EOF/última conta sem inventar intenção",
+    "adjudicar CBTRN03C NEXT SENTENCE/EOF/totais antes de usar como oráculo",
+    "decidir tratamento de bugs textuais observados como compatibilidade obrigatória, documentação de limitação ou defeito excluído",
+    "testes dinâmicos e exemplos numéricos permanecem fora desta revisão"
+  ],
+  "human_decisions_needed": [
+    "Congelar ou não sequência operacional POSTTRAN -> TRANBKP -> INTCALC -> COMBTRAN -> TRANREPT; o allowlist não traz scheduler único.",
+    "CBACT04C: preservar literalmente a aparente não atualização da última conta no EOF ou tratar como defeito a ser documentado/testado.",
+    "CBTRN03C: preservar literalmente comportamento de EOF/totais ou corrigir/adjudicar antes de oráculo de relatório.",
+    "CBTRN02C: erro no close de DALYREJS move XREFFILE-STATUS; decidir se isso é obrigação de compatibilidade.",
+    "Definir se datas hard-coded no SORT de TRANREPT ou DATEPARM do programa têm precedência na referência de avaliação."
+  ],
+  "limits": [
+    "Rascunho inicial não é cego: foi produzido em contexto de coordenação já exposto a preflight.",
+    "Revisão documental apenas nos 19 arquivos allowlisted; não leu outputs de braços experimentais.",
+    "Sem execução de COBOL, sem extração LLM, sem aprovação de gates e sem alegação de completude.",
+    "Âncoras são por path relativo ao corpus completo e hashes; não são prova de semântica dinâmica."
+  ],
+  "review_notes": [
+    "Excerpt hashes in the 16 original draft records were replaced with hashes recomputed from the allowed corpus using the same line-slice rule recorded in anchor_check; prior values are preserved as original_draft_excerpt_sha256 on affected anchors."
+  ]
+}

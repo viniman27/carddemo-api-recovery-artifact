@@ -1,0 +1,82 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "technical_local_only",
+  "purpose": "Explicit local fixture selection for P2b API technical QA only; not official fixtures, not expected answers, not campaigns.",
+  "fixtures": [
+    {
+      "fixtureId": "posting-local-technical-smoke-v1",
+      "track": "posting",
+      "capability": "CBTRN02C/POSTTRAN",
+      "suiteUse": "technical_smoke_only",
+      "materializer": {
+        "kind": "builtin_technical_smoke"
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "source": "P2b builtin technical materializer selected by P3 local config",
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "fixtureId": "interest-local-technical-smoke-v1",
+      "track": "interest",
+      "capability": "CBACT04C/INTCALC",
+      "suiteUse": "technical_smoke_only",
+      "materializer": {
+        "kind": "builtin_technical_smoke"
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "source": "P2b builtin technical materializer selected by P3 local config",
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "eb811e53b0782a6d9e1c0abfb4d511cbd68e36581b47ff723caea5793a2ef05b"
+    },
+    {
+      "fixtureId": "reporting-local-technical-smoke-v1",
+      "track": "reporting",
+      "capability": "CBTRN03C/TRANREPT",
+      "suiteUse": "technical_smoke_only",
+      "materializer": {
+        "kind": "builtin_technical_smoke"
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "source": "P2b builtin technical materializer selected by P3 local config",
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "8cc44c7add0efe9c4bd69fc3629c13b93b77c1ecc3c0944281abc09544b952de"
+    }
+  ]
+}

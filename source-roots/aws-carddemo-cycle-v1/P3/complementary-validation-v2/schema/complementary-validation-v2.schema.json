@@ -1,0 +1,30 @@
+{
+  "$id": "complementary-validation-v2.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "kind": {
+      "const": "aws-carddemo-complementary-validation-catalog-v2"
+    },
+    "obligationOperationMapping": {
+      "maxItems": 525,
+      "minItems": 525,
+      "type": "array"
+    },
+    "scenarioRecords": {
+      "maxItems": 25,
+      "minItems": 25,
+      "type": "array"
+    }
+  },
+  "required": [
+    "kind",
+    "schemaRef",
+    "statusVocabulary",
+    "denominators",
+    "testConditionDesign",
+    "sharedOracleBattery",
+    "scenarioRecords",
+    "obligationOperationMapping"
+  ],
+  "type": "object"
+}

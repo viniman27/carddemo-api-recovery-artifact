@@ -1,0 +1,25 @@
+{
+  "status": "authorized_for_E1_E2_only",
+  "user_message": "Pode sim",
+  "in_reply_to": "Posso iniciar essa coleta? Três execuções zero-shot e três few-shot, gpt-6-astra pela assinatura, sem corrigir respostas ou repetir até obter resultado melhor.",
+  "model": "gpt-6-astra",
+  "provider": "openai-codex",
+  "access": "subscription",
+  "repetitions": 3,
+  "automatic_retries": 0,
+  "request_sha256": {
+    "E1": "b165ec4fc05055f11bc544ca8b63cb5362706aba0cba8aa6c4d47c8643ec595a",
+    "E2": "ab8ed34287d5c5a2e89d252b3dc71c1535c10642c7e42b3f56f7b77c639d4ff4"
+  },
+  "scope": "E1/E2 extraction only; no SDD stage approval, APIs or official test authorization",
+  "order": [
+    "E1-1",
+    "E2-1",
+    "E1-2",
+    "E2-2",
+    "E1-3",
+    "E2-3"
+  ],
+  "order_reason": "Alternating fixed order declared before any collection response; not randomized",
+  "collection_directory": "collection-01"
+}

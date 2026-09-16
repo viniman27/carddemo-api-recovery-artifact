@@ -1,0 +1,18 @@
+{
+  "command": [
+    "cobc",
+    "-fsyntax-only",
+    "-std=ibm",
+    "-I",
+    "<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cpy",
+    "-I",
+    "<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cpy-bms",
+    "<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl"
+  ],
+  "result": {
+    "output": "<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:615: error: DFHBMSCA: No such file or directory\n  613 | \n  614 |       *IBM SUPPLIED COPYBOOKS\n  615 >        COPY DFHBMSCA.\n  616 |        COPY DFHAID.\n  617 | \n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:616: error: DFHAID: No such file or directory\n  614 |       *IBM SUPPLIED COPYBOOKS\n  615 |        COPY DFHBMSCA.\n  616 >        COPY DFHAID.\n  617 | \n  618 |       *COMMON COPYBOOKS\n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:856: error: 'EIBCALEN' is not defined\n  854 |        01  DFHCOMMAREA.\n  855 |          05  FILLER                                PIC X(1)\n  856 >              OCCURS 1 TO 32767 TIMES DEPENDING ON EIBCALEN.\n  857 | \n  858 |        PROCEDURE DIVISION.\n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl: in paragraph '0000-MAIN':\n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:862: error: 'EXEC' is a reserved word, but isn't supported\n  860 | \n  861 | \n  862 >            EXEC CICS HANDLE ABEND\n  863 |                      LABEL(ABEND-ROUTINE)\n  864 |            END-EXEC\n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:862: error: syntax error, unexpected Identifier, expecting SECTION or .\n<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo/full-source/app/cbl/COACTUPC.cbl:862: note: 'EXEC' is not a statement",
+    "exit_code": 1,
+    "error": null
+  },
+  "claim": "Direct GnuCOBOL syntax probe only; no CICS environment installed or emulated"
+}

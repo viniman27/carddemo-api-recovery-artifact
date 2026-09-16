@@ -1,0 +1,32 @@
+{
+  "contract_id": "E1-1",
+  "track": "reporting",
+  "body": {
+    "lines": [
+      "DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  ",
+      "                                                                                                                                     ",
+      "Transaction ID   Account ID  Transaction Type   Tran Category                      Tran Source            Amount                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "GROUP1-ITEM-0001 10000000001 01-Purchase        0005-Candidate category            System                   1.11                     ",
+      "GROUP1-ITEM-0002 10000000001 01-Purchase        0005-Candidate category            System                   2.22                     ",
+      "Account Total....................................................................................+          3.33                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "GROUP2-ITEM-0001 10000000002 01-Purchase        0005-Candidate category            System                   3.33                     ",
+      "GROUP2-ITEM-0002 10000000002 01-Purchase        0005-Candidate category            System                   4.44                     ",
+      "Page Total ......................................................................................+         15.54                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "Grand Total......................................................................................+         15.54                     "
+    ],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN03C",
+      "Reporting from 2022-07-01 to 2022-07-31",
+      "GROUP1-ITEM-0001010005System    Reporting boundary fixture                                                                          00000000111000000001Report Merchant                                   Sometown                                          10000000  41111111111111112022-07-01-00.00.00.0000002022-07-10-10.00.00.000000                    ",
+      "GROUP1-ITEM-0002010005System    Reporting boundary fixture                                                                          00000000222000000001Report Merchant                                   Sometown                                          10000000  41111111111111112022-07-01-00.00.00.0000002022-07-11-10.00.00.000000                    ",
+      "GROUP2-ITEM-0001010005System    Reporting boundary fixture                                                                          00000000333000000001Report Merchant                                   Sometown                                          10000000  42222222222222222022-07-01-00.00.00.0000002022-07-12-10.00.00.000000                    ",
+      "GROUP2-ITEM-0002010005System    Reporting boundary fixture                                                                          00000000444000000001Report Merchant                                   Sometown                                          10000000  42222222222222222022-07-01-00.00.00.0000002022-07-13-10.00.00.000000                    ",
+      "TRAN-AMT 00000000444+",
+      "WS-PAGE-TOTAL00000001110+",
+      "END OF EXECUTION OF PROGRAM CBTRN03C"
+    ]
+  }
+}

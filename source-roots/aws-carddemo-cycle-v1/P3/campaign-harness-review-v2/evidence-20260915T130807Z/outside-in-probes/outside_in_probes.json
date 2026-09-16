@@ -1,0 +1,251 @@
+{
+  "counts": {
+    "fixes_verified": 5,
+    "probes_total": 5
+  },
+  "probes": {
+    "case_id_preserved_workdir_opaque_contained": {
+      "applications_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/path_traversal_run/applications",
+      "case_id": "x/../../escaped-case",
+      "fix_verified": true,
+      "recorded_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/path_traversal_run/applications/0001-361ae3b4b3b4471b",
+      "resolved_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/path_traversal_run/applications/0001-361ae3b4b3b4471b",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 1,
+        "transport_failures": 0
+      }
+    },
+    "deadline_reaped_before_next_application": {
+      "fix_verified": true,
+      "receipts": [
+        {
+          "body_kind": "absent",
+          "case_id": "slow",
+          "content_type": null,
+          "expectation_detail": {},
+          "expectation_result": "not_evaluated",
+          "failure_class": "deadline",
+          "method": "POST",
+          "path": "/slow",
+          "provenance": [
+            "PX:slow"
+          ],
+          "request_headers": [],
+          "request_identity": "232d13d6b37fd5903614ea23735d066d2a06f52fa30c5a64bd43530674f4110c",
+          "response_bytes": 0,
+          "response_sha256": null,
+          "status": null
+        },
+        {
+          "body_kind": "absent",
+          "case_id": "fast-after-slow",
+          "content_type": "application/json",
+          "expectation_detail": {
+            "allowed_status": [
+              200
+            ],
+            "status": 200
+          },
+          "expectation_result": "pass",
+          "failure_class": null,
+          "method": "POST",
+          "path": "/fast",
+          "provenance": [
+            "PX:fast-after-slow"
+          ],
+          "request_headers": [],
+          "request_identity": "b016153bb33a77e9d2a42a0b5c5a927a8b43f1ef049d65fc5abb43c1edeb99c9",
+          "response_bytes": 2,
+          "response_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "status": 200
+        }
+      ],
+      "server_seen": [
+        {
+          "finished": 1789477692.441461,
+          "path": "/slow",
+          "started": 1789477692.081449,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/deadline_controlled_run/applications/0001-c8fa663bdc5ff415"
+        },
+        {
+          "finished": 1789477692.445076,
+          "path": "/fast",
+          "started": 1789477692.445075,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/deadline_controlled_run/applications/0002-5e8bae77bf1dc40e"
+        }
+      ],
+      "totals": {
+        "attempted": 2,
+        "completed": 1,
+        "deadline_failures": 1,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    "duplicate_headers_wire_preserved": {
+      "fix_verified": true,
+      "receipt_headers": [
+        [
+          "X-Dup",
+          "one"
+        ],
+        [
+          "X-Dup",
+          "two"
+        ]
+      ],
+      "requested_headers": [
+        [
+          "X-Dup",
+          "one"
+        ],
+        [
+          "X-Dup",
+          "two"
+        ]
+      ],
+      "server_get_all_X_Dup": [
+        "one",
+        "two"
+      ],
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 1,
+        "transport_failures": 0
+      }
+    },
+    "expectations_separate_from_transport": {
+      "fix_verified": true,
+      "receipts": [
+        {
+          "body_kind": "absent",
+          "case_id": "unexpected-500",
+          "content_type": "application/json",
+          "expectation_detail": {
+            "allowed_status": [
+              200
+            ],
+            "status": 500
+          },
+          "expectation_result": "violation",
+          "failure_class": null,
+          "method": "POST",
+          "path": "/ok",
+          "provenance": [
+            "PX:unexpected-500"
+          ],
+          "request_headers": [],
+          "request_identity": "bb5bb129caad42fe22f75fbb6eaa07a099e7f751291878caceb3334ef8d2e761",
+          "response_bytes": 24,
+          "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+          "status": 500
+        },
+        {
+          "body_kind": "absent",
+          "case_id": "documented-500",
+          "content_type": "application/json",
+          "expectation_detail": {
+            "allowed_status": [
+              500
+            ],
+            "status": 500
+          },
+          "expectation_result": "pass",
+          "failure_class": null,
+          "method": "POST",
+          "path": "/ok",
+          "provenance": [
+            "PX:documented-500"
+          ],
+          "request_headers": [],
+          "request_identity": "bf1ade6826962f7ceade8f1e67fa2a438fea0c971c1777dac12ef06aa7e547fe",
+          "response_bytes": 24,
+          "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+          "status": 500
+        },
+        {
+          "body_kind": "absent",
+          "case_id": "unsupported",
+          "content_type": "application/json",
+          "expectation_detail": {
+            "unsupported_checks": [
+              "jsonSchema"
+            ]
+          },
+          "expectation_result": "inconclusive",
+          "failure_class": null,
+          "method": "POST",
+          "path": "/ok",
+          "provenance": [
+            "PX:unsupported"
+          ],
+          "request_headers": [],
+          "request_identity": "3113b4a703a9e3e8aea40e560943da9f8f742830b8ae330081786b6ae2513f6e",
+          "response_bytes": 24,
+          "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+          "status": 500
+        }
+      ],
+      "totals": {
+        "attempted": 3,
+        "completed": 3,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 1,
+        "expectation_passes": 1,
+        "expectation_violations": 1,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 3,
+        "transport_failures": 0
+      }
+    },
+    "reset_workdir_bound_to_service_state": {
+      "fix_verified": true,
+      "service_seen": [
+        {
+          "after": "original+mutated\n",
+          "before": "original\n",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/reset_bound_run/applications/0001-e4dd23baf28a8c7b"
+        },
+        {
+          "after": "original+mutated\n",
+          "before": "original\n",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes/reset_bound_run/applications/0002-0548eb91100847b4"
+        }
+      ],
+      "target_quiet_all": true,
+      "totals": {
+        "attempted": 2,
+        "completed": 2,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 2,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    }
+  }
+}

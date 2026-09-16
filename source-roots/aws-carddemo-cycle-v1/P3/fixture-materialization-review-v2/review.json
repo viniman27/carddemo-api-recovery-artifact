@@ -1,0 +1,657 @@
+{
+  "agents_exposure_declared": [
+    "WORKSPACE-NOTES.md"
+  ],
+  "blockers": [],
+  "commands": [
+    {
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2",
+      "duration_s": 0.129,
+      "env": {},
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.31,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE",
+        "LOOKUP_KEY": "4111111111111111",
+        "LOOKUP_MODE": "PRIMARY"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.007,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE",
+        "LOOKUP_KEY": "10000000001",
+        "LOOKUP_MODE": "ALT"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.006,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE",
+        "LOOKUP_KEY": "99999999999",
+        "LOOKUP_MODE": "ALT"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nMISS=23\nREAD=23 CARD=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 ACCT=99999999999\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.006,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE",
+        "LOOKUP_KEY": "4111111111111111",
+        "LOOKUP_MODE": "PRIMARY"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.006,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE",
+        "LOOKUP_KEY": "10000000001",
+        "LOOKUP_MODE": "ALT"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-review-v2/xref_alt_probe"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.006,
+      "env": {
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE",
+        "LOOKUP_KEY": "99999999999",
+        "LOOKUP_MODE": "ALT"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OPEN=00\nMISS=23\nREAD=23 CARD=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 ACCT=99999999999\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_ACCTFILE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/ACCTFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-28y8a86f/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_DISCGRP"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/DISCGRP",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-t459apfr/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TCATBALF"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.006,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/TCATBALF",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-h5wuk5k8/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_XREFFILE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-tocxju_q/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_ACCTFILE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.006,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/ACCTFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-an24u4_m/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TCATBALF"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.006,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/TCATBALF",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-dt3he95r/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANFILE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/TRANFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-emw8nw6f/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_XREFFILE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+      "duration_s": 0.006,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-ktua4ksm/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_CARDXREF"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/CARDXREF",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-imyyfiqf/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANCATG"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANCATG",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-cfkj699n/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANTYPE"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting",
+      "duration_s": 0.006,
+      "env": {
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANTYPE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-dump-yvmri5xk/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "cmd": [
+        "python3",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/tools/materialize_candidates.py",
+        "--verify-only",
+        "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/verify-only-copy-locxl2ql/package"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2",
+      "duration_s": 0.057,
+      "env": {},
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"business_cobol_executed\": false,\n  \"compiled_gnucobol_helpers\": {\n    \"ACCTFILE\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_ACCTFILE\",\n    \"CARDXREF\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_CARDXREF\",\n    \"DISCGRP\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_DISCGRP\",\n    \"TCATBALF\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TCATBALF\",\n    \"TRANCATG\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANCATG\",\n    \"TRANFILE\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANFILE\",\n    \"TRANTYPE\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_TRANTYPE\",\n    \"XREFFILE\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_XREFFILE\"\n  },\n  \"datasets\": {\n    \"interest\": {\n      \"ACCTFILE\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"ACCTFILE\",\n        \"dumpRawSha256\": \"d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5\",\n        \"keys\": [\n          \"10000000001\",\n          \"10000000002\"\n        ],\n        \"logicalJsonl\": \"ACCTFILE\",\n        \"logicalRawSha256\": \"d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5\",\n        \"physicalFiles\": {\n          \"ACCTFILE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 300\n      },\n      \"DISCGRP\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"DISCGRP\",\n        \"dumpRawSha256\": \"2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a\",\n        \"keys\": [\n          \"STANDARD  010005\",\n          \"ZERORATE  010005\",\n          \"DEFAULT   010005\"\n        ],\n        \"logicalJsonl\": \"DISCGRP\",\n        \"logicalRawSha256\": \"2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a\",\n        \"physicalFiles\": {\n          \"DISCGRP\": {\n            \"bytes\": 8192,\n            \"sha256\": \"9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 3,\n        \"recordSize\": 50\n      },\n      \"PARMFILE\": {\n        \"bytes\": 10,\n        \"dd\": \"PARMFILE\",\n        \"recordCount\": 1,\n        \"recordSize\": 10,\n        \"sha256\": \"6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc\",\n        \"source\": \"explicit package-local X(10) PARMFILE from v1 manifest parameter, not default\"\n      },\n      \"TCATBALF\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"TCATBALF\",\n        \"dumpRawSha256\": \"63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d\",\n        \"keys\": [\n          \"10000000001010005\",\n          \"10000000002010005\"\n        ],\n        \"logicalJsonl\": \"TCATBALF\",\n        \"logicalRawSha256\": \"63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d\",\n        \"physicalFiles\": {\n          \"TCATBALF\": {\n            \"bytes\": 8192,\n            \"sha256\": \"c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 50\n      },\n      \"XREFFILE\": {\n        \"alternateKeyName\": \"FD-XREF-ACCT-ID\",\n        \"alternateKeys\": [\n          \"10000000001\",\n          \"10000000002\"\n        ],\n        \"dd\": \"XREFFILE\",\n        \"dumpRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"keys\": [\n          \"4111111111111111\",\n          \"4222222222222222\"\n        ],\n        \"logicalJsonl\": \"CARDXREF\",\n        \"logicalRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"physicalFiles\": {\n          \"XREFFILE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67\"\n          },\n          \"XREFFILE.1\": {\n            \"bytes\": 8192,\n            \"sha256\": \"167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 50\n      }\n    },\n    \"posting\": {\n      \"ACCTFILE\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"ACCTFILE\",\n        \"dumpRawSha256\": \"d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5\",\n        \"keys\": [\n          \"10000000001\",\n          \"10000000002\"\n        ],\n        \"logicalJsonl\": \"ACCTFILE\",\n        \"logicalRawSha256\": \"d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5\",\n        \"physicalFiles\": {\n          \"ACCTFILE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 300\n      },\n      \"DALYTRAN\": {\n        \"bytes\": 700,\n        \"dd\": \"DALYTRAN\",\n        \"recordCount\": 2,\n        \"recordSize\": 350,\n        \"sha256\": \"c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88\",\n        \"source\": \"P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat\"\n      },\n      \"TCATBALF\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"TCATBALF\",\n        \"dumpRawSha256\": \"63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d\",\n        \"keys\": [\n          \"10000000001010005\",\n          \"10000000002010005\"\n        ],\n        \"logicalJsonl\": \"TCATBALF\",\n        \"logicalRawSha256\": \"63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d\",\n        \"physicalFiles\": {\n          \"TCATBALF\": {\n            \"bytes\": 8192,\n            \"sha256\": \"62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 50\n      },\n      \"TRANFILE\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"TRANFILE\",\n        \"dumpRawSha256\": \"f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7\",\n        \"keys\": [\n          \"REPORT-IN---001 \",\n          \"REPORT-OUT--001 \"\n        ],\n        \"logicalJsonl\": \"TRANSACT\",\n        \"logicalRawSha256\": \"f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7\",\n        \"physicalFiles\": {\n          \"TRANFILE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 350\n      },\n      \"XREFFILE\": {\n        \"alternateKeyName\": \"FD-XREF-ACCT-ID\",\n        \"alternateKeys\": [\n          \"10000000001\",\n          \"10000000002\"\n        ],\n        \"dd\": \"XREFFILE\",\n        \"dumpRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"keys\": [\n          \"4111111111111111\",\n          \"4222222222222222\"\n        ],\n        \"logicalJsonl\": \"CARDXREF\",\n        \"logicalRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"physicalFiles\": {\n          \"XREFFILE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023\"\n          },\n          \"XREFFILE.1\": {\n            \"bytes\": 8192,\n            \"sha256\": \"6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 50\n      }\n    },\n    \"reporting\": {\n      \"CARDXREF\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"CARDXREF\",\n        \"dumpRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"keys\": [\n          \"4111111111111111\",\n          \"4222222222222222\"\n        ],\n        \"logicalJsonl\": \"CARDXREF\",\n        \"logicalRawSha256\": \"d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3\",\n        \"physicalFiles\": {\n          \"CARDXREF\": {\n            \"bytes\": 8192,\n            \"sha256\": \"e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 2,\n        \"recordSize\": 50\n      },\n      \"DATEPARM\": {\n        \"bytes\": 80,\n        \"dd\": \"DATEPARM\",\n        \"recordCount\": 1,\n        \"recordSize\": 80,\n        \"sha256\": \"5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237\",\n        \"source\": \"P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat\"\n      },\n      \"TRANCATG\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"TRANCATG\",\n        \"dumpRawSha256\": \"5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629\",\n        \"keys\": [\n          \"010005\"\n        ],\n        \"logicalJsonl\": \"TRANCATG\",\n        \"logicalRawSha256\": \"5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629\",\n        \"physicalFiles\": {\n          \"TRANCATG\": {\n            \"bytes\": 8192,\n            \"sha256\": \"1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 1,\n        \"recordSize\": 60\n      },\n      \"TRANFILE\": {\n        \"bytes\": 700,\n        \"dd\": \"TRANFILE\",\n        \"recordCount\": 2,\n        \"recordSize\": 350,\n        \"sha256\": \"f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7\",\n        \"source\": \"P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat\"\n      },\n      \"TRANFILE.empty\": {\n        \"bytes\": 0,\n        \"dd\": \"TRANFILE.empty\",\n        \"recordCount\": 0,\n        \"recordSize\": 350,\n        \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n        \"source\": \"P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat\"\n      },\n      \"TRANTYPE\": {\n        \"alternateKeyName\": null,\n        \"alternateKeys\": [],\n        \"dd\": \"TRANTYPE\",\n        \"dumpRawSha256\": \"770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa\",\n        \"keys\": [\n          \"01\"\n        ],\n        \"logicalJsonl\": \"TRANTYPE\",\n        \"logicalRawSha256\": \"770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa\",\n        \"physicalFiles\": {\n          \"TRANTYPE\": {\n            \"bytes\": 8192,\n            \"sha256\": \"40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128\"\n          }\n        },\n        \"reader\": \"compiled GnuCOBOL IDXIO dump matched candidate logical record images\",\n        \"recordCount\": 1,\n        \"recordSize\": 60\n      }\n    }\n  },\n  \"status\": \"pass\"\n}\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_XREFFILE"
+      ],
+      "cwd": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-reset-6772pvwd/second/interest",
+      "duration_s": 0.007,
+      "env": {
+        "DD_IDX": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-reset-6772pvwd/second/interest/XREFFILE",
+        "DD_RAW": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/review-reset-dump-8v3kjxgk/dump.raw",
+        "IO_MODE": "DUMP"
+      },
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "findings": [
+    {
+      "area": "pins/current-bytes",
+      "detail": "Recomputed bytes/sha256/treeSha256 for all package inventories match current files, not only saved report.",
+      "evidence": {
+        "tracks": [
+          "interest",
+          "posting",
+          "reporting"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "candidate-pins",
+      "detail": "Candidate v1 resource pins match current source bytes.",
+      "evidence": {
+        "resourceCount": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "layouts/encoding",
+      "detail": "All manifest layout/JCL/proc copies are current ASCII and byte-identical to reference-authoring-input-v1.",
+      "evidence": {
+        "layoutCount": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "fields/layouts",
+      "detail": "Logical JSONL record images and sequential files are ASCII fixed-width at expected copybook lengths.",
+      "evidence": {
+        "ACCTFILE": {
+          "count": 2,
+          "recordSize": 300,
+          "sha_raw": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5"
+        },
+        "CARDXREF": {
+          "count": 2,
+          "recordSize": 50,
+          "sha_raw": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3"
+        },
+        "DISCGRP": {
+          "count": 3,
+          "recordSize": 50,
+          "sha_raw": "2228c053ed122a0b3a2c346d71c5a0440668dd76b67d50855b4a8df6019fa9e8"
+        },
+        "TCATBALF": {
+          "count": 2,
+          "recordSize": 50,
+          "sha_raw": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d"
+        },
+        "TRANCATG": {
+          "count": 1,
+          "recordSize": 60,
+          "sha_raw": "5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629"
+        },
+        "TRANSACT": {
+          "count": 2,
+          "recordSize": 350,
+          "sha_raw": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7"
+        },
+        "TRANTYPE": {
+          "count": 1,
+          "recordSize": 60,
+          "sha_raw": "770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "alternate-lookup",
+      "detail": "Compiled GnuCOBOL random READ by primary and alternate key succeeded for package XREFFILE; absent alternate key returned non-zero. This is an effective lookup, not a dump-only proof.",
+      "evidence": [
+        {
+          "exit_code": 0,
+          "key": "4111111111111111",
+          "mode": "PRIMARY",
+          "stderr": "",
+          "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001",
+          "track": "posting"
+        },
+        {
+          "exit_code": 0,
+          "key": "10000000001",
+          "mode": "ALT",
+          "stderr": "",
+          "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001",
+          "track": "posting"
+        },
+        {
+          "exit_code": 0,
+          "key": "99999999999",
+          "mode": "ALT",
+          "stderr": "",
+          "stdout": "OPEN=00\nMISS=23\nREAD=23 CARD=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 ACCT=99999999999",
+          "track": "posting"
+        },
+        {
+          "exit_code": 0,
+          "key": "4111111111111111",
+          "mode": "PRIMARY",
+          "stderr": "",
+          "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001",
+          "track": "interest"
+        },
+        {
+          "exit_code": 0,
+          "key": "10000000001",
+          "mode": "ALT",
+          "stderr": "",
+          "stdout": "OPEN=00\nREAD=00 CARD=4111111111111111 ACCT=10000000001",
+          "track": "interest"
+        },
+        {
+          "exit_code": 0,
+          "key": "99999999999",
+          "mode": "ALT",
+          "stderr": "",
+          "stdout": "OPEN=00\nMISS=23\nREAD=23 CARD=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 ACCT=99999999999",
+          "track": "interest"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "area": "materialized-read",
+      "detail": "Fresh GnuCOBOL helper DUMP from current package indexed files matches logical raw SHA for every indexed DD.",
+      "evidence": [
+        {
+          "dd": "ACCTFILE",
+          "expected": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+          "ok": true,
+          "sha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+          "track": "interest"
+        },
+        {
+          "dd": "DISCGRP",
+          "expected": "2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a",
+          "ok": true,
+          "sha256": "2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a",
+          "track": "interest"
+        },
+        {
+          "dd": "TCATBALF",
+          "expected": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+          "ok": true,
+          "sha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+          "track": "interest"
+        },
+        {
+          "dd": "XREFFILE",
+          "expected": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "ok": true,
+          "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "track": "interest"
+        },
+        {
+          "dd": "ACCTFILE",
+          "expected": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+          "ok": true,
+          "sha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+          "track": "posting"
+        },
+        {
+          "dd": "TCATBALF",
+          "expected": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+          "ok": true,
+          "sha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+          "track": "posting"
+        },
+        {
+          "dd": "TRANFILE",
+          "expected": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+          "ok": true,
+          "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+          "track": "posting"
+        },
+        {
+          "dd": "XREFFILE",
+          "expected": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "ok": true,
+          "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "track": "posting"
+        },
+        {
+          "dd": "CARDXREF",
+          "expected": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "ok": true,
+          "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "track": "reporting"
+        },
+        {
+          "dd": "TRANCATG",
+          "expected": "5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629",
+          "ok": true,
+          "sha256": "5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629",
+          "track": "reporting"
+        },
+        {
+          "dd": "TRANTYPE",
+          "expected": "770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa",
+          "ok": true,
+          "sha256": "770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa",
+          "track": "reporting"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "area": "coordinator-verify-only",
+      "detail": "verify-only exited 0 on an isolated copy; source package not modified by the probe.",
+      "evidence": {
+        "exit_code": 0,
+        "stdout_head": "{\n  \"business_cobol_executed\": false,\n  \"compiled_gnucobol_helpers\": {\n    \"ACCTFILE\": \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/build/idxio_ACCTFILE\",\n    \"CARDXREF\": \"<REDACTED_LOCAL_PATH>/Documents/workspace"
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "reset",
+      "detail": "Reset validated by mutating first workspace, preparing second fresh copy, comparing full package union and performing effective read from second copy.",
+      "evidence": {
+        "read": {
+          "interest_XREFFILE_dump_sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+          "posting_DALYTRAN_sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+        },
+        "treeSha256": "74de59c2d52fd1c55f78e54e3bb41f292ed51aae5a82683979739af20bb3c6e1",
+        "unionFileCount": 22
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "family/posting.lookup",
+      "detail": "Posting fixture bytes include both present and absent CARDXREF lookup candidates.",
+      "evidence": {
+        "absent": [
+          "4999999999999999"
+        ],
+        "cards": [
+          "4111111111111111",
+          "4999999999999999"
+        ],
+        "present": [
+          "4111111111111111"
+        ],
+        "xref_primary_keys": [
+          "4111111111111111",
+          "4222222222222222"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "family/interest.rate",
+      "detail": "PARMFILE is explicit 10-byte 2022071800 and TCATBALF/ACCTFILE/DISCGRP bytes make zero and non-zero rate rows selectable.",
+      "evidence": {
+        "parm": "2022071800",
+        "rows": [
+          {
+            "acct": "10000000001",
+            "cat": "0005",
+            "discKey": "STANDARD  010005",
+            "group": "STANDARD  ",
+            "rateDisplay": "000150",
+            "type": "01"
+          },
+          {
+            "acct": "10000000002",
+            "cat": "0005",
+            "discKey": "ZERORATE  010005",
+            "group": "ZERORATE  ",
+            "rateDisplay": "000000",
+            "type": "01"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "family/reporting",
+      "detail": "Reporting has separate non-empty TRANFILE, zero-byte TRANFILE.empty, DATEPARM start/end bytes, and no precreated TRANREPT output; absent input remains a declared blocker rather than a materialized case.",
+      "evidence": {
+        "DATEPARM": "2022-07-01 2022-07-31                                                           ",
+        "TRANFILE_bytes": 700,
+        "TRANFILE_empty_bytes": 0,
+        "TRANREPT_present": false,
+        "end": "2022-07-31",
+        "start": "2022-07-01"
+      },
+      "status": "PASS"
+    },
+    {
+      "area": "dd-inventory",
+      "detail": "All reviewed physical DD files and sidecars are present exactly for the candidate package scope.",
+      "evidence": {
+        "interest": [
+          "ACCTFILE",
+          "DISCGRP",
+          "PARMFILE",
+          "TCATBALF",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "posting": [
+          "ACCTFILE",
+          "DALYTRAN",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "reporting": [
+          "CARDXREF",
+          "DATEPARM",
+          "TRANCATG",
+          "TRANFILE",
+          "TRANFILE.empty",
+          "TRANTYPE"
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "generated_utc": "2026-09-15T13:01:16Z",
+  "limits": [
+    "Review did not execute CardDemo business COBOL and did not create/approve expected outputs or campaign fixtures.",
+    "Declared families are applicable as technical selection/input families for current bytes; they are not complete business coverage claims.",
+    "Absent reporting input is only represented as a blocker/precondition, not executable bytes.",
+    "No fixture officialization performed."
+  ],
+  "scope": {
+    "allowed_inputs": [
+      "P3/fixture-materialization-v2",
+      "P3/fixture-candidates-v1",
+      "P3/reference-authoring-input-v1",
+      "P3/reference-executable-v4 metadata only",
+      "P3/reference-independent-review-v4 metadata only"
+    ],
+    "not_used": [
+      "oracles",
+      "campaign/quarantine outputs",
+      "business COBOL execution"
+    ]
+  },
+  "verdict": "PASS",
+  "workspace": "<REDACTED_LOCAL_PATH>"
+}

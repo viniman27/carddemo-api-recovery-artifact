@@ -1,0 +1,108 @@
+{
+  "status": "draft_needs_review",
+  "commands": {
+    "unit_tests": {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout_file": "evidence/unit-tests-stdout.txt",
+      "stderr_file": "evidence/unit-tests-stderr.txt"
+    },
+    "cli_relative": {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "executable_reference.py",
+        ".",
+        "--traverse",
+        "CBTRN02C_POSTTRAN",
+        "--traverse",
+        "CBACT04C_INTCALC",
+        "--traverse",
+        "CBTRN03C_TRANREPT",
+        "--max-depth",
+        "8",
+        "--max-paths",
+        "80"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4",
+      "returncode": 0,
+      "stdout_file": "evidence/cli-relative-root.json",
+      "stderr_file": "evidence/cli-relative-root.stderr.txt"
+    },
+    "cli_absolute": {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/executable_reference.py",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4",
+        "--traverse",
+        "CBTRN02C_POSTTRAN",
+        "--traverse",
+        "CBACT04C_INTCALC",
+        "--traverse",
+        "CBTRN03C_TRANREPT",
+        "--max-depth",
+        "8",
+        "--max-paths",
+        "80"
+      ],
+      "returncode": 0,
+      "stdout_file": "evidence/cli-absolute-root.json",
+      "stderr_file": "evidence/cli-absolute-root.stderr.txt"
+    }
+  },
+  "cli_outputs_equal_sourcePins": true,
+  "cli_outputs_equal_counts": true,
+  "counts": {
+    "capabilities": 3,
+    "obligations": 25,
+    "states": 25,
+    "transitions": 40
+  },
+  "sourcePins": {
+    "checkedAnchors": 98,
+    "checkedFiles": 8,
+    "errors": []
+  },
+  "traversal_counts": {
+    "CBACT04C_INTCALC": {
+      "completed": 12,
+      "frontier": 1,
+      "unknown": 0,
+      "omittedCount": 4
+    },
+    "CBTRN02C_POSTTRAN": {
+      "completed": 11,
+      "frontier": 8,
+      "unknown": 3,
+      "omittedCount": 8
+    },
+    "CBTRN03C_TRANREPT": {
+      "completed": 16,
+      "frontier": 0,
+      "unknown": 3,
+      "omittedCount": 4
+    }
+  },
+  "obligationWitnesses": {
+    "total": 25,
+    "withoutWitnesses": 0
+  },
+  "evidence_files": [
+    "evidence/cli-absolute-root.json",
+    "evidence/cli-absolute-root.stderr.txt",
+    "evidence/cli-relative-root.json",
+    "evidence/cli-relative-root.stderr.txt",
+    "evidence/mutant-and-rate-branches.json",
+    "evidence/obligation-witnesses.json",
+    "evidence/tdd-red-evidence.md",
+    "evidence/unit-tests-stderr.txt",
+    "evidence/unit-tests-stdout.txt"
+  ]
+}

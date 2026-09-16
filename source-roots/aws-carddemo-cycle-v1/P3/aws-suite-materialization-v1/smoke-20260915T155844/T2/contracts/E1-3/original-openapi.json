@@ -1,0 +1,783 @@
+{
+  "components": {
+    "responses": {
+      "ExecutionFailure": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/FailedRun"
+            }
+          }
+        },
+        "description": "Transport convention for an invocation that does not complete normally.\nThis is distinct from a posting business rejection. Diagnostics and\npartial output are exposed only if recoverable from the execution\nenvironment. No reversal of output initialization or earlier writes is\nimplied. A close failure can occur after all record effects.\n"
+      }
+    },
+    "schemas": {
+      "CompletedRun": {
+        "properties": {
+          "diagnostics": {
+            "description": "DISPLAY output in execution order, decoded by the environment.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "outcome": {
+            "const": "completed"
+          },
+          "returnCode": {
+            "description": "Runtime return code if available. Posting explicitly sets 4 when\nany records were rejected; otherwise these programs do not explicitly\nestablish a success return code.\n",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "outcome",
+          "diagnostics"
+        ],
+        "type": "object"
+      },
+      "Counter": {
+        "description": "Value of the program's nine-digit counter, not an unlimited count.",
+        "maximum": 999999999,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "DatasetBinding": {
+        "description": "Opaque transport identifier for a pre-existing runtime file binding.\nMissing, inaccessible, incorrectly organized, or incorrectly provisioned\nresources are execution failures, not exclusions from this schema.\nNo public dataset-management operation is defined.\n",
+        "minLength": 1,
+        "type": "string"
+      },
+      "DateParameterRecord": {
+        "contentEncoding": "base64",
+        "contentMediaType": "application/octet-stream",
+        "description": "Exactly 80 decoded bytes. Start date is bytes 1-10, byte 11 is ignored,\nend date is bytes 12-21, bytes 22-80 are ignored. Arbitrary character\ncontent, reversed ranges, and spaces are representable; there is no\ncalendar or separator validation.\n",
+        "type": "string",
+        "x-decoded-byte-length": 80
+      },
+      "FailedRun": {
+        "properties": {
+          "abendCode": {
+            "const": 999,
+            "description": "Present when the explicit CEE3ABD request is observed.",
+            "type": "integer"
+          },
+          "diagnostics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "effectsDescription": {
+            "description": "Observed effects only; omission does not establish that no writes persisted.",
+            "type": "string"
+          },
+          "fileStatus": {
+            "description": "Observed file-status diagnostic, when available; not normalized into\na business error. The programs expand nonnumeric or 9-prefixed status\nvalues using a binary second byte. Posting's rejection-file close\nfailure mistakenly displays XREFFILE status.\n",
+            "type": "string"
+          },
+          "outcome": {
+            "const": "failed"
+          },
+          "partialRejections": {
+            "items": {
+              "$ref": "#/components/schemas/Rejection"
+            },
+            "type": "array"
+          },
+          "partialReportRecords": {
+            "items": {
+              "$ref": "#/components/schemas/ReportRecord"
+            },
+            "type": "array"
+          },
+          "partialTransactions": {
+            "$ref": "#/components/schemas/TransactionRecords"
+          },
+          "program": {
+            "enum": [
+              "CBTRN02C",
+              "CBACT04C",
+              "CBTRN03C"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "outcome",
+          "diagnostics"
+        ],
+        "type": "object"
+      },
+      "Rejection": {
+        "description": "Decoded reason fields are transport projections of the raw trailer, with trailing message spaces removed.",
+        "properties": {
+          "reasonCode": {
+            "enum": [
+              "0100",
+              "0101",
+              "0102",
+              "0103"
+            ],
+            "type": "string"
+          },
+          "reasonDescription": {
+            "enum": [
+              "INVALID CARD NUMBER FOUND",
+              "ACCOUNT RECORD NOT FOUND",
+              "OVERLIMIT TRANSACTION",
+              "TRANSACTION RECEIVED AFTER ACCT EXPIRATION"
+            ],
+            "type": "string"
+          },
+          "record": {
+            "contentEncoding": "base64",
+            "contentMediaType": "application/octet-stream",
+            "description": "Original 350-byte daily transaction followed by PIC 9(04) reason\nand PIC X(76) description, space-padded.\n",
+            "type": "string",
+            "x-decoded-byte-length": 430
+          }
+        },
+        "required": [
+          "record",
+          "reasonCode",
+          "reasonDescription"
+        ],
+        "type": "object"
+      },
+      "ReportRecord": {
+        "contentEncoding": "base64",
+        "contentMediaType": "application/octet-stream",
+        "description": "Exactly 133 decoded bytes, including trailing spaces. CVTRA07Y headers\nname DALYREPT and Daily Transaction Report and contain Date Range with\nthe supplied start/end strings. Detail columns contain transaction ID\n(16), space, account ID (11), space, type (2), hyphen, type description\ntruncated to 15, space, category (4), hyphen, category description\ntruncated to 29, space, source (10), four spaces, amount edited with\nPIC -ZZZ,ZZZ,ZZZ.ZZ, and two spaces, then padding to 133.\nSeparators contain 133 hyphens. Page Total, Account Total and Grand\nTotal lines have dotted leaders and PIC +ZZZ,ZZZ,ZZZ.ZZ values.\nReport totals are source accumulators, not independently recomputed\nor corrected API aggregates.\n",
+        "type": "string",
+        "x-decoded-byte-length": 133
+      },
+      "TransactionRecord": {
+        "contentEncoding": "base64",
+        "contentMediaType": "application/octet-stream",
+        "description": "Exactly 350 decoded bytes, CVTRA05Y or CVTRA06Y. Widths and offsets\nbelow are one-based, in bytes, with no delimiters. Raw transport retains\nfiller and invalid display-numeric bytes rather than introducing\nunsupported field validation. Numeric pictures describe intended storage,\nnot business admissibility. Signed values use the runtime display sign\nrepresentation, without an extra sign byte. V is an implied decimal.\n\nNamed fields on accepted postings are copied except processingTimestamp;\nrejection output preserves the entire original record. Runtime-generated\ntimestamps have the form YYYY-MM-DD-HH.MM.SS.hh0000, with hundredths from\nCURRENT-DATE and no timezone suffix; they are not RFC 3339.\n",
+        "type": "string",
+        "x-decoded-byte-length": 350,
+        "x-record-layout": [
+          {
+            "length": 16,
+            "name": "transactionId",
+            "offset": 1,
+            "picture": "X(16)"
+          },
+          {
+            "length": 2,
+            "name": "typeCode",
+            "offset": 17,
+            "picture": "X(02)"
+          },
+          {
+            "length": 4,
+            "name": "categoryCode",
+            "offset": 19,
+            "picture": "9(04)"
+          },
+          {
+            "length": 10,
+            "name": "source",
+            "offset": 23,
+            "picture": "X(10)"
+          },
+          {
+            "length": 100,
+            "name": "description",
+            "offset": 33,
+            "picture": "X(100)"
+          },
+          {
+            "length": 11,
+            "name": "amount",
+            "nominalRange": "-999999999.99 to 999999999.99",
+            "offset": 133,
+            "picture": "S9(09)V99"
+          },
+          {
+            "length": 9,
+            "name": "merchantId",
+            "offset": 144,
+            "picture": "9(09)"
+          },
+          {
+            "length": 50,
+            "name": "merchantName",
+            "offset": 153,
+            "picture": "X(50)"
+          },
+          {
+            "length": 50,
+            "name": "merchantCity",
+            "offset": 203,
+            "picture": "X(50)"
+          },
+          {
+            "length": 10,
+            "name": "merchantZip",
+            "offset": 253,
+            "picture": "X(10)"
+          },
+          {
+            "length": 16,
+            "name": "cardNumber",
+            "offset": 263,
+            "picture": "X(16)"
+          },
+          {
+            "length": 26,
+            "name": "originalTimestamp",
+            "offset": 279,
+            "picture": "X(26)"
+          },
+          {
+            "length": 26,
+            "name": "processingTimestamp",
+            "offset": 305,
+            "picture": "X(26)"
+          },
+          {
+            "length": 20,
+            "name": "filler",
+            "offset": 331,
+            "picture": "X(20)"
+          }
+        ]
+      },
+      "TransactionRecords": {
+        "description": "Logical 350-byte records in input or write order. Empty arrays, repeated\nidentifiers, nonnumeric card numbers, arbitrary timestamps, negative\namounts and raw malformed numeric storage are representable.\n",
+        "items": {
+          "$ref": "#/components/schemas/TransactionRecord"
+        },
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "description": "Contract for individual invocations of CBTRN02C (posting), CBACT04C\n(interest generation), and CBTRN03C (reporting), not for an entire batch\nschedule.\n\nHTTP paths, synchronous POST requests, JSON envelopes, dataset binding\nidentifiers, base64 record transport, and HTTP status codes are chosen\ntransport conventions. They are not interfaces implemented by the COBOL\nsources. A dataset binding identifies an already provisioned file in the\nexecution environment; it does not create or validate its contents.\n\nSequential input records are supplied in order. Persistent indexed files\nare accessed through bindings with the access modes described per operation.\nOutput arrays expose logical records written by the program, without\nsequential-file block headers or record framing. They do not imply that\noutput files or writes are transactional. Missing keys, duplicate transaction\nidentifiers, arbitrary alphanumeric dates and card numbers, empty files,\nand malformed numeric storage remain representable.\n\nAll three programs display diagnostics and call CEE3ABD with code 999 and\ntiming 0 on their explicit abend paths. Availability and actual behavior of\nthat external routine are not established by the corpus. No atomicity,\nrollback, retry, idempotency, locking, or automatic recovery is promised.\nEarlier writes and output-file initialization may persist after failure.\n",
+    "title": "CardDemo Batch Transaction Boundary",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/interest-transaction-generations": {
+      "post": {
+        "description": "Executes CBACT04C independently of posting and master-combination jobs.\nTCATBALF is indexed sequential input in account/type/category key order.\nXREFFILE and DISCGRP are random input, ACCTFILE is random I-O, and\nTRANSACT is sequential OUTPUT. No indexed transaction master is written.\n\nOn each account change, the prior account is rewritten, except before\nthe first account. The program then resets its accumulated interest,\nreads the new account, and reads the cross-reference using the alternate\naccount-ID key. It uses the returned card number, not a caller-selected\ncard. Account or cross-reference read failure abends.\n\nFor every category balance it reads the disclosure rate using the account\ngroup, balance type, and balance category. Status 23 causes another read\nwith group DEFAULT padded to ten characters, retaining type and category.\nFailure of that default read abends; other nonzero initial read statuses\nexcept 23 also abend.\n\nWhen rate is nonzero, monthlyInterest = balance * rate / 1200 is assigned\nto PIC S9(09)V99 without ROUNDED, and added to a same-sized account\naccumulator. One transaction is written even if the calculated interest\nis zero or negative. A zero rate writes no transaction. Fee calculation\nis a no-op.\n\nThe transaction ID is the ten-character parameter followed by a six-digit\ncounter starting at 000001, incremented for each generated transaction.\nThe parameter length field is not inspected and the parameter is not\nvalidated as a date. Type is 01, numeric category is 0005, source is\nSystem padded to ten characters, description begins 'Int. for a/c '\nfollowed by the eleven-digit account ID, amount is monthlyInterest,\nmerchant ID is zero, and merchant name/city/ZIP are spaces.\nBoth timestamps are runtime current timestamps. Transaction working\nstorage is not initialized per write; description tail and filler are\nnot explicitly assigned.\n\nUpdating an account adds accumulated interest to currentBalance and\nsets both cycle credit and cycle debit to zero. Critically, the source\nperforms this update on transition to another account only. The ELSE\nintended to update at EOF is unreachable under the loop condition:\nEOF is set by the read while already inside the other branch. Consequently\nthe final account is not rewritten, even though its generated\ntransactions may be written. An empty balance file rewrites no accounts.\nCategory balances are input-only and are not cleared or updated.\n\nChecked open/close, sequential read other than EOF, lookup, account\nrewrite, and transaction write failures invoke the abend path. Generated\ntransactions are not automatically posted, merged, or loaded.\n",
+        "operationId": "generateInterestTransactions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "accounts": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "cardCrossReference": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "categoryBalances": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "disclosureGroups": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "transactionIdPrefix": {
+                    "description": "Exact PIC X(10) linkage parameter, mapped to ten execution-encoding\nbytes. Not an ISO date. INTCALC supplies 2022071800.\n",
+                    "examples": [
+                      "2022071800",
+                      "XXXXXXXXXX"
+                    ],
+                    "maxLength": 10,
+                    "minLength": 10,
+                    "type": "string"
+                  },
+                  "transactionOutput": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  }
+                },
+                "required": [
+                  "transactionIdPrefix",
+                  "categoryBalances",
+                  "cardCrossReference",
+                  "accounts",
+                  "disclosureGroups",
+                  "transactionOutput"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CompletedRun"
+                    },
+                    {
+                      "properties": {
+                        "transactionsWritten": {
+                          "$ref": "#/components/schemas/TransactionRecords"
+                        }
+                      },
+                      "required": [
+                        "transactionsWritten"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Completed generation. Account rewrites are limited to account\ntransitions as described, not all accounts represented in output.\n"
+          },
+          "500": {
+            "$ref": "#/components/responses/ExecutionFailure"
+          }
+        },
+        "summary": "Generate system interest transactions from category balances",
+        "x-preconditions": [
+          "TCATBALF must support sequential indexed-key traversal.",
+          "XREFFILE must support the account-ID alternate-key read used by this program.",
+          "INTCALC JCL references XREFFIL1 as an alternate-index path, but availability and association of that infrastructure are not established."
+        ],
+        "x-uncertainties": [
+          "Behavior of six-digit transaction suffix overflow is not handled explicitly; generated IDs are not checked for collisions.",
+          "Multiple cross-reference rows for an account and runtime alternate-index behavior are not resolved by the supplied source."
+        ]
+      }
+    },
+    "/transaction-postings": {
+      "post": {
+        "description": "Executes the observable boundary of CBTRN02C. DALYTRAN is read\nsequentially; XREFFILE is input; ACCTFILE and TCATBALF are I-O.\nTRANFILE is indexed with a 16-byte transaction-ID key and is opened\nOUTPUT, not I-O or EXTEND. DALYREJS is opened OUTPUT. This is not an\nappend-to-existing-master promise; output initialization can replace\nexisting content according to the runtime.\n\nEach successfully read daily record increments the processed counter.\nValidation first reads the card cross-reference. INVALID KEY gives\n0100, INVALID CARD NUMBER FOUND. Only if that succeeds is the account\nread; INVALID KEY gives 0101, ACCOUNT RECORD NOT FOUND. With an account,\na signed nine-integer-digit, two-decimal temporary value is computed as\ncurrentCycleCredit - currentCycleDebit + dailyAmount. A value greater\nthan creditLimit gives 0102, OVERLIMIT TRANSACTION. Then expirationDate\nis compared as PIC X(10) to the first ten characters of originalTimestamp.\nIf expirationDate is less, 0103, TRANSACTION RECEIVED AFTER ACCT\nEXPIRATION, overwrites 0102. Equality passes both comparisons.\n\nA rejected record is copied unchanged, including its processing timestamp\nand filler, to a 430-byte rejection record with a four-digit reason and\na space-padded 76-character message. Processing continues. Rejected\nrecords do not take the posting branch. A completed run with any\nrejections explicitly sets RETURN-CODE to 4. The no-rejection branch\ndoes not explicitly assign RETURN-CODE.\n\nPosting copies all named transaction fields except processingTimestamp,\nwhich is replaced by the runtime current timestamp. Filler is not copied\nor initialized explicitly. Effects occur in this order:\n(1) read category balance by account, type, category; on status 23 create\nan initialized balance record containing the amount, otherwise add the\namount and rewrite;\n(2) add amount to account currentBalance; if amount >= 0 add it to\ncurrentCycleCredit, otherwise add the negative amount to\ncurrentCycleDebit; rewrite the account;\n(3) write the indexed transaction record.\n\nAccount rewrite INVALID KEY sets internal reason 0109, ACCOUNT RECORD\nNOT FOUND, but that value is not retested for rejection and does not\nincrement the reject counter. The transaction write is still attempted.\nNo separate 0109 rejection response is promised. Other statuses on\nvalidation lookups and account rewrite are not comprehensively checked.\n\nChecked open/close failures, daily read statuses other than 00/10,\ncategory read statuses other than 00/23, category write/rewrite failures,\nrejection writes, and transaction writes lead to the explicit abend path.\nA duplicate transaction key can fail the final write after balance\nchanges; there is no duplicate prevalidation. No card-number digit or\nchecksum validation, account-active validation, cash-limit validation,\ntransaction type/category lookup, positivity restriction, or calendar\nvalidation is present.\n",
+        "operationId": "postDailyTransactions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "accounts": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "cardCrossReference": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "categoryBalances": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "dailyTransactions": {
+                    "$ref": "#/components/schemas/TransactionRecords"
+                  },
+                  "rejectionOutput": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "transactionOutput": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  }
+                },
+                "required": [
+                  "dailyTransactions",
+                  "cardCrossReference",
+                  "accounts",
+                  "categoryBalances",
+                  "transactionOutput",
+                  "rejectionOutput"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CompletedRun"
+                    },
+                    {
+                      "properties": {
+                        "processedCount": {
+                          "$ref": "#/components/schemas/Counter"
+                        },
+                        "rejectedCount": {
+                          "$ref": "#/components/schemas/Counter"
+                        },
+                        "rejections": {
+                          "items": {
+                            "$ref": "#/components/schemas/Rejection"
+                          },
+                          "type": "array"
+                        },
+                        "transactionsWritten": {
+                          "$ref": "#/components/schemas/TransactionRecords"
+                        }
+                      },
+                      "required": [
+                        "processedCount",
+                        "rejectedCount",
+                        "transactionsWritten",
+                        "rejections"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Completed invocation, including completion with business rejections."
+          },
+          "500": {
+            "$ref": "#/components/responses/ExecutionFailure"
+          }
+        },
+        "summary": "Run daily transaction posting",
+        "x-preconditions": [
+          "Bound files must be provisioned in the environment with the declared organization and access permissions.",
+          "XREFFILE uses the 16-byte card key; ACCTFILE uses the 11-digit account key; TCATBALF uses the 17-byte account/type/category key.",
+          "Input order is significant because accepted records update balances used by later records."
+        ]
+      }
+    },
+    "/transaction-reports": {
+      "post": {
+        "description": "Executes CBTRN03C against the supplied sequential transaction stream.\nCARDXREF, TRANTYPE, and TRANCATG are indexed random input. TRANREPT is\nsequential OUTPUT. This operation changes no input master records.\n\nOnly the first DATEPARM record is read: positions 1-10 are startDate,\nposition 11 is ignored, and positions 12-21 are endDate. Remaining bytes\nand subsequent records are ignored. An empty DATEPARM file sets EOF and\nskips transaction processing, leaving the opened output without report\nrecords. Dates are unvalidated PIC X(10); no start-before-end validation\nis performed.\n\nThe first ten characters of processingTimestamp are compared inclusively\nagainst the date parameters. A failed comparison uses NEXT SENTENCE,\nskipping the remainder of the main processing sentence for that iteration.\nRecords are neither sorted nor regrouped internally.\n\nOn a change of card number among included records, a prior 'Account Total'\nis printed if details have begun, then the new card cross-reference is\nread. Thus grouping is by contiguous card, not by account ID. Each included\nrecord looks up its type and its type/category pair. INVALID KEY on these\nthree lookups displays the offending key, reports status 23, and abends.\nOther lookup statuses are not comprehensively checked. Blank initial card\nnumbers can bypass the first cross-reference lookup because the current\ncard working field initially contains spaces.\n\nThe first detail causes four header lines. Before each detail, a page\nbreak is considered only if lineCounter MOD 20 = 0. The counter includes\nheaders, details, totals and separator lines; it is not reset per page.\nA page-total routine writes its total and a hyphen separator, adds the\npage total to the grand total, resets the page total, and increments\nthe counter twice. An account-total routine writes its total and a\nseparator, resets the account total, and also increments it twice.\n\nAt transaction EOF the program still evaluates the date condition on\ntransaction working storage. If that condition passes, the EOF branch\nadds TRAN-AMT again to page and account accumulators, writes page totals,\nthen grand totals. It does not write the final account total. With the\nusual retained last record this double-counts the last amount in final\npage/grand totals. If the retained last record is out of range, NEXT\nSENTENCE skips final totals. Empty transaction input leaves these tests\ndependent on uninitialized transaction storage. This contract does not\nsubstitute corrected totals or guarantee an empty-input grand-total line.\n\nChecked open/close failures, transaction/date reads other than 00/10,\nreport writes, and invalid lookup keys take the explicit abend path.\n",
+        "operationId": "generateTransactionReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "cardCrossReference": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "dateParameterRecords": {
+                    "description": "Empty is permitted; only the first record is read.",
+                    "items": {
+                      "$ref": "#/components/schemas/DateParameterRecord"
+                    },
+                    "type": "array"
+                  },
+                  "reportOutput": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "transactionCategories": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "transactionTypes": {
+                    "$ref": "#/components/schemas/DatasetBinding"
+                  },
+                  "transactions": {
+                    "$ref": "#/components/schemas/TransactionRecords"
+                  }
+                },
+                "required": [
+                  "transactions",
+                  "dateParameterRecords",
+                  "cardCrossReference",
+                  "transactionTypes",
+                  "transactionCategories",
+                  "reportOutput"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CompletedRun"
+                    },
+                    {
+                      "properties": {
+                        "reportRecords": {
+                          "items": {
+                            "$ref": "#/components/schemas/ReportRecord"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "reportRecords"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Completed report, preserving the source formatting and control-flow behavior."
+          },
+          "500": {
+            "$ref": "#/components/responses/ExecutionFailure"
+          }
+        },
+        "summary": "Produce the fixed-width daily transaction detail report",
+        "x-preconditions": [
+          "The caller must provide the desired sequential stream; contiguous card ordering is needed for consolidated card subtotals but is not validated or enforced.",
+          "External JCL filtering uses independently hard-coded dates 2022-01-01 through 2022-07-06 and sorts the card field as ZD. Those constraints are not restrictions on this program-level input."
+        ]
+      }
+    }
+  },
+  "x-persistent-record-layouts": {
+    "accounts": {
+      "fields": [
+        {
+          "length": 11,
+          "name": "accountId",
+          "picture": "9(11)"
+        },
+        {
+          "length": 1,
+          "name": "activeStatus",
+          "picture": "X(01)"
+        },
+        {
+          "length": 12,
+          "name": "currentBalance",
+          "picture": "S9(10)V99"
+        },
+        {
+          "length": 12,
+          "name": "creditLimit",
+          "picture": "S9(10)V99"
+        },
+        {
+          "length": 12,
+          "name": "cashCreditLimit",
+          "picture": "S9(10)V99"
+        },
+        {
+          "length": 10,
+          "name": "openDate",
+          "picture": "X(10)"
+        },
+        {
+          "length": 10,
+          "name": "expirationDate",
+          "picture": "X(10)"
+        },
+        {
+          "length": 10,
+          "name": "reissueDate",
+          "picture": "X(10)"
+        },
+        {
+          "length": 12,
+          "name": "currentCycleCredit",
+          "picture": "S9(10)V99"
+        },
+        {
+          "length": 12,
+          "name": "currentCycleDebit",
+          "picture": "S9(10)V99"
+        },
+        {
+          "length": 10,
+          "name": "addressZip",
+          "picture": "X(10)"
+        },
+        {
+          "length": 10,
+          "name": "groupId",
+          "picture": "X(10)"
+        },
+        {
+          "length": 178,
+          "name": "filler",
+          "picture": "X(178)"
+        }
+      ],
+      "key": [
+        "accountId"
+      ],
+      "length": 300,
+      "source": "CVACT01Y"
+    },
+    "cardCrossReference": {
+      "fields": [
+        {
+          "length": 16,
+          "name": "cardNumber",
+          "picture": "X(16)"
+        },
+        {
+          "length": 9,
+          "name": "customerId",
+          "picture": "9(09)"
+        },
+        {
+          "length": 11,
+          "name": "accountId",
+          "picture": "9(11)"
+        },
+        {
+          "length": 14,
+          "name": "filler",
+          "picture": "X(14)"
+        }
+      ],
+      "interestAlternateKey": [
+        "accountId"
+      ],
+      "key": [
+        "cardNumber"
+      ],
+      "length": 50,
+      "source": "CVACT03Y"
+    },
+    "categoryBalances": {
+      "fields": [
+        {
+          "length": 11,
+          "name": "accountId",
+          "picture": "9(11)"
+        },
+        {
+          "length": 2,
+          "name": "typeCode",
+          "picture": "X(02)"
+        },
+        {
+          "length": 4,
+          "name": "categoryCode",
+          "picture": "9(04)"
+        },
+        {
+          "length": 11,
+          "name": "balance",
+          "picture": "S9(09)V99"
+        },
+        {
+          "length": 22,
+          "name": "filler",
+          "picture": "X(22)"
+        }
+      ],
+      "key": [
+        "accountId",
+        "typeCode",
+        "categoryCode"
+      ],
+      "length": 50,
+      "source": "CVTRA01Y"
+    },
+    "description": "Layout evidence for datasets referenced by DatasetBinding. These are not\nnew provisioning or maintenance APIs. Keys retain leading zeros and fixed\ncharacter padding. No foreign-key completeness or business-domain enumeration\nis imposed on bound data.\n",
+    "disclosureGroups": {
+      "fields": [
+        {
+          "length": 10,
+          "name": "groupId",
+          "picture": "X(10)"
+        },
+        {
+          "length": 2,
+          "name": "typeCode",
+          "picture": "X(02)"
+        },
+        {
+          "length": 4,
+          "name": "categoryCode",
+          "picture": "9(04)"
+        },
+        {
+          "length": 6,
+          "name": "interestRate",
+          "picture": "S9(04)V99"
+        },
+        {
+          "length": 28,
+          "name": "filler",
+          "picture": "X(28)"
+        }
+      ],
+      "key": [
+        "groupId",
+        "typeCode",
+        "categoryCode"
+      ],
+      "length": 50,
+      "source": "CVTRA02Y"
+    },
+    "transactionCategories": {
+      "fields": [
+        {
+          "length": 2,
+          "name": "typeCode",
+          "picture": "X(02)"
+        },
+        {
+          "length": 4,
+          "name": "categoryCode",
+          "picture": "9(04)"
+        },
+        {
+          "length": 50,
+          "name": "description",
+          "picture": "X(50)"
+        },
+        {
+          "length": 4,
+          "name": "filler",
+          "picture": "X(04)"
+        }
+      ],
+      "key": [
+        "typeCode",
+        "categoryCode"
+      ],
+      "length": 60,
+      "source": "CVTRA04Y"
+    },
+    "transactionTypes": {
+      "fields": [
+        {
+          "length": 2,
+          "name": "typeCode",
+          "picture": "X(02)"
+        },
+        {
+          "length": 50,
+          "name": "description",
+          "picture": "X(50)"
+        },
+        {
+          "length": 8,
+          "name": "filler",
+          "picture": "X(08)"
+        }
+      ],
+      "key": [
+        "typeCode"
+      ],
+      "length": 60,
+      "source": "CVTRA03Y"
+    }
+  },
+  "x-uncertainties": [
+    "The corpus supplies no HTTP server, runtime deployment, encoding configuration, or proof that the referenced datasets and utilities are available.",
+    "Raw records use the execution environment's COBOL display encoding, including signed display numeric representation. This contract does not prescribe ASCII, EBCDIC, or a sign-overpunch translation.",
+    "COBOL arithmetic has fixed receiving-field sizes and no ON SIZE ERROR handling here. Overflow and malformed numeric data are not converted into invented business rejections.",
+    "SORT, IDCAMS, CEE3ABD, and the REPROCT control member are not supplied implementations. JCL references do not establish their execution.",
+    "TRANBKP describes backup, deletion, and redefinition of the transaction master. COMBTRAN describes sorting backup plus system transactions by ID and loading the master. Neither is implicitly executed by these operations.",
+    "TRANREPT JCL describes external unload, date filtering, and card-number sorting. These steps are not implicitly executed by the reporting operation; the JCL also repeats the STEP05R step name."
+  ]
+}

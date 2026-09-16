@@ -1,0 +1,577 @@
+{
+  "generated_at": "2026-09-14T06:56:06-03:00",
+  "scope": "Stage7 r2 materialization and documentary acceptance review only; no network/model/COBOL/Stage8/implementation/E1/E2/upstream edits.",
+  "materialization": {
+    "placeholder_before": {
+      "path": "specs/adapter-behavior-carddemo-r2/requirements.md",
+      "bytes": 227,
+      "sha256": "2997d384c423d4f80d05f1c286472ae81eb42a75d1f029e37f4fa603d113c4b9",
+      "archived_to": "specs/adapter-behavior-carddemo-r2/requirements-initial-placeholder-archived-stage7-r2.md",
+      "archive_sha256": "2997d384c423d4f80d05f1c286472ae81eb42a75d1f029e37f4fa603d113c4b9"
+    },
+    "raw_source": {
+      "path": "prepared/adapter-behavior-carddemo-r2/execution/scope-original.md",
+      "bytes": 49236,
+      "sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f"
+    },
+    "parsed_text_sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "target_after": {
+      "path": "specs/adapter-behavior-carddemo-r2/requirements.md",
+      "bytes": 49236,
+      "sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f"
+    },
+    "exact_bytes_match": true
+  },
+  "generation_receipts": {
+    "execution_metadata_sha256": "1ff6cfe8980dc2918a3d47337a5ba2ceb45624dc92a51cf573e6ce4f53c6d6f1",
+    "parsed_json_sha256": "e437461292f7808936bb92be0ababc8bcc041efa357ecb80f78c1025f13cf0ca",
+    "response_sse_sha256": "ceaed03febe82d8647cef9485c9938d13df63ecd0e198b3e6f17737b62425334",
+    "request_body_sha256": "efa0df8e87981dd0d5fac10ea1163e45924de24b9c8d6c6a5da7e38fa9ad2d50",
+    "separate_request_sha256_recorded": "6968b20fb88aab6e082fcced34f018893c7ccd755018ff443cb6eba39d998c19",
+    "model_parsed": "gpt-6-astra",
+    "status_parsed": "completed",
+    "tools": [],
+    "previous_response_id": null,
+    "store": false,
+    "completed_responses": [
+      {
+        "id": "resp_0e25aae296d47350016aa71e15068c87d28beb4a52f3a3150d",
+        "status": "completed",
+        "model": "gpt-6-astra",
+        "created_at": 1789337109,
+        "completed_at": 1789337462,
+        "previous_response_id": null,
+        "store": false,
+        "tools": []
+      }
+    ]
+  },
+  "upstream_hashes": {
+    "specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "specs/canonical-data-boundary-carddemo/requirements.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "specs/capability-semantics-carddemo/requirements.md": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "specs/legacy-evidence-carddemo-r2/requirements.md": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "specs/api-contract-carddemo-r3/spec.json": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+    "reviews/stage-6-r3-authorization.json": "0c5228634cb0f3b3c779fafe2e7e9ae5109aebeb24b116268e73a9a00dd8213e",
+    "STAGE6-R3-COUNTEREXAMPLE-REVIEW.md": "a8e41764b56018f530a2df96d75bff483086e84b2462fca156175b0f91be7159",
+    "specs/api-contract-carddemo-r3/stage6-r3-verification.json": "69a59af451a700f8de1d4711f64149ce5bd295ced79bcee1747caf2aefee0193"
+  },
+  "protected_hashes_before": {
+    "specs/adapter-behavior-carddemo/requirements.md": "0125e68e65e38c703e89b0c1b843358da91a5281e20860fb7f59316d3286ecf4",
+    "specs/adapter-behavior-carddemo/spec.json": "f561dbeb8c7be74057b98c6e502b82331d684a35b847481f55c2db5cf4ed1e5e",
+    "specs/adapter-behavior-carddemo/stage7-verification.json": "7ca11c718759c82c2585558ab6bf10042dbd5aabe0dfb858e4b287532da8b117",
+    "specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "specs/api-contract-carddemo-r3/spec.json": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+    "specs/api-contract-carddemo-r3/stage6-r3-verification.json": "69a59af451a700f8de1d4711f64149ce5bd295ced79bcee1747caf2aefee0193",
+    "specs/canonical-data-boundary-carddemo/requirements.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "specs/canonical-data-boundary-carddemo/spec.json": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+    "specs/capability-semantics-carddemo/requirements.md": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "specs/capability-semantics-carddemo/spec.json": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+    "specs/legacy-evidence-carddemo-r2/requirements.md": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "specs/legacy-evidence-carddemo-r2/spec.json": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+    "reviews/stage-7-r1-directed-feedback.md": "960aae5144215cc64dd6f47acb883dd41aecad7d94a45d9cd66f4477ed0a3cc5",
+    "STAGE7-DESIGN-EVIDENCE-REVIEW.md": "9eeb4f3e46506f1ac185331a42ee26c7f2cfccc424239073a42fbb6d9e17a505",
+    "prepared/adapter-behavior-carddemo-r2/execution/parsed.json": "e437461292f7808936bb92be0ababc8bcc041efa357ecb80f78c1025f13cf0ca",
+    "prepared/adapter-behavior-carddemo-r2/execution/scope-original.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "prepared/adapter-behavior-carddemo-r2/execution/response.sse": "ceaed03febe82d8647cef9485c9938d13df63ecd0e198b3e6f17737b62425334",
+    "prepared/adapter-behavior-carddemo-r2/execution/request-body.json": "efa0df8e87981dd0d5fac10ea1163e45924de24b9c8d6c6a5da7e38fa9ad2d50",
+    "prepared/adapter-behavior-carddemo-r2/execution/metadata.json": "1ff6cfe8980dc2918a3d47337a5ba2ceb45624dc92a51cf573e6ce4f53c6d6f1"
+  },
+  "protected_hashes_after": {
+    "specs/adapter-behavior-carddemo/requirements.md": "0125e68e65e38c703e89b0c1b843358da91a5281e20860fb7f59316d3286ecf4",
+    "specs/adapter-behavior-carddemo/spec.json": "f561dbeb8c7be74057b98c6e502b82331d684a35b847481f55c2db5cf4ed1e5e",
+    "specs/adapter-behavior-carddemo/stage7-verification.json": "7ca11c718759c82c2585558ab6bf10042dbd5aabe0dfb858e4b287532da8b117",
+    "specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "specs/api-contract-carddemo-r3/spec.json": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+    "specs/api-contract-carddemo-r3/stage6-r3-verification.json": "69a59af451a700f8de1d4711f64149ce5bd295ced79bcee1747caf2aefee0193",
+    "specs/canonical-data-boundary-carddemo/requirements.md": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3",
+    "specs/canonical-data-boundary-carddemo/spec.json": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+    "specs/capability-semantics-carddemo/requirements.md": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "specs/capability-semantics-carddemo/spec.json": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+    "specs/legacy-evidence-carddemo-r2/requirements.md": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "specs/legacy-evidence-carddemo-r2/spec.json": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+    "reviews/stage-7-r1-directed-feedback.md": "960aae5144215cc64dd6f47acb883dd41aecad7d94a45d9cd66f4477ed0a3cc5",
+    "STAGE7-DESIGN-EVIDENCE-REVIEW.md": "9eeb4f3e46506f1ac185331a42ee26c7f2cfccc424239073a42fbb6d9e17a505",
+    "prepared/adapter-behavior-carddemo-r2/execution/parsed.json": "e437461292f7808936bb92be0ababc8bcc041efa357ecb80f78c1025f13cf0ca",
+    "prepared/adapter-behavior-carddemo-r2/execution/scope-original.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "prepared/adapter-behavior-carddemo-r2/execution/response.sse": "ceaed03febe82d8647cef9485c9938d13df63ecd0e198b3e6f17737b62425334",
+    "prepared/adapter-behavior-carddemo-r2/execution/request-body.json": "efa0df8e87981dd0d5fac10ea1163e45924de24b9c8d6c6a5da7e38fa9ad2d50",
+    "prepared/adapter-behavior-carddemo-r2/execution/metadata.json": "1ff6cfe8980dc2918a3d47337a5ba2ceb45624dc92a51cf573e6ce4f53c6d6f1"
+  },
+  "protected_unchanged": true,
+  "programmatic_counts": {
+    "r_refs_R1_to_R20": {
+      "R-1": 5,
+      "R-2": 1,
+      "R-3": 1,
+      "R-4": 2,
+      "R-5": 1,
+      "R-6": 5,
+      "R-7": 4,
+      "R-8": 2,
+      "R-9": 1,
+      "R-10": 1,
+      "R-11": 3,
+      "R-12": 3,
+      "R-13": 1,
+      "R-14": 1,
+      "R-15": 1,
+      "R-16": 2,
+      "R-17": 3,
+      "R-18": 6,
+      "R-19": 2,
+      "R-20": 7
+    },
+    "all_R1_to_R20_present": true,
+    "c_refs_in_r2": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "c_ref_count": 14,
+    "contract_c_ids_seen_count": 14,
+    "contract_c_ids_seen": [
+      "C-1",
+      "C-2",
+      "C-3",
+      "C-4",
+      "C-5",
+      "C-6",
+      "C-7",
+      "C-8",
+      "C-9",
+      "C-10",
+      "C-11",
+      "C-12",
+      "C-13",
+      "C-14"
+    ],
+    "d_refs_in_r2": [
+      "3",
+      "5",
+      "7",
+      "8",
+      "10",
+      "11",
+      "12",
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "d_ref_count": 11,
+    "contract_d_ids_seen_count": 16,
+    "contract_d_ids_seen": [
+      "D-2",
+      "D-3",
+      "D-4",
+      "D-5",
+      "D-6",
+      "D-7",
+      "D-8",
+      "D-9",
+      "D-10",
+      "D-11",
+      "D-12",
+      "D-13",
+      "D-14",
+      "D-15",
+      "D-16",
+      "D-17"
+    ],
+    "g_refs_in_r2": [
+      "21",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+    ],
+    "record_definitions": [
+      [
+        "INV",
+        "Invocation record",
+        " Run and exact capability identity; track; internal invocation identity; called contract clause/operation; request-representation evidence; source/runtime binding reference; resource-record links; setup owner; intended observation scope and validity window; actual start/end evidence or unavailable; capture channels; response association | Adapter boundary associates; external setup supplies binding facts. Internal identity is not an idempotency key or receipt |"
+      ],
+      [
+        "RES",
+        "Resource/setup record",
+        " Track; source-local logical name; actual instance identity or unresolved; role/access mode; supplying owner; preparation origin and version; content/generation identity where established; validity window; declared prerequisites and evidence supporting their satisfaction or unknown; reuse/shared-state attribution; missing dependencies | External setup owner supplies facts; adapter must not invent preparation or readiness |"
+      ],
+      [
+        "CAP",
+        "Capture/observation record",
+        " Invocation/resource links; channel and producer; raw evidence reference and actual digest when available; capture scope/start/end; freshness attribution; framing/layout basis; capture condition; represented occurrences and positions; cardinality only if justified; exclusions; empty-observation basis; uncertainty and response destinations | Acquisition responsibility records actual evidence, not source-predicted events |"
+      ],
+      [
+        "CONV",
+        "Field conversion record",
+        " Contract clause/component/field; CAP occurrence and raw field span; source path/pins/line; physical declaration; deployed encoding/sign/framing basis; observed width/padding; proposed or applied mapping; output value; known loss; representability decision and unresolved conflict | Each represented field requires its own attributable mapping |"
+      ],
+      [
+        "FAIL",
+        "Failure-boundary record",
+        " Invocation/channel; raw event and location; event origin; attribution/freshness; time/order known to response boundary; meaning authority; distinction between source, hosting, capture, and representation failure; known versus unestablished assessment; retained observations; selected existing error category | A source error branch alone does not establish actual failure |"
+      ],
+      [
+        "STATE",
+        "State-scope record",
+        " Invocation/resource links; local versus persistent state; preparation/shared/reuse claims and evidence; initial authority; lifetime known or unknown; reset/isolation evidence separately; attempted versus observed versus durable effects; restart/repetition limits | No state-management facility or persistence guarantee |"
+      ],
+      [
+        "RESP",
+        "Response-association record",
+        " Contract version; INV link; structural decision; per-channel CAP/CONV disposition; FAIL assessment; exact existing envelope/error fields; occurrence-to-array-index mapping; unavailable reasons internally; status rationale; unresolved gaps | Records why representation is justified; adds no public metadata |"
+      ]
+    ],
+    "record_definition_count": 7,
+    "contract_d_ids_not_referenced_in_r2": [
+      "D-2",
+      "D-4",
+      "D-6",
+      "D-9",
+      "D-13"
+    ]
+  },
+  "acceptance_criteria_hits": {
+    "internal_records_fields_owners_preconditions": {
+      "INV — Invocation record": true,
+      "RES — Resource record": false,
+      "CAP — Capture record": false,
+      "CONV — Field conversion record": true,
+      "FAIL — Failure-boundary record": true,
+      "STATE — State-scope record": true,
+      "RESP — Response-association record": true,
+      "precondition": false,
+      "owner": true
+    },
+    "invocation_attribution_stale_capture": {
+      "Invocation attribution": false,
+      "Stale capture": true,
+      "not current-call content": false,
+      "freshness": true
+    },
+    "zero_length_vs_observed_empty": {
+      "Zero-length capture": true,
+      "Positive empty observation": true,
+      "zero-byte object": true,
+      "cannot supply it alone": true
+    },
+    "incomplete_truncation_no_silent_loss": {
+      "Truncated capture": true,
+      "Never infer empty": true,
+      "silent deletion": true,
+      "unrepresentable known records": true
+    },
+    "field_by_field_conversion": {
+      "Field-by-field provenance": true,
+      "physical declaration": true,
+      "observed width/padding": true,
+      "known loss": true,
+      "PIC": true
+    },
+    "known_failure_predicate_not_CEE3ABD": {
+      "Minimum criterion for known technical failure": true,
+      "CEE3ABD": true,
+      "call sites only": true,
+      "does not establish actual failure": true
+    },
+    "state_local_persistent_reset": {
+      "local versus persistent state": true,
+      "reset/isolation evidence": true,
+      "No shared-instance/reset assertion": true,
+      "Restarting a process or server is not reset": true
+    },
+    "eof_order_multiplicity_109": {
+      "EOF": true,
+      "duplicates": true,
+      "reason 109": true,
+      "not preliminary rejection": true,
+      "multiplicity": true
+    },
+    "no_public_schema_telemetry_status_minitems": {
+      "not new public schemas": true,
+      "No `minItems: 1` is introduced": true,
+      "200/400/500/503": true,
+      "No new public fields": false
+    },
+    "g31_human_pending": {
+      "G-31 remains external human approval": true,
+      "unapproved documentary draft": true,
+      "no gate is approved": true
+    }
+  },
+  "acceptance_criteria_pass": {
+    "internal_records_fields_owners_preconditions": true,
+    "invocation_attribution_stale_capture": true,
+    "zero_length_vs_observed_empty": true,
+    "incomplete_truncation_no_silent_loss": true,
+    "field_by_field_conversion": true,
+    "known_failure_predicate_not_CEE3ABD": true,
+    "state_local_persistent_reset": true,
+    "eof_order_multiplicity_109": true,
+    "no_public_schema_telemetry_status_minitems": true,
+    "g31_human_pending": true
+  },
+  "anchor_audit": {
+    "count": 13,
+    "out_of_bounds": [],
+    "sample": [
+      {
+        "anchor": "app/jcl/POSTTRAN.jcl:23-42",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl",
+        "start": 23,
+        "end": 42,
+        "line_count": 45,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/jcl/INTCALC.jcl:22-41",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl",
+        "start": 22,
+        "end": 41,
+        "line_count": 44,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/jcl/TRANREPT.jcl:37-80",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "start": 37,
+        "end": 80,
+        "line_count": 84,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA05Y.cpy:5-17",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy",
+        "start": 5,
+        "end": 17,
+        "line_count": 21,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA06Y.cpy:5-17",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy",
+        "start": 5,
+        "end": 17,
+        "line_count": 21,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA07Y.cpy:5-6",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "start": 5,
+        "end": 6,
+        "line_count": 73,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA07Y.cpy:7-8",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "start": 7,
+        "end": 8,
+        "line_count": 73,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA07Y.cpy:50-66",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "start": 50,
+        "end": 66,
+        "line_count": 73,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/cpy/CVTRA07Y.cpy:4-66",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "start": 4,
+        "end": 66,
+        "line_count": 73,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/jcl/TRANREPT.jcl:37-74",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "start": 37,
+        "end": 74,
+        "line_count": 84,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/jcl/COMBTRAN.jcl:20-48",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl",
+        "start": 20,
+        "end": 48,
+        "line_count": 52,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/jcl/TRANBKP.jcl:19-67",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl",
+        "start": 19,
+        "end": 67,
+        "line_count": 71,
+        "in_bounds": true
+      },
+      {
+        "anchor": "app/proc/REPROC.prc:19-29",
+        "path_found": "casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc",
+        "start": 19,
+        "end": 29,
+        "line_count": 32,
+        "in_bounds": true
+      }
+    ]
+  },
+  "r1_r2_public_term_counts": {
+    "POST /posting": {
+      "r1": 1,
+      "r2": 2
+    },
+    "POST /interest": {
+      "r1": 1,
+      "r2": 2
+    },
+    "POST /reporting": {
+      "r1": 1,
+      "r2": 2
+    },
+    "200": {
+      "r1": 9,
+      "r2": 7
+    },
+    "400": {
+      "r1": 3,
+      "r2": 2
+    },
+    "500": {
+      "r1": 5,
+      "r2": 7
+    },
+    "503": {
+      "r1": 8,
+      "r2": 8
+    },
+    "minItems": {
+      "r1": 0,
+      "r2": 1
+    },
+    "content_unavailable": {
+      "r1": 1,
+      "r2": 1
+    },
+    "technical_failure": {
+      "r1": 1,
+      "r2": 1
+    },
+    "posting_rejection": {
+      "r1": 0,
+      "r2": 0
+    },
+    "interest_output": {
+      "r1": 0,
+      "r2": 0
+    },
+    "reporting_record": {
+      "r1": 0,
+      "r2": 0
+    }
+  },
+  "spec_metadata_before_sha256": "fedf06cedc858c6a3b91b3c557b6cfe20da9e899a44e4f95e59ad9f0929b456a",
+  "decision": "narrow_accept_documentary_stage7_r2_pending_human_gate",
+  "residuals": {
+    "closed_documentary_choices": [
+      "Internal INV/RES/CAP/CONV/FAIL/STATE/RESP records specified as documentary responsibilities",
+      "Observed-empty/zero-length/truncated/stale capture distinctions specified",
+      "Known technical failure predicate bounded and CEE3ABD not treated as semantic proof",
+      "State scope distinguishes local/persistent/reset evidence",
+      "Public statuses/schemas/minItems preserved as contract-bound responsibilities"
+    ],
+    "empirical_evidence_residuals": [
+      "No runtime binding/capture/resource/reset/durable effect demonstrated",
+      "No populated evidence records or COBOL execution certified",
+      "No actual empty output observation certified"
+    ],
+    "missing_essential_design": [],
+    "human_gate": "G-31 remains pending; this review does not self-approve Stage 7 r2."
+  },
+  "acceptance_criteria_semantic": {
+    "internal_records_fields_owners_preconditions": {
+      "pass": true,
+      "evidence": [
+        "INV/RES/CAP/CONV/FAIL/STATE/RESP table rows",
+        "RES has supplying owner and declared prerequisites",
+        "INV has setup owner and validity window"
+      ]
+    },
+    "invocation_attribution_stale_capture": {
+      "pass": true,
+      "evidence": [
+        "CAP requires invocation/resource links and freshness attribution",
+        "Stale capture row says not current-call content and retain internally as stale evidence"
+      ]
+    },
+    "zero_length_vs_observed_empty": {
+      "pass": true,
+      "evidence": [
+        "positive empty and zero-length rows plus zero-byte caveat"
+      ]
+    },
+    "incomplete_truncation_no_silent_loss": {
+      "pass": true,
+      "evidence": [
+        "truncated capture row and truncation paragraph"
+      ]
+    },
+    "field_by_field_conversion": {
+      "pass": true,
+      "evidence": [
+        "CONV row and field-by-field conversion discipline"
+      ]
+    },
+    "known_failure_predicate_not_CEE3ABD": {
+      "pass": true,
+      "evidence": [
+        "STATE/FAIL sections separate CEE3ABD call sites from actual failure predicate"
+      ]
+    },
+    "state_local_persistent_reset": {
+      "pass": true,
+      "evidence": [
+        "STATE row and state model section"
+      ]
+    },
+    "eof_order_multiplicity_109": {
+      "pass": true,
+      "evidence": [
+        "public decisions and posting/reporting association sections"
+      ]
+    },
+    "no_public_schema_telemetry_status_minitems": {
+      "pass": true,
+      "evidence": [
+        "purpose says not new public schemas; inherited public decisions table says None; status/minItems section preserves statuses"
+      ]
+    },
+    "g31_human_pending": {
+      "pass": true,
+      "evidence": [
+        "final gate paragraph"
+      ]
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "case": "reset-b",
+  "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4",
+  "steps": [
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TRANFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TCATBALF.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/ACCTFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/XREFFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/CBTRN02C"
+      ],
+      "env": {
+        "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TRANFILE",
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/XREFFILE",
+        "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/ACCTFILE",
+        "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TCATBALF",
+        "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/DALYTRAN",
+        "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/DALYREJS",
+        "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build"
+      },
+      "rc": 0,
+      "stdout": "START OF EXECUTION OF PROGRAM CBTRN02C\nTCATBAL record not found for key : 00000000001010001.. Creating.\nTRANSACTIONS PROCESSED :000000001\nTRANSACTIONS REJECTED  :000000000\nEND OF EXECUTION OF PROGRAM CBTRN02C\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TRANFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/XREFFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/ACCTFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TCATBALF.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/reset-b-_dvvnnk4/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "TRANFILE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TCATBALF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACCTFILE": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "DALYTRAN": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+  },
+  "output_sha256": {
+    "TRANFILE": "5b1854601e47fc38dc7463d6474246b57fd282851d717f5f85284c1df94124b5",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "ACCTFILE": "401a58e5971c5bba9ec5ba2813bb814c759f538f89efbcbd0dea3b98facd442e",
+    "TCATBALF": "4c867452904c67bf685f8036761897927601b261a6f89c3351e0a72bf94dad36",
+    "DALYREJS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "output_bytes": {
+    "TRANFILE": 350,
+    "XREFFILE": 50,
+    "ACCTFILE": 300,
+    "TCATBALF": 50,
+    "DALYREJS": 0
+  },
+  "observed_fields_hex": {
+    "ACCTFILE[12:24]": "303030303030303032353030",
+    "TCATBALF[17:28]": "3030303030303032353030",
+    "TRANFILE[0:304]": "54455354303030303030303030303031303130303031544553542020202020204c4f43414c2053594e54484554494320464958545552452020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303235303030303030303030303154455354204d45524348414e542020202020202020202020202020202020202020202020202020202020202020202020202054455354204349545920202020202020202020202020202020202020202020202020202020202020202020202020202020203030303030303030303030303030303030303030303030303031323032352d30312d30312d30302e30302e30302e303030303030",
+    "TRANFILE[330:]": "0000000000000000000000000000000000000000"
+  },
+  "reset_exclusion": "TRANFILE bytes 304:330 (processing timestamp)"
+}

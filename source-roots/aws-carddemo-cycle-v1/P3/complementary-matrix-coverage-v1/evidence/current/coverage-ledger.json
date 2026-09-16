@@ -1,0 +1,3093 @@
+{
+  "kind": "complementary-matrix-coverage-v1",
+  "createdUtc": "2026-09-16T12:20:02.234773+00:00",
+  "inputs": {
+    "campaignReport": {
+      "path": "../complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+      "bytes": 2340811,
+      "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+    },
+    "sourceCatalog": {
+      "path": "../complementary-validation-v2/scenario-catalog.json",
+      "bytes": 553414,
+      "sha256": "ba7a6632d4d44215d0baa3e8272f3c3659f28d2adae6d80033238ffc6c02826c"
+    }
+  },
+  "policies": {
+    "evidence": "saved per-invocation gcov artifacts only; no API/COBOL/gcov reruns",
+    "admissibility": "inadmissible cases are reported with reasons and never counted as zero coverage",
+    "sourceAlignment": "line/branch IDs are unioned only within the same business program and source-file SHA-256",
+    "mainUnit": "only correctedParser.mainGeneratedC .gcov is used; generated headers/helpers are excluded",
+    "branchDefinitions": "branch IDs preserve gcov line number + branch index; executed means not 'never executed'; taken means taken > 0"
+  },
+  "campaignTotalsVerified": {
+    "planned": 84,
+    "completed": 84,
+    "structural_ok": 84,
+    "measurement_admissible": 78,
+    "measurement_inadmissible": 6
+  },
+  "scenarioMatrix": {
+    "scenarioCount": 12,
+    "contractCount": 7,
+    "countsByScenario": {
+      "card-break-two-groups-v1": 7,
+      "date-boundaries-in-out-v1": 7,
+      "empty-in-range-v1": 7,
+      "pagination-threshold-20-v1": 7,
+      "rates-specific-default-zero": 7,
+      "reject-account-missing": 7,
+      "reject-card-missing": 7,
+      "reject-expiry": 7,
+      "reject-limit": 7,
+      "single-final-eof": 7,
+      "valid-existing-tcatbal": 7,
+      "valid-new-tcatbal": 7
+    },
+    "countsByContract": {
+      "E1-1": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E1-2": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E1-3": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E2-1": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E2-2": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E2-3": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      },
+      "E3-SDD-stage6r3": {
+        "card-break-two-groups-v1": 1,
+        "date-boundaries-in-out-v1": 1,
+        "empty-in-range-v1": 1,
+        "pagination-threshold-20-v1": 1,
+        "rates-specific-default-zero": 1,
+        "reject-account-missing": 1,
+        "reject-card-missing": 1,
+        "reject-expiry": 1,
+        "reject-limit": 1,
+        "single-final-eof": 1,
+        "valid-existing-tcatbal": 1,
+        "valid-new-tcatbal": 1
+      }
+    },
+    "uniqueRequestIdentityCount": 84,
+    "all84RequestIdentitiesUnique": true
+  },
+  "contracts": {
+    "E1-1": "zero-shot",
+    "E1-2": "zero-shot",
+    "E1-3": "zero-shot",
+    "E2-1": "few-shot",
+    "E2-2": "few-shot",
+    "E2-3": "few-shot",
+    "E3-SDD-stage6r3": "sdd"
+  },
+  "inadmissibleCases": [
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-card-break-two-groups-v1",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-pagination-threshold-20-v1",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-card-break-two-groups-v1",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-pagination-threshold-20-v1",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-card-break-two-groups-v1",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-pagination-threshold-20-v1",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ]
+    }
+  ],
+  "invocationDistributions": {
+    "byContract": {
+      "E1-1": {
+        "admissible_preparatory": 12
+      },
+      "E1-2": {
+        "admissible_preparatory": 12
+      },
+      "E1-3": {
+        "admissible_preparatory": 12
+      },
+      "E2-1": {
+        "admissible_preparatory": 10,
+        "inadmissible_or_limited": 2
+      },
+      "E2-2": {
+        "admissible_preparatory": 10,
+        "inadmissible_or_limited": 2
+      },
+      "E2-3": {
+        "admissible_preparatory": 10,
+        "inadmissible_or_limited": 2
+      },
+      "E3-SDD-stage6r3": {
+        "admissible_preparatory": 12
+      }
+    },
+    "byProgram": {
+      "CBACT04C": {
+        "admissible_preparatory": 14,
+        "admissible_parsed": 14
+      },
+      "CBTRN02C": {
+        "admissible_preparatory": 42,
+        "admissible_parsed": 42
+      },
+      "CBTRN03C": {
+        "admissible_preparatory": 22,
+        "admissible_parsed": 22,
+        "inadmissible_or_limited": 6
+      }
+    }
+  },
+  "sourceSeries": [
+    {
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "source_bytes": 150751,
+      "gcov_examples": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-valid-new-tcatbal/replay/applications/0001-39bd364c6ae0dd2e/zero-shot-runs/p2b-runs/posting-0cbqnd9q/gcov/CBTRN02C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-valid-existing-tcatbal/replay/applications/0001-6969150b95ebdf50/zero-shot-runs/p2b-runs/posting-67xb2_up/gcov/CBTRN02C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-card-missing/replay/applications/0001-02b8f4d260be7a64/zero-shot-runs/p2b-runs/posting-xxki2b97/gcov/CBTRN02C.c.gcov"
+      ]
+    },
+    {
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "source_bytes": 133434,
+      "gcov_examples": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-rates-specific-default-zero/replay/applications/0001-d9e65a8e5e8fa792/zero-shot-runs/p2b-runs/interest-nk5s2lwu/gcov/CBACT04C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/p2b-runs/interest-lzux_x5m/gcov/CBACT04C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-rates-specific-default-zero/replay/applications/0001-a126a8852e0dc779/zero-shot-runs/p2b-runs/interest-8t7oezs0/gcov/CBACT04C.c.gcov"
+      ]
+    },
+    {
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "source_bytes": 148459,
+      "gcov_examples": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-date-boundaries-in-out-v1/replay/applications/0001-ab677b8be7894864/zero-shot-runs/p2b-runs/reporting-xkqjho0a/gcov/CBTRN03C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-empty-in-range-v1/replay/applications/0001-f4a71fcb1f5979ae/zero-shot-runs/p2b-runs/reporting-hmphdvw8/gcov/CBTRN03C.c.gcov",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1/replay/applications/0001-2fc8c856ff3ad1cb/zero-shot-runs/p2b-runs/reporting-t4g6o88y/gcov/CBTRN03C.c.gcov"
+      ]
+    }
+  ],
+  "coverageByProgram": {
+    "CBACT04C": {
+      "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+        "lines": {
+          "executed": 606,
+          "total": 1029,
+          "percent": 58.89
+        },
+        "branches_executed": {
+          "executed": 228,
+          "total": 266,
+          "percent": 85.71
+        },
+        "branches_taken_at_least_once": {
+          "taken": 172,
+          "total": 266,
+          "percent": 64.66
+        }
+      },
+      "_comparability": "one source fingerprint"
+    },
+    "CBTRN02C": {
+      "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+        "lines": {
+          "executed": 686,
+          "total": 1120,
+          "percent": 61.25
+        },
+        "branches_executed": {
+          "executed": 262,
+          "total": 288,
+          "percent": 90.97
+        },
+        "branches_taken_at_least_once": {
+          "taken": 200,
+          "total": 288,
+          "percent": 69.44
+        }
+      },
+      "_comparability": "one source fingerprint"
+    },
+    "CBTRN03C": {
+      "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+        "lines": {
+          "executed": 763,
+          "total": 1192,
+          "percent": 64.01
+        },
+        "branches_executed": {
+          "executed": 238,
+          "total": 272,
+          "percent": 87.5
+        },
+        "branches_taken_at_least_once": {
+          "taken": 180,
+          "total": 272,
+          "percent": 66.18
+        }
+      },
+      "_comparability": "one source fingerprint"
+    }
+  },
+  "coverageByContractProgram": {
+    "E1-1": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E1-2": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E1-3": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E2-1": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branches_executed": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branches_taken_at_least_once": {
+            "taken": 158,
+            "total": 272,
+            "percent": 58.09
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E2-2": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branches_executed": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branches_taken_at_least_once": {
+            "taken": 158,
+            "total": 272,
+            "percent": 58.09
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E2-3": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branches_executed": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branches_taken_at_least_once": {
+            "taken": 158,
+            "total": 272,
+            "percent": 58.09
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "E3-SDD-stage6r3": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    }
+  },
+  "coverageByArmProgram": {
+    "few-shot": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branches_executed": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branches_taken_at_least_once": {
+            "taken": 158,
+            "total": 272,
+            "percent": 58.09
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "sdd": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    },
+    "zero-shot": {
+      "CBACT04C": {
+        "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a": {
+          "lines": {
+            "executed": 606,
+            "total": 1029,
+            "percent": 58.89
+          },
+          "branches_executed": {
+            "executed": 228,
+            "total": 266,
+            "percent": 85.71
+          },
+          "branches_taken_at_least_once": {
+            "taken": 172,
+            "total": 266,
+            "percent": 64.66
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN02C": {
+        "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b": {
+          "lines": {
+            "executed": 686,
+            "total": 1120,
+            "percent": 61.25
+          },
+          "branches_executed": {
+            "executed": 262,
+            "total": 288,
+            "percent": 90.97
+          },
+          "branches_taken_at_least_once": {
+            "taken": 200,
+            "total": 288,
+            "percent": 69.44
+          }
+        },
+        "_comparability": "one source fingerprint"
+      },
+      "CBTRN03C": {
+        "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848": {
+          "lines": {
+            "executed": 763,
+            "total": 1192,
+            "percent": 64.01
+          },
+          "branches_executed": {
+            "executed": 238,
+            "total": 272,
+            "percent": 87.5
+          },
+          "branches_taken_at_least_once": {
+            "taken": 180,
+            "total": 272,
+            "percent": 66.18
+          }
+        },
+        "_comparability": "one source fingerprint"
+      }
+    }
+  },
+  "invocations": [
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-valid-new-tcatbal",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-valid-new-tcatbal/replay/applications/0001-39bd364c6ae0dd2e/zero-shot-runs/p2b-runs/posting-0cbqnd9q/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-valid-existing-tcatbal",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-valid-existing-tcatbal/replay/applications/0001-6969150b95ebdf50/zero-shot-runs/p2b-runs/posting-67xb2_up/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-reject-card-missing",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-card-missing/replay/applications/0001-02b8f4d260be7a64/zero-shot-runs/p2b-runs/posting-xxki2b97/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-reject-account-missing",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/p2b-runs/posting-hjdxj904/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-reject-limit",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-limit/replay/applications/0001-0c3a7e5acfa2903b/zero-shot-runs/p2b-runs/posting-pxn1nqsl/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-reject-expiry",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-expiry/replay/applications/0001-f8db41b6473077a9/zero-shot-runs/p2b-runs/posting-70viw8en/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-rates-specific-default-zero",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-rates-specific-default-zero/replay/applications/0001-d9e65a8e5e8fa792/zero-shot-runs/p2b-runs/interest-nk5s2lwu/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-single-final-eof",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/p2b-runs/interest-lzux_x5m/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-date-boundaries-in-out-v1",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-date-boundaries-in-out-v1/replay/applications/0001-ab677b8be7894864/zero-shot-runs/p2b-runs/reporting-xkqjho0a/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-empty-in-range-v1",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-empty-in-range-v1/replay/applications/0001-f4a71fcb1f5979ae/zero-shot-runs/p2b-runs/reporting-hmphdvw8/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "card-break-two-groups-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1/replay/applications/0001-2fc8c856ff3ad1cb/zero-shot-runs/p2b-runs/reporting-t4g6o88y/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 750,
+        "total": 1192,
+        "percent": 62.92
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 272,
+        "percent": 87.5
+      },
+      "branches_taken_at_least_once": {
+        "taken": 179,
+        "total": 272,
+        "percent": 65.81
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-1-pagination-threshold-20-v1",
+      "contractId": "E1-1",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "pagination-threshold-20-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-pagination-threshold-20-v1/replay/applications/0001-41a2f275edd03fd3/zero-shot-runs/p2b-runs/reporting-zc3leupr/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 734,
+        "total": 1192,
+        "percent": 61.58
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 272,
+        "percent": 86.03
+      },
+      "branches_taken_at_least_once": {
+        "taken": 176,
+        "total": 272,
+        "percent": 64.71
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-valid-new-tcatbal",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-new-tcatbal/replay/applications/0001-6dececd10cd22792/zero-shot-runs/p2b-runs/posting-b3qtyqs_/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/p2b-runs/posting-uvfdccp0/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-reject-card-missing",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-reject-card-missing/replay/applications/0001-59aa671405545405/zero-shot-runs/p2b-runs/posting-d7an6him/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-reject-account-missing",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-reject-account-missing/replay/applications/0001-02ba2943244a7baf/zero-shot-runs/p2b-runs/posting-rarn4yn1/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-reject-limit",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-reject-limit/replay/applications/0001-cb622bab1a481be5/zero-shot-runs/p2b-runs/posting-nr_4sar9/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-reject-expiry",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-reject-expiry/replay/applications/0001-8062ac457354bd53/zero-shot-runs/p2b-runs/posting-00ybupnz/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-rates-specific-default-zero",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-rates-specific-default-zero/replay/applications/0001-a126a8852e0dc779/zero-shot-runs/p2b-runs/interest-8t7oezs0/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-single-final-eof",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-single-final-eof/replay/applications/0001-08daf7f2fa80f75e/zero-shot-runs/p2b-runs/interest-2nc3o6cu/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-date-boundaries-in-out-v1",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-date-boundaries-in-out-v1/replay/applications/0001-59579f8dbd6745ef/zero-shot-runs/p2b-runs/reporting-dk26ptwu/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-empty-in-range-v1",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-empty-in-range-v1/replay/applications/0001-c42d8bfdd0bbfb96/zero-shot-runs/p2b-runs/reporting-cpr1_g9s/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-card-break-two-groups-v1",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "card-break-two-groups-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-card-break-two-groups-v1/replay/applications/0001-ea6c524e43bd9b0d/zero-shot-runs/p2b-runs/reporting-3lc14frk/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 750,
+        "total": 1192,
+        "percent": 62.92
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 272,
+        "percent": 87.5
+      },
+      "branches_taken_at_least_once": {
+        "taken": 179,
+        "total": 272,
+        "percent": 65.81
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-2-pagination-threshold-20-v1",
+      "contractId": "E1-2",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "pagination-threshold-20-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-pagination-threshold-20-v1/replay/applications/0001-6cd97cdf06d897ca/zero-shot-runs/p2b-runs/reporting-9m1fa1__/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 734,
+        "total": 1192,
+        "percent": 61.58
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 272,
+        "percent": 86.03
+      },
+      "branches_taken_at_least_once": {
+        "taken": 176,
+        "total": 272,
+        "percent": 64.71
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-valid-new-tcatbal",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-valid-new-tcatbal/replay/applications/0001-0b66262e72bd9040/zero-shot-runs/p2b-runs/posting-wrfsejio/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-valid-existing-tcatbal",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-valid-existing-tcatbal/replay/applications/0001-6c54a75beba68ba1/zero-shot-runs/p2b-runs/posting-wevk6l46/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-reject-card-missing",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-reject-card-missing/replay/applications/0001-1adcc63a20899237/zero-shot-runs/p2b-runs/posting-066sjrdh/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-reject-account-missing",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-reject-account-missing/replay/applications/0001-b027e339362ccc5b/zero-shot-runs/p2b-runs/posting-541uddw6/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-reject-limit",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-reject-limit/replay/applications/0001-5256951167c7a5df/zero-shot-runs/p2b-runs/posting-enyv8h2t/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-reject-expiry",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-reject-expiry/replay/applications/0001-99980bc0547bb7b8/zero-shot-runs/p2b-runs/posting-vdezget_/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-rates-specific-default-zero",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-rates-specific-default-zero/replay/applications/0001-af5c89f2b780f512/zero-shot-runs/p2b-runs/interest-6h06vtix/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-single-final-eof",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-single-final-eof/replay/applications/0001-f17f506d7b029069/zero-shot-runs/p2b-runs/interest-1uvnu8vu/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/p2b-runs/reporting-vy5n09fx/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-empty-in-range-v1",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/p2b-runs/reporting-6kg54smk/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-card-break-two-groups-v1",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "card-break-two-groups-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-card-break-two-groups-v1/replay/applications/0001-53fb7c9e701f0d14/zero-shot-runs/p2b-runs/reporting-0jpbvp28/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 750,
+        "total": 1192,
+        "percent": 62.92
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 272,
+        "percent": 87.5
+      },
+      "branches_taken_at_least_once": {
+        "taken": 179,
+        "total": 272,
+        "percent": 65.81
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E1-3-pagination-threshold-20-v1",
+      "contractId": "E1-3",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "pagination-threshold-20-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-pagination-threshold-20-v1/replay/applications/0001-9c9af857a75628a8/zero-shot-runs/p2b-runs/reporting-zuaklzcm/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 734,
+        "total": 1192,
+        "percent": 61.58
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 272,
+        "percent": 86.03
+      },
+      "branches_taken_at_least_once": {
+        "taken": 176,
+        "total": 272,
+        "percent": 64.71
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-valid-new-tcatbal",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-6ru_clq4/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-valid-existing-tcatbal",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-c7xtaur3/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-reject-card-missing",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-qm48fgjf/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-reject-account-missing",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-y3_181fu/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-reject-limit",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-mccx9bvc/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-reject-expiry",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-zl6lowh_/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-rates-specific-default-zero",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-0dn09q3n/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-single-final-eof",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-pqt0ujuy/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-date-boundaries-in-out-v1",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-2kt9kfyv/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-1-empty-in-range-v1",
+      "contractId": "E2-1",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-f8cgjm97/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-valid-new-tcatbal",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-523nkc3b/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-valid-existing-tcatbal",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-_cxp3oqt/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-reject-card-missing",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-k0fashxf/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-reject-account-missing",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-8xcprud7/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-reject-limit",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-qemgwv3r/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-reject-expiry",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-sdx7fj41/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-rates-specific-default-zero",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-7uorwyxo/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-single-final-eof",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-r84dhwee/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-date-boundaries-in-out-v1",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-ikmmxuxd/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-2-empty-in-range-v1",
+      "contractId": "E2-2",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-n50xq6hi/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-valid-new-tcatbal",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-g54bgcmk/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-valid-existing-tcatbal",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-8qc4t7xb/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-reject-card-missing",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-1xmp9zyh/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-reject-account-missing",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-dmz3hd74/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-reject-limit",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-l_7k1pvl/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-reject-expiry",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "posting",
+      "operationId": "postDailyTransactions",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-on_0xdip/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-rates-specific-default-zero",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-hqlcku_w/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-single-final-eof",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "interest",
+      "operationId": "generateInterestTransactions",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-5gwrfzxi/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-date-boundaries-in-out-v1",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bl5ftsss/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E2-3-empty-in-range-v1",
+      "contractId": "E2-3",
+      "arm": "few-shot",
+      "track": "reporting",
+      "operationId": "generateTransactionReport",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-zblwqt2q/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "valid-new-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-mvotgibj/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 638,
+        "total": 1120,
+        "percent": 56.96
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 288,
+        "percent": 82.64
+      },
+      "branches_taken_at_least_once": {
+        "taken": 177,
+        "total": 288,
+        "percent": 61.46
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-existing-tcatbal",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "valid-existing-tcatbal",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-hwe94uhf/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 628,
+        "total": 1120,
+        "percent": 56.07
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 288,
+        "percent": 81.25
+      },
+      "branches_taken_at_least_once": {
+        "taken": 170,
+        "total": 288,
+        "percent": 59.03
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "reject-card-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-ns58ycs2/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 508,
+        "total": 1120,
+        "percent": 45.36
+      },
+      "branches_executed": {
+        "executed": 188,
+        "total": 288,
+        "percent": 65.28
+      },
+      "branches_taken_at_least_once": {
+        "taken": 140,
+        "total": 288,
+        "percent": 48.61
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-account-missing",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "reject-account-missing",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dpo8uddb/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 522,
+        "total": 1120,
+        "percent": 46.61
+      },
+      "branches_executed": {
+        "executed": 194,
+        "total": 288,
+        "percent": 67.36
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-limit",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "reject-limit",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-hwjeawzs/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-expiry",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "posting",
+      "operationId": "posting",
+      "scenarioId": "reject-expiry",
+      "program": "CBTRN02C",
+      "source_sha256": "7054bf317d9593040ec074ec3ff176bc98258911787b81f37755883999ca6e6b",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-odovbj65/gcov/CBTRN02C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "lines": {
+        "executed": 531,
+        "total": 1120,
+        "percent": 47.41
+      },
+      "branches_executed": {
+        "executed": 196,
+        "total": 288,
+        "percent": 68.06
+      },
+      "branches_taken_at_least_once": {
+        "taken": 145,
+        "total": 288,
+        "percent": 50.35
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-rates-specific-default-zero",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "interest",
+      "operationId": "interest",
+      "scenarioId": "rates-specific-default-zero",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-ygcz3rds/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 606,
+        "total": 1029,
+        "percent": 58.89
+      },
+      "branches_executed": {
+        "executed": 228,
+        "total": 266,
+        "percent": 85.71
+      },
+      "branches_taken_at_least_once": {
+        "taken": 172,
+        "total": 266,
+        "percent": 64.66
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-single-final-eof",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "interest",
+      "operationId": "interest",
+      "scenarioId": "single-final-eof",
+      "program": "CBACT04C",
+      "source_sha256": "6aaaab1a763d74a0684e44e91d9064d7a230f3d3297eded9aa2f3122f1aa4a1a",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-jyr_ddv_/gcov/CBACT04C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "lines": {
+        "executed": 566,
+        "total": 1029,
+        "percent": 55.0
+      },
+      "branches_executed": {
+        "executed": 204,
+        "total": 266,
+        "percent": 76.69
+      },
+      "branches_taken_at_least_once": {
+        "taken": 150,
+        "total": 266,
+        "percent": 56.39
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-date-boundaries-in-out-v1",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "reporting",
+      "operationId": "reporting",
+      "scenarioId": "date-boundaries-in-out-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-l_6a5u29/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 655,
+        "total": 1192,
+        "percent": 54.95
+      },
+      "branches_executed": {
+        "executed": 216,
+        "total": 272,
+        "percent": 79.41
+      },
+      "branches_taken_at_least_once": {
+        "taken": 158,
+        "total": 272,
+        "percent": 58.09
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-empty-in-range-v1",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "reporting",
+      "operationId": "reporting",
+      "scenarioId": "empty-in-range-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-gbfmvbsi/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 504,
+        "total": 1192,
+        "percent": 42.28
+      },
+      "branches_executed": {
+        "executed": 164,
+        "total": 272,
+        "percent": 60.29
+      },
+      "branches_taken_at_least_once": {
+        "taken": 119,
+        "total": 272,
+        "percent": 43.75
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-card-break-two-groups-v1",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "reporting",
+      "operationId": "reporting",
+      "scenarioId": "card-break-two-groups-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-dn4x2n8s/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 750,
+        "total": 1192,
+        "percent": 62.92
+      },
+      "branches_executed": {
+        "executed": 238,
+        "total": 272,
+        "percent": 87.5
+      },
+      "branches_taken_at_least_once": {
+        "taken": 179,
+        "total": 272,
+        "percent": 65.81
+      }
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-pagination-threshold-20-v1",
+      "contractId": "E3-SDD-stage6r3",
+      "arm": "sdd",
+      "track": "reporting",
+      "operationId": "reporting",
+      "scenarioId": "pagination-threshold-20-v1",
+      "program": "CBTRN03C",
+      "source_sha256": "da92dc96c68fb19d8bd47b0ff97d1d291c730d06a3012bc6792abd5b10ed2848",
+      "gcov_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-_9bow1v5/gcov/CBTRN03C.c.gcov",
+      "source_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "lines": {
+        "executed": 734,
+        "total": 1192,
+        "percent": 61.58
+      },
+      "branches_executed": {
+        "executed": 234,
+        "total": 272,
+        "percent": 86.03
+      },
+      "branches_taken_at_least_once": {
+        "taken": 176,
+        "total": 272,
+        "percent": 64.71
+      }
+    }
+  ]
+}

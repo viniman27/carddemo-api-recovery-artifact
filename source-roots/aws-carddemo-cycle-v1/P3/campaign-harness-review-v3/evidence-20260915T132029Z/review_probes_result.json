@@ -1,0 +1,225 @@
+{
+  "artifact_hashes": {
+    "outside-in-probes/deadline_controlled_run/applications.json": "dda9ae317dbc5749a719f0a067fcc4dd49f3bb99a7c8e154205dc5dce0c25e07",
+    "outside-in-probes/deadline_controlled_run/applications/0001-c8fa663bdc5ff415/seen.txt": "971bb40e57e77f9e64829a05e904e16b26f93e727c982ced609aa90d3500dc26",
+    "outside-in-probes/deadline_controlled_run/applications/0002-5e8bae77bf1dc40e/seen.txt": "cde14744c72f49ff82a115ea2f740c62d2e6721ddfa695d729700994891b4287",
+    "outside-in-probes/deadline_controlled_run/receipts.json": "65d768e8c00590ddbf04ef503aa21d5303dc15690bfc6bff6da9327806829cf2",
+    "outside-in-probes/deadline_controlled_run/totals.json": "ccdfe552e6818148489a9aa13128d14e1a310cdda27dae30129cf55a656b98a4",
+    "outside-in-probes/dup_headers_run/applications.json": "d6c8a40c1759cad02c98b7b7fa00b88cb563bd79b55fd8dca039d18304eeeb94",
+    "outside-in-probes/dup_headers_run/receipts.json": "e18a3fd58878ecb9d18ecad37e32ceffc9dcad0d36554a21d4e7cb598fbda23a",
+    "outside-in-probes/dup_headers_run/totals.json": "2227ce3984842834cf37c41e04abd16f92c9c2118bf40c693aacbf3529afcbff",
+    "outside-in-probes/expectations_run/applications.json": "75763fdaa8d8e938f94914b3ed093e3f379fb66c8d430482144a1b1ef20ca2e5",
+    "outside-in-probes/expectations_run/receipts.json": "1878c1153dbffa389cf6feedc504e8c71aa97af7bee9fe4a79c08325835187cc",
+    "outside-in-probes/expectations_run/totals.json": "bb3744571b9cdd3e9c546db3644aa1560fa8a5a86d927311c1abc25e296423d0",
+    "outside-in-probes/outside_in_probes.json": "10d07a90f18a4c412ae5cb5bf1e3d647742209591b0da5298f90792ddfde2342",
+    "outside-in-probes/path_traversal_run/applications.json": "a0d6af353a7e52351dab1369df5cddee07240d4992ed8c4ab4371ab855e336de",
+    "outside-in-probes/path_traversal_run/receipts.json": "aa7d91e6f0764b4bc4a5c3cf539f9081e0cc2ce9981a11ed207129980babcd1d",
+    "outside-in-probes/path_traversal_run/totals.json": "2227ce3984842834cf37c41e04abd16f92c9c2118bf40c693aacbf3529afcbff",
+    "outside-in-probes/reset_bound_run/applications.json": "e336bfa3cae33648730f068c31f9af2af33563b510750c8fd7ed50fad7ea2c4c",
+    "outside-in-probes/reset_bound_run/applications/0001-e4dd23baf28a8c7b/state.txt": "8060ea27230537d99589039679ee26e6bcba24c2695f90f2a63e5fed524f9b7d",
+    "outside-in-probes/reset_bound_run/applications/0002-0548eb91100847b4/state.txt": "8060ea27230537d99589039679ee26e6bcba24c2695f90f2a63e5fed524f9b7d",
+    "outside-in-probes/reset_bound_run/receipts.json": "9e75c38c59d563854c8c74a381bd0f51f3f9fb2f38d7e137bc50330c3b7637ed",
+    "outside-in-probes/reset_bound_run/totals.json": "ad494ae05c6b929a2d964a5334a08f268f49abd506c72e0e467a88a1281f7af8",
+    "outside_in.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outside_in.stdout": "32433c22f7b7d917ddc481f50ec5487275af59ff80fccc756dc48195a473949a",
+    "semantic_probes.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "semantic_probes.stdout": "43406b95e83d272ef220e905eb535c40844cca816239f52e6d74c8160d6fe694",
+    "shutdown-hang-run/applications.json": "c4288558a68ac531e86c80e1ab0469a2bf747621d87437c92ced13de15e235e8",
+    "shutdown-hang-run/applications/0001-f12be79ee4b16d20/attempts.txt": "74a02f560cc1d8e023280b5f08a1ee7266e4bec6cea61ca457dc1a758d080fc8",
+    "shutdown-hang-run/receipts.json": "755b56c1e2796003ce6e78be6f7363534a19d1b6d0b9ddddea33d0c2ab92fb38",
+    "shutdown-hang-run/totals.json": "77e60276cf029cd5780e41c5d4bdfae8439e27789459662cd5532d72fb604244",
+    "shutdown_hang_green_child.py": "9b362124031c04f34405442c21e24604d8f82565e7dedaaee640c106a808ca7b",
+    "shutdown_hang_green_probe.json": "f00e788af8c808f8edbd39a25944b83550e74c6ce9380f48ce5d3986a96aa445",
+    "unittest.stderr": "8981f582577513e1a1314477ccda9fce91e0b157db1476b66f6c9c6dff1b2af7",
+    "unittest.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "checks": {
+    "outside_in_five_fixes": {
+      "cmd": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "outside_in_probes.py",
+        "--output",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/outside-in-probes"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3",
+      "duration_seconds": 1.925,
+      "fixes_verified": 5,
+      "probe_results": {
+        "case_id_preserved_workdir_opaque_contained": true,
+        "deadline_reaped_before_next_application": true,
+        "duplicate_headers_wire_preserved": true,
+        "expectations_separate_from_transport": true,
+        "reset_workdir_bound_to_service_state": true
+      },
+      "probes_total": 5,
+      "returncode": 0
+    },
+    "semantic_probes": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout_json": {
+        "copy_integrity": {
+          "copy_after_mutation": "B",
+          "pins_before_match_source": true,
+          "source_after_copy_mutation": "A"
+        },
+        "freeze": {
+          "loaded_case_count": 2,
+          "tamper_rejected": true
+        },
+        "union": {
+          "case_ids": [
+            "T4-0001",
+            "T4-0002"
+          ],
+          "ledger": [
+            {
+              "action": "kept",
+              "destination": "T4-0001",
+              "source": "T1:a"
+            },
+            {
+              "action": "duplicate_merged",
+              "destination": "T4-0001",
+              "source": "T2:b"
+            },
+            {
+              "action": "kept_distinct_expectation",
+              "destination": "T4-0002",
+              "source": "T2:c"
+            }
+          ],
+          "provenance": [
+            [
+              "T1:a",
+              "T2:b"
+            ],
+            [
+              "T2:c"
+            ]
+          ]
+        },
+        "unsupported_checker": {
+          "details": [
+            {
+              "unsupported_checks": [
+                "jsonSchema"
+              ]
+            },
+            {
+              "allowed_status": [
+                200
+              ],
+              "status": 200
+            }
+          ],
+          "receipt_results": [
+            "inconclusive",
+            "pass"
+          ],
+          "totals": {
+            "attempted": 2,
+            "completed": 2,
+            "deadline_failures": 0,
+            "expectation_inconclusive": 1,
+            "expectation_passes": 1,
+            "expectation_violations": 0,
+            "http_failures": 0,
+            "not_executed": 0,
+            "planned": 2,
+            "transport_failures": 0
+          }
+        }
+      }
+    },
+    "shutdown_hang_bounded_green": {
+      "duration_seconds": 0.382,
+      "external_timeout_seconds": 3,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"applications\": [{\"case_id\": \"hang\", \"failure_class\": \"deadline\", \"lifecycle\": {\"exitcode\": -15, \"pid\": 53492, \"pid_alive_after_reap\": false, \"quiet_proven\": true, \"reaped\": true, \"started\": true, \"startup_error\": null, \"stop_method\": \"terminate\", \"stop_requested\": true}, \"pins_after\": {\"attempts.txt\": {\"sha256\": \"74a02f560cc1d8e023280b5f08a1ee7266e4bec6cea61ca457dc1a758d080fc8\", \"size\": 4}}, \"pins_before\": {}, \"target_quiet\": true, \"workdir\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/shutdown-hang-run/applications/0001-f12be79ee4b16d20\"}], \"duration_seconds\": 0.319, \"receipts\": [{\"body_kind\": \"absent\", \"case_id\": \"hang\", \"content_type\": null, \"expectation_detail\": {}, \"expectation_result\": \"not_evaluated\", \"failure_class\": \"deadline\", \"method\": \"POST\", \"path\": \"/hang\", \"provenance\": [\"PX:hang\"], \"request_headers\": [], \"request_identity\": \"7d523e33804c7fbc0156abeee203d1ecd82b46daf90cc360b0fa94a59460d43c\", \"response_bytes\": 0, \"response_sha256\": null, \"status\": null}], \"totals\": {\"attempted\": 1, \"completed\": 0, \"deadline_failures\": 1, \"expectation_inconclusive\": 0, \"expectation_passes\": 0, \"expectation_violations\": 0, \"http_failures\": 0, \"not_executed\": 0, \"planned\": 1, \"transport_failures\": 0}}\n",
+      "stdout_json": {
+        "applications": [
+          {
+            "case_id": "hang",
+            "failure_class": "deadline",
+            "lifecycle": {
+              "exitcode": -15,
+              "pid": 53492,
+              "pid_alive_after_reap": false,
+              "quiet_proven": true,
+              "reaped": true,
+              "started": true,
+              "startup_error": null,
+              "stop_method": "terminate",
+              "stop_requested": true
+            },
+            "pins_after": {
+              "attempts.txt": {
+                "sha256": "74a02f560cc1d8e023280b5f08a1ee7266e4bec6cea61ca457dc1a758d080fc8",
+                "size": 4
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/shutdown-hang-run/applications/0001-f12be79ee4b16d20"
+          }
+        ],
+        "duration_seconds": 0.319,
+        "receipts": [
+          {
+            "body_kind": "absent",
+            "case_id": "hang",
+            "content_type": null,
+            "expectation_detail": {},
+            "expectation_result": "not_evaluated",
+            "failure_class": "deadline",
+            "method": "POST",
+            "path": "/hang",
+            "provenance": [
+              "PX:hang"
+            ],
+            "request_headers": [],
+            "request_identity": "7d523e33804c7fbc0156abeee203d1ecd82b46daf90cc360b0fa94a59460d43c",
+            "response_bytes": 0,
+            "response_sha256": null,
+            "status": null
+          }
+        ],
+        "totals": {
+          "attempted": 1,
+          "completed": 0,
+          "deadline_failures": 1,
+          "expectation_inconclusive": 0,
+          "expectation_passes": 0,
+          "expectation_violations": 0,
+          "http_failures": 0,
+          "not_executed": 0,
+          "planned": 1,
+          "transport_failures": 0
+        }
+      },
+      "timed_out_externally": false
+    },
+    "unittest_9_existing_plus_lifecycle": {
+      "cmd": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "tests/test_campaign_harness.py",
+        "tests/test_lifecycle_bounded.py",
+        "-v"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3",
+      "duration_seconds": 5.425,
+      "returncode": 0
+    }
+  },
+  "evidence_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z",
+  "summary": {
+    "outside_in_fixes_verified": true,
+    "semantic_probes_ok": true,
+    "shutdown_hang_bounded_without_external_kill": true,
+    "unittest_ok": true
+  }
+}

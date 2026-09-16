@@ -1,0 +1,1094 @@
+{
+  "artifactPins": [
+    {
+      "bytes": 1316,
+      "path": "P3/complementary-interest-essential-v1/REPORT.md",
+      "sha256": "59e8d35c05354d751a57b49e5b4360295691d640c93193a739101a06d4b9cd43"
+    },
+    {
+      "bytes": 2991,
+      "path": "P3/complementary-interest-essential-v1/RESULTS-MATRIX.json",
+      "sha256": "43d22f02802a607a27abd9a947a4950d7b6d9c2329f0aad7a82a4d202d4c15a6"
+    },
+    {
+      "bytes": 2540,
+      "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json",
+      "sha256": "9470dec264574fea15b428476c9e5ae945cfbbf67d74f5f70dc3f91228dd8f0c"
+    },
+    {
+      "bytes": 24419,
+      "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+      "sha256": "2ef0aaae7dfe81b204986d73e5c6887bb3cddf7caafa30b0de4f23855908852f"
+    },
+    {
+      "bytes": 1674,
+      "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json",
+      "sha256": "822ab22387debaeab4aa67dbbb6708e45666ac62e4c94c1b7d68fd4756067048"
+    },
+    {
+      "bytes": 18550,
+      "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+      "sha256": "f17505cd8550129bb278aa6bd455fdedb5c3ab2a3af830546776513dbbdc5a5c"
+    },
+    {
+      "bytes": 57142,
+      "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+    },
+    {
+      "bytes": 4354,
+      "path": "P3/complementary-reporting-essential-v1/evidence/frozen-inputs/card-break-two-groups-v1/freeze-manifest.json",
+      "sha256": "de0fc3329d9d8427e9c88a6e68adc7ba4631274c5a67b1f26edf756c94377a55"
+    },
+    {
+      "bytes": 4287,
+      "path": "P3/complementary-reporting-essential-v1/evidence/frozen-inputs/date-boundaries-in-out-v1/freeze-manifest.json",
+      "sha256": "c84bf4c84655309a696e525ee13e253eac7d2b5423a08fb36cec7d4367415e34"
+    },
+    {
+      "bytes": 3260,
+      "path": "P3/complementary-reporting-essential-v1/evidence/frozen-inputs/empty-in-range-v1/freeze-manifest.json",
+      "sha256": "9fd264fee3197641518f8d438c0fa89815713ec92b58b4941303f993deab4999"
+    },
+    {
+      "bytes": 12408,
+      "path": "P3/complementary-reporting-essential-v1/evidence/frozen-inputs/pagination-threshold-20-v1/freeze-manifest.json",
+      "sha256": "dc7a3ab814393390ee388d4a4eb138c202d19361db0f0e21d7b283f2f5ea6cde"
+    },
+    {
+      "bytes": 31689,
+      "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+    }
+  ],
+  "candidateComplementCases": [
+    {
+      "caseId": "valid-new-tcatbal",
+      "checkerScope": {
+        "acceptedCount": 1,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 0
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-vycdf27l"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "valid",
+        "httpStatus": 200,
+        "programExit": 0,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "valid-existing-tcatbal",
+      "checkerScope": {
+        "acceptedCount": 1,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 0
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-cv4stdh2"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "valid",
+        "httpStatus": 200,
+        "programExit": 0,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "reject-card-missing",
+      "checkerScope": {
+        "acceptedCount": 0,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 1
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-efgra50l"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "card_missing",
+        "httpStatus": 200,
+        "programExit": 4,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "reject-account-missing",
+      "checkerScope": {
+        "acceptedCount": 0,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 1
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-666rt572"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "account_missing",
+        "httpStatus": 200,
+        "programExit": 4,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "reject-limit",
+      "checkerScope": {
+        "acceptedCount": 0,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 1
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-rtlm6wsl"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "over_limit",
+        "httpStatus": 200,
+        "programExit": 4,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "reject-expiry",
+      "checkerScope": {
+        "acceptedCount": 0,
+        "effectTraceQualification": "inconclusive",
+        "qualificationStatus": "pass",
+        "rejectCount": 1
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "source-guided checker battery; not model-generated MBT stimulus and not T1 manual scenario",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "postDailyTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "P3/complementary-posting-essential-v1/evidence/p2b-runs/posting-zwqqbubn"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence and source-computed expected status before run",
+        "guard": "expired",
+        "httpStatus": 200,
+        "programExit": 4,
+        "reachedCobol": true
+      },
+      "track": "posting"
+    },
+    {
+      "caseId": "rates-specific-default-zero",
+      "checkerScope": {
+        "accountDeltas": {
+          "00000000001": {
+            "afterCentsText": "000000000500",
+            "beforeCentsText": "000000000000",
+            "deltaCentsText": "00000000500",
+            "partition": "account_transition_rewrite"
+          },
+          "00000000002": {
+            "afterCentsText": "000000000000",
+            "beforeCentsText": "000000000000",
+            "deltaCentsText": "00000000000",
+            "partition": "account_transition_rewrite"
+          },
+          "00000000003": {
+            "afterCentsText": "000000000000",
+            "beforeCentsText": "000000000000",
+            "deltaCentsText": "00000000000",
+            "partition": "source_eof_final_account_not_rewritten"
+          }
+        },
+        "fileEffects": {
+          "ACCTFILE": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/ACCTFILE",
+              "sha256": "6f04e94a7651f6b58822e36b70050f173bf601c000db937d174d3ab8f1b68d46"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/ACCTFILE",
+              "sha256": "f939ad543e6570127da439af02be85f6f849cc7151ff54af6080dc35b9f14a39"
+            },
+            "changed": true
+          },
+          "DISCGRP": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/DISCGRP",
+              "sha256": "e615e81d67d44a5fa9958d915906ea1b55709d3ac36838e14d113afe420a9efd"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/DISCGRP",
+              "sha256": "e615e81d67d44a5fa9958d915906ea1b55709d3ac36838e14d113afe420a9efd"
+            },
+            "changed": false
+          },
+          "TCATBALF": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/TCATBALF",
+              "sha256": "d1447021bd4a207692735e5a9e481fe1ab7950f539d433f9daf1f6480571987a"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/TCATBALF",
+              "sha256": "d1447021bd4a207692735e5a9e481fe1ab7950f539d433f9daf1f6480571987a"
+            },
+            "changed": false
+          },
+          "TRANSACT": {
+            "after": {
+              "bytes": 700,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/TRANSACT",
+              "sha256": "f1113cbf73a5965f06dfe4b3a2e5f5f368e018cebf06b669887d1e4204fdf125"
+            },
+            "before": {
+              "classification": "missing",
+              "exists": false,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/TRANSACT"
+            },
+            "changed": true
+          },
+          "XREFFILE": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/XREFFILE",
+              "sha256": "9a001b85842e19fa5b797551fa9394512abf44212e7ad1e79509e07205c72203"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/XREFFILE",
+              "sha256": "9a001b85842e19fa5b797551fa9394512abf44212e7ad1e79509e07205c72203"
+            },
+            "changed": false
+          },
+          "XREFFILE.1": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/p2b-runs/interest-70xown_k/XREFFILE.1",
+              "sha256": "e451b3e4d458991013a1b201b91c8755a1326f0073a667f51f9700f13641c391"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package/XREFFILE.1",
+              "sha256": "e451b3e4d458991013a1b201b91c8755a1326f0073a667f51f9700f13641c391"
+            },
+            "changed": false
+          }
+        }
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "candidate checker evidence; not model-call generation, not T1, not T2 fuzz",
+        "transitionBinding": "source_partition_obligations_only; no official MBT transition promotion"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateInterestTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-interest-essential-v1/RESULTS-MATRIX.json",
+        "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+        "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence plus source monthly-interest formula in essential_interest.py",
+        "checkerResult": [],
+        "observedTransactionCount": 2
+      },
+      "track": "interest"
+    },
+    {
+      "caseId": "single-final-eof",
+      "checkerScope": {
+        "accountDeltas": {
+          "00000000009": {
+            "afterCentsText": "000000000000",
+            "beforeCentsText": "000000000000",
+            "deltaCentsText": "00000000000",
+            "partition": "source_eof_final_account_not_rewritten"
+          }
+        },
+        "fileEffects": {
+          "ACCTFILE": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/ACCTFILE",
+              "sha256": "33a6282ca7b3413c9a34cbd0b50d6c5d5b665dda92a2d7354bc2dee4319402c8"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/ACCTFILE",
+              "sha256": "33a6282ca7b3413c9a34cbd0b50d6c5d5b665dda92a2d7354bc2dee4319402c8"
+            },
+            "changed": false
+          },
+          "DISCGRP": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/DISCGRP",
+              "sha256": "b0279b60acb5fd6bb786fa45f0921bb4cd75b29a664f9dcc0c3d680f2a8f5348"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/DISCGRP",
+              "sha256": "b0279b60acb5fd6bb786fa45f0921bb4cd75b29a664f9dcc0c3d680f2a8f5348"
+            },
+            "changed": false
+          },
+          "TCATBALF": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/TCATBALF",
+              "sha256": "6a6d9ede2fbf217488bcd77d1dc3f5bb5a3a33f9cad6636f999a32776665e88d"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/TCATBALF",
+              "sha256": "6a6d9ede2fbf217488bcd77d1dc3f5bb5a3a33f9cad6636f999a32776665e88d"
+            },
+            "changed": false
+          },
+          "TRANSACT": {
+            "after": {
+              "bytes": 350,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/TRANSACT",
+              "sha256": "b9f6d8fc9f8248058c50cca9dfdce706f2a54b53d63446e56d4248387ebeaef5"
+            },
+            "before": {
+              "classification": "missing",
+              "exists": false,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/TRANSACT"
+            },
+            "changed": true
+          },
+          "XREFFILE": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/XREFFILE",
+              "sha256": "696222acb70901a6517720898e59450e15b7082310024e71f977c8d4790b0812"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/XREFFILE",
+              "sha256": "696222acb70901a6517720898e59450e15b7082310024e71f977c8d4790b0812"
+            },
+            "changed": false
+          },
+          "XREFFILE.1": {
+            "after": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/p2b-runs/interest-j_lhzjcr/XREFFILE.1",
+              "sha256": "cfdac869222d487f8296a922697563f2f9f405673f91565d6518cea7eca5b37c"
+            },
+            "before": {
+              "bytes": 8192,
+              "classification": "available",
+              "exists": true,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/package/XREFFILE.1",
+              "sha256": "cfdac869222d487f8296a922697563f2f9f405673f91565d6518cea7eca5b37c"
+            },
+            "changed": false
+          }
+        }
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "candidate checker evidence; not model-call generation, not T1, not T2 fuzz",
+        "transitionBinding": "source_partition_obligations_only; no official MBT transition promotion"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateInterestTransactions",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-interest-essential-v1/RESULTS-MATRIX.json",
+        "P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+        "P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime evidence plus source monthly-interest formula in essential_interest.py",
+        "checkerResult": [],
+        "observedTransactionCount": 1
+      },
+      "track": "interest"
+    },
+    {
+      "caseId": "date-boundaries-in-out-v1",
+      "checkerScope": {
+        "expectedDetailIds": [
+          "REPORT-START-001",
+          "REPORT-END---001"
+        ],
+        "failures": [],
+        "observedDetailIds": [
+          "REPORT-START-001",
+          "REPORT-END---001"
+        ],
+        "observedTotalsCount": 0
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "report partition checker; not retrospective business oracle for totals",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateTransactionReport",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/date-boundaries-in-out-v1.TRANREPT.bin",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/date-boundaries-in-out-v1.parsed.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime report output and source-guided parsed record partitions",
+        "rawRecordCount": 6,
+        "runtimeStatus": 200,
+        "totalQualification": "inconclusive-eof-branch"
+      },
+      "track": "reporting"
+    },
+    {
+      "caseId": "empty-in-range-v1",
+      "checkerScope": {
+        "expectedDetailIds": [],
+        "failures": [],
+        "observedDetailIds": [],
+        "observedTotalsCount": 0
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "report partition checker; not retrospective business oracle for totals",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateTransactionReport",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/empty-in-range-v1.TRANREPT.bin",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/empty-in-range-v1.parsed.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime report output and source-guided parsed record partitions",
+        "rawRecordCount": 0,
+        "runtimeStatus": 200,
+        "totalQualification": "inconclusive-eof-branch"
+      },
+      "track": "reporting"
+    },
+    {
+      "caseId": "card-break-two-groups-v1",
+      "checkerScope": {
+        "expectedDetailIds": [
+          "GROUP1-ITEM-0001",
+          "GROUP1-ITEM-0002",
+          "GROUP2-ITEM-0001",
+          "GROUP2-ITEM-0002"
+        ],
+        "failures": [],
+        "observedDetailIds": [
+          "GROUP1-ITEM-0001",
+          "GROUP1-ITEM-0002",
+          "GROUP2-ITEM-0001",
+          "GROUP2-ITEM-0002"
+        ],
+        "observedTotalsCount": 3
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "report partition checker; not retrospective business oracle for totals",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateTransactionReport",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/card-break-two-groups-v1.TRANREPT.bin",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/card-break-two-groups-v1.parsed.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime report output and source-guided parsed record partitions",
+        "rawRecordCount": 13,
+        "runtimeStatus": 200,
+        "totalQualification": "inconclusive-eof-branch"
+      },
+      "track": "reporting"
+    },
+    {
+      "caseId": "pagination-threshold-20-v1",
+      "checkerScope": {
+        "expectedDetailIds": [
+          "PAGE20-00000000",
+          "PAGE20-00000001",
+          "PAGE20-00000002",
+          "PAGE20-00000003",
+          "PAGE20-00000004",
+          "PAGE20-00000005",
+          "PAGE20-00000006",
+          "PAGE20-00000007",
+          "PAGE20-00000008",
+          "PAGE20-00000009",
+          "PAGE20-00000010",
+          "PAGE20-00000011",
+          "PAGE20-00000012",
+          "PAGE20-00000013",
+          "PAGE20-00000014",
+          "PAGE20-00000015",
+          "PAGE20-00000016",
+          "PAGE20-00000017",
+          "PAGE20-00000018",
+          "PAGE20-00000019"
+        ],
+        "failures": [],
+        "observedDetailIds": [
+          "PAGE20-00000000",
+          "PAGE20-00000001",
+          "PAGE20-00000002",
+          "PAGE20-00000003",
+          "PAGE20-00000004",
+          "PAGE20-00000005",
+          "PAGE20-00000006",
+          "PAGE20-00000007",
+          "PAGE20-00000008",
+          "PAGE20-00000009",
+          "PAGE20-00000010",
+          "PAGE20-00000011",
+          "PAGE20-00000012",
+          "PAGE20-00000013",
+          "PAGE20-00000014",
+          "PAGE20-00000015",
+          "PAGE20-00000016",
+          "PAGE20-00000017",
+          "PAGE20-00000018",
+          "PAGE20-00000019"
+        ],
+        "observedTotalsCount": 3
+      },
+      "condition": "source-guided-complementary-T3",
+      "modelMapping": {
+        "classificationLimit": "report partition checker; not retrospective business oracle for totals",
+        "transitionBinding": "none_verified_for_this_case"
+      },
+      "officialCampaignStatus": "candidate_not_official_campaign",
+      "operationId": "generateTransactionReport",
+      "role": "source_guided_complementary_T3_checker_candidate",
+      "sourceEvidence": [
+        "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/pagination-threshold-20-v1.TRANREPT.bin",
+        "P3/complementary-reporting-essential-v1/evidence/raw-report-outputs/pagination-threshold-20-v1.parsed.json"
+      ],
+      "sourceMapping": {
+        "authority": "COBOL/P2b local runtime report output and source-guided parsed record partitions",
+        "rawRecordCount": 33,
+        "runtimeStatus": 200,
+        "totalQualification": "inconclusive-eof-branch"
+      },
+      "track": "reporting"
+    }
+  ],
+  "candidateCountsByTrack": {
+    "interest": 2,
+    "posting": 6,
+    "reporting": 4
+  },
+  "createdUtc": "2026-09-16T11:07:09Z",
+  "cycleRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+  "kind": "complementary-suite-integration-v1",
+  "nonExecuting": true,
+  "officialExecutionStarted": false,
+  "roleSeparation": {
+    "T1": "existing real LLM scenario stimuli imported from campaign-freeze-package-v3; exact copy only, no new/manual T1 classification",
+    "T2": "existing OpenAPI-guided fuzz stimuli imported from campaign-freeze-package-v3; exact copy only, no regeneration in this package",
+    "T3": "existing/reference-mapped model-based suite remains campaign-freeze-package-v3 T3; guardResult policy preserved",
+    "T4": "existing union remains campaign-freeze-package-v3 T4; no duplicate 12k official run or repeatcampaign",
+    "complementaryEssentialCases": "source_guided_complementary_T3_checker_candidate",
+    "complementaryLimit": "local essential batteries are checker/coverage-gap evidence; they are not reclassified as T1, T2 fuzz, official MBT generation, or official execution results"
+  },
+  "sourceAndModelMapping": {
+    "allOfInputSemantics": "This package does not deserialize/rewrite official frozen request bytes; T1/T2 exact-copy status is read from VERIFICATION.json.",
+    "emptyObjectSddSemantics": "Existing {} SDD cases remain in freeze package; complementary cases do not reinterpret {} as business diversity.",
+    "modelAuthority": "campaign-freeze-package-v3 T3/reference-executable-v4 remains separate; complementary cases do not invent aliases or promote unbound manual checks to official T3 stimuli",
+    "sourceAuthority": "COBOL source/P2b local runtime artifacts and byte-pinned fixtures/checkers listed in artifactPins"
+  },
+  "sourceFreeze": {
+    "conditionCounts": {
+      "T1": 88,
+      "T2": 5868,
+      "T3": 394,
+      "T4": 6350
+    },
+    "contractCount": 7,
+    "finalReadinessSha256": "25251c5d570abcd933af6c7205af3fe62ca03e3e70539ea699a1b2b23a086fc0",
+    "officialExecutionAuthorizedOrClaimed": false,
+    "officialExecutionStarted": false,
+    "officialReadinessDeclaredInVerification": false,
+    "operationCellCount": 21,
+    "operationCells": [
+      {
+        "contractId": "E1-1",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E1-1",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E1-1",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E1-2",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E1-2",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E1-2",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E1-3",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E1-3",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E1-3",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E2-1",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E2-1",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E2-1",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E2-2",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E2-2",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E2-2",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E2-3",
+        "operationId": "generateInterestTransactions",
+        "track": "interest"
+      },
+      {
+        "contractId": "E2-3",
+        "operationId": "generateTransactionReport",
+        "track": "reporting"
+      },
+      {
+        "contractId": "E2-3",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      {
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "interest",
+        "track": "unknown"
+      },
+      {
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "posting",
+        "track": "unknown"
+      },
+      {
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "reporting",
+        "track": "unknown"
+      }
+    ],
+    "package": "P3/campaign-freeze-package-v3",
+    "perContract": [
+      {
+        "caseCounts": {
+          "T1": 10,
+          "T2": 900,
+          "T3": 52,
+          "T4": 962
+        },
+        "contractId": "E1-1",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 9,
+          "T2": 900,
+          "T3": 52,
+          "T4": 961
+        },
+        "contractId": "E1-2",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 12,
+          "T2": 900,
+          "T3": 52,
+          "T4": 964
+        },
+        "contractId": "E1-3",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 18,
+          "T2": 900,
+          "T3": 32,
+          "T4": 950
+        },
+        "contractId": "E2-1",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 12,
+          "T2": 900,
+          "T3": 52,
+          "T4": 964
+        },
+        "contractId": "E2-2",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 15,
+          "T2": 900,
+          "T3": 32,
+          "T4": 947
+        },
+        "contractId": "E2-3",
+        "operations": [
+          "generateInterestTransactions",
+          "generateTransactionReport",
+          "postDailyTransactions"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T2": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T3": [
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ],
+          "T4": [
+            "generateInterestTransactions",
+            "generateTransactionReport",
+            "postDailyTransactions"
+          ]
+        }
+      },
+      {
+        "caseCounts": {
+          "T1": 12,
+          "T2": 468,
+          "T3": 122,
+          "T4": 602
+        },
+        "contractId": "E3-SDD-stage6r3",
+        "operations": [
+          "interest",
+          "posting",
+          "reporting"
+        ],
+        "operationsByCondition": {
+          "T1": [
+            "interest",
+            "posting",
+            "reporting"
+          ],
+          "T2": [
+            "interest",
+            "posting",
+            "reporting"
+          ],
+          "T3": [
+            "interest",
+            "posting",
+            "reporting"
+          ],
+          "T4": [
+            "interest",
+            "posting",
+            "reporting"
+          ]
+        }
+      }
+    ],
+    "t1t2ExactCopies": true,
+    "verificationSha256": "ce8743b61e800191b0fe23ffe4d11ec27f9100085285fb93c0e39fbc600b7f4d"
+  }
+}

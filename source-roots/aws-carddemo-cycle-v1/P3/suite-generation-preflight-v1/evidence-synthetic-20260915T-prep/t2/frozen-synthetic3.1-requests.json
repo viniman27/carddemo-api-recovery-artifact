@@ -1,0 +1,102 @@
+{
+  "kind": "t2-schemathesis-offline-frozen-requests",
+  "requests": [
+    {
+      "body": {},
+      "expectedStatus": [
+        200,
+        400,
+        500
+      ],
+      "headers": {
+        "content-type": "application/json"
+      },
+      "id": "seed104729-positive-0",
+      "method": "POST",
+      "parameters": {
+        "direction": "positive",
+        "seed": 104729
+      },
+      "path": "/synthetic"
+    },
+    {
+      "body": {},
+      "expectedStatus": [
+        200,
+        400,
+        500
+      ],
+      "headers": {
+        "content-type": "application/json"
+      },
+      "id": "seed104729-positive-1",
+      "method": "POST",
+      "parameters": {
+        "direction": "positive",
+        "seed": 104729
+      },
+      "path": "/synthetic"
+    },
+    {
+      "body": {
+        "base64": "AA==",
+        "kind": "bytes"
+      },
+      "expectedStatus": [
+        200,
+        400,
+        500
+      ],
+      "headers": {
+        "content-type": "application/json"
+      },
+      "id": "seed104729-negative-0",
+      "method": "POST",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "path": "/synthetic"
+    },
+    {
+      "body": -150,
+      "expectedStatus": [
+        200,
+        400,
+        500
+      ],
+      "headers": {
+        "content-type": "application/json"
+      },
+      "id": "seed104729-negative-1",
+      "method": "POST",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "path": "/synthetic"
+    },
+    {
+      "body": {
+        "base64": "R72RL7mqPsivuTB9Xj6Bc3Zsp/da",
+        "kind": "bytes"
+      },
+      "expectedStatus": [
+        200,
+        400,
+        500
+      ],
+      "headers": {
+        "content-type": "application/json"
+      },
+      "id": "seed104729-negative-2",
+      "method": "POST",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "path": "/synthetic"
+    }
+  ],
+  "schema": "synthetic3.1"
+}

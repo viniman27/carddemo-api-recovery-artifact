@@ -1,0 +1,12 @@
+openapi: 3.1.0
+info: {title: Shipping Quote API, version: 1.0.0}
+paths:
+  /shipping-quotes:
+    post:
+      operationId: calculateShippingQuote
+      requestBody:
+        required: true
+        content: {application/json: {schema: {type: object, required: [weight, destinationZone], properties: {weight: {type: number, minimum: 0, maximum: 999.99, multipleOf: 0.01}, destinationZone: {type: string, minLength: 1, maxLength: 1, description: Zones A and B produce quotes; every other one-character zone follows the observable failure branch.}}}}}
+      responses:
+        '200': {description: Quote calculated., content: {application/json: {schema: {type: object, required: [amount], properties: {amount: {type: number, minimum: 0, multipleOf: 0.01}}}}}}
+        '422': {description: Zone not recognized; 422 is a transport mapping because COBOL defines only a failure flag.}

@@ -1,0 +1,444 @@
+{
+  "bodyCapturePatch": {
+    "patched": true,
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "preserve raw response bytes for official structural measurement without editing harness-v3 file"
+  },
+  "createdUtc": "2026-09-16T12:11:25Z",
+  "experimentalViolations": [
+    "experimental_structural_violation:schema_violation"
+  ],
+  "harnessImport": {
+    "bytes": 26983,
+    "module": "campaign_harness",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "aws-carddemo-local-readiness-runner-v3-report",
+  "localReadinessExecution": true,
+  "measurementWarnings": [
+    {
+      "admissibility": "inadmissible_or_limited",
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ],
+      "track": "posting"
+    },
+    {
+      "admissibility": "inadmissible_or_limited",
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ],
+      "track": "posting"
+    }
+  ],
+  "officialExecutionStarted": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only never-attempted case IDs; failed attempts are not replayed",
+    "stopPolicy": "transport/deadline/startup/lifecycle quietness stops; experimental expectation/structural violations are recorded and execution continues; measurement inadmissibility is recorded without fake zero"
+  },
+  "preparedTarget": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "isolatedContractSourceCopy": {
+      "contracts": [
+        {
+          "bytes": 30136,
+          "contractId": "E1-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+          "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt"
+        },
+        {
+          "bytes": 31102,
+          "contractId": "E1-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+          "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt"
+        },
+        {
+          "bytes": 30113,
+          "contractId": "E1-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+          "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt"
+        },
+        {
+          "bytes": 28899,
+          "contractId": "E2-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+          "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt"
+        },
+        {
+          "bytes": 29973,
+          "contractId": "E2-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+          "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt"
+        },
+        {
+          "bytes": 25822,
+          "contractId": "E2-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+          "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt"
+        }
+      ],
+      "count": 6,
+      "reason": "P2c facades load all E1/E2 response-original contracts by id inside isolated cycle"
+    },
+    "isolatedCoveragePatch": {
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair",
+      "patchedSha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "v2CommandLogPreservation": {
+        "alreadyPreservedByCoveragePatch": true,
+        "mechanical": true,
+        "patchedSha256AfterV2": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+        "scope": "isolated P2b copy only"
+      }
+    },
+    "isolatedP2bBuild": {
+      "argv": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "build"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+      "returncode": 0,
+      "stderrTail": "",
+      "stdoutTail": "carddemo-cycle-v1/P2b/build/report_fixture\",\n      \"sha256\": \"a80b5a6fe08537c743dcf20ee1a96a4c40c0d6c414ab9a6e4a1717c7194ac4ff\",\n      \"bytes\": 52864,\n      \"businessInstrumented\": false\n    }\n  ],\n  \"gcovPrefixPolicy\": \"per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation\",\n  \"immutableBuildPolicy\": \"single immutable coverage build reused for every server/application invocation; gcno not regenerated after first successful build\",\n  \"immutableArtifacts\": [\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C\",\n      \"sha256\": \"6ed5e1a2901d789f30c9da01b34e2dd20d50a1dda05989811dfee9c4ad048f6b\",\n      \"bytes\": 116856\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c\",\n      \"sha256\": \"22e5226bd8359efb00d3ceb6df9d257a526b6ff9af0a91a6119582155b065910\",\n      \"bytes\": 149632\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno\",\n      \"sha256\": \"3716359d4312a707df97128f4f95de65456be24dc1aef56a3e8c0eda0775de43\",\n      \"bytes\": 192068\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib\",\n      \"sha256\": \"181c697e627ae93497ced38a709246588e68c61c6339ad88238d2274ee98961a\",\n      \"bytes\": 100272\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c\",\n      \"sha256\": \"e6f7b560941a7cab8192261eea815f85835abb774427bdb21ae8872772ce25c1\",\n      \"bytes\": 132462\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno\",\n      \"sha256\": \"05b5ac3c3089620f36aa75d1d48308293ab3b722d46e4412d797fc769a68aac1\",\n      \"bytes\": 175924\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C\",\n      \"sha256\": \"2e9e2897c1bd53092baf7c05426db765bf7408e93227a898f33e8638270055fa\",\n      \"bytes\": 116824\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c\",\n      \"sha256\": \"28bb68efbf969f6ba0c7b16656fc775a1b895d4da0dfffe77972b74df93681fe\",\n      \"bytes\": 147400\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno\",\n      \"sha256\": \"6b7488bbab1d1c09168ee650f770fd46ea4de9dca7a3d96bae1cda8281c3bede\",\n      \"bytes\": 194548\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER\",\n      \"sha256\": \"4d672287d978d7070951ffdbf5b77a6795767e8310ea186c06296593c285c8f0\",\n      \"bytes\": 52064\n    }\n  ]\n}\n"
+    },
+    "isolatedP2cFewshotCoveragePatch": {
+      "mechanicalAdaptations": [
+        "command_log_unredirected_to_isolated_p2b",
+        "posting_gcov_prefix",
+        "interest_gcov_prefix",
+        "reporting_gcov_prefix",
+        "audit_measurement_provenance"
+      ],
+      "originalSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "patchScope": "isolated P2c few-shot copy only",
+      "patchedSha256": "ddd9fc32cf39e7e6be55c915a7250f576d1f57f6b57a30e6be6cc0b2a008e2a8",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "provenance": "same-invocation coverage measurement plumbing only; no original COBOL/API/contracts/public response behavior changes"
+    },
+    "matrixV2FewshotPatch": {
+      "patched": true,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "reason": "isolated copy only; allow per-case physical fixture registry without public request fields",
+      "sha256": "52284ec9a8b0c50f2af709a1b01c54ad8fbb5cae09d99b1025cae46b5440a074"
+    },
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-preparation",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "6aab0c35e020cfda39de63a3f1e70945b4dd6d54ac3994cad14c4c2fb852c4f6"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "bounded local readiness qualification only; not an official campaign run and not a T4 result",
+  "stopPolicy": {
+    "reason": null,
+    "stopped": false
+  },
+  "suiteReports": [
+    {
+      "applications_inline": [
+        {
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 46336,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "95e79609f47ec91daeb6373bab43e39e9feab48a2365a12a5be7f1a0959cf7d4",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+        },
+        {
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 46340,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "44071dbd9fa9741e6a2191e6ce4cc65c94b72a28653832f9753323d2e36a6075",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+        }
+      ],
+      "attempted_case_count": 2,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 46336,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "95e79609f47ec91daeb6373bab43e39e9feab48a2365a12a5be7f1a0959cf7d4",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+          },
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+          "contractId": "E3-SDD-stage6r3",
+          "measurement": {
+            "admissibility": "inadmissible_or_limited",
+            "auditDelta": [],
+            "reasons": [
+              "audit_missing_for_current_case_track"
+            ],
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403",
+            "track": "posting"
+          },
+          "operationId": "posting",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500,
+                503
+              ],
+              "status": 500
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/posting",
+            "provenance": [
+              "complementary-matrix-v2:E3-SDD-stage6r3:posting:valid-new-tcatbal"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "a95eb53d518f0ca319d961bdb35285135d47bf266b78c13fe8b88e01989e5a1d",
+            "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNhdGVnb3J5IjogInRlY2huaWNhbF9mYWlsdXJlIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgImV4Y2VwdGlvbiI6ICJGaWxlTm90Rm91bmRFcnJvcigyLCAnTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeScpIn0=",
+            "response_bytes": 176,
+            "response_sha256": "4715cf8ff129ec709bfeb669b247654fdb76e09040969747f3f545820e334b65",
+            "status": 500
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay",
+          "structuralCheck": {
+            "classification": "schema_violation",
+            "detail": {
+              "errors": [
+                "{'track': 'posting', 'category': 'technical_failure', 'completeness': 'not_attested', 'durability': 'unknown', 'exception': \"FileNotFoundError(2, 'No such file or directory')\"} is not valid under any of the given schemas"
+              ],
+              "status": 500
+            },
+            "ok": false
+          },
+          "track": "posting"
+        },
+        {
+          "application": {
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 46340,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "44071dbd9fa9741e6a2191e6ce4cc65c94b72a28653832f9753323d2e36a6075",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+          },
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+          "contractId": "E3-SDD-stage6r3",
+          "measurement": {
+            "admissibility": "inadmissible_or_limited",
+            "auditDelta": [],
+            "reasons": [
+              "audit_missing_for_current_case_track"
+            ],
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f",
+            "track": "posting"
+          },
+          "operationId": "posting",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500,
+                503
+              ],
+              "status": 500
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/posting",
+            "provenance": [
+              "complementary-matrix-v2:E3-SDD-stage6r3:posting:reject-card-missing"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "2c33780115281ae6cb4c08d4c00ece37a2bdc1c11d4e1760ea873899869cb5e9",
+            "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNhdGVnb3J5IjogInRlY2huaWNhbF9mYWlsdXJlIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgImV4Y2VwdGlvbiI6ICJGaWxlTm90Rm91bmRFcnJvcigyLCAnTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeScpIn0=",
+            "response_bytes": 176,
+            "response_sha256": "4715cf8ff129ec709bfeb669b247654fdb76e09040969747f3f545820e334b65",
+            "status": 500
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay",
+          "structuralCheck": {
+            "classification": "schema_violation",
+            "detail": {
+              "errors": [
+                "{'track': 'posting', 'category': 'technical_failure', 'completeness': 'not_attested', 'durability': 'unknown', 'exception': \"FileNotFoundError(2, 'No such file or directory')\"} is not valid under any of the given schemas"
+              ],
+              "status": 500
+            },
+            "ok": false
+          },
+          "track": "posting"
+        }
+      ],
+      "loaded_case_count": 2,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/smoke-sdd/smoke-suite.freeze.json",
+      "suite_id": "P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE",
+      "totals": {
+        "attempted": 2,
+        "completed": 2,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 2,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 4,
+        "transport_failures": 0
+      }
+    }
+  ],
+  "totals": {
+    "attempted": 2,
+    "completed": 2,
+    "measurement_admissible": 0,
+    "planned": 2,
+    "structural_ok": 0
+  }
+}

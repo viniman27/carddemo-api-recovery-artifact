@@ -1,0 +1,537 @@
+# Canonical Data Boundary Specification
+
+## Purpose
+
+This Stage 5 specification proposes technology-neutral data and state meanings for the AWS CardDemo public cycle in run `E3-01`, derived exclusively from approved Stage 4 rules `R-1`–`R-20`.
+
+**Posting, interest, and reporting remain mandatory, separately traceable tracks.** This document does not merge them into a single business capability or establish a cross-job processing schedule.
+
+| Attribute | Value |
+|---|---|
+| Run | `E3-01` |
+| Stage | `5` |
+| Feature | `canonical-data-boundary-carddemo` |
+| Artifact | `specs/canonical-data-boundary-carddemo/requirements.md` |
+| Immutable upstream capability identity | `unselected-stage-1-scope-only` |
+| Mandatory business tracks | `posting`, `interest`, `reporting` |
+| Mandatory specification tracks | Conceptual data boundary; source-to-canonical mapping/provenance; explicit unresolved gaps |
+| Status | Draft for external human review |
+| Human approval | `false` |
+| Completeness gate passed | `false` |
+| Ready for implementation | `false` |
+
+Sections 2–6 define the **conceptual data boundary**. Section 4’s mapping tables and Section 7 provide the separate **source-to-canonical mapping/provenance track**. Section 8 maintains the **explicit unresolved gaps track**, followed by review conditions in Section 9. This additional gap section preserves the supplied template’s substantive obligations without hiding uncertainty inside type definitions.
+
+This response supplies one requirements document only. No files, metadata, source, or approval records are modified.
+
+## Boundary Integrity Discipline
+
+- Canonical elements derive from approved semantic rules and data meanings, not delivery convenience.
+- Canonical names below are proposed boundary vocabulary, not replacements for upstream rule, evidence, capability, or track identities.
+- Values, processing state, output attempts, local continuation, and durable effects remain distinct.
+- A source declaration establishes representation provenance; it does not automatically establish a business unit, permissible input domain, numerical policy, or universal identity.
+- Source-specific identifiers, literals, fields, and statement names occur only as mapping/provenance references.
+- Every boundary decision cites `R-n`; every canonical element resolves through those rules to `E-n` and full source anchors.
+- Underdetermined policy remains unresolved. No source repair, omitted finalization, corrected total, compensating effect, or repeat-safety mechanism is introduced.
+- Required/conditional classifications describe semantic participation in a source path, not a newly imposed input-checking policy.
+- No later-stage surface, realization, execution, or implementation-readiness decision is made.
+
+## Section 1: Upstream Authority and Entry Condition
+
+### 1.1 Upstream Authorities and Scope Inheritance
+
+The entry basis is the supplied approved current versions of Stages 1, 2-r2, 3-r2, and 4, together with the Stage 4 authorization and source-grounded counterexample review.
+
+All paths in the following register are relative to `RUN_ROOT`.
+
+| Authority | Supplied SHA-256 |
+|---|---|
+| `specs/pipeline-scope-carddemo/requirements.md` | `1362fab5d55b77ef6121328606ae974295cd5723849520e9a246f4bd45e64cc9` |
+| `specs/capability-selection-carddemo-r2/requirements.md` | `abdb59180f379d9e14eb86dfa1d8226ec50c981346767e808fd382eb7462bbc4` |
+| `specs/legacy-evidence-carddemo-r2/requirements.md` | `4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b` |
+| `specs/capability-semantics-carddemo/requirements.md` | `2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93` |
+| `specs/pipeline-scope-carddemo/spec.json` | `c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978` |
+| `specs/capability-selection-carddemo-r2/spec.json` | `7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973` |
+| `specs/legacy-evidence-carddemo-r2/spec.json` | `d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7` |
+| `specs/capability-semantics-carddemo/spec.json` | `0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb` |
+| `reviews/stage-1-authorization.json` | `0ec9d89962c088507775523f266816b5c3c13f7631c7a6409b45bc13352542da` |
+| `reviews/stage-2-r2-authorization.json` | `22294af2fb12235297e57e4b084a729695864af895d4047eb4a630d7286ec1c9` |
+| `reviews/stage-3-r2-authorization.json` | `d8cdf343b5ed63cdd2e83e1627a50673acdb34930ae0c63e29be0e8fb122941e` |
+| `reviews/stage-4-authorization.json` | `405caf0960e1a13dfbc8a8965340e9f4957571b8eea0b895b09b125e21025ee9` |
+| `STAGE4-COUNTEREXAMPLE-REVIEW.md` | `56f32db0669f3c738ed83ee0294929ca1ee0f5c76e663eb2abdbecab7e319e29` |
+
+The supplied authorization approves Stage 4 **within conditional documentary scope** and authorizes Stage 5 for all three tracks. It expressly retains uncertainty about durable effects, EOF storage, configuration, external routines, numerical policy, and repetition safety.
+
+The supplied gate-check result is `current`, `ok: true`, and `human_approval_granted: false`. It reports freshness of existing authority, not a check performed here or a new approval. Historical draft-status prose in upstream artifacts remains unchanged.
+
+### 1.2 Inherited Constraints
+
+- The immutable operational chain identity remains `unselected-stage-1-scope-only`.
+- The three mandatory tracks are not optional alternatives.
+- Only supplied approved upstream materials, authorizations, review attachment, 19 allowlisted corpus bodies, and generic framework instructions inform this artifact.
+- Original corpus bytes, exact supplied text, and stable numbered representations remain distinct retained evidence objects.
+- The allowlist does not establish application or dependency completeness.
+- No execution observations, source modifications, external retrieval, or additional calls are introduced.
+- Public-study decisions do not establish institutional applicability.
+- No unknown property is resolved merely because a type or table needs a value.
+
+### 1.3 Source and Framework Version Basis
+
+The governing supplied template is:
+
+`FRAMEWORK_ROOT/settings/templates/pipeline/canonical-data-boundary-spec.md`
+
+SHA-256: `3ef2b77480438468f4c6d1da002126a605ab8d88c9dcd11410fb1dbce5c005ad`.
+
+The source package is:
+
+`<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/evidence/research-package.json`
+
+SHA-256: `63ba5c47ecb21349549744b912af3b150654e7e435724dba499e3c88369f15a2`.
+
+The complete supplied `input_pins` register is incorporated by reference without replacement or normalization. This includes all original-file pins, derived-representation pins, framework pins, and authority pins. Retention of this document must be accompanied by retention of that exact register and the supplied `source_bodies` entries, including both `content` and `numbered_lines`. Condensed mappings below are not substitutes for those bodies.
+
+Anchors use the supplied stable, 1-based numbered representations. No hashes were recomputed; package contents and filesystem integrity were not independently checked.
+
+## Section 2: Design Decisions at the Boundary
+
+Decision numbering continues after upstream `D-1`. All decisions below are proposals in this draft, not human dispositions.
+
+### 2.1 D-2: Keep Track-Qualified Data Meanings
+
+- **Decision:** Define posting, interest, and reporting concepts separately. Shared field names permit explicit mapping, not automatic type or resource-instance identity.
+- **Rationale:** Posting daily input, posting transaction output, generated interest transactions, and reporting input have different provenance and roles. Rules `R-3`, `R-7`, `R-11`, `R-13`, and `R-19` do not license a unified transaction lifecycle or universal account/card relationship.
+- **Consequences:** Each use retains its track and source role. No global identifier uniqueness, one-card-per-account rule, or cross-track instance equality is promised.
+- **Institutional applicability note:** Any institutional consolidation requires separate evidence and reconciliation.
+
+### 2.2 D-3: Distinguish Boundary Values from Internal Resource State
+
+- **Decision:** Canonicalize input/output meanings and relevant outcome distinctions. Treat account, category, disclosure, and lookup resources as explicitly identified internal semantic dependencies, not newly available state-management capabilities.
+- **Rationale:** `R-2`, `R-4`, `R-5`, `R-7`, `R-9`, and `R-13` establish their participation but not independent consumer control.
+- **Consequences:** State identity, initialization authority, and uncertainty remain mandatory in Section 6 even where the resource does not cross as an independently supplied value.
+- **Institutional applicability note:** Ownership and access arrangements must be established separately for institutional resources.
+
+### 2.3 D-4: Refuse Stronger Outcome and Repetition Guarantees
+
+- **Decision:** Refuse atomic success, guaranteed rollback, guaranteed durable partial state, complete failure diagnosis, and safe repetition for every track.
+- **Rationale:** `R-6`, `R-18`, and `R-20` establish ordered attempts and unknown external effects, not those guarantees.
+- **Consequences:** A local successful branch is not a completed durable outcome. A failure does not imply empty or unchanged output. Repetition safety remains **unknown**, not universally unsafe.
+- **Institutional applicability note:** Institutional persistence and failure behavior require evidence from the relevant environment.
+
+### 2.4 D-5: Preserve Source-Bounded Numeric, Identifier, and Temporal Meanings
+
+- **Decision:** Retain signed quantity roles, source identifier construction, and distinct temporal roles without assigning unstated currency, rate units, global identity, calendar policy, numerical precision policy, or overflow behavior.
+- **Rationale:** `R-2`, `R-3`, `R-5`, `R-10`, `R-11`, `R-12`, `R-16`, and `R-17` license bounded uses only.
+- **Consequences:** Source widths and receiving declarations are provenance constraints, not a newly certified accepted domain. Missing policies remain blocking for stronger value claims.
+- **Institutional applicability note:** Units and value-domain authority must come from the institutional case, not this public corpus.
+
+### 2.5 D-6: Retain Conditional and Missing Finalization
+
+- **Decision:** Do not insert an interest final-account update, final reporting account total, conventional continue-after-date-failure behavior, or reconciled report total.
+- **Rationale:** `R-8`, `R-12`, `R-14`, and `R-15` explicitly distinguish these paths.
+- **Consequences:** Output creation and account finalization remain independent; report finalization remains conditional. Unemitted values are not replaced with zero.
+- **Institutional applicability note:** Any changed obligation requires an explicit upstream decision rather than silent normalization.
+
+### 2.6 D-7: Bound Presentation and Operational Exclusions
+
+- **Decision:** Keep report detail, header-date, and total meanings; retain source presentation limitations in provenance rather than turning spacing, separators, and counters into independently supplied business values. Keep operational job details as dependency context.
+- **Rationale:** `R-16` distinguishes presentation from detail counts; `R-17` and `R-19` distinguish documentary configuration from actual flow.
+- **Consequences:** No claim of lossless descriptions, unlimited numeric display, twenty details per report page, single date authority, or executable cycle follows.
+- **Institutional applicability note:** Institutional reporting obligations and operational ownership require their own review.
+
+### 2.7 D-8: Exclude Unlicensed Meanings, Not Evidence
+
+- **Decision:** Do not promote declaration-only fields, untouched filler, or a local fee placeholder into new canonical business obligations. Preserve their exact source provenance.
+- **Rationale:** `R-3` leaves unspecified storage unspecified; `R-11` licenses no fee computation; Stage 4 explicitly declines to force declarations into business rules.
+- **Consequences:** Exclusion means “no canonical meaning licensed here,” not “field absent,” “bytes disposable,” or “fees absent throughout CardDemo.”
+- **Institutional applicability note:** Additional meanings require separately authorized evidence and semantic review.
+
+## Section 3: Canonical Types
+
+The following are conceptual types, not physical layouts. Their names identify stable meanings within this run.
+
+### 3.1 Posting Types
+
+| Type | Definition and elements | Constraints / validity | Semantic source |
+|---|---|---|---|
+| `PostingCandidate` | Daily transaction identity; type and category; source and description; signed amount; merchant identity/name/city/postal text; card reference; original timestamp; supplied processing timestamp retained in original candidate context | No inferred input checks. Supplied processing timestamp is not the newly constructed posting timestamp. Filler has no assigned canonical meaning. | R-1–R-3; D-2, D-5, D-8 |
+| `PostingTransaction` | Prepared transaction carrying the candidate’s listed transferred values, original timestamp, and newly constructed processing timestamp | Its construction does not establish successful persistence. It is distinct from the original candidate. | R-3, R-6 |
+| `PostingRejection` | Original candidate context plus selected source reason and description | Preliminary rejection only; no list of all failed checks is invented. Later 103 replaces 102 when both alternatives occur. | R-1–R-3 |
+| `PostingProgress` | Processed-record count and preliminary-reject count | Counts concern encountered processing and selected rejection paths, not committed transactions or durable rejects. | R-1, R-6 |
+| `PostingAttemptState` | Preliminary selection, ordered category/account/transaction attempts, and local failure distinctions | Reason 109 is not automatically a `PostingRejection`. Actual durable effects remain unresolved. | R-4–R-6, R-18 |
+
+### 3.2 Interest Types
+
+| Type | Definition and elements | Constraints / validity | Semantic source |
+|---|---|---|---|
+| `InterestCategoryBasis` | Encountered account reference, transaction type, category, and signed category balance | Drives account transitions and calculation; no global grouping or ordering guarantee is added. | R-7, R-10 |
+| `InterestDisclosureBasis` | Account group, type, category, and selected rate quantity | Initial lookup and default-group fallback remain distinguishable. Missing disclosure is not zero rate. Units unresolved. | R-9, R-10 |
+| `InterestIdentifierBasis` | Supplied parameter text used in local generated-identifier construction | Not a reporting date range or a validated calendar date. Validity, lifetime, and suffix exhaustion remain unresolved. | R-11 |
+| `GeneratedInterestTransaction` | Locally constructed identifier; assigned type/category/source; account-related description; computed signed amount; xref card; assigned merchant values; original and processing timestamp roles | Nonzero rate selects generation even with zero or negative balance/result. Merchant zero/spaces are source assignments, not invented missing-value meanings. Global uniqueness is not promised. | R-10, R-11 |
+| `InterestAttemptState` | Disclosure selection, zero-rate bypass or computation/write selection, transition-triggered account update, and normal EOF without final-account update | Transaction writing is not evidence of corresponding account rewriting. No fee outcome is supplied. | R-7–R-11, R-18 |
+
+### 3.3 Reporting Types
+
+| Type | Definition and elements | Constraints / validity | Semantic source |
+|---|---|---|---|
+| `ReportingTransactionBasis` | Transaction identity, card reference, type/category, source, signed amount, and processing timestamp used by reporting | Not automatically identified with a particular posting or interest output instance. | R-12, R-13, R-16, R-19 |
+| `ReportingDateBasis` | Separately supplied start/end comparison text, also used for header dates | Inclusive comparisons only as specified. Contents, calendar validity, defaults, and range coherence are not supplied. | R-12, R-16 |
+| `UpstreamReportSelectionBasis` | Documentary upstream date bounds and card ordering context | Separate from `ReportingDateBasis`; not a common override. Actual executable flow remains unresolved. | R-17 |
+| `ReportDetail` | Transaction identifier; xref-derived account identifier; type/category codes; corresponding report description values; source; amount | Report descriptions are distinct from full lookup descriptions. No lossless or unlimited display guarantee. | R-13, R-16 |
+| `ReportHeaderContext` | Report identity context and the separately read start/end values assigned when header writing is reached | Header presence does not certify complete processing of that range. | R-12, R-16 |
+| `ReportTotal` | One of source page-labelled, account-labelled, or grand-labelled total values | Labels retain their distinct accumulation sites. Account-labelled grouping is triggered by card changes, not account-ID changes. | R-13–R-16 |
+| `ReportingAttemptState` | Date-permitted processing, date-alternative loop exit, conditional EOF finalization, lookup/write failure distinctions | No unconditional final account total, duplicate contribution, full-range completeness, or unchanged-output-on-failure claim. | R-12–R-18 |
+
+### 3.4 Cross-Cutting Value Constraints
+
+These constraints apply only to the consuming types above:
+
+- **References:** Account, card, transaction, group, type, and category references retain separate roles. No universal cardinality or cross-run uniqueness is established. `R-2`, `R-7`, `R-11`, `R-13`, `R-19`.
+- **Quantities:** Signed additions remain signed. In particular, negative posting amounts are not converted to absolute debit amounts. `R-4`, `R-5`, `R-10`, `R-14`.
+- **Temporal values:** Posting expiration comparison text, original timestamp, newly constructed timestamp, interest identifier parameter, reporting date input, and upstream report-selection bounds remain distinct. `R-2`, `R-3`, `R-11`, `R-12`, `R-17`.
+- **Absence versus zero:** Missing disclosure, absent finalization, unknown output, and zero computed quantity are different meanings. `R-8`–`R-10`, `R-15`, `R-18`.
+- **Failure:** Technical failure paths are not converted into posting preliminary rejection reasons. `R-1`, `R-5`, `R-9`, `R-13`, `R-18`.
+
+## Section 4: Canonical Operation Boundaries and Source Mapping
+
+“Required” means needed for the named source path; “conditional” means produced or consumed only when that path is reached. Internal dependency data is not thereby newly consumer-supplied.
+
+### 4.1 Posting
+
+| Canonical element | Type / participation | Meaning and legacy mapping | Rule / evidence / source anchor |
+|---|---|---|---|
+| Candidate identity and classification | `PostingCandidate`; required per processed candidate | `DALYTRAN-ID`, `DALYTRAN-TYPE-CD`, `DALYTRAN-CAT-CD` | R-1, R-3; E-27; `app/cpy/CVTRA06Y.cpy:5-7`; E-9; `app/cbl/CBTRN02C.cbl:425-427` |
+| Candidate descriptive and merchant values | `PostingCandidate`; carried values | Source, description, merchant ID/name/city/ZIP transferred to corresponding transaction fields | R-3; E-27; `app/cpy/CVTRA06Y.cpy:8-14`; E-9; `app/cbl/CBTRN02C.cbl:428-434` |
+| Candidate amount and card | `PostingCandidate`; required for relevant checks/effects | Signed daily amount; card-key xref lookup | R-2–R-5; E-8–E-10, E-27; `app/cbl/CBTRN02C.cbl:382-405`, `430-435`, `469-551` |
+| Candidate temporal context | `PostingCandidate`; path-dependent use | Original timestamp used in expiration comparison and copied; supplied processing timestamp remains part of original candidate/reject context | R-2, R-3; E-9, E-27; `app/cpy/CVTRA06Y.cpy:16-17`; `app/cbl/CBTRN02C.cbl:414-448` |
+| Prepared posting transaction | `PostingTransaction`; conditional output | Listed fields transferred; processing timestamp newly constructed | R-3, R-6; E-9, E-26; `app/cbl/CBTRN02C.cbl:424-442`, `692-705`; `app/cpy/CVTRA05Y.cpy:5-17` |
+| Preliminary rejection | `PostingRejection`; conditional output attempt | Daily record plus current reason trailer | R-1–R-3; E-4, E-7–E-9; `app/cbl/CBTRN02C.cbl:176-182`, `208-215`, `380-422`, `446-465` |
+| Progress counts | `PostingProgress`; conditional completion information | Processed and rejected counters, displayed after closes; positive reject count assigns source return code 4 | R-1, R-6; E-7; `app/cbl/CBTRN02C.cbl:184-186`, `206-230` |
+| Account and category context | Internal state; required where reached | Xref account; comparison fields; account balances; account/type/category balance key and accumulation | R-2, R-4, R-5; E-20–E-22; `app/cpy/CVACT01Y.cpy:5-14`; `app/cpy/CVACT03Y.cpy:5-7`; `app/cpy/CVTRA01Y.cpy:5-9` |
+
+No durable posted-count value is derived by subtracting the reject count from the processed count. `R-5` and `R-6` do not license that interpretation.
+
+### 4.2 Interest
+
+| Canonical element | Type / participation | Meaning and legacy mapping | Rule / evidence / source anchor |
+|---|---|---|---|
+| Encountered category basis | `InterestCategoryBasis`; required per category-processing path | Account/type/category and balance from category record | R-7, R-10; E-12, E-22; `app/cpy/CVTRA01Y.cpy:5-9`; `app/cbl/CBACT04C.cbl:188-218` |
+| Account and xref context | Internal dependency; conditional on account transition | Account balance/group and account-key xref card | R-7, R-11; E-12, E-13, E-20, E-21; `app/cbl/CBACT04C.cbl:194-213`, `350-413`; `app/cpy/CVACT01Y.cpy:5-16`; `app/cpy/CVACT03Y.cpy:5-7` |
+| Disclosure basis | `InterestDisclosureBasis`; internal dependency | Group/type/category key and rate; default-group reread only on specified initial missing-key status | R-9, R-10; E-13, E-23; `app/cbl/CBACT04C.cbl:415-460`; `app/cpy/CVTRA02Y.cpy:5-9` |
+| Identifier parameter | `InterestIdentifierBasis`; required by construction | `PARM-DATE`; job literal remains documentary configuration | R-11; E-5, E-30; `app/cbl/CBACT04C.cbl:175-180`; `app/jcl/INTCALC.jcl:22-41` |
+| Computed quantity | Generated transaction amount; conditional | Receiving-field result of balance multiplied by rate, divided by 1200; added to current-group accumulation | R-10; E-5, E-14; `app/cbl/CBACT04C.cbl:168-169`, `462-490` |
+| Generated identifier/classification | `GeneratedInterestTransaction`; conditional output | Incremented local suffix combined with parameter; source assignments `'01'`, `'05'`, `'System'` | R-11; E-14, E-26; `app/cbl/CBACT04C.cbl:473-484`; `app/cpy/CVTRA05Y.cpy:5-8` |
+| Generated descriptive/card/merchant/time values | `GeneratedInterestTransaction`; conditional output | Account-related description, computed amount, xref card, source zero/space merchant assignments, constructed timestamps | R-11; E-14, E-26; `app/cbl/CBACT04C.cbl:485-515`, `613-626`; `app/cpy/CVTRA05Y.cpy:9-17` |
+| Account-update distinction | `InterestAttemptState`; conditional state effect | Accumulated interest addition and cycle resets when transition update is invoked; no normal EOF final flush | R-7, R-8; E-12; `app/cbl/CBACT04C.cbl:188-228`, `350-370` |
+
+The local suffix is internal construction state, not an independently supplied identity guarantee. The fee placeholder yields no canonical fee amount. `R-11`; D-5, D-8.
+
+### 4.3 Reporting
+
+| Canonical element | Type / participation | Meaning and legacy mapping | Rule / evidence / source anchor |
+|---|---|---|---|
+| Transaction basis | `ReportingTransactionBasis`; required where processing reaches the record | Transaction identity, card, codes, source, amount, processing timestamp | R-12, R-13, R-16; E-16, E-26; `app/cpy/CVTRA05Y.cpy:5-17`; `app/cbl/CBTRN03C.cbl:170-196`, `361-374` |
+| Reporting start/end values | `ReportingDateBasis`; required for comparisons/header assignment | Separate date input; two working comparison fields | R-12, R-16; E-6, E-16; `app/cbl/CBTRN03C.cbl:122-125`, `220-243`, `275-279` |
+| Upstream selection context | `UpstreamReportSelectionBasis`; documentary dependency | Literal inclusive bounds `2022-01-01` and `2022-07-06`, card ordering, documentary output/input linkage | R-17; E-31; `app/jcl/TRANREPT.jcl:37-74` |
+| Xref account association | Internal lookup and `ReportDetail` account value | Card-key lookup supplies displayed account; grouping remains card-change-triggered | R-13, R-16; E-16, E-18, E-21; `app/cbl/CBTRN03C.cbl:181-187`, `364-374`, `484-492`; `app/cpy/CVACT03Y.cpy:5-7` |
+| Type/category descriptions | Internal lookup and distinct report-description values | Full lookup descriptions moved into narrower report receivers | R-13, R-16; E-24, E-25, E-28; `app/cpy/CVTRA03Y.cpy:5-6`; `app/cpy/CVTRA04Y.cpy:5-8`; `app/cpy/CVTRA07Y.cpy:20-26`; `app/cbl/CBTRN03C.cbl:365-368` |
+| Detail output | `ReportDetail`; conditional output attempt | ID, account, codes, descriptions, source, amount | R-16; E-18, E-28; `app/cbl/CBTRN03C.cbl:361-374`; `app/cpy/CVTRA07Y.cpy:15-31` |
+| Header context | `ReportHeaderContext`; conditional output | Source report identity and assigned date values | R-16; E-17, E-28; `app/cbl/CBTRN03C.cbl:274-284`, `324-341`; `app/cpy/CVTRA07Y.cpy:4-13` |
+| Distinct totals | `ReportTotal`; conditional output attempts | Page/account/grand receivers with distinct transfer and reset sites | R-14, R-15; E-16, E-17, E-28; `app/cbl/CBTRN03C.cbl:197-204`, `293-322`; `app/cpy/CVTRA07Y.cpy:50-66` |
+| Processing/finalization distinction | `ReportingAttemptState`; conditional | Date comparison precedes EOF test; alternative exits loop sentence; EOF branch has additional accumulation and no account-total call | R-12, R-15; E-16; `app/cbl/CBTRN03C.cbl:170-213` |
+
+The boundary does not infer an empty complete report from missing dates, failure, absent detail output, or an early loop exit. `R-12`, `R-15`, `R-18`.
+
+## Section 5: Outcome Models
+
+These models identify source-path distinctions, not an exhaustive set of runtime results. They do not require new instrumentation or manufacture observable records for internal branches.
+
+### 5.1 Posting Outcomes
+
+| Variant or distinction | Guard / meaning | Boundary consequence | Source |
+|---|---|---|---|
+| Preliminary posting selected | Reason remains zero after preliminary checks | Posting attempts may follow; durable success is not established | R-1, R-6 |
+| Preliminary rejection selected | Nonzero reason at pre-posting decision | Candidate plus selected reason/description; reject count increment precedes write attempt | R-1–R-3 |
+| Card lookup rejection | Source invalid-key branch assigns 100 | Account lookup remains guarded | R-2 |
+| Account lookup rejection | Source invalid-key branch assigns 101 | Distinct from later account rewrite reason | R-2, R-5 |
+| Comparison rejection | Failed limit comparison assigns 102; later failed expiration-text comparison assigns 103 | Preserve overwrite precedence, not a multi-error collection | R-2 |
+| Account rewrite reason 109 | Invalid-key rewrite branch reached after preliminary posting selection | On normal return, transaction writing follows without reject reselection | R-5 |
+| Local write/open/close failure path | Corresponding checked operation does not take its successful branch | Earlier attempts may exist; durable effects and external failure consequences unknown | R-6, R-18 |
+| Completion information reached | Displayed closes and following statements reached | Counts retain their source meanings; no invented zero-reject return value | R-6 |
+
+### 5.2 Interest Outcomes
+
+| Variant or distinction | Guard / meaning | Boundary consequence | Source |
+|---|---|---|---|
+| Selected disclosure available | Initial successful read or successful status-specific default reread | Rate can supply nonzero test; no zero substitution for missing data | R-9 |
+| Zero-rate bypass | Selected rate equals zero | No computation/write selection through that branch; not rejection | R-10 |
+| Computation/write selected | Selected rate is nonzero | Includes zero or negative balance/result; no positivity restriction added | R-10, R-11 |
+| Previous-group account update selected | Encountered account changes and first-time guard permits update | Addition/reset/rewrite attempt, distinct from generated transaction writing | R-7 |
+| Normal EOF without final update | Stated pre-test/normal-EOF assumptions hold | No final-account flush is inserted | R-8 |
+| Dependency or write failure path | Relevant source error branch reached | No business-reject record, fee substitute, rollback, or durable-state result inferred | R-7, R-9, R-11, R-18 |
+
+### 5.3 Reporting Outcomes
+
+| Variant or distinction | Guard / meaning | Boundary consequence | Source |
+|---|---|---|---|
+| Date-permitted detail path | Inclusive comparison passes and post-read EOF test permits detail processing | Lookups, accumulation, and output remain conditional | R-12–R-16 |
+| Date-alternative exit | Comparison alternative taken under stated sentence-transfer semantics | Leaves the loop sentence; later eligible records are not promised processing | R-12 |
+| Date-input EOF | Date input read sets shared EOF flag before transaction loop | No substitute date range or completed-report meaning | R-12 |
+| Conditional EOF finalization | EOF test reached after passing preceding date comparison | Additional amount accumulation, page/grand calls, no account-total call | R-15 |
+| Card-transition total attempt | Card changes and first-time guard permits previous-group total | Total attempt precedes new-card xref lookup; later failure does not imply no earlier output attempt | R-13, R-14, R-18; CE-10 |
+| Lookup or output failure path | Corresponding source branch reached | No complete/empty/unchanged-report guarantee | R-13, R-14, R-16, R-18 |
+
+A repeated final contribution remains conditional on unknown EOF storage and a passing date comparison. It is not asserted as an actual numerical outcome. `R-15`.
+
+## Section 6: Canonical State Scope
+
+### 6.1 Common State Limits
+
+For every resource below:
+
+- Initial authority means the source of the values used by the relevant path, not proof of actual supplied contents.
+- Data-resource lifetime beyond inspected access is unresolved.
+- No reset capability is licensed. Initial declarations and local accumulator resets do not establish restoration of persistent resources.
+- Isolation between concurrent or successive consumers is unresolved.
+- Restart is not treated as reset.
+- Repetition safety is **unknown**, separately for posting, interest, and reporting.
+- Resource-instance identity across jobs or tracks remains unresolved.
+
+These limits derive from `R-6`, `R-18`–`R-20`, D-2–D-4, and inherited A-4, A-8, A-10, A-16, A-17. Each row below inherits these limits unless a narrower local initialization/reset is stated.
+
+### 6.2 Posting Resources
+
+| Resource | Identity and initial authority | Lifetime / local reset / isolation treatment | Boundary and failure consequence | Source |
+|---|---|---|---|---|
+| Daily candidate sequence | Encountered input records; candidate transaction identifier is a value, not a supplied global sequence identity | Source input contents/order unresolved; read progression ends through EOF handling | Canonical input; no actual input collection cardinality promised | R-1, R-3; E-4, E-7, E-27 |
+| Card association | Card-key lookup; read xref supplies account reference | No creation/reset in this boundary; actual mappings and isolation unknown | Internal dependency; preliminary lookup rejection remains distinct | R-2; E-8, E-21 |
+| Account state | Account reference obtained through xref; read account supplies balance, limit, expiration and cycle fields | Existing state authority is the read resource; local arithmetic does not prove stored replacement | Internal state; signed updates and reason 109 retained | R-2, R-5; E-8, E-10, E-20 |
+| Category balance state | Account/type/category key; read state or source-initialized new record | Create flag reset before lookup; new-record initialization distinct from existing balance read | Internal state; attempted before account and transaction operations | R-4, R-6; E-9, E-10, E-22 |
+| Posting transaction output | Prepared transaction ID; actual output resource instance unresolved | Output-open effects on existing state unresolved | Canonical output attempt; not a durable receipt | R-3, R-6; E-9, E-11, E-26, E-29 |
+| Reject output | Original candidate plus current trailer | Output-open/write lifetime and interruption effects unresolved | Canonical rejection content; counter is not proof of persisted reject | R-1, R-3, R-6; E-4, E-7, E-9, E-29 |
+| Processing control and counts | Source-local reason, description, EOF/create state, counters | Counters begin at zero; reason/description reset per processed candidate; create flag reset before category lookup | Internal control except canonical count meanings and outcome distinctions; not a restart token | R-1, R-4–R-6; E-4, E-7, E-10 |
+
+### 6.3 Interest Resources
+
+| Resource | Identity and initial authority | Lifetime / local reset / isolation treatment | Boundary and failure consequence | Source |
+|---|---|---|---|---|
+| Category balance sequence | Encountered account/type/category balance records | Actual contents and grouping unresolved | Canonical basis; grouping is transition-driven, not a global assertion | R-7, R-10; E-12, E-22 |
+| Account state | Encountered account reference; read account supplies balance and disclosure group | Invoked update clears cycle fields after adding accumulated interest; no normal EOF final flush | Internal state; generated transactions cannot certify final account state | R-7, R-8; E-12, E-13, E-20 |
+| Account-key card association | Account-key lookup supplies card | Alternate-key binding and multiplicity unresolved | Internal dependency; no universal card selection/cardinality policy | R-7, R-11; E-5, E-13, E-21 |
+| Disclosure state | Group/type/category; selected initial or default-group read | No canonical rate creation/reset; actual contents and units unresolved | Internal basis; missing data is not zero rate | R-9, R-10; E-13, E-23 |
+| Identifier parameter | Supplied external parameter text | Actual invocation value and lifetime unresolved; job literal not a runtime observation | Canonical construction basis, not common cycle date | R-11; E-5, E-30 |
+| Group accumulation/control | Current encountered account, first-time state, receiving amount and total | Last-account storage starts as spaces; first-time starts `'Y'`; total cleared on account transition | Internal state; no additional initial-value promise where not declared; no final flush repair | R-7, R-8, R-10; E-5, E-12 |
+| Identifier suffix | Local sequence state initialized to zero | Incremented at each invoked transaction-write paragraph; exhaustion and repeated-invocation lifecycle unresolved | Internal state; uniqueness not promised | R-11, R-20; E-5, E-14 |
+| Generated transaction output | Locally constructed transaction identifier | Output-open/write persistence and lifecycle unresolved | Canonical output attempt distinct from account update | R-8, R-11, R-20; E-14, E-15, E-26, E-30 |
+
+### 6.4 Reporting Resources
+
+| Resource | Identity and initial authority | Lifetime / local reset / isolation treatment | Boundary and failure consequence | Source |
+|---|---|---|---|---|
+| Transaction sequence | Encountered reporting records | Actual order and EOF record-storage contents unresolved | Canonical basis; no complete-range promise | R-12, R-15, R-17; E-16, E-26, E-31 |
+| Reporting date input | Separate start/end fields read from date resource | Actual contents absent; date-input EOF affects transaction-loop entry | Canonical comparison/header basis; no default or preferred range | R-12, R-16, R-17; E-6, E-16 |
+| Upstream selection result | Documentary selected/sorted intermediate | Actual generation, execution, and relation to live input unresolved | Separate dependency; cannot restore upstream-removed rows under R-17’s premise | R-17, R-19; E-31, E-34 |
+| Card association | Card-key lookup supplies displayed account | Current-card state begins as spaces; lookup selected on card changes | Internal dependency; prior total attempt may precede lookup failure | R-13, R-18; E-6, E-16, E-18, E-21 |
+| Type descriptions | Type-key lookup supplies descriptive text | Read-only semantic dependency; contents unknown | Full lookup value distinct from report receiver | R-13, R-16; E-24 |
+| Category descriptions | Type/category lookup supplies descriptive text | Read-only semantic dependency; contents unknown | Full lookup value distinct from report receiver | R-13, R-16; E-25 |
+| Page-labelled accumulation | Source page total starts at zero | Adds on detail path and conditional EOF path; transferred to grand accumulation and cleared at page-total site | Internal accumulation; output total only when reached | R-14, R-15; E-6, E-16, E-17 |
+| Account-labelled accumulation | Source account total starts at zero | Adds on detail/conditional EOF paths; cleared by account-total processing selected at card changes | Internal accumulation; no final EOF account-total emission | R-13–R-15; E-6, E-16, E-17 |
+| Grand-labelled accumulation | Source grand total starts at zero | Receives page accumulation at page-total site | Internal accumulation; not independently reconciled from all details | R-14, R-15; E-6, E-17 |
+| Report control/presentation state | First-time state, line counter, source page-size value | First-time starts `'Y'`; counter starts zero; multiple non-detail records advance it | Internal-only mechanics; no twenty-detail interpretation | R-16; E-6, E-17 |
+| Report output | Source header/detail/total write sites; no global report identifier licensed | Output-open effects, interrupted output, and durability unresolved | Canonical content meanings; failure does not imply absent earlier output | R-13–R-16, R-18, R-20; E-18, E-19, E-28 |
+
+### 6.5 Shared Operational Resources
+
+| Resource | Consumers and identity | Initialization/lifetime/reset/isolation | Treatment | Source |
+|---|---|---|---|---|
+| Transaction backup | Posting, interest, reporting; documentary backup dataset reference | Actual generation, completed backup, and lifecycle unknown | Operational context only; not a reset facility | R-19, R-20; E-33 |
+| Combined transaction intermediate | Posting, interest; documentary combination output | Actual contents, ordering results, loading outcome, and lifecycle unknown | Operational context only; no completed merged transaction state | R-19, R-20; E-32 |
+| Transaction master lifecycle context | All three tracks, without confirmed shared live instance | Deletion/definition and loading instructions are not observed effects | No global empty-state or restored-state guarantee | R-19, R-20; E-29–E-33 |
+| Procedure control dependency | All three through shared operational context | `REPROCT` body unavailable; execution and state effects unresolved | Explicit dependency gap | R-19; E-34 |
+| External failure routine dependency | Each program separately | Only call sites/arguments known | No termination, return, rollback, or persistence semantics supplied | R-18; E-11, E-15, E-19 |
+
+No state provisioning, reset, or observation facility is licensed by these rows. Any later work requiring actual initial data, resource isolation, restart control, or durable-state observation must obtain separately authorized means rather than presume them from this document.
+
+## Section 7: Reverse-Completeness Matrix — Boundary Enrichment
+
+### 7.1 Complete Disposition of R-1–R-20
+
+The matrix accounts for every approved rule. Multiple dispositions within a row distinguish a rule’s data meaning from its internal mechanisms and unresolved limits.
+
+| Rule / track | Evidence | Boundary disposition | Canonical destination / exclusion / gap |
+|---|---|---|---|
+| R-1 / posting | E-4, E-7 | Canonicalized; internal-only control | `PostingCandidate`, `PostingRejection`, `PostingProgress`; per-record flags remain internal |
+| R-2 / posting | E-7, E-8, E-20, E-21, E-27 | Canonicalized; internal dependency; ambiguous policy limits | Candidate/check context and selected rejection reason; precedence retained; A-9 and temporal-policy limits remain |
+| R-3 / posting | E-4, E-9, E-26, E-27 | Canonicalized; excluded unlicensed filler meaning | Distinct `PostingTransaction` and `PostingRejection`; D-8 excludes invented untouched-storage values |
+| R-4 / posting | E-9, E-10, E-22 | Internal state; canonical attempt distinction | Category key/balance identity, creation versus existing update; no independent state-control capability |
+| R-5 / posting | E-7, E-9, E-10, E-20 | Internal state; canonicalized distinction | Signed account changes and reason 109 distinguished from preliminary rejection; A-9/A-10 residuals |
+| R-6 / posting | E-7, E-9–E-11, E-29 | Canonicalized; unresolved gap | Progress and ordered attempts; no atomic/durable completion claim; D-4, A-4/A-10 |
+| R-7 / interest | E-5, E-12, E-13, E-20–E-22 | Canonical basis; internal state | `InterestCategoryBasis`; account transition, accumulation and lookup state; actual grouping unresolved |
+| R-8 / interest | E-12, E-14 | Canonical outcome distinction; excluded repair | Normal EOF without final-account update; D-6; A-11 runtime residual retained |
+| R-9 / interest | E-12, E-13, E-23 | Internal dependency; canonical selection distinction | `InterestDisclosureBasis`; status-specific default reread, not zero substitution |
+| R-10 / interest | E-5, E-12, E-14, E-22, E-23 | Canonicalized; internal accumulator; unresolved gap | Computed amount/nonzero selector; receiving-field arithmetic retained; numeric/rate policy A-12 |
+| R-11 / interest | E-5, E-14, E-26, E-30 | Canonicalized; internal suffix; bounded exclusion; unresolved gap | Generated transaction and parameter basis; no global uniqueness or fee amount; D-5/D-8, A-12/A-13 |
+| R-12 / reporting | E-6, E-16, E-26 | Canonicalized; internal EOF control; unresolved gap | Separate date basis and date-exit distinction; unknown EOF storage A-14 |
+| R-13 / reporting | E-6, E-16, E-18, E-21, E-24, E-25 | Canonicalized; internal lookup/group state; ambiguous relationship | Detail account association; card-change grouping; no account cardinality rule; A-15 |
+| R-14 / reporting | E-6, E-16–E-18, E-28 | Canonicalized; internal accumulators | Distinct `ReportTotal` meanings and write/transfer/reset sites; no reconciled-total substitution |
+| R-15 / reporting | E-16, E-17 | Canonical outcome distinction; unresolved gap; excluded repair | Conditional finalization; no final account-total call; no unconditional duplicate-contribution claim; D-6, A-14/A-15 |
+| R-16 / reporting | E-6, E-17, E-18, E-24–E-26, E-28 | Canonicalized; internal-only presentation mechanics | Detail/header meanings; receiver limitations retained; D-7 excludes independent spacing/counter values |
+| R-17 / reporting | E-16, E-31, E-34 | Canonicalized documentary context; unresolved gap | Separate upstream and program date bases; no override/intersection simplification; A-14/A-16 |
+| R-18 / each track separately | E-11, E-15, E-19 | Internal diagnostics; canonical failure distinction; unresolved gap | Local continuation versus external-call attempt; diagnostic mismatches retained, not repaired; A-17 |
+| R-19 / attributed consumers | E-29–E-34 | Internal operational context; unresolved gap; excluded stronger identity/schedule | Per-resource context in Section 6.5; D-2/D-7; A-2/A-8/A-16 |
+| R-20 / each track separately | E-5, E-9–E-12, E-14–E-19, E-32–E-34 | Unresolved gap; explicit non-guarantee | Repetition safety unknown for posting, interest, and reporting; D-4; no reset/retry policy invented |
+
+No rule is marked not applicable as a whole. Every rule has a boundary consequence, internal treatment, bounded exclusion, or unresolved limitation.
+
+### 7.2 Evidence-to-Boundary Accounting
+
+This supplements the rule matrix to retain all upstream evidence dispositions.
+
+| Evidence | Boundary disposition |
+|---|---|
+| E-1–E-3 | Track orientation only; source headers do not create additional canonical elements |
+| E-4–E-6 | Track-local declarations and initial control-state provenance; Sections 3–6 |
+| E-7–E-11 | Posting mappings, outcomes, state and failure limits; R-1–R-6, R-18, R-20 |
+| E-12–E-15 | Interest mappings, outcomes, state and failure limits; R-7–R-11, R-18, R-20 |
+| E-16–E-19 | Reporting mappings, outcomes, state and failure limits; R-12–R-18, R-20 |
+| E-20 | Posting and interest account dependencies; unrelated declaration-only fields not promoted by D-8 |
+| E-21 | Track-qualified card/account associations; customer declaration supplies no new customer capability; D-2/D-8 |
+| E-22 | Posting category state and interest category basis kept separately attributed |
+| E-23 | Interest disclosure basis, rate provenance, unresolved units |
+| E-24–E-25 | Reporting lookup descriptions distinguished from report description receivers |
+| E-26 | Three separate transaction roles; no shared-instance claim |
+| E-27 | Posting original candidate, transferred values, and reject context |
+| E-28 | Report content and source presentation limitations; D-7 |
+| E-29–E-31 | Track-specific operational bindings and distinct parameter/selection context |
+| E-32 | Posting/interest combination context only; R-19/R-20 |
+| E-33–E-34 | Shared operational dependencies and unknown lifecycle; R-19/R-20 |
+| E-35 | Not applicable to canonical business data: Stage 4 classifies licensing as non-semantic context. A-6 remains; no R-n is fabricated for legal meaning |
+
+### 7.3 Source Provenance Resolution
+
+For every source anchor in this document, its full path resolves to the original-file and derived-representation pins in `input_pins.source_bodies`. `E-n` additionally resolves to the defining Stage 3-r2 entry with its consuming tracks and full ranges. These are separate links, not interchangeable hashes.
+
+The source register retains all 19 full paths:
+
+- `LICENSE`
+- `app/cbl/CBACT04C.cbl`
+- `app/cbl/CBTRN02C.cbl`
+- `app/cbl/CBTRN03C.cbl`
+- `app/cpy/CVACT01Y.cpy`
+- `app/cpy/CVACT03Y.cpy`
+- `app/cpy/CVTRA01Y.cpy`
+- `app/cpy/CVTRA02Y.cpy`
+- `app/cpy/CVTRA03Y.cpy`
+- `app/cpy/CVTRA04Y.cpy`
+- `app/cpy/CVTRA05Y.cpy`
+- `app/cpy/CVTRA06Y.cpy`
+- `app/cpy/CVTRA07Y.cpy`
+- `app/jcl/COMBTRAN.jcl`
+- `app/jcl/INTCALC.jcl`
+- `app/jcl/POSTTRAN.jcl`
+- `app/jcl/TRANBKP.jcl`
+- `app/jcl/TRANREPT.jcl`
+- `app/proc/REPROC.prc`
+
+No basename-only identity or reconstructed source body substitutes for the supplied versions.
+
+### 7.4 Counterexample Review Inheritance
+
+The supplied review is retained as upstream review evidence, not newly conducted review.
+
+| Samples | Boundary consequence retained |
+|---|---|
+| CE-01–CE-03 | Posting precedence, signed debit addition, reason 109 timing, ordered attempts, unknown persistence |
+| CE-04–CE-06 | Interest missing final flush, status-specific disclosure fallback, nonzero-rate selector, bounded fee absence |
+| CE-07–CE-09 | Reporting sentence exit, conditional EOF contribution, missing final account total, card-based grouping, non-detail line increments |
+| CE-10 | Prior report total attempt can precede failing new-card lookup |
+| CE-11 | Missing external/control dependencies do not imply standalone execution |
+| CE-12 | Distinct date-selection sites; no preferred override or simple complete-output intersection |
+
+The sample does not establish exhaustive semantic or boundary completeness.
+
+## Section 8: Explicit Unresolved Gaps
+
+### 8.1 Inherited Ambiguities
+
+No inherited ambiguity is silently renumbered or closed.
+
+| ID | Current boundary treatment | Rules / authority | Blocking consequence |
+|---|---|---|---|
+| A-1 | Three tracks remain separate; final cohesion unresolved | R-3, R-7, R-11, R-13, R-19; D-2 | Blocks a unified business/resource identity claim |
+| A-2 | Dependency closure unknown | R-18, R-19 | Blocks standalone/executable completeness claims |
+| A-3 | Supplied representation is UTF-8; deployed encoding unknown | Inherited documentary provenance; D-5 | Blocks unsupported deployment/text-conversion claims |
+| A-4 | Durable effects, lifetime, reset, restart and isolation unresolved | R-6, R-18, R-20 | Blocks unconditional state guarantees |
+| A-5 | Broader exposure history unknown | Inherited research authority; no business R-n applicable | Blocks independent/clean-context research claims |
+| A-6 | Licensing context is not legal clearance | Stage 4 E-35 non-semantic disposition | Blocks unsupported legal-clearance claims |
+| A-7 | Upstream evidence layout addressed; unchanged | Approved Stage 2-r2/3-r2 authorization | No remaining evidence-layout blocker |
+| A-8 | Cross-track chronology and resource-instance relationships unresolved | R-19 | Blocks a required/completed cycle schedule |
+| A-9 | Static reason precedence and 109 timing retained; intended policy and runtime consequences unresolved | R-2, R-5 | Blocks idealized rejection or persistence interpretations |
+| A-10 | Ordered posting attempts known; output-open and durable partial effects unknown | R-6 | Blocks atomic success, rollback and durable partial-state claims |
+| A-11 | Normal EOF no-final-flush deduction retained; actual final state unknown | R-7, R-8 | Blocks final-account persistence claims |
+| A-12 | Rate units, numerical policy, overflow, parameter validity, suffix exhaustion and ID lifetime unresolved | R-10, R-11 | Blocks certified numerical domains and global uniqueness |
+| A-13 | No fee computation in inspected placeholder; broader fee scope unknown | R-11 | Blocks fee outputs and application-wide absence claims |
+| A-14 | Date contents, EOF storage and actual selection/finalization unresolved | R-12, R-15, R-17 | Blocks concrete complete-output and EOF numerical claims |
+| A-15 | Card/account relationship and actual totals/presentation effects unresolved | R-13–R-16 | Blocks account normalization, cardinality and reconciled-total claims |
+| A-16 | Duplicate job labels and missing control material remain unrepaired | R-17, R-19 | Blocks executable job-flow claims |
+| A-17 | External failure routine behavior unavailable | R-18 | Blocks termination, return, rollback and persistence consequences |
+
+The authorized conditional scope permits these meanings to be documented without choosing unsupported runtime outcomes. It does not resolve the uncertainties.
+
+### 8.2 Stage 5 Gap Register
+
+Identifiers continue after upstream G-1–G-14.
+
+| ID | Classification | Gap and affected rules | Required handling |
+|---|---|---|---|
+| G-15 | Blocking for Stage 5 completion | No human review of this exact boundary draft | Review all three tracks, decisions, mappings, exclusions and state rows against R-1–R-20 |
+| G-16 | Blocking for review finalization | Exact output digest and bound retention/review record not established here | Preserve this output, exact supplied request, authority pins, source bodies, numbered representations and review attachment |
+| G-17 | Blocking for stronger value-domain claims | Missing units, numerical/temporal policy and runtime limits; R-2, R-3, R-5, R-10–R-12, R-16, R-17 | Keep D-5 and A-12/A-14/A-15; obtain authorized authority before strengthening constraints |
+| G-18 | Blocking for stronger state/outcome claims | Unknown durable effects, resource identity, isolation, reset and repetition; R-6, R-18–R-20 | Keep per-resource unknowns; do not infer facilities or guarantees from drafting progress |
+| G-19 | Blocking for concrete reporting-finalization claims | Unknown EOF storage, dates, actual job flow and numerical results; R-12–R-17 | Retain conditional branches and A-14–A-16 without corrected outputs |
+| G-20 | Blocking for gate completion | No new mechanical source-anchor/integrity check or substantive boundary review performed | Handle separately under appropriate authorization; distinguish mechanical findings from semantic review |
+
+G-17–G-19 are scoped blockers for claims that would require guessing, not instructions to execute or repair anything.
+
+## Section 9: Completeness Gate and Further-Stage Entry Condition
+
+### 9.1 Completeness Conditions
+
+All conditions remain unchecked:
+
+- [ ] Posting, interest, and reporting each retain separate substantive coverage.
+- [ ] The exact upstream capability identity is unchanged.
+- [ ] Conceptual boundary, mapping/provenance, and unresolved gaps are separately reviewable.
+- [ ] All canonical types have definitions, constraint limits, and semantic sources.
+- [ ] Every operation’s input/output meanings and conditional participation map to source evidence.
+- [ ] Outcome distinctions preserve their guards and do not imply durable completion.
+- [ ] Every boundary decision has a stable D-n identity, rationale, consequences, and institutional note.
+- [ ] State identity, initialization authority, lifetime, reset, isolation, failure effects, and repetition safety are recorded per resource.
+- [ ] Internal dependencies are not silently converted into independently available capabilities.
+- [ ] All R-1–R-20 have explicit boundary dispositions.
+- [ ] All E-1–E-35 retain accountable destinations or justified non-semantic treatment.
+- [ ] Exact original-file pins, source bodies, and stable numbered representations remain retained separately.
+- [ ] The upstream counterexample review’s limitations and sampled distinctions remain intact.
+- [ ] Unresolved numerical, date, EOF, persistence, dependency, identity, and repetition questions remain explicit.
+- [ ] No later-stage surface or realization decisions have been introduced.
+- [ ] Exact input/output versions and external review records are bound without rewriting historical authority.
+
+### 9.2 Semantic Integrity Condition
+
+- [ ] Every canonical element, internal-state treatment, exclusion, ambiguity, and gap traces to an approved rule or an explicitly identified non-semantic upstream authority.
+- [ ] Review confirms that source declaration widths and literals have not become invented business policy.
+- [ ] Review confirms that omitted finalization and conditional failure effects have not been repaired through canonical naming.
+
+### 9.3 AI Assistance and Provenance
+
+AI assistance is limited to drafting boundary names, organizing values and state, mapping approved rules to supplied evidence, and preserving unresolved limits.
+
+No tools, additional model/network calls, execution, compilation, checksum computation, source repair, or generated code were used. The supplied approved upstream artifacts and review attachment were used under the explicit authorization; this is not independent extraction or an empirical result.
+
+Actual provider configuration, token usage, monetary cost, generation timing, and transport retention settings are not certified by this document. Unavailable telemetry is not reported as zero.
+
+### 9.4 Entry Condition
+
+Further-stage work requires external human review of the exact retained Stage 5 artifact and satisfaction or explicit authorized handling of its blocking conditions. This document supplies no such decision.
+
+**Current Stage 5 status: draft, not approved. Completeness gate: not passed. Ready for implementation: `false`.**

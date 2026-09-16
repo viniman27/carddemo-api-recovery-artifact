@@ -1,0 +1,87 @@
+{
+  "kind": "t1-generation-01-summary",
+  "startedUtc": "2026-09-15T17:37:08.562798Z",
+  "workspace": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+  "outputRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-01",
+  "authorization": {
+    "realConsentRecorded": true,
+    "source": "delegated task context: user replied “Pode prosseguir” to parent authorization question",
+    "scope": "one fresh synthetic probe and, if passed, exactly one T1 provider call per prepared contract via openai-codex gpt-6-astra; no temperature/max_output_tokens/seed; no retry/fallback/switch; send only contracts/instruction/metadata",
+    "notClaimed": "signature, campaign runtime authorization, T2/T3/T4 authorization, export of main study/personal/fixture/oracle material"
+  },
+  "provider": "openai-codex",
+  "modelRequested": "gpt-6-astra",
+  "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+  "transport": {
+    "stream": true,
+    "store": false,
+    "tools": [],
+    "previous_response_id": null,
+    "follow_redirects": false
+  },
+  "order": [
+    "E1-1",
+    "E1-2",
+    "E1-3",
+    "E2-1",
+    "E2-2",
+    "E2-3",
+    "E3-SDD-stage6r3"
+  ],
+  "counts": {
+    "expectedContracts": 7,
+    "probeCompleted": 0,
+    "complete": 0,
+    "invalid": 0,
+    "interrupted": 0,
+    "blocked": 0
+  },
+  "items": [],
+  "pinVerification": {
+    "manifestPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/MANIFEST.json",
+    "manifestSha256": "e1a837efd099eb0ba763226e167f1a509d27fd628e7d8fc8bed6135bb90cdf09",
+    "reportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/REPORT.json",
+    "reportSha256": "dca09b301dbda85d4dd4d8a7d549f54594c5fe8f0108e8a0a6ebeeb6a9e022ef",
+    "reportVerifyOk": true,
+    "reportSelfTestOk": true,
+    "payloadsVerified": [
+      "E1-1",
+      "E1-2",
+      "E1-3",
+      "E2-1",
+      "E2-2",
+      "E2-3",
+      "E3-SDD-stage6r3"
+    ]
+  },
+  "probe": {
+    "label": "probe-synthetic-fresh",
+    "startedUtc": "2026-09-15T17:37:08.573707Z",
+    "requestPath": "outbound-effective/probe-synthetic-fresh.request.json",
+    "requestBytes": 224,
+    "requestSha256": "1bd95b39985f8a2a5db0d47155bb9a65e56bfffa02c9029a9955216806a9b363",
+    "modelRequested": "gpt-6-astra",
+    "store": false,
+    "stream": true,
+    "tools": [],
+    "previous_response_id": null,
+    "retries": 0,
+    "fallback": false,
+    "followRedirects": false,
+    "finishedUtc": "2026-09-15T17:37:08.957039Z",
+    "elapsedSeconds": 0.383,
+    "httpStatus": 400,
+    "rawSsePath": "raw-sse/probe-synthetic-fresh.sse.txt",
+    "rawSseBytes": 56,
+    "rawSseSha256": "2e648c2799659b332275866b8f4138cd84669dda159fa01c9a3a9774fb078527",
+    "classification": "invalid_provider_error",
+    "errorBodySha256": "2e648c2799659b332275866b8f4138cd84669dda159fa01c9a3a9774fb078527"
+  },
+  "status": "blocked",
+  "blocker": "fresh synthetic probe rejected authorized transport parameter previous_response_id=null",
+  "blockerDetail": {
+    "httpStatus": 400,
+    "rawSsePath": "raw-sse/probe-synthetic-fresh.sse.txt",
+    "errorBody": "{\"detail\":\"Unsupported parameter: previous_response_id\"}"
+  }
+}

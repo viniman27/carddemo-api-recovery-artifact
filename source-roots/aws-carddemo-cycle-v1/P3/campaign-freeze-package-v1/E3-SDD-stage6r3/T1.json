@@ -1,0 +1,606 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "interest",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "interest-positive-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+        "sourceScenarioCanonicalSha256": "6079308f81def6c9e2d179da93bfb402aaa9cbdb129bbddad2ed3aec0b120031",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:interest-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-negative-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "interest",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "interest-negative-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "absent",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+        "sourceScenarioCanonicalSha256": "d03ed85360cbef3fedbe7ddcd434038d06bc1d1f6d2813296fe196ffd952845d",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:interest-negative-01"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-negative-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "interest",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "interest-negative-02",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+        "sourceScenarioCanonicalSha256": "86a1f2142e6ea0bf141f9e05ce04128926312456c567eb495cc1b819b60d4ac5",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:interest-negative-02"
+      ],
+      "request": {
+        "body_b64": "bnVsbA==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_generation_preserved",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "interest",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "interest-boundary-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+        "sourceScenarioCanonicalSha256": "c35c345421c557a97e648d690884751c89370a9df61bf1b05d5362db4127f0e6",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:interest-boundary-01"
+      ],
+      "request": {
+        "body_b64": "W10=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "posting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "posting-positive-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+        "sourceScenarioCanonicalSha256": "5a2fcbffbc31fa3fc13b553efa3d80a0322f7551bbe0f7eb581d56f012d2a4be",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:posting-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-negative-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "posting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "posting-negative-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "absent",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+        "sourceScenarioCanonicalSha256": "5048d00b505827cf8426e23507f02773981f25bfa3544fde50058ccf1bb2dddf",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:posting-negative-01"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-negative-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "posting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "posting-negative-02",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+        "sourceScenarioCanonicalSha256": "d23377ba2883a574717eafed8546abf8b2d69b261a161c8bf3cad98a5b5057ad",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:posting-negative-02"
+      ],
+      "request": {
+        "body_b64": "bnVsbA==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_generation_preserved",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "posting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "posting-boundary-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+        "sourceScenarioCanonicalSha256": "34533a4fb69eaf856c672e890d85334026e7c1e9734cd7f127759cfcc71ceb7c",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:posting-boundary-01"
+      ],
+      "request": {
+        "body_b64": "W10=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "reporting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "reporting-positive-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+        "sourceScenarioCanonicalSha256": "47b4500b177fe0f8cb8c85109e3e6f1a9721bd8f8cf9679ea6e31c92ed248991",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:reporting-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-negative-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "reporting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "reporting-negative-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "absent",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+        "sourceScenarioCanonicalSha256": "4deff0761e6406ede9d193835d1d3519b42d6d12c3211094692111a31c5f013b",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:reporting-negative-01"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-negative-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "reporting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "reporting-negative-02",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+        "sourceScenarioCanonicalSha256": "2d6271c8b158b633f19d0b4ef423d7f3e5955a0363aa16571faff82009c3a697",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:reporting-negative-02"
+      ],
+      "request": {
+        "body_b64": "bnVsbA==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E3-SDD-stage6r3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_generation_preserved",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "reporting",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "reporting-boundary-01",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+        "sourceScenarioCanonicalSha256": "cb0b5e93b4ee7eb447839355df015a63cea43c9bb6dc765795ed9ca536dac351",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:reporting-boundary-01"
+      ],
+      "request": {
+        "body_b64": "W10=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "e141615c43e82c080a374dae18e6996813b975bb40cd6a1a938785f85f2cc407",
+  "suite_id": "E3-SDD-stage6r3-T1"
+}

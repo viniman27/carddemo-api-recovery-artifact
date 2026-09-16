@@ -1,0 +1,4263 @@
+{
+  "kind": "P3/t3-substantive-closure-v1",
+  "decision": "CONDITIONAL_SOURCE_GUARD_PROMOTION_ONLY_NOT_CAMPAIGN_READY",
+  "decisionText": "The pinned physical fixtures are admissible as static external-selection evidence for the 18 current SDD empty-request obligation cells, but they do not define an expected-output oracle and do not authorize campaign execution. The materialized SDD suite matches the selected cell set, but one generated transition case has guardResult=unknown and must be excluded or version-corrected before official execution.",
+  "readPolicy": {
+    "used": [
+      "source anchors under research-corpus",
+      "reference-executable-v4 model/obligation witnesses",
+      "fixture materialization manifest and byte structural check",
+      "T3 selection plan/readback",
+      "frozen suite metadata/case provenance"
+    ],
+    "notUsedAsAuthority": [
+      "expected outputs",
+      "quarantine oracles",
+      "runtime/API/HTTP campaign results",
+      "coverage results"
+    ]
+  },
+  "inputs": {
+    "protocol": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md",
+      "bytes": 9156,
+      "sha256": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7"
+    },
+    "plan": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-sdd-external-selection-v3/external-selection-plan.json",
+      "bytes": 105734,
+      "sha256": "cfb4a6b79cc7cae58d2952ed70bd10e9620690fbd87a480fe49fddcdda0066be"
+    },
+    "matrix": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-sdd-external-selection-v3/applicability_matrix.sdd-external-selection-v3.json",
+      "bytes": 1064192,
+      "sha256": "7282d50f22a4b895eba3614ca47871c8e9fbb2910504fdca361eb84575c6bef1"
+    },
+    "integrated": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-sdd-external-selection-v3/integrated-mapping.sdd-external-selection-v3.json",
+      "bytes": 569593,
+      "sha256": "a8b5611e6239202bbf54f980d48a5b7cfe37120d0ccee4bf83a69fb316d1499a"
+    },
+    "fixture_check": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-sdd-external-selection-v3/fixture-byte-structural-check.json",
+      "bytes": 3143,
+      "sha256": "3ed1cd1e675b6f1920403ca9ab83b807a53dae81a8e4789b3109e8424cef9ca8"
+    },
+    "fixture_manifest": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "bytes": 16432,
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    "model": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/model.json",
+      "bytes": 112525,
+      "sha256": "26b3a23d2e682726d7b9e7ea309149ada93e72133a13c5c0ab2b743b7aab48f1"
+    },
+    "obligation_witnesses": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/evidence/obligation-witnesses.json",
+      "bytes": 20556,
+      "sha256": "d5ef2b9f14b499d0c0a24cafa0f110f915e0392ab6cf44610dd208b89380f84c"
+    },
+    "sdd_suite": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/final-20260915T155901/T3/contracts/E3-SDD-stage6r3/T3-suite.json",
+      "bytes": 275850,
+      "sha256": "d20924fbe0040b6aaea47297ed0097788e8d63fbc84ac36b4e53cf1d3c73eed4"
+    },
+    "all7_suite": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/final-20260915T155901/T3/T3-AWS-offline-all7-suite.json",
+      "bytes": 2577892,
+      "sha256": "6ef613585366f91161545cdde8163bd84827106790486a96afb3cec02fed8a28"
+    }
+  },
+  "counts": {
+    "inventoryObligations": 25,
+    "selectedCells": 18,
+    "blockedCells": 7,
+    "selectedByTrack": {
+      "posting": 6,
+      "interest": 6,
+      "reporting": 6
+    },
+    "blockedByTrack": {
+      "posting": 3,
+      "interest": 2,
+      "reporting": 2
+    },
+    "selectionCategories": {
+      "branch_selected_no_output_oracle": 3,
+      "guard_eligible": 9,
+      "guard_eligible_partial_branch": 2,
+      "request_preparation_no_output_oracle": 1,
+      "request_preparation_static_only": 3
+    },
+    "officialCampaignSelectedCells": 0,
+    "preparatoryMaterializedSddCases": 123,
+    "preparatoryMaterializedSddCasesGuardTrue": 122,
+    "preparatoryMaterializedSddCasesGuardNotTrue": 1,
+    "omittedBlockedObligations": 7,
+    "missingSelectedCellsInSuite": 0,
+    "extraSuiteCells": 0
+  },
+  "suiteVerification": {
+    "all7CaseCount": 401,
+    "all7Origins": {
+      "T3-v4-adapter:E1-1": 53,
+      "T3-v4-adapter:E1-2": 53,
+      "T3-v4-adapter:E1-3": 53,
+      "T3-v4-adapter:E2-1": 33,
+      "T3-v4-adapter:E2-2": 53,
+      "T3-v4-adapter:E2-3": 33,
+      "T3-v4-adapter:E3-SDD-stage6r3": 123
+    },
+    "sddCaseCount": 123,
+    "sddOrigins": {
+      "T3-v4-adapter:E3-SDD-stage6r3": 123
+    },
+    "sddUniqueCellRefs": 18,
+    "selectedCellRefs": 18,
+    "missingSelectedCellRefsInSuite": [],
+    "extraSuiteCellRefsNotSelected": [],
+    "casesBySelectedCellRef": {
+      "INTCALC-OBL-001::E3-01-SDD-stage6r3::interest": 2,
+      "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest": 8,
+      "INTCALC-OBL-003::E3-01-SDD-stage6r3::interest": 4,
+      "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest": 4,
+      "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest": 6,
+      "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest": 4,
+      "POSTTRAN-OBL-001::E3-01-SDD-stage6r3::posting": 2,
+      "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting": 4,
+      "POSTTRAN-OBL-004::E3-01-SDD-stage6r3::posting": 2,
+      "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting": 4,
+      "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting": 4,
+      "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting": 2,
+      "TRANREPT-OBL-001::E3-01-SDD-stage6r3::reporting": 2,
+      "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting": 22,
+      "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting": 11,
+      "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting": 11,
+      "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting": 25,
+      "TRANREPT-OBL-006::E3-01-SDD-stage6r3::reporting": 6
+    },
+    "casesByObligation": {
+      "INTCALC-OBL-001": 2,
+      "INTCALC-OBL-002": 8,
+      "INTCALC-OBL-003": 4,
+      "INTCALC-OBL-004": 4,
+      "INTCALC-OBL-005": 6,
+      "INTCALC-OBL-006": 4,
+      "POSTTRAN-OBL-001": 2,
+      "POSTTRAN-OBL-002": 4,
+      "POSTTRAN-OBL-004": 2,
+      "POSTTRAN-OBL-005": 4,
+      "POSTTRAN-OBL-006": 4,
+      "POSTTRAN-OBL-007": 2,
+      "TRANREPT-OBL-001": 2,
+      "TRANREPT-OBL-002": 22,
+      "TRANREPT-OBL-003": 11,
+      "TRANREPT-OBL-004": 11,
+      "TRANREPT-OBL-005": 25,
+      "TRANREPT-OBL-006": 6
+    },
+    "guardResults": {
+      "True": 122,
+      "unknown": 1
+    },
+    "unknownGuardCases": [
+      {
+        "case_id": "T3-0036-01687de65244",
+        "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+        "transitionId": "POSTTRAN-T006",
+        "guardResult": "unknown"
+      }
+    ],
+    "requestBodies": [
+      {
+        "method": "POST",
+        "path": "/interest",
+        "body_kind": "json",
+        "body_b64": "e30="
+      },
+      {
+        "method": "POST",
+        "path": "/posting",
+        "body_kind": "json",
+        "body_b64": "e30="
+      },
+      {
+        "method": "POST",
+        "path": "/reporting",
+        "body_kind": "json",
+        "body_b64": "e30="
+      }
+    ],
+    "sddConstantEmptyObject": {
+      "True": 123
+    },
+    "officialCampaignFlags": {
+      "False": 123
+    },
+    "expectationStatuses": {
+      "inconclusive_until_checker_bound": 123
+    },
+    "expectedStatusSources": {
+      "not_runtime_not_api_not_results": 123
+    }
+  },
+  "selectedCells": [
+    {
+      "cellId": "POSTTRAN-OBL-001::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-001::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-001",
+      "title": "Arquivos externos e abertura",
+      "referenceTransitions": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T002"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "request_preparation_static_only",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "open_status=00 is selected by package physical-resource presence only",
+        "request body remains {}"
+      ],
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1",
+        "posting:ACCTFILE:recordCount>=1",
+        "posting:TCATBALF:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            29,
+            61
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 2101,
+          "byteEndExclusive": 4774,
+          "byteLength": 2673,
+          "firstLine": "           SELECT DALYTRAN-FILE ASSIGN TO DALYTRAN                              ",
+          "lastLine": "                  FILE STATUS  IS TCATBALF-STATUS.                              "
+        },
+        {
+          "lines": [
+            193,
+            200
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 15385,
+          "byteEndExclusive": 16033,
+          "byteLength": 648,
+          "firstLine": "       PROCEDURE DIVISION.                                                      ",
+          "lastLine": "           PERFORM 0500-TCATBALF-OPEN.                                          "
+        },
+        {
+          "lines": [
+            23,
+            42
+          ],
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "sha256Matches": true,
+          "byteStart": 1550,
+          "byteEndExclusive": 3170,
+          "byteLength": 1620,
+          "firstLine": "//STEP15 EXEC PGM=CBTRN02C                                                      ",
+          "lastLine": "//         DSN=AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS                               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T001",
+          "POSTTRAN-T002"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "DDs documentais do POSTTRAN disponíveis.",
+        "guard_or_transition": "OPEN DALYTRAN input, TRANFILE output, XREF input, DALYREJS output, ACCOUNT I-O, TCATBAL I-O; status diferente de 00 em qualquer OPEN chama erro/abend.",
+        "decidable_expectation": "Somente todos os OPEN status 00 permitem entrar no loop de DALYTRAN.",
+        "limits_and_review_notes": "JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+      }
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-002",
+      "title": "Loop DALYTRAN e EOF",
+      "referenceTransitions": [
+        "POSTTRAN-T003",
+        "POSTTRAN-T004",
+        "POSTTRAN-T005",
+        "POSTTRAN-T006"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "read_status=00 selected by non-empty DALYTRAN sequential input",
+        "EOF/other/UnknownEOF are not selected here"
+      ],
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            202,
+            219
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 16114,
+          "byteEndExclusive": 17572,
+          "byteLength": 1458,
+          "firstLine": "           PERFORM UNTIL END-OF-FILE = 'Y'                                      ",
+          "lastLine": "           END-PERFORM.                                                         "
+        },
+        {
+          "lines": [
+            345,
+            369
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 27697,
+          "byteEndExclusive": 29722,
+          "byteLength": 2025,
+          "firstLine": "       1000-DALYTRAN-GET-NEXT.                                                  ",
+          "lastLine": "           EXIT.                                                                "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T003",
+          "POSTTRAN-T004",
+          "POSTTRAN-T005",
+          "POSTTRAN-T006"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Arquivos abertos.",
+        "guard_or_transition": "READ DALYTRAN status 00 mantém END-OF-FILE=N e processa; status 10 move END-OF-FILE=Y; outro status abende.",
+        "decidable_expectation": "WS-TRANSACTION-COUNT incrementa somente para leituras status 00. EOF seleciona fechamento sem expectativa sobre conteúdo estável do receiver.",
+        "limits_and_review_notes": "Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10."
+      }
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-004::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-004",
+      "title": "Validação de cartão",
+      "referenceTransitions": [
+        "POSTTRAN-T007",
+        "POSTTRAN-T008"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "xref_exists has concrete present and absent source-bound records in DALYTRAN/CARDXREF family",
+        "no expected result is derived"
+      ],
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            370,
+            392
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 29722,
+          "byteEndExclusive": 31585,
+          "byteLength": 1863,
+          "firstLine": "       1500-VALIDATE-TRAN.                                                      ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 648,
+          "byteLength": 405,
+          "firstLine": "       01 CARD-XREF-RECORD.                                                     ",
+          "lastLine": "           05  FILLER                            PIC X(14).                     "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T007",
+          "POSTTRAN-T008"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Registro diário lido; razão zerada.",
+        "guard_or_transition": "READ XREF por DALYTRAN-CARD-NUM; INVALID KEY define razão 100 e descrição INVALID CARD NUMBER FOUND.",
+        "decidable_expectation": "Cartão ausente rejeita com trailer 100 e não entra em POST.",
+        "limits_and_review_notes": "Não há validação de formato além da busca."
+      }
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-005",
+      "title": "Validação de conta, limite e expiração textual",
+      "referenceTransitions": [
+        "POSTTRAN-T008",
+        "POSTTRAN-T009",
+        "POSTTRAN-T010",
+        "POSTTRAN-T011"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "account_exists=true and account state fields are source-bound in ACCTFILE for the present card",
+        "negative/expired variants are not selected"
+      ],
+      "resourceChecks": [
+        "posting:ACCTFILE:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            393,
+            421
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 31585,
+          "byteEndExclusive": 33934,
+          "byteLength": 2349,
+          "firstLine": "       1500-B-LOOKUP-ACCT.                                                      ",
+          "lastLine": "           END-READ                                                             "
+        },
+        {
+          "lines": [
+            4,
+            17
+          ],
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "sha256Matches": true,
+          "byteStart": 202,
+          "byteEndExclusive": 1037,
+          "byteLength": 835,
+          "firstLine": "       01  ACCOUNT-RECORD.",
+          "lastLine": "           05  FILLER                            PIC X(178).      "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T008",
+          "POSTTRAN-T009",
+          "POSTTRAN-T010",
+          "POSTTRAN-T011"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "XREF encontrado.",
+        "guard_or_transition": "Conta ausente razão 101; conta presente calcula credit-debit+amount, razão 102 se excede limite; depois compara ACCT-EXPIRAION-DATE >= DALYTRAN-ORIG-TS(1:10) e pode mover razão 103.",
+        "decidable_expectation": "Conta inexistente rejeita 101; overlimit rejeita 102 salvo se expiração textual também falhar, caso em que a razão final sustentada é 103.",
+        "limits_and_review_notes": "Comparação de datas é textual X(10); calendário real não é decidido."
+      }
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-006",
+      "title": "Rejeitos e return-code",
+      "referenceTransitions": [
+        "POSTTRAN-T007",
+        "POSTTRAN-T009",
+        "POSTTRAN-T010",
+        "POSTTRAN-T011"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "reject branch is externally selectable by DALYTRAN record with card absent from XREFFILE",
+        "reject output contents remain outside expected authority"
+      ],
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            211,
+            216
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 16843,
+          "byteEndExclusive": 17329,
+          "byteLength": 486,
+          "firstLine": "                     IF WS-VALIDATION-FAIL-REASON = 0                           ",
+          "lastLine": "                     END-IF                                                     "
+        },
+        {
+          "lines": [
+            227,
+            231
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 18139,
+          "byteEndExclusive": 18544,
+          "byteLength": 405,
+          "firstLine": "           DISPLAY 'TRANSACTIONS PROCESSED :' WS-TRANSACTION-COUNT              ",
+          "lastLine": "           END-IF                                                               "
+        },
+        {
+          "lines": [
+            446,
+            465
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 35878,
+          "byteEndExclusive": 37498,
+          "byteLength": 1620,
+          "firstLine": "       2500-WRITE-REJECT-REC.                                                   ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            176,
+            182
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 14008,
+          "byteEndExclusive": 14575,
+          "byteLength": 567,
+          "firstLine": "        01 REJECT-RECORD.                                                       ",
+          "lastLine": "           05 WS-VALIDATION-FAIL-REASON-DESC PIC X(76).                         "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T007",
+          "POSTTRAN-T009",
+          "POSTTRAN-T010",
+          "POSTTRAN-T011"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Razão de validação diferente de zero.",
+        "guard_or_transition": "Incrementa contador, escreve 350 bytes originais + trailer 80; ao final RC=4 se reject count>0.",
+        "decidable_expectation": "Cada rejeição alcançada gera um registro de rejeito; execução normal com algum rejeito retorna 4.",
+        "limits_and_review_notes": "Não afirma rollback de sucessos anteriores."
+      }
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E3-SDD-stage6r3::posting",
+      "matrixCellId": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "posting",
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-007",
+      "title": "TCATBAL create/update",
+      "referenceTransitions": [
+        "POSTTRAN-T012",
+        "POSTTRAN-T013",
+        "POSTTRAN-T014"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible_partial_branch",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "tcatbal_status=00 branch has package-local TCATBALF indexed resource and matching category key",
+        "status 23 and failure status other are not selected"
+      ],
+      "resourceChecks": [
+        "posting:TCATBALF:recordCount>=1"
+      ],
+      "limits": [
+        "TCATBALF contains key 10000000001010005 for the accepted 4111111111111111/01/0005 path, so status 00 is selected.",
+        "No present-card transaction has a missing TCATBALF key, so status 23 is not selected by this fixture.",
+        "The failure status other / abend branch is not selected and no output oracle is created."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            467,
+            542
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 37579,
+          "byteEndExclusive": 43735,
+          "byteLength": 6156,
+          "firstLine": "       2700-UPDATE-TCATBAL.                                                     ",
+          "lastLine": "           END-IF.                                                              "
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 810,
+          "byteLength": 567,
+          "firstLine": "       01  TRAN-CAT-BAL-RECORD.                                                 ",
+          "lastLine": "           05  FILLER                                  PIC X(22).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            }
+          },
+          {
+            "resource": "DALYTRAN",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "POSTTRAN-T012",
+          "POSTTRAN-T013",
+          "POSTTRAN-T014"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Transação aceita.",
+        "guard_or_transition": "Chave = XREF-ACCT-ID + type + category; status 23 cria registro inicializado, status 00 atualiza; ambos somam DALYTRAN-AMT; status diferente de 00/23 em READ ou diferente de 00 em WRITE/REWRITE abende.",
+        "decidable_expectation": "Ausente cria saldo com amount; existente reescreve saldo+amount; falha nesta etapa impede ACCOUNT/TRANFILE.",
+        "limits_and_review_notes": "Status aceitos 00/23 no read; sem atomicidade/durabilidade."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-001::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-001",
+      "title": "Arquivos, parâmetro e abertura",
+      "referenceTransitions": [
+        "INTCALC-T001",
+        "INTCALC-T002"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "request_preparation_static_only",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "open_status=00 is selected by package physical-resource presence and PARMFILE bytes",
+        "request body remains {}"
+      ],
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1",
+        "interest:XREFFILE:recordCount>=1",
+        "interest:ACCTFILE:recordCount>=1",
+        "interest:DISCGRP:recordCount>=1",
+        "interest:PARMFILE:bytes=10"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            28,
+            56
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 2008,
+          "byteEndExclusive": 4357,
+          "byteLength": 2349,
+          "firstLine": "           SELECT TCATBAL-FILE ASSIGN TO TCATBALF                               ",
+          "lastLine": "                  FILE STATUS  IS TRANFILE-STATUS.                              "
+        },
+        {
+          "lines": [
+            175,
+            186
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 13915,
+          "byteEndExclusive": 14887,
+          "byteLength": 972,
+          "firstLine": "       LINKAGE SECTION.                                                         ",
+          "lastLine": "           PERFORM 0400-TRANFILE-OPEN.                                          "
+        },
+        {
+          "lines": [
+            22,
+            41
+          ],
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "sha256Matches": true,
+          "byteStart": 1421,
+          "byteEndExclusive": 2888,
+          "byteLength": 1467,
+          "firstLine": "//STEP15 EXEC PGM=CBACT04C,PARM='2022071800'                                    ",
+          "lastLine": "//         DSN=AWS.M2.CARDDEMO.SYSTRAN(+1)           "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T001",
+          "INTCALC-T002"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Job INTCALC com PARM e DDs documentais.",
+        "guard_or_transition": "Abre TCATBAL input sequencial, XREF/DISCGRP input, ACCOUNT I-O, TRANSACT output; falha abende.",
+        "decidable_expectation": "PARM-DATE participa de TRAN-ID nas transações geradas.",
+        "limits_and_review_notes": "Data do JCL é exemplo de fonte, não calendário universal."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-002",
+      "title": "Varredura e agrupamento por conta",
+      "referenceTransitions": [
+        "INTCALC-T003",
+        "INTCALC-T004"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "tcatbal_read_status=00 selected by non-empty TCATBALF sequential input",
+        "EOF/other are not selected here"
+      ],
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            188,
+            222
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 14968,
+          "byteEndExclusive": 17803,
+          "byteLength": 2835,
+          "firstLine": "           PERFORM UNTIL END-OF-FILE = 'Y'                                      ",
+          "lastLine": "           END-PERFORM.                                                         "
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 810,
+          "byteLength": 567,
+          "firstLine": "       01  TRAN-CAT-BAL-RECORD.                                                 ",
+          "lastLine": "           05  FILLER                                  PIC X(22).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T003",
+          "INTCALC-T004"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "TCATBAL disponível.",
+        "guard_or_transition": "A cada registro status 00, se TRANCAT-ACCT-ID muda, atualiza conta anterior exceto primeiro registro, zera total e carrega nova conta/xref.",
+        "decidable_expectation": "Modelo depende de registros contíguos por conta; conta reaparecida depois vira novo grupo.",
+        "limits_and_review_notes": "Ordenação não é verificada pelo programa/JCL."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-003::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-003",
+      "title": "Leitura ACCOUNT e XREF por conta",
+      "referenceTransitions": [
+        "INTCALC-T003"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "new group account/xref lookup has matching ACCTFILE primary keys and XREFFILE alternate keys",
+        "missing lookup is not selected"
+      ],
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1",
+        "interest:XREFFILE:alternateKeys>=1",
+        "interest:ACCTFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            200,
+            205
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 15940,
+          "byteEndExclusive": 16426,
+          "byteLength": 486,
+          "firstLine": "                       MOVE 0 TO WS-TOTAL-INT                                   ",
+          "lastLine": "                       PERFORM 1110-GET-XREF-DATA                               "
+        },
+        {
+          "lines": [
+            372,
+            413
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 29872,
+          "byteEndExclusive": 33274,
+          "byteLength": 3402,
+          "firstLine": "       1100-GET-ACCT-DATA.                                                      ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            17
+          ],
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "sha256Matches": true,
+          "byteStart": 202,
+          "byteEndExclusive": 1037,
+          "byteLength": 835,
+          "firstLine": "       01  ACCOUNT-RECORD.",
+          "lastLine": "           05  FILLER                            PIC X(178).      "
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 648,
+          "byteLength": 405,
+          "firstLine": "       01 CARD-XREF-RECORD.                                                     ",
+          "lastLine": "           05  FILLER                            PIC X(14).                     "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T003"
+        ],
+        "reachableWitnessCount": 1,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Novo grupo.",
+        "guard_or_transition": "Lê ACCOUNT por TRANCAT-ACCT-ID e XREF por alternate key FD-XREF-ACCT-ID; status não 00 abende.",
+        "decidable_expectation": "ACCOUNT fornece grupo/id; XREF fornece cartão para transação de juros.",
+        "limits_and_review_notes": "Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-004",
+      "title": "Taxa específica ou DEFAULT",
+      "referenceTransitions": [
+        "INTCALC-T007",
+        "INTCALC-T008",
+        "INTCALC-T009Z"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible_partial_branch",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "disc_rate_path specific and zero are concretely source-bound by selected account groups",
+        "DEFAULT fallback and missing-group branch remain unselected"
+      ],
+      "resourceChecks": [
+        "interest:DISCGRP:keys include STANDARD/ZERORATE; DEFAULT resource exists but fallback is not selected"
+      ],
+      "limits": [
+        "ACCTFILE/TCATBALF select STANDARD and ZERORATE records only.",
+        "DISCGRP includes DEFAULT as a resource, but no account/group combination forces status 23 and fallback DEFAULT.",
+        "The missing disclosure-group / abend branch is not selected and no interest-output oracle is created."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            210,
+            217
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 16750,
+          "byteEndExclusive": 17398,
+          "byteLength": 648,
+          "firstLine": "                     MOVE ACCT-GROUP-ID TO FD-DIS-ACCT-GROUP-ID                 ",
+          "lastLine": "                     END-IF                                                     "
+        },
+        {
+          "lines": [
+            415,
+            460
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 33355,
+          "byteEndExclusive": 37081,
+          "byteLength": 3726,
+          "firstLine": "       1200-GET-INTEREST-RATE.                                                  ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 810,
+          "byteLength": 567,
+          "firstLine": "       01  DIS-GROUP-RECORD.                                                    ",
+          "lastLine": "           05  FILLER                                  PIC X(28).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T007",
+          "INTCALC-T008",
+          "INTCALC-T009Z"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Conta e TCATBAL carregados.",
+        "guard_or_transition": "Lê DISCGRP por group/type/category; status 23 tenta group DEFAULT preservando type/category; DEFAULT ausente abende.",
+        "decidable_expectation": "Usa taxa específica se existe; se ausente tenta DEFAULT; default ausente abende.",
+        "limits_and_review_notes": "Sem fallback adicional."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-005",
+      "title": "Fórmula e guarda de juros",
+      "referenceTransitions": [
+        "INTCALC-T007",
+        "INTCALC-T009",
+        "INTCALC-T009Z"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "rate nonzero and zero partitions are selectable by DISCGRP records; formula expected output is not generated"
+      ],
+      "resourceChecks": [
+        "interest:DISCGRP:keys include nonzero and zero rates",
+        "interest:TCATBALF:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            213,
+            217
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 16993,
+          "byteEndExclusive": 17398,
+          "byteLength": 405,
+          "firstLine": "                     PERFORM 1200-GET-INTEREST-RATE                             ",
+          "lastLine": "                     END-IF                                                     "
+        },
+        {
+          "lines": [
+            462,
+            470
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 37162,
+          "byteEndExclusive": 37891,
+          "byteLength": 729,
+          "firstLine": "       1300-COMPUTE-INTEREST.                                                   ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "sha256Matches": true,
+          "byteStart": 648,
+          "byteEndExclusive": 810,
+          "byteLength": 162,
+          "firstLine": "           05  DIS-INT-RATE                            PIC S9(04)V99.           ",
+          "lastLine": "           05  FILLER                                  PIC X(28).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T007",
+          "INTCALC-T009",
+          "INTCALC-T009Z"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Taxa lida.",
+        "guard_or_transition": "Só se DIS-INT-RATE != 0 calcula (TRAN-CAT-BAL*DIS-INT-RATE)/1200, acumula WS-TOTAL-INT e escreve TX.",
+        "decidable_expectation": "Taxa zero não gera transação; taxa diferente de zero gera valor pela fórmula fonte.",
+        "limits_and_review_notes": "Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado."
+      }
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E3-SDD-stage6r3::interest",
+      "matrixCellId": "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "interest",
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-006",
+      "title": "Campos da transação de juros",
+      "referenceTransitions": [
+        "INTCALC-T009",
+        "INTCALC-T010",
+        "INTCALC-T011"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "request_preparation_no_output_oracle",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "interest transaction field sources are available as parameter and lookup bytes",
+        "write outcome remains unchecked"
+      ],
+      "resourceChecks": [
+        "interest:PARMFILE:bytes=10",
+        "interest:XREFFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            473,
+            515
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 38053,
+          "byteEndExclusive": 41536,
+          "byteLength": 3483,
+          "firstLine": "       1300-B-WRITE-TX.                                                         ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 1458,
+          "byteLength": 1215,
+          "firstLine": "       01  TRAN-RECORD.                                                         ",
+          "lastLine": "           05  FILLER                                  PIC X(20).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "ACCTFILE",
+            "recordCount": 2,
+            "recordSize": 300,
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            }
+          },
+          {
+            "resource": "DISCGRP",
+            "recordCount": 3,
+            "recordSize": 50,
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            }
+          },
+          {
+            "resource": "PARMFILE",
+            "recordCount": 1,
+            "recordSize": 10,
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 10
+              }
+            ]
+          },
+          {
+            "resource": "TCATBALF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            }
+          },
+          {
+            "resource": "XREFFILE",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "INTCALC-T009",
+          "INTCALC-T010",
+          "INTCALC-T011"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Juros calculados.",
+        "guard_or_transition": "TRAN-ID=PARM-DATE+sufixo; type 01; cat 05; source System; desc Int. for a/c + ACCT-ID; amount mensal; merchant zero/spaces; card XREF; timestamps current.",
+        "decidable_expectation": "Cada cálculo escreve uma transação de sistema com esses MOVEs.",
+        "limits_and_review_notes": "Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-001::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-001",
+      "title": "Contexto JCL e arquivos",
+      "referenceTransitions": [
+        "TRANREPT-T001",
+        "TRANREPT-T002"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "request_preparation_static_only",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "previous not_mapped for SDD reporting is corrected in the versioned copy: /reporting operation plus external reporting package supply the selectable file context",
+        "SORT/REPROC execution is not claimed"
+      ],
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:CARDXREF:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            29,
+            57
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 2092,
+          "byteEndExclusive": 4441,
+          "byteLength": 2349,
+          "firstLine": "           SELECT TRANSACT-FILE ASSIGN TO TRANFILE                              ",
+          "lastLine": "                  FILE STATUS  IS DATEPARM-STATUS.                              "
+        },
+        {
+          "lines": [
+            19,
+            80
+          ],
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "sha256Matches": true,
+          "byteStart": 1248,
+          "byteEndExclusive": 6270,
+          "byteLength": 5022,
+          "firstLine": "//JOBLIB JCLLIB ORDER=('AWS.M2.CARDDEMO.PROC')                                  ",
+          "lastLine": "//         DSN=AWS.M2.CARDDEMO.TRANREPT(+1)                                     "
+        },
+        {
+          "lines": [
+            18,
+            28
+          ],
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "sha256Matches": true,
+          "byteStart": 1185,
+          "byteEndExclusive": 2076,
+          "byteLength": 891,
+          "firstLine": "//* *******************************************************************         ",
+          "lastLine": "//        DSN=&CNTLLIB(REPROCT)                                                 "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T001",
+          "TRANREPT-T002"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "JCL TRANREPT documental.",
+        "guard_or_transition": "REPROC descarrega, SORT ordena por card e filtra por proc date, STEP10 roda CBTRN03C com arquivos de lookup e report.",
+        "decidable_expectation": "Modelo espera input ordenado por cartão para que quebras façam sentido.",
+        "limits_and_review_notes": "JCL não foi executado; datas do SORT podem divergir do DATEPARM."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-002",
+      "title": "DATEPARM e filtro textual antes do EOF",
+      "referenceTransitions": [
+        "TRANREPT-T003",
+        "TRANREPT-T012"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "DATEPARM 2022-07-01..2022-07-31 and TRANFILE with at least one 2022-07 record select date_window=in_range",
+        "EOF receiver behavior not selected"
+      ],
+      "resourceChecks": [
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:TRANFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            122,
+            125
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 9625,
+          "byteEndExclusive": 9949,
+          "byteLength": 324,
+          "firstLine": "       01 WS-DATEPARM-RECORD.                                                   ",
+          "lastLine": "           05 WS-END-DATE        PIC X(10).                                     "
+        },
+        {
+          "lines": [
+            219,
+            243
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 17482,
+          "byteEndExclusive": 19507,
+          "byteLength": 2025,
+          "firstLine": "      * Read the date parameter file.                                           ",
+          "lastLine": "           .                                                                    "
+        },
+        {
+          "lines": [
+            170,
+            178
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 13513,
+          "byteEndExclusive": 14242,
+          "byteLength": 729,
+          "firstLine": "           PERFORM UNTIL END-OF-FILE = 'Y'                                      ",
+          "lastLine": "                END-IF                                                          "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T003",
+          "TRANREPT-T012"
+        ],
+        "reachableWitnessCount": 2,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "DATEPARM disponível.",
+        "guard_or_transition": "Lê start/end X(10); após cada READ TRANFILE, inclusive quando EOF foi marcado, testa TRAN-PROC-TS(1:10) >= start e <= end antes do ramo END-OF-FILE. Fora do intervalo executa NEXT SENTENCE.",
+        "decidable_expectation": "Somente registros cujo texto de proc date está no intervalo alcançam lookups/detalhe; fora do intervalo não produz detalhe nem acumula valor. EOF só alcança totais se o valor observável/retido em TRAN-PROC-TS satisfizer o teste textual.",
+        "limits_and_review_notes": "Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-003",
+      "title": "Leitura TRANFILE e EOF condicional",
+      "referenceTransitions": [
+        "TRANREPT-T009"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "TRANFILE includes an out-of-range August record against July DATEPARM, selecting the skip-detail branch",
+        "empty-input/UnknownEOF is not promoted"
+      ],
+      "resourceChecks": [
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:TRANFILE:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            170,
+            206
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 13513,
+          "byteEndExclusive": 16510,
+          "byteLength": 2997,
+          "firstLine": "           PERFORM UNTIL END-OF-FILE = 'Y'                                      ",
+          "lastLine": "           END-PERFORM.                                                         "
+        },
+        {
+          "lines": [
+            248,
+            272
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 19831,
+          "byteEndExclusive": 21856,
+          "byteLength": 2025,
+          "firstLine": "       1000-TRANFILE-GET-NEXT.                                                  ",
+          "lastLine": "           EXIT.                                                                "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T009"
+        ],
+        "reachableWitnessCount": 1,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Arquivos abertos e DATEPARM ok.",
+        "guard_or_transition": "READ status 00 deixa END=N; status 10 move END=Y; outros abendem. O teste de data acontece após o READ e antes do IF END=N/ELSE de totais.",
+        "decidable_expectation": "Loop é limitado por registros status 00 + leitura EOF. O caminho EOF para totais é condicional ao teste textual anterior; arquivo vazio/receiver desconhecido deve ser modelado como unknown, não como total incondicional.",
+        "limits_and_review_notes": "Não assumir retenção de último registro no EOF nem conteúdo estável do receiver."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-004",
+      "title": "Quebra por cartão e lookups",
+      "referenceTransitions": [
+        "TRANREPT-T003"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "guard_eligible",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "lookups for the in-range transaction have matching package-local indexed resources",
+        "absent lookup abend is not selected"
+      ],
+      "resourceChecks": [
+        "reporting:CARDXREF:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            181,
+            196
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 14404,
+          "byteEndExclusive": 15700,
+          "byteLength": 1296,
+          "firstLine": "                   IF WS-CURR-CARD-NUM NOT= TRAN-CARD-NUM                       ",
+          "lastLine": "                   PERFORM 1100-WRITE-TRANSACTION-REPORT                        "
+        },
+        {
+          "lines": [
+            484,
+            512
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 38947,
+          "byteEndExclusive": 41296,
+          "byteLength": 2349,
+          "firstLine": "       1500-A-LOOKUP-XREF.                                                      ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 648,
+          "byteLength": 405,
+          "firstLine": "       01 CARD-XREF-RECORD.                                                     ",
+          "lastLine": "           05  FILLER                            PIC X(14).                     "
+        },
+        {
+          "lines": [
+            4,
+            7
+          ],
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 567,
+          "byteLength": 324,
+          "firstLine": "       01  TRAN-TYPE-RECORD.                                                    ",
+          "lastLine": "           05  FILLER                                  PIC X(08).               "
+        },
+        {
+          "lines": [
+            4,
+            9
+          ],
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 729,
+          "byteLength": 486,
+          "firstLine": "       01  TRAN-CAT-RECORD.                                                     ",
+          "lastLine": "           05  FILLER                                  PIC X(04).               "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T003"
+        ],
+        "reachableWitnessCount": 1,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Transação no intervalo e END=N.",
+        "guard_or_transition": "Em card novo escreve total anterior se não primeira ocorrência; lê XREF. Para todo registro lê tipo e categoria; chave ausente abende.",
+        "decidable_expectation": "Detalhe usa account id e descrições dos arquivos de referência. Mudança de cartão materializa Account Total do cartão anterior.",
+        "limits_and_review_notes": "Não há linha de erro/rejeição para lookup ausente."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-005",
+      "title": "Cabeçalhos e paginação",
+      "referenceTransitions": [
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T015"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "first-detail/header branch is selectable from one in-range transaction",
+        "page-boundary after 20 lines is not selected"
+      ],
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:DATEPARM:recordCount=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            274,
+            290
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 21937,
+          "byteEndExclusive": 23314,
+          "byteLength": 1377,
+          "firstLine": "       1100-WRITE-TRANSACTION-REPORT.                                           ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            324,
+            341
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 25987,
+          "byteEndExclusive": 27445,
+          "byteLength": 1458,
+          "firstLine": "       1120-WRITE-HEADERS.                                                      ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            4,
+            49
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 3969,
+          "byteLength": 3726,
+          "firstLine": "       01  REPORT-NAME-HEADER.                                                  ",
+          "lastLine": "                                                                                "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T015"
+        ],
+        "reachableWitnessCount": 3,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Primeiro detalhe ou boundary.",
+        "guard_or_transition": "Primeiro detalhe escreve headers com date range; quando MOD(line-counter,20)=0 escreve page total e headers.",
+        "decidable_expectation": "Headers contêm DALYREPT, Daily Transaction Report, Date Range e colunas do copybook.",
+        "limits_and_review_notes": "Page-size conta linhas de header/totais; não é 20 detalhes."
+      }
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E3-SDD-stage6r3::reporting",
+      "matrixCellId": "TRANREPT-OBL-006::E3-01-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "operationId": "reporting",
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-006",
+      "title": "Linha de detalhe e acumulação",
+      "referenceTransitions": [
+        "TRANREPT-T016"
+      ],
+      "classification": "externally_selectable_sdd_empty_request",
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "status": "candidate_static_only",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "guardBasis": [
+        "detail/accrual branch has transaction and lookup bytes",
+        "edited-money expected formatting is not asserted"
+      ],
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "sourceAnchors": [
+        {
+          "lines": [
+            287,
+            289
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 22990,
+          "byteEndExclusive": 23233,
+          "byteLength": 243,
+          "firstLine": "           ADD TRAN-AMT TO WS-PAGE-TOTAL                                        ",
+          "lastLine": "           PERFORM 1120-WRITE-DETAIL                                            "
+        },
+        {
+          "lines": [
+            361,
+            374
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 28984,
+          "byteEndExclusive": 30118,
+          "byteLength": 1134,
+          "firstLine": "       1120-WRITE-DETAIL.                                                       ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            15,
+            31
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sha256Matches": true,
+          "byteStart": 1134,
+          "byteEndExclusive": 2511,
+          "byteLength": 1377,
+          "firstLine": "       01  TRANSACTION-DETAIL-REPORT.                                           ",
+          "lastLine": "           05  FILLER                           PIC X(02) VALUE SPACES.         "
+        }
+      ],
+      "fixture": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": [
+          {
+            "resource": "CARDXREF",
+            "recordCount": 2,
+            "recordSize": 50,
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            }
+          },
+          {
+            "resource": "DATEPARM",
+            "recordCount": 1,
+            "recordSize": 80,
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 80
+              }
+            ]
+          },
+          {
+            "resource": "TRANCATG",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "010005"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            }
+          },
+          {
+            "resource": "TRANFILE",
+            "recordCount": 2,
+            "recordSize": 350,
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat",
+            "recordByteSpans": [
+              {
+                "recordIndex": 0,
+                "byteStart": 0,
+                "byteEndExclusive": 350
+              },
+              {
+                "recordIndex": 1,
+                "byteStart": 350,
+                "byteEndExclusive": 700
+              }
+            ]
+          },
+          {
+            "resource": "TRANFILE.empty",
+            "recordCount": 0,
+            "recordSize": 350,
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat",
+            "recordByteSpans": []
+          },
+          {
+            "resource": "TRANTYPE",
+            "recordCount": 1,
+            "recordSize": 60,
+            "keys": [
+              "01"
+            ],
+            "alternateKeys": [],
+            "alternateKeyName": null,
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            }
+          }
+        ]
+      },
+      "modelEvidence": {
+        "witnessStatus": "draft_needs_review",
+        "transitionRefs": [
+          "TRANREPT-T016"
+        ],
+        "reachableWitnessCount": 1,
+        "limit": null,
+        "modelObligationPresent": true,
+        "preconditions": "Lookups concluídos para registro no intervalo.",
+        "guard_or_transition": "Soma TRAN-AMT a WS-PAGE-TOTAL e WS-ACCOUNT-TOTAL; move id, account, type code/desc, category code/desc, source e amount para detail.",
+        "decidable_expectation": "Cada transação processada no intervalo gera uma linha e acumula o valor exatamente nessa rotina.",
+        "limits_and_review_notes": "Edição monetária é a do PIC; sem arredondamento inventado."
+      }
+    }
+  ],
+  "blockedCells": [
+    {
+      "cellId": "POSTTRAN-OBL-003::E3-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-003",
+      "title": "Layout e cópia para transação postada",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "observable posted-record layout depends on accepted path and generated timestamp; request {} + base fixture can select the run but not an independent expected field oracle",
+      "referenceTransitions": [
+        "POSTTRAN-T012"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 1450,
+          "byteLength": 1207,
+          "firstLine": "       01  DALYTRAN-RECORD.                                                     ",
+          "lastLine": "           05  FILLER                                  PIC X(20).       "
+        },
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "sha256Matches": true,
+          "byteStart": 243,
+          "byteEndExclusive": 1458,
+          "byteLength": 1215,
+          "firstLine": "       01  TRAN-RECORD.                                                         ",
+          "lastLine": "           05  FILLER                                  PIC X(20).               "
+        },
+        {
+          "lines": [
+            424,
+            439
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 34096,
+          "byteEndExclusive": 35392,
+          "byteLength": 1296,
+          "firstLine": "       2000-POST-TRANSACTION.                                                   ",
+          "lastLine": "                                                                                "
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E3-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-008",
+      "title": "Atualização ACCOUNT e ordem de efeitos",
+      "previousApplicabilityStatus": "not_expressible",
+      "reason": "ACCOUNT update/order effect needs runtime/internal state authority; not selected by external package alone",
+      "referenceTransitions": [
+        "POSTTRAN-T013",
+        "POSTTRAN-T019",
+        "POSTTRAN-T020"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            440,
+            442
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 35392,
+          "byteEndExclusive": 35635,
+          "byteLength": 243,
+          "firstLine": "           PERFORM 2700-UPDATE-TCATBAL                                          ",
+          "lastLine": "           PERFORM 2900-WRITE-TRANSACTION-FILE                                  "
+        },
+        {
+          "lines": [
+            545,
+            559
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 43897,
+          "byteEndExclusive": 45112,
+          "byteLength": 1215,
+          "firstLine": "       2800-UPDATE-ACCOUNT-REC.                                                 ",
+          "lastLine": "           END-REWRITE.                                                         "
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E3-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "track": "posting",
+      "obligationId": "POSTTRAN-OBL-009",
+      "title": "WRITE TRANFILE após efeitos anteriores",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "TRANFILE write/failure after prior effects remains precondition-indeterminate without execution-state authority",
+      "referenceTransitions": [
+        "POSTTRAN-T019",
+        "POSTTRAN-T020",
+        "POSTTRAN-T021",
+        "POSTTRAN-T022"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            424,
+            442
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 34096,
+          "byteEndExclusive": 35635,
+          "byteLength": 1539,
+          "firstLine": "       2000-POST-TRANSACTION.                                                   ",
+          "lastLine": "           PERFORM 2900-WRITE-TRANSACTION-FILE                                  "
+        },
+        {
+          "lines": [
+            562,
+            578
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 45274,
+          "byteEndExclusive": 46651,
+          "byteLength": 1377,
+          "firstLine": "       2900-WRITE-TRANSACTION-FILE.                                             ",
+          "lastLine": "           END-IF                                                               "
+        },
+        {
+          "lines": [
+            370,
+            421
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "sha256Matches": true,
+          "byteStart": 29722,
+          "byteEndExclusive": 33934,
+          "byteLength": 4212,
+          "firstLine": "       1500-VALIDATE-TRAN.                                                      ",
+          "lastLine": "           END-READ                                                             "
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E3-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-007",
+      "title": "Update de conta em quebra de grupo",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "group-break ACCOUNT update needs multi-group transition outcome; base package alone does not authorize expected effect",
+      "referenceTransitions": [
+        "INTCALC-T010"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            194,
+            203
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 15454,
+          "byteEndExclusive": 16264,
+          "byteLength": 810,
+          "firstLine": "                     IF TRANCAT-ACCT-ID NOT= WS-LAST-ACCT-NUM                   ",
+          "lastLine": "                       PERFORM 1100-GET-ACCT-DATA                               "
+        },
+        {
+          "lines": [
+            350,
+            370
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 28090,
+          "byteEndExclusive": 29791,
+          "byteLength": 1701,
+          "firstLine": "       1050-UPDATE-ACCOUNT.                                                     ",
+          "lastLine": "           EXIT.                                                                "
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E3-SDD-stage6r3::interest",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "track": "interest",
+      "obligationId": "INTCALC-OBL-008",
+      "title": "Última conta no EOF",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "normal EOF final-account absence is a static source finding, not fixture-selectable expected behavior",
+      "referenceTransitions": [
+        "INTCALC-T006"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            188,
+            222
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 14968,
+          "byteEndExclusive": 17803,
+          "byteLength": 2835,
+          "firstLine": "           PERFORM UNTIL END-OF-FILE = 'Y'                                      ",
+          "lastLine": "           END-PERFORM.                                                         "
+        },
+        {
+          "lines": [
+            325,
+            348
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 26065,
+          "byteEndExclusive": 28009,
+          "byteLength": 1944,
+          "firstLine": "       1000-TCATBALF-GET-NEXT.                                                  ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            350,
+            370
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "sha256Matches": true,
+          "byteStart": 28090,
+          "byteEndExclusive": 29791,
+          "byteLength": 1701,
+          "firstLine": "       1050-UPDATE-ACCOUNT.                                                     ",
+          "lastLine": "           EXIT.                                                                "
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-007",
+      "title": "Totais de página/grand no EOF condicional",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "EOF totals depend on receiver/content behavior explicitly treated as conditional/unknown",
+      "referenceTransitions": [
+        "TRANREPT-T010",
+        "TRANREPT-T011",
+        "TRANREPT-T013",
+        "TRANREPT-T016"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            197,
+            203
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 15700,
+          "byteEndExclusive": 16267,
+          "byteLength": 567,
+          "firstLine": "                ELSE                                                            ",
+          "lastLine": "                 PERFORM 1110-WRITE-GRAND-TOTALS                                "
+        },
+        {
+          "lines": [
+            287,
+            322
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 22990,
+          "byteEndExclusive": 25906,
+          "byteLength": 2916,
+          "firstLine": "           ADD TRAN-AMT TO WS-PAGE-TOTAL                                        ",
+          "lastLine": "           EXIT.                                                                "
+        },
+        {
+          "lines": [
+            50,
+            66
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "sha256Matches": true,
+          "byteStart": 3969,
+          "byteEndExclusive": 5346,
+          "byteLength": 1377,
+          "firstLine": "       01  REPORT-PAGE-TOTALS.                                                  ",
+          "lastLine": "           05  REPT-GRAND-TOTAL                 PIC +ZZZ,ZZZ,ZZZ.ZZ.            "
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-SDD-stage6r3::reporting",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "track": "reporting",
+      "obligationId": "TRANREPT-OBL-008",
+      "title": "Ausência de Account Total final no EOF",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "absence of final account total is source-static and observation-inadmissible as external selection without report oracle",
+      "referenceTransitions": [
+        "TRANREPT-T010"
+      ],
+      "sourceAnchors": [
+        {
+          "lines": [
+            181,
+            184
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 14404,
+          "byteEndExclusive": 14728,
+          "byteLength": 324,
+          "firstLine": "                   IF WS-CURR-CARD-NUM NOT= TRAN-CARD-NUM                       ",
+          "lastLine": "                     END-IF                                                     "
+        },
+        {
+          "lines": [
+            197,
+            203
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 15700,
+          "byteEndExclusive": 16267,
+          "byteLength": 567,
+          "firstLine": "                ELSE                                                            ",
+          "lastLine": "                 PERFORM 1110-WRITE-GRAND-TOTALS                                "
+        },
+        {
+          "lines": [
+            306,
+            316
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sourceBase": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+          "verifiedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "sha256Matches": true,
+          "byteStart": 24529,
+          "byteEndExclusive": 25420,
+          "byteLength": 891,
+          "firstLine": "       1120-WRITE-ACCOUNT-TOTALS.                                               ",
+          "lastLine": "           EXIT.                                                                "
+        }
+      ]
+    }
+  ],
+  "fixtureByteCheck": {
+    "checked": [
+      {
+        "bytes": 8192,
+        "path": "ACCTFILE",
+        "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+        "track": "interest"
+      },
+      {
+        "bytes": 8192,
+        "path": "DISCGRP",
+        "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "track": "interest"
+      },
+      {
+        "bytes": 10,
+        "path": "PARMFILE",
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "track": "interest"
+      },
+      {
+        "bytes": 8192,
+        "path": "TCATBALF",
+        "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "track": "interest"
+      },
+      {
+        "bytes": 8192,
+        "path": "XREFFILE",
+        "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "track": "interest"
+      },
+      {
+        "bytes": 8192,
+        "path": "XREFFILE.1",
+        "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+        "track": "interest"
+      },
+      {
+        "bytes": 8192,
+        "path": "ACCTFILE",
+        "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+        "track": "posting"
+      },
+      {
+        "bytes": 700,
+        "path": "DALYTRAN",
+        "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "track": "posting"
+      },
+      {
+        "bytes": 8192,
+        "path": "TCATBALF",
+        "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+        "track": "posting"
+      },
+      {
+        "bytes": 8192,
+        "path": "TRANFILE",
+        "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+        "track": "posting"
+      },
+      {
+        "bytes": 8192,
+        "path": "XREFFILE",
+        "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+        "track": "posting"
+      },
+      {
+        "bytes": 8192,
+        "path": "XREFFILE.1",
+        "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0",
+        "track": "posting"
+      },
+      {
+        "bytes": 8192,
+        "path": "CARDXREF",
+        "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "track": "reporting"
+      },
+      {
+        "bytes": 80,
+        "path": "DATEPARM",
+        "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "track": "reporting"
+      },
+      {
+        "bytes": 8192,
+        "path": "TRANCATG",
+        "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "track": "reporting"
+      },
+      {
+        "bytes": 700,
+        "path": "TRANFILE",
+        "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "track": "reporting"
+      },
+      {
+        "bytes": 0,
+        "path": "TRANFILE.empty",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "track": "reporting"
+      },
+      {
+        "bytes": 8192,
+        "path": "TRANTYPE",
+        "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "track": "reporting"
+      }
+    ],
+    "checkedCount": 18,
+    "mismatches": [],
+    "status": "PASS"
+  }
+}

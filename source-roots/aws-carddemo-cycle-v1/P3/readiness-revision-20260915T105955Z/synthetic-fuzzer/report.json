@@ -1,0 +1,77 @@
+{
+  "kind": "synthetic-tool-qualification-not-experiment",
+  "passed": true,
+  "awsLoaded": false,
+  "versions": {
+    "schemathesis": "4.27.1",
+    "hypothesis": "6.168.0",
+    "requests": "2.34.2"
+  },
+  "generation": [
+    {
+      "seed": 104729,
+      "mode": "positive",
+      "generated": 2,
+      "maxExamples": 12,
+      "seconds": 0.005332750268280506
+    },
+    {
+      "seed": 104729,
+      "mode": "negative",
+      "generated": 12,
+      "maxExamples": 12,
+      "seconds": 0.0840567909181118
+    },
+    {
+      "seed": 130363,
+      "mode": "positive",
+      "generated": 2,
+      "maxExamples": 12,
+      "seconds": 0.0011892495676875114
+    },
+    {
+      "seed": 130363,
+      "mode": "negative",
+      "generated": 12,
+      "maxExamples": 12,
+      "seconds": 0.021505958400666714
+    },
+    {
+      "seed": 155921,
+      "mode": "positive",
+      "generated": 2,
+      "maxExamples": 12,
+      "seconds": 0.0011757919564843178
+    },
+    {
+      "seed": 155921,
+      "mode": "negative",
+      "generated": 12,
+      "maxExamples": 12,
+      "seconds": 0.015650583431124687
+    }
+  ],
+  "phases": [
+    "generate"
+  ],
+  "database": null,
+  "httpCalls": 42,
+  "frozenCases": 42,
+  "unexpectedHttpCalls": 0,
+  "documented500Accepted": true,
+  "malformedResponseDetected": true,
+  "positiveBodyVariants": [
+    "{}"
+  ],
+  "suiteSha256": "29daa6cddc54c87c04a276daacdb39bd67e85a0cab09999fc7cebb1124904dbe",
+  "checkers": [
+    "content_type_conformance",
+    "response_schema_conformance",
+    "status_code_conformance"
+  ],
+  "limits": [
+    "12-example synthetic rehearsal, not official budget",
+    "no AWS schema, fixture or oracle",
+    "campaign reset and deadline orchestration not implemented here"
+  ]
+}

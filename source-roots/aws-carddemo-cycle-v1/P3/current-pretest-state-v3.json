@@ -1,0 +1,96 @@
+{
+  "kind": "bounded-runtime-corrections-verified-not-experimental-approval",
+  "createdUtc": "2026-09-15T10:46:35.722183+00:00",
+  "supersedesForCurrentStatus": "P3/current-pretest-state-v2.json",
+  "closedTechnicalIssues": [
+    "posting actual counters/rejection receivers/write occurrence order",
+    "known local failure precedence and audit retention",
+    "external interest linkage argument via PARMFILE"
+  ],
+  "bindingUnitTests": 25,
+  "configurationTests": 5,
+  "runtimeRegressionTests": 4,
+  "httpReadback": [
+    {
+      "track": "interest",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4cbgz2lo/audit.json",
+      "auditSha256": "63a1ca75b86b582e4e14b7f54dc2a9a72000a3714a86fc4492fd0c2e76af1e61",
+      "observedWriteEvents": 0,
+      "parameter": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4cbgz2lo/PARMFILE",
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "bytes": 10,
+        "authority": "CBACT04C linkage X(10); explicit local resource, no date default"
+      }
+    },
+    {
+      "track": "posting",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-p72m7r6h/audit.json",
+      "auditSha256": "136130378d6b076a323406f21c1c57908dcfaa88bd493cb92372e7300382832b",
+      "observedWriteEvents": 2,
+      "parameter": null
+    },
+    {
+      "track": "reporting",
+      "status": 200,
+      "exit": 0,
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-k7j8xplj/audit.json",
+      "auditSha256": "6c67a8d128697314e373d1543b110c49b442954725cec89a9c12ddbde75fb6de",
+      "observedWriteEvents": 0,
+      "parameter": null
+    }
+  ],
+  "schemaOverallPassed": true,
+  "allPretestWorkComplete": false,
+  "humanExperimentalApprovalRecorded": false,
+  "officialCampaignsStarted": false,
+  "evidenceRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/runtime-closure-evidence-20260915T104230Z",
+  "pending": [
+    "official fixtures and independent expectations/MBT",
+    "tool/version/budget/seed/reset/union/analysis freeze",
+    "other-arm APIs not yet attested",
+    "full outcome fidelity not certified by this bounded QA"
+  ],
+  "artifactPins": [
+    {
+      "path": "P2b/p2b_binding.py",
+      "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853"
+    },
+    {
+      "path": "P2b/runtime_observations.py",
+      "sha256": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd"
+    },
+    {
+      "path": "P2b/write_observer.c",
+      "sha256": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c"
+    },
+    {
+      "path": "P2b/interest_driver.cbl",
+      "sha256": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    {
+      "path": "P2b/tests/test_runtime_observations.py",
+      "sha256": "16c34df0883da78fa6f1efc090188d4b4bed65906b64f9de9d95f02ad6cdc674"
+    },
+    {
+      "path": "P2b/readiness-manifest.json",
+      "sha256": "56421526d0d1c1b448e0aee3819f063b76af1851acd0a783d53cc75568333d50"
+    },
+    {
+      "path": "P2b/schema-validation-report.json",
+      "sha256": "e6613a34fa7098d03716923153c6d9be7c0fbe2b76c7c038cbc8efdae5104ee0"
+    },
+    {
+      "path": "P3/API-RUNTIME-CLOSURE.md",
+      "sha256": "f64515fd23c2f9b36a54fe7729dc9c97c87fbd9f7b836be6e24008ebd9fa7247"
+    },
+    {
+      "path": "P3/technical-packages-v3-argument/registry.json",
+      "sha256": "e37aea9bac1a04eef616f74b9264b11d63b0564c9ae706cace4db30be37cea2e"
+    }
+  ]
+}

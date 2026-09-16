@@ -1,0 +1,162 @@
+[
+  {
+    "body_kind": "json",
+    "case_id": "T4-0001",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/posting",
+    "provenance": [
+      "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-posting"
+    ],
+    "request_headers": [
+      [
+        "content-type",
+        "application/json"
+      ]
+    ],
+    "request_identity": "72240801b141807a984b0f8bd9ba412f804312523d21201897aeb500592acee1",
+    "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgIm91dHB1dHMiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAiaXRlbXMiOiBbXX0sICJyZWplY3Rpb25zIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW119LCAicHJvZ3Jlc3MiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAidmFsdWUiOiB7InByb2Nlc3NlZFJlY29yZENvdW50IjogMiwgInByZWxpbWluYXJ5UmVqZWN0Q291bnQiOiAxfX19",
+    "response_bytes": 300,
+    "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0002",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/interest",
+    "provenance": [
+      "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-interest"
+    ],
+    "request_headers": [
+      [
+        "content-type",
+        "application/json"
+      ]
+    ],
+    "request_identity": "4ca36f4381eabd87fe421544e7862ff3e0cef55187f8034b7a735ae2a5edc190",
+    "response_body_b64": "eyJ0cmFjayI6ICJpbnRlcmVzdCIsICJjb21wbGV0ZW5lc3MiOiAibm90X2F0dGVzdGVkIiwgImR1cmFiaWxpdHkiOiAidW5rbm93biIsICJvdXRwdXRzIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW3sidHJhbnNhY3Rpb25JZCI6ICIyMDIyMDcxODAwMDAwMDAxIiwgInR5cGVDb2RlIjogIjAxIiwgImNhdGVnb3J5Q29kZSI6ICIwMDA1IiwgInNvdXJjZSI6ICJTeXN0ZW0iLCAiZGVzY3JpcHRpb24iOiAiSW50LiBmb3IgYS9jIDEwMDAwMDAwMDAxXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwIiwgImFtb3VudCI6ICIwMDAwMDAwMDAwNiIsICJtZXJjaGFudElkIjogIjAwMDAwMDAwMCIsICJtZXJjaGFudE5hbWUiOiAiIiwgIm1lcmNoYW50Q2l0eSI6ICIiLCAibWVyY2hhbnRQb3N0YWxUZXh0IjogIiIsICJjYXJkUmVmZXJlbmNlIjogIjQxMTExMTExMTExMTExMTEiLCAib3JpZ2luYWxUaW1lc3RhbXAiOiAiMjAyNi0wOS0xNS0xMS40Ni4wNy4xMjAwMDAiLCAicHJvY2Vzc2luZ1RpbWVzdGFtcCI6ICIyMDI2LTA5LTE1LTExLjQ2LjA3LjEyMDAwMCJ9XX19",
+    "response_bytes": 990,
+    "response_sha256": "a1c3e486122196c6d1df30debdf70c5afb4ad7aab48f1dcc8e90c438471927a4",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0003",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/reporting",
+    "provenance": [
+      "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-reporting"
+    ],
+    "request_headers": [
+      [
+        "content-type",
+        "application/json"
+      ]
+    ],
+    "request_identity": "6966613bcf8a47186e390c5d2e022ea5a425b6a5ffd6f1bbe01fdf478c12bd98",
+    "response_body_b64": "eyJ0cmFjayI6ICJyZXBvcnRpbmciLCAiY29tcGxldGVuZXNzIjogIm5vdF9hdHRlc3RlZCIsICJkdXJhYmlsaXR5IjogInVua25vd24iLCAicmVjb3JkcyI6IHsiYXZhaWxhYmlsaXR5IjogImF2YWlsYWJsZSIsICJpdGVtcyI6IFt7ImtpbmQiOiAiaGVhZGVyIiwgInZhbHVlIjogeyJyZXBvcnRTaG9ydE5hbWVUZXh0IjogIkRBTFlSRVBUIiwgInJlcG9ydExvbmdOYW1lVGV4dCI6ICJEYWlseSBUcmFuc2FjdGlvbiBSZXBvcnQiLCAic3RhcnRUZXh0IjogIjIwMjItMDctMDEiLCAiZW5kVGV4dCI6ICIyMDIyLTA3LTMxIn19LCB7ImtpbmQiOiAiZGV0YWlsIiwgInZhbHVlIjogeyJ0cmFuc2FjdGlvbklkIjogIlJFUE9SVC1JTi0tLTAwMSIsICJhY2NvdW50UmVmZXJlbmNlIjogIjEwMDAwMDAwMDAxIiwgInR5cGVDb2RlIjogIjAxIiwgInR5cGVEZXNjcmlwdGlvbiI6ICJQdXJjaGFzZSIsICJjYXRlZ29yeUNvZGUiOiAiMDAwNSIsICJjYXRlZ29yeURlc2NyaXB0aW9uIjogIkNhbmRpZGF0ZSBjYXRlZ29yeSIsICJzb3VyY2UiOiAiSW50ZXJuZXQiLCAiYW1vdW50VGV4dCI6ICIxMi4wMCJ9fV19fQ==",
+    "response_bytes": 565,
+    "response_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0004",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/interest",
+    "provenance": [
+      "FEWSHOT-SMOKE:FEWSHOT-SMOKE-E2-2-interest-current"
+    ],
+    "request_headers": [
+      [
+        "content-type",
+        "application/json"
+      ]
+    ],
+    "request_identity": "0cb2d5a9d2c4d2e7b1148c6ec14e7ae2377ede9d394d79269cf0dd1ac6898fe0",
+    "response_body_b64": "eyJ0cmFjayI6ICJpbnRlcmVzdCIsICJjb21wbGV0ZW5lc3MiOiAibm90X2F0dGVzdGVkIiwgImR1cmFiaWxpdHkiOiAidW5rbm93biIsICJvdXRwdXRzIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW3sidHJhbnNhY3Rpb25JZCI6ICIyMDIyMDcxODAwMDAwMDAxIiwgInR5cGVDb2RlIjogIjAxIiwgImNhdGVnb3J5Q29kZSI6ICIwMDA1IiwgInNvdXJjZSI6ICJTeXN0ZW0iLCAiZGVzY3JpcHRpb24iOiAiSW50LiBmb3IgYS9jIDEwMDAwMDAwMDAxXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwIiwgImFtb3VudCI6ICIwMDAwMDAwMDAwNiIsICJtZXJjaGFudElkIjogIjAwMDAwMDAwMCIsICJtZXJjaGFudE5hbWUiOiAiIiwgIm1lcmNoYW50Q2l0eSI6ICIiLCAibWVyY2hhbnRQb3N0YWxUZXh0IjogIiIsICJjYXJkUmVmZXJlbmNlIjogIjQxMTExMTExMTExMTExMTEiLCAib3JpZ2luYWxUaW1lc3RhbXAiOiAiMjAyNi0wOS0xNS0xMS40Ni4wNy43NDAwMDAiLCAicHJvY2Vzc2luZ1RpbWVzdGFtcCI6ICIyMDI2LTA5LTE1LTExLjQ2LjA3Ljc0MDAwMCJ9XX19",
+    "response_bytes": 990,
+    "response_sha256": "e1b856284ba029a576638323491997929138d7f476d4f430c484c378ca6789f3",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0005",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/posting",
+    "provenance": [
+      "ZEROSHOT-SMOKE:ZEROSHOT-SMOKE-E1-1-posting-current"
+    ],
+    "request_headers": [
+      [
+        "content-type",
+        "application/json"
+      ]
+    ],
+    "request_identity": "b57278bc28922fe8bc109ee671c606461a9284ce8f67345d7420ba327f5ca7d2",
+    "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgIm91dHB1dHMiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAiaXRlbXMiOiBbXX0sICJyZWplY3Rpb25zIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW119LCAicHJvZ3Jlc3MiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAidmFsdWUiOiB7InByb2Nlc3NlZFJlY29yZENvdW50IjogMiwgInByZWxpbWluYXJ5UmVqZWN0Q291bnQiOiAxfX19",
+    "response_bytes": 300,
+    "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da",
+    "status": 200
+  }
+]

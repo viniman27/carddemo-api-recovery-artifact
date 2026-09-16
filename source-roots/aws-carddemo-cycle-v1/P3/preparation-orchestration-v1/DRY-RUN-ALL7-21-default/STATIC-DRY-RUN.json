@@ -1,0 +1,283 @@
+{
+  "T2": {
+    "cliWrapper": "P3/preparation-orchestration-v1/orchestration_cli.py",
+    "directions": [
+      "positive",
+      "negative"
+    ],
+    "entrypoint": "P3/t2-offline-preparation-v4/src/t2_offline_bridge.py::generate_t2_offline_suite_for_contract",
+    "generationStatus": "not_run_by_static_dry_run",
+    "operationFixturePolicy": "per-operation candidate fixture binding; placeholder resource ids are forbidden",
+    "perOperationPerSeed": {
+      "negative": 50,
+      "positive": 50,
+      "total": 100
+    },
+    "schemaPolicy": "read pinned original OpenAPI by contractId; never synthesize schemas from registry rows; missing body is distinct from empty body and JSON {}",
+    "seeds": [
+      104729,
+      130363,
+      155921
+    ]
+  },
+  "T3": {
+    "budget": {
+      "maxDepth": 6,
+      "maxPathsPerTrackFixture": 50
+    },
+    "currentSelection": "t3-sdd-external-selection-v3; 18 selected / 7 blocked / 25 total SDD obligations; 65 static selected cases under preserved maxPaths=12 evidence",
+    "entrypoint": "P3/t3-sdd-external-selection-v3/sdd_external_selection.py::build_selected_t3_suite",
+    "officialSuiteGenerated": false,
+    "preservedStaticEvidence": {
+      "maxDepth": 6,
+      "maxPathsPerCapability": 12,
+      "realSuiteCases": 65
+    },
+    "runtimeExecuted": false
+  },
+  "T4": {
+    "freshExecution": true,
+    "independentReplica": false,
+    "status": "blocked_until_official_T1_T2_T3_suites_are_frozen",
+    "unionOrder": [
+      "T1",
+      "T2",
+      "T3"
+    ]
+  },
+  "authorization": {
+    "campaignAuthorized": false,
+    "externalT1SendAuthorized": false,
+    "officialCampaignsStarted": false
+  },
+  "blockers": [
+    "T1 still awaits separate explicit send/freeze path; do not touch the parallel T1 worktree/task here.",
+    "Candidate fixture bytes need human promotion before official suites; technical binding creates no oracle authority.",
+    "Official AWS generation/freeze/campaign remains gate-closed after this local preparation."
+  ],
+  "contracts": [
+    {
+      "arm": "zero-shot",
+      "contractId": "E1-1",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/posting-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-report-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "zero-shot",
+      "contractId": "E1-2",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/transaction-postings",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-transactions",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-reports",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "zero-shot",
+      "contractId": "E1-3",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/transaction-postings",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-transaction-generations",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-reports",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "few-shot",
+      "contractId": "E2-1",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/transaction-postings",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-transaction-generations",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-reports",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "few-shot",
+      "contractId": "E2-2",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/transaction-posting-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-generation-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-report-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "few-shot",
+      "contractId": "E2-3",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "postDailyTransactions",
+          "path": "/transaction-posting-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateInterestTransactions",
+          "path": "/interest-generation-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "generateTransactionReport",
+          "path": "/transaction-report-runs",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "arm": "SDD",
+      "contractId": "E3-SDD-stage6r3",
+      "operations": [
+        {
+          "candidateResourcePackageId": "posting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "posting",
+          "path": "/posting",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "posting"
+        },
+        {
+          "candidateResourcePackageId": "interest.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "interest",
+          "path": "/interest",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "interest"
+        },
+        {
+          "candidateResourcePackageId": "reporting.candidate-v1-physical-v2",
+          "method": "POST",
+          "operationId": "reporting",
+          "path": "/reporting",
+          "resourceBindingStatus": "candidate_not_official",
+          "track": "reporting"
+        }
+      ]
+    }
+  ],
+  "kind": "aws-carddemo-preparation-orchestration-v1-static-dry-run",
+  "networkAllowed": false,
+  "officialCampaign": false,
+  "scope": {
+    "contracts": 7,
+    "operations": 21,
+    "tracks": [
+      "posting",
+      "interest",
+      "reporting"
+    ]
+  },
+  "status": "local_preparation_only_not_campaign_release"
+}

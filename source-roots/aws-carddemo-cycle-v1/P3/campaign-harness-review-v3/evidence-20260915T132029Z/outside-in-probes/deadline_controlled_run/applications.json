@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "slow",
+    "failure_class": "deadline",
+    "lifecycle": {
+      "exitcode": -15,
+      "pid": 53480,
+      "pid_alive_after_reap": false,
+      "quiet_proven": true,
+      "reaped": true,
+      "started": true,
+      "startup_error": null,
+      "stop_method": "terminate",
+      "stop_requested": true
+    },
+    "pins_after": {
+      "seen.txt": {
+        "sha256": "971bb40e57e77f9e64829a05e904e16b26f93e727c982ced609aa90d3500dc26",
+        "size": 5
+      }
+    },
+    "pins_before": {},
+    "target_quiet": true,
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/outside-in-probes/deadline_controlled_run/applications/0001-c8fa663bdc5ff415"
+  },
+  {
+    "case_id": "fast-after-slow",
+    "failure_class": null,
+    "lifecycle": {
+      "exitcode": 0,
+      "pid": 53481,
+      "pid_alive_after_reap": false,
+      "quiet_proven": true,
+      "reaped": true,
+      "started": true,
+      "startup_error": null,
+      "stop_method": "graceful",
+      "stop_requested": true
+    },
+    "pins_after": {
+      "seen.txt": {
+        "sha256": "cde14744c72f49ff82a115ea2f740c62d2e6721ddfa695d729700994891b4287",
+        "size": 5
+      }
+    },
+    "pins_before": {},
+    "target_quiet": true,
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/outside-in-probes/deadline_controlled_run/applications/0002-5e8bae77bf1dc40e"
+  }
+]

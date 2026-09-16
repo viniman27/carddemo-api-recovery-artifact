@@ -1,0 +1,230 @@
+{
+  "cases": [
+    {
+      "case_id": "T4-0001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {},
+      "provenance": [
+        "T1:T1-SYNTH-ok"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0002",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "direction": "positive",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2:T2-SYNTH-seed104729-positive-0",
+        "T2:T2-SYNTH-seed104729-positive-1"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0003",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2:T2-SYNTH-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0004",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2:T2-SYNTH-seed104729-negative-1"
+      ],
+      "request": {
+        "body_b64": "LTE1MA==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0005",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "direction": "negative",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2:T2-SYNTH-seed104729-negative-2"
+      ],
+      "request": {
+        "body_b64": "R72RL7mqPsivuTB9Xj6Bc3Zsp/da",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0006",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "capabilityId": "SYNTH",
+        "transitionId": "A"
+      },
+      "provenance": [
+        "T3:T3-SYNTH-A"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [
+        "A"
+      ],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "aef28c4a2798f3398ae8240f078b8930ac24a0116c50121b8d9b28f50602d5a5",
+  "suite_id": "T4"
+}

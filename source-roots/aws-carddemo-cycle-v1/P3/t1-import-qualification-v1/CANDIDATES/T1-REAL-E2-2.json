@@ -1,0 +1,270 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-posting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "posting-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:posting-positive-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjcm9zc1JlZmVyZW5jZXMiOiIiLCJhY2NvdW50cyI6IiIsImNhdGVnb3J5QmFsYW5jZXMiOiIiLCJ0cmFuc2FjdGlvbk91dHB1dCI6IiIsInJlamVjdGlvbk91dHB1dCI6IiJ9LCJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiIiLCJ0eXBlQ29kZSI6IiIsImNhdGVnb3J5Q29kZSI6MCwic291cmNlIjoiIiwiZGVzY3JpcHRpb24iOiIiLCJhbW91bnQiOi0wLjAxLCJtZXJjaGFudElkIjowLCJtZXJjaGFudE5hbWUiOiIiLCJtZXJjaGFudENpdHkiOiIiLCJtZXJjaGFudFppcCI6IiIsImNhcmROdW1iZXIiOiIiLCJvcmlnaW5hbFRpbWVzdGFtcCI6IiIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIifV19",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-posting-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "posting-boundary-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:posting-boundary-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjcm9zc1JlZmVyZW5jZXMiOiIiLCJhY2NvdW50cyI6IiIsImNhdGVnb3J5QmFsYW5jZXMiOiIiLCJ0cmFuc2FjdGlvbk91dHB1dCI6IiIsInJlamVjdGlvbk91dHB1dCI6IiJ9LCJ0cmFuc2FjdGlvbnMiOltdfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-interest-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "interest-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:interest-positive-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjYXRlZ29yeUJhbGFuY2VzIjoiIiwiY3Jvc3NSZWZlcmVuY2VzIjoiIiwiYWNjb3VudHMiOiIiLCJkaXNjbG9zdXJlR3JvdXBzIjoiIiwidHJhbnNhY3Rpb25PdXRwdXQiOiIifSwicGFyYW1ldGVyRGF0ZSI6IkFCQ0RFRkdISUoifQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-interest-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "interest-boundary-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:interest-boundary-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjYXRlZ29yeUJhbGFuY2VzIjoiIiwiY3Jvc3NSZWZlcmVuY2VzIjoiIiwiYWNjb3VudHMiOiIiLCJkaXNjbG9zdXJlR3JvdXBzIjoiIiwidHJhbnNhY3Rpb25PdXRwdXQiOiIifSwicGFyYW1ldGVyRGF0ZSI6IiIsInBhcmFtZXRlckxlbmd0aCI6LTk5OTl9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-report-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "report-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:report-positive-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjcm9zc1JlZmVyZW5jZXMiOiIiLCJ0cmFuc2FjdGlvblR5cGVzIjoiIiwidHJhbnNhY3Rpb25DYXRlZ29yaWVzIjoiIiwicmVwb3J0T3V0cHV0IjoiIn0sInRyYW5zYWN0aW9ucyI6W10sImRhdGVQYXJhbWV0ZXJSZWNvcmRzIjpbIlpaWlpaWlpaWlo/QUFBQUFBQUFBQSIsIkJCQkJCQkJCQkIhQ0NDQ0NDQ0NDQyJdfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-2-E2-2-report-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E2-2",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-2",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "report-boundary-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-2:report-boundary-01"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjcm9zc1JlZmVyZW5jZXMiOiIiLCJ0cmFuc2FjdGlvblR5cGVzIjoiIiwidHJhbnNhY3Rpb25DYXRlZ29yaWVzIjoiIiwicmVwb3J0T3V0cHV0IjoiIn0sInRyYW5zYWN0aW9ucyI6W10sImRhdGVQYXJhbWV0ZXJSZWNvcmRzIjpbXX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E2-2",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "048c0d368a43b8b78b1a278a72281a55f2a2c608a99ee633670730b2d97d2144",
+  "suite_id": "T1-REAL-E2-2"
+}

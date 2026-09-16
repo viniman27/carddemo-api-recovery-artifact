@@ -1,0 +1,78 @@
+{
+  "status": "awaiting_specific_reauthorization",
+  "networkCallsThisResumption": 0,
+  "payloadPins": [
+    {
+      "id": "E1-1.payload.json",
+      "bytes": 34324,
+      "sha256": "f01d11054c4fad471b3345cef415bf178e369dc26df65551558234d07d42ae35",
+      "pin_ok": true
+    },
+    {
+      "id": "E1-2.payload.json",
+      "bytes": 35339,
+      "sha256": "b28e74438b7334d1affbaefeb1ef8076f830deff7b907c7834a215a29d222814",
+      "pin_ok": true
+    },
+    {
+      "id": "E1-3.payload.json",
+      "bytes": 34241,
+      "sha256": "7ebdcd1691d38943e1600899cc5ac226164a573dfa8e6e95fe7bdaa5b03573c3",
+      "pin_ok": true
+    },
+    {
+      "id": "E2-1.payload.json",
+      "bytes": 33130,
+      "sha256": "13455a8461a71271b7e0ab732694dce154c2c47fe0778b2decf1f3ea419dee42",
+      "pin_ok": true
+    },
+    {
+      "id": "E2-2.payload.json",
+      "bytes": 34106,
+      "sha256": "03709067f8cf71961365d45ad636c346ab1b2cf8284c767878ad974548205570",
+      "pin_ok": true
+    },
+    {
+      "id": "E2-3.payload.json",
+      "bytes": 29932,
+      "sha256": "73cd0a5472d07a785e5d98331a14046dbd2574c2649dd47e045428c44126ffd2",
+      "pin_ok": true
+    },
+    {
+      "id": "E3-SDD-stage6r3.payload.json",
+      "bytes": 75934,
+      "sha256": "472fcec876636b8f22577ddfe05c8f344d57558082fc87b846386c6d57468c67",
+      "pin_ok": true
+    }
+  ],
+  "allSevenPinsValid": true,
+  "findings": [
+    {
+      "file": "P3/t1-generation-01/run_t1_generation.py",
+      "lines": [
+        277,
+        285
+      ],
+      "finding": "urlopen uses default redirect handling despite receipt followRedirects=false; response.read buffers SSE before persistence, so partial progress may be lost on interruption."
+    },
+    {
+      "file": "P3/t1-generation-01/run_t1_generation.py",
+      "lines": [
+        299,
+        323
+      ],
+      "finding": "provider errors and missing completion are classified under invalid; versioned replacement must distinguish provider failure, transport interruption and invalid completed response."
+    },
+    {
+      "file": "P1/direct-transport/stream_result.py",
+      "lines": [
+        15,
+        31
+      ],
+      "finding": "parser requires successful completion and does not promote deltas; preserve this guard."
+    }
+  ],
+  "requiredNextAttempt": "Preserve generation-01. Only after specific consent: new version, omit previous_response_id only from experimental payload; disclose and test local transport fixes without changing prompts/model. No automatic retry/fallback.",
+  "humanApprovalClaimed": false,
+  "officialCampaignAuthorized": false
+}

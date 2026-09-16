@@ -1,0 +1,41 @@
+{
+  "stage": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/runs/verified-y1_94mhi",
+  "programs_exercised": [
+    "CBTRN02C",
+    "CBACT04C",
+    "CBTRN03C"
+  ],
+  "blocked_programs": {
+    "CBSTM03A": "z/OS PSA/TCB/TIOT dereference, actual SIGSEGV before business processing; see verified-deehe0as",
+    "CBSTM03B": "Compiled but excluded with blocked statement capability"
+  },
+  "nominal_runs": [
+    {
+      "case": "nominal-a",
+      "interest_bytes": 350,
+      "interest_amount_ascii": "00000010025",
+      "account_before_hex": "303030303030303532353030",
+      "account_after_hex": "303030303030303532353030",
+      "report_bytes": 1064,
+      "report_sha256": "34890d2349c90e997d9c279e44eee6411c9c634c94e2677ed9e128ea3b33bfd6"
+    },
+    {
+      "case": "nominal-b",
+      "interest_bytes": 350,
+      "interest_amount_ascii": "00000010025",
+      "account_before_hex": "303030303030303532353030",
+      "account_after_hex": "303030303030303532353030",
+      "report_bytes": 1064,
+      "report_sha256": "34890d2349c90e997d9c279e44eee6411c9c634c94e2677ed9e128ea3b33bfd6"
+    }
+  ],
+  "repeatability": "Interest bytes except 278:330 timestamps; account balance",
+  "all_commands_expected_rc": true,
+  "source_unchanged": true,
+  "limitations": [
+    "Local BDB/LE support, not mainframe equivalence",
+    "Synthetic datasets",
+    "Statement excluded: requires z/OS memory structures",
+    "No formal pipeline gate executed"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "status": "verified",
+  "official": 12700,
+  "complementary": 84,
+  "http": {
+    "500": 7254,
+    "200": 1068,
+    "400": 4378
+  },
+  "strata": {
+    "T1": {
+      "applied": 88,
+      "observed": 20
+    },
+    "T2": {
+      "applied": 5868,
+      "observed": 177
+    },
+    "T3": {
+      "applied": 394,
+      "observed": 338
+    },
+    "T4": {
+      "applied": 6350,
+      "observed": 535
+    }
+  },
+  "admissionByConditionStrategy": {
+    "zero-shot/T1": [
+      31,
+      0,
+      0,
+      31,
+      0
+    ],
+    "zero-shot/T2": [
+      2700,
+      0,
+      0,
+      2700,
+      0
+    ],
+    "zero-shot/T3": [
+      156,
+      128,
+      0,
+      28,
+      128
+    ],
+    "few-shot/T1": [
+      45,
+      16,
+      28,
+      1,
+      17
+    ],
+    "few-shot/T2": [
+      2700,
+      159,
+      1674,
+      867,
+      159
+    ],
+    "few-shot/T3": [
+      116,
+      88,
+      28,
+      0,
+      88
+    ],
+    "SDD/T1": [
+      12,
+      3,
+      9,
+      0,
+      3
+    ],
+    "SDD/T2": [
+      468,
+      18,
+      450,
+      0,
+      18
+    ],
+    "SDD/T3": [
+      122,
+      122,
+      0,
+      0,
+      122
+    ]
+  },
+  "nonAdmitted500Causes": {
+    "zero-shot/binding": 1896,
+    "zero-shot/validation_as_500": 2168,
+    "zero-shot/encoding": 906,
+    "zero-shot/record_decoding": 240,
+    "zero-shot/other_or_none": 42,
+    "zero-shot/json": 266,
+    "few-shot/encoding": 1478,
+    "few-shot/json": 256
+  },
+  "fewShot400Causes": {
+    "required": 516,
+    "other_schema": 1524,
+    "binding_prefix": 774,
+    "genuine_or_mixed": 14,
+    "false_only": 394,
+    "false_plus_other": 238
+  },
+  "partitionReach": {
+    "posting": {
+      "official": 4,
+      "complement": 8,
+      "union": 8,
+      "complementOnly": [
+        "reject_101",
+        "reject_102",
+        "reject_103",
+        "tcat_create"
+      ]
+    },
+    "interest": {
+      "official": 4,
+      "complement": 6,
+      "union": 6,
+      "complementOnly": [
+        "default_nonzero",
+        "single_account"
+      ]
+    },
+    "reporting": {
+      "official": 7,
+      "complement": 11,
+      "union": 13,
+      "complementOnly": [
+        "before",
+        "card_break",
+        "end",
+        "eof_selected",
+        "pagination",
+        "start"
+      ]
+    }
+  },
+  "reportingIrepV3": {
+    "official": {
+      "not_exercised": 96,
+      "failed": 392
+    },
+    "complementary": {
+      "failed": 15,
+      "not_exercised": 7
+    }
+  },
+  "assertionTotals": {
+    "official": {
+      "pass": 3574,
+      "failed": 392,
+      "not_exercised": 94
+    },
+    "complementary": {
+      "pass": 324,
+      "failed": 29,
+      "not_exercised": 7
+    }
+  },
+  "officialObservationsReaching": {
+    "interestLastGroup": 0,
+    "reportStaleEofAddition": 0,
+    "reportOmittedTotals": 392
+  },
+  "obligationsWithAssertion": {
+    "official": 20,
+    "complementary": 19,
+    "of": 25
+  },
+  "workedExampleRawPinsVerified": true,
+  "limits": [
+    "No new business execution; counts recomputed from preserved case records",
+    "Source-derived and declared-invariant verdicts are not independent domain adjudication"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "p2a_openapi": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+  "readiness_manifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/readiness-manifest.json",
+  "cases": [
+    {
+      "track": "posting",
+      "schema": "PostingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "interest",
+      "schema": "InterestEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "reporting",
+      "schema": "ReportingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "posting-bad-request",
+      "schema": "InterfaceError",
+      "status": 400,
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "overall_passed": true
+}

@@ -1,0 +1,200 @@
+{
+  "cases": [
+    {
+      "case_id": "T4-0001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "arm": "sdd",
+        "track": "posting"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-posting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T4-0002",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "arm": "sdd",
+        "track": "interest"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-interest"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T4-0003",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "arm": "sdd",
+        "track": "reporting"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-reporting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T4-0004",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "arm": "fewshot",
+        "sourceFacadeSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+        "sourceSampleSha256": "1f92bee43a9900edc475d50301d04352063d38753dc53fadb9fa43205f15f6c5",
+        "track": "interest"
+      },
+      "provenance": [
+        "FEWSHOT-SMOKE:FEWSHOT-SMOKE-E2-2-interest-current"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T4-0005",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "arm": "zeroshot",
+        "sourceFacadeSha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00",
+        "sourceSampleSha256": "3dc25db6d1717133599ac790d6f7bbd5b5e910a9f700d5a36b24794d97595247",
+        "track": "posting"
+      },
+      "provenance": [
+        "ZEROSHOT-SMOKE:ZEROSHOT-SMOKE-E1-1-posting-current"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "614923ad74cd20c41f11a2892f48f71f9aa2fb12d2bb514e3bbebb7fd27e16a0",
+  "suite_id": "UNION-QUALIFICATION-NOT-T4"
+}

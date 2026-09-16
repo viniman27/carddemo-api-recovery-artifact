@@ -1,0 +1,65 @@
+{
+  "kind": "synthetic-model",
+  "capabilities": [
+    {
+      "id": "SYNTH",
+      "initialState": "S0",
+      "states": [
+        {
+          "id": "S0"
+        },
+        {
+          "id": "S1"
+        },
+        {
+          "id": "S2"
+        }
+      ],
+      "variables": {
+        "flag": {
+          "initial": false,
+          "domain": [
+            false,
+            true
+          ],
+          "type": "bool"
+        }
+      },
+      "transitions": [
+        {
+          "id": "A",
+          "from": "S0",
+          "to": "S1",
+          "guard": {
+            "op": "true"
+          },
+          "effects": []
+        },
+        {
+          "id": "B",
+          "from": "S1",
+          "to": "S2",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "flag"
+            },
+            "right": {
+              "value": true
+            }
+          },
+          "effects": []
+        },
+        {
+          "id": "C",
+          "from": "S0",
+          "to": "S2",
+          "guard": {
+            "op": "not_supported"
+          },
+          "effects": []
+        }
+      ]
+    }
+  ]
+}

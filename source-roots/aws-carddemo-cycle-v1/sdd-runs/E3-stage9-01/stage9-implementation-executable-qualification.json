@@ -1,0 +1,276 @@
+{
+  "kind": "stage9-implementation-executable-qualification-report",
+  "artifact_type": "implementation-executable-qualification",
+  "run_id": "E3-stage9-01",
+  "upstream_run_id": "E3-01",
+  "campaign_boundary": "not_T1_T2_T3_T4",
+  "adoption": {
+    "mode": "adopt_and_requalify_preexisting_sdd_implementation",
+    "generated_from_scratch": false,
+    "claim": "Stage 9 adopts an existing SDD-derived local implementation and requalifies it by fresh execution."
+  },
+  "upstream": {
+    "run_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "stages": {
+      "1": {
+        "spec": "specs/pipeline-scope-carddemo/spec.json",
+        "sha256": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+        "bytes": 2188
+      },
+      "2": {
+        "spec": "specs/capability-selection-carddemo-r2/spec.json",
+        "sha256": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+        "bytes": 2974
+      },
+      "3": {
+        "spec": "specs/legacy-evidence-carddemo-r2/spec.json",
+        "sha256": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+        "bytes": 2725
+      },
+      "4": {
+        "spec": "specs/capability-semantics-carddemo/spec.json",
+        "sha256": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+        "bytes": 2646
+      },
+      "5": {
+        "spec": "specs/canonical-data-boundary-carddemo/spec.json",
+        "sha256": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+        "bytes": 2667
+      },
+      "6": {
+        "spec": "specs/api-contract-carddemo-r3/spec.json",
+        "sha256": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+        "bytes": 2481
+      },
+      "7": {
+        "spec": "specs/adapter-behavior-carddemo-r2/spec.json",
+        "sha256": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+        "bytes": 2499
+      },
+      "8": {
+        "spec": "specs/semantic-validation-carddemo/spec.json",
+        "sha256": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1",
+        "bytes": 2371
+      }
+    },
+    "stage8_gate": {
+      "status": "current",
+      "reasons": [],
+      "human_approval_granted": false,
+      "ok": true,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline/tools/check_gate.py",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+        "specs/semantic-validation-carddemo/spec.json"
+      ],
+      "exit_code": 0
+    },
+    "hashes": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    },
+    "approved_1_to_8_current": true
+  },
+  "implementation": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+    "sha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+    "bytes": 44817
+  },
+  "qualification": {
+    "kind": "Stage9 fresh HTTP executable qualification; not official T1/T2/T3/T4",
+    "localhost": "127.0.0.1:52828",
+    "results": [
+      {
+        "url": "http://127.0.0.1:52828/posting",
+        "status": 200,
+        "raw_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da",
+        "raw_bytes": 300,
+        "body": {
+          "track": "posting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": []
+          },
+          "rejections": {
+            "availability": "available",
+            "items": []
+          },
+          "progress": {
+            "availability": "available",
+            "value": {
+              "processedRecordCount": 2,
+              "preliminaryRejectCount": 1
+            }
+          }
+        },
+        "duration_s": 0.757,
+        "track": "posting"
+      },
+      {
+        "url": "http://127.0.0.1:52828/interest",
+        "status": 200,
+        "raw_sha256": "eb4c14951a4a7730653c8f491acb5aabbc3c5cdc0fa4c6ea025d063735ccd81a",
+        "raw_bytes": 990,
+        "body": {
+          "track": "interest",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": [
+              {
+                "transactionId": "2022071800000001",
+                "typeCode": "01",
+                "categoryCode": "0005",
+                "source": "System",
+                "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "amount": "00000000006",
+                "merchantId": "000000000",
+                "merchantName": "",
+                "merchantCity": "",
+                "merchantPostalText": "",
+                "cardReference": "4111111111111111",
+                "originalTimestamp": "2026-09-15-13.08.41.920000",
+                "processingTimestamp": "2026-09-15-13.08.41.920000"
+              }
+            ]
+          }
+        },
+        "duration_s": 0.277,
+        "track": "interest"
+      },
+      {
+        "url": "http://127.0.0.1:52828/reporting",
+        "status": 200,
+        "raw_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+        "raw_bytes": 565,
+        "body": {
+          "track": "reporting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "records": {
+            "availability": "available",
+            "items": [
+              {
+                "kind": "header",
+                "value": {
+                  "reportShortNameText": "DALYREPT",
+                  "reportLongNameText": "Daily Transaction Report",
+                  "startText": "2022-07-01",
+                  "endText": "2022-07-31"
+                }
+              },
+              {
+                "kind": "detail",
+                "value": {
+                  "transactionId": "REPORT-IN---001",
+                  "accountReference": "10000000001",
+                  "typeCode": "01",
+                  "typeDescription": "Purchase",
+                  "categoryCode": "0005",
+                  "categoryDescription": "Candidate category",
+                  "source": "Internet",
+                  "amountText": "12.00"
+                }
+              }
+            ]
+          }
+        },
+        "duration_s": 0.144,
+        "track": "reporting"
+      }
+    ],
+    "current_run_dirs": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-uptg3alm",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-elwyt7xg",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-768zgu2k"
+    ],
+    "audits": [
+      {
+        "track": "interest",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-uptg3alm/audit.json",
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json"
+      },
+      {
+        "track": "posting",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-elwyt7xg/audit.json",
+        "reached_cobol": true,
+        "program_exit": 4,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json"
+      },
+      {
+        "track": "reporting",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-768zgu2k/audit.json",
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json"
+      }
+    ],
+    "server_lifecycle": {
+      "pid": 73300,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "schema_validation": {
+      "exit_code": 0,
+      "stdout": "{\n  \"p2a_openapi\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml\",\n  \"readiness_manifest\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/readiness-manifest.json\",\n  \"validator\": \"jsonschema\",\n  \"cases\": [\n    {\n      \"track\": \"posting\",\n      \"schema\": \"PostingEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"interest\",\n      \"schema\": \"InterestEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"reporting\",\n      \"schema\": \"ReportingEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"posting-bad-request\",\n      \"schema\": \"InterfaceError\",\n      \"status\": 400,\n      \"valid\": true,\n      \"errors\": []\n    }\n  ],\n  \"overall_passed\": true\n}\n",
+      "stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/validate_p2b.py:11: DeprecationWarning: jsonschema.RefResolver is deprecated as of v4.18.0, in favor of the https://github.com/python-jsonschema/referencing library, which provides more compliant referencing behavior as well as more flexible APIs for customization. A future release will remove RefResolver. Please file a feature request (on referencing) if you are missing an API for the kind of customization you need.\n  from jsonschema import Draft202012Validator, RefResolver\n"
+    },
+    "overall_passed": true
+  },
+  "limits": [
+    "qualificação técnica estreita por localhost e três POST {}",
+    "não é campanha T1/T2/T3/T4 nem avaliação independente",
+    "não afirma fidelidade semântica plena; reutiliza Stage6r3/7r2/8 aprovados",
+    "falhas COBOL não-zero são preservadas nos audits, não reescritas como sucesso de programa"
+  ],
+  "adopted_copy": {
+    "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle",
+    "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle",
+    "implementation": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+    "implementation_sha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-01/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "ee91512f1b7b5a2a0f6f6686769c260bd7605607dbfd177667fa081c88d10069",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "copied_current_preexisting": true
+  },
+  "stage1_to_8_hash_preservation": {
+    "preserved": true,
+    "changed": [],
+    "before": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    },
+    "after": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    }
+  }
+}

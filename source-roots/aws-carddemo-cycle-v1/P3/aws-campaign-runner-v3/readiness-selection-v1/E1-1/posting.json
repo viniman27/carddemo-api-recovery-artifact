@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E1-1-posting-T1-REAL-E1-1-E1-1-posting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E1-1",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E1-1",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "posting-positive-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "8887021218e3516821a0b2bfcaac15688c9889d49ce06bc2f9f37f8c679c019c",
+        "sourceScenarioCanonicalSha256": "a68151e519685cf7885c79db1e29e75802e901e2de40312d4115f933da3acb36",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E1-1:posting-positive-01",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E1-1/T1.json:T1-REAL-E1-1-E1-1-posting-positive-01"
+      ],
+      "request": {
+        "body_b64": "eyJkYWlseVRyYW5zYWN0aW9ucyI6W3sidHJhbnNhY3Rpb25JZCI6IlQxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6IjAwMDUiLCJzb3VyY2UiOiJTeXN0ZW0iLCJkZXNjcmlwdGlvbiI6IiIsImFtb3VudCI6IjEuMDAiLCJtZXJjaGFudElkIjoiMDAwMDAwMDAwIiwibWVyY2hhbnROYW1lIjoiIiwibWVyY2hhbnRDaXR5IjoiIiwibWVyY2hhbnRaaXAiOiIiLCJjYXJkTnVtYmVyIjoiQSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiIiwicHJvY2Vzc2luZ1RpbWVzdGFtcCI6IiJ9XSwidHJhbnNhY3Rpb25GaWxlIjoiVFJBTkZJTEUiLCJjcm9zc1JlZmVyZW5jZUZpbGUiOiJYUkVGRklMRSIsImFjY291bnRGaWxlIjoiQUNDVEZJTEUiLCJjYXRlZ29yeUJhbGFuY2VGaWxlIjoiVENBVEJBTEYiLCJyZWplY3RGaWxlIjoiREFMWVJFSlMifQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E1-1-posting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "f06d81a87b878e9878bbb35975d378e5ae9652554479070eab95cd33f895b91f",
+  "suite_id": "READINESS21-E1-1-posting"
+}

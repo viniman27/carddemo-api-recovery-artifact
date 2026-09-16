@@ -1,0 +1,54 @@
+{
+  "kind": "semantic-fixture",
+  "scope": "actual saved evidence fixture",
+  "cases": [
+    {
+      "caseId": "s1",
+      "contractId": "C1",
+      "operationId": "posting",
+      "track": "posting",
+      "semanticStatus": "pass",
+      "checkerResults": [
+        {
+          "obligationId": "P-1",
+          "status": "pass",
+          "partitions": [
+            "ok"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "s2",
+      "contractId": "C2",
+      "operationId": "posting",
+      "track": "posting",
+      "semanticStatus": "failed",
+      "checkerResults": [
+        {
+          "obligationId": "P-1",
+          "status": "failed",
+          "partitions": [
+            "neg"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "s3",
+      "contractId": "C1",
+      "operationId": "interest",
+      "track": "interest",
+      "semanticStatus": "pass",
+      "checkerResults": [
+        {
+          "obligationId": "I-1",
+          "status": "pass",
+          "partitions": [
+            "rate"
+          ]
+        }
+      ]
+    }
+  ]
+}

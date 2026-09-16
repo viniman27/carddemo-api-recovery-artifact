@@ -1,0 +1,117 @@
+{
+  "awsLoaded": false,
+  "baseUrlKind": "loopback-http",
+  "bodyKindsInUnion": [
+    "absent",
+    "bytes",
+    "absent",
+    "json",
+    "absent",
+    "absent"
+  ],
+  "deadlineFailuresSeparated": true,
+  "documented500NotHttpFailure": true,
+  "firstRunTotals": {
+    "attempted": 6,
+    "completed": 5,
+    "deadline_failures": 1,
+    "http_failures": 0,
+    "planned": 6,
+    "transport_failures": 0
+  },
+  "freshCopyVerified": true,
+  "httpCallsObserved": 12,
+  "mutationDetectedAfterFirstApplication": true,
+  "officialRunnerImplemented": false,
+  "pendingIntegration": [
+    "T1 generation adapter/package capture",
+    "T2 OpenAPI fuzzer adapter for AWS contracts",
+    "T3 independent MBT/reference adapter",
+    "official fixture agenda and COBOL/API runners",
+    "coverage denominator/collector integration"
+  ],
+  "scope": "synthetic qualification only; no AWS campaign execution",
+  "secondRunTotals": {
+    "attempted": 6,
+    "completed": 5,
+    "deadline_failures": 1,
+    "http_failures": 0,
+    "planned": 6,
+    "transport_failures": 0
+  },
+  "serialReplayNoRetryNoRedirect": true,
+  "suiteFreezeHashes": {
+    "T1.json": "8c8ab8dff1b34d573939138d0e4542b718b3929ad98d174e4015b41f96451384",
+    "T2.json": "9b0c0475a4665c028d3af6c5a47b3d4a21fb5c68670f1ea5933626d0c2eb3e34",
+    "T3.json": "72fbffc28fb3ef97832a7257baee42a2911682877298c3a1ac195e1a930888fd",
+    "T4-union.json": "72c301305e7179a42c08d18a641f8337716e4c8f1f3848158c6f62436c307171"
+  },
+  "tamperDetected": true,
+  "tamperError": "suite freeze hash mismatch",
+  "unionCaseOrder": [
+    "T4-0001",
+    "T4-0002",
+    "T4-0003",
+    "T4-0004",
+    "T4-0005",
+    "T4-0006"
+  ],
+  "unionLedger": [
+    {
+      "action": "kept",
+      "destination": "T4-0001",
+      "source": "T1:t1-absent"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0002",
+      "source": "T1:t1-empty"
+    },
+    {
+      "action": "duplicate_merged",
+      "destination": "T4-0001",
+      "source": "T2:t2-duplicate"
+    },
+    {
+      "action": "kept_distinct_expectation",
+      "destination": "T4-0003",
+      "source": "T2:t2-distinct-expectation"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0004",
+      "source": "T3:t3-json-empty-object"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0005",
+      "source": "T3:t3-doc-500"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0006",
+      "source": "T3:t3-deadline"
+    }
+  ],
+  "unionProvenance": {
+    "T4-0001": [
+      "T1:t1-absent",
+      "T2:t2-duplicate"
+    ],
+    "T4-0002": [
+      "T1:t1-empty"
+    ],
+    "T4-0003": [
+      "T2:t2-distinct-expectation"
+    ],
+    "T4-0004": [
+      "T3:t3-json-empty-object"
+    ],
+    "T4-0005": [
+      "T3:t3-doc-500"
+    ],
+    "T4-0006": [
+      "T3:t3-deadline"
+    ]
+  }
+}

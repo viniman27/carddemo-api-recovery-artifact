@@ -1,0 +1,195 @@
+{
+  "status": "draft_needs_independent_review",
+  "review_v1_classification": "FAIL",
+  "findings": [
+    {
+      "id": "FAIL-01",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            178
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            197,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            248,
+            265
+          ]
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json"
+      ],
+      "resolution": "TRANREPT EOF totals are conditional on the preceding textual date guard; unknown receiver-at-EOF is explicit and not deterministically selectable."
+    },
+    {
+      "id": "FAIL-02",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            181,
+            184
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            197,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            306,
+            316
+          ]
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json"
+      ],
+      "resolution": "Added TRANREPT-OBL-008 and model transition showing no final Account Total call on EOF; Account Total occurs only on card change."
+    },
+    {
+      "id": "FAIL-03",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            178
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            179,
+            196
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            287,
+            289
+          ]
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json"
+      ],
+      "resolution": "Out-of-range TRANREPT path is decidable: NEXT SENTENCE skips lookup/detail and accumulation."
+    },
+    {
+      "id": "FAIL-04",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            370,
+            421
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            424,
+            442
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            562,
+            578
+          ]
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json"
+      ],
+      "resolution": "Added POSTTRAN-OBL-009 and write-failure transition after TCATBAL/ACCOUNT calls, without claiming commit/durability."
+    },
+    {
+      "id": "FAIL-05",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            545,
+            559
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            440,
+            442
+          ]
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json"
+      ],
+      "resolution": "Revised POSTTRAN-OBL-008 and transitions T019/T020: ACCOUNT invalid key sets reason 109 but does not abend locally and flow continues to TRANFILE write."
+    },
+    {
+      "id": "FAIL-06",
+      "decision": "resolved_in_v2_draft",
+      "sourceAnchors": [
+        {
+          "path": "model.json",
+          "lines": [
+            "structured transition objects, guard AST, variables, effects, obligationRefs, sourceAnchors"
+          ],
+          "sha256": "3606a1ad54134bf59dcb30b5d2b7f3f0eb34c784725f211f4a7139de7219ae0a"
+        }
+      ],
+      "changedArtifacts": [
+        "obligations.json",
+        "model.json",
+        "validate_reference_model.py",
+        "tests/test_validate_reference_model.py"
+      ],
+      "resolution": "Replaced prose transitions with structured finite MBT model: IDs, states, from/to, guard AST, typed variables, effects, observables, anchors, obligation refs and terminal classes."
+    }
+  ],
+  "campaign_authorized": false,
+  "independent_pass_claimed": false
+}

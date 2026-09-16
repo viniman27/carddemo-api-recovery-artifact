@@ -1,0 +1,741 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-posting-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "posting-boundary-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "d489a7e017582b79d584e84ce260d149bdc9b493c4c5cb55abc358e18e6ad150",
+        "sourceScenarioCanonicalSha256": "2866f88ea5360ddcb5fb16421db68d75c662a5f908ce3c09341f4aec7892360f",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-boundary-01"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdfQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-posting-positive-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "posting-positive-02",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "7bd2a0b4709c6c19f6abd3598d99eed720d67210acab6fb1bee080edd7c410fe",
+        "sourceScenarioCanonicalSha256": "2a2373c92b427d814a833bd27def23b599ec608f5558e2bd904c0728c80761c7",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-positive-02"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiIiLCJ0eXBlQ29kZSI6IiIsImNhdGVnb3J5Q29kZSI6MCwic291cmNlIjoiIiwiZGVzY3JpcHRpb24iOiIiLCJhbW91bnQiOjAsIm1lcmNoYW50SWQiOjAsIm1lcmNoYW50TmFtZSI6IiIsIm1lcmNoYW50Q2l0eSI6IiIsIm1lcmNoYW50WmlwIjoiIiwiY2FyZE51bWJlciI6IiIsIm9yaWdpbmFsVGltZXN0YW1wIjoiIiwicHJvY2Vzc2luZ1RpbWVzdGFtcCI6IiIsImZpbGxlciI6IiJ9XX0=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-posting-negative-03",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "posting-negative-03",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+        "sourceScenarioCanonicalSha256": "a42ed313a03014cc4dc5d39e8020a7e0e89dfa85671d3487e1ebc372eedaa08e",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-negative-03"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-posting-negative-04",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "posting-negative-04",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "acf30fa3d1cd53df327f19b7be6d29410c1a1427370113aa8d1b0da186a2bccf",
+        "sourceScenarioCanonicalSha256": "d72d18b64543a05e18dc960f32b8d47e2b5d90b7484f3692f95cc7008e1c4982",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-negative-04"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7fV19",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-posting-negative-05",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "posting-negative-05",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "c858e0d74953ed5842b70b98da484c0cc2756ae065a0100616325e8e978597f4",
+        "sourceScenarioCanonicalSha256": "575027436451004722406095a3ab1ce41c4b4ac1bd1bec0d07354daf41ff575a",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-negative-05"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOm51bGx9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-interest-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "interest-positive-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f1d10b1c37e812cf8b8ca90fcfa5ad95d475f3600442517db99122c52bdbe9ed",
+        "sourceScenarioCanonicalSha256": "4089bb74cb9fbe79d9d8f6c4df60f82b2893756a62821506762d9d68bae3465f",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:interest-positive-01"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiQUJDREVGR0hJSiJ9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-interest-boundary-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "interest-boundary-02",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "a21988cb779f311eff45bd99c28e5c14a0a678e20571ef1917e10886d7731a2c",
+        "sourceScenarioCanonicalSha256": "d18466134314c3a28984f194954472ca5d538dc308aeb3e016ce1cdb078fd46c",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:interest-boundary-02"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiICAgICAgICAgICJ9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-interest-negative-03",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "interest-negative-03",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "73348df8de436ff90f586e1ae2e65935e8eff23a493a678bd7b3acedd8367016",
+        "sourceScenarioCanonicalSha256": "5400ab8766d98bb809e279ccc67e0af87a80805d27a3b780126a52053057174b",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:interest-negative-03"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiMTIzNDU2Nzg5In0=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-interest-negative-04",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "interest-negative-04",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "458d589919aa9607516217b376c9bd49b15e6144483b4f2d85fbbe0b7042f509",
+        "sourceScenarioCanonicalSha256": "c040595b1154aa36f1c78a901254e01a2abf3410540b0e86914755a919e102f1",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:interest-negative-04"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiMTIzNDU2Nzg5MDEifQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-interest-negative-05",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "interest-negative-05",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+        "sourceScenarioCanonicalSha256": "cc74ef03ee77adbb0c2c21db4ea348e475a074115759f11f56fd68d8956b036a",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:interest-negative-05"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-report-boundary-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "report-boundary-01",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "b9631cf7cffe3f8c121be10830329ebb34c62b704cadde371e0ca16dc99f067c",
+        "sourceScenarioCanonicalSha256": "78efcfdf0f88e99e017d2cde9472672f4fbe912773d46537f2e3f3c67f524c5c",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:report-boundary-01"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6W119",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-report-positive-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "report-positive-02",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "d9f452c276f4e1de535ab1261fdd492de13a3b9454884671572d22f1b2b254aa",
+        "sourceScenarioCanonicalSha256": "9d14ec42e71f7108d454b4f4659593b8779c1a75526f12badfdcfa32d2ee7347",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:report-positive-02"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MCJdfQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-report-positive-03",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "report-positive-03",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "67053b508316e37e6771db5aa87e6f0a38e8997c1e4d324318f45e5d1cd7e6a4",
+        "sourceScenarioCanonicalSha256": "7bc6fd9c9085a2aed12cdbe585089c9cf3f23c8893a27416b807cf9b1ba480af",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:report-positive-03"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MCIsImFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqIl19",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-report-negative-04",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "report-negative-04",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "a1446f4a4d4273214988d41c3ea999548d187504ac91ba36c835d89e6b712169",
+        "sourceScenarioCanonicalSha256": "74fc693ed0bb11779625cb4c2614339e13e5bb29491cebffebd40b7d7e08f6ba",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:report-negative-04"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIiXX0=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E2-3-E2-3-report-negative-05",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "negative",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_invalid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_invalid_negative_intentional",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "negative",
+        "originalScenarioId": "report-negative-05",
+        "schemaAdmissibility": "schema_invalid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "d489a7e017582b79d584e84ce260d149bdc9b493c4c5cb55abc358e18e6ad150",
+        "sourceScenarioCanonicalSha256": "3cdc99d93a9b4a3a6b41b88057b019dec1f653921cc7cda3dc5d0fdc37b61aef",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:report-negative-05"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdfQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "4a06ad430303ceb9cf324da1e501182f190c20b13b6e0411d09b580e0db5ec83",
+  "suite_id": "E2-3-T1"
+}

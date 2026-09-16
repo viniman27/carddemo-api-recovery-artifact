@@ -1,0 +1,46 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Synthetic qualification; NOT CardDemo",
+    "version": "1"
+  },
+  "paths": {
+    "/probe": {
+      "post": {
+        "operationId": "syntheticProbe",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "500": {
+            "description": "documented synthetic error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "marker"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "marker": {
+                      "const": "synthetic"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

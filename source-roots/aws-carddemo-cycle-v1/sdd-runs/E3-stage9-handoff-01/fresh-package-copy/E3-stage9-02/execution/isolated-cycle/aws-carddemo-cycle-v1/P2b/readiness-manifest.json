@@ -1,0 +1,136 @@
+{
+  "kind": "Stage9 fresh HTTP executable qualification; not official T1/T2/T3/T4",
+  "results": [
+    {
+      "url": "http://127.0.0.1:52997/posting",
+      "status": 200,
+      "raw_sha256": "f92cf4f3d68356feba90b45d52d2fac17ef920c58dd64e715718bb7baaed97cc",
+      "raw_bytes": 891,
+      "body": {
+        "track": "posting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "transactionId": "TEST000000000001",
+              "typeCode": "01",
+              "categoryCode": "0001",
+              "source": "TEST      ",
+              "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+              "amount": "00000002500",
+              "merchantId": "000000001",
+              "merchantName": "TEST MERCHANT                                     ",
+              "merchantCity": "TEST CITY                                         ",
+              "merchantPostalText": "0000000000",
+              "cardReference": "0000000000000001",
+              "originalTimestamp": "2025-01-01-00.00.00.000000",
+              "processingTimestamp": "2026-09-15-13.32.24.000000"
+            }
+          ]
+        },
+        "rejections": {
+          "availability": "available",
+          "items": []
+        },
+        "progress": {
+          "availability": "available",
+          "value": {
+            "processedRecordCount": 1,
+            "preliminaryRejectCount": 0
+          }
+        }
+      },
+      "duration_s": 1.7,
+      "track": "posting"
+    },
+    {
+      "url": "http://127.0.0.1:52997/interest",
+      "status": 200,
+      "raw_sha256": "481a22013b22e8b15fbabdd6c6554478f3618a3b0d5bdb775ff9562bd96971b4",
+      "raw_bytes": 990,
+      "body": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "transactionId": "2022071800000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "System",
+              "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+              "amount": "00000010000",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantPostalText": "",
+              "cardReference": "4111111111111111",
+              "originalTimestamp": "2026-09-15-13.32.25.860000",
+              "processingTimestamp": "2026-09-15-13.32.25.860000"
+            }
+          ]
+        }
+      },
+      "duration_s": 0.603,
+      "track": "interest"
+    },
+    {
+      "url": "http://127.0.0.1:52997/reporting",
+      "status": 200,
+      "raw_sha256": "3b23608f612159d0925be6d104a377a808c6716832e7deeb631fd5510e1643d3",
+      "raw_bytes": 728,
+      "body": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "reportShortNameText": "DALYREPT",
+                "reportLongNameText": "Daily Transaction Report",
+                "startText": "2026-09-14",
+                "endText": "2026-09-14"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "transactionId": "2022071800000001",
+                "accountReference": "00000000001",
+                "typeCode": "01",
+                "typeDescription": "System transact",
+                "categoryCode": "0005",
+                "categoryDescription": "Interest charge",
+                "source": "System",
+                "amountText": "100.00"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "page",
+                "valueText": "+        200.00"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "grand",
+                "valueText": "+        200.00"
+              }
+            }
+          ]
+        }
+      },
+      "duration_s": 0.311,
+      "track": "reporting"
+    }
+  ]
+}

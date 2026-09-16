@@ -1,0 +1,46 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-1",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+  "contractOriginalSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+  "track": "reporting",
+  "path": "/transaction-reports",
+  "status": 200,
+  "requestBody": {
+    "dateParameterRecords": [],
+    "transactions": [
+      {
+        "amount": 0,
+        "cardNumber": "",
+        "categoryCode": "0001",
+        "description": "7",
+        "merchantCity": "2",
+        "merchantId": "000199367",
+        "merchantName": "1",
+        "merchantZip": "6",
+        "originalTimestamp": "",
+        "processingTimestamp": "0",
+        "source": "6",
+        "transactionId": "0",
+        "typeCode": "0"
+      }
+    ]
+  },
+  "requestBodySha256": "799f0a181c7f8e52f30394cbb043fd6469d6cfe8ffaa66629206851ac7e4e5e4",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-s2nucxkl",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "787d746273e79435907a498817b6d387bcabc63c64f68ef50aac6b70141ec01c"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "lines": []
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-s2nucxkl/audit.json",
+  "durationSeconds": 0.014
+}

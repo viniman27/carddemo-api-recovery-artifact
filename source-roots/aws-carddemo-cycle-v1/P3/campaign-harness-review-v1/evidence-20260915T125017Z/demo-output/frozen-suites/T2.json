@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "case_id": "t2-duplicate",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "nominal"
+      },
+      "origin": "T2",
+      "parameters": {},
+      "provenance": [
+        "T2:t2-duplicate"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 1.0
+    },
+    {
+      "case_id": "t2-distinct-expectation",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "distinct"
+      },
+      "origin": "T2",
+      "parameters": {},
+      "provenance": [
+        "T2:t2-distinct-expectation"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 1.0
+    }
+  ],
+  "resources": {
+    "pkg-a": {
+      "state.txt": {
+        "sha256": "25718360e05d3c2d0963d1381e9dd4dae5fca789244ee4b9f861adcc0cc96218",
+        "size": 9
+      }
+    }
+  },
+  "suite_freeze_sha256": "9b0c0475a4665c028d3af6c5a47b3d4a21fb5c68670f1ea5933626d0c2eb3e34",
+  "suite_id": "T2"
+}

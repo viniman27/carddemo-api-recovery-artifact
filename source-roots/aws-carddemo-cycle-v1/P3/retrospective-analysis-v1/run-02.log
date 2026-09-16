@@ -1,0 +1,20 @@
+official E1-1-T1 10
+official E1-2-T1 19
+official E1-3-T1 31
+official E2-1-T1 49
+official E2-2-T1 61
+official E2-3-T1 76
+official E3-SDD-stage6r3-T1 88
+official E1-1-T2 988
+official E1-2-T2 1888
+official E1-3-T2 2788
+official E2-1-T2 3688
+official E2-2-T2 4588
+official E2-3-T2 5488
+official E3-SDD-stage6r3-T2 5956
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/analysis.py", line 76, in <module>
+    run(args.out.resolve(),Path(__file__).resolve().parents[2])
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/analysis.py", line 59, in run
+    if label=='official' and strategy not in ['T1','T2','T3','T4']: raise ValueError('unknown frozen provenance:'+strategy)
+ValueError: unknown frozen provenance:E1-1-T3

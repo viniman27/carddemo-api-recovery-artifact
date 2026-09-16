@@ -1,0 +1,79 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-2",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+  "contractOriginalSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+  "track": "posting",
+  "path": "/transaction-posting-runs",
+  "status": 200,
+  "requestBody": {
+    "bindings": {
+      "accounts": "p3-local-technical-fixture-selection:accounts",
+      "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances",
+      "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+      "rejectionOutput": "p3-local-technical-fixture-selection:rejectionOutput",
+      "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput"
+    },
+    "transactions": [
+      {
+        "transactionId": "POST-PRESENT-001",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "Internet  ",
+        "description": "candidate purchase",
+        "amount": 12.0,
+        "merchantId": 123456789,
+        "merchantName": "Fixture Merchant",
+        "merchantCity": "Sometown",
+        "merchantZip": "10000000  ",
+        "cardNumber": "4111111111111111",
+        "originalTimestamp": "2022-07-05-10.00.00.000000",
+        "processingTimestamp": "2022-07-05-10.05.00.000000",
+        "filler": "                    "
+      },
+      {
+        "transactionId": "POST-ABSENT--001",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "Internet  ",
+        "description": "candidate purchase",
+        "amount": 34.0,
+        "merchantId": 123456789,
+        "merchantName": "Fixture Merchant",
+        "merchantCity": "Sometown",
+        "merchantZip": "10000000  ",
+        "cardNumber": "4999999999999999",
+        "originalTimestamp": "2022-07-05-10.00.00.000000",
+        "processingTimestamp": "2022-07-05-10.05.00.000000",
+        "filler": "                    "
+      }
+    ]
+  },
+  "requestBodySha256": "21febad347d5482f76f74ada1af4127c3ded8ecdb27f574df01a8b05cd0a9a2a",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-7yu7ic5v",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "787d746273e79435907a498817b6d387bcabc63c64f68ef50aac6b70141ec01c"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "transactionsProcessed": 2,
+    "transactionsRejected": 1,
+    "returnCode": 4,
+    "postedTransactions": [],
+    "rejections": [],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN02C",
+      "TRANSACTIONS PROCESSED :000000002",
+      "TRANSACTIONS REJECTED  :000000001",
+      "END OF EXECUTION OF PROGRAM CBTRN02C"
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-7yu7ic5v/audit.json",
+  "durationSeconds": 0.072
+}

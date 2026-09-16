@@ -1,0 +1,437 @@
+{
+  "kind": "t1-generation-02-summary",
+  "startedUtc": "2026-09-15T18:23:30.780550Z",
+  "workspace": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+  "outputRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02",
+  "authorization": {
+    "realConsentRecorded": true,
+    "source": "delegated task context: user explicitly authorized T1 versioned attempt; source text recorded as 'sobre t1, autorizo, de resto pode prosseguit tambem.'",
+    "scope": "one fresh synthetic probe and, if passed, exactly one T1 provider call per prepared contract via openai-codex gpt-6-astra; no temperature/max_output_tokens/seed; no retry/fallback/switch; send only contracts/instruction/metadata",
+    "notClaimed": "signature, campaign runtime authorization, T2/T3/T4 authorization, export of main study/personal/fixture/oracle material"
+  },
+  "provider": "openai-codex",
+  "modelRequested": "gpt-6-astra",
+  "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+  "transport": {
+    "stream": true,
+    "store": false,
+    "tools": [],
+    "previous_response_id": "omitted",
+    "follow_redirects": false
+  },
+  "order": [
+    "E1-1",
+    "E1-2",
+    "E1-3",
+    "E2-1",
+    "E2-2",
+    "E2-3",
+    "E3-SDD-stage6r3"
+  ],
+  "counts": {
+    "expectedContracts": 7,
+    "probeCompleted": 1,
+    "complete": 3,
+    "invalid": 0,
+    "interrupted": 0,
+    "blocked": 0
+  },
+  "items": [
+    {
+      "contractId": "E1-1",
+      "label": "E1-1",
+      "startedUtc": "2026-09-15T18:23:33.146057Z",
+      "requestPath": "outbound-effective/E1-1.request.json",
+      "requestBytes": 33109,
+      "requestSha256": "a01794ccff48d48a94264a0d210dd1a705ffaa646eb1b8311080a3ec90663dc7",
+      "modelRequested": "gpt-6-astra",
+      "store": false,
+      "stream": true,
+      "tools": [],
+      "previous_response_id": "omitted",
+      "retries": 0,
+      "fallback": false,
+      "followRedirects": false,
+      "redirectsDisabled": true,
+      "finishedUtc": "2026-09-15T18:25:21.673175Z",
+      "elapsedSeconds": 108.526,
+      "httpStatus": 200,
+      "rawSsePath": "raw-sse/E1-1.sse.txt",
+      "rawSseBytes": 966207,
+      "rawSseSha256": "4efbfef8567e8d550ad746c1a5617956816cd49d69ecb232b700c26b5f428c73",
+      "classification": "complete",
+      "parsedPath": "parsed/E1-1.parsed.json",
+      "returnedModel": "gpt-6-astra",
+      "responseStatus": "completed",
+      "responseId": "resp_0adca3735a524776016aa98d25f67887d2a2796f6daf011b97",
+      "outputTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "terminalEventTypes": [
+        "response.completed"
+      ],
+      "usage": {
+        "attribution": {
+          "items": {
+            "msg_0adca3735a524776016aa98d26006087d2b5b84ccce1626b4a": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 6819,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 6819,
+              "output_tokens": 0
+            },
+            "rs_0adca3735a524776016aa98d27042887d285e1e18113592fcc": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 2,
+              "output_tokens": 99
+            },
+            "msg_0adca3735a524776016aa98d2ab3a887d2813ee04f7da09c27": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 0,
+                  "output_tokens": 3459
+                }
+              ],
+              "input_tokens": 0,
+              "output_tokens": 3459
+            }
+          }
+        },
+        "input_tokens": 6821,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 3558,
+        "output_tokens_details": {
+          "reasoning_tokens": 99
+        },
+        "total_tokens": 10379
+      },
+      "outputValidation": {
+        "contractId": "E1-1",
+        "validJson": true,
+        "strictTopScenarios": true,
+        "scenarioCount": 10,
+        "error": null,
+        "scenarioIds": [
+          "posting-positive-01",
+          "posting-boundary-01",
+          "posting-negative-01",
+          "interest-positive-01",
+          "interest-boundary-01",
+          "interest-boundary-02",
+          "interest-negative-01",
+          "report-positive-01",
+          "report-boundary-01",
+          "report-negative-01"
+        ]
+      }
+    },
+    {
+      "contractId": "E1-2",
+      "label": "E1-2",
+      "startedUtc": "2026-09-15T18:25:21.708624Z",
+      "requestPath": "outbound-effective/E1-2.request.json",
+      "requestBytes": 34112,
+      "requestSha256": "bdc15f1441ba8be10536cdda9f161b661018e7c18fe48d56658bbea5b14bc684",
+      "modelRequested": "gpt-6-astra",
+      "store": false,
+      "stream": true,
+      "tools": [],
+      "previous_response_id": "omitted",
+      "retries": 0,
+      "fallback": false,
+      "followRedirects": false,
+      "redirectsDisabled": true,
+      "finishedUtc": "2026-09-15T18:27:19.407758Z",
+      "elapsedSeconds": 117.698,
+      "httpStatus": 200,
+      "rawSsePath": "raw-sse/E1-2.sse.txt",
+      "rawSseBytes": 1042194,
+      "rawSseSha256": "586ec5b6fb31c7832f591e2f13e9c151b9abd477cc985614537953c319844386",
+      "classification": "complete",
+      "parsedPath": "parsed/E1-2.parsed.json",
+      "returnedModel": "gpt-6-astra",
+      "responseStatus": "completed",
+      "responseId": "resp_06ae7ea51945fb57016aa98d926e0887d287b0b6f8119205a2",
+      "outputTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "terminalEventTypes": [
+        "response.completed"
+      ],
+      "usage": {
+        "attribution": {
+          "items": {
+            "msg_06ae7ea51945fb57016aa98d9274ac87d2837c5e45371a49e0": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 6968,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 6968,
+              "output_tokens": 0
+            },
+            "rs_06ae7ea51945fb57016aa98d93f8a087d2be0d573a236d1a50": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 2,
+              "output_tokens": 118
+            },
+            "msg_06ae7ea51945fb57016aa98d97e0a487d29e8c582bae64d932": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 0,
+                  "output_tokens": 3733
+                }
+              ],
+              "input_tokens": 0,
+              "output_tokens": 3733
+            }
+          }
+        },
+        "input_tokens": 6970,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 3851,
+        "output_tokens_details": {
+          "reasoning_tokens": 118
+        },
+        "total_tokens": 10821
+      },
+      "outputValidation": {
+        "contractId": "E1-2",
+        "validJson": true,
+        "strictTopScenarios": true,
+        "scenarioCount": 9,
+        "error": null,
+        "scenarioIds": [
+          "E1-2-postings-positive-01",
+          "E1-2-postings-boundary-01",
+          "E1-2-postings-negative-01",
+          "E1-2-interest-positive-01",
+          "E1-2-interest-boundary-01",
+          "E1-2-interest-negative-01",
+          "E1-2-reports-positive-01",
+          "E1-2-reports-boundary-01",
+          "E1-2-reports-negative-01"
+        ]
+      }
+    },
+    {
+      "contractId": "E1-3",
+      "label": "E1-3",
+      "startedUtc": "2026-09-15T18:27:19.448002Z",
+      "requestPath": "outbound-effective/E1-3.request.json",
+      "requestBytes": 33003,
+      "requestSha256": "324efda6ecf4fb1051296f7efa7842402a13f287cc69543b16ddcb2d057bed51",
+      "modelRequested": "gpt-6-astra",
+      "store": false,
+      "stream": true,
+      "tools": [],
+      "previous_response_id": "omitted",
+      "retries": 0,
+      "fallback": false,
+      "followRedirects": false,
+      "redirectsDisabled": true,
+      "finishedUtc": "2026-09-15T18:29:19.811592Z",
+      "elapsedSeconds": 120.363,
+      "httpStatus": 200,
+      "rawSsePath": "raw-sse/E1-3.sse.txt",
+      "rawSseBytes": 1072558,
+      "rawSseSha256": "547c16eedba0133f553aabc1aa1b9c2fd0dcbc9edd29c3606b87f50800f71a3f",
+      "classification": "complete",
+      "parsedPath": "parsed/E1-3.parsed.json",
+      "returnedModel": "gpt-6-astra",
+      "responseStatus": "completed",
+      "responseId": "resp_0fed6327011f4fde016aa98e0907b087d29a6e0fc3962b372c",
+      "outputTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "terminalEventTypes": [
+        "response.completed"
+      ],
+      "usage": {
+        "attribution": {
+          "items": {
+            "msg_0fed6327011f4fde016aa98e090f2887d2a057232f08e5085c": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 6943,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 6943,
+              "output_tokens": 0
+            },
+            "rs_0fed6327011f4fde016aa98e0a217c87d296ca698d7c98ed4d": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 2,
+              "output_tokens": 82
+            },
+            "msg_0fed6327011f4fde016aa98e0ca77087d2a40cf17fe6fdfce2": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 0,
+                  "output_tokens": 3843
+                }
+              ],
+              "input_tokens": 0,
+              "output_tokens": 3843
+            }
+          }
+        },
+        "input_tokens": 6945,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 3925,
+        "output_tokens_details": {
+          "reasoning_tokens": 82
+        },
+        "total_tokens": 10870
+      },
+      "outputValidation": {
+        "contractId": "E1-3",
+        "validJson": true,
+        "strictTopScenarios": true,
+        "scenarioCount": 12,
+        "error": null,
+        "scenarioIds": [
+          "T1-POSTINGS-001",
+          "T1-POSTINGS-002",
+          "T1-POSTINGS-003",
+          "T1-POSTINGS-004",
+          "T1-INTEREST-001",
+          "T1-INTEREST-002",
+          "T1-INTEREST-003",
+          "T1-INTEREST-004",
+          "T1-REPORTS-001",
+          "T1-REPORTS-002",
+          "T1-REPORTS-003",
+          "T1-REPORTS-004"
+        ]
+      }
+    }
+  ],
+  "pinVerification": {
+    "manifestPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/MANIFEST.json",
+    "manifestSha256": "e1a837efd099eb0ba763226e167f1a509d27fd628e7d8fc8bed6135bb90cdf09",
+    "reportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/REPORT.json",
+    "reportSha256": "dca09b301dbda85d4dd4d8a7d549f54594c5fe8f0108e8a0a6ebeeb6a9e022ef",
+    "reportVerifyOk": true,
+    "reportSelfTestOk": true,
+    "payloadsVerified": [
+      "E1-1",
+      "E1-2",
+      "E1-3",
+      "E2-1",
+      "E2-2",
+      "E2-3",
+      "E3-SDD-stage6r3"
+    ]
+  },
+  "probe": {
+    "label": "probe-synthetic-fresh",
+    "startedUtc": "2026-09-15T18:23:31.072272Z",
+    "requestPath": "outbound-effective/probe-synthetic-fresh.request.json",
+    "requestBytes": 196,
+    "requestSha256": "854c232063ce35da2ebe3cc7da45e58735ba5056564b98ed91cc738c39a7de6d",
+    "modelRequested": "gpt-6-astra",
+    "store": false,
+    "stream": true,
+    "tools": [],
+    "previous_response_id": "omitted",
+    "retries": 0,
+    "fallback": false,
+    "followRedirects": false,
+    "redirectsDisabled": true,
+    "finishedUtc": "2026-09-15T18:23:33.143823Z",
+    "elapsedSeconds": 2.072,
+    "httpStatus": 200,
+    "rawSsePath": "raw-sse/probe-synthetic-fresh.sse.txt",
+    "rawSseBytes": 7023,
+    "rawSseSha256": "61b8dbfafc5da5ed2e2dfc4b4fa64a024ebf7c9f93f49b22c117fd5cd0f526f9",
+    "classification": "complete",
+    "parsedPath": "parsed/probe-synthetic-fresh.parsed.json",
+    "returnedModel": "gpt-6-astra",
+    "responseStatus": "completed",
+    "responseId": "resp_0aa9214c412f5e3d016aa98d23edc487d2b75aff8d2c8908d6",
+    "outputTextSha256": "3a798633c668f17b28df6a11a2276e8579932164bb3d66da2139837b5cf3f2a4",
+    "terminalEventTypes": [
+      "response.completed"
+    ],
+    "usage": {
+      "attribution": {
+        "items": {
+          "msg_0aa9214c412f5e3d016aa98d23f4b487d28403501b12158576": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18,
+            "output_tokens": 0
+          },
+          "msg_0aa9214c412f5e3d016aa98d251bd487d293c4559b7caeb104": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 9
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 9
+          }
+        }
+      },
+      "input_tokens": 20,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 29
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "cobc",
+      "-x",
+      "-std=ibm",
+      "-fsign=ascii",
+      "-O0",
+      "--coverage",
+      "--save-temps",
+      "-I",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy",
+      "-o",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/CBTRN02C",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cbl/CBTRN02C.cbl"
+    ],
+    "rc": 0,
+    "stdout": "",
+    "stderr": "ld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (CBTRN02C.o) was built for newer macOS version (26.0) than being linked (16.0)\n"
+  },
+  {
+    "command": [
+      "gcov-11",
+      "-b",
+      "-c",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/CBTRN02C.gcda"
+    ],
+    "rc": 0,
+    "stdout": "File 'CBTRN02C.c'\nLines executed:65.71% of 1120\nBranches executed:88.89% of 504\nTaken at least once:48.41% of 504\nCalls executed:72.73% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile 'CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cbl/CBTRN02C.cbl'\nLines executed:75.97% of 387\nBranches executed:76.09% of 778\nTaken at least once:38.05% of 778\nCalls executed:0.00% of 389\nCreating 'CBTRN02C.cbl.gcov'\n\nFile 'CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:100.00% of 38\nTaken at least once:50.00% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy/CVTRA06Y.CPY'\nLines executed:100.00% of 1\nBranches executed:100.00% of 2\nTaken at least once:50.00% of 2\nCalls executed:0.00% of 1\nCreating 'CVTRA06Y.CPY.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy/CVTRA05Y.CPY'\nLines executed:100.00% of 1\nBranches executed:100.00% of 2\nTaken at least once:50.00% of 2\nCalls executed:0.00% of 1\nCreating 'CVTRA05Y.CPY.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy/CVACT03Y.CPY'\nLines executed:100.00% of 1\nBranches executed:100.00% of 2\nTaken at least once:50.00% of 2\nCalls executed:0.00% of 1\nCreating 'CVACT03Y.CPY.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy/CVACT01Y.CPY'\nLines executed:100.00% of 1\nBranches executed:100.00% of 2\nTaken at least once:50.00% of 2\nCalls executed:0.00% of 1\nCreating 'CVACT01Y.CPY.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/corpus/app/cpy/CVTRA01Y.CPY'\nLines executed:100.00% of 1\nBranches executed:100.00% of 2\nTaken at least once:50.00% of 2\nCalls executed:0.00% of 1\nCreating 'CVTRA01Y.CPY.gcov'\n\nLines executed:68.74% of 1526\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,312 @@
+{
+  "kind": "stage9-independent-http-consumer-evidence",
+  "source_stage9_run": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02",
+  "fresh_package_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02",
+  "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+  "contract": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+    "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+  },
+  "package": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/E3-stage9-02-stage9-executable-package.tar.gz",
+    "sha256": "1e92fa17f8bd51353271b914495a636be903012617a18fa1490f81d734408d10"
+  },
+  "start": {
+    "command": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "serve",
+      "--port-file",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/server.port"
+    ],
+    "port": 53214
+  },
+  "route_results": [
+    {
+      "route": "posting",
+      "status": 200,
+      "body": {
+        "track": "posting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "transactionId": "TEST000000000001",
+              "typeCode": "01",
+              "categoryCode": "0001",
+              "source": "TEST      ",
+              "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+              "amount": "00000002500",
+              "merchantId": "000000001",
+              "merchantName": "TEST MERCHANT                                     ",
+              "merchantCity": "TEST CITY                                         ",
+              "merchantPostalText": "0000000000",
+              "cardReference": "0000000000000001",
+              "originalTimestamp": "2025-01-01-00.00.00.000000",
+              "processingTimestamp": "2026-09-15-13.54.59.460000"
+            }
+          ]
+        },
+        "rejections": {
+          "availability": "available",
+          "items": []
+        },
+        "progress": {
+          "availability": "available",
+          "value": {
+            "processedRecordCount": 1,
+            "preliminaryRejectCount": 0
+          }
+        }
+      },
+      "raw_sha256": "b308b3637b897bad8a67a18fd763840bf08e62f88f7a50d3dff266c33a951942",
+      "raw_bytes": 891,
+      "duration_s": 1.561
+    },
+    {
+      "route": "interest",
+      "status": 200,
+      "body": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "transactionId": "2022071800000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "System",
+              "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+              "amount": "00000010000",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantPostalText": "",
+              "cardReference": "4111111111111111",
+              "originalTimestamp": "2026-09-15-13.55.01.160000",
+              "processingTimestamp": "2026-09-15-13.55.01.160000"
+            }
+          ]
+        }
+      },
+      "raw_sha256": "5ef2ad0c363b9a3a220013cf7f0bc02272ea9a6dcc01e58c641a940ad69c7f1b",
+      "raw_bytes": 990,
+      "duration_s": 0.549
+    },
+    {
+      "route": "reporting",
+      "status": 200,
+      "body": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "reportShortNameText": "DALYREPT",
+                "reportLongNameText": "Daily Transaction Report",
+                "startText": "2026-09-14",
+                "endText": "2026-09-14"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "transactionId": "2022071800000001",
+                "accountReference": "00000000001",
+                "typeCode": "01",
+                "typeDescription": "System transact",
+                "categoryCode": "0005",
+                "categoryDescription": "Interest charge",
+                "source": "System",
+                "amountText": "100.00"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "page",
+                "valueText": "+        200.00"
+              }
+            },
+            {
+              "kind": "total",
+              "value": {
+                "label": "grand",
+                "valueText": "+        200.00"
+              }
+            }
+          ]
+        }
+      },
+      "raw_sha256": "3b23608f612159d0925be6d104a377a808c6716832e7deeb631fd5510e1643d3",
+      "raw_bytes": 728,
+      "duration_s": 0.297
+    }
+  ],
+  "schema_cases": [
+    {
+      "route": "posting",
+      "schema": "PostingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "route": "interest",
+      "schema": "InterestEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "route": "reporting",
+      "schema": "ReportingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "route": "posting-invalid-request",
+      "schema": "InterfaceError",
+      "status": 400,
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "route_audits": [
+    {
+      "route": "posting",
+      "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-4qbdjpxn/audit.json",
+      "reached_cobol": true,
+      "program_exit": 0,
+      "status": 200
+    },
+    {
+      "route": "interest",
+      "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-89wch3no/audit.json",
+      "reached_cobol": true,
+      "program_exit": 0,
+      "status": 200
+    },
+    {
+      "route": "reporting",
+      "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-qmjjlpk5/audit.json",
+      "reached_cobol": true,
+      "program_exit": 0,
+      "status": 200
+    }
+  ],
+  "invalid_request": {
+    "route": "posting",
+    "status": 400,
+    "body": {
+      "track": "posting",
+      "category": "request_representation",
+      "completeness": "not_attested",
+      "durability": "unknown"
+    },
+    "raw_sha256": "8fd0f23219a41ca9f28898b1127c583f862da244c937242724e53633e392b548",
+    "raw_bytes": 115,
+    "duration_s": 0.001
+  },
+  "bad_resource": {
+    "response": {
+      "route": "posting",
+      "status": 500,
+      "body": {
+        "track": "posting",
+        "category": "technical_failure",
+        "completeness": "not_attested",
+        "durability": "unknown"
+      },
+      "raw_sha256": "6d0cf30997cac79c715cd8de1b2ba918329cb430db064daa5380564e65f836d0",
+      "raw_bytes": 110,
+      "duration_s": 0.002
+    },
+    "new_audit_count": 0,
+    "server_lifecycle": {
+      "pid": 77561,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "reset_check": {
+    "same_server_pid": 77467,
+    "first_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver",
+    "second_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-4qbdjpxn",
+    "manual_mutations": [
+      {
+        "resource": "ACCTFILE",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver/ACCTFILE",
+        "mutated_sha256": "6155df890564830cb10b2bdbe18fffa07ced3513f3333e77888ca88bcca659fa",
+        "original_sha256": "2d1d9d1098a8b44c9b258f0019374f6575bd1b0be18d3e36379d21b78a201568"
+      },
+      {
+        "resource": "DALYTRAN",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver/DALYTRAN",
+        "mutated_sha256": "e5cd83f56fec7213fe1f262b442521097d273635bbb3ddb3745766beb358d134",
+        "original_sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+      },
+      {
+        "resource": "TCATBALF",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver/TCATBALF",
+        "mutated_sha256": "2d7c292a7668ef43e8593b6a275a2614948145d64ed9a2b8b0d2dc2b1ac1bc24",
+        "original_sha256": "ed8b01b8da73f34fcf14922a2c994a88e763891de61ff161d927e6a9f83edbf2"
+      },
+      {
+        "resource": "TRANFILE",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver/TRANFILE",
+        "mutated_sha256": "4e6d6bfd0e6bfdd5d747ff33883590b8669a4180a8c2613950f054f8c527c0b6",
+        "original_sha256": "0bcb9694dfefc8c8e682e033f0572521136f9dc6910179c22b6536a131fee460"
+      },
+      {
+        "resource": "XREFFILE",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-handoff-01/fresh-package-copy/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dss6aver/XREFFILE",
+        "mutated_sha256": "0df177a4ab278ea5019aee7e3fad4de2cbf56090992757d9db95f9a568f46e61",
+        "original_sha256": "d91290e6b5be906e6335b066b977a6179021d29e4357872f3f57be6437ab8356"
+      }
+    ],
+    "second_materialized_matches_source": {
+      "ACCTFILE": true,
+      "DALYTRAN": true,
+      "TCATBALF": true,
+      "TRANFILE": true,
+      "XREFFILE": true
+    },
+    "effective_reset_verified": true
+  },
+  "lifecycle": {
+    "server_pid": 77467,
+    "same_process_reset_probe": true,
+    "pid": 77467,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "checks": {
+    "fresh_copy_extracted": true,
+    "package_sha256": "1e92fa17f8bd51353271b914495a636be903012617a18fa1490f81d734408d10",
+    "build_exit_zero": true,
+    "three_routes_http_200": true,
+    "schemas_original_valid": true,
+    "cobol_reached_three_routes": true,
+    "invalid_request_failclosed_400": true,
+    "bad_resource_failclosed_500_no_audit": true,
+    "reset_effective_same_process": true
+  },
+  "api_ready_for_testing": true,
+  "campaign_ready": false,
+  "human_gate": {
+    "stage9_review_status": "pending",
+    "human_approval_granted": false
+  }
+}

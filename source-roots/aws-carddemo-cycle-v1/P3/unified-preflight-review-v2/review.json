@@ -1,0 +1,618 @@
+{
+  "createdUtc": "2026-09-15T14:21:33.628930+00:00",
+  "overall": "PARTIAL",
+  "counts": {
+    "invocations_observed": 10,
+    "response_body_ok": 10,
+    "gcov_prefix_env_link_ok": 10,
+    "business_gcda_pin_ok": 10,
+    "audit_time_run_id_ok": 10,
+    "parser_main_c_ok": 10,
+    "quiet_lifecycle_ok": 10,
+    "resource_pre_materialization_matches_pins": 10,
+    "resource_after_state_observed": 10,
+    "app_level_resource_pins_before_after": 0,
+    "gcov_stamp_mismatches": 8,
+    "zero_counter_rows_with_gcda_present": 8,
+    "mutants_killed": 4,
+    "mutants_total": 4
+  },
+  "verdicts": {
+    "modules_effective_adapter_freeze_load_replay_api_cobol": "PASS",
+    "ten_invocations_artifacts_pins_rawbytes_gcov_time_run": "PASS",
+    "fresh_gcda_and_parser_correct_scope": "PARTIAL",
+    "resetComparison_proves_resources_before_after": "PARTIAL",
+    "fresh_clone_fewshot": "PASS",
+    "process_tree_quiet_deadline": "PASS",
+    "exit4_nonzero_preserved": "PASS",
+    "absence_vs_zero_distinction": "PARTIAL",
+    "synthetic_mutants_against_old_evidence_wrong_attribution": "PASS",
+    "representative_preflight_limits_real": "PASS",
+    "no_authorization_created": "PASS"
+  },
+  "material_blockers": [
+    "resetComparison in unified-preflight-report.json does not itself expose resource pre/post hashes; proof exists in per-invocation audit STATE but is not surfaced in the comparison object.",
+    "gcov-11 stderr has stamp mismatch on 8/10 invocations and corrected main-C .gcov shows Runs:0/executed lines 0 on 8/10 despite business .gcda presence; this is usable as fresh artifact/absence-vs-zero evidence, not as official coverage.",
+    "System python cannot run unified-preflight-v2 tests without jsonschema; P2a venv is the real pinned environment.",
+    "Preflight remains representative smoke only: 5 cases replayed twice, not official T1/T2/T3/T4 generation or all 21 operations."
+  ],
+  "next_minimum_T1_T4": [
+    "T1: freeze preserved LLM scenario responses and adapter outputs with outbound/model metadata; do not call generators during campaign replay.",
+    "T2: freeze offline Schemathesis/OpenAPI cases against real contracts, no shrinking side effects; replay each once via harness.",
+    "T3: provide or explicitly block external-path to concrete request mapping; do not promote importers as generators.",
+    "T4: build union only after T1-T3 frozen, then replay through the same API/COBOL target with resource pre/post reset comparison surfaced in report.",
+    "Coverage: rebuild or align gcno/gcda so gcov has no stamp mismatch and nonzero counters can be distinguished from missing artifacts."
+  ],
+  "dependency_pins": [
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/unified_preflight_cli.py",
+      "sha256": "788df0f04191ee36c6b496794ab4ac2d1a8be09661db6e98bb9ea7535b40218e",
+      "bytes": 25138,
+      "exists": true,
+      "actual_sha256": "788df0f04191ee36c6b496794ab4ac2d1a8be09661db6e98bb9ea7535b40218e",
+      "actual_bytes": 25138,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/src/suite_adapters.py",
+      "sha256": "7f06f94bd31a6808caf66af1399b783d060dc4be90263de5963fa2754701fbf1",
+      "bytes": 10966,
+      "exists": true,
+      "actual_sha256": "7f06f94bd31a6808caf66af1399b783d060dc4be90263de5963fa2754701fbf1",
+      "actual_bytes": 10966,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/src/api_target.py",
+      "sha256": "510d0bbb4e03111e2990532bb76c1557f7d17cadf14af159f521a995c808b0e8",
+      "bytes": 13179,
+      "exists": true,
+      "actual_sha256": "510d0bbb4e03111e2990532bb76c1557f7d17cadf14af159f521a995c808b0e8",
+      "actual_bytes": 13179,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/src/reconcile_coverage.py",
+      "sha256": "b94b1c666f6bc1228c473a9e0b3d4ceca190fc9f54c8ee4fceec7ab8a9935032",
+      "bytes": 20376,
+      "exists": true,
+      "actual_sha256": "b94b1c666f6bc1228c473a9e0b3d4ceca190fc9f54c8ee4fceec7ab8a9935032",
+      "actual_bytes": 20376,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e",
+      "bytes": 26983,
+      "exists": true,
+      "actual_sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e",
+      "actual_bytes": 26983,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "bytes": 39014,
+      "exists": true,
+      "actual_sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "actual_bytes": 39014,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "sha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "bytes": 41009,
+      "exists": true,
+      "actual_sha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "actual_bytes": 41009,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py",
+      "sha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00",
+      "bytes": 46011,
+      "exists": true,
+      "actual_sha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00",
+      "actual_bytes": 46011,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "bytes": 51697,
+      "exists": true,
+      "actual_sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "actual_bytes": 51697,
+      "ok": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a",
+      "bytes": 16432,
+      "exists": true,
+      "actual_sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a",
+      "actual_bytes": 16432,
+      "ok": true
+    }
+  ],
+  "test_runs": [
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_cli_routes_execution_through_replay_suite (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ok\ntest_imports_assert_exact_harness_v3_not_v2 (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ok\ntest_subprocess_target_protocol_is_harness_compatible_and_quiet (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ok\ntest_rejects_mismatched_invocation_prefix (test_unified_preflight_v2_fresh_coverage.UnifiedPreflightV2FreshCoverageTests) ... ok\ntest_rejects_old_path_injected_audit_even_if_reached_cobol (test_unified_preflight_v2_fresh_coverage.UnifiedPreflightV2FreshCoverageTests) ... ok\ntest_v2_declares_fresh_coverage_not_existing_gcov_parser_shortcut (test_unified_preflight_v2_fresh_coverage.UnifiedPreflightV2FreshCoverageTests) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.145s\n\nOK\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_body_absent_empty_and_empty_json_are_distinct_in_identity_and_wire (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_case_ids_preserved_but_workdir_paths_are_opaque_contained_and_symlink_safe (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_cli_accepts_only_synthetic_qualification_and_fails_closed_for_official_label (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_expectations_are_structural_and_do_not_confuse_transport_completed_with_pass (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_freeze_hashes_detect_suite_tampering (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_http_preserves_duplicate_header_order_on_wire (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_per_application_lifecycle_binds_server_to_fresh_workdir_and_resets_state (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_timeout_on_uncontrolled_target_aborts_remaining_not_executed (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_union_stable_order_provenance_and_distinct_expectations (test_campaign_harness.CampaignHarnessTests) ... ok\ntest_external_watchdog_does_not_kill_harness_for_infinite_handler (test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_infinite_handler_is_not_retried_and_next_case_is_not_started_when_quiet_unproved (test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_slow_controlled_handler_is_reaped_before_fast_next_case (test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_startup_failure_aborts_remaining_not_executed (test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_stop_failure_escalates_to_kill_reaps_and_leaves_no_target_process (test_lifecycle_bounded.LifecycleBoundedTests) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 5.321s\n\nOK\n"
+    },
+    {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-report-reconciliation-v1",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_parse_gcov_file_counts_real_reporting_main_unit_exactly (test_reconcile_coverage.CoverageReconciliationTests) ... ok\ntest_reconcile_all_six_invocations_and_preserve_exact_main_denominators (test_reconcile_coverage.CoverageReconciliationTests) ... ok\ntest_select_units_rejects_ambiguous_main_units (test_reconcile_coverage.CoverageReconciliationTests) ... ok\ntest_select_units_rejects_missing_main_unit_instead_of_header_fallback (test_reconcile_coverage.CoverageReconciliationTests) ... ok\ntest_stdout_parser_keeps_metrics_bound_to_each_source_unit (test_reconcile_coverage.CoverageReconciliationTests) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.023s\n\nOK\n"
+    }
+  ],
+  "system_python_unittest": {
+    "cmd": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "test_cli_routes_execution_through_replay_suite (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ok\ntest_imports_assert_exact_harness_v3_not_v2 (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ok\ntest_subprocess_target_protocol_is_harness_compatible_and_quiet (test_unified_preflight_contract.UnifiedPreflightContractTests) ... ERROR\ntest_unified_preflight_v2_fresh_coverage (unittest.loader._FailedTest) ... ERROR\n\n======================================================================\nERROR: test_subprocess_target_protocol_is_harness_compatible_and_quiet (test_unified_preflight_contract.UnifiedPreflightContractTests)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/tests/test_unified_preflight_contract.py\", line 36, in test_subprocess_target_protocol_is_harness_compatible_and_quiet\n    from api_target import PosixSpawnServer\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/src/api_target.py\", line 18, in <module>\n    from jsonschema import Draft202012Validator, RefResolver\nModuleNotFoundError: No module named 'jsonschema'\n\n======================================================================\nERROR: test_unified_preflight_v2_fresh_coverage (unittest.loader._FailedTest)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_unified_preflight_v2_fresh_coverage\nTraceback (most recent call last):\n  File \"/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py\", line 436, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py\", line 377, in _get_module_from_name\n    __import__(name)\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/tests/test_unified_preflight_v2_fresh_coverage.py\", line 11, in <module>\n    import unified_preflight_cli as cli\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/unified_preflight_cli.py\", line 22, in <module>\n    from api_target import ContractChecker, PosixSpawnServer, build_fixture_registry_from_copy, copy_current_fixture_package, sha256_file  # noqa: E402\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/src/api_target.py\", line 18, in <module>\n    from jsonschema import Draft202012Validator, RefResolver\nModuleNotFoundError: No module named 'jsonschema'\n\n\n----------------------------------------------------------------------\nRan 4 tests in 0.008s\n\nFAILED (errors=2)\n"
+  },
+  "mutants": [
+    {
+      "name": "frozen_suite_tamper",
+      "killed": true,
+      "detail": "VerificationError"
+    },
+    {
+      "name": "old_evidence_wrong_cycle",
+      "killed": true,
+      "detail": {
+        "audit_found": true,
+        "audit_path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmphhc6jsac/old-posting-run/audit.json",
+        "p2b_audit_path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmphhc6jsac/old-posting-run/audit.json",
+        "workdir": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmphhc6jsac/old-posting-run",
+        "workdir_under_isolated_cycle": false,
+        "fixture_registry": "/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmphhc6jsac/isolated/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status_in_audit": 200,
+        "failure_events": [],
+        "admissibleSameInvocation": false,
+        "inadmissibilityReasons": [
+          "workdir_outside_isolated_cycle",
+          "run_dir_track_mismatch"
+        ]
+      }
+    },
+    {
+      "name": "wrong_track_attribution",
+      "killed": true,
+      "detail": {
+        "audit_found": true,
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-n8behh_2/audit.json",
+        "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-n8behh_2/audit.json",
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-n8behh_2",
+        "workdir_under_isolated_cycle": true,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "fixture_registry_isolated": true,
+        "reached_cobol": true,
+        "program_exit": 4,
+        "response_status_in_audit": 200,
+        "failure_events": [],
+        "admissibleSameInvocation": false,
+        "inadmissibilityReasons": [
+          "run_dir_track_mismatch"
+        ]
+      }
+    },
+    {
+      "name": "header_only_gcov_fallback",
+      "killed": true,
+      "detail": "MissingGcovUnitError"
+    }
+  ],
+  "run_summaries": [
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0001",
+      "track": "posting",
+      "audit_id": "http-1789481767969",
+      "time_utc": "2026-09-15T14:16:07Z",
+      "programExit": 4,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0002",
+      "track": "interest",
+      "audit_id": "http-1789481771196",
+      "time_utc": "2026-09-15T14:16:11Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0003",
+      "track": "reporting",
+      "audit_id": "http-1789481773476",
+      "time_utc": "2026-09-15T14:16:13Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0004",
+      "track": "interest",
+      "audit_id": "http-1789481775537",
+      "time_utc": "2026-09-15T14:16:15Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0005",
+      "track": "posting",
+      "audit_id": "http-1789481777883",
+      "time_utc": "2026-09-15T14:16:17Z",
+      "programExit": 4,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": false
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0001",
+      "track": "posting",
+      "audit_id": "http-1789481781183",
+      "time_utc": "2026-09-15T14:16:21Z",
+      "programExit": 4,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0002",
+      "track": "interest",
+      "audit_id": "http-1789481784382",
+      "time_utc": "2026-09-15T14:16:24Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0003",
+      "track": "reporting",
+      "audit_id": "http-1789481786699",
+      "time_utc": "2026-09-15T14:16:26Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0004",
+      "track": "interest",
+      "audit_id": "http-1789481788747",
+      "time_utc": "2026-09-15T14:16:28Z",
+      "programExit": 0,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0005",
+      "track": "posting",
+      "audit_id": "http-1789481790998",
+      "time_utc": "2026-09-15T14:16:31Z",
+      "programExit": 4,
+      "status": 200,
+      "rawBodyOk": true,
+      "gcovPrefixOk": true,
+      "businessGcdaOk": true,
+      "parserMainC": true,
+      "quiet": true,
+      "preResourcesPinned": true,
+      "afterResourcesObserved": true,
+      "stampMismatch": false
+    }
+  ],
+  "exit4": [
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0001",
+      "track": "posting",
+      "status": 200
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0005",
+      "track": "posting",
+      "status": 200
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0001",
+      "track": "posting",
+      "status": 200
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0005",
+      "track": "posting",
+      "status": 200
+    }
+  ],
+  "nonzero_exits": [
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0001",
+      "exit": 4
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0005",
+      "exit": 4
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0001",
+      "exit": 4
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0005",
+      "exit": 4
+    }
+  ],
+  "absence_vs_zero": [
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0001",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0002",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0003",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0004",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionFirst",
+      "case_id": "T4-0005",
+      "businessGcdaPresent": true,
+      "mainRuns": 1,
+      "executedLines": 651,
+      "gcovStampMismatch": false
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0001",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0002",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0003",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0004",
+      "businessGcdaPresent": true,
+      "mainRuns": 0,
+      "executedLines": 0,
+      "gcovStampMismatch": true
+    },
+    {
+      "run": "unionResetQualificationNotT4",
+      "case_id": "T4-0005",
+      "businessGcdaPresent": true,
+      "mainRuns": 1,
+      "executedLines": 651,
+      "gcovStampMismatch": false
+    }
+  ],
+  "reset_resource_pairs": [
+    {
+      "case_id": "T4-0001",
+      "preTreeEqualAcrossRuns": true,
+      "afterObservedBoth": true,
+      "afterTreeEqualAcrossRuns": false,
+      "firstPre": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+      "secondPre": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+      "firstAfter": "5f02d4f1c566bee278b454b6ec6a27ab4def88e9870ff10afe6d1ec8361d4049",
+      "secondAfter": "8b2d6c053bfe49b70e4166750da3b947d5b088e9ef6f2b9e9400027842864b71"
+    },
+    {
+      "case_id": "T4-0002",
+      "preTreeEqualAcrossRuns": true,
+      "afterObservedBoth": true,
+      "afterTreeEqualAcrossRuns": false,
+      "firstPre": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+      "secondPre": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+      "firstAfter": "9eec282064fd0d5835b135d32430b90a6b2fa0f186482b466341a4908562b245",
+      "secondAfter": "0cdfd73993048c7bae5767f1e57cd3a01fab05233b7b01f2e72661991ade2ba5"
+    },
+    {
+      "case_id": "T4-0003",
+      "preTreeEqualAcrossRuns": true,
+      "afterObservedBoth": true,
+      "afterTreeEqualAcrossRuns": false,
+      "firstPre": "7c920624b7dac69a45e641a32000bd76cdb80f764ec4c934b703409dd8d8c09c",
+      "secondPre": "7c920624b7dac69a45e641a32000bd76cdb80f764ec4c934b703409dd8d8c09c",
+      "firstAfter": "06a95f39f5a1ea063e7deabf3a348fcd1ea520bd61eb88737712eb3f66b3c041",
+      "secondAfter": "6235a94ac1e2b132dd4eb75de6113d07fe8091b58a45398bf4be2b37111a38a1"
+    },
+    {
+      "case_id": "T4-0004",
+      "preTreeEqualAcrossRuns": true,
+      "afterObservedBoth": true,
+      "afterTreeEqualAcrossRuns": false,
+      "firstPre": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+      "secondPre": "602bbd0c5801ad6ee96202ba5e69ea7ae442a708624e7f22b47307b6fe1e78c4",
+      "firstAfter": "4b5f31e3becc2ab537a33addbfa22f54a93bf7aef9c337479296b05ca4e3be59",
+      "secondAfter": "da485488ac2b40d30ab63c7291c6f191ea2cfbdb79639a8f4836f200b33e0d31"
+    },
+    {
+      "case_id": "T4-0005",
+      "preTreeEqualAcrossRuns": true,
+      "afterObservedBoth": true,
+      "afterTreeEqualAcrossRuns": false,
+      "firstPre": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+      "secondPre": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+      "firstAfter": "0c3cd00d68d50e0301c307bd3fc7acb0668f33c66290bbcca26b4e261f9e24b6",
+      "secondAfter": "c52aae81d1a4997bee42d44aa6a036238e44620c401ec93bf3eac34bbe59f29a"
+    }
+  ],
+  "resetComparison_field_has_resource_evidence": true,
+  "manifest": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/candidate-manifest.json",
+    "sha256": "7c9bb2f884437b798916c14ad8daa0b274971b7b8a9724491edbb601ac9f8145"
+  },
+  "report": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/unified-preflight-report.json",
+    "sha256": "d6a368b8bc7f8cde27760b5080753d3259009e557356206bc8bcae72561a32b6"
+  }
+}

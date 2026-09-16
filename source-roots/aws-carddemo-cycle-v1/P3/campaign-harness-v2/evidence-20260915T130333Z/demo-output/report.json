@@ -1,0 +1,158 @@
+{
+  "awsLoaded": false,
+  "baseUrlKind": "loopback-http-per-application-controlled-target",
+  "bodyKindsInUnion": [
+    "absent",
+    "bytes",
+    "absent",
+    "absent",
+    "json",
+    "absent",
+    "absent",
+    "absent"
+  ],
+  "deadlineFailuresSeparated": true,
+  "documented500NotHttpFailure": true,
+  "duplicateHeadersPreserved": true,
+  "firstRunTotals": {
+    "attempted": 8,
+    "completed": 7,
+    "deadline_failures": 1,
+    "expectation_inconclusive": 1,
+    "expectation_passes": 6,
+    "expectation_violations": 0,
+    "http_failures": 0,
+    "not_executed": 0,
+    "planned": 8,
+    "transport_failures": 0
+  },
+  "httpCallsObserved": 16,
+  "officialRunnerImplemented": false,
+  "pendingIntegration": [
+    "T1 generation adapter/package capture",
+    "T2 OpenAPI fuzzer adapter for AWS contracts",
+    "T3 independent MBT/reference adapter",
+    "official fixture agenda and COBOL/API runners",
+    "coverage denominator/collector integration"
+  ],
+  "scope": "synthetic qualification only; no AWS campaign execution",
+  "secondRunTotals": {
+    "attempted": 8,
+    "completed": 7,
+    "deadline_failures": 1,
+    "expectation_inconclusive": 1,
+    "expectation_passes": 6,
+    "expectation_violations": 0,
+    "http_failures": 0,
+    "not_executed": 0,
+    "planned": 8,
+    "transport_failures": 0
+  },
+  "serialReplayNoRetryNoRedirect": true,
+  "suiteFreezeHashes": {
+    "T1.json": "a7aa6527137a70235f6a442185fb58c06500eeef9dc50fef4cc71506421e5630",
+    "T2.json": "6f0f85afd15c559a2a2b19d4a73e58f1b3ce17e9b1d78dbda27b8ecb4aab4f62",
+    "T3.json": "44ee9d8c70c6028c0bd9d081a8b4f94e090b3abe127f36071b8609bd36b58b14",
+    "T4-union.json": "1404a75f4fd0208972539d88841901ec896048e89f41edbe65bfec7ebccd7c0a"
+  },
+  "tamperDetected": true,
+  "tamperError": "suite freeze hash mismatch",
+  "targetQuietEveryAttempt": true,
+  "unionCaseOrder": [
+    "T4-0001",
+    "T4-0002",
+    "T4-0003",
+    "T4-0004",
+    "T4-0005",
+    "T4-0006",
+    "T4-0007",
+    "T4-0008"
+  ],
+  "unionLedger": [
+    {
+      "action": "kept",
+      "destination": "T4-0001",
+      "source": "T1:t1-absent"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0002",
+      "source": "T1:t1-empty"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0003",
+      "source": "T1:t1-dup-headers"
+    },
+    {
+      "action": "duplicate_merged",
+      "destination": "T4-0001",
+      "source": "T2:t2-duplicate"
+    },
+    {
+      "action": "kept_distinct_expectation",
+      "destination": "T4-0004",
+      "source": "T2:t2-distinct-expectation"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0005",
+      "source": "T3:t3-json-empty-object"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0006",
+      "source": "T3:t3-doc-500"
+    },
+    {
+      "action": "kept_distinct_expectation",
+      "destination": "T4-0007",
+      "source": "T3:t3-unsupported-check"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0008",
+      "source": "T3:t3-deadline"
+    }
+  ],
+  "unionProvenance": {
+    "T4-0001": [
+      "T1:t1-absent",
+      "T2:t2-duplicate"
+    ],
+    "T4-0002": [
+      "T1:t1-empty"
+    ],
+    "T4-0003": [
+      "T1:t1-dup-headers"
+    ],
+    "T4-0004": [
+      "T2:t2-distinct-expectation"
+    ],
+    "T4-0005": [
+      "T3:t3-json-empty-object"
+    ],
+    "T4-0006": [
+      "T3:t3-doc-500"
+    ],
+    "T4-0007": [
+      "T3:t3-unsupported-check"
+    ],
+    "T4-0008": [
+      "T3:t3-deadline"
+    ]
+  },
+  "unsupportedCheckerNotSuccess": true,
+  "workdirMutationObserved": true,
+  "workdirResetObservedEveryApplication": true,
+  "workdirStateBeforeSequence": [
+    "original\n",
+    "original\n",
+    "original\n",
+    "original\n",
+    "original\n",
+    "original\n",
+    "original\n",
+    "original\n"
+  ]
+}

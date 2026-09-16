@@ -1,0 +1,50 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-1",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+  "contractOriginalSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+  "track": "posting",
+  "path": "/transaction-postings",
+  "status": 200,
+  "requestBody": {
+    "dailyTransactions": [
+      {
+        "amount": 402133.91,
+        "cardNumber": "",
+        "categoryCode": "0011",
+        "description": "9",
+        "merchantCity": "4",
+        "merchantId": "875901608",
+        "merchantName": "0",
+        "merchantZip": "6",
+        "originalTimestamp": "5",
+        "processingTimestamp": "0",
+        "source": "",
+        "transactionId": "9",
+        "typeCode": "5",
+        "filler": "1"
+      }
+    ]
+  },
+  "requestBodySha256": "dd3417ce437a952a217fde83488fe2f911945d30c9fcbfb893b58458f0b2fe8f",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-lklt_4_p",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "787d746273e79435907a498817b6d387bcabc63c64f68ef50aac6b70141ec01c"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "processedCount": 1,
+    "rejectedCount": 1,
+    "returnCode": 4,
+    "transactions": [],
+    "rejects": []
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-lklt_4_p/audit.json",
+  "durationSeconds": 0.047
+}

@@ -1,0 +1,71 @@
+{
+  "validator": "openapi-spec-validator==0.7.2",
+  "originals_unchanged": true,
+  "candidate_hashes_match": true,
+  "results": [
+    {
+      "demo": "demo-01-temperature",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/temperature",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/temperature.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-01-temperature/legacy.cbl"
+      ],
+      "compile_exit": 0,
+      "compile_stderr": "",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "+032.00\n",
+      "stderr": "",
+      "expected": "32",
+      "expected_flag": null
+    },
+    {
+      "demo": "demo-02-shipping",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/shipping",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/shipping.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-02-shipping/legacy.cbl"
+      ],
+      "compile_exit": 0,
+      "compile_stderr": "",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "00003.00|Y\n",
+      "stderr": "",
+      "expected": "3.00",
+      "expected_flag": "Y"
+    },
+    {
+      "demo": "demo-03-membership",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/membership",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/membership.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-03-membership/legacy.cbl"
+      ],
+      "compile_exit": 0,
+      "compile_stderr": "",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "00010.00\n",
+      "stderr": "",
+      "expected": "10.00",
+      "expected_flag": null
+    }
+  ],
+  "limits": "One nominal case per demo. No boundary/overflow completeness or human approval."
+}

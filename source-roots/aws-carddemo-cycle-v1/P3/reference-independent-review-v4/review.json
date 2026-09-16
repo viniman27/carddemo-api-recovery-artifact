@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "status_delimitation": "PASS estrito para seleção de caminhos abstratos da referência MBT v4 contra os bloqueios materiais v3 revisados; não é prontidão de campanha, não é execução COBOL e não é prova de equivalência semântica completa.",
+  "campaign_authorization": false,
+  "scope": {
+    "base_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3",
+    "allowed_inputs_used": [
+      "reference-authoring-input-v1/README.md e corpus allowlist/sources ancoradas",
+      "reference-authoring-draft-v2/obligations.json",
+      "reference-executable-v3/",
+      "reference-independent-review-v3/",
+      "reference-executable-v4/"
+    ],
+    "excluded_inputs": [
+      "sem COBOL/campanha/casos oficiais",
+      "sem APIs/contratos/SDD/fixtures/runs/quarentena",
+      "sem varredura ampla de P3"
+    ],
+    "automatic_exposure_notes": [
+      "local runtime expôs Documents/Códigos/workspace/WORKSPACE-NOTES.md como contexto automático durante search_files; registrado, não usado como autoridade semântica."
+    ]
+  },
+  "commands": [
+    {
+      "name": "unit_tests_v4",
+      "exit_code": 0,
+      "observed_result": "Ran 16 tests; OK"
+    },
+    {
+      "name": "cli_absolute_root_v4",
+      "exit_code": 0,
+      "observed_result": "exit 0; errors=[]; counts capabilities=3 obligations=25 states=25 transitions=40; sourcePins checkedAnchors=98 checkedFiles=8 errors=[]"
+    },
+    {
+      "name": "cli_relative_root_v4",
+      "exit_code": 0,
+      "observed_result": "exit 0; errors=[]; sourcePins checkedAnchors=98 checkedFiles=8 errors=[]; relative root matches intended Path.resolve behavior"
+    }
+  ],
+  "mechanical_results": {
+    "unit_tests_pass": true,
+    "cli_absolute_pass": true,
+    "cli_relative_pass": true,
+    "validate_model_errors": [],
+    "source_pin_errors": [],
+    "counts": {
+      "capabilities": 3,
+      "states": 25,
+      "transitions": 40,
+      "obligations": 25
+    },
+    "sourcePins": {
+      "checkedAnchors": 98,
+      "checkedFiles": 8
+    },
+    "traversal_summary": {
+      "CBTRN02C_POSTTRAN": {
+        "completed": 11,
+        "frontier": 8,
+        "unknown": 3,
+        "omittedCount": 8,
+        "loopVisits": {
+          "P_OPENED": 3
+        }
+      },
+      "CBACT04C_INTCALC": {
+        "completed": 12,
+        "frontier": 1,
+        "unknown": 0,
+        "omittedCount": 4,
+        "loopVisits": {
+          "I_OPENED": 3
+        }
+      },
+      "CBTRN03C_TRANREPT": {
+        "completed": 16,
+        "frontier": 0,
+        "unknown": 3,
+        "omittedCount": 4,
+        "loopVisits": {
+          "R_LOOP": 3
+        }
+      }
+    }
+  },
+  "v3_block_resolution": {
+    "V3-BLOCK-001": {
+      "status": "resolved",
+      "finding": "INTCALC zero-rate path is selectable and does not emit compute/write interest events.",
+      "probe": {
+        "disc_rate_domain": [
+          "specific",
+          "default",
+          "missing",
+          "zero"
+        ],
+        "zero_transition": "INTCALC-T009Z",
+        "zero_events": [
+          "interest_rate_zero_no_interest_write"
+        ],
+        "zero_state": "I_OPENED",
+        "nonzero_specific_transition": "INTCALC-T007",
+        "nonzero_default_transition": "INTCALC-T007"
+      },
+      "source_basis": "CBACT04C.cbl:213-217 has IF DIS-INT-RATE NOT = 0 before compute/write; v4 separates source of rate (specific/default/missing) from value zero via disc_rate_path=zero."
+    },
+    "V3-BLOCK-002": {
+      "status": "resolved",
+      "finding": "INTCALC-OBL-008 is tied to reachable EOF/no-final-account-update behavior.",
+      "probe": {
+        "obl008_transition_refs": [
+          "INTCALC-T006"
+        ],
+        "eof_transition": "INTCALC-T006",
+        "eof_events": [
+          "tcatbal_read_attempt",
+          "intcalc_eof_no_final_account_update",
+          "close_attempt"
+        ],
+        "forbidden_event_present": false
+      },
+      "source_basis": "CBACT04C.cbl:188-222 and 325-370 show status 10 sets END-OF-FILE=Y; normal loop exits before ELSE/PERFORM 1050 path."
+    },
+    "V3-BLOCK-003": {
+      "status": "resolved_with_limited_control",
+      "finding": "Capability-scoped event validation rejects whitelisted events inserted into unrelated capability transitions; this is targeted type/review control, not semantic proof.",
+      "probe": [
+        {
+          "transition": "POSTTRAN-T003",
+          "bad_event": "interest_write_attempt",
+          "errors": [
+            "event interest_write_attempt not source-scoped to CBTRN02C_POSTTRAN in POSTTRAN-T003"
+          ]
+        },
+        {
+          "transition": "INTCALC-T003",
+          "bad_event": "report_detail_attempt",
+          "errors": [
+            "event report_detail_attempt not source-scoped to CBACT04C_INTCALC in INTCALC-T003"
+          ]
+        },
+        {
+          "transition": "TRANREPT-T003",
+          "bad_event": "tcatbal_update_attempt",
+          "errors": [
+            "event tcatbal_update_attempt not source-scoped to CBTRN03C_TRANREPT in TRANREPT-T003"
+          ]
+        }
+      ],
+      "limit": "Validator can prevent cross-capability event reuse and targeted forbidden mutations; it cannot prove every event is the complete COBOL semantics."
+    },
+    "CLI-relative-root": {
+      "status": "resolved",
+      "finding": "relative root invocation now exits 0 and validates the same source pin count as absolute invocation."
+    }
+  },
+  "witness_review": {
+    "total_obligations_in_v2": 25,
+    "mechanical_counterexamples": [],
+    "assessment": "No counterexample found where an obligation witness path is absent from bounded traversal or lacks the referenced transition. Thus they are not merely refs pasted. However, the witness file itself proves reachability/ref inclusion, not full behavioral semantics; behavior was checked by source review plus targeted probes for the prior blockers/high-risk branches.",
+    "limits": [
+      "Some witness paths are reused or duplicate for nearby obligations; this is not a new blocker for abstract path selection but is weak as standalone semantic evidence.",
+      "Frontier/omitted paths remain explicitly budgeted; the PASS is for bounded abstract path selection, not exhaustive campaign oracle readiness."
+    ],
+    "total_obligation_witness_records": 53
+  },
+  "source_counterexample_search": [
+    {
+      "topic": "INTCALC zero-rate",
+      "result": "no counterexample; source requires no compute/write when DIS-INT-RATE = 0 and v4 has INTCALC-T009Z no-interest event only."
+    },
+    {
+      "topic": "INTCALC EOF final update",
+      "result": "no counterexample; source supports no final 1050 update on normal EOF under reviewed static interpretation."
+    },
+    {
+      "topic": "POSTTRAN account rewrite invalid key",
+      "result": "no counterexample; source moves reason 109 on INVALID KEY and falls through; write TRANFILE remains next routine."
+    },
+    {
+      "topic": "TRANREPT out-of-range/unknown EOF",
+      "result": "no new blocker; source has date test before detail/totals and v4 preserves skip plus unknown EOF path."
+    }
+  ],
+  "new_material_blockers_or_regressions": [],
+  "final_assessment": {
+    "recommended_label": "PASS",
+    "pass_for_abstract_path_selection": true,
+    "pass_for_campaign_readiness": false,
+    "reason": "The three v3 material blockers and relative CLI bug were probed against v4 and resolved within the declared abstraction; no new material regression was found in the delimited review."
+  }
+}

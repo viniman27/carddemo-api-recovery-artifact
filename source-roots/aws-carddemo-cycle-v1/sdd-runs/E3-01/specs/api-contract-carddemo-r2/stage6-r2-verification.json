@@ -1,0 +1,405 @@
+{
+  "run_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+  "generated_at_review": "2026-09-13T07:56:12-03:00",
+  "receipt": {
+    "metadata_path": "prepared/api-contract-carddemo-r2/execution/metadata.json",
+    "status": "generated_pending_human_review",
+    "http_status": 200,
+    "model": "gpt-6-astra",
+    "request_sha256_recorded": "fc09dc9e0a21d937c712ff748cac0ff6dfa79c5c96bf78eea9e6c12a86d11238",
+    "request_body_sha256_actual": "a829f772cf621c352c7c45f250fc576241ed4388e8e758ecbb1d16e43201c66a",
+    "response_scope_original_sha256_actual": "163d1d0455f2524e8100e1722b78f255fbca7a4bda1a5caccb45e05fbe362567",
+    "parsed_json_sha256_actual": "5603917be40628556742664c4aec78bac7e49364fe89b337f66db8163385d58b",
+    "sse_sha256_actual": "6388d9acc425c9799f4546fbe3e76f9629a711a84245d06fd1c2812fbc0c47dc",
+    "sse_counts": {
+      "response.completed": 2,
+      "output_text.done": 2,
+      "completed_status_tokens": 2,
+      "model_gpt_6_astra_tokens": 3
+    },
+    "receipt_completion_verified": true
+  },
+  "original_bytes_vs_parsed_text": {
+    "match": true,
+    "original_bytes": 49791,
+    "parsed_text_utf8_bytes": 49791
+  },
+  "materialization": {
+    "target": "specs/api-contract-carddemo-r2/requirements.md",
+    "placeholder_archived": true,
+    "archive_path": "specs/api-contract-carddemo-r2/requirements-initial-placeholder.md",
+    "target_sha256_after": "163d1d0455f2524e8100e1722b78f255fbca7a4bda1a5caccb45e05fbe362567",
+    "byte_identical_to_scope_original": true
+  },
+  "spec_json_update": {
+    "path": "specs/api-contract-carddemo-r2/spec.json",
+    "updated_at": "2026-09-13T07:56:12-03:00",
+    "requirements_generated": true,
+    "requirements_approved": false,
+    "gate_review": null,
+    "ready_for_implementation": false,
+    "sha256_after": "3dd7c64774f75c3155b2e9941f139ca593401887555fd7d7917874c6bc591b54"
+  },
+  "programmatic_counts": {
+    "identifier_counts": {
+      "D": {
+        "unique": 16,
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      "G": {
+        "unique": 6,
+        "values": [
+          17,
+          19,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "R": {
+        "unique": 20,
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "E": {
+        "unique": 34,
+        "values": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      },
+      "C": {
+        "unique": 14,
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      "A": {
+        "unique": 17,
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    },
+    "reverse_R_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "reverse_R_missing_1_20": [],
+    "operations": [
+      "POST /interest",
+      "POST /posting",
+      "POST /reporting"
+    ],
+    "status_codes": [
+      "200",
+      "400",
+      "500",
+      "503"
+    ],
+    "track_mentions": {
+      "posting": 37,
+      "interest": 32,
+      "reporting": 26
+    },
+    "reject_counts_100_103_109": {
+      "100": 3,
+      "101": 2,
+      "102": 3,
+      "103": 5,
+      "109": 8
+    },
+    "source_anchor_full_count_in_r2": 3,
+    "source_anchor_shorthand_count_in_r2": 0,
+    "sha256_token_count_in_r2": 16,
+    "request_allowed_corpus_file_mentions_unique": 19,
+    "request_sha256_token_count_unique": 85
+  },
+  "openapi_validation": {
+    "standalone_openapi_included": false,
+    "validator_run": false,
+    "result": "No standalone OpenAPI document found in r2 requirements; no OpenAPI validation performed. Documentary representability only."
+  },
+  "protected_input_hashes_before": {
+    "prepared/api-contract-carddemo-r2/execution/scope-original.md": {
+      "bytes": 49791,
+      "sha256": "163d1d0455f2524e8100e1722b78f255fbca7a4bda1a5caccb45e05fbe362567"
+    },
+    "prepared/api-contract-carddemo-r2/execution/parsed.json": {
+      "bytes": 52370,
+      "sha256": "5603917be40628556742664c4aec78bac7e49364fe89b337f66db8163385d58b"
+    },
+    "prepared/api-contract-carddemo-r2/execution/metadata.json": {
+      "bytes": 1384,
+      "sha256": "5b7f0c0555d785177d6b74cabb86973adf9145734bcfff9c69f16c92ed2ebdc7"
+    },
+    "prepared/api-contract-carddemo-r2/execution/response.sse": {
+      "bytes": 3308261,
+      "sha256": "6388d9acc425c9799f4546fbe3e76f9629a711a84245d06fd1c2812fbc0c47dc"
+    },
+    "prepared/api-contract-carddemo-r2/request.json": {
+      "bytes": 915644,
+      "sha256": "a829f772cf621c352c7c45f250fc576241ed4388e8e758ecbb1d16e43201c66a"
+    },
+    "prepared/api-contract-carddemo-r2/execution/request-body.json": {
+      "bytes": 915644,
+      "sha256": "a829f772cf621c352c7c45f250fc576241ed4388e8e758ecbb1d16e43201c66a"
+    },
+    "reviews/stage-6-r1-directed-feedback.md": {
+      "bytes": 16491,
+      "sha256": "87a74e6570babd2e5e811ba1c0a6f0ee2d5cd0bdfbe4bdbb5504e3e9bfe4659c"
+    },
+    "STAGE6-REVISION-PLAN.md": {
+      "bytes": 10816,
+      "sha256": "51ce5a1a13ab107b5c6f0df536c371e3337ad79275da0377021c273598a59c35"
+    },
+    "specs/api-contract-carddemo/requirements.md": {
+      "bytes": 44132,
+      "sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7"
+    },
+    "specs/canonical-data-boundary-carddemo/requirements.md": {
+      "bytes": 55323,
+      "sha256": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3"
+    },
+    "specs/capability-semantics-carddemo/requirements.md": {
+      "bytes": 48728,
+      "sha256": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93"
+    },
+    "specs/legacy-evidence-carddemo-r2/requirements.md": {
+      "bytes": 57679,
+      "sha256": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b"
+    }
+  },
+  "protected_input_hashes_after": {
+    "prepared/api-contract-carddemo-r2/execution/scope-original.md": {
+      "bytes": 49791,
+      "sha256": "163d1d0455f2524e8100e1722b78f255fbca7a4bda1a5caccb45e05fbe362567"
+    },
+    "prepared/api-contract-carddemo-r2/execution/parsed.json": {
+      "bytes": 52370,
+      "sha256": "5603917be40628556742664c4aec78bac7e49364fe89b337f66db8163385d58b"
+    },
+    "prepared/api-contract-carddemo-r2/execution/metadata.json": {
+      "bytes": 1384,
+      "sha256": "5b7f0c0555d785177d6b74cabb86973adf9145734bcfff9c69f16c92ed2ebdc7"
+    },
+    "prepared/api-contract-carddemo-r2/execution/response.sse": {
+      "bytes": 3308261,
+      "sha256": "6388d9acc425c9799f4546fbe3e76f9629a711a84245d06fd1c2812fbc0c47dc"
+    },
+    "prepared/api-contract-carddemo-r2/request.json": {
+      "bytes": 915644,
+      "sha256": "a829f772cf621c352c7c45f250fc576241ed4388e8e758ecbb1d16e43201c66a"
+    },
+    "prepared/api-contract-carddemo-r2/execution/request-body.json": {
+      "bytes": 915644,
+      "sha256": "a829f772cf621c352c7c45f250fc576241ed4388e8e758ecbb1d16e43201c66a"
+    },
+    "reviews/stage-6-r1-directed-feedback.md": {
+      "bytes": 16491,
+      "sha256": "87a74e6570babd2e5e811ba1c0a6f0ee2d5cd0bdfbe4bdbb5504e3e9bfe4659c"
+    },
+    "STAGE6-REVISION-PLAN.md": {
+      "bytes": 10816,
+      "sha256": "51ce5a1a13ab107b5c6f0df536c371e3337ad79275da0377021c273598a59c35"
+    },
+    "specs/api-contract-carddemo/requirements.md": {
+      "bytes": 44132,
+      "sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7"
+    },
+    "specs/canonical-data-boundary-carddemo/requirements.md": {
+      "bytes": 55323,
+      "sha256": "208d04fe6f9cae665dfa4cb514de5d4ad9eaf0ebc169dfae0fd8a6ba209e66f3"
+    },
+    "specs/capability-semantics-carddemo/requirements.md": {
+      "bytes": 48728,
+      "sha256": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93"
+    },
+    "specs/legacy-evidence-carddemo-r2/requirements.md": {
+      "bytes": 57679,
+      "sha256": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b"
+    }
+  },
+  "protected_inputs_unchanged_after": {
+    "prepared/api-contract-carddemo-r2/execution/scope-original.md": true,
+    "prepared/api-contract-carddemo-r2/execution/parsed.json": true,
+    "prepared/api-contract-carddemo-r2/execution/metadata.json": true,
+    "prepared/api-contract-carddemo-r2/execution/response.sse": true,
+    "prepared/api-contract-carddemo-r2/request.json": true,
+    "prepared/api-contract-carddemo-r2/execution/request-body.json": true,
+    "reviews/stage-6-r1-directed-feedback.md": true,
+    "STAGE6-REVISION-PLAN.md": true,
+    "specs/api-contract-carddemo/requirements.md": true,
+    "specs/canonical-data-boundary-carddemo/requirements.md": true,
+    "specs/capability-semantics-carddemo/requirements.md": true,
+    "specs/legacy-evidence-carddemo-r2/requirements.md": true
+  },
+  "line_citations_r2": {
+    "purpose_status": 17,
+    "not_runtime_guarantees": 22,
+    "D14": 167,
+    "D15": 177,
+    "D16": 185,
+    "D17": 197,
+    "request_empty": 302,
+    "batch_envelopes": 322,
+    "non_vacuous": 338,
+    "error_table": 487,
+    "state_recovery": 514,
+    "traceability": 554,
+    "reverse_matrix": 577,
+    "G_disposition": 631,
+    "gate": 648
+  },
+  "line_citations_upstream": {
+    "stage5_D2": null,
+    "stage5_D3": null,
+    "stage5_D4": null,
+    "stage5_D5": null,
+    "stage5_D6": null,
+    "stage5_D7": null,
+    "stage5_D8": null,
+    "stage5_missing_zero": 168,
+    "stage4_R1": null,
+    "stage4_R7": null,
+    "stage4_R12": null,
+    "stage4_R20": null,
+    "feedback_G21": 26,
+    "feedback_G22": 57,
+    "feedback_G23": 86,
+    "feedback_G24": 120
+  },
+  "inspected_scope": [
+    "prepared/api-contract-carddemo-r2/execution/scope-original.md",
+    "prepared/api-contract-carddemo-r2/execution/parsed.json",
+    "prepared/api-contract-carddemo-r2/execution/metadata.json",
+    "prepared/api-contract-carddemo-r2/execution/response.sse",
+    "prepared/api-contract-carddemo-r2/request.json",
+    "prepared/api-contract-carddemo-r2/execution/request-body.json",
+    "reviews/stage-6-r1-directed-feedback.md",
+    "STAGE6-REVISION-PLAN.md",
+    "specs/api-contract-carddemo/requirements.md",
+    "specs/canonical-data-boundary-carddemo/requirements.md",
+    "specs/capability-semantics-carddemo/requirements.md",
+    "specs/legacy-evidence-carddemo-r2/requirements.md",
+    "specs/api-contract-carddemo-r2/spec.json",
+    "specs/api-contract-carddemo-r2/requirements.md"
+  ]
+}

@@ -1,0 +1,23 @@
+$ P2a/.venv/bin/python -m unittest discover -s tests -v
+test_reached_cobol_detection_requires_exact_program_authority (test_e2_2_integration_defects.E22IntegrationDefectRegressionTests) ... ok
+test_rejected_posting_transaction_preserves_required_processing_timestamp (test_e2_2_integration_defects.E22IntegrationDefectRegressionTests) ... ok
+test_reporting_abort_records_reached_cobol_and_exact_precondition_failure (test_e2_2_integration_defects.E22IntegrationDefectRegressionTests) ... ok
+test_negative_runtime_amount_is_decoded_not_returned_as_raw_string (test_native_numeric.NativeNumericTests) ... ok
+test_negative_transport_matches_measured_runtime_bytes (test_native_numeric.NativeNumericTests) ... ok
+test_numeric_identifiers_are_zero_filled_not_space_padded (test_native_numeric.NativeNumericTests) ... ok
+test_contract_paths_are_loaded_from_originals (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_http_dispatch_executes_real_loopback_route (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_materialize_empty_transactions_writes_empty_dalytran (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_materialize_interest_prefix_writes_exact_parmfile (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_original_jsonschema_allows_parameter_length_and_rejects_bad_shape (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_rejects_binding_prefix_instead_of_ignoring_it (test_p2c_facade_contracts.FacadeContractTests) ... ok
+test_bindings_are_resolved_to_real_dd_paths_and_unknown_token_fails (test_pending_facade_closure.PendingFacadeClosureTests) ... ok
+test_contract_default_parameter_length_is_prefix_length_not_constant_ten (test_pending_facade_closure.PendingFacadeClosureTests) ... ok
+test_e2_2_parameter_length_is_sent_to_local_linkage_wrapper (test_pending_facade_closure.PendingFacadeClosureTests) ... ok
+test_http_server_is_single_contract_no_prefixed_alias (test_pending_facade_closure.PendingFacadeClosureTests) ... ok
+test_pre_cobol_snapshot_is_after_request_materialization (test_pending_facade_closure.PendingFacadeClosureTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.506s
+
+OK

@@ -1,0 +1,800 @@
+{
+  "adapterReportSummary": {
+    "acceptedCount": 68,
+    "blockedCount": 22,
+    "inconclusiveTransitionCount": null,
+    "status": "candidate_not_official"
+  },
+  "badBodies": [],
+  "blockedSample": [
+    {
+      "cellId": "INTCALC-OBL-008::E3-01-SDD-stage6r3::interest",
+      "classification": "observation_without_authority",
+      "path": [
+        "INTCALC-T001",
+        "INTCALC-T006"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "INTCALC-T006"
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E3-01-SDD-stage6r3::interest",
+      "classification": "observation_without_authority",
+      "path": [
+        "INTCALC-T001",
+        "INTCALC-T003",
+        "INTCALC-T009Z",
+        "INTCALC-T006"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "INTCALC-T006"
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E3-01-SDD-stage6r3::interest",
+      "classification": "implementation_missing",
+      "path": [
+        "INTCALC-T001",
+        "INTCALC-T003",
+        "INTCALC-T007",
+        "INTCALC-T009",
+        "INTCALC-T010"
+      ],
+      "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+      "status": "blocked",
+      "transitionId": "INTCALC-T010"
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E3-01-SDD-stage6r3::posting",
+      "classification": "implementation_missing",
+      "path": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T003",
+        "POSTTRAN-T008",
+        "POSTTRAN-T012"
+      ],
+      "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+      "status": "blocked",
+      "transitionId": "POSTTRAN-T012"
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E3-01-SDD-stage6r3::posting",
+      "classification": "contractually_impossible",
+      "path": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T003",
+        "POSTTRAN-T008",
+        "POSTTRAN-T012",
+        "POSTTRAN-T013"
+      ],
+      "reason": "contract/request/fixture surface cannot express this obligation without strengthening the contract",
+      "status": "blocked",
+      "transitionId": "POSTTRAN-T013"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T010"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-01-SDD-stage6r3::reporting",
+      "classification": "observation_without_authority",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T010"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T011"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T011"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T013"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T013"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T010"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-01-SDD-stage6r3::reporting",
+      "classification": "observation_without_authority",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T010"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T011"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T011"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T013"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T013"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T010",
+        "TRANREPT-T016"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T016"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T010"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-01-SDD-stage6r3::reporting",
+      "classification": "observation_without_authority",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T010"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T011"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T011"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T013"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T013"
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+      "classification": "missing_fixture_variant",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T009",
+        "TRANREPT-T010"
+      ],
+      "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-01-SDD-stage6r3::reporting",
+      "classification": "observation_without_authority",
+      "path": [
+        "TRANREPT-T001",
+        "TRANREPT-T009",
+        "TRANREPT-T009",
+        "TRANREPT-T010"
+      ],
+      "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+      "status": "blocked",
+      "transitionId": "TRANREPT-T010"
+    }
+  ],
+  "caseCount": 65,
+  "cases": [
+    {
+      "body": {},
+      "caseId": "T3-0001-81fea073a238",
+      "cellRef": "INTCALC-OBL-001::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T001"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0002-909dc50b5c79",
+      "cellRef": "INTCALC-OBL-001::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T002"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0003-fffd728653c8",
+      "cellRef": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0004-7c92bc3e0cc8",
+      "cellRef": "INTCALC-OBL-003::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0005-6005260c7fa1",
+      "cellRef": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T004"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0006-d97efaed145c",
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0007-cd291b9ce6e7",
+      "cellRef": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0009-9f3994cecf11",
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009Z"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0010-be72f0246af9",
+      "cellRef": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009Z"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0011-bd5559451503",
+      "cellRef": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0012-d01a686d509d",
+      "cellRef": "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0013-fffd728653c8",
+      "cellRef": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0014-7c92bc3e0cc8",
+      "cellRef": "INTCALC-OBL-003::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0015-6005260c7fa1",
+      "cellRef": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T004"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0016-7dfc7980f7f3",
+      "cellRef": "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T010"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0017-bcc1b6fd8335",
+      "cellRef": "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T011"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0018-d97efaed145c",
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0019-cd291b9ce6e7",
+      "cellRef": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0021-9f3994cecf11",
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009Z"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0022-be72f0246af9",
+      "cellRef": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "path": "/interest",
+      "transitionId": "INTCALC-T009Z"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0023-006514568104",
+      "cellRef": "POSTTRAN-OBL-001::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T001"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0024-613a5fe4ed16",
+      "cellRef": "POSTTRAN-OBL-001::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T002"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0025-92a15bac2640",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0026-7e12c350234d",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T004"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0027-0565bc4c3407",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T005"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0028-01687de65244",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0029-03b1ee2659da",
+      "cellRef": "POSTTRAN-OBL-004::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0030-2e0b9fbcd7b7",
+      "cellRef": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T007"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0031-07483b43e46f",
+      "cellRef": "POSTTRAN-OBL-004::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T008"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0032-abafab583f51",
+      "cellRef": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T008"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0033-8cd978a4a5d2",
+      "cellRef": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0034-b229fa752014",
+      "cellRef": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0035-455c175734d1",
+      "cellRef": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T010"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0036-4baffabeb880",
+      "cellRef": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T010"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0037-c217004beb6e",
+      "cellRef": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T011"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0038-de042927300f",
+      "cellRef": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T011"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0039-a1e8ca59cb82",
+      "cellRef": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T012"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0040-79532c34c979",
+      "cellRef": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "path": "/posting",
+      "transitionId": "POSTTRAN-T013"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0042-7022582b4be4",
+      "cellRef": "TRANREPT-OBL-001::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T001"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0043-929c22e8df91",
+      "cellRef": "TRANREPT-OBL-001::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T002"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0044-ebdd76cbfeac",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0045-0ec729ecaaa3",
+      "cellRef": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0046-f37128b1812b",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0047-6dbbda6a891c",
+      "cellRef": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0048-0acd3660d6c1",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T012"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0049-b2e6cdd5028a",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T014"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0050-6f1cef9e2f72",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T015"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0051-ebdd76cbfeac",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0052-0ec729ecaaa3",
+      "cellRef": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0053-f37128b1812b",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0054-6dbbda6a891c",
+      "cellRef": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0055-0acd3660d6c1",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T012"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0056-d91a495f667c",
+      "cellRef": "TRANREPT-OBL-006::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T016"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0057-ebdd76cbfeac",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0058-0ec729ecaaa3",
+      "cellRef": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0059-f37128b1812b",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0060-6dbbda6a891c",
+      "cellRef": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0061-0acd3660d6c1",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T012"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0062-b2e6cdd5028a",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T014"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0063-6f1cef9e2f72",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T015"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0064-ebdd76cbfeac",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0065-0ec729ecaaa3",
+      "cellRef": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0066-f37128b1812b",
+      "cellRef": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T003"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0067-6dbbda6a891c",
+      "cellRef": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T009"
+    },
+    {
+      "body": {},
+      "caseId": "T3-0068-0acd3660d6c1",
+      "cellRef": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "path": "/reporting",
+      "transitionId": "TRANREPT-T012"
+    }
+  ],
+  "excludedByEffectiveSelection": [
+    {
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "transitionId": "INTCALC-T008"
+    },
+    {
+      "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "transitionId": "INTCALC-T008"
+    },
+    {
+      "cellRef": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+      "transitionId": "POSTTRAN-T014"
+    }
+  ],
+  "kind": "t3-sdd-external-selection-v2-adapter-static-check",
+  "officialCampaign": false,
+  "officialSuiteGenerated": false,
+  "runtimeExecuted": false,
+  "status": "PASS"
+}

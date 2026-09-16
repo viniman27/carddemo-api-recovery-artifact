@@ -1,0 +1,33 @@
+{
+  "commonInstruction": "Synthetic preparation only. Return JSON scenarios with concrete method/path/body only when supported; leave unsupported parameters pending.",
+  "contract": {
+    "bytes": 769,
+    "contentUtf8": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Synthetic 3.1 qualification schema; NOT CardDemo\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/synthetic\": {\n      \"post\": {\n        \"operationId\": \"syntheticPost\",\n        \"requestBody\": {\n          \"required\": true,\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"type\": \"object\",\n                \"additionalProperties\": false\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"ok\"\n          },\n          \"400\": {\n            \"description\": \"synthetic invalid\"\n          },\n          \"500\": {\n            \"description\": \"documented synthetic error\"\n          }\n        }\n      }\n    }\n  }\n}",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-openapi.json",
+    "sha256": "46d2b35afd144c0643031552eade265f1165d6960136bfd23e808786e4355398"
+  },
+  "contractId": "SYNTH",
+  "externalPackageStatus": "pending_approval",
+  "kind": "t1-outbound-package-preparation-only",
+  "limits": [
+    "preparation only",
+    "no provider/model call",
+    "no official cases generated"
+  ],
+  "modelAvailability": "not_probed",
+  "probeStatus": "not_called",
+  "providerCalled": false,
+  "supportedParameters": {
+    "max_output_tokens": {
+      "status": "pending_approval"
+    },
+    "seed": {
+      "status": "pending_approval"
+    },
+    "temperature": {
+      "status": "pending_approval"
+    }
+  },
+  "supportedParametersStatus": "declared_pending_not_probed",
+  "version": "suite-generation-preflight-v1.t1.1"
+}

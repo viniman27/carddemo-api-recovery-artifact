@@ -1,0 +1,930 @@
+{
+  "kind": "p3-coverage-api-integration-v1",
+  "status": "technical-smoke-not-official-coverage",
+  "createdUtc": "2026-09-15T13:36:19.226115+00:00",
+  "copyIsolation": {
+    "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle",
+    "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle",
+    "copySha256": "d12574f1aef6eaf25d7954d8a8b6ee569ad31404ca8e90c3b209b6507e1d2a0c"
+  },
+  "isolatedPatch": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+    "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+    "patchedSha256": "f66ce1536889e488f0f2fe32d9238124dcef0756ea572c21023050f491de5ed2",
+    "patchScope": "isolated P2b copy only; COBOL business sources/contracts unchanged"
+  },
+  "registry": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "sha256": "49f0cb521328e6cf26ffdacabfd04d7cae74cc0e2ab6cb4e73facd385aa41160"
+  },
+  "sourceHashes": [
+    {
+      "program": "CBTRN02C",
+      "path": "app/cbl/CBTRN02C.cbl",
+      "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+      "bytes": 58890
+    },
+    {
+      "program": "CBACT04C",
+      "path": "app/cbl/CBACT04C.cbl",
+      "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+      "bytes": 52479
+    },
+    {
+      "program": "CBTRN03C",
+      "path": "app/cbl/CBTRN03C.cbl",
+      "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+      "bytes": 52239
+    }
+  ],
+  "toolchain": {
+    "cobc": {
+      "cmd": [
+        "cobc",
+        "--version"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1",
+      "exit_code": 0,
+      "stdout": "cobc (GnuCOBOL) 3.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Jul 28 2023 18:42:18\nPackaged  Jul 28 2023 17:02:56 UTC\nC version \"Apple LLVM 21.0.0 (clang-2100.0.123.102)\"\n",
+      "stderr": "",
+      "duration_s": 0.007
+    },
+    "gcc11": {
+      "cmd": [
+        "gcc-11",
+        "--version"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1",
+      "exit_code": 0,
+      "stdout": "gcc-11 (Homebrew GCC 11.5.0) 11.5.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": "",
+      "duration_s": 0.008
+    },
+    "gcov11": {
+      "cmd": [
+        "gcov-11",
+        "--version"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1",
+      "exit_code": 0,
+      "stdout": "gcov (Homebrew GCC 11.5.0) 11.5.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": "",
+      "duration_s": 0.008
+    }
+  },
+  "buildReportPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build-report.json",
+  "buildReportSha256": "c2318d822aa451b0a1fe0c16008dc1f3ff554798641aa47db11b4b464db3237f",
+  "invocations": [
+    {
+      "http": {
+        "track": "posting",
+        "status": 200,
+        "body": {
+          "track": "posting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": []
+          },
+          "rejections": {
+            "availability": "available",
+            "items": []
+          },
+          "progress": {
+            "availability": "available",
+            "value": {
+              "processedRecordCount": 1,
+              "preliminaryRejectCount": 0
+            }
+          }
+        },
+        "bodySha256": "40254a69ab25e10340b4c1f7885f871027cca32416dd67059aa2cbc8e66e4275",
+        "duration_s": 1.531
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "c99f715d64323721a3b9343d8319848dcffa6d64a82a1f79675738a36bbe6ba1",
+      "captures": [
+        {
+          "label": "TRANFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/TRANFILE.seed",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "TCATBALF.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/TCATBALF.seed",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "ACCTFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/ACCTFILE.seed",
+          "exists": true,
+          "bytes": 300,
+          "sha256": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423"
+        },
+        {
+          "label": "XREFFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/XREFFILE.seed",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "DALYTRAN",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/DALYTRAN",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+        },
+        {
+          "label": "DALYTRAN.pre_cobol",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/DALYTRAN",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+        },
+        {
+          "label": "TRANFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/TRANFILE.after",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "81ff94b57a329d7437f3752dcce91b3410c288cac9ab81f7186c4791bc238616"
+        },
+        {
+          "label": "XREFFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/XREFFILE.after",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "ACCTFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/ACCTFILE.after",
+          "exists": true,
+          "bytes": 300,
+          "sha256": "401a58e5971c5bba9ec5ba2813bb814c759f538f89efbcbd0dea3b98facd442e"
+        },
+        {
+          "label": "TCATBALF.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/TCATBALF.after",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "4c867452904c67bf685f8036761897927601b261a6f89c3351e0a72bf94dad36"
+        },
+        {
+          "label": "DALYREJS",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/DALYREJS",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "write-observations",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/write-observations.log",
+          "exists": true,
+          "bytes": 46,
+          "sha256": "13b0959bc70b1a582f44e33f4729a19ea1cfcc6c7e6bbe645f66afde52df42bf"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/gcov/CBTRN02C-CBTRN02C.gcda",
+          "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+          "bytes": 3364,
+          "sha256": "a1b2b022c28bc21625f36119bc8f34b57b3544f246c3fa823fc1b09f48057b7c"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBTRN02C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBTRN02C-CBTRN02C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:56.96% of 1120\nBranches executed:82.64% of 288\nTaken at least once:43.75% of 288\nCalls executed:59.09% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:89.47% of 38\nTaken at least once:44.74% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:57.50% of 1134\n",
+        "stderr": "",
+        "duration_s": 0.012
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    },
+    {
+      "http": {
+        "track": "interest",
+        "status": 200,
+        "body": {
+          "track": "interest",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": [
+              {
+                "transactionId": "2022071800000001",
+                "typeCode": "01",
+                "categoryCode": "0005",
+                "source": "System",
+                "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "amount": "00000010000",
+                "merchantId": "000000000",
+                "merchantName": "",
+                "merchantCity": "",
+                "merchantPostalText": "",
+                "cardReference": "4111111111111111",
+                "originalTimestamp": "2026-09-15-10.36.23.860000",
+                "processingTimestamp": "2026-09-15-10.36.23.860000"
+              }
+            ]
+          }
+        },
+        "bodySha256": "e7a3d2e4daa30bfcb04425ddd5fa98fd4fd2b56377d371290b29407e12474897",
+        "duration_s": 0.897
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "12186803fad4a1c09dd52d6b018bdb4b7364d2a727eb3e85ac64a19f190f8cce",
+      "captures": [
+        {
+          "label": "TRANSACT",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome/TRANSACT",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "a93760cbda7a2a2b32e5804cbc5827e03a0c19e78b0ceafd676262eadca464fc"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome/gcov/CBACT04C.dylib-CBACT04C.gcda",
+          "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+          "bytes": 3112,
+          "sha256": "1d18a1857bee7ef7772d2e1b3f9f3b160bb6f09d4c217ddf40afafe6df2e467d"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBACT04C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBACT04C.dylib-CBACT04C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:55.00% of 1029\nBranches executed:76.69% of 266\nTaken at least once:40.98% of 266\nCalls executed:54.05% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:100.00% of 12\nBranches executed:88.89% of 36\nTaken at least once:44.44% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:55.61% of 1043\n",
+        "stderr": "",
+        "duration_s": 0.01
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    },
+    {
+      "http": {
+        "track": "reporting",
+        "status": 200,
+        "body": {
+          "track": "reporting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "records": {
+            "availability": "available",
+            "items": [
+              {
+                "kind": "header",
+                "value": {
+                  "reportShortNameText": "DALYREPT",
+                  "reportLongNameText": "Daily Transaction Report",
+                  "startText": "2026-09-15",
+                  "endText": "2026-09-15"
+                }
+              },
+              {
+                "kind": "detail",
+                "value": {
+                  "transactionId": "2022071800000001",
+                  "accountReference": "00000000001",
+                  "typeCode": "01",
+                  "typeDescription": "System transact",
+                  "categoryCode": "0005",
+                  "categoryDescription": "Interest charge",
+                  "source": "System",
+                  "amountText": "100.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "page",
+                  "valueText": "+        200.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "grand",
+                  "valueText": "+        200.00"
+                }
+              }
+            ]
+          }
+        },
+        "bodySha256": "87d976ac73ef13075acdbb7337276e942488f3df04c95b97d2e555eb800406c0",
+        "duration_s": 0.668
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "77e9c80bd1482e8b1ad36ceef4b4f8f8f1cbb1b35a494cb00129d86feadfa1f6",
+      "captures": [
+        {
+          "label": "TRANREPT",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8/TRANREPT",
+          "exists": true,
+          "bytes": 1064,
+          "sha256": "1bdcaa209ad8c0758d4664e144a9827cd6aae56dca4a041fe430004cbc771250"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8/gcov/CBTRN03C.gcda",
+          "rel": "gcov/CBTRN03C.gcda",
+          "bytes": 3464,
+          "sha256": "8a776150d15851b8f0d7268bb527300cda704ab3117facb16d19fd46aac490d8"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBTRN03C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBTRN03C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:60.57% of 1192\nBranches executed:86.03% of 272\nTaken at least once:45.59% of 272\nCalls executed:62.42% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:80.00% of 50\nBranches executed:91.67% of 48\nTaken at least once:45.83% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:61.41% of 1244\n",
+        "stderr": "",
+        "duration_s": 0.012
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    },
+    {
+      "http": {
+        "track": "posting",
+        "status": 200,
+        "body": {
+          "track": "posting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": []
+          },
+          "rejections": {
+            "availability": "available",
+            "items": []
+          },
+          "progress": {
+            "availability": "available",
+            "value": {
+              "processedRecordCount": 1,
+              "preliminaryRejectCount": 0
+            }
+          }
+        },
+        "bodySha256": "40254a69ab25e10340b4c1f7885f871027cca32416dd67059aa2cbc8e66e4275",
+        "duration_s": 0.108
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "c99f715d64323721a3b9343d8319848dcffa6d64a82a1f79675738a36bbe6ba1",
+      "captures": [
+        {
+          "label": "TRANFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/TRANFILE.seed",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "TCATBALF.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/TCATBALF.seed",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "ACCTFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/ACCTFILE.seed",
+          "exists": true,
+          "bytes": 300,
+          "sha256": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423"
+        },
+        {
+          "label": "XREFFILE.seed",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/XREFFILE.seed",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "DALYTRAN",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/DALYTRAN",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+        },
+        {
+          "label": "DALYTRAN.pre_cobol",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/DALYTRAN",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+        },
+        {
+          "label": "TRANFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/TRANFILE.after",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "8f0447f1a4c05707971a986b730c14a1135cecdb70e3ce3c637c9d8c9cce73b7"
+        },
+        {
+          "label": "XREFFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/XREFFILE.after",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "ACCTFILE.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/ACCTFILE.after",
+          "exists": true,
+          "bytes": 300,
+          "sha256": "401a58e5971c5bba9ec5ba2813bb814c759f538f89efbcbd0dea3b98facd442e"
+        },
+        {
+          "label": "TCATBALF.after",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/TCATBALF.after",
+          "exists": true,
+          "bytes": 50,
+          "sha256": "4c867452904c67bf685f8036761897927601b261a6f89c3351e0a72bf94dad36"
+        },
+        {
+          "label": "DALYREJS",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/DALYREJS",
+          "exists": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "write-observations",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/write-observations.log",
+          "exists": true,
+          "bytes": 46,
+          "sha256": "56f73bd249bb3750be16cc5f51dfb85266a6eb0ec8594e27204ba36e3a353484"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/gcov/CBTRN02C-CBTRN02C.gcda",
+          "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+          "bytes": 3364,
+          "sha256": "a1b2b022c28bc21625f36119bc8f34b57b3544f246c3fa823fc1b09f48057b7c"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBTRN02C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBTRN02C-CBTRN02C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:56.96% of 1120\nBranches executed:82.64% of 288\nTaken at least once:43.75% of 288\nCalls executed:59.09% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:89.47% of 38\nTaken at least once:44.74% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:57.50% of 1134\n",
+        "stderr": "",
+        "duration_s": 0.01
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    },
+    {
+      "http": {
+        "track": "interest",
+        "status": 200,
+        "body": {
+          "track": "interest",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": [
+              {
+                "transactionId": "2022071800000001",
+                "typeCode": "01",
+                "categoryCode": "0005",
+                "source": "System",
+                "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "amount": "00000010000",
+                "merchantId": "000000000",
+                "merchantName": "",
+                "merchantCity": "",
+                "merchantPostalText": "",
+                "cardReference": "4111111111111111",
+                "originalTimestamp": "2026-09-15-10.36.24.730000",
+                "processingTimestamp": "2026-09-15-10.36.24.730000"
+              }
+            ]
+          }
+        },
+        "bodySha256": "f9c11149bf4ed047c89df41b95444d734681e0c4959265d8a035cafeb18552d5",
+        "duration_s": 0.051
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "12186803fad4a1c09dd52d6b018bdb4b7364d2a727eb3e85ac64a19f190f8cce",
+      "captures": [
+        {
+          "label": "TRANSACT",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889/TRANSACT",
+          "exists": true,
+          "bytes": 350,
+          "sha256": "fd41c28cf510411374917620daff690c8fb525e070522b985274ab30851729f6"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889/gcov/CBACT04C.dylib-CBACT04C.gcda",
+          "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+          "bytes": 3112,
+          "sha256": "1d18a1857bee7ef7772d2e1b3f9f3b160bb6f09d4c217ddf40afafe6df2e467d"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBACT04C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBACT04C.dylib-CBACT04C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:55.00% of 1029\nBranches executed:76.69% of 266\nTaken at least once:40.98% of 266\nCalls executed:54.05% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:100.00% of 12\nBranches executed:88.89% of 36\nTaken at least once:44.44% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:55.61% of 1043\n",
+        "stderr": "",
+        "duration_s": 0.011
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    },
+    {
+      "http": {
+        "track": "reporting",
+        "status": 200,
+        "body": {
+          "track": "reporting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "records": {
+            "availability": "available",
+            "items": [
+              {
+                "kind": "header",
+                "value": {
+                  "reportShortNameText": "DALYREPT",
+                  "reportLongNameText": "Daily Transaction Report",
+                  "startText": "2026-09-15",
+                  "endText": "2026-09-15"
+                }
+              },
+              {
+                "kind": "detail",
+                "value": {
+                  "transactionId": "2022071800000001",
+                  "accountReference": "00000000001",
+                  "typeCode": "01",
+                  "typeDescription": "System transact",
+                  "categoryCode": "0005",
+                  "categoryDescription": "Interest charge",
+                  "source": "System",
+                  "amountText": "100.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "page",
+                  "valueText": "+        200.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "grand",
+                  "valueText": "+        200.00"
+                }
+              }
+            ]
+          }
+        },
+        "bodySha256": "87d976ac73ef13075acdbb7337276e942488f3df04c95b97d2e555eb800406c0",
+        "duration_s": 0.084
+      },
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26/audit.json",
+      "programExit": 0,
+      "reachedCobol": true,
+      "programStdoutSha256": "48994131c142ac941bd4cae47d9f2ac328a29a02cd5fefb21abcbbee27d0da39",
+      "captures": [
+        {
+          "label": "TRANREPT",
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26/TRANREPT",
+          "exists": true,
+          "bytes": 1064,
+          "sha256": "1bdcaa209ad8c0758d4664e144a9827cd6aae56dca4a041fe430004cbc771250"
+        }
+      ],
+      "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26/gcov",
+      "gcdaFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26/gcov/CBTRN03C.gcda",
+          "rel": "gcov/CBTRN03C.gcda",
+          "bytes": 3464,
+          "sha256": "8a776150d15851b8f0d7268bb527300cda704ab3117facb16d19fd46aac490d8"
+        }
+      ],
+      "gcnoFiles": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+          "bytes": 158104,
+          "sha256": "4da607aa71812b51aab3ad03833d4cea6cc7cd682a11ffed3e1a5fb0efbbc6ca"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+          "bytes": 172604,
+          "sha256": "13bb6d5fb0421b2faeeba7c885f90803dd9af716a851fd47d611757b1db5fcef"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+          "bytes": 174852,
+          "sha256": "e85b7d4ea9398cae3ebe160ba438b7c07bfab6f23e7fd58f935342c9aab25829"
+        }
+      ],
+      "businessProgram": "CBTRN03C",
+      "businessGcdaPresent": true,
+      "gcov11": {
+        "cmd": [
+          "gcov-11",
+          "-b",
+          "-c",
+          "-o",
+          "CBTRN03C.gcno",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26/gcov",
+        "exit_code": 0,
+        "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:60.57% of 1192\nBranches executed:86.03% of 272\nTaken at least once:45.59% of 272\nCalls executed:62.42% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:80.00% of 50\nBranches executed:91.67% of 48\nTaken at least once:45.83% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:61.41% of 1244\n",
+        "stderr": "",
+        "duration_s": 0.011
+      },
+      "supportCounterPolicy": {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    }
+  ],
+  "resetEvidence": [
+    {
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6s4a2c5q",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-o9c1vx5b",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "sameRelativeCounterNamesAllowed": true,
+      "resetVerified": true
+    },
+    {
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nmgi7ome",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-zwvf0889",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "sameRelativeCounterNamesAllowed": true,
+      "resetVerified": true
+    },
+    {
+      "track": "reporting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-v10tb1t8",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-api-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-179w__26",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "sameRelativeCounterNamesAllowed": true,
+      "resetVerified": true
+    }
+  ],
+  "supportExclusion": {
+    "rule": "only CBTRN02C/CBACT04C/CBTRN03C business counters are admissible; support drivers/helpers/shims are excluded even if gcda exists",
+    "perInvocation": [
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      },
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      },
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      },
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      },
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      },
+      {
+        "excludedFromBusinessCoverage": true,
+        "supportGcdaCount": 0,
+        "supportGcdaFiles": [],
+        "classification": "absent"
+      }
+    ]
+  },
+  "limits": [
+    "synthetic HTTP smoke only; no official suites/campaigns/oracles/quarantine/model calls",
+    "C/gcov counters are generated-C technical counters; no claim that C branches are COBOL business decisions",
+    "SDD/P2b runtime exercised for three tracks twice; zero-shot/few-shot can share prepared denominators only and no runtime coverage is claimed here",
+    "isolated API binding copy was mechanically patched for build/lifecycle evidence; original business COBOL sources and contracts were not edited"
+  ],
+  "summary": {
+    "httpCompleted": 6,
+    "normalCobolExit": 6,
+    "reachedCobol": 6,
+    "businessGcdaPresent": 6,
+    "resetPairsVerified": 3
+  }
+}

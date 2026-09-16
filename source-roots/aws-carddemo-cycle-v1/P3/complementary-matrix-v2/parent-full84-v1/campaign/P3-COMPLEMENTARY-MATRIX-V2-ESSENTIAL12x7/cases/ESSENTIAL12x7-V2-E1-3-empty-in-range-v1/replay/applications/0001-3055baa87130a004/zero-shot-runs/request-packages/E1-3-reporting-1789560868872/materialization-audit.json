@@ -1,0 +1,68 @@
+{
+  "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872",
+  "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/registry.json",
+  "files": {
+    "CARDXREF": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/CARDXREF",
+      "bytes": 8192,
+      "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+      "requestOwned": false
+    },
+    "DATEPARM": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/DATEPARM",
+      "bytes": 80,
+      "sha256": "b5a296c0d077c6f1cfabd1151901a38eb2c0c8da751dc43ff36915c88d6b3705",
+      "requestOwned": true
+    },
+    "TRANCATG": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/TRANCATG",
+      "bytes": 8192,
+      "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+      "requestOwned": false
+    },
+    "TRANFILE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/TRANFILE",
+      "bytes": 700,
+      "sha256": "581e456615fdef490cd41401134ce30ecc773ea84199c57ffb2eb4548b7b6cba",
+      "requestOwned": true
+    },
+    "TRANTYPE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-empty-in-range-v1/replay/applications/0001-3055baa87130a004/zero-shot-runs/request-packages/E1-3-reporting-1789560868872/TRANTYPE",
+      "bytes": 8192,
+      "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+      "requestOwned": false
+    }
+  },
+  "bindings": {
+    "CARDXREF": {
+      "field": "cardCrossReference",
+      "token": "p3:reporting:CARDXREF",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/empty-in-range-v1/reporting/CARDXREF",
+      "sourceSha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+      "sourceBytes": 8192
+    },
+    "TRANTYPE": {
+      "field": "transactionTypes",
+      "token": "p3:reporting:TRANTYPE",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/empty-in-range-v1/reporting/TRANTYPE",
+      "sourceSha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+      "sourceBytes": 8192
+    },
+    "TRANCATG": {
+      "field": "transactionCategories",
+      "token": "p3:reporting:TRANCATG",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/empty-in-range-v1/reporting/TRANCATG",
+      "sourceSha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+      "sourceBytes": 8192
+    }
+  },
+  "output_bindings": {
+    "TRANREPT": {
+      "field": "reportOutput",
+      "token": "p3:reporting:TRANREPT",
+      "dd": "TRANREPT",
+      "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+    }
+  },
+  "fixture_descriptor_sha256": "e8ef4ad405d7759f05cd27cb79fbf1d1011e904b5201454999eb0be49ecab1da"
+}

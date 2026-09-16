@@ -1,0 +1,532 @@
+{
+  "cases": [
+    {
+      "afterBodySha256": "c2757c9f9a996f4bb44cbb70e5ef4d71c9923e336ffd1bfb306b61c0e81095dd",
+      "afterBytes": 268,
+      "beforeBodySha256": "24a366d3caeb25fd469b788f973569a7e901d0829a90f25c6029ca91bc13fe10",
+      "beforeBytes": 208,
+      "caseId": "BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef",
+      "changes": [
+        {
+          "field": "categoryBalanceFile",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:TCATBALF"
+        },
+        {
+          "field": "crossReferenceFile",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:XREFFILE"
+        },
+        {
+          "field": "disclosureGroupFile",
+          "from": "DISCGRP",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:DISCGRP"
+        },
+        {
+          "field": "accountFile",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:ACCTFILE"
+        },
+        {
+          "field": "outputTransactionFile",
+          "from": "TRANSACT",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:TRANSACT"
+        }
+      ],
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "requestPath": "/interest-runs",
+      "sourceCaseId": "T3-0001-d3efd655d1ef",
+      "track": "interest"
+    },
+    {
+      "afterBodySha256": "1c341f37bdd7d7942c0d41df6d6c4f9fb5763e5f60ccb5ee8eda04fb8968d7ad",
+      "afterBytes": 1197,
+      "beforeBodySha256": "ec1059e069b636db189ef1635e5ffd6b4df6360e57e8438fa5ed055e8022c6ad",
+      "beforeBytes": 1142,
+      "caseId": "BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8",
+      "changes": [
+        {
+          "field": "transactionFile",
+          "from": "TRANFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TRANFILE"
+        },
+        {
+          "field": "crossReferenceFile",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:XREFFILE"
+        },
+        {
+          "field": "accountFile",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:ACCTFILE"
+        },
+        {
+          "field": "categoryBalanceFile",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TCATBALF"
+        },
+        {
+          "field": "rejectFile",
+          "from": "DALYREJS",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:DALYREJS"
+        }
+      ],
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "requestPath": "/posting-runs",
+      "sourceCaseId": "T3-0019-bb43244b06b8",
+      "track": "posting"
+    },
+    {
+      "afterBodySha256": "77d808b5370ae65f141258b04c78901290e69851763af4760e1d22c2ba50df9c",
+      "afterBytes": 1280,
+      "beforeBodySha256": "883ac04c562d3a8deabd28c9c448e8b745aa59254fbe4f3d0e3c157e3778c06f",
+      "beforeBytes": 1226,
+      "caseId": "BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3",
+      "changes": [
+        {
+          "field": "crossReferenceFile",
+          "from": "CARDXREF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:CARDXREF"
+        },
+        {
+          "field": "transactionTypeFile",
+          "from": "TRANTYPE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANTYPE"
+        },
+        {
+          "field": "transactionCategoryFile",
+          "from": "TRANCATG",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANCATG"
+        },
+        {
+          "field": "reportFile",
+          "from": "REPORT",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANREPT"
+        }
+      ],
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "requestPath": "/transaction-report-runs",
+      "sourceCaseId": "T3-0026-deffa082a6b3",
+      "track": "reporting"
+    },
+    {
+      "afterBodySha256": "f6f03640bf96b70f0285ca714a2e2c7e62f0f41449f60547fafa9cf242af7e99",
+      "afterBytes": 195,
+      "beforeBodySha256": "83e44319651d80d50bb4620889c540a1bb8ff56a4635e38c32045b749ae8db8f",
+      "beforeBytes": 147,
+      "caseId": "BINDCLOSE-E1-2-interest-T3-0001-c025c786553c",
+      "changes": [
+        {
+          "field": "categoryBalanceFile",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:TCATBALF"
+        },
+        {
+          "field": "crossReferenceFile",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:XREFFILE"
+        },
+        {
+          "field": "accountFile",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:ACCTFILE"
+        },
+        {
+          "field": "disclosureGroupFile",
+          "from": "DISCGRP",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:DISCGRP"
+        }
+      ],
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "requestPath": "/interest-transactions",
+      "sourceCaseId": "T3-0001-c025c786553c",
+      "track": "interest"
+    },
+    {
+      "afterBodySha256": "5981934ea4613d3fe2092758548b5c68b338a72d05c5ddda63226ff61e390403",
+      "afterBytes": 1162,
+      "beforeBodySha256": "0c6f1da7b31f47b7e7bf9d5de90a9f1e0fdbcd8b74c87b64789d234dd2f80cd3",
+      "beforeBytes": 1118,
+      "caseId": "BINDCLOSE-E1-2-posting-T3-0019-7d9924f1dcb3",
+      "changes": [
+        {
+          "field": "transactionFile",
+          "from": "TRANFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TRANFILE"
+        },
+        {
+          "field": "crossReferenceFile",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:XREFFILE"
+        },
+        {
+          "field": "accountFile",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:ACCTFILE"
+        },
+        {
+          "field": "categoryBalanceFile",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TCATBALF"
+        }
+      ],
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "requestPath": "/transaction-postings",
+      "sourceCaseId": "T3-0019-7d9924f1dcb3",
+      "track": "posting"
+    },
+    {
+      "afterBodySha256": "0ee11cc016a00d13fbec56d278dc8a000fe585da801859787626aebbc4765a47",
+      "afterBytes": 1237,
+      "beforeBodySha256": "e662b2e593a29cd42eb486e9d593a8853413800c58aedb6652bbb514c40f9650",
+      "beforeBytes": 1198,
+      "caseId": "BINDCLOSE-E1-2-reporting-T3-0026-203683ff895a",
+      "changes": [
+        {
+          "field": "crossReferenceFile",
+          "from": "CARDXREF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:CARDXREF"
+        },
+        {
+          "field": "transactionTypeFile",
+          "from": "TRANTYPE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANTYPE"
+        },
+        {
+          "field": "transactionCategoryFile",
+          "from": "TRANCATG",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANCATG"
+        }
+      ],
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "requestPath": "/transaction-reports",
+      "sourceCaseId": "T3-0026-203683ff895a",
+      "track": "reporting"
+    },
+    {
+      "afterBodySha256": "5d216108ccc3a40a439b0fe12eaf0313b052b2b1de67bd15234b41186367db17",
+      "afterBytes": 240,
+      "beforeBodySha256": "6f68ccc938abf43e3ce09b23944960fb4328dbb8a7a564dceceb048f69b4e9d8",
+      "beforeBytes": 180,
+      "caseId": "BINDCLOSE-E1-3-interest-T3-0001-a6791de10f5c",
+      "changes": [
+        {
+          "field": "categoryBalances",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:TCATBALF"
+        },
+        {
+          "field": "cardCrossReference",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:XREFFILE"
+        },
+        {
+          "field": "accounts",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:ACCTFILE"
+        },
+        {
+          "field": "disclosureGroups",
+          "from": "DISCGRP",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:DISCGRP"
+        },
+        {
+          "field": "transactionOutput",
+          "from": "TRANSACT",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:interest:TRANSACT"
+        }
+      ],
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "requestPath": "/interest-transaction-generations",
+      "sourceCaseId": "T3-0001-a6791de10f5c",
+      "track": "interest"
+    },
+    {
+      "afterBodySha256": "99c477c7c479f575334d71ec7d35056e4432349f56b12a52da5b630c67be91d6",
+      "afterBytes": 1164,
+      "beforeBodySha256": "35b7211fd802bcd102ae998aeac3135f0d0ec1edf419261ddb51f501f9d442e3",
+      "beforeBytes": 1109,
+      "caseId": "BINDCLOSE-E1-3-posting-T3-0019-22f90eda7557",
+      "changes": [
+        {
+          "field": "cardCrossReference",
+          "from": "XREFFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:XREFFILE"
+        },
+        {
+          "field": "accounts",
+          "from": "ACCTFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:ACCTFILE"
+        },
+        {
+          "field": "categoryBalances",
+          "from": "TCATBALF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TCATBALF"
+        },
+        {
+          "field": "transactionOutput",
+          "from": "TRANFILE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:TRANFILE"
+        },
+        {
+          "field": "rejectionOutput",
+          "from": "DALYREJS",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:posting:DALYREJS"
+        }
+      ],
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "requestPath": "/transaction-postings",
+      "sourceCaseId": "T3-0019-22f90eda7557",
+      "track": "posting"
+    },
+    {
+      "afterBodySha256": "c8f8249cc6d72b88c6edc968968c475bf2b2e5e49c509fb66f7b419c7a42180e",
+      "afterBytes": 1271,
+      "beforeBodySha256": "99d6dbc4af0e83d2d70a766a1d7db1bf6cff524c531bc39971ad2d6d29b5089f",
+      "beforeBytes": 1189,
+      "caseId": "BINDCLOSE-E1-3-reporting-T3-0026-d0d804ba0682",
+      "changes": [
+        {
+          "field": "cardCrossReference",
+          "from": "CARDXREF",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:CARDXREF"
+        },
+        {
+          "field": "transactionTypes",
+          "from": "TRANTYPE",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANTYPE"
+        },
+        {
+          "field": "transactionCategories",
+          "from": "TRANCATG",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANCATG"
+        },
+        {
+          "field": "reportOutput",
+          "from": "REPORT",
+          "protocol": "P2c-zero-shot-local-token",
+          "to": "p3:reporting:TRANREPT"
+        },
+        {
+          "field": "dateParameterRecords[0]",
+          "from": "sha256:5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+          "protocol": "E1-3-DateParameterRecord-base64-contentEncoding",
+          "to": "sha256:7506cbe52da747d3eea09462b257e36a24cbe7e1575b4f1ae7a6ac8d84e26353"
+        }
+      ],
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "requestPath": "/transaction-reports",
+      "sourceCaseId": "T3-0026-d0d804ba0682",
+      "track": "reporting"
+    },
+    {
+      "afterBodySha256": "9e5c4c0254730bc070079fcf1a13cc7767642f73005b49226627e8662767a73e",
+      "afterBytes": 423,
+      "beforeBodySha256": "a879b511076ea94810f0dcbd5db4bb96f43f251fc4445e93597ab81f345ae0e1",
+      "beforeBytes": 205,
+      "caseId": "BINDCLOSE-E2-2-interest-T3-0001-84102deb8640",
+      "changes": [
+        {
+          "field": "bindings.accounts",
+          "from": "ACCTFILE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:accounts"
+        },
+        {
+          "field": "bindings.categoryBalances",
+          "from": "TCATBALF",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:categoryBalances"
+        },
+        {
+          "field": "bindings.crossReferences",
+          "from": "XREFFILE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:crossReferences"
+        },
+        {
+          "field": "bindings.disclosureGroups",
+          "from": "DISCGRP",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:disclosureGroups"
+        },
+        {
+          "field": "bindings.transactionOutput",
+          "from": "TRANSACT",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:transactionOutput"
+        }
+      ],
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "requestPath": "/interest-generation-runs",
+      "sourceCaseId": "T3-0001-84102deb8640",
+      "track": "interest"
+    },
+    {
+      "afterBodySha256": "d9db0b5a326dd33de2ff503f575427366fa17c9a2f4b5bdcec745213f4916894",
+      "afterBytes": 1218,
+      "beforeBodySha256": "75341b84fd1e2a352717794f222610bfae76ec2c749f6f21152bc7567004c5a9",
+      "beforeBytes": 1002,
+      "caseId": "BINDCLOSE-E2-2-posting-T3-0019-09e0d0d07c9e",
+      "changes": [
+        {
+          "field": "bindings.accounts",
+          "from": "ACCTFILE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:accounts"
+        },
+        {
+          "field": "bindings.categoryBalances",
+          "from": "TCATBALF",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:categoryBalances"
+        },
+        {
+          "field": "bindings.crossReferences",
+          "from": "XREFFILE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:crossReferences"
+        },
+        {
+          "field": "bindings.rejectionOutput",
+          "from": "DALYREJS",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:rejectionOutput"
+        },
+        {
+          "field": "bindings.transactionOutput",
+          "from": "TRANFILE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:transactionOutput"
+        }
+      ],
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "requestPath": "/transaction-posting-runs",
+      "sourceCaseId": "T3-0019-09e0d0d07c9e",
+      "track": "posting"
+    },
+    {
+      "afterBodySha256": "914b46a0be56b2c58af4d0f0bbc87106fe43f46408ba0b34b05652f5d95fabf7",
+      "afterBytes": 1269,
+      "beforeBodySha256": "78fe4e0774d6ef22e20e1477322696225af3b24c364aded43ad29bf88f3c553e",
+      "beforeBytes": 1087,
+      "caseId": "BINDCLOSE-E2-2-reporting-T3-0026-87e6b1a14e22",
+      "changes": [
+        {
+          "field": "bindings.crossReferences",
+          "from": "CARDXREF",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:crossReferences"
+        },
+        {
+          "field": "bindings.reportOutput",
+          "from": "REPORT",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:reportOutput"
+        },
+        {
+          "field": "bindings.transactionCategories",
+          "from": "TRANCATG",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:transactionCategories"
+        },
+        {
+          "field": "bindings.transactionTypes",
+          "from": "TRANTYPE",
+          "protocol": "P2c-few-shot-local-token",
+          "to": "p3-local-technical-fixture-selection:transactionTypes"
+        }
+      ],
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "requestPath": "/transaction-report-runs",
+      "sourceCaseId": "T3-0026-87e6b1a14e22",
+      "track": "reporting"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 277047,
+      "contractId": "E1-1",
+      "path": "../campaign-freeze-package-v1/E1-1/T3.json",
+      "sha256": "f9f01697f5e41a93bd58d40c928eaf8056bccb93d749e30729a711f06edb0d79"
+    },
+    {
+      "bytes": 259652,
+      "contractId": "E1-2",
+      "path": "../campaign-freeze-package-v1/E1-2/T3.json",
+      "sha256": "4838153cc26ea821bba8483fc3dbd29e50ba0777dbdca5ad3002417bb5a5eb14"
+    },
+    {
+      "bytes": 270981,
+      "contractId": "E1-3",
+      "path": "../campaign-freeze-package-v1/E1-3/T3.json",
+      "sha256": "b1268b3dff0d2ceae7d24efbf375df13015b41494eede510429b96e0e7f7b402"
+    },
+    {
+      "bytes": 596094,
+      "contractId": "E2-2",
+      "path": "../campaign-freeze-package-v1/E2-2/T3.json",
+      "sha256": "691b1939b8ad687f96e14fa5c6994ee9116a046962d649859c12e489414d33b0"
+    }
+  ],
+  "kind": "t3-binding-closure-v1-amendment",
+  "officialCampaign": false,
+  "outputSuite": {
+    "bytes": 98650,
+    "caseCount": 12,
+    "path": "amended-candidates/T3-BINDING-CLOSURE-V1.json",
+    "sha256": "ccf49bbe86d9342e3e66fafdfc6db6cf572255e20aba829af8ef449409643c6c"
+  },
+  "scope": "candidate technical-token amendment for first T3 case per track; no API/COBOL/contract/business data changes",
+  "unchangedContractDefectsPreserved": true
+}

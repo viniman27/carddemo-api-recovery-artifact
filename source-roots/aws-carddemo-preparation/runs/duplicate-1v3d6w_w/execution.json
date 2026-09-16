@@ -1,0 +1,155 @@
+{
+  "case": "duplicate",
+  "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w",
+  "steps": [
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TRANFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TCATBALF.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/ACCTFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/XREFFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/CBTRN02C"
+      ],
+      "env": {
+        "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TRANFILE",
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/XREFFILE",
+        "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/ACCTFILE",
+        "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TCATBALF",
+        "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/DALYTRAN",
+        "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/DALYREJS",
+        "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build"
+      },
+      "rc": 12,
+      "stdout": "START OF EXECUTION OF PROGRAM CBTRN02C\nTCATBAL record not found for key : 00000000001010001.. Creating.\nERROR WRITING TO TRANSACTION FILE\nFILE STATUS IS: NNNN0022\nABENDING PROGRAM\n",
+      "stderr": "LOCAL-CEE3ABD CODE=+0000000999 TIMING=+0000000000\nlibcob: warning: implicit CLOSE of TCATBAL-FILE ('TCATBALF')\nlibcob: warning: implicit CLOSE of ACCOUNT-FILE ('ACCTFILE')\nlibcob: warning: implicit CLOSE of DALYREJS-FILE ('DALYREJS')\nlibcob: warning: implicit CLOSE of XREF-FILE ('XREFFILE')\nlibcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')\nlibcob: warning: implicit CLOSE of DALYTRAN-FILE ('DALYTRAN')\n"
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TRANFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/XREFFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/ACCTFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TCATBALF.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/duplicate-1v3d6w_w/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "TRANFILE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TCATBALF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACCTFILE": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "DALYTRAN": "c63495018665db958ddcc0ce74453e6573cc4f08b7bd88d34893dfb38dc07844"
+  },
+  "output_sha256": {
+    "TRANFILE": "b401060e13e9d9738522785df44a03a65bacba027a6e8aa692fb3b3f39d38172",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "ACCTFILE": "fa2fe7cf6b62f73dfd408253872884b08c635a01ec6ac3462dfc4e752c3613cf",
+    "TCATBALF": "d152ee022b8b97bb553b90dfa863d7cbfa13be3c3bd3c8d309d28a74f601a843",
+    "DALYREJS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "output_bytes": {
+    "TRANFILE": 350,
+    "XREFFILE": 50,
+    "ACCTFILE": 300,
+    "TCATBALF": 50,
+    "DALYREJS": 0
+  },
+  "observed_fields_hex": {
+    "ACCTFILE[12:24]": "303030303030303035303030",
+    "TCATBALF[17:28]": "3030303030303035303030",
+    "TRANFILE[0:304]": "54455354303030303030303030303031303130303031544553542020202020204c4f43414c2053594e54484554494320464958545552452020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303235303030303030303030303154455354204d45524348414e542020202020202020202020202020202020202020202020202020202020202020202020202054455354204349545920202020202020202020202020202020202020202020202020202020202020202020202020202020203030303030303030303030303030303030303030303030303031323032352d30312d30312d30302e30302e30302e303030303030",
+    "TRANFILE[330:]": "0000000000000000000000000000000000000000"
+  },
+  "reset_exclusion": "TRANFILE bytes 304:330 (processing timestamp)"
+}

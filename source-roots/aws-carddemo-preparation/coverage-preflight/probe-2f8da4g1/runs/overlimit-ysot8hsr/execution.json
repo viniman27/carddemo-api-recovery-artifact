@@ -1,0 +1,155 @@
+{
+  "case": "overlimit",
+  "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr",
+  "steps": [
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TRANFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TCATBALF.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/ACCTFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/XREFFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/CBTRN02C"
+      ],
+      "env": {
+        "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TRANFILE",
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/XREFFILE",
+        "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/ACCTFILE",
+        "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TCATBALF",
+        "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/DALYTRAN",
+        "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/DALYREJS",
+        "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build"
+      },
+      "rc": 4,
+      "stdout": "START OF EXECUTION OF PROGRAM CBTRN02C\nTRANSACTIONS PROCESSED :000000001\nTRANSACTIONS REJECTED  :000000001\nEND OF EXECUTION OF PROGRAM CBTRN02C\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TRANFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/XREFFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/ACCTFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TCATBALF.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/coverage-preflight/probe-2f8da4g1/runs/overlimit-ysot8hsr/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "TRANFILE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TCATBALF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACCTFILE": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "DALYTRAN": "797bd81b21093593e4e7ebb45f1ba6fb03ae65d7b65b6179cf48eac615aa28a1"
+  },
+  "output_sha256": {
+    "TRANFILE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "ACCTFILE": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423",
+    "TCATBALF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "DALYREJS": "75494ff36e5f227d6292f46dde171691b90afccc37a30f4b2b094a4b22dcc3de"
+  },
+  "output_bytes": {
+    "TRANFILE": 0,
+    "XREFFILE": 50,
+    "ACCTFILE": 300,
+    "TCATBALF": 0,
+    "DALYREJS": 430
+  },
+  "observed_fields_hex": {
+    "ACCTFILE[12:24]": "303030303030303030303030",
+    "TCATBALF[17:28]": "",
+    "TRANFILE[0:304]": "",
+    "TRANFILE[330:]": ""
+  },
+  "reset_exclusion": "TRANFILE bytes 304:330 (processing timestamp)"
+}

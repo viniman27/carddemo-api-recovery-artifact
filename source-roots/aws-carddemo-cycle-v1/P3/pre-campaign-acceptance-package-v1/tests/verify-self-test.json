@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "tests": [
+    {
+      "name": "base_manifest",
+      "ok": true,
+      "result": {
+        "failures": [],
+        "manifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/MANIFEST.json",
+        "ok": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "detect_missing_dependency",
+      "ok": true,
+      "result": {
+        "failures": [
+          {
+            "code": "missing_dependency",
+            "id": "acceptance-ptbr",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmpx9dzy1l1/pkg/ACCEPTANCE-PTBR.md",
+            "section": "generatedArtifacts"
+          }
+        ],
+        "manifest": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmpx9dzy1l1/pkg/MANIFEST.json",
+        "ok": false,
+        "warnings": []
+      }
+    },
+    {
+      "name": "detect_tamper",
+      "ok": true,
+      "result": {
+        "failures": [
+          {
+            "actual": "d121be3103007b41edf96f8262925f8c7d61894afe9a041843b631f69445bc57",
+            "code": "stale_or_tampered_dependency",
+            "expected": "f01d11054c4fad471b3345cef415bf178e369dc26df65551558234d07d42ae35",
+            "id": "t1-payload-E1-1",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmp1yggwa0c/pkg/t1-outbound-payloads/E1-1.payload.json",
+            "section": "generatedArtifacts"
+          },
+          {
+            "actual": 8,
+            "code": "size_mismatch",
+            "expected": 34324,
+            "id": "t1-payload-E1-1",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmp1yggwa0c/pkg/t1-outbound-payloads/E1-1.payload.json",
+            "section": "generatedArtifacts"
+          },
+          {
+            "actual": "d121be3103007b41edf96f8262925f8c7d61894afe9a041843b631f69445bc57",
+            "code": "t1_payload_tampered",
+            "expected": "f01d11054c4fad471b3345cef415bf178e369dc26df65551558234d07d42ae35",
+            "id": "E1-1"
+          },
+          {
+            "code": "t1_payload_unreadable_json",
+            "error": "Expecting value: line 1 column 1 (char 0)",
+            "id": "E1-1",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmp1yggwa0c/pkg/t1-outbound-payloads/E1-1.payload.json"
+          }
+        ],
+        "manifest": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmp1yggwa0c/pkg/MANIFEST.json",
+        "ok": false,
+        "warnings": []
+      }
+    },
+    {
+      "name": "reject_label_as_authorization",
+      "ok": true,
+      "result": {
+        "failures": [
+          {
+            "code": "label_misused_as_authorization",
+            "label": "approved"
+          }
+        ],
+        "manifest": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmp7gt9h1h4/pkg/MANIFEST.json",
+        "ok": false,
+        "warnings": []
+      }
+    },
+    {
+      "name": "detect_stale_hash",
+      "ok": true,
+      "result": {
+        "failures": [
+          {
+            "actual": "6f26c52463ceb1c0e7e74ad93b4a28dd512789a16a627ec223dc67e85f62bdf3",
+            "code": "stale_or_tampered_dependency",
+            "expected": "5de889a69db0e6351a78ecb440778bdebed9a6c880f94e7aba48b9e775a2b71d",
+            "id": "acceptance-ptbr",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmpsqbcomyz/pkg/ACCEPTANCE-PTBR.md",
+            "section": "generatedArtifacts"
+          },
+          {
+            "actual": 2091,
+            "code": "size_mismatch",
+            "expected": 2090,
+            "id": "acceptance-ptbr",
+            "path": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmpsqbcomyz/pkg/ACCEPTANCE-PTBR.md",
+            "section": "generatedArtifacts"
+          }
+        ],
+        "manifest": "/private/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T/tmpsqbcomyz/pkg/MANIFEST.json",
+        "ok": false,
+        "warnings": []
+      }
+    }
+  ]
+}

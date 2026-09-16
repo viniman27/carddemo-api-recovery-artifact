@@ -1,0 +1,62 @@
+{
+  "kind": "t3-mapping-integration-v2-report",
+  "status": "candidate",
+  "officialCampaign": false,
+  "inputs": {
+    "applicabilityMatrixV3": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/applicability-mapping-v3/applicability_matrix.json",
+      "sha256": "70099753738d2a8942f60193d7b7877fcbd7c3d521b46bf897868fa3e43ef3fc",
+      "bytes": 1048080
+    },
+    "recipesV1": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/recipes.json",
+      "sha256": "efa60e01a1eb0e6f97ce6a4bce8a56c790e487bd20b45a85a87f7ff13c81498d",
+      "bytes": 40556
+    },
+    "preservedOldMapperHash": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapper-preparation-v1/src/t3_mapper.py",
+      "sha256": "ddbf291f3d94a0535aa9d0c32d3afd955389f4dd99adec50b5669d2f8e9531e4",
+      "bytes": 30670,
+      "note": "recorded only; old mapper not edited by this integration"
+    }
+  },
+  "results": {
+    "enrichedSummary": {
+      "recipesTotal": 21,
+      "uniqueRecipeJoinKeys": 21,
+      "duplicateRecipeJoinKeys": [],
+      "cellsTotal": 175,
+      "v3AllowedCellsWithLinkedRecipe": 119,
+      "executableEligibleCellsWithLinkedRecipe": 54,
+      "recipeExistsButNotExecutableEligible": 65,
+      "v3AllowedCellsMissingRecipe": 0,
+      "blockedCellsWithoutSelectors": 121,
+      "classificationTotals": {
+        "recipe_available_unexercised": 54,
+        "implementation_missing": 72,
+        "contractually_impossible": 7,
+        "missing_fixture_variant": 28,
+        "observation_without_authority": 14
+      }
+    },
+    "inventoryTotals": {
+      "recipe_available_unexercised": 54,
+      "implementation_missing": 72,
+      "contractually_impossible": 7,
+      "missing_fixture_variant": 28,
+      "observation_without_authority": 14
+    },
+    "recipeValidation": {
+      "kind": "t3-integrated-recipes-static-validation",
+      "status": "candidate",
+      "officialCampaign": false,
+      "recipeSchemaValidated": true,
+      "operationRecipes": 21,
+      "compileFailures": []
+    }
+  },
+  "exports": {
+    "officialAwsSuite": false,
+    "officialAwsRequests": false
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "INV": {
+    "id": "http-1789508351215",
+    "run": "E3-01",
+    "track": "posting",
+    "request": {},
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh",
+    "localhost_only": true,
+    "time_utc": "2026-09-15T21:39:11Z",
+    "fixture_selection_channel": "local_config"
+  },
+  "RES": {
+    "binding_components": {
+      "p2b_binding.py": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "runtime_observations.py": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+      "write_observer.c": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+      "interest_driver.cbl": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    "source_pins": {
+      "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+      "programs": [
+        "CBTRN02C",
+        "CBACT04C",
+        "CBTRN03C"
+      ],
+      "checked_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "bytes": 52479
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "bytes": 58890
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "bytes": 52239
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "bytes": 1125
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "bytes": 736
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "bytes": 655
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "bytes": 817
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "bytes": 1546
+        },
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "bytes": 1538
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "bytes": 5758
+        },
+        {
+          "path": "app/jcl/COMBTRAN.jcl",
+          "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+          "bytes": 3662
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "bytes": 2964
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "bytes": 3246
+        },
+        {
+          "path": "app/jcl/TRANBKP.jcl",
+          "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+          "bytes": 5330
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "bytes": 6427
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "bytes": 2233
+        }
+      ],
+      "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus"
+    },
+    "fixture_policy": "external local technical fixture selection; not evaluation oracle; not extraction input; not public request",
+    "selected_fixture": {
+      "fixtureId": "posting.copied-current-technical-smoke",
+      "track": "posting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "package/posting/ACCTFILE",
+          "DALYTRAN": "package/posting/DALYTRAN",
+          "TCATBALF": "package/posting/TCATBALF",
+          "TRANFILE": "package/posting/TRANFILE",
+          "XREFFILE": "package/posting/XREFFILE"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+            "bytes": 8192
+          },
+          "DALYTRAN": {
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "bytes": 700
+          },
+          "TCATBALF": {
+            "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+        "copiedCurrent": true,
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "93e126bbca7c5d76236af9c2d3af945582d95706f46fbb1c2665f65ccfb62bc6",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "verifiedDescriptorSha256": "93e126bbca7c5d76236af9c2d3af945582d95706f46fbb1c2665f65ccfb62bc6",
+      "resolvedFixtureFiles": {
+        "ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/ACCTFILE",
+        "DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/DALYTRAN",
+        "TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/TCATBALF",
+        "TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/TRANFILE",
+        "XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/XREFFILE"
+      }
+    },
+    "p2a_contract": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml"
+  },
+  "CAP": {
+    "captures": [
+      {
+        "label": "DALYTRAN.pre_cobol",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/DALYTRAN",
+        "exists": true,
+        "bytes": 700,
+        "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+      },
+      {
+        "label": "TRANFILE.after",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/TRANFILE.after",
+        "exists": true,
+        "bytes": 350,
+        "sha256": "92452d96e6353fc4db0fb92d1074d562c5cdb59e51f8546c46ec09a5a3ddbd13"
+      },
+      {
+        "label": "XREFFILE.after",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/XREFFILE.after",
+        "exists": true,
+        "bytes": 100,
+        "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3"
+      },
+      {
+        "label": "ACCTFILE.after",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/ACCTFILE.after",
+        "exists": true,
+        "bytes": 600,
+        "sha256": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955"
+      },
+      {
+        "label": "TCATBALF.after",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/TCATBALF.after",
+        "exists": true,
+        "bytes": 100,
+        "sha256": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024"
+      },
+      {
+        "label": "DALYREJS",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/DALYREJS",
+        "exists": true,
+        "bytes": 430,
+        "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+      },
+      {
+        "label": "write-observations",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/write-observations.log",
+        "exists": true,
+        "bytes": 46,
+        "sha256": "5e2855be97adfd0889f0a5c3ae245c49876770045873b435ee6ff2adcb0ac004"
+      }
+    ],
+    "freshness": "created in this invocation workspace",
+    "fixture_materialization": {
+      "fixtureId": "posting.copied-current-technical-smoke",
+      "track": "posting",
+      "materializerKind": "local_file_package",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "files": {
+        "ACCTFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/ACCTFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/ACCTFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "DALYTRAN": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/DALYTRAN",
+          "sourceBytes": 700,
+          "sourceSha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/DALYTRAN",
+          "materializedBytes": 700,
+          "materializedSha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "TCATBALF": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/TCATBALF",
+          "sourceBytes": 8192,
+          "sourceSha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/TCATBALF",
+          "materializedBytes": 8192,
+          "materializedSha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "TRANFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/TRANFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/TRANFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        },
+        "XREFFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/posting/XREFFILE",
+          "sourceBytes": 8192,
+          "sourceSha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh/XREFFILE",
+          "materializedBytes": 8192,
+          "materializedSha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+          "provenance": {
+            "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+            "copiedCurrent": true,
+            "officialFixture": false
+          }
+        }
+      },
+      "preCobolMaterializationSnapshot": {
+        "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh",
+        "entryCount": 5,
+        "treeSha256": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+        "files": [
+          {
+            "path": "ACCTFILE",
+            "bytes": 8192,
+            "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+          },
+          {
+            "path": "DALYTRAN",
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+          },
+          {
+            "path": "TCATBALF",
+            "bytes": 8192,
+            "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+          },
+          {
+            "path": "TRANFILE",
+            "bytes": 8192,
+            "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+          },
+          {
+            "path": "XREFFILE",
+            "bytes": 8192,
+            "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+          }
+        ]
+      }
+    },
+    "program_stdout": "START OF EXECUTION OF PROGRAM CBTRN02C\nTRANSACTIONS PROCESSED :000000002\nTRANSACTIONS REJECTED  :000000001\nEND OF EXECUTION OF PROGRAM CBTRN02C\n",
+    "program_stderr": ""
+  },
+  "CONV": {
+    "field_mappings": [
+      {
+        "field": "PostingProgress",
+        "basis": "exact attributed stdout counters, never dump cardinality"
+      }
+    ],
+    "limits": [
+      "technical parse only",
+      "no semantic repairs",
+      "no coverage inference from build"
+    ],
+    "write_observations": {
+      "knownFailure": false,
+      "events": [],
+      "scope": "returned cob_write calls; not durability or business completeness",
+      "fieldSpans": [
+        [
+          "transactionId",
+          0,
+          16
+        ],
+        [
+          "typeCode",
+          16,
+          18
+        ],
+        [
+          "categoryCode",
+          18,
+          22
+        ],
+        [
+          "source",
+          22,
+          32
+        ],
+        [
+          "description",
+          32,
+          132
+        ],
+        [
+          "amount",
+          132,
+          143
+        ],
+        [
+          "merchantId",
+          143,
+          152
+        ],
+        [
+          "merchantName",
+          152,
+          202
+        ],
+        [
+          "merchantCity",
+          202,
+          252
+        ],
+        [
+          "merchantPostalText",
+          252,
+          262
+        ],
+        [
+          "cardReference",
+          262,
+          278
+        ],
+        [
+          "originalTimestamp",
+          278,
+          304
+        ],
+        [
+          "processingTimestamp",
+          304,
+          330
+        ]
+      ],
+      "completeCaptureFrame": true
+    }
+  },
+  "FAIL": {
+    "events": []
+  },
+  "STATE": {
+    "isolation": "new per-invocation directory",
+    "durability": "unknown",
+    "reset_claim": "not_attested_by_single_invocation",
+    "before": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh",
+      "entryCount": 0,
+      "treeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "files": []
+    },
+    "pre_cobol_materialization": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh",
+      "entryCount": 5,
+      "treeSha256": "6ea8f62c6fffe9526778fa48ea4004119096cc7fca6e661a4745677adae06f00",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+        },
+        {
+          "path": "DALYTRAN",
+          "bytes": 700,
+          "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+        },
+        {
+          "path": "TRANFILE",
+          "bytes": 8192,
+          "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+        }
+      ]
+    },
+    "after": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-fvf20rrh",
+      "entryCount": 12,
+      "treeSha256": "d05523ff2e515b9d5e8befc42fb2acecb2eaeaebfa4746790b2d185bf00bbe3e",
+      "files": [
+        {
+          "path": "ACCTFILE",
+          "bytes": 8192,
+          "sha256": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22"
+        },
+        {
+          "path": "ACCTFILE.after",
+          "bytes": 600,
+          "sha256": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955"
+        },
+        {
+          "path": "DALYREJS",
+          "bytes": 430,
+          "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+        },
+        {
+          "path": "DALYTRAN",
+          "bytes": 700,
+          "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+        },
+        {
+          "path": "TCATBALF",
+          "bytes": 8192,
+          "sha256": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1"
+        },
+        {
+          "path": "TCATBALF.after",
+          "bytes": 100,
+          "sha256": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024"
+        },
+        {
+          "path": "TRANFILE",
+          "bytes": 8192,
+          "sha256": "69b33f6fe86121a70ed3c04c8b0bdee53bb41b6e4742c5900621bd1c4ac7fd9b"
+        },
+        {
+          "path": "TRANFILE.after",
+          "bytes": 350,
+          "sha256": "92452d96e6353fc4db0fb92d1074d562c5cdb59e51f8546c46ec09a5a3ddbd13"
+        },
+        {
+          "path": "XREFFILE",
+          "bytes": 8192,
+          "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+        },
+        {
+          "path": "XREFFILE.after",
+          "bytes": 100,
+          "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3"
+        },
+        {
+          "path": "gcov/CBTRN02C-CBTRN02C.gcda",
+          "bytes": 3364,
+          "sha256": "f4ec22a33a989c0cf4bc279d2a83b93df39a972ed762df0868097e7d388415cf"
+        },
+        {
+          "path": "write-observations.log",
+          "bytes": 46,
+          "sha256": "5e2855be97adfd0889f0a5c3ae245c49876770045873b435ee6ff2adcb0ac004"
+        }
+      ]
+    }
+  },
+  "RESP": {
+    "status": 200,
+    "body": {
+      "track": "posting",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "outputs": {
+        "availability": "available",
+        "items": []
+      },
+      "rejections": {
+        "availability": "available",
+        "items": []
+      },
+      "progress": {
+        "availability": "available",
+        "value": {
+          "processedRecordCount": 2,
+          "preliminaryRejectCount": 1
+        }
+      }
+    },
+    "program_exit": 4,
+    "reached_cobol": true
+  }
+}

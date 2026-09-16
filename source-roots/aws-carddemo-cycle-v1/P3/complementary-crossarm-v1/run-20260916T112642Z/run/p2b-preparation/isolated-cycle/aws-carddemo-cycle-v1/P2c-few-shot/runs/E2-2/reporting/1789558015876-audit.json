@@ -1,0 +1,83 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-2",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+  "contractOriginalSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+  "track": "reporting",
+  "path": "/transaction-report-runs",
+  "status": 200,
+  "requestBody": {
+    "bindings": {
+      "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+      "reportOutput": "p3-local-technical-fixture-selection:reportOutput",
+      "transactionCategories": "p3-local-technical-fixture-selection:transactionCategories",
+      "transactionTypes": "p3-local-technical-fixture-selection:transactionTypes"
+    },
+    "dateParameterRecords": [
+      "2022-07-01 2022-07-31                                                           "
+    ],
+    "transactions": [
+      {
+        "transactionId": "REPORT-IN---001 ",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "Internet  ",
+        "description": "candidate purchase",
+        "amount": 12.0,
+        "merchantId": 123456789,
+        "merchantName": "Fixture Merchant",
+        "merchantCity": "Sometown",
+        "merchantZip": "10000000  ",
+        "cardNumber": "4111111111111111",
+        "originalTimestamp": "2022-07-05-10.00.00.000000",
+        "processingTimestamp": "2022-07-05-10.05.00.000000",
+        "filler": "                    "
+      },
+      {
+        "transactionId": "REPORT-OUT--001 ",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "Internet  ",
+        "description": "candidate purchase",
+        "amount": 34.0,
+        "merchantId": 123456789,
+        "merchantName": "Fixture Merchant",
+        "merchantCity": "Sometown",
+        "merchantZip": "10000000  ",
+        "cardNumber": "4111111111111111",
+        "originalTimestamp": "2022-08-01-10.00.00.000000",
+        "processingTimestamp": "2022-08-01-10.05.00.000000",
+        "filler": "                    "
+      }
+    ]
+  },
+  "requestBodySha256": "01186429e428986b9c98fe805075044c5b553f959a469ff1eeac25def9b15617",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-yha6u2qj",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "91a5857520d113c3a79de05daaa00fd2f8106d20d2f9b12f7137b7795ba7c799"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "lines": [
+      "DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  ",
+      "                                                                                                                                     ",
+      "Transaction ID   Account ID  Transaction Type   Tran Category                      Tran Source            Amount                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "REPORT-IN---001  10000000001 01-Purchase        0005-Candidate category            Internet                12.00                     "
+    ],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN03C",
+      "Reporting from 2022-07-01 to 2022-07-31",
+      "REPORT-IN---001 010005Internet  candidate purchase                                                                                  00000001200123456789Fixture Merchant                                  Sometown                                          10000000  41111111111111112022-07-05-10.00.00.0000002022-07-05-10.05.00.000000                    ",
+      "END OF EXECUTION OF PROGRAM CBTRN03C"
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-yha6u2qj/audit.json",
+  "durationSeconds": 0.016
+}

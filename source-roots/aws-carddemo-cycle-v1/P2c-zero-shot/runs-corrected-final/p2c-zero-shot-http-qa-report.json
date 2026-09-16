@@ -1,0 +1,123 @@
+{
+  "kind": "P2c-zero-shot executable HTTP facade QA",
+  "started_utc": "2026-09-15T11:26:44Z",
+  "localhost": "127.0.0.1:49996",
+  "contracts": {
+    "E1-1": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+      "contract_sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-1/posting-runs",
+          "request_sha256": "e279e6cd72f7b8bb2de3afe6dedc79a342304467f34b89368052e45d6b67f542",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "739de44ae44742f697ae3fd50f51eb89a2515914a4fbba394d876ab6aa9fdc79",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-1/posting/E1-1-posting-1789471604060/facade-audit.json",
+          "schema_validated": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-1/interest-runs",
+          "request_sha256": "638d1bb6e47e6c05b69be336956110b3c009abcb05bb18f8d3a86a2273568452",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "3100a71fd9c91b068b7c8061737d660e83070b53981195e49dfa872d1ff48034",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-1/interest/E1-1-interest-1789471604171/facade-audit.json",
+          "schema_validated": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-1/transaction-report-runs",
+          "request_sha256": "9d833c70150a922cea2540bb08f49017915682fd546ec094880c0bb7be40f3ac",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "3580a100611e692a7a0e7ab14d31ac7123392b82a89c0ec08f6b45c91554b822",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-1/reporting/E1-1-reporting-1789471604240/facade-audit.json",
+          "schema_validated": true
+        }
+      }
+    },
+    "E1-2": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+      "contract_sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-2/transaction-postings",
+          "request_sha256": "e9a5c12a1eb58f9f079bafa6ada14f5d81c2d49187ef0e7acc12f8af3ca61108",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "56a092eb2a4f3da8a80b9c9486b9b372ddcb9ee1e8c7ff1dab99535bed38d50a",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-2/posting/E1-2-posting-1789471604326/facade-audit.json",
+          "schema_validated": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-2/interest-transactions",
+          "request_sha256": "0b2a95f6c6d8547cc8d7c290e37167d65fc839f798d3786c3a6370ce8e96c159",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "9e9b6a20620c7d53138bff522b200cf66f44d97868315f7fb4a538b72e6955c7",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-2/interest/E1-2-interest-1789471604433/facade-audit.json",
+          "schema_validated": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-2/transaction-reports",
+          "request_sha256": "8818d52cce3eba2045dadbc9ff5f455ca47675fc9336b303bb20b1fb7abd15a3",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "6e5ccd9fa3199aa7515925cee1e1b193f4e16a5f050c340e7a483d6a807669b8",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-2/reporting/E1-2-reporting-1789471604500/facade-audit.json",
+          "schema_validated": true
+        }
+      }
+    },
+    "E1-3": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+      "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-3/transaction-postings",
+          "request_sha256": "7883282d1fbee13d1959dc32731b918559f8d5ddb89d4e41775f66f285a45303",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "8b60dc36fe9dcc327c824f787eef94ab001361afe48e3524a0eb5b77da6e1e5c",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-3/posting/E1-3-posting-1789471604586/facade-audit.json",
+          "schema_validated": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-3/interest-transaction-generations",
+          "request_sha256": "852461f669fe7a524f8a394a76a2716de9ef4c52efc0e830876bccf4a75bd45a",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "7f42ef4e6504575334ad34ad0fc83329b1a9495cafd4233420709234dcfba783",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-3/interest/E1-3-interest-1789471604692/facade-audit.json",
+          "schema_validated": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49996/E1-3/transaction-reports",
+          "request_sha256": "c75d3b3e8efb5c5e3ff26932405736a38d79442510b31cd93db046ecce9a67ee",
+          "http_status": 200,
+          "exercised_http": true,
+          "response_sha256": "621a1572d866a377d6fe3a5fccbbe30cecaee81c2950810f836b9dd88c26691b",
+          "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected-final/E1-3/reporting/E1-3-reporting-1789471604767/facade-audit.json",
+          "schema_validated": true
+        }
+      }
+    }
+  },
+  "summary": {
+    "implemented_routes": 9,
+    "exercised_http": 9,
+    "schema_validated": 9,
+    "blocked": 0
+  },
+  "finished_utc": "2026-09-15T11:26:45Z",
+  "report_path": "runs-corrected-final/p2c-zero-shot-http-qa-report.json"
+}

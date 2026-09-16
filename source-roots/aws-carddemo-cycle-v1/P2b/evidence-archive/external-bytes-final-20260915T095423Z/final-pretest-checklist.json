@@ -1,0 +1,252 @@
+{
+  "kind": "P2b final pretest readiness checklist; technical smoke only; not official T1/T2/T3/T4",
+  "created_at_utc": "2026-09-14T20:11:40Z",
+  "verdict": "TECHNICAL_PRETEST_SMOKE_PASS_WITH_P3_PROTOCOL_BLOCKERS",
+  "official_tests_run": false,
+  "next_gate": "P3 human freeze/authorization of official fixtures, reset policy, capture/conversion/oracle rules, T1/T2/T3/T4 budgets/seeds and analysis plan before any official cells.",
+  "commands": [
+    {
+      "cmd": "python3 -m unittest tests.test_p2b_contract.P2bContractTests.test_unknown_meaningful_report_only_is_not_silent_available_empty_200 -v",
+      "result": "RED before fix, then PASS after fix"
+    },
+    {
+      "cmd": "python3 -m unittest discover -s tests -v",
+      "result": "PASS 9 tests"
+    },
+    {
+      "cmd": "python3 p2b_binding.py smoke > latest-smoke.stdout.json && ../P2a/.venv/bin/python validate_p2b.py > latest-schema.stdout.json",
+      "result": "PASS exit 0; schema warning only (jsonschema RefResolver deprecation)"
+    }
+  ],
+  "reports": {
+    "final_readiness": "P2b/FINAL-PRETEST-READINESS.md",
+    "json_checklist": "P2b/final-pretest-checklist.json",
+    "archived_prior_evidence": "P2b/evidence-archive/20260914T200843Z/archive-manifest.json",
+    "smoke_manifest": "P2b/readiness-manifest.json",
+    "schema_stdout": "P2b/latest-schema.stdout.json",
+    "schema_report": "P2b/schema-validation-report.json",
+    "server_lifecycle": "P2b/server-lifecycle.json"
+  },
+  "run_summaries": [
+    {
+      "track": "interest",
+      "run_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-r9ug5z7z",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-r9ug5z7z/audit.json",
+      "status": 200,
+      "program_exit": 0,
+      "reached_cobol": true,
+      "captures": [
+        {
+          "label": "TRANSACT",
+          "bytes": 350,
+          "sha256": "69c77ff39f36aed539db2d31e65ca81c1d72b5e727d06719359daa1c25852a26"
+        }
+      ],
+      "conversion_basis": [
+        "CBACT04C generated TRANSACT 350-byte records",
+        "TRANSACT 350-byte fixed records"
+      ]
+    },
+    {
+      "track": "posting",
+      "run_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-_2obkukj",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-_2obkukj/audit.json",
+      "status": 200,
+      "program_exit": 0,
+      "reached_cobol": true,
+      "captures": [
+        {
+          "label": "TRANFILE.seed",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "TCATBALF.seed",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "ACCTFILE.seed",
+          "bytes": 300,
+          "sha256": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423"
+        },
+        {
+          "label": "XREFFILE.seed",
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "DALYTRAN",
+          "bytes": 350,
+          "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+        },
+        {
+          "label": "TRANFILE.after",
+          "bytes": 350,
+          "sha256": "9746aa4303a905a97f73646be2904903d628a36320e8531b8fcd00eed2029ed7"
+        },
+        {
+          "label": "XREFFILE.after",
+          "bytes": 50,
+          "sha256": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8"
+        },
+        {
+          "label": "ACCTFILE.after",
+          "bytes": 300,
+          "sha256": "401a58e5971c5bba9ec5ba2813bb814c759f538f89efbcbd0dea3b98facd442e"
+        },
+        {
+          "label": "TCATBALF.after",
+          "bytes": 50,
+          "sha256": "4c867452904c67bf685f8036761897927601b261a6f89c3351e0a72bf94dad36"
+        },
+        {
+          "label": "DALYREJS",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "conversion_basis": [
+        "CBTRN02C stdout + dumped output lengths",
+        "TRANFILE.after 350-byte fixed records"
+      ]
+    },
+    {
+      "track": "reporting",
+      "run_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-ipoj4c8j",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-ipoj4c8j/audit.json",
+      "status": 200,
+      "program_exit": 0,
+      "reached_cobol": true,
+      "captures": [
+        {
+          "label": "TRANREPT",
+          "bytes": 1064,
+          "sha256": "4d78f75c0d14aaffeb8a7d4bc829538a3e2dc6e1356604bc0b90bfbad22c2ab0"
+        }
+      ],
+      "conversion_basis": [
+        "CBTRN03C TRANREPT 133-byte records parsed directly; raw text retained"
+      ]
+    }
+  ],
+  "schema_cases": [
+    {
+      "track": "posting",
+      "schema": "PostingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "interest",
+      "schema": "InterestEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "reporting",
+      "schema": "ReportingEnvelope",
+      "status": 200,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "track": "posting-bad-request",
+      "schema": "InterfaceError",
+      "status": 400,
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "server_lifecycle": {
+    "pid": 9610,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "id": "previous_failed_transcript_inspected",
+      "status": "done",
+      "evidence": "Read <REDACTED_LOCAL_PATH>/.run-cache/aux-ff83df32/task-0.log: stopped at HTTP 429 after reading current P2b files; no completed final report/checklist left behind.",
+      "next_gate": null
+    },
+    {
+      "id": "old_evidence_preserved_before_rerun",
+      "status": "done",
+      "evidence": "Archived previous smoke/schema/lifecycle/run evidence at P2b/evidence-archive/20260914T200843Z/archive-manifest.json before rerunning because runtime code changed.",
+      "next_gate": null
+    },
+    {
+      "id": "unit_tdd_unknown_report_guard",
+      "status": "done",
+      "evidence": "RED observed for test_unknown_meaningful_report_only_is_not_silent_available_empty_200: expected unmapped_meaningful but current classification was available; GREEN all 9 tests pass.",
+      "next_gate": null
+    },
+    {
+      "id": "report_parsing_actual_capture",
+      "status": "done",
+      "evidence": "New reporting smoke audit parses TRANREPT 1064 bytes as 8 x 133-byte records; public detail amountText=100.00 and typeDescription=System transact come from report bytes; audit retains sourceSpanEvidence.",
+      "next_gate": null
+    },
+    {
+      "id": "missing_truncated_error_precedence",
+      "status": "done",
+      "evidence": "Unit tests cover missing=>503, known empty=>200 empty, truncated/malformed=>500 technical_failure for posting/interest/reporting; unknown meaningful report-only=>500, not 200 empty.",
+      "next_gate": null
+    },
+    {
+      "id": "unmapped_presentation_records",
+      "status": "done",
+      "evidence": "Actual reporting audit classifies known_blank, known_unmapped_header_row, known_unmapped_rule as retained audit evidence and excludes them from public schema by known presentation classification.",
+      "next_gate": null
+    },
+    {
+      "id": "unmapped_meaningful_records",
+      "status": "done",
+      "evidence": "Narrow runtime fix: report captures containing only unknown meaningful non-empty records classify framing as unmapped_meaningful and map to 500 technical_failure with evidence, preventing silent available empty 200.",
+      "next_gate": null
+    },
+    {
+      "id": "smoke_attribution_actual_source_hashes",
+      "status": "done",
+      "evidence": "readiness-manifest current_run_dirs identify posting-_2obkukj, interest-r9ug5z7z, reporting-ipoj4c8j plus internal reporting-source-qy1m3p1u; top-level audits show program_exit=0 and reached_cobol=true; source commit 59cc6c2f... and checked hashes recorded.",
+      "next_gate": null
+    },
+    {
+      "id": "schema_qa",
+      "status": "done",
+      "evidence": "../P2a/.venv/bin/python validate_p2b.py > latest-schema.stdout.json: overall_passed true, posting/interest/reporting envelopes plus InterfaceError valid.",
+      "next_gate": null
+    },
+    {
+      "id": "official_T1T2T3T4",
+      "status": "blocked",
+      "evidence": "No official T1/T2/T3/T4 was run or generated in this task.",
+      "next_gate": "Human P3 must freeze official fixtures, reset policy, capture/conversion rules, oracles, budgets/seeds, and analysis before official cells."
+    },
+    {
+      "id": "approved_protocol_prerequisites",
+      "status": "blocked",
+      "evidence": "Protocol lines 36-43 and 53-61 require P3 freeze of T1/T2/T3/T4 inputs, reset, capture, conversion/oracle rules and human gate; technical smoke does not approve those.",
+      "next_gate": "Next gate: P3 human authorization for official test inputs/oracles/resets and execution plan."
+    },
+    {
+      "id": "semantic_oracle_comparison_coverage",
+      "status": "unverified",
+      "evidence": "No oracle/comparative analysis, E1/E2 comparison, evaluation quarantine output, coverage, durability, or production concurrency was executed or claimed.",
+      "next_gate": "Defer to P3/P4 after explicit approval."
+    }
+  ],
+  "file_hashes": {
+    "p2b_binding.py": "151cecf8fb91d0ebebc5553e61bf0cdef666eb085c3b6ab1bd26a85007447716",
+    "tests/test_p2b_contract.py": "68a5110e561883970c886d72dce615a428affd805e55da22412765b823dedc03",
+    "readiness-manifest.json": "5875b344b96304f57a2dca7d4df94a3ec5d53e5af27a15d6f42214e264944331",
+    "latest-smoke.stdout.json": "5875b344b96304f57a2dca7d4df94a3ec5d53e5af27a15d6f42214e264944331",
+    "latest-schema.stdout.json": "0c31c795451b62a55ec2a2467c4ffc54814b21ff8df9f44c5f539aa570ae2a41",
+    "schema-validation-report.json": "0c31c795451b62a55ec2a2467c4ffc54814b21ff8df9f44c5f539aa570ae2a41",
+    "server-lifecycle.json": "0a73f32e56936c125cac5030ad56d170bf09c1194cf047222a27c085b659d7c0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "blockers": [],
+  "businessCheckerStatus": "inconclusive_where_unbound; no oracle quarantine read",
+  "counts": {
+    "T1": 88,
+    "T2": 5868,
+    "T3": 394,
+    "T4": 6350
+  },
+  "dynamicPerCaseResourceBindingEvidence": {
+    "limits": "This verifies binding/reset machinery and pinned resources; it is not official T1-T4 execution.",
+    "p2bTestsCommand": "python3 -m unittest P2b.tests.test_p2b_contract.P2bContractTests.test_external_fixture_selection_is_local_config_not_public_request P2b.tests.test_p2b_contract.P2bContractTests.test_external_file_package_materializes_real_bytes_and_records_pre_cobol_snapshot P2b.tests.test_p2b_contract.P2bContractTests.test_materialized_fresh_reset_compares_second_preparation_to_first_original_after_mutation -v",
+    "p2bTestsResult": "OK, 3 tests, 0.038s",
+    "runner": "aws-campaign-runner-v3/src/aws_campaign_runner.py lines 480-546 call target_factory(case) and replay one case at a time; policy_report lines 322-330 pins fresh physical resources every case through P2b fixture registry"
+  },
+  "excludedGuardValues": {
+    "str:'unknown'": 7
+  },
+  "excludedT3CasesTotal": 7,
+  "fixturePhysicalResourcePins": 18,
+  "guardPolicy": "exclude every T3 case whose guardResult is not the boolean value true; string 'true', false, unknown, null, missing, or numeric truthy values are not qualified",
+  "kind": "final-campaign-gate-v1-readiness-json",
+  "officialExecutionAuthorizedOrClaimed": false,
+  "officialExecutionStarted": false,
+  "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3",
+  "readyForParentOfficialLaunch": true,
+  "sourcePinCount": 15,
+  "suiteRows": 28,
+  "t1t2ExactCopies": true,
+  "t3GuardNotTrueRemaining": [],
+  "t4GuardNotTrueRemaining": []
+}

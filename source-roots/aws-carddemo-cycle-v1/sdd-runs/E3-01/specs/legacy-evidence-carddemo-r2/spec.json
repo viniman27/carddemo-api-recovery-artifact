@@ -1,0 +1,82 @@
+{
+  "feature_name": "legacy-evidence-carddemo-r2",
+  "artifact_type": "legacy-evidence",
+  "pipeline_stage": 3,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/legacy-evidence-carddemo-r2/requirements.md",
+  "upstream_specs": [
+    "specs/capability-selection-carddemo-r2/spec.json"
+  ],
+  "created_at": "2026-09-11T19:04:12-03:00",
+  "updated_at": "2026-09-12T11:32:36.348886+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-12",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 3,
+        "artifact_type": "legacy-evidence"
+      },
+      "artifact": {
+        "path": "specs/legacy-evidence-carddemo-r2/requirements.md",
+        "sha256": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/capability-selection-carddemo-r2/spec.json",
+          "sha256": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-3-r2-authorization.json",
+        "sha256": "d8cdf343b5ed63cdd2e83e1627a50673acdb34930ae0c63e29be0e8fb122941e"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage3",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 3",
+    "pipeline-sdd-v3 stage 3 Legacy Evidence Spec"
+  ],
+  "revision_of": "specs/legacy-evidence-carddemo/spec.json",
+  "generation": {
+    "original_path": "prepared/legacy-evidence-carddemo-r2-attempt03/execution/scope-original.md",
+    "sha256": "4566786600b60e9377c1e369e67765098d06b0153ba973361d2065614a6c9b7b",
+    "model": "gpt-6-astra",
+    "attempt": 3,
+    "status": "generated_pending_human_review"
+  }
+}

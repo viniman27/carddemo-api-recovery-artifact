@@ -1,0 +1,46 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-1",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+  "contractOriginalSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+  "track": "interest",
+  "path": "/interest-transaction-generations",
+  "status": 200,
+  "requestBody": {
+    "transactionIdPrefix": ""
+  },
+  "requestBodySha256": "36ee42c0d8f18c2fbc906ec4474ab574bf459a3131499b4f451af109495a3229",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-l54fbc9x",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "787d746273e79435907a498817b6d387bcabc63c64f68ef50aac6b70141ec01c"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "transactions": [
+      {
+        "transactionId": "000001",
+        "typeCode": "01",
+        "categoryCode": "0005",
+        "source": "System",
+        "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "amount": 0.06,
+        "merchantId": "000000000",
+        "merchantName": "",
+        "merchantCity": "",
+        "originalTimestamp": "2026-09-15-17.24.07.130000",
+        "processingTimestamp": "2026-09-15-17.24.07.130000",
+        "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "cardNumber": "4111111111111111",
+        "merchantZip": ""
+      }
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-l54fbc9x/audit.json",
+  "durationSeconds": 0.477
+}

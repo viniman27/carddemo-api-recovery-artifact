@@ -1,0 +1,88 @@
+{
+  "probes": [
+    {
+      "probe": "baseline",
+      "request_sha256": "5801d7f520f2811b19b3c34df26b36c0d63c5928f675218fe1aeb16fc3dd0f0d",
+      "model_requested": "gpt-6-astra",
+      "tools_sent": false,
+      "history_sent": false,
+      "http_status": 200,
+      "model_returned": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "attribution": {
+          "items": {
+            "msg_0e63ed8b10c85f4d016aa3e0b649f887d2944c923265779953": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 11,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 11,
+              "output_tokens": 0
+            },
+            "msg_0e63ed8b10c85f4d016aa3e0b72c6887d2904357930eeedb95": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 2,
+                  "output_tokens": 8
+                }
+              ],
+              "input_tokens": 2,
+              "output_tokens": 8
+            }
+          },
+          "request_fields": {
+            "instructions": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 13,
+              "output_tokens": 0
+            }
+          }
+        },
+        "input_tokens": 26,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 34
+      },
+      "text": "",
+      "exact_text_match": false
+    },
+    {
+      "probe": "output-cap",
+      "request_sha256": "c7bf68bfa60910759acc6ec8ae24add4b787d7b23fe3d90b36c01c03b88abf97",
+      "model_requested": "gpt-6-astra",
+      "tools_sent": false,
+      "history_sent": false,
+      "http_status": 400,
+      "error_body": "{\"detail\":\"Unsupported parameter: max_output_tokens\"}"
+    },
+    {
+      "probe": "temperature",
+      "request_sha256": "44583eed737f985d6b742fc469507af130843bb773d60524edaf070e221f5b1a",
+      "model_requested": "gpt-6-astra",
+      "tools_sent": false,
+      "history_sent": false,
+      "http_status": 400,
+      "error_body": "{\"detail\":\"Unsupported parameter: temperature\"}"
+    }
+  ],
+  "fallback": false,
+  "corpus_sent": false
+}

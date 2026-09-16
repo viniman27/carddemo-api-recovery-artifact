@@ -1,0 +1,860 @@
+lane,strategy,contract,arm,track,obligation,title,applicationsInTrack,businessObservedInTrack,applicationsWithPartialCheck,partialChecks,verdicts,claim,wholeObligationValidated,limits
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,2,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,2,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Sem fallback adicional.
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,Não é update por cada categoria.
+complementary,source-guided,E1-1,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""failed"": 1, ""pass"": 5}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E1-1,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,4,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,4,4,12,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 8}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,4,4,8,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 4}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E1-1,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,4,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,2,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,2,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Sem fallback adicional.
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,Não é update por cada categoria.
+complementary,source-guided,E1-2,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""failed"": 1, ""pass"": 5}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E1-2,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,4,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,4,4,12,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 8}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,4,4,8,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 4}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E1-2,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,4,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,2,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,2,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Sem fallback adicional.
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,2,2,2,"{""failed"": 2}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,Não é update por cada categoria.
+complementary,source-guided,E1-3,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,2,2,4,"{""failed"": 2, ""pass"": 2}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""failed"": 1, ""pass"": 5}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E1-3,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,4,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,4,4,12,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 8}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,4,4,4,"{""pass"": 4}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,4,4,8,"{""pass"": 8}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,4,4,8,"{""failed"": 2, ""not_exercised"": 2, ""pass"": 4}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E1-3,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,4,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,0,0,0,{},unchecked,False,Sem fallback adicional.
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,0,0,0,{},unchecked,False,Não é update por cada categoria.
+complementary,source-guided,E2-1,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E2-1,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E2-1,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,0,0,0,{},unchecked,False,Sem fallback adicional.
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,0,0,0,{},unchecked,False,Não é update por cada categoria.
+complementary,source-guided,E2-2,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E2-2,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E2-2,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,0,0,0,{},unchecked,False,Sem fallback adicional.
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,2,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,0,0,0,{},unchecked,False,Não é update por cada categoria.
+complementary,source-guided,E2-3,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,2,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E2-3,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E2-3,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",2,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,2,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,2,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,2,0,0,0,{},unchecked,False,Sem fallback adicional.
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-005,Fórmula e guarda de juros,2,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-006,Campos da transação de juros,2,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,2,0,0,0,{},unchecked,False,Não é update por cada categoria.
+complementary,source-guided,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-008,Última conta no EOF,2,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+complementary,source-guided,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+complementary,source-guided,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",4,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,4,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,4,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,4,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,4,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,4,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,4,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E1-1,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,4,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,3,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,3,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,3,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,3,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",3,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,3,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,3,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,3,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E1-1,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,3,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,3,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,3,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,3,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,3,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,3,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,3,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,3,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E1-1,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,3,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",3,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,3,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,3,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,3,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,3,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,3,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,3,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E1-2,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,3,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,3,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,3,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,3,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,3,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",3,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,3,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,3,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,3,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E1-2,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,3,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,3,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,3,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,3,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,3,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,3,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,3,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,3,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E1-2,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,3,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",4,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,4,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,4,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,4,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,4,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,4,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,4,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E1-3,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,4,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,4,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,4,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,4,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",4,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,4,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,4,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,4,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E1-3,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,4,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E1-3,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",6,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,6,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,6,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,6,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,6,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,6,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,6,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E2-1,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,6,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E2-1,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,6,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,6,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,6,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,6,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,6,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,6,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E2-1,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,6,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",4,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,4,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,4,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,4,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,4,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,4,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,4,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E2-2,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,4,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,4,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,4,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,4,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",4,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,4,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,4,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,4,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E2-2,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,4,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E2-2,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",5,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,5,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,5,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,5,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,5,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,5,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,5,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E2-3,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,5,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,5,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,5,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,5,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,5,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",5,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,5,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,5,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,5,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E2-3,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,5,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,5,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,5,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,5,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,5,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,5,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,5,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,5,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E2-3,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,5,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",4,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,4,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,4,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,4,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-005,Fórmula e guarda de juros,4,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-006,Campos da transação de juros,4,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,4,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T1,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-008,Última conta no EOF,4,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,4,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,4,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-004,Validação de cartão,4,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",4,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-006,Rejeitos e return-code,4,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-007,TCATBAL create/update,4,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,4,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T1,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,4,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,4,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,4,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,4,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,4,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,4,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,4,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T1,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,4,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E1-1,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E1-1,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E1-1,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E1-2,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E1-2,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E1-2,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E1-3,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E1-3,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E1-3,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E2-1,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E2-1,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E2-1,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E2-2,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E2-2,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E2-2,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",300,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,300,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,300,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,300,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,300,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,300,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,300,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E2-3,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,300,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,300,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,300,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,300,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",300,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,300,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,300,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,300,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E2-3,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,300,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,300,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,300,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,300,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,300,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,300,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,300,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,300,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E2-3,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,300,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",156,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,156,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,156,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,156,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-005,Fórmula e guarda de juros,156,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-006,Campos da transação de juros,156,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,156,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T2,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-008,Última conta no EOF,156,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,156,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,156,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,156,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-004,Validação de cartão,156,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",156,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-006,Rejeitos e return-code,156,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-007,TCATBAL create/update,156,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,156,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T2,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,156,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,156,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,156,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,156,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,156,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,156,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,156,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,156,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T2,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,156,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",18,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,18,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T3,E1-1,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E1-1,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E1-1,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",18,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,18,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T3,E1-2,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E1-2,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,28,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,28,28,56,"{""pass"": 56}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,28,28,84,"{""not_exercised"": 28, ""pass"": 56}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,28,28,56,"{""pass"": 56}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,28,28,56,"{""not_exercised"": 28, ""pass"": 28}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E1-2,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,28,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",18,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,18,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,18,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T3,E1-3,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,18,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E1-3,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,28,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,28,28,56,"{""pass"": 56}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,28,28,84,"{""not_exercised"": 28, ""pass"": 56}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,28,28,56,"{""pass"": 56}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,28,28,56,"{""not_exercised"": 28, ""pass"": 28}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E1-3,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,28,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,4,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,4,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,4,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",4,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,4,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,4,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,4,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E2-1,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,4,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E2-1,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",18,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,18,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,18,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,18,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,18,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,18,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,18,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T3,E2-2,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,18,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,6,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,6,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,6,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,6,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",6,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,6,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,6,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,6,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E2-2,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,6,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E2-2,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,4,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,4,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,4,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,4,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",4,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,4,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,4,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,4,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E2-3,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,4,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,28,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,28,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,28,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,28,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,28,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,28,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,28,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E2-3,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,28,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",28,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,28,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,28,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,28,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-005,Fórmula e guarda de juros,28,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-006,Campos da transação de juros,28,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,28,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T3,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-008,Última conta no EOF,28,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,17,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,17,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,17,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-004,Validação de cartão,17,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",17,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-006,Rejeitos e return-code,17,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-007,TCATBAL create/update,17,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,17,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T3,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,17,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,77,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,77,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,77,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,77,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,77,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,77,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,77,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T3,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,77,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",322,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,322,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,322,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T4,E1-1,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,322,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,309,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,309,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,309,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,309,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E1-1,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,331,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,331,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,331,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,331,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,331,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,331,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,331,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E1-1,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,331,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",321,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,321,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,321,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,321,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,321,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,321,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,321,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T4,E1-2,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,321,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,309,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,309,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,309,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,309,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E1-2,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,309,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,331,28,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,331,28,28,56,"{""pass"": 56}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,331,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,331,28,28,84,"{""not_exercised"": 28, ""pass"": 56}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,331,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,331,28,28,56,"{""pass"": 56}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,331,28,28,56,"{""not_exercised"": 28, ""pass"": 28}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E1-2,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,331,28,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",322,18,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,322,18,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Sem fallback adicional.
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-006,Campos da transação de juros,322,18,18,18,"{""failed"": 18}",partial_assertions_only,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,322,18,18,36,"{""pass"": 36}",partial_assertions_only,False,Não é update por cada categoria.
+official,T4,E1-3,zero-shot,interest,INTCALC-OBL-008,Última conta no EOF,322,18,18,36,"{""pass"": 36}",partial_assertions_only,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,310,6,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,310,6,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,310,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-004,Validação de cartão,310,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não há validação de formato além da busca.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",310,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,310,6,6,12,"{""pass"": 12}",partial_assertions_only,False,Não afirma rollback de sucessos anteriores.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,310,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,310,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E1-3,zero-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,310,6,6,6,"{""pass"": 6}",partial_assertions_only,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,332,28,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,332,28,28,56,"{""pass"": 56}",partial_assertions_only,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,332,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,332,28,28,84,"{""not_exercised"": 28, ""pass"": 56}",partial_assertions_only,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,332,28,28,28,"{""pass"": 28}",partial_assertions_only,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,332,28,28,56,"{""pass"": 56}",partial_assertions_only,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,332,28,28,56,"{""not_exercised"": 28, ""pass"": 28}",partial_assertions_only,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E1-3,zero-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,332,28,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",306,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,306,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,306,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,306,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,306,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,306,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,306,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T4,E2-1,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,306,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,310,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,310,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,310,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,310,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",310,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,310,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,310,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,310,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E2-1,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,310,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,334,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,334,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,334,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,334,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,334,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,334,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,334,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E2-1,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,334,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",322,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,322,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,322,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,322,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,322,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,322,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,322,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T4,E2-2,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,322,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,310,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,310,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,310,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,310,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",310,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,310,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,310,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,310,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E2-2,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,310,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,332,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,332,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,332,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,332,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,332,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,332,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,332,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E2-2,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,332,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",305,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,305,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,305,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,305,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-005,Fórmula e guarda de juros,305,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-006,Campos da transação de juros,305,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,305,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T4,E2-3,few-shot,interest,INTCALC-OBL-008,Última conta no EOF,305,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,309,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,309,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,309,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-004,Validação de cartão,309,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",309,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-006,Rejeitos e return-code,309,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-007,TCATBAL create/update,309,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,309,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E2-3,few-shot,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,309,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,333,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,333,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,333,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,333,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,333,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,333,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,333,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E2-3,few-shot,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,333,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-001,"Arquivos, parâmetro e abertura",188,0,0,0,{},unchecked,False,"Data do JCL é exemplo de fonte, não calendário universal."
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-002,Varredura e agrupamento por conta,188,0,0,0,{},unchecked,False,Ordenação não é verificada pelo programa/JCL.
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-003,Leitura ACCOUNT e XREF por conta,188,0,0,0,{},unchecked,False,"Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-004,Taxa específica ou DEFAULT,188,0,0,0,{},unchecked,False,Sem fallback adicional.
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-005,Fórmula e guarda de juros,188,0,0,0,{},unchecked,False,Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-006,Campos da transação de juros,188,0,0,0,{},unchecked,False,"Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-007,Update de conta em quebra de grupo,188,0,0,0,{},unchecked,False,Não é update por cada categoria.
+official,T4,E3-SDD-stage6r3,SDD,interest,INTCALC-OBL-008,Última conta no EOF,188,0,0,0,{},unchecked,False,"Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada."
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-001,Arquivos externos e abertura,177,0,0,0,{},unchecked,False,"JCL é evidência documental; não prova alocação local, commit ou durabilidade."
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-002,Loop DALYTRAN e EOF,177,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-003,Layout e cópia para transação postada,177,0,0,0,{},unchecked,False,Formato/calendário do timestamp é ambiente; valor real não é fixado.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-004,Validação de cartão,177,0,0,0,{},unchecked,False,Não há validação de formato além da busca.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-005,"Validação de conta, limite e expiração textual",177,0,0,0,{},unchecked,False,Comparação de datas é textual X(10); calendário real não é decidido.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-006,Rejeitos e return-code,177,0,0,0,{},unchecked,False,Não afirma rollback de sucessos anteriores.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-007,TCATBAL create/update,177,0,0,0,{},unchecked,False,Status aceitos 00/23 no read; sem atomicidade/durabilidade.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-008,Atualização ACCOUNT e ordem de efeitos,177,0,0,0,{},unchecked,False,Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.
+official,T4,E3-SDD-stage6r3,SDD,posting,POSTTRAN-OBL-009,WRITE TRANFILE após efeitos anteriores,177,0,0,0,{},unchecked,False,Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-001,Contexto JCL e arquivos,237,0,0,0,{},unchecked,False,JCL não foi executado; datas do SORT podem divergir do DATEPARM.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-002,DATEPARM e filtro textual antes do EOF,237,0,0,0,{},unchecked,False,"Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa."
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-003,Leitura TRANFILE e EOF condicional,237,0,0,0,{},unchecked,False,Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-004,Quebra por cartão e lookups,237,0,0,0,{},unchecked,False,Não há linha de erro/rejeição para lookup ausente.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-005,Cabeçalhos e paginação,237,0,0,0,{},unchecked,False,Page-size conta linhas de header/totais; não é 20 detalhes.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-006,Linha de detalhe e acumulação,237,0,0,0,{},unchecked,False,Edição monetária é a do PIC; sem arredondamento inventado.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-007,Totais de página/grand no EOF condicional,237,0,0,0,{},unchecked,False,Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.
+official,T4,E3-SDD-stage6r3,SDD,reporting,TRANREPT-OBL-008,Ausência de Account Total final no EOF,237,0,0,0,{},unchecked,False,Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.

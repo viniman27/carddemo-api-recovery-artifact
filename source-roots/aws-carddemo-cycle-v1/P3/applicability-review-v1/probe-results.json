@@ -1,0 +1,725 @@
+{
+  "verdict_hint": "PARTIAL",
+  "input_policy": {
+    "runtime_api_coverage_oracle_quarantine_read": false,
+    "files_read_by_probe": [
+      "P3/applicability-mapping-v1/applicability_matrix.json",
+      "P3/applicability-mapping-v1/tools/build_matrix.py",
+      "P3/suite-adapters-preflight-v1/evidence-real-preflight-20260915T-synthetic/operation-inventory.json",
+      "P3/suite-adapters-preflight-v1/evidence-real-preflight-20260915T-synthetic/frozen-synthetic-suites/T3.json",
+      "P2a/openapi-carddemo-stage6r3.yaml",
+      "P3/fixture-materialization-v2/package/manifest.json"
+    ]
+  },
+  "inventory_counts": {
+    "obligations": 25,
+    "contracts": 7,
+    "operations_inventory": 21,
+    "operation_pairs_inventory": 21,
+    "operation_pairs_mapped": 21,
+    "cells": 175,
+    "declared_cells": 175,
+    "status_counts": {
+      "expressible_by_surface": 76,
+      "conditioned_on_external_fixture": 43,
+      "not_expressible": 7,
+      "precondition_indeterminate": 28,
+      "observation_inadmissible": 14,
+      "not_mapped": 7
+    },
+    "by_track_status": {
+      "interest:conditioned_on_external_fixture": 21,
+      "interest:expressible_by_surface": 28,
+      "interest:observation_inadmissible": 7,
+      "posting:conditioned_on_external_fixture": 17,
+      "posting:expressible_by_surface": 32,
+      "posting:not_expressible": 7,
+      "posting:precondition_indeterminate": 7,
+      "reporting:conditioned_on_external_fixture": 5,
+      "reporting:expressible_by_surface": 16,
+      "reporting:not_mapped": 7,
+      "reporting:observation_inadmissible": 7,
+      "reporting:precondition_indeterminate": 21
+    },
+    "candidate_fixtures": 3
+  },
+  "sdd_empty_request_guard": {
+    "checked_cells": 25,
+    "violations": [],
+    "sdd_request_schema_lines": "P2a/openapi-carddemo-stage6r3.yaml:201-229"
+  },
+  "t3_current_package": {
+    "synthetic_cases": 1,
+    "paths": [
+      "/posting"
+    ],
+    "body_b64_values": [
+      "e30="
+    ],
+    "note": "preflight synthetic T3 exercises one {} request, not 175 obligation/contract mappings"
+  },
+  "selector_mismatches": {
+    "count": 318,
+    "by_field": {
+      "accountFile": 34,
+      "categoryBalanceFile": 34,
+      "crossReferenceFile": 50,
+      "rejectFile": 9,
+      "transactionFile": 18,
+      "accounts": 17,
+      "cardCrossReference": 25,
+      "categoryBalances": 17,
+      "rejectionOutput": 9,
+      "transactionOutput": 17,
+      "disclosureGroupFile": 16,
+      "outputTransactionFile": 8,
+      "disclosureGroups": 8,
+      "reportFile": 8,
+      "transactionCategoryFile": 16,
+      "transactionTypeFile": 16,
+      "reportOutput": 8,
+      "transactionCategories": 8
+    },
+    "examples": [
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-1",
+        "field": "accountFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-1",
+        "field": "categoryBalanceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-1",
+        "field": "crossReferenceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [
+          "CARDXREF"
+        ],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-1",
+        "field": "rejectFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-1",
+        "field": "transactionFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-2",
+        "field": "accountFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-2",
+        "field": "categoryBalanceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-2",
+        "field": "crossReferenceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [
+          "CARDXREF"
+        ],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-2",
+        "field": "transactionFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-3",
+        "field": "accounts",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-3",
+        "field": "cardCrossReference",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [
+          "CARDXREF"
+        ],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-3",
+        "field": "categoryBalances",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-3",
+        "field": "rejectionOutput",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-001",
+        "contractId": "E1-3",
+        "field": "transactionOutput",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [
+          "TRANSACT"
+        ],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-1",
+        "field": "accountFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-1",
+        "field": "categoryBalanceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-1",
+        "field": "crossReferenceFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [
+          "CARDXREF"
+        ],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-1",
+        "field": "rejectFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-1",
+        "field": "transactionFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "ACCTFILE",
+          "DALYREJS",
+          "TCATBALF",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-002",
+        "contractId": "E1-2",
+        "field": "accountFile",
+        "allowedSource": [
+          "XREFFILE",
+          "XREFFILE.1",
+          "ACCTFILE",
+          "TCATBALF",
+          "TRANFILE",
+          "TRANFILE",
+          "DALYREJS"
+        ],
+        "unexpectedSources": [
+          "DALYREJS",
+          "TCATBALF",
+          "TRANFILE",
+          "XREFFILE",
+          "XREFFILE.1"
+        ],
+        "missingExpectedSources": [],
+        "status": "expressible_by_surface"
+      }
+    ]
+  },
+  "conditioned_guard_cells_without_block": {
+    "count": 16,
+    "by_obligation": {
+      "POSTTRAN-OBL-004": 2,
+      "POSTTRAN-OBL-005": 2,
+      "POSTTRAN-OBL-006": 2,
+      "POSTTRAN-OBL-007": 2,
+      "INTCALC-OBL-004": 2,
+      "INTCALC-OBL-005": 2,
+      "INTCALC-OBL-007": 2,
+      "TRANREPT-OBL-004": 2
+    },
+    "examples": [
+      {
+        "obligationId": "POSTTRAN-OBL-004",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires choosing XREF present vs missing for a card",
+        "properties": [
+          "dailyTransactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-004",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires choosing XREF present vs missing for a card",
+        "properties": [
+          "transactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-005",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires account/limit/expiration/active-state combinations",
+        "properties": [
+          "dailyTransactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-005",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires account/limit/expiration/active-state combinations",
+        "properties": [
+          "transactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-006",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires validation-rejection branch selection",
+        "properties": [
+          "dailyTransactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-006",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires validation-rejection branch selection",
+        "properties": [
+          "transactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-007",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires TCATBAL status 00 vs 23 and write/rewrite outcomes",
+        "properties": [
+          "dailyTransactions"
+        ]
+      },
+      {
+        "obligationId": "POSTTRAN-OBL-007",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires TCATBAL status 00 vs 23 and write/rewrite outcomes",
+        "properties": [
+          "transactions"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-004",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires DISCGRP specific vs DEFAULT vs missing/default-missing",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-004",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires DISCGRP specific vs DEFAULT vs missing/default-missing",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-005",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires zero/nonzero rate and balance combinations",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-005",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires zero/nonzero rate and balance combinations",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-007",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires category-balance group boundaries/order",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "INTCALC-OBL-007",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires category-balance group boundaries/order",
+        "properties": [
+          "transactionIdPrefix"
+        ]
+      },
+      {
+        "obligationId": "TRANREPT-OBL-004",
+        "contractId": "E2-1",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires card break and lookup-present/missing variants",
+        "properties": [
+          "dateParameterRecords",
+          "transactions"
+        ]
+      },
+      {
+        "obligationId": "TRANREPT-OBL-004",
+        "contractId": "E2-3",
+        "status": "conditioned_on_external_fixture",
+        "reason": "requires card break and lookup-present/missing variants",
+        "properties": [
+          "dateParameterRecords",
+          "transactions"
+        ]
+      }
+    ]
+  },
+  "builder_heuristic_evidence": {
+    "has_any_token_fieldname_rule": true,
+    "has_coarse_rich_surface_rule": true,
+    "line_refs": [
+      "applicability-mapping-v1/tools/build_matrix.py:183-193",
+      "applicability-mapping-v1/tools/build_matrix.py:221-255"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "contract_id": "E1-1",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+  "contract_sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+  "operation_id": "postDailyTransactions",
+  "track": "posting",
+  "request_sha256": "9b582ad7809c7fe0ca915067af5805455d78a5b71750b0391e51ff9ae145db9a",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/registry.json",
+    "files": {
+      "ACCTFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/ACCTFILE",
+        "bytes": 8192,
+        "sha256": "27f49d593eef54c6a40abd7011b741d21d453cd9342bc7dd93530daa3845ce9e",
+        "requestOwned": false
+      },
+      "DALYTRAN": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/DALYTRAN",
+        "bytes": 350,
+        "sha256": "c60a78045be9cd4c670479953d6f094c17c170b126a13af384c8f0dad85342cc",
+        "requestOwned": true
+      },
+      "TCATBALF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/TCATBALF",
+        "bytes": 8192,
+        "sha256": "9692884e0515e05ab59c6a9680f0b61a4f950431a0eb5cfbea6128318947a90d",
+        "requestOwned": false
+      },
+      "TRANFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/TRANFILE",
+        "bytes": 8192,
+        "sha256": "814df6acdabb4ede84b7920cda72a072973ee333a73a64e114fe49930f59ab1a",
+        "requestOwned": false
+      },
+      "XREFFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/request-packages/E1-1-posting-1789560852430/XREFFILE",
+        "bytes": 8192,
+        "sha256": "8d4b1fe2ec276275ffb67c4697c841aff5f9ad87d87b65aec6ba8654331df109",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "TRANFILE": {
+        "field": "transactionFile",
+        "token": "p3:posting:TRANFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-account-missing/posting/TRANFILE",
+        "sourceSha256": "814df6acdabb4ede84b7920cda72a072973ee333a73a64e114fe49930f59ab1a",
+        "sourceBytes": 8192
+      },
+      "XREFFILE": {
+        "field": "crossReferenceFile",
+        "token": "p3:posting:XREFFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-account-missing/posting/XREFFILE",
+        "sourceSha256": "8d4b1fe2ec276275ffb67c4697c841aff5f9ad87d87b65aec6ba8654331df109",
+        "sourceBytes": 8192
+      },
+      "ACCTFILE": {
+        "field": "accountFile",
+        "token": "p3:posting:ACCTFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-account-missing/posting/ACCTFILE",
+        "sourceSha256": "27f49d593eef54c6a40abd7011b741d21d453cd9342bc7dd93530daa3845ce9e",
+        "sourceBytes": 8192
+      },
+      "TCATBALF": {
+        "field": "categoryBalanceFile",
+        "token": "p3:posting:TCATBALF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-account-missing/posting/TCATBALF",
+        "sourceSha256": "9692884e0515e05ab59c6a9680f0b61a4f950431a0eb5cfbea6128318947a90d",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "DALYREJS": {
+        "field": "rejectFile",
+        "token": "p3:posting:DALYREJS",
+        "dd": "DALYREJS",
+        "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+      }
+    },
+    "fixture_descriptor_sha256": "aa225e83d2a45291d78ae8178a8c2289160e8997d5cdbc752db37282ab7ae307"
+  },
+  "semantic_ambiguities": [],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/p2b-runs/posting-hjdxj904/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/p2b-runs/posting-hjdxj904"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-reject-account-missing/replay/applications/0001-3768aefb3b67debe/zero-shot-runs/E1-1/posting/E1-1-posting-1789560852430/response.json"
+}

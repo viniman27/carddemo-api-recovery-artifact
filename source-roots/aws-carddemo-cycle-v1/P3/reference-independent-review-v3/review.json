@@ -1,0 +1,170 @@
+{
+  "status": "PARTIAL",
+  "status_delimitation": "PARTIAL para seleção determinística dos caminhos abstratos representados; FAIL para adoção como referência completa das 25 obrigações v2 em campanha.",
+  "campaign_authorization": false,
+  "scope": {
+    "review_type": "outside-in independent review of executable MBT reference v3",
+    "review_language": "pt-BR",
+    "base_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3",
+    "allowed_inputs_used": [
+      "reference-authoring-input-v1/README.md",
+      "reference-authoring-input-v1/input-manifest.json",
+      "reference-authoring-input-v1/corpus allowlist snippets for anchored source checks",
+      "reference-authoring-draft-v2/obligations.json",
+      "reference-independent-review-v2/REVIEW.md",
+      "reference-executable-v3/README.md",
+      "reference-executable-v3/model.json",
+      "reference-executable-v3/executable_reference.py",
+      "reference-executable-v3/tests/test_engine_contract.py"
+    ],
+    "explicit_non_inputs": [
+      "no COBOL execution",
+      "no official cases",
+      "no campaign",
+      "no E1/E2/SDD contracts/APIs/fixtures/runs/oracles/quarantine or sibling P3 content"
+    ],
+    "exposure_notes": [
+      "Targeted file discovery was limited to the four allowed directories.",
+      "local runtime surfaced the repository WORKSPACE-NOTES.md as automatic directory context during file search; this is recorded and not claimed as strict content isolation.",
+      "The known v3 authoring exposure issue is not re-litigated as an isolation claim."
+    ]
+  },
+  "commands": [
+    {
+      "name": "unit_tests",
+      "command": "python3 -m unittest discover -s '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3/tests' -v",
+      "exit_code": 0,
+      "observed_result": "Ran 11 tests in 0.035s; OK"
+    },
+    {
+      "name": "cli_absolute_root",
+      "command": "python3 '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3/executable_reference.py' '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3' --traverse CBTRN02C_POSTTRAN --traverse CBACT04C_INTCALC --traverse CBTRN03C_TRANREPT --max-depth 8 --max-paths 80",
+      "exit_code": 0,
+      "observed_result": "errors=[]; counts capabilities=3 obligations=25 states=25 transitions=39; sourcePins checkedAnchors=94 checkedFiles=8 errors=[]"
+    },
+    {
+      "name": "cli_relative_dot_known_issue",
+      "command": "cd '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3' && python3 executable_reference.py . --traverse CBTRN02C_POSTTRAN --max-depth 2 --max-paths 5",
+      "exit_code": 1,
+      "observed_result": "root='.' loads model.json but validate_source_pins resolves corpus relative to root.parent and reports repeated missing source app/...; root absolute succeeds. Registered as CLI/path bug, not semantic model failure."
+    },
+    {
+      "name": "custom_interpreter_probes",
+      "command": "python3 -c '<stdlib-only targeted probes against executable_reference.py and model.json>'",
+      "exit_code": 0,
+      "observed_result": "obligation_ids_match_v2=true; obligations_without_transition_refs=['INTCALC-OBL-008']; nondeterminism_examples=[]; invented_whitelisted_event_mutant_errors=[]; traversal summaries POSTTRAN completed=11 frontier=8 unknown=3 omitted=8, INTCALC completed=8 frontier=1 unknown=0 omitted=1, TRANREPT completed=16 frontier=0 unknown=3 omitted=4."
+    }
+  ],
+  "mechanical_findings": {
+    "unit_tests_pass": true,
+    "absolute_cli_pass": true,
+    "source_pins_pass_with_absolute_root": true,
+    "relative_root_bug_registered": true,
+    "determinism_for_enumerated_domains": true,
+    "nondeterminism_examples": [],
+    "traversal_budget_reported": true,
+    "unknown_paths_reported": true
+  },
+  "semantic_probes": {
+    "posttran_account_rewrite_invalid_key": {
+      "result": [["POSTTRAN-T020", "P_TRANFILE_WRITE", ["account_rewrite_invalid_key_continues", "tranfile_write_attempt_pending"]]],
+      "assessment": "matches source obligation: invalid ACCOUNT rewrite does not locally abend and continues toward TRANFILE write"
+    },
+    "posttran_tranfile_write_failure": {
+      "result": [["POSTTRAN-T022", "P_ABEND", ["tranfile_write_attempt", "abend"]]],
+      "assessment": "models failure after prior TCATBAL/ACCOUNT stage as an abend path; does not claim durability"
+    },
+    "intcalc_eof_no_final_update": {
+      "result": [["INTCALC-T006", "I_CLOSE", ["tcatbal_read_attempt", "intcalc_eof_no_final_account_update", "close_attempt"]]],
+      "assessment": "effect matches source EOF control; traceability is wrong because transition references INTCALC-OBL-007, while INTCALC-OBL-008 has no transition refs"
+    },
+    "tranrept_out_of_range_skip": {
+      "result": [["TRANREPT-T009", "R_LOOP", ["report_read_attempt", "tranrept_skip_detail_out_of_range"]]],
+      "assessment": "matches source: NEXT SENTENCE path does not emit detail or accrual"
+    },
+    "tranrept_unknown_eof": {
+      "result": [["TRANREPT-T013", "unknown", "R_UNKNOWN", ["unknown_eof_receiver_path"]]],
+      "assessment": "does not invent EOF receiver retention; unknown path is explicit"
+    },
+    "intcalc_rate_zero_representable": {
+      "result": false,
+      "assessment": "blocking abstraction loss: INTCALC-OBL-005 states rate zero must not generate a transaction, but v3 has no zero-rate domain/transition and INTCALC-T009 emits interest_write_attempt unconditionally after I_RATE"
+    }
+  },
+  "blocking_findings": [
+    {
+      "id": "V3-BLOCK-001",
+      "severity": "P0",
+      "type": "erased_obligation",
+      "summary": "INTCALC zero-rate branch from OBL-005 is not representable.",
+      "evidence": [
+        "v2/v3 obligation INTCALC-OBL-005: taxa zero não gera transação; taxa diferente de zero gera valor pela fórmula fonte.",
+        "source CBACT04C.cbl:213-217: IF DIS-INT-RATE NOT = 0 PERFORM 1300-COMPUTE-INTEREST and 1400-COMPUTE-FEES.",
+        "v3 variable disc_rate_path domain contains specific/default/missing, no zero-rate value; INTCALC-T009 guard is true and emits interest_write_attempt."
+      ],
+      "impact": "A selector cannot choose or exclude the no-interest path required by the source obligation. This is a silent reduction loss, not merely lack of COBOL equivalence."
+    },
+    {
+      "id": "V3-BLOCK-002",
+      "severity": "P0",
+      "type": "traceability_gap",
+      "summary": "INTCALC-OBL-008 is present in the 25 obligations but has no transition reference.",
+      "evidence": [
+        "Programmatic trace check returned obligations_without_transition_refs=['INTCALC-OBL-008'].",
+        "INTCALC-T006 emits intcalc_eof_no_final_account_update but references INTCALC-OBL-007 instead of INTCALC-OBL-008."
+      ],
+      "impact": "The model appears to carry 25 obligations, but one obligation is not traceably selectable. This blocks PASS for full 25-obligation MBT selection."
+    },
+    {
+      "id": "V3-BLOCK-003",
+      "severity": "P1",
+      "type": "invented_event_guard_weakness",
+      "summary": "The validator rejects unknown event names but does not reject whitelisted events inserted into unrelated source paths.",
+      "evidence": [
+        "Counterexample mutant added {'op':'emit','event':'interest_write_attempt'} to POSTTRAN-T003; validate_model(..., root=absolute) returned errors=[].",
+        "The three source-sensitive mutant checks cover only POSTTRAN-T020, TRANREPT-T009, and INTCALC-T006."
+      ],
+      "impact": "v3 improves over v2 but still cannot generally detect event invention. Reviewer inspection, not the 11 tests, is what caught the issue."
+    }
+  ],
+  "non_blocking_findings": [
+    {
+      "id": "V3-NB-001",
+      "summary": "CLI root='.' bug reproduced/recorded separately from semantic review.",
+      "impact": "Use absolute root for validation until fixed."
+    },
+    {
+      "id": "V3-NB-002",
+      "summary": "Traversal uses explicit max-depth/max-paths and reports omitted/frontier/unknown; budgets mean omission is visible, not complete path coverage.",
+      "impact": "Acceptable for bounded pre-campaign exploration only when omissions are reported with the selected budget."
+    }
+  ],
+  "source_checks": [
+    {
+      "topic": "POSTTRAN partial failure order",
+      "source_lines": ["CBTRN02C.cbl:424-442", "CBTRN02C.cbl:545-559", "CBTRN02C.cbl:562-578"],
+      "assessment": "v3 preserves attempt order for TCATBAL/ACCOUNT before TRANFILE and models ACCOUNT invalid-key continuation without claiming commit/durability."
+    },
+    {
+      "topic": "INTCALC EOF and loop",
+      "source_lines": ["CBACT04C.cbl:188-222", "CBACT04C.cbl:325-370"],
+      "assessment": "v3 preserves no-final-update event for normal EOF, but traceability is attached to the wrong obligation and the zero-rate branch is erased."
+    },
+    {
+      "topic": "TRANREPT EOF/out-of-range and lookups",
+      "source_lines": ["CBTRN03C.cbl:170-206", "CBTRN03C.cbl:248-272", "CBTRN03C.cbl:484-512"],
+      "assessment": "v3 preserves out-of-range skip and explicit unknown EOF path; lookup attempts are emitted before detail for in-range read paths."
+    }
+  ],
+  "final_assessment": {
+    "pass_for_represented_deterministic_engine": true,
+    "pass_for_full_25_obligation_campaign_reference": false,
+    "recommended_label": "PARTIAL",
+    "required_before_pass": [
+      "Represent INTCALC zero-rate/no-transaction branch and make it selectable/observable without inventing output.",
+      "Attach INTCALC-OBL-008 to the EOF/no-final-update transition or otherwise make its abstract path traceably selectable.",
+      "Strengthen validation or review criteria so whitelisted but source-unjustified events cannot be silently inserted into unrelated paths.",
+      "Keep absolute-root invocation or fix root='.' source-pin resolution; do not classify that CLI bug as semantic failure."
+    ]
+  }
+}

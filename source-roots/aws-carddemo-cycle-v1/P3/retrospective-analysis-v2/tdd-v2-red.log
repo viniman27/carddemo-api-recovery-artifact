@@ -1,0 +1,33 @@
+EEF
+======================================================================
+ERROR: test_ascii_overpunch_roundtrip_and_negative_posting (test_gaps.GapTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v2/test_gaps.py", line 8, in test_ascii_overpunch_roundtrip_and_negative_posting
+    self.assertEqual(e.number(raw),-(120+digit))
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v2/evidence.py", line 7, in number
+    raise ValueError('unqualified_signed_or_nonnumeric_DISPLAY:'+raw.hex())
+ValueError: unqualified_signed_or_nonnumeric_DISPLAY:3030303030303030313270
+
+======================================================================
+ERROR: test_empty_dateparm_is_eof_not_missing_or_partial (test_gaps.GapTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v2/test_gaps.py", line 19, in test_empty_dateparm_is_eof_not_missing_or_partial
+    result=e.report_expected([tx()],b'',[],[],[])
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v2/evidence.py", line 130, in report_expected
+    if len(dateparm)<21: raise ValueError('short_dateparm')
+ValueError: short_dateparm
+
+======================================================================
+FAIL: test_first_missing_xref_can_be_qualified_but_not_later_failure (test_gaps.GapTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v2/test_gaps.py", line 24, in test_first_missing_xref_can_be_qualified_but_not_later_failure
+    self.assertTrue(hasattr(e,'first_missing_xref'))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=1, errors=2)

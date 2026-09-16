@@ -1,0 +1,115 @@
+{
+  "kind": "p2c-few-shot-http-jsonschema-validation",
+  "source": "outputs/http-smoke-report.json",
+  "cases": [
+    {
+      "contractId": "E2-1",
+      "track": "posting",
+      "operation": "/transaction-postings",
+      "status": 200,
+      "url": "http://127.0.0.1:50220/transaction-postings",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/posting/1789472725794-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-_paydtwn/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-1",
+      "track": "interest",
+      "operation": "/interest-transaction-generations",
+      "status": 200,
+      "url": "http://127.0.0.1:50222/interest-transaction-generations",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/interest/1789472726076-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-drenbal2/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-1",
+      "track": "reporting",
+      "operation": "/transaction-reports",
+      "status": 500,
+      "url": "http://127.0.0.1:50224/transaction-reports",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/reporting/1789472726703-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-td9qbwsf/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-2",
+      "track": "posting",
+      "operation": "/transaction-posting-runs",
+      "status": 200,
+      "url": "http://127.0.0.1:50226/transaction-posting-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/posting/1789472726941-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-csfpk0vq/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-2",
+      "track": "interest",
+      "operation": "/interest-generation-runs",
+      "status": 200,
+      "url": "http://127.0.0.1:50228/interest-generation-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/interest/1789472727219-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-9vh4_puv/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-2",
+      "track": "reporting",
+      "operation": "/transaction-report-runs",
+      "status": 500,
+      "url": "http://127.0.0.1:50230/transaction-report-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/reporting/1789472727921-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-ytq_m22m/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-3",
+      "track": "posting",
+      "operation": "/transaction-posting-runs",
+      "status": 200,
+      "url": "http://127.0.0.1:50232/transaction-posting-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/posting/1789472728150-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-0uatpyf7/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-3",
+      "track": "interest",
+      "operation": "/interest-generation-runs",
+      "status": 200,
+      "url": "http://127.0.0.1:50234/interest-generation-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/interest/1789472728432-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-9_yll3f1/audit.json",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "contractId": "E2-3",
+      "track": "reporting",
+      "operation": "/transaction-report-runs",
+      "status": 500,
+      "url": "http://127.0.0.1:50236/transaction-report-runs",
+      "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/reporting/1789472729077-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-g9pndflk/audit.json",
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "overallPassed": true
+}

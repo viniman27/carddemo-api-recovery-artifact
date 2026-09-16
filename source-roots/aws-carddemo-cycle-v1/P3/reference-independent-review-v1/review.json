@@ -1,0 +1,212 @@
+{
+  "classification": "FAIL",
+  "reviewed_at_utc": "2026-09-15T11:51:05Z",
+  "scope": {
+    "allowed_input_dirs": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-authoring-input-v1",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-authoring-draft-v1"
+    ],
+    "output_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-independent-review-v1",
+    "not_used": [
+      "contratos E1/E2",
+      "SDD",
+      "APIs",
+      "fixtures",
+      "support",
+      "expected",
+      "preflight",
+      "quarentena",
+      "runs",
+      "execução COBOL",
+      "memória de resultados como autoridade de referência"
+    ],
+    "limitations": [
+      "Revisão estática contra fontes originais permitidas; nenhum COBOL executado.",
+      "Novo contexto registra exposição efetiva, mas não certifica independência cognitiva absoluta.",
+      "JCL foi usado como evidência documental, não como prova de execução local."
+    ]
+  },
+  "filepins": {
+    "input": [
+      {
+        "path": "reference-authoring-input-v1/README.md",
+        "sha256": "c0d2bb0e890a988ce643c0aa960933ab454e02e5db1fdd4af932e512c54b7ced",
+        "bytes": 2341,
+        "use": "authority/instruction"
+      },
+      {
+        "path": "reference-authoring-input-v1/input-manifest.json",
+        "sha256": "93d178bcf5a2e50e43c6af51985f68ae0edfe6162a196883d146cb27c56a5510",
+        "bytes": 3445,
+        "use": "manifest/hash authority"
+      },
+      {
+        "path": "reference-authoring-input-v1/corpus/*",
+        "manifest": "reference-authoring-input-v1/input-manifest.json",
+        "file_count": 19,
+        "hashes_and_sizes_verified": true,
+        "use": "original source corpus enumerated by manifest"
+      }
+    ],
+    "draft": [
+      {
+        "path": "reference-authoring-draft-v1/README.md",
+        "sha256": "8681e53fd09e0003e5f4691b1723535511187a2aa03691a95e83e6f023f8a2e8",
+        "bytes": 1775
+      },
+      {
+        "path": "reference-authoring-draft-v1/obligations.json",
+        "sha256": "eb1fdce18f639ef87097f871434c42925e42167c6fce18acfed35757acdf3637",
+        "bytes": 28288
+      },
+      {
+        "path": "reference-authoring-draft-v1/model.json",
+        "sha256": "0ca0277175d0a9746df84c7b77d9090a870315d95b951334d29dcb2c7b35920c",
+        "bytes": 4459
+      },
+      {
+        "path": "reference-authoring-draft-v1/exposure-manifest.json",
+        "sha256": "05eeb4b98c501115ff87a3bbcba2458c71672799dce00df357b1290b150233fd",
+        "bytes": 5354
+      }
+    ]
+  },
+  "review_counts": {
+    "manifest_files_verified": 19,
+    "obligations_reviewed": 23,
+    "obligations_by_capability": {
+      "CBTRN02C/POSTTRAN": 8,
+      "CBACT04C/INTCALC": 8,
+      "CBTRN03C/TRANREPT": 7
+    },
+    "model_capabilities_reviewed": 3,
+    "source_anchor_ranges_checked": 63,
+    "source_anchor_hash_or_line_errors": 0,
+    "blocking_findings": 6
+  },
+  "findings": [
+    {
+      "id": "FAIL-01",
+      "severity": "blocking",
+      "capability": "CBTRN03C/TRANREPT",
+      "summary": "EOF é modelado como escrita incondicional de totais, mas a fonte testa data antes do ramo EOF.",
+      "draft_locations": [
+        "model.json transition tran_10->write totals with current TRAN-AMT branch",
+        "TRANREPT-OBL-003",
+        "TRANREPT-OBL-007"
+      ],
+      "evidence": [
+        "app/cbl/CBTRN03C.cbl:170-178",
+        "app/cbl/CBTRN03C.cbl:179-203",
+        "app/cbl/CBTRN03C.cbl:248-265"
+      ],
+      "counterexample": "EOF após último TRAN-PROC-TS retido fora do intervalo textual pode executar NEXT SENTENCE e não alcançar o ramo de totais.",
+      "approval_effect": "Blocks report oracle and path selection."
+    },
+    {
+      "id": "FAIL-02",
+      "severity": "blocking",
+      "capability": "CBTRN03C/TRANREPT",
+      "summary": "Ausência de Account Total final no EOF não está modelada.",
+      "draft_locations": [
+        "TRANREPT-OBL-004",
+        "TRANREPT-OBL-007",
+        "model.json CBTRN03C_TRANREPT"
+      ],
+      "evidence": [
+        "app/cbl/CBTRN03C.cbl:181-184",
+        "app/cbl/CBTRN03C.cbl:197-203",
+        "app/cbl/CBTRN03C.cbl:306-316"
+      ],
+      "counterexample": "Arquivo com transações em intervalo para um único cartão não sofre mudança de cartão; a fonte não chama 1120-WRITE-ACCOUNT-TOTALS no EOF.",
+      "approval_effect": "Blocks fair evaluation of TRANREPT totals."
+    },
+    {
+      "id": "FAIL-03",
+      "severity": "blocking",
+      "capability": "CBTRN03C/TRANREPT",
+      "summary": "Caminho fora de intervalo fica pendente, embora seja guarda central de detalhe e acumulação.",
+      "draft_locations": [
+        "TRANREPT-OBL-002",
+        "model.json transition tran_00_out_of_range->no rigid expectation pending NEXT SENTENCE review"
+      ],
+      "evidence": [
+        "app/cbl/CBTRN03C.cbl:170-178",
+        "app/cbl/CBTRN03C.cbl:179-196",
+        "app/cbl/CBTRN03C.cbl:287-289"
+      ],
+      "counterexample": "Registro com TRAN-PROC-TS fora do intervalo deve não produzir detalhe nem somar page/account, mas o modelo não congela essa expectativa.",
+      "approval_effect": "Blocks MBT partitioning for in-range/out-of-range records."
+    },
+    {
+      "id": "FAIL-04",
+      "severity": "blocking",
+      "capability": "CBTRN02C/POSTTRAN",
+      "summary": "Falha de WRITE TRANFILE após atualizações anteriores não está modelada.",
+      "draft_locations": [
+        "POSTTRAN-OBL-008",
+        "model.json transition valid->post_tcatbal->post_account->write_tran->read_daily"
+      ],
+      "evidence": [
+        "app/cbl/CBTRN02C.cbl:370-421",
+        "app/cbl/CBTRN02C.cbl:424-442",
+        "app/cbl/CBTRN02C.cbl:562-578"
+      ],
+      "counterexample": "Duas transações aceitas com mesmo DALYTRAN-ID podem gerar erro de chave na segunda escrita depois de TCATBAL e ACCOUNT já terem sido atualizados.",
+      "approval_effect": "Blocks modeling of partial-effect/abend path in POSTTRAN."
+    },
+    {
+      "id": "FAIL-05",
+      "severity": "blocking",
+      "capability": "CBTRN02C/POSTTRAN",
+      "summary": "Falha no REWRITE ACCOUNT não é tratada localmente como abend e não tem transição própria.",
+      "draft_locations": [
+        "POSTTRAN-OBL-008",
+        "model.json CBTRN02C_POSTTRAN"
+      ],
+      "evidence": [
+        "app/cbl/CBTRN02C.cbl:545-559",
+        "app/cbl/CBTRN02C.cbl:440-442"
+      ],
+      "counterexample": "Em INVALID KEY no REWRITE, a fonte move razão 109 e descrição, mas retorna e segue para WRITE TRANFILE.",
+      "approval_effect": "Blocks precise failure-path expectations without assuming durability."
+    },
+    {
+      "id": "FAIL-06",
+      "severity": "blocking",
+      "capability": "all",
+      "summary": "model.json usa transições em texto livre, path_selection genérico e sem âncoras/efeitos por transição.",
+      "draft_locations": [
+        "model.json:32-50",
+        "model.json:76-100",
+        "model.json:127-148"
+      ],
+      "evidence": [
+        "model.json:32-50",
+        "model.json:76-100",
+        "model.json:127-148"
+      ],
+      "counterexample": "TRANREPT requer caminhos separados para in_range/out_of_range, EOF após in/out/empty, mudança de cartão e último cartão; o modelo mistura ou deixa pendente.",
+      "approval_effect": "Blocks treating artifact as MBT-ready model rather than prose checklist."
+    }
+  ],
+  "supported_points_not_sufficient_for_pass": [
+    "All source anchors are mechanically valid.",
+    "POSTTRAN XREF/account/limit/expiration guards are source-supported at app/cbl/CBTRN02C.cbl:380-421.",
+    "POSTTRAN expiration can overwrite overlimit because the expiration check follows the limit check at app/cbl/CBTRN02C.cbl:407-419.",
+    "INTCALC final-account update unreachable claim is source-supported by app/cbl/CBACT04C.cbl:188-222 and :325-370.",
+    "INTCALC DEFAULT fallback limit is source-supported at app/cbl/CBACT04C.cbl:415-459."
+  ],
+  "missing_inventory_for_approval": [
+    "TRANREPT partitions for in-range/out-of-range records before EOF.",
+    "TRANREPT EOF conditioned by retained TRAN-PROC-TS, including empty file and last out-of-range record.",
+    "TRANREPT absence of final Account Total.",
+    "POSTTRAN WRITE TRANFILE failure/duplicate-key path after prior TCATBAL and ACCOUNT updates.",
+    "POSTTRAN REWRITE ACCOUNT invalid-key/non-abend path.",
+    "Formal transition-level MBT model with guards, effects, anchors and loop boundaries."
+  ],
+  "exact_approval_condition": "A later version may be classified PASS only after resolving FAIL-01 through FAIL-06 with source-anchored changes, preserving or justifying all file pins, declaring every capability path as mandatory/optional/indecidable, making model.json sufficient for MBT generation without external prose interpretation, and recording exposure again without consulting fixtures, contracts, official outputs, runs, SDD, APIs, support, preflight or quarantine.",
+  "authorizes_campaign": false,
+  "authorizes_official_fixtures": false,
+  "human_approval_claimed": false
+}

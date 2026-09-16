@@ -1,0 +1,167 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "isolated_copy_technical_only",
+  "fixtures": [
+    {
+      "fixtureId": "posting.copied-current-technical-smoke",
+      "track": "posting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "package/posting/ACCTFILE",
+          "DALYTRAN": "package/posting/DALYTRAN",
+          "TCATBALF": "package/posting/TCATBALF",
+          "TRANFILE": "package/posting/TRANFILE",
+          "XREFFILE": "package/posting/XREFFILE"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+            "bytes": 8192
+          },
+          "DALYTRAN": {
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "bytes": 700
+          },
+          "TCATBALF": {
+            "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+        "copiedCurrent": true,
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "0a4f91e3225a88bcbf57109e7bd26b882d196db96b4ed4371c02eb6f8f963298"
+    },
+    {
+      "fixtureId": "interest.copied-current-technical-smoke",
+      "track": "interest",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "package/interest/ACCTFILE",
+          "DISCGRP": "package/interest/DISCGRP",
+          "PARMFILE": "package/interest/PARMFILE",
+          "TCATBALF": "package/interest/TCATBALF",
+          "XREFFILE": "package/interest/XREFFILE",
+          "XREFFILE.1": "package/interest/XREFFILE.1"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+            "bytes": 8192
+          },
+          "DISCGRP": {
+            "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+            "bytes": 8192
+          },
+          "PARMFILE": {
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "bytes": 10
+          },
+          "TCATBALF": {
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+            "bytes": 8192
+          },
+          "XREFFILE.1": {
+            "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+        "copiedCurrent": true,
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "8f0e8b560360ffd5732a4cd4b8c05a2a48e72613990ba32f03d0f2184529dd04"
+    },
+    {
+      "fixtureId": "reporting.copied-current-technical-smoke",
+      "track": "reporting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "CARDXREF": "package/reporting/CARDXREF",
+          "DATEPARM": "package/reporting/DATEPARM",
+          "TRANCATG": "package/reporting/TRANCATG",
+          "TRANFILE": "package/reporting/TRANFILE",
+          "TRANTYPE": "package/reporting/TRANTYPE"
+        },
+        "filePins": {
+          "CARDXREF": {
+            "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+            "bytes": 8192
+          },
+          "DATEPARM": {
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "bytes": 80
+          },
+          "TRANCATG": {
+            "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "bytes": 700
+          },
+          "TRANTYPE": {
+            "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+        "copiedCurrent": true,
+        "officialFixture": false
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "66bd39a8d4b367c4aad828364a9ed48322224853e8e1a9e45b3be4ffc638d2ea"
+    }
+  ]
+}

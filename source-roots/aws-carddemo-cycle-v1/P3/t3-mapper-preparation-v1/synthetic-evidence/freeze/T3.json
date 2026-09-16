@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-SYNTH-B",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T3:SYNTH",
+      "parameters": {
+        "SDD": {},
+        "cellId": "B",
+        "pathEvidence": [
+          "A",
+          "B"
+        ],
+        "transitionId": "B"
+      },
+      "provenance": [
+        "T3:SYNTH:B"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/sdd"
+      },
+      "resource_package_id": "external-fixture",
+      "sequence": [
+        "A",
+        "B"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "4be5c27819d9c149d454e7d03ce942c39ecb2cd81012d9bdec5d7d8e0048a022",
+  "suite_id": "T3"
+}

@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E1-3-interest-T1-REAL-E1-3-E1-3-T1-INTEREST-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E1-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E1-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateInterestTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "T1-INTEREST-001",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "364ccb73a29bfd14a869c2372fa5d28acd166e501bb8cd26ef1b1c4d23a90519",
+        "sourceScenarioCanonicalSha256": "103decdc92c183853cbf3a6a8088abcf8a6395b569b98a4bf08d0fa97c524da8",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E1-3:T1-INTEREST-001",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E1-3/T1.json:T1-REAL-E1-3-E1-3-T1-INTEREST-001"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiMjAyMjA3MTgwMCIsImNhdGVnb3J5QmFsYW5jZXMiOiJUQ0FUQkFMRiIsImNhcmRDcm9zc1JlZmVyZW5jZSI6IlhSRUZGSUxFIiwiYWNjb3VudHMiOiJBQ0NURklMRSIsImRpc2Nsb3N1cmVHcm91cHMiOiJESVNDR1JQIiwidHJhbnNhY3Rpb25PdXRwdXQiOiJUUkFOU0FDVCJ9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E1-3-interest",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "f5b1afa3a7c6406847cba860846b36628cfb04a323eb91b96e429fa79c0fbe70",
+  "suite_id": "READINESS21-E1-3-interest"
+}

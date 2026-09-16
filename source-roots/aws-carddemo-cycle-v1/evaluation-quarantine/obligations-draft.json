@@ -1,0 +1,239 @@
+{
+  "status": "partial_unreviewed_not_frozen",
+  "visibility": "evaluation_only_never_extraction",
+  "provenance": "Authored in coordinator context previously exposed to preflight; not a blinded independent reference",
+  "records": [
+    {
+      "id": "P-01",
+      "obligation_candidate": "Classificar cada transação por validação, gravar rejeições e devolver código 4 quando houver rejeições.",
+      "caution": "Contadores e arquivo de rejeição; distinguir execução interrompida de conclusão normal.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 202,
+        "end_line": 231,
+        "excerpt_sha256": "195440b92aab2fa9ab0936fba2f6234682049dddf3e6e20e68389e61e3dc6d9a"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-02",
+      "obligation_candidate": "Representar falhas de cartão sem referência (100) e conta não encontrada (101).",
+      "caution": "Não inventar validação de existência por serviço externo.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 380,
+        "end_line": 399,
+        "excerpt_sha256": "109d775c7e954aa4b4f6fd964e08b3cbb89f96d459e8011c8d3e0a9c41a47e59"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-03",
+      "obligation_candidate": "Preservar fórmula de saldo temporário e comparações inclusivas de limite e expiração.",
+      "caution": "Quando ambos falham, o código 103 pode substituir 102; não impor prioridade diferente.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 403,
+        "end_line": 420,
+        "excerpt_sha256": "116936e79dcf7ecb001db3c6d0f3b2315987d0f4b5c7223cf7ef27a238dac5d9"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-04",
+      "obligation_candidate": "Preservar dados da transação e atribuir timestamp de processamento; ordem categoria → conta → escrita de transação.",
+      "caution": "Ordem não prova atomicidade; não prometer rollback.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 424,
+        "end_line": 442,
+        "excerpt_sha256": "9d5570c795b667a59aa0fec6691ccad03c2d6c8a1af26c465e175fbe384513b6"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-05",
+      "obligation_candidate": "Rejeição inclui registro original e trailer de validação; erro de gravação segue tratamento fatal.",
+      "caution": "Rejeição de negócio e falha de I/O são distintos.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 446,
+        "end_line": 464,
+        "excerpt_sha256": "14948b15f1cb60f4d6d0842a32f793be04e85637a5fbf34308f82a57d573887c"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-06",
+      "obligation_candidate": "Categoria ausente pode ser criada; categoria existente segue caminho de atualização.",
+      "caution": "Confirmar ramo de atualização e layout na revisão complementar.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 467,
+        "end_line": 510,
+        "excerpt_sha256": "170841a2a01719edc9a5c477862f7233d8a1f31cad3556de5fff79af8e1cbbee"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "P-07",
+      "obligation_candidate": "Somar valor ao saldo; não negativos ao crédito do ciclo e negativos ao débito do ciclo.",
+      "caution": "REWRITE inválido atribui motivo 109; não assumir que o fluxo volta automaticamente ao gravador de rejeições.",
+      "source": {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "start_line": 545,
+        "end_line": 559,
+        "excerpt_sha256": "e75476f10c5804cab4c9b18427dfbb967e89d027d8ffb6fbd28d11b51f2cd834"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-01",
+      "obligation_candidate": "Processar categorias por conta e preservar dependência da mudança de conta para atualização acumulada.",
+      "caution": "Não assumir atualização final: o ramo ELSE com EOF deve ser analisado pelo fluxo, não pela intenção do comentário.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 188,
+        "end_line": 222,
+        "excerpt_sha256": "c7b27bae48dcf17809ad5e5c2f5b2c037473ddf1092e7b17c7e41aad2ffcd5df"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-02",
+      "obligation_candidate": "Quando invocada a atualização, adicionar juros acumulados ao saldo e zerar crédito/débito do ciclo.",
+      "caution": "Separar efeito da rotina da garantia de que será chamada para toda conta.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 350,
+        "end_line": 368,
+        "excerpt_sha256": "b428dc6b8e7dd0d44d25cab4b032d2b3fa04df32a45ef868fa0c2313153b6fb7"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-03",
+      "obligation_candidate": "Grupo não encontrado com status 23 consulta DEFAULT; falha no default segue caminho fatal.",
+      "caution": "Sem taxa fallback inventada pelo adaptador.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 415,
+        "end_line": 459,
+        "excerpt_sha256": "cf7fdf6b75c465fd039da3e1e8567c86cb8c2f8d804f3f344c208fb4cbae3060"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-04",
+      "obligation_candidate": "Taxa igual a zero não executa os parágrafos de cálculo de juros e tarifas.",
+      "caution": "Não confundir taxa zero com ausência do registro.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 210,
+        "end_line": 217,
+        "excerpt_sha256": "dd1c3605d1a85cd52950e4cd3ddfd16a49c3c6e3935345abfb3a623e66048e28"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-05",
+      "obligation_candidate": "Calcular juros categoria×taxa/1200, acumular e gerar transação com identificador data+contador e campos definidos no código.",
+      "caution": "Precisão depende dos PIC; verificar layouts antes de fechar exemplos numéricos.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 462,
+        "end_line": 515,
+        "excerpt_sha256": "1cd200aa2782fdebd0dd04bc6367c18208c50a829c6902490f02857993b97ba5"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "I-06",
+      "obligation_candidate": "Não atribuir cobrança implementada ao placeholder de tarifas.",
+      "caution": "Exclusão fundamentada, não operação omitida pelo contrato.",
+      "source": {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "start_line": 518,
+        "end_line": 520,
+        "excerpt_sha256": "4826bc1c8d04d6cce8ac3cff56f23d2f422b45a0dc7ecb1ce09a338590db6a3b"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "R-01",
+      "obligation_candidate": "Aplicar intervalo inclusivo sobre data de processamento e buscar descrições de tipo/categoria para detalhes.",
+      "caution": "Analisar NEXT SENTENCE e efeito de EOF; não descrever filtro apenas pelo nome do relatório.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 170,
+        "end_line": 196,
+        "excerpt_sha256": "cbf8224c3fe7b1f13f1b3ba64fa325d82255b6af570f58e5501fa910b96527f8"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "R-02",
+      "obligation_candidate": "Representar geração de detalhes, total de página e total geral, com acumulação e reinicialização de página.",
+      "caution": "Correção aritmética global e término ainda exigem casos multirregistro.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 274,
+        "end_line": 321,
+        "excerpt_sha256": "b7efe9d21b33bff75e77287d6a15b9c1d8ba5ad2b707134ac4154dbde1289c9a"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    },
+    {
+      "id": "R-03",
+      "obligation_candidate": "Detalhe contém identificador de transação, conta via referência, tipo/categoria e descrições, origem e valor.",
+      "caution": "Layouts de impressão e ordenação precisam de revisão complementar.",
+      "source": {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "start_line": 361,
+        "end_line": 373,
+        "excerpt_sha256": "92e6ac79498ad2ade0c702ca840a300330f3e0ec451a2bdb108b37405bc545eb"
+      },
+      "review_status": "unreviewed",
+      "runtime_test_in_this_cycle": false
+    }
+  ],
+  "count": 16,
+  "remaining": [
+    "COPY layouts and types",
+    "JCL ordering and environment boundaries",
+    "complete I/O and termination paths",
+    "dynamic edge cases and uncertainty adjudication",
+    "independent/human review before freeze"
+  ]
+}

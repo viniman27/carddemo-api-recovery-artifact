@@ -1,0 +1,540 @@
+{
+  "built": true,
+  "kind": "p3-candidate-coverage-build",
+  "coverageToolchain": "cobc -C + gcc-11 -fprofile-arcs -ftest-coverage + gcov-11",
+  "build_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+  "source_pins": {
+    "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+    "programs": [
+      "CBTRN02C",
+      "CBACT04C",
+      "CBTRN03C"
+    ],
+    "checked_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "bytes": 10142
+      },
+      {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "bytes": 52479
+      },
+      {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "bytes": 58890
+      },
+      {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "bytes": 52239
+      },
+      {
+        "path": "app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "bytes": 1125
+      },
+      {
+        "path": "app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "bytes": 736
+      },
+      {
+        "path": "app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "bytes": 898
+      },
+      {
+        "path": "app/cpy/CVTRA02Y.cpy",
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "bytes": 898
+      },
+      {
+        "path": "app/cpy/CVTRA03Y.cpy",
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "bytes": 655
+      },
+      {
+        "path": "app/cpy/CVTRA04Y.cpy",
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "bytes": 817
+      },
+      {
+        "path": "app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "bytes": 1546
+      },
+      {
+        "path": "app/cpy/CVTRA06Y.cpy",
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "bytes": 1538
+      },
+      {
+        "path": "app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "bytes": 5758
+      },
+      {
+        "path": "app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "bytes": 3662
+      },
+      {
+        "path": "app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "bytes": 2964
+      },
+      {
+        "path": "app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "bytes": 3246
+      },
+      {
+        "path": "app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "bytes": 5330
+      },
+      {
+        "path": "app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "bytes": 6427
+      },
+      {
+        "path": "app/proc/REPROC.prc",
+        "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "bytes": 2233
+      }
+    ],
+    "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus"
+  },
+  "commands_jsonl": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/command-log.jsonl",
+  "instrumentedCommands": [
+    {
+      "stage": "cobc-C",
+      "program": "CBTRN02C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-A",
+        "-Dcob_write=p2b_observed_write",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.023
+    },
+    {
+      "stage": "support-clang-object-uninstrumented",
+      "program": "write_observer.c",
+      "cmd": [
+        "clang",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/write_observer.c",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.032
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBTRN02C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o",
+        "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+        "-lcob"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//cc0KSijb.o) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.209
+    },
+    {
+      "stage": "cobc-C",
+      "program": "CBACT04C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-m",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.023
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBACT04C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-dynamiclib",
+        "-undefined",
+        "dynamic_lookup",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//ccVQODIv.o) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.196
+    },
+    {
+      "stage": "cobc-C",
+      "program": "CBTRN03C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.023
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBTRN03C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+        "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+        "-lcob"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//cctclpTF.o) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.205
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "intcalc_fixture",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/intcalc_fixture",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/intcalc_fixture.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.092
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "report_fixture",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/report_fixture",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/report_fixture.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.095
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "CBACT04C_driver",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C_driver",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CBACT04C_driver.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.088
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "CEE3ABD2",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-m",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CEE3ABD.dylib",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CEE3ABD2.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: -undefined suppress is deprecated\nld: warning: -undefined suppress is deprecated\n",
+      "duration_s": 0.072
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "P2B_INTEREST_DRIVER",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/interest_driver.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.085
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_TRANFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TRANFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_TRANFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.086
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_XREFFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_XREFFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_XREFFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.089
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_ACCTFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_ACCTFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_ACCTFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.087
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_TCATBALF",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TCATBALF",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_TCATBALF.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.089
+    }
+  ],
+  "binaries": [
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+      "sha256": "84363ee68acb16e2ee287095151fc9d2be2756c18303d603737a2ac1b58dc6de",
+      "bytes": 116856,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+      "sha256": "52711fb144db0733323a8352275df5604921ccd90ef4a386849fe13d1ef3d891",
+      "bytes": 100256,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+      "sha256": "da694117d8733c1d84735b8b401db56617d6b61764824219c6b7f717dc9ca3de",
+      "bytes": 116808,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+      "sha256": "95e00ccf55967e7b26463861d495030f62f2b052ad2922420d14a73720271cbd",
+      "bytes": 52064,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C_driver",
+      "sha256": "52ff82a27546581db90daefa0b49b0c571688bddefef90dee53ae9b8c6c20337",
+      "bytes": 51232,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/intcalc_fixture",
+      "sha256": "a60d07b60895589811d79b96ff795e9c82672174f3dbbe88c6e82a73b2d6b8cf",
+      "bytes": 53456,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141606Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/report_fixture",
+      "sha256": "0555c78da5111b01cb6dfc24a64d108b3d583ae8d7d7d241fb3db39821cf580a",
+      "bytes": 52864,
+      "businessInstrumented": false
+    }
+  ],
+  "gcovPrefixPolicy": "per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation"
+}

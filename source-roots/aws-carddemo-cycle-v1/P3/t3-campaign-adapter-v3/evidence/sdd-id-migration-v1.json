@@ -1,0 +1,107 @@
+{
+  "fromContractId": "E3-01-SDD-stage6r3",
+  "kind": "t3-campaign-adapter-v3-sdd-id-migration",
+  "officialCampaign": false,
+  "openapiCanonicalIdentity": {
+    "from": {
+      "canonicalBytes": 42490,
+      "canonicalSha256": "d6df23ceab01cb90b2fa14d2e908f70f255526add6d3caa8c81465aae74e7105",
+      "operations": [
+        {
+          "method": "POST",
+          "operationId": "interest",
+          "path": "/interest"
+        },
+        {
+          "method": "POST",
+          "operationId": "posting",
+          "path": "/posting"
+        },
+        {
+          "method": "POST",
+          "operationId": "reporting",
+          "path": "/reporting"
+        }
+      ]
+    },
+    "identical": true,
+    "to": {
+      "canonicalBytes": 42490,
+      "canonicalSha256": "d6df23ceab01cb90b2fa14d2e908f70f255526add6d3caa8c81465aae74e7105",
+      "operations": [
+        {
+          "method": "POST",
+          "operationId": "interest",
+          "path": "/interest"
+        },
+        {
+          "method": "POST",
+          "operationId": "posting",
+          "path": "/posting"
+        },
+        {
+          "method": "POST",
+          "operationId": "reporting",
+          "path": "/reporting"
+        }
+      ]
+    }
+  },
+  "operationIdentity": {
+    "identical": true,
+    "operations": [
+      {
+        "documentedResponses": [
+          "200",
+          "400",
+          "500",
+          "503"
+        ],
+        "method": "POST",
+        "operationId": "interest",
+        "path": "/interest",
+        "requestBodyRequired": true
+      },
+      {
+        "documentedResponses": [
+          "200",
+          "400",
+          "500",
+          "503"
+        ],
+        "method": "POST",
+        "operationId": "posting",
+        "path": "/posting",
+        "requestBodyRequired": true
+      },
+      {
+        "documentedResponses": [
+          "200",
+          "400",
+          "500",
+          "503"
+        ],
+        "method": "POST",
+        "operationId": "reporting",
+        "path": "/reporting",
+        "requestBodyRequired": true
+      }
+    ]
+  },
+  "policy": "explicit versioned input-copy migration for adapter-local materialization only; not a silent alias and not a source edit",
+  "sourcePins": {
+    "matrixDeclaredContract": {
+      "bytes": 51697,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+    },
+    "targetContract": {
+      "bytes": 66677,
+      "id": "contract-E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a"
+    }
+  },
+  "toContractId": "E3-SDD-stage6r3",
+  "version": "sdd-id-migration-v1"
+}

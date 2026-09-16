@@ -1,0 +1,866 @@
+{
+  "status": "draft_needs_review",
+  "traversalBudget": {
+    "maxDepth": 8,
+    "maxPaths": 80
+  },
+  "obligations": [
+    {
+      "obligationId": "POSTTRAN-OBL-001",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T002"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T004"
+          ],
+          "state": "P_CLOSE"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T002"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-002",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T003",
+        "POSTTRAN-T004",
+        "POSTTRAN-T005",
+        "POSTTRAN-T006"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T007"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T004"
+          ],
+          "state": "P_CLOSE"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T005"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-003",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T012"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T014"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T007",
+        "POSTTRAN-T008"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T007"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T009"
+          ],
+          "state": "P_REJECT"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T008",
+        "POSTTRAN-T009",
+        "POSTTRAN-T010",
+        "POSTTRAN-T011"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T009"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T009"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T010"
+          ],
+          "state": "P_REJECT"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T007",
+        "POSTTRAN-T009",
+        "POSTTRAN-T010",
+        "POSTTRAN-T011"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T007"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T009"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T010"
+          ],
+          "state": "P_REJECT"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T012",
+        "POSTTRAN-T013",
+        "POSTTRAN-T014"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T014"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T014"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-008",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T013",
+        "POSTTRAN-T019",
+        "POSTTRAN-T020"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-009",
+      "capability": "CBTRN02C/POSTTRAN",
+      "transitionRefs": [
+        "POSTTRAN-T019",
+        "POSTTRAN-T020",
+        "POSTTRAN-T021",
+        "POSTTRAN-T022"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "completed",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "capability": "CBTRN02C_POSTTRAN",
+          "bucket": "frontier",
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T003"
+          ],
+          "state": "P_VALIDATE_XREF"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-001",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T001",
+        "INTCALC-T002"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T002"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-002",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T003",
+        "INTCALC-T004"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T008"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-003",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T003"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T008"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T007",
+        "INTCALC-T008",
+        "INTCALC-T009Z"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T008"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T009Z",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T007",
+        "INTCALC-T009",
+        "INTCALC-T009Z"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T009Z",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-006",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T009",
+        "INTCALC-T010",
+        "INTCALC-T011"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T010"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "INTCALC-OBL-008",
+      "capability": "CBACT04C/INTCALC",
+      "transitionRefs": [
+        "INTCALC-T006"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBACT04C_INTCALC",
+          "bucket": "completed",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "state": "I_CLOSE"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-001",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T001",
+        "TRANREPT-T002"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "state": "R_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-002",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T003",
+        "TRANREPT-T012"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T012"
+          ],
+          "state": "R_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-003",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T009"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T003"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-005",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T003",
+        "TRANREPT-T014",
+        "TRANREPT-T015"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-006",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T016"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-007",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T010",
+        "TRANREPT-T011",
+        "TRANREPT-T013",
+        "TRANREPT-T016"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        }
+      ],
+      "limit": null
+    },
+    {
+      "obligationId": "TRANREPT-OBL-008",
+      "capability": "CBTRN03C/TRANREPT",
+      "transitionRefs": [
+        "TRANREPT-T010"
+      ],
+      "reachableWitnesses": [
+        {
+          "capability": "CBTRN03C_TRANREPT",
+          "bucket": "completed",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        }
+      ],
+      "limit": null
+    }
+  ]
+}

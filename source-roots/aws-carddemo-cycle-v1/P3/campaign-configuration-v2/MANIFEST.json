@@ -1,0 +1,44 @@
+{
+  "kind": "campaign-configuration-v2-output-manifest",
+  "createdUtc": "2026-09-15T17:05:39.872655+00:00",
+  "scope": "P3/campaign-configuration-v2 outputs only; no official suites/campaign/provider call",
+  "artifacts": [
+    {
+      "path": "campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb",
+      "bytes": 44582
+    },
+    {
+      "path": "verify_campaign_config.py",
+      "sha256": "80cef6477b71b2be530ccd122d4dda39684927194e6b839c7206f1eb58ad52f2",
+      "bytes": 3989
+    },
+    {
+      "path": "test_verify_campaign_config.py",
+      "sha256": "a889d3455b17053146bce89378408750035c6b04ac7c77289aa7eeae5d35d933",
+      "bytes": 2501
+    },
+    {
+      "path": "VERIFY-RESULT.json",
+      "sha256": "41bc9ebcd31a0ac007c835ed8d4f3540016b508011cbc98e59dedd414f92cf16",
+      "bytes": 224
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "cf83928b6a0dfa113d1223a717d09f565e77afd2aee911d0ee7c2ba6bbb88514",
+      "bytes": 2887
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "contracts": 7,
+    "operations": 21,
+    "official_campaigns_started": false,
+    "provider_calls_allowed_by_config": false,
+    "t1_payloads": 7,
+    "sources_checked": 29,
+    "fixtures_candidate_not_official": 3
+  },
+  "testCommand": "python3 -m unittest test_verify_campaign_config.py -v && python3 verify_campaign_config.py campaign-config-v2.json > VERIFY-RESULT.json",
+  "testExitCode": 0
+}

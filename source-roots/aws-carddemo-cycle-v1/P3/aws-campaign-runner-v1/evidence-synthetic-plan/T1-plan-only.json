@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "case_id": "PLAN-ONLY-E1-1-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status"
+      },
+      "origin": "synthetic-plan-only",
+      "parameters": {
+        "contractId": "E1-1",
+        "operationId": "postDailyTransactions",
+        "track": "posting"
+      },
+      "provenance": [
+        "synthetic-plan-only:no-cobol"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting-runs"
+      },
+      "resource_package_id": "none",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 1.0
+    }
+  ],
+  "suite_freeze_sha256": "5a30c5efd2753ebf6d7d447d93a0d282b5a626cba12341386a922b99aafac87e",
+  "suite_id": "T1"
+}

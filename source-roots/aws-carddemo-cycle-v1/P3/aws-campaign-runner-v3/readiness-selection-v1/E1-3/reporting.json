@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E1-3-reporting-T1-REAL-E1-3-E1-3-T1-REPORTS-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E1-3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E1-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "T1-REPORTS-001",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "e52cb26bda2f4735da0886c570e7eb2673a791e9da77338351d1a28fb4ff871a",
+        "sourceScenarioCanonicalSha256": "6ce38d966955ceaa4c0eeb57dc7c54db6f7b8b4e4e2bc00256bd4ef15693f004",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E1-3:T1-REPORTS-001",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E1-3/T1.json:T1-REAL-E1-3-E1-3-T1-REPORTS-001"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOltdLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6W10sImNhcmRDcm9zc1JlZmVyZW5jZSI6IkNBUkRYUkVGIiwidHJhbnNhY3Rpb25UeXBlcyI6IlRSQU5UWVBFIiwidHJhbnNhY3Rpb25DYXRlZ29yaWVzIjoiVFJBTkNBVEciLCJyZXBvcnRPdXRwdXQiOiJUUkFOUkVQVCJ9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E1-3-reporting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "79b1df5324f74bfdb11a4322d56cebc0f52237bbe394376a1333fb34d5763f91",
+  "suite_id": "READINESS21-E1-3-reporting"
+}

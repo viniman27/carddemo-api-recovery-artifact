@@ -1,0 +1,58 @@
+{
+  "requests": [
+    {
+      "id": "posting",
+      "method": "POST",
+      "path": "/posting",
+      "body": {
+        "kind": "json",
+        "value": {}
+      },
+      "expectedStatus": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "parameters": {
+        "track": "posting"
+      }
+    },
+    {
+      "id": "interest",
+      "method": "POST",
+      "path": "/interest",
+      "body": {
+        "kind": "json",
+        "value": {}
+      },
+      "expectedStatus": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "parameters": {
+        "track": "interest"
+      }
+    },
+    {
+      "id": "reporting",
+      "method": "POST",
+      "path": "/reporting",
+      "body": {
+        "kind": "json",
+        "value": {}
+      },
+      "expectedStatus": [
+        200,
+        400,
+        500,
+        503
+      ],
+      "parameters": {
+        "track": "reporting"
+      }
+    }
+  ]
+}

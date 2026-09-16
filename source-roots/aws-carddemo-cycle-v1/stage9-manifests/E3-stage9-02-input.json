@@ -1,0 +1,443 @@
+{
+  "kind": "stage9-input-manifest",
+  "version": 1,
+  "run_id": "E3-stage9-02",
+  "scope": {
+    "case": "aws-carddemo-cycle-v1",
+    "stage": 9,
+    "boundary": "stage9-only; not T1/T2/T3/T4; no model calls",
+    "implementation_mode": "source_adoption_and_build",
+    "generated_from_scratch": false
+  },
+  "upstream": {
+    "run_id": "E3-01",
+    "stage_specs": [
+      {
+        "stage": 1,
+        "path": "specs/pipeline-scope-carddemo/spec.json"
+      },
+      {
+        "stage": 2,
+        "path": "specs/capability-selection-carddemo-r2/spec.json"
+      },
+      {
+        "stage": 3,
+        "path": "specs/legacy-evidence-carddemo-r2/spec.json"
+      },
+      {
+        "stage": 4,
+        "path": "specs/capability-semantics-carddemo/spec.json"
+      },
+      {
+        "stage": 5,
+        "path": "specs/canonical-data-boundary-carddemo/spec.json"
+      },
+      {
+        "stage": 6,
+        "path": "specs/api-contract-carddemo-r3/spec.json"
+      },
+      {
+        "stage": 7,
+        "path": "specs/adapter-behavior-carddemo-r2/spec.json"
+      },
+      {
+        "stage": 8,
+        "path": "specs/semantic-validation-carddemo/spec.json"
+      }
+    ]
+  },
+  "implementation_sources": {
+    "root": "../P2b",
+    "target": "aws-carddemo-cycle-v1/P2b",
+    "adoption_note": "Existing P2b source implementation adopted; no old build/runs copied.",
+    "forbidden_existing_binary_dirs": [
+      "build",
+      "runs",
+      "__pycache__",
+      "evidence-archive"
+    ],
+    "files": [
+      {
+        "path": "p2b_binding.py",
+        "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+        "bytes": 39014
+      },
+      {
+        "path": "runtime_observations.py",
+        "sha256": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+        "bytes": 5151
+      },
+      {
+        "path": "write_observer.c",
+        "sha256": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+        "bytes": 1923
+      },
+      {
+        "path": "interest_driver.cbl",
+        "sha256": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080",
+        "bytes": 920
+      },
+      {
+        "path": "validate_p2b.py",
+        "sha256": "ca3f57abb6735eef3aa33d85aa8ce07bb311e5e0e6cc06ca71a35f255845a41b",
+        "bytes": 2154
+      }
+    ]
+  },
+  "contract": {
+    "groups": [
+      {
+        "root": "../P2a",
+        "target": "aws-carddemo-cycle-v1/P2a",
+        "files": [
+          {
+            "path": "openapi-carddemo-stage6r3.yaml",
+            "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+            "bytes": 51697
+          },
+          {
+            "path": "openapi-carddemo-stage6r3.json",
+            "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a",
+            "bytes": 66677
+          },
+          {
+            "path": "validation-report.json",
+            "sha256": "9a7e5e180c80e242e5ee6a01c345d85d4efe9e1d286556a41f1bd2910f1e806f",
+            "bytes": 19445
+          },
+          {
+            "path": "plan-binding.md",
+            "sha256": "207e18186aa173d2ef8ed8314b93a08b69886b89edb5b45d7af46bf0a7639ada",
+            "bytes": 5071
+          }
+        ]
+      }
+    ]
+  },
+  "toolchain": {
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "python_pin": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+      "sha256": "b0d7748b5bdf494eaf78e12cea8be15361858b3be99fbd91b5bac55ba7d65f4a",
+      "bytes": 14976112
+    },
+    "cobc": "/opt/homebrew/bin/cobc",
+    "commands": {
+      "build": [
+        "python",
+        "p2b_binding.py",
+        "build"
+      ],
+      "start": [
+        "python",
+        "p2b_binding.py",
+        "serve",
+        "--port-file",
+        "server.port"
+      ],
+      "qualify": [
+        "POST {} to /posting, /interest, /reporting; validate readiness-manifest via validate_p2b.py"
+      ],
+      "package": [
+        "create tar.gz with execution tree and launch_stage9.py"
+      ]
+    }
+  },
+  "resources": {
+    "fixture_registry": {
+      "path": "../P3/technical-packages-v3-argument/registry.json",
+      "sha256": "e37aea9bac1a04eef616f74b9264b11d63b0564c9ae706cace4db30be37cea2e",
+      "bytes": 7007
+    },
+    "groups": [
+      {
+        "root": "../P3/technical-packages-v3-argument",
+        "target": "aws-carddemo-cycle-v1/P3/technical-packages-v3-argument",
+        "files": [
+          {
+            "path": "interest/ACCTFILE",
+            "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+            "bytes": 8192
+          },
+          {
+            "path": "interest/DISCGRP",
+            "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+            "bytes": 8192
+          },
+          {
+            "path": "interest/PARMFILE",
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "bytes": 10
+          },
+          {
+            "path": "interest/TCATBALF",
+            "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+            "bytes": 8192
+          },
+          {
+            "path": "interest/XREFFILE",
+            "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+            "bytes": 8192
+          },
+          {
+            "path": "interest/XREFFILE.1",
+            "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+            "bytes": 8192
+          },
+          {
+            "path": "posting/ACCTFILE",
+            "sha256": "2d1d9d1098a8b44c9b258f0019374f6575bd1b0be18d3e36379d21b78a201568",
+            "bytes": 8192
+          },
+          {
+            "path": "posting/DALYTRAN",
+            "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2",
+            "bytes": 350
+          },
+          {
+            "path": "posting/TCATBALF",
+            "sha256": "ed8b01b8da73f34fcf14922a2c994a88e763891de61ff161d927e6a9f83edbf2",
+            "bytes": 8192
+          },
+          {
+            "path": "posting/TRANFILE",
+            "sha256": "0bcb9694dfefc8c8e682e033f0572521136f9dc6910179c22b6536a131fee460",
+            "bytes": 8192
+          },
+          {
+            "path": "posting/XREFFILE",
+            "sha256": "d91290e6b5be906e6335b066b977a6179021d29e4357872f3f57be6437ab8356",
+            "bytes": 8192
+          },
+          {
+            "path": "reporting/CARDXREF",
+            "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+            "bytes": 8192
+          },
+          {
+            "path": "reporting/DATEPARM",
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+            "bytes": 80
+          },
+          {
+            "path": "reporting/TRANCATG",
+            "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+            "bytes": 8192
+          },
+          {
+            "path": "reporting/TRANFILE",
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+            "bytes": 350
+          },
+          {
+            "path": "reporting/TRANTYPE",
+            "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+            "bytes": 8192
+          }
+        ]
+      },
+      {
+        "root": "../../aws-carddemo-preparation/evidence",
+        "target": "aws-carddemo-preparation/evidence",
+        "files": [
+          {
+            "path": "research-package.json",
+            "sha256": "63ba5c47ecb21349549744b912af3b150654e7e435724dba499e3c88369f15a2",
+            "bytes": 4556
+          }
+        ]
+      },
+      {
+        "root": "../../aws-carddemo-preparation/research-corpus",
+        "target": "aws-carddemo-preparation/research-corpus",
+        "files": [
+          {
+            "path": "LICENSE",
+            "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+            "bytes": 10142
+          },
+          {
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+            "bytes": 52479
+          },
+          {
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+            "bytes": 58890
+          },
+          {
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+            "bytes": 52239
+          },
+          {
+            "path": "app/cpy/CVACT01Y.cpy",
+            "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+            "bytes": 1125
+          },
+          {
+            "path": "app/cpy/CVACT03Y.cpy",
+            "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+            "bytes": 736
+          },
+          {
+            "path": "app/cpy/CVTRA01Y.cpy",
+            "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+            "bytes": 898
+          },
+          {
+            "path": "app/cpy/CVTRA02Y.cpy",
+            "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+            "bytes": 898
+          },
+          {
+            "path": "app/cpy/CVTRA03Y.cpy",
+            "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+            "bytes": 655
+          },
+          {
+            "path": "app/cpy/CVTRA04Y.cpy",
+            "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+            "bytes": 817
+          },
+          {
+            "path": "app/cpy/CVTRA05Y.cpy",
+            "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+            "bytes": 1546
+          },
+          {
+            "path": "app/cpy/CVTRA06Y.cpy",
+            "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+            "bytes": 1538
+          },
+          {
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+            "bytes": 5758
+          },
+          {
+            "path": "app/jcl/COMBTRAN.jcl",
+            "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+            "bytes": 3662
+          },
+          {
+            "path": "app/jcl/INTCALC.jcl",
+            "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+            "bytes": 2964
+          },
+          {
+            "path": "app/jcl/POSTTRAN.jcl",
+            "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+            "bytes": 3246
+          },
+          {
+            "path": "app/jcl/TRANBKP.jcl",
+            "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+            "bytes": 5330
+          },
+          {
+            "path": "app/jcl/TRANREPT.jcl",
+            "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+            "bytes": 6427
+          },
+          {
+            "path": "app/proc/REPROC.prc",
+            "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+            "bytes": 2233
+          }
+        ]
+      },
+      {
+        "root": "../../aws-carddemo-preparation/expanded-batch/support",
+        "target": "aws-carddemo-preparation/expanded-batch/support",
+        "files": [
+          {
+            "path": "CBACT04C_driver.cbl",
+            "sha256": "e7a7c7ae2b669d36dd8f6dce894fba7530bae18c8e2ac562402250318b886d28",
+            "bytes": 292
+          },
+          {
+            "path": "CEE3ABD0.cbl",
+            "sha256": "b81a494b0e917eb078e0009c5f4e0db88f3f2ba367a7cc59dfc917a631c41130",
+            "bytes": 159
+          },
+          {
+            "path": "CEE3ABD2.cbl",
+            "sha256": "099ff2967e949720a2c725bee2c23fd424c573761575def216eba3a0dc0c6bd2",
+            "bytes": 291
+          },
+          {
+            "path": "intcalc_fixture.cbl",
+            "sha256": "8cf6cda1dcd2e90577e23c290dadc3105ccfe1b3a9adee306e6d100054478f94",
+            "bytes": 2863
+          },
+          {
+            "path": "load_idx.cbl",
+            "sha256": "8fd4799622e778dbbf6e0bf13d6052376812abdd492466c77885d0757e7e8f19",
+            "bytes": 1029
+          },
+          {
+            "path": "report_fixture.cbl",
+            "sha256": "2a6944f071e900422ba4f8ae07ed594af45cc451a3133177c06841ad98d996bf",
+            "bytes": 1784
+          }
+        ]
+      }
+    ],
+    "policy": "resources are implementation support/technical fixtures, not extraction inputs or business oracles"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "execution/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+        "cmd": [
+          "$toolchain.python",
+          "p2b_binding.py",
+          "build"
+        ]
+      }
+    ],
+    "start": [
+      {
+        "cwd": "execution/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+        "cmd": [
+          "$toolchain.python",
+          "p2b_binding.py",
+          "serve",
+          "--port-file",
+          "../../server.port"
+        ]
+      }
+    ],
+    "qualify": [
+      {
+        "http": "POST {}",
+        "tracks": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "cwd": "execution/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+        "cmd": [
+          "$toolchain.python",
+          "validate_p2b.py"
+        ]
+      }
+    ],
+    "package": [
+      {
+        "cmd": [
+          "tar",
+          "-czf",
+          "E3-stage9-02-stage9-executable-package.tar.gz",
+          "execution",
+          "launch_stage9.py",
+          "stage9-input-manifest.json"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "fixtureId": "synthetic-known-wrong-all-tracks-v1",
+  "description": "Deliberately wrong synthetic observations used to prove checkers reject semantic counterexamples.",
+  "observations": {
+    "posting": {
+      "returnCode": 0,
+      "acceptedTransactions": [
+        {
+          "id": "post-accepted-001",
+          "rawBytes": "504f535445442d4259544553",
+          "daily": {
+            "id": "TX1001",
+            "type": "01",
+            "category": "10",
+            "source": "POS",
+            "description": "Store purchase",
+            "amount": "25.75",
+            "merchant": "M123",
+            "card": "4111111111111111",
+            "origTs": "2026-09-01-09.30.00",
+            "procTs": "input-proc-should-not-copy"
+          },
+          "posted": {
+            "id": "TX1001",
+            "type": "01",
+            "category": "10",
+            "source": "POS",
+            "description": "Store purchase",
+            "amount": "26.75",
+            "merchant": "M123",
+            "card": "4111111111111111",
+            "origTs": "2026-09-01-09.30.00",
+            "procTs": "input-proc-should-not-copy"
+          },
+          "effectOrder": [
+            "validation",
+            "tranfile",
+            "account",
+            "tcatbal"
+          ],
+          "duplicatePrevalidated": true
+        }
+      ],
+      "rejects": [
+        {
+          "case": "missing-card",
+          "rawBytes": "52454a4543542d4259544553",
+          "reason": "101",
+          "description": "ACCOUNT NOT FOUND",
+          "postedTransactionWritten": true,
+          "rejectRecordWritten": false
+        }
+      ]
+    },
+    "interest": {
+      "transactions": [
+        {
+          "id": "interest-zero",
+          "categoryBalance": "1500.00",
+          "annualRate": "0.00",
+          "transactionWritten": true
+        },
+        {
+          "id": "interest-nonzero",
+          "rawBytes": "494e5445524553542d4259544553",
+          "categoryBalance": "1500.00",
+          "annualRate": "10.00",
+          "amount": "12.49",
+          "transactionWritten": true,
+          "type": "99",
+          "category": "99",
+          "source": "User",
+          "description": "Interest ACCT100",
+          "merchant": "M123",
+          "card": "4222222222222222",
+          "xrefCard": "4111111111111111"
+        }
+      ]
+    },
+    "reporting": {
+      "dateRange": [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      "transactions": [
+        {
+          "id": "report-before",
+          "procDate": "2026-08-31",
+          "amount": "7.00",
+          "detailWritten": true
+        },
+        {
+          "id": "report-start",
+          "procDate": "2026-09-01",
+          "amount": "10.00",
+          "detailWritten": false,
+          "detailLine": "TXR100 ACCT100 10.00",
+          "reportLineBytes": "44455441494c2d31"
+        },
+        {
+          "id": "report-inside",
+          "procDate": "2026-09-16",
+          "amount": "20.25",
+          "detailWritten": true,
+          "detailLine": "TXR101 ACCT100 20.25",
+          "reportLineBytes": ""
+        },
+        {
+          "id": "report-end",
+          "procDate": "2026-09-30",
+          "amount": "5.75",
+          "detailWritten": true,
+          "detailLine": "TXR102 ACCT100 5.75",
+          "reportLineBytes": "44455441494c2d33"
+        },
+        {
+          "id": "report-after",
+          "procDate": "2026-10-01",
+          "amount": "9.00",
+          "detailWritten": false
+        }
+      ],
+      "pageTotal": "1.00",
+      "accountTotal": "1.00"
+    }
+  }
+}

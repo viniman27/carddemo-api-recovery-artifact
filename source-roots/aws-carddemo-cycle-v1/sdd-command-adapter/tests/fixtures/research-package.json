@@ -1,0 +1,25 @@
+{
+  "scope": "Posting, interest transaction generation and transaction reporting",
+  "files": [
+    {
+      "path": "app/cbl/EXAMPLE.cbl",
+      "sha256": "0c22eca8ee09e7f06829f64295ef1331641fbcca223ed712d6182d7e232e05f5",
+      "physical_lines": 5,
+      "in_code_count": true
+    },
+    {
+      "path": "app/jcl/EXAMPLE.jcl",
+      "sha256": "8e734a689afddc11cff3ec8258de20661d74c4a9728d0e967727dc218a056a0a",
+      "physical_lines": 2,
+      "in_code_count": false
+    }
+  ],
+  "exclude_from_extraction": [
+    "support",
+    "runs",
+    "tests",
+    "reports",
+    "expected outputs"
+  ],
+  "data_policy": "Original layouts/JCL are inputs; synthetic preflight fixtures and expected outcomes are quarantined."
+}

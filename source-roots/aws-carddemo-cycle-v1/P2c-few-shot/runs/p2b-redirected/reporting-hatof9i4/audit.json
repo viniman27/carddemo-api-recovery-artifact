@@ -1,0 +1,550 @@
+{
+  "INV": {
+    "id": "p2c-E2-1-reporting-1789472711948",
+    "run": "E3-01",
+    "track": "reporting",
+    "request": {},
+    "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+    "localhost_only": true,
+    "time_utc": "2026-09-15T11:45:11Z",
+    "fixture_selection_channel": "local_config"
+  },
+  "RES": {
+    "binding_components": {
+      "p2b_binding.py": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "runtime_observations.py": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+      "write_observer.c": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+      "interest_driver.cbl": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    "source_pins": {
+      "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+      "programs": [
+        "CBTRN02C",
+        "CBACT04C",
+        "CBTRN03C"
+      ],
+      "checked_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "bytes": 52479
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "bytes": 58890
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "bytes": 52239
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "bytes": 1125
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "bytes": 736
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "bytes": 898
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "bytes": 655
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "bytes": 817
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "bytes": 1546
+        },
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "bytes": 1538
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "bytes": 5758
+        },
+        {
+          "path": "app/jcl/COMBTRAN.jcl",
+          "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+          "bytes": 3662
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "bytes": 2964
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "bytes": 3246
+        },
+        {
+          "path": "app/jcl/TRANBKP.jcl",
+          "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+          "bytes": 5330
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "bytes": 6427
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "bytes": 2233
+        }
+      ],
+      "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+    },
+    "fixture_policy": "external local technical fixture selection; not evaluation oracle; not extraction input; not public request",
+    "selected_fixture": {
+      "fixtureId": "reporting-native-technical-v2",
+      "track": "reporting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "CARDXREF": "reporting/CARDXREF",
+          "DATEPARM": "reporting/DATEPARM",
+          "TRANCATG": "reporting/TRANCATG",
+          "TRANFILE": "reporting/TRANFILE",
+          "TRANTYPE": "reporting/TRANTYPE"
+        },
+        "filePins": {
+          "CARDXREF": {
+            "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+            "bytes": 8192
+          },
+          "DATEPARM": {
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+            "bytes": 80
+          },
+          "TRANCATG": {
+            "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+            "bytes": 350
+          },
+          "TRANTYPE": {
+            "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "prior technical smoke INPUT resources, not expected outputs",
+        "files": [
+          {
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+          },
+          {
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+          }
+        ],
+        "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+        "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "ced251e42e8111d9e56b9480e16923c3cd589aae691e39801e815d22e4f89679",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "verifiedDescriptorSha256": "ced251e42e8111d9e56b9480e16923c3cd589aae691e39801e815d22e4f89679",
+      "resolvedFixtureFiles": {
+        "CARDXREF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+        "DATEPARM": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/DATEPARM",
+        "TRANCATG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+        "TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANFILE",
+        "TRANTYPE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE"
+      }
+    },
+    "p2a_contract": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+    "requestBindingsResolved": {}
+  },
+  "CAP": {
+    "captures": [
+      {
+        "label": "TRANFILE.pre_cobol",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/TRANFILE",
+        "exists": true,
+        "bytes": 350,
+        "sha256": "bbcf41db476900ebd4bc0df70c12c7d4cdc9b2c728e15ffd8fdfd5f50d3628da"
+      },
+      {
+        "label": "DATEPARM.pre_cobol",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/DATEPARM",
+        "exists": true,
+        "bytes": 80,
+        "sha256": "12445aab845ba74f03151a79fe956388a93225c8cd292566d3fe908f41f682b5"
+      },
+      {
+        "label": "TRANREPT",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/TRANREPT",
+        "exists": true,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "freshness": "created in this invocation workspace",
+    "fixture_materialization": {
+      "fixtureId": "reporting-native-technical-v2",
+      "track": "reporting",
+      "materializerKind": "local_file_package",
+      "registryPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+      "files": {
+        "CARDXREF": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+          "sourceBytes": 8192,
+          "sourceSha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/CARDXREF",
+          "materializedBytes": 8192,
+          "materializedSha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "prior technical smoke INPUT resources, not expected outputs",
+            "files": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+                "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+              },
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+                "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+              }
+            ],
+            "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+            "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+          }
+        },
+        "DATEPARM": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/DATEPARM",
+          "sourceBytes": 80,
+          "sourceSha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/DATEPARM",
+          "materializedBytes": 80,
+          "materializedSha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "prior technical smoke INPUT resources, not expected outputs",
+            "files": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+                "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+              },
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+                "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+              }
+            ],
+            "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+            "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+          }
+        },
+        "TRANCATG": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+          "sourceBytes": 8192,
+          "sourceSha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/TRANCATG",
+          "materializedBytes": 8192,
+          "materializedSha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "prior technical smoke INPUT resources, not expected outputs",
+            "files": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+                "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+              },
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+                "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+              }
+            ],
+            "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+            "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+          }
+        },
+        "TRANFILE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANFILE",
+          "sourceBytes": 350,
+          "sourceSha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/TRANFILE",
+          "materializedBytes": 350,
+          "materializedSha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "prior technical smoke INPUT resources, not expected outputs",
+            "files": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+                "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+              },
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+                "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+              }
+            ],
+            "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+            "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+          }
+        },
+        "TRANTYPE": {
+          "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+          "sourceBytes": 8192,
+          "sourceSha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+          "materializedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4/TRANTYPE",
+          "materializedBytes": 8192,
+          "materializedSha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+          "provenance": {
+            "class": "local_synthetic_support",
+            "officialFixture": false,
+            "source": "prior technical smoke INPUT resources, not expected outputs",
+            "files": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+                "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+              },
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+                "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+              }
+            ],
+            "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+            "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+          }
+        }
+      },
+      "preCobolMaterializationSnapshot": {
+        "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+        "entryCount": 5,
+        "treeSha256": "4dd3e3d7c9d767cd7a7ccc3c646997c2c223fa6d6ce0b6c214b66ea260d65995",
+        "files": [
+          {
+            "path": "CARDXREF",
+            "bytes": 8192,
+            "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff"
+          },
+          {
+            "path": "DATEPARM",
+            "bytes": 80,
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+          },
+          {
+            "path": "TRANCATG",
+            "bytes": 8192,
+            "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b"
+          },
+          {
+            "path": "TRANFILE",
+            "bytes": 350,
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+          },
+          {
+            "path": "TRANTYPE",
+            "bytes": 8192,
+            "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd"
+          }
+        ]
+      }
+    },
+    "program_stdout": "START OF EXECUTION OF PROGRAM CBTRN03C\nReporting from 2025-01-01 to 2025-12-31\nTEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000000000000000000012025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234\nINVALID CARD NUMBER : 0000000000000001\nFILE STATUS IS: NNNN0023\nABENDING PROGRAM\n",
+    "program_stderr": "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000\nlibcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')\nlibcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')\nlibcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')\nlibcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')\nlibcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')\nlibcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')\n",
+    "report_record_classifications": []
+  },
+  "CONV": {
+    "field_mappings": [],
+    "limits": [
+      "technical parse only",
+      "no semantic repairs",
+      "no coverage inference from build"
+    ]
+  },
+  "FAIL": {
+    "events": [
+      {
+        "kind": "local_compatibility_abort",
+        "raw": "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+        "authority": "local CEE3ABD2 compatibility diagnostic; cause/effects not inferred"
+      }
+    ]
+  },
+  "STATE": {
+    "isolation": "new per-invocation directory",
+    "durability": "unknown",
+    "reset_claim": "not_attested_by_single_invocation",
+    "before": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+      "entryCount": 0,
+      "treeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "files": []
+    },
+    "pre_cobol_materialization": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+      "entryCount": 5,
+      "treeSha256": "4dd3e3d7c9d767cd7a7ccc3c646997c2c223fa6d6ce0b6c214b66ea260d65995",
+      "files": [
+        {
+          "path": "CARDXREF",
+          "bytes": 8192,
+          "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff"
+        },
+        {
+          "path": "DATEPARM",
+          "bytes": 80,
+          "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+        },
+        {
+          "path": "TRANCATG",
+          "bytes": 8192,
+          "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b"
+        },
+        {
+          "path": "TRANFILE",
+          "bytes": 350,
+          "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+        },
+        {
+          "path": "TRANTYPE",
+          "bytes": 8192,
+          "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd"
+        }
+      ]
+    },
+    "pre_cobol_request_materialized": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+      "entryCount": 5,
+      "treeSha256": "9050dc939811ccb4762978a4f6efbf2ef8104c126fea8c4b4b5234a1dc6a12df",
+      "files": [
+        {
+          "path": "CARDXREF",
+          "bytes": 8192,
+          "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff"
+        },
+        {
+          "path": "DATEPARM",
+          "bytes": 80,
+          "sha256": "12445aab845ba74f03151a79fe956388a93225c8cd292566d3fe908f41f682b5"
+        },
+        {
+          "path": "TRANCATG",
+          "bytes": 8192,
+          "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b"
+        },
+        {
+          "path": "TRANFILE",
+          "bytes": 350,
+          "sha256": "bbcf41db476900ebd4bc0df70c12c7d4cdc9b2c728e15ffd8fdfd5f50d3628da"
+        },
+        {
+          "path": "TRANTYPE",
+          "bytes": 8192,
+          "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd"
+        }
+      ],
+      "afterRequestInputs": [
+        "TRANFILE",
+        "DATEPARM"
+      ],
+      "provenance": "after fixture materialization and request DALYTRAN/TRANFILE/DATEPARM/PARMFILE writes; before COBOL invocation"
+    },
+    "after": {
+      "root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-hatof9i4",
+      "entryCount": 6,
+      "treeSha256": "ad17736e5e452182ade298df40e90e1692356187e7cae79c35f631a4baf587df",
+      "files": [
+        {
+          "path": "CARDXREF",
+          "bytes": 8192,
+          "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff"
+        },
+        {
+          "path": "DATEPARM",
+          "bytes": 80,
+          "sha256": "12445aab845ba74f03151a79fe956388a93225c8cd292566d3fe908f41f682b5"
+        },
+        {
+          "path": "TRANCATG",
+          "bytes": 8192,
+          "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b"
+        },
+        {
+          "path": "TRANFILE",
+          "bytes": 350,
+          "sha256": "bbcf41db476900ebd4bc0df70c12c7d4cdc9b2c728e15ffd8fdfd5f50d3628da"
+        },
+        {
+          "path": "TRANREPT",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "TRANTYPE",
+          "bytes": 8192,
+          "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd"
+        }
+      ]
+    }
+  },
+  "RESP": {
+    "status": 500,
+    "body": {
+      "track": "reporting",
+      "category": "technical_failure",
+      "completeness": "not_attested",
+      "durability": "unknown",
+      "availableContent": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": []
+        }
+      }
+    },
+    "program_exit": 12,
+    "reached_cobol": false
+  }
+}

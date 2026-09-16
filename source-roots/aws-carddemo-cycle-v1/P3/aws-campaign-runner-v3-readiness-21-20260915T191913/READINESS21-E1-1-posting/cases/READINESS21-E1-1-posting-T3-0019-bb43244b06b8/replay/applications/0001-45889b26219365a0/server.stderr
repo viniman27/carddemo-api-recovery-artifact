@@ -1,0 +1,34 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55376)
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 711, in do_POST
+    result = ContractFacade(cid, outer.output_root, outer.registry).execute(track, body)
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 358, in __init__
+    self.p2b.BUILD = ensure_p2c_local_build(self.p2b)
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 263, in ensure_p2c_local_build
+    raise RuntimeError(f"P2b build precondition missing: {missing}; P2c does not call P2b build")
+RuntimeError: P2b build precondition missing: ['CBTRN02C', 'CBACT04C.dylib', 'CBTRN03C', 'io_TRANFILE', 'io_ACCTFILE', 'io_XREFFILE', 'io_TCATBALF']; P2c does not call P2b build
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/http/server.py", line 437, in handle
+    self.handle_one_request()
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/http/server.py", line 425, in handle_one_request
+    method()
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 717, in do_POST
+    body = ContractFacade(cid, outer.output_root, outer.registry)._failure_body(track, {"category": "technical_failure"}, [repr(exc)])
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 358, in __init__
+    self.p2b.BUILD = ensure_p2c_local_build(self.p2b)
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py", line 263, in ensure_p2c_local_build
+    raise RuntimeError(f"P2b build precondition missing: {missing}; P2c does not call P2b build")
+RuntimeError: P2b build precondition missing: ['CBTRN02C', 'CBACT04C.dylib', 'CBTRN03C', 'io_TRANFILE', 'io_ACCTFILE', 'io_XREFFILE', 'io_TCATBALF']; P2c does not call P2b build
+----------------------------------------

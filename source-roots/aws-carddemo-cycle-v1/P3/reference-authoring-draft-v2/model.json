@@ -1,0 +1,3065 @@
+{
+  "status": "draft_needs_independent_review",
+  "model_type": "finite_source_anchored_mbt_draft_v2_structured",
+  "schema": "local/reference-mbt-model-v2",
+  "guardAst": {
+    "operators": [
+      "and",
+      "or",
+      "not",
+      "eq",
+      "ne",
+      "gte",
+      "lte",
+      "status_is",
+      "exists",
+      "changed",
+      "first_record",
+      "unknown"
+    ],
+    "unknownSelectionPolicy": "Guards with op=unknown are not selectable as deterministic paths until an external runtime authority supplies the missing fact; they remain explicit coverage gaps."
+  },
+  "global_boundaries": {
+    "not_modeled": [
+      "official cases/campaigns",
+      "contracts E1/E2",
+      "SDD/API/support fixtures",
+      "atomicity/durability/commit",
+      "calendar validity",
+      "rounding beyond source PIC/COMPUTE",
+      "post-failure persisted state",
+      "COBOL runtime receiver content at EOF unless source/runtime authority establishes it"
+    ],
+    "finite_abstraction": "Each loop is bounded by symbolic input cardinalities declared per capability plus one EOF read; repeated records are represented by self-loop transitions with counters rather than enumerated cases."
+  },
+  "capabilities": [
+    {
+      "id": "CBTRN02C_POSTTRAN",
+      "program": "CBTRN02C",
+      "job": "POSTTRAN",
+      "parameters": {
+        "maxDailyRecords": {
+          "type": "nat",
+          "domain": "0..N",
+          "boundJustification": "one loop iteration per status-00 DALYTRAN plus one EOF read"
+        }
+      },
+      "variables": {
+        "open_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "read_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "10",
+            "other"
+          ]
+        },
+        "key_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "amount_sign": {
+          "type": "enum",
+          "domain": [
+            "negative",
+            "zero",
+            "positive"
+          ]
+        },
+        "write_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "rewrite_invalid_key": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "eof_receiver_authority": {
+          "type": "enum",
+          "domain": [
+            "retained_in_range",
+            "retained_out_of_range",
+            "unknown_empty_or_unestablished"
+          ]
+        },
+        "xref_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "account_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "within_limit": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "not_expired_textual": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "tcatbal_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "23",
+            "other"
+          ]
+        },
+        "tranfile_write_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "P_START",
+          "terminal": false
+        },
+        {
+          "id": "P_OPENED",
+          "terminal": false
+        },
+        {
+          "id": "P_VALIDATE_XREF",
+          "terminal": false
+        },
+        {
+          "id": "P_VALIDATE_ACCOUNT",
+          "terminal": false
+        },
+        {
+          "id": "P_REJECT",
+          "terminal": false
+        },
+        {
+          "id": "P_TCATBAL_READ",
+          "terminal": false
+        },
+        {
+          "id": "P_TCATBAL_WRITE",
+          "terminal": false
+        },
+        {
+          "id": "P_ACCOUNT_REWRITE",
+          "terminal": false
+        },
+        {
+          "id": "P_TRANFILE_WRITE",
+          "terminal": false
+        },
+        {
+          "id": "P_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "P_ABEND",
+          "terminal": true
+        }
+      ],
+      "initialState": "P_START",
+      "terminalStates": {
+        "success": [
+          "P_CLOSE"
+        ],
+        "failure": [
+          "P_ABEND"
+        ],
+        "unknown": []
+      },
+      "transitions": [
+        {
+          "id": "POSTTRAN-T001",
+          "from": "P_START",
+          "to": "P_OPENED",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "00"
+          },
+          "effects": [
+            "open all files"
+          ],
+          "observables": [
+            "files open"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                193,
+                200
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T002",
+          "from": "P_START",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display io status",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                193,
+                200
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "POSTTRAN-T003",
+          "from": "P_OPENED",
+          "to": "P_VALIDATE_XREF",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "00"
+          },
+          "effects": [
+            "read daily record",
+            "increment transaction count"
+          ],
+          "observables": [
+            "count"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                202,
+                219
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T004",
+          "from": "P_OPENED",
+          "to": "P_CLOSE",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "10"
+          },
+          "effects": [
+            "set END-OF-FILE=Y"
+          ],
+          "observables": [
+            "normal close path"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        },
+        {
+          "id": "POSTTRAN-T005",
+          "from": "P_OPENED",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "other"
+          },
+          "effects": [
+            "display read error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "POSTTRAN-T006",
+          "from": "P_VALIDATE_XREF",
+          "to": "P_REJECT",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "xref_exists"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "set reject reason 100"
+          ],
+          "observables": [
+            "DALYREJS candidate"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                380,
+                392
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T007",
+          "from": "P_VALIDATE_XREF",
+          "to": "P_VALIDATE_ACCOUNT",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "xref_exists"
+              },
+              {
+                "value": true,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "load account key"
+          ],
+          "observables": [
+            "account lookup"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                380,
+                421
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T008",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "account_exists"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "set reject reason 101"
+          ],
+          "observables": [
+            "DALYREJS candidate"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                393,
+                421
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T009",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_exists"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "not_expired_textual"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "set reject reason 103 after any overlimit reason"
+          ],
+          "observables": [
+            "DALYREJS candidate"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                407,
+                421
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T010",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_exists"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "within_limit"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "not_expired_textual"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "set reject reason 102"
+          ],
+          "observables": [
+            "DALYREJS candidate"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                403,
+                413
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T011",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_TCATBAL_READ",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_exists"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "within_limit"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "not_expired_textual"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "move DALYTRAN fields to TRAN",
+            "set proc timestamp"
+          ],
+          "observables": [
+            "TRAN record prepared"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T012",
+          "from": "P_REJECT",
+          "to": "P_OPENED",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "00"
+          },
+          "effects": [
+            "write reject",
+            "increment reject count"
+          ],
+          "observables": [
+            "DALYREJS"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                446,
+                465
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T013",
+          "from": "P_REJECT",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display reject write error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                446,
+                465
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "POSTTRAN-T014",
+          "from": "P_TCATBAL_READ",
+          "to": "P_TCATBAL_WRITE",
+          "guard": {
+            "op": "status_is",
+            "var": "tcatbal_status",
+            "value": "23"
+          },
+          "effects": [
+            "initialize tcatbal",
+            "add amount"
+          ],
+          "observables": [
+            "create TCATBAL"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                467,
+                524
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T015",
+          "from": "P_TCATBAL_READ",
+          "to": "P_TCATBAL_WRITE",
+          "guard": {
+            "op": "status_is",
+            "var": "tcatbal_status",
+            "value": "00"
+          },
+          "effects": [
+            "add amount to existing tcatbal"
+          ],
+          "observables": [
+            "rewrite TCATBAL"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                526,
+                542
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T016",
+          "from": "P_TCATBAL_READ",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "tcatbal_status",
+            "value": "other"
+          },
+          "effects": [
+            "display tcatbal read error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                481,
+                492
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "POSTTRAN-T017",
+          "from": "P_TCATBAL_WRITE",
+          "to": "P_ACCOUNT_REWRITE",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "00"
+          },
+          "effects": [
+            "TCATBAL effect attempted/succeeded by status",
+            "call account update"
+          ],
+          "observables": [
+            "TCATBAL"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007",
+            "POSTTRAN-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                503,
+                542
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T018",
+          "from": "P_TCATBAL_WRITE",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display tcatbal write/rewrite error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                510,
+                542
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "POSTTRAN-T019",
+          "from": "P_ACCOUNT_REWRITE",
+          "to": "P_TRANFILE_WRITE",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "rewrite_invalid_key"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "update account balances",
+            "rewrite account returns without invalid key"
+          ],
+          "observables": [
+            "ACCOUNT attempted"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T020",
+          "from": "P_ACCOUNT_REWRITE",
+          "to": "P_TRANFILE_WRITE",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "rewrite_invalid_key"
+              },
+              {
+                "value": true,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "update account working fields",
+            "set reason 109 without local abend",
+            "continue to TRANFILE write"
+          ],
+          "observables": [
+            "reason 109 internal",
+            "next write attempted"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                440,
+                442
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T021",
+          "from": "P_TRANFILE_WRITE",
+          "to": "P_OPENED",
+          "guard": {
+            "op": "status_is",
+            "var": "tranfile_write_status",
+            "value": "00"
+          },
+          "effects": [
+            "write TRANFILE",
+            "loop next daily record"
+          ],
+          "observables": [
+            "TRANFILE"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-003",
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "POSTTRAN-T022",
+          "from": "P_TRANFILE_WRITE",
+          "to": "P_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "tranfile_write_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display TRANFILE write error",
+            "abend after prior effects attempted"
+          ],
+          "observables": [
+            "abend after TCATBAL/ACCOUNT calls"
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        }
+      ],
+      "coverage_obligations": [
+        "POSTTRAN-OBL-001",
+        "POSTTRAN-OBL-002",
+        "POSTTRAN-OBL-003",
+        "POSTTRAN-OBL-004",
+        "POSTTRAN-OBL-005",
+        "POSTTRAN-OBL-006",
+        "POSTTRAN-OBL-007",
+        "POSTTRAN-OBL-008",
+        "POSTTRAN-OBL-009"
+      ]
+    },
+    {
+      "id": "CBACT04C_INTCALC",
+      "program": "CBACT04C",
+      "job": "INTCALC",
+      "parameters": {
+        "maxTcatbalRecords": {
+          "type": "nat",
+          "domain": "0..N",
+          "boundJustification": "one loop iteration per status-00 TCATBAL plus one EOF read"
+        },
+        "maxGroups": {
+          "type": "nat",
+          "domain": "0..maxTcatbalRecords",
+          "boundJustification": "group break abstraction by account id changes"
+        }
+      },
+      "variables": {
+        "open_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "read_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "10",
+            "other"
+          ]
+        },
+        "key_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "amount_sign": {
+          "type": "enum",
+          "domain": [
+            "negative",
+            "zero",
+            "positive"
+          ]
+        },
+        "write_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "rewrite_invalid_key": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "eof_receiver_authority": {
+          "type": "enum",
+          "domain": [
+            "retained_in_range",
+            "retained_out_of_range",
+            "unknown_empty_or_unestablished"
+          ]
+        },
+        "first_record": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "account_changed": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "account_xref_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "discgrp_status": {
+          "type": "status",
+          "domain": [
+            "specific_00",
+            "specific_23_default_00",
+            "specific_23_default_missing",
+            "other"
+          ]
+        },
+        "rate_zero": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "I_START",
+          "terminal": false
+        },
+        {
+          "id": "I_OPENED",
+          "terminal": false
+        },
+        {
+          "id": "I_NEW_GROUP",
+          "terminal": false
+        },
+        {
+          "id": "I_RATE_LOOKUP",
+          "terminal": false
+        },
+        {
+          "id": "I_INTEREST_DECISION",
+          "terminal": false
+        },
+        {
+          "id": "I_WRITE_INTEREST",
+          "terminal": false
+        },
+        {
+          "id": "I_UPDATE_PREVIOUS",
+          "terminal": false
+        },
+        {
+          "id": "I_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "I_ABEND",
+          "terminal": true
+        }
+      ],
+      "initialState": "I_START",
+      "terminalStates": {
+        "success": [
+          "I_CLOSE"
+        ],
+        "failure": [
+          "I_ABEND"
+        ],
+        "unknown": []
+      },
+      "transitions": [
+        {
+          "id": "INTCALC-T001",
+          "from": "I_START",
+          "to": "I_OPENED",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "00"
+          },
+          "effects": [
+            "open files"
+          ],
+          "observables": [
+            "files open"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                180,
+                186
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T002",
+          "from": "I_START",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display open error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                234,
+                249
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "INTCALC-T003",
+          "from": "I_OPENED",
+          "to": "I_NEW_GROUP",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "status_is",
+                "var": "read_status",
+                "value": "00"
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_changed"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "first_record"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "read first TCATBAL",
+            "mark first=N",
+            "zero total",
+            "load account/xref"
+          ],
+          "observables": [
+            "first group loaded"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                188,
+                205
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T004",
+          "from": "I_OPENED",
+          "to": "I_UPDATE_PREVIOUS",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "status_is",
+                "var": "read_status",
+                "value": "00"
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_changed"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "first_record"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "read new group",
+            "update previous account before loading new"
+          ],
+          "observables": [
+            "ACCOUNT previous"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                194,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                350,
+                370
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T005",
+          "from": "I_OPENED",
+          "to": "I_RATE_LOOKUP",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "status_is",
+                "var": "read_status",
+                "value": "00"
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "account_changed"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "same group",
+            "prepare rate key"
+          ],
+          "observables": [
+            "same group category"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                188,
+                217
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T006",
+          "from": "I_OPENED",
+          "to": "I_CLOSE",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "10"
+          },
+          "effects": [
+            "set EOF; no final 1050 reached in normal loop"
+          ],
+          "observables": [
+            "no final account update"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                188,
+                222
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        },
+        {
+          "id": "INTCALC-T007",
+          "from": "I_OPENED",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "other"
+          },
+          "effects": [
+            "display read error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                325,
+                348
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "INTCALC-T008",
+          "from": "I_UPDATE_PREVIOUS",
+          "to": "I_NEW_GROUP",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "00"
+          },
+          "effects": [
+            "rewrite prior account",
+            "zero total",
+            "load new account/xref"
+          ],
+          "observables": [
+            "ACCOUNT previous updated"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-007",
+            "INTCALC-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                350,
+                370
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                200,
+                205
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T009",
+          "from": "I_UPDATE_PREVIOUS",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display account rewrite error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                350,
+                370
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "INTCALC-T010",
+          "from": "I_NEW_GROUP",
+          "to": "I_RATE_LOOKUP",
+          "guard": {
+            "op": "status_is",
+            "var": "account_xref_status",
+            "value": "00"
+          },
+          "effects": [
+            "account and xref loaded",
+            "prepare rate key"
+          ],
+          "observables": [
+            "account/xref"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-003",
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                372,
+                413
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                210,
+                217
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T011",
+          "from": "I_NEW_GROUP",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "account_xref_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display lookup error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                372,
+                413
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "INTCALC-T012",
+          "from": "I_RATE_LOOKUP",
+          "to": "I_INTEREST_DECISION",
+          "guard": {
+            "op": "status_is",
+            "var": "discgrp_status",
+            "value": "specific_00"
+          },
+          "effects": [
+            "use specific rate"
+          ],
+          "observables": [
+            "DIS-INT-RATE"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T013",
+          "from": "I_RATE_LOOKUP",
+          "to": "I_INTEREST_DECISION",
+          "guard": {
+            "op": "status_is",
+            "var": "discgrp_status",
+            "value": "specific_23_default_00"
+          },
+          "effects": [
+            "use DEFAULT rate"
+          ],
+          "observables": [
+            "DIS-INT-RATE default"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T014",
+          "from": "I_RATE_LOOKUP",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "or",
+            "args": [
+              {
+                "op": "status_is",
+                "var": "discgrp_status",
+                "value": "specific_23_default_missing"
+              },
+              {
+                "op": "status_is",
+                "var": "discgrp_status",
+                "value": "other"
+              }
+            ]
+          },
+          "effects": [
+            "display rate lookup error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "INTCALC-T015",
+          "from": "I_INTEREST_DECISION",
+          "to": "I_OPENED",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "rate_zero"
+              },
+              {
+                "value": true,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "no compute/write interest",
+            "loop next TCATBAL"
+          ],
+          "observables": [
+            "no TRANSACT"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                213,
+                217
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T016",
+          "from": "I_INTEREST_DECISION",
+          "to": "I_WRITE_INTEREST",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "rate_zero"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "compute interest",
+            "accumulate WS-TOTAL-INT",
+            "build interest transaction"
+          ],
+          "observables": [
+            "computed amount"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-005",
+            "INTCALC-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                462,
+                515
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T017",
+          "from": "I_WRITE_INTEREST",
+          "to": "I_OPENED",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "00"
+          },
+          "effects": [
+            "write TRANSACT",
+            "loop next TCATBAL"
+          ],
+          "observables": [
+            "TRANSACT"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                473,
+                515
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "INTCALC-T018",
+          "from": "I_WRITE_INTEREST",
+          "to": "I_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "write_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display TRANSACT write error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                473,
+                515
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        }
+      ],
+      "coverage_obligations": [
+        "INTCALC-OBL-001",
+        "INTCALC-OBL-002",
+        "INTCALC-OBL-003",
+        "INTCALC-OBL-004",
+        "INTCALC-OBL-005",
+        "INTCALC-OBL-006",
+        "INTCALC-OBL-007",
+        "INTCALC-OBL-008"
+      ]
+    },
+    {
+      "id": "CBTRN03C_TRANREPT",
+      "program": "CBTRN03C",
+      "job": "TRANREPT",
+      "parameters": {
+        "maxTranRecords": {
+          "type": "nat",
+          "domain": "0..N",
+          "boundJustification": "one loop iteration per status-00 TRANFILE plus one EOF read"
+        },
+        "maxCards": {
+          "type": "nat",
+          "domain": "0..maxTranRecords",
+          "boundJustification": "card break abstraction, with explicit final-card no-account-total path"
+        }
+      },
+      "variables": {
+        "open_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "read_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "10",
+            "other"
+          ]
+        },
+        "key_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "amount_sign": {
+          "type": "enum",
+          "domain": [
+            "negative",
+            "zero",
+            "positive"
+          ]
+        },
+        "write_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "rewrite_invalid_key": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "eof_receiver_authority": {
+          "type": "enum",
+          "domain": [
+            "retained_in_range",
+            "retained_out_of_range",
+            "unknown_empty_or_unestablished"
+          ]
+        },
+        "dateparm_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "10",
+            "other"
+          ]
+        },
+        "tran_proc_date_in_range": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "end_of_file": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "card_changed": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "first_card": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        },
+        "lookup_status": {
+          "type": "status",
+          "domain": [
+            "00",
+            "not_00"
+          ]
+        },
+        "line_boundary": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "R_START",
+          "terminal": false
+        },
+        {
+          "id": "R_DATEPARM",
+          "terminal": false
+        },
+        {
+          "id": "R_LOOP",
+          "terminal": false
+        },
+        {
+          "id": "R_AFTER_READ",
+          "terminal": false
+        },
+        {
+          "id": "R_OUT_OF_RANGE_SKIP",
+          "terminal": false
+        },
+        {
+          "id": "R_LOOKUP_CARD",
+          "terminal": false
+        },
+        {
+          "id": "R_LOOKUP_TYPE_CAT",
+          "terminal": false
+        },
+        {
+          "id": "R_DETAIL",
+          "terminal": false
+        },
+        {
+          "id": "R_EOF_TOTALS_CONDITIONAL",
+          "terminal": false
+        },
+        {
+          "id": "R_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "R_ABEND",
+          "terminal": true
+        },
+        {
+          "id": "R_UNKNOWN_EOF_RECEIVER",
+          "terminal": true
+        }
+      ],
+      "initialState": "R_START",
+      "terminalStates": {
+        "success": [
+          "R_CLOSE"
+        ],
+        "failure": [
+          "R_ABEND"
+        ],
+        "unknown": [
+          "R_UNKNOWN_EOF_RECEIVER"
+        ]
+      },
+      "transitions": [
+        {
+          "id": "TRANREPT-T001",
+          "from": "R_START",
+          "to": "R_DATEPARM",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "00"
+          },
+          "effects": [
+            "open files",
+            "read DATEPARM"
+          ],
+          "observables": [
+            "files open"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                160,
+                168
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T002",
+          "from": "R_START",
+          "to": "R_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "open_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display open error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                376,
+                480
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "TRANREPT-T003",
+          "from": "R_DATEPARM",
+          "to": "R_LOOP",
+          "guard": {
+            "op": "status_is",
+            "var": "dateparm_status",
+            "value": "00"
+          },
+          "effects": [
+            "date range loaded"
+          ],
+          "observables": [
+            "Reporting from/to"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                219,
+                243
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T004",
+          "from": "R_DATEPARM",
+          "to": "R_CLOSE",
+          "guard": {
+            "op": "status_is",
+            "var": "dateparm_status",
+            "value": "10"
+          },
+          "effects": [
+            "set END-OF-FILE=Y before loop"
+          ],
+          "observables": [
+            "no loop records"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                219,
+                243
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        },
+        {
+          "id": "TRANREPT-T005",
+          "from": "R_DATEPARM",
+          "to": "R_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "dateparm_status",
+            "value": "other"
+          },
+          "effects": [
+            "display DATEPARM read error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                219,
+                243
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "TRANREPT-T006",
+          "from": "R_LOOP",
+          "to": "R_AFTER_READ",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "00"
+          },
+          "effects": [
+            "read TRANFILE; END remains N"
+          ],
+          "observables": [
+            "TRAN-RECORD"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                178
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                248,
+                272
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T007",
+          "from": "R_LOOP",
+          "to": "R_AFTER_READ",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "10"
+          },
+          "effects": [
+            "READ marks END=Y; receiver value authority conditional"
+          ],
+          "observables": [
+            "EOF flag"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                248,
+                265
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T008",
+          "from": "R_LOOP",
+          "to": "R_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "read_status",
+            "value": "other"
+          },
+          "effects": [
+            "display TRANFILE read error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                248,
+                272
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "TRANREPT-T009",
+          "from": "R_AFTER_READ",
+          "to": "R_OUT_OF_RANGE_SKIP",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "tran_proc_date_in_range"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "NEXT SENTENCE skips lookup/detail for out-of-range record"
+          ],
+          "observables": [
+            "no detail",
+            "no accumulator change"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002",
+            "TRANREPT-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                178
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                289
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T010",
+          "from": "R_OUT_OF_RANGE_SKIP",
+          "to": "R_LOOP",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "end_of_file"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "loop continues"
+          ],
+          "observables": [
+            "next read"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                206
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T011",
+          "from": "R_AFTER_READ",
+          "to": "R_LOOKUP_CARD",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "tran_proc_date_in_range"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "card_changed"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "if not first write prior account total",
+            "load XREF for new card"
+          ],
+          "observables": [
+            "possible Account Total for prior card"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004",
+            "TRANREPT-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                181,
+                196
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T012",
+          "from": "R_AFTER_READ",
+          "to": "R_LOOKUP_TYPE_CAT",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "tran_proc_date_in_range"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "card_changed"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "same card; lookup type/category"
+          ],
+          "observables": [
+            "same account group"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                189,
+                196
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T013",
+          "from": "R_LOOKUP_CARD",
+          "to": "R_LOOKUP_TYPE_CAT",
+          "guard": {
+            "op": "status_is",
+            "var": "lookup_status",
+            "value": "00"
+          },
+          "effects": [
+            "XREF loaded",
+            "lookup type/category"
+          ],
+          "observables": [
+            "XREF"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                484,
+                512
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T014",
+          "from": "R_LOOKUP_CARD",
+          "to": "R_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "lookup_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display lookup error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                484,
+                512
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "TRANREPT-T015",
+          "from": "R_LOOKUP_TYPE_CAT",
+          "to": "R_DETAIL",
+          "guard": {
+            "op": "status_is",
+            "var": "lookup_status",
+            "value": "00"
+          },
+          "effects": [
+            "type/category loaded"
+          ],
+          "observables": [
+            "lookup descriptions"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004",
+            "TRANREPT-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                189,
+                196
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                494,
+                512
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T016",
+          "from": "R_LOOKUP_TYPE_CAT",
+          "to": "R_ABEND",
+          "guard": {
+            "op": "status_is",
+            "var": "lookup_status",
+            "value": "not_00"
+          },
+          "effects": [
+            "display type/category lookup error",
+            "abend"
+          ],
+          "observables": [
+            "abend"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                494,
+                512
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "failure"
+        },
+        {
+          "id": "TRANREPT-T017",
+          "from": "R_DETAIL",
+          "to": "R_LOOP",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "line_boundary"
+              },
+              {
+                "value": false,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "add amount to page/account",
+            "write detail"
+          ],
+          "observables": [
+            "detail line"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                274,
+                289
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                361,
+                374
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T018",
+          "from": "R_DETAIL",
+          "to": "R_LOOP",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "line_boundary"
+              },
+              {
+                "value": true,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "write page total/header then detail",
+            "add detail amount"
+          ],
+          "observables": [
+            "page total/header/detail"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-005",
+            "TRANREPT-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                274,
+                341
+              ]
+            }
+          ],
+          "pathClass": "mandatory"
+        },
+        {
+          "id": "TRANREPT-T019",
+          "from": "R_AFTER_READ",
+          "to": "R_EOF_TOTALS_CONDITIONAL",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "tran_proc_date_in_range"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "EOF branch reached after textual date test",
+            "add current/retained TRAN-AMT",
+            "write page and grand totals"
+          ],
+          "observables": [
+            "Page Total",
+            "Grand Total"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003",
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                293,
+                322
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        },
+        {
+          "id": "TRANREPT-T020",
+          "from": "R_AFTER_READ",
+          "to": "R_CLOSE",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "tran_proc_date_in_range"
+                  },
+                  {
+                    "value": false,
+                    "type": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          "effects": [
+            "NEXT SENTENCE skips EOF totals because date test failed"
+          ],
+          "observables": [
+            "no final page/grand from EOF branch"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002",
+            "TRANREPT-OBL-003",
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                178
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        },
+        {
+          "id": "TRANREPT-T021",
+          "from": "R_AFTER_READ",
+          "to": "R_UNKNOWN_EOF_RECEIVER",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "args": [
+                  {
+                    "var": "end_of_file"
+                  },
+                  {
+                    "value": true,
+                    "type": "bool"
+                  }
+                ]
+              },
+              {
+                "op": "unknown",
+                "reason": "COBOL runtime/source packet does not establish receiver contents at EOF for empty/unretained cases"
+              }
+            ]
+          },
+          "effects": [
+            "defer deterministic selection"
+          ],
+          "observables": [
+            "unknown whether date guard true"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003",
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                178
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                248,
+                265
+              ]
+            }
+          ],
+          "pathClass": "unknown",
+          "terminal": "unknown"
+        },
+        {
+          "id": "TRANREPT-T022",
+          "from": "R_EOF_TOTALS_CONDITIONAL",
+          "to": "R_CLOSE",
+          "guard": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "end_of_file"
+              },
+              {
+                "value": true,
+                "type": "bool"
+              }
+            ]
+          },
+          "effects": [
+            "close files; no final account total call"
+          ],
+          "observables": [
+            "absence of Account Total final"
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                306,
+                316
+              ]
+            }
+          ],
+          "pathClass": "mandatory",
+          "terminal": "success"
+        }
+      ],
+      "coverage_obligations": [
+        "TRANREPT-OBL-001",
+        "TRANREPT-OBL-002",
+        "TRANREPT-OBL-003",
+        "TRANREPT-OBL-004",
+        "TRANREPT-OBL-005",
+        "TRANREPT-OBL-006",
+        "TRANREPT-OBL-007",
+        "TRANREPT-OBL-008"
+      ]
+    }
+  ]
+}

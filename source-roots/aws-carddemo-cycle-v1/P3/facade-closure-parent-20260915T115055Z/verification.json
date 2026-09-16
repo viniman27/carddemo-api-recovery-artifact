@@ -1,0 +1,42 @@
+{
+  "kind": "bounded-facade-closure-parent-verification",
+  "createdUtc": "2026-09-15T11:50:55.057917+00:00",
+  "zeroShotTests": 13,
+  "fewShotTests": 14,
+  "wire": {
+    "path": "P3/wire-envelope-review-fuq56y_k/results.json",
+    "checked": 18,
+    "passed": 18,
+    "scope": "actual full HTTP bodies at original paths, one contract per server"
+  },
+  "reference": {
+    "status": "draft_needs_independent_review",
+    "obligations": 23,
+    "exposurePinsChecked": 21,
+    "exposurePinsMatch": true,
+    "reviewDelegation": "aux-705378e5"
+  },
+  "officialCampaignsStarted": false,
+  "limits": [
+    "bounded facade checks are not full legacy semantic fidelity",
+    "official fixtures, reviewed model, suite orchestration and measurement freeze remain pending"
+  ],
+  "pins": [
+    {
+      "path": "P2c-zero-shot/p2c_facade.py",
+      "sha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00"
+    },
+    {
+      "path": "P2c-few-shot/p2c_facade.py",
+      "sha256": "ebe50eebc8c4157ad240b491054187b5499c8b9d761d8c71d6371a1b98da72a8"
+    },
+    {
+      "path": "P3/reference-authoring-draft-v1/obligations.json",
+      "sha256": "eb1fdce18f639ef87097f871434c42925e42167c6fce18acfed35757acdf3637"
+    },
+    {
+      "path": "P3/reference-authoring-draft-v1/model.json",
+      "sha256": "0ca0277175d0a9746df84c7b77d9090a870315d95b951334d29dcb2c7b35920c"
+    }
+  ]
+}

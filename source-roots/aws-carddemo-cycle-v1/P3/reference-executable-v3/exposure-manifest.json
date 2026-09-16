@@ -1,0 +1,79 @@
+{
+  "cobolExecuted": false,
+  "exposureException": "The composed-accent path supplied in the task did not exist; during discovery this agent listed names under Documents and P3 and received automatic WORKSPACE-NOTES.md context. No sibling artifact content was used to derive the model.",
+  "filesCreated": [
+    {
+      "bytes": 2432,
+      "path": "README.md",
+      "sha256": "0265988c5aadd08f94d5af6115aa0022646ac96f1681e945280daf84077777f7"
+    },
+    {
+      "bytes": 17104,
+      "path": "executable_reference.py",
+      "sha256": "517bfcde4c0792927b5dcde4567129dd9444f7a22f656b14ae2ff61b6755560e"
+    },
+    {
+      "bytes": 2535,
+      "path": "exposure-manifest.json",
+      "sha256": "2787802d5ffffbb8ff9805922a43d94c0ffe2e0330722115ac7de5b9acebfd69"
+    },
+    {
+      "bytes": 19763,
+      "path": "mechanical-validation-report.json",
+      "sha256": "3c4ea79bef942aa7681864325b7ab1f95f2af0bead7a0cc6b7abe3d3cc13dc4c"
+    },
+    {
+      "bytes": 109973,
+      "path": "model.json",
+      "sha256": "5b094d6736c4b489337a619f2367d01e31e61a57cc0df1925da24f07dc276a96"
+    },
+    {
+      "bytes": 1449,
+      "path": "resolution-FAIL06.json",
+      "sha256": "af0145088edc9baaef9e9ca0ad48beea7f4e5ab70c5bbf2d8edd5aeaec562d13"
+    },
+    {
+      "bytes": 6211,
+      "path": "tests/test_engine_contract.py",
+      "sha256": "18d322f045adef5a58c2a67c2befaaf199d56c36de86247785a2f1bf1a9bfcdb"
+    }
+  ],
+  "forbiddenInputsNotUsed": [
+    "contracts E1/E2",
+    "SDD documents for derivation",
+    "support fixtures",
+    "evaluation quarantine",
+    "runs/preflight/COBOL execution outputs",
+    "official T1-T4 campaigns"
+  ],
+  "inputsUsed": [
+    "reference-authoring-input-v1/README.md",
+    "reference-authoring-input-v1/input-manifest.json",
+    "reference-authoring-input-v1/corpus files via source anchors/hash checks",
+    "reference-authoring-draft-v2/model.json partially for continuity",
+    "reference-authoring-draft-v2/obligations.json copied into model",
+    "reference-authoring-draft-v2/exposure-manifest.json",
+    "reference-independent-review-v2/REVIEW.md",
+    "reference-independent-review-v2/review.json"
+  ],
+  "officialCasesCreated": false,
+  "outputRoot": "reference-executable-v3",
+  "paidFallbackOrModelDelegation": false,
+  "status": "executable_draft_needs_review",
+  "validationCommand": "python3 <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3/executable_reference.py <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3 --traverse CBTRN02C_POSTTRAN --traverse CBACT04C_INTCALC --traverse CBTRN03C_TRANREPT --max-depth 8 --max-paths 80",
+  "validationExitCode": 0,
+  "validationSummary": {
+    "counts": {
+      "capabilities": 3,
+      "obligations": 25,
+      "states": 25,
+      "transitions": 39
+    },
+    "errors": [],
+    "sourcePins": {
+      "checkedAnchors": 94,
+      "checkedFiles": 8,
+      "errors": []
+    }
+  }
+}

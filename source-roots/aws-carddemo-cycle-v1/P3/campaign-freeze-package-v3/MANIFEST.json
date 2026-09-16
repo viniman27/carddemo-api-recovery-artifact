@@ -1,0 +1,691 @@
+{
+  "aggregate": {
+    "contracts": 7,
+    "expectedConditionsPerContract": [
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "suiteCount": 28
+  },
+  "basedOn": {
+    "manifestSha256": "865d90c6ee3db341a60b93c106df99ef01d23824ff7c7c062c8120865cfe03ac",
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2"
+  },
+  "counts": {
+    "T1": 88,
+    "T2": 5868,
+    "T3": 394,
+    "T4": 6350
+  },
+  "excludedT3Cases": [
+    {
+      "caseId": "BINDCLOSE-E1-1-posting-T3-0024-4709fbec2133",
+      "cellRef": "POSTTRAN-OBL-002::E1-1::postDailyTransactions",
+      "contractId": "E1-1",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-4709fbec2133",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E1-2-posting-T3-0024-86274e8c0f56",
+      "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+      "contractId": "E1-2",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-86274e8c0f56",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E1-3-posting-T3-0024-f0ece0aff992",
+      "cellRef": "POSTTRAN-OBL-002::E1-3::postDailyTransactions",
+      "contractId": "E1-3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-f0ece0aff992",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-1-posting-T3-0004-0fb66254f978",
+      "cellRef": "POSTTRAN-OBL-002::E2-1::postDailyTransactions",
+      "contractId": "E2-1",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0004-0fb66254f978",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-2-posting-T3-0024-c62c1f8d665f",
+      "cellRef": "POSTTRAN-OBL-002::E2-2::postDailyTransactions",
+      "contractId": "E2-2",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-c62c1f8d665f",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-3-posting-T3-0004-5621bf3e529f",
+      "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+      "contractId": "E2-3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0004-5621bf3e529f",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E3-SDD-stage6r3-posting-T3-0036-01687de65244",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0036-01687de65244",
+      "transitionId": "POSTTRAN-T006"
+    }
+  ],
+  "excludedT3CasesTotal": 7,
+  "fixturePhysicalResourcePins": [
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "interest/ACCTFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/ACCTFILE",
+      "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "interest/DISCGRP",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/DISCGRP",
+      "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+    },
+    {
+      "bytes": 10,
+      "fixtureRelativePath": "interest/PARMFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/PARMFILE",
+      "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "interest/TCATBALF",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/TCATBALF",
+      "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "interest/XREFFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE",
+      "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "interest/XREFFILE.1",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest/XREFFILE.1",
+      "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "posting/ACCTFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/ACCTFILE",
+      "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+    },
+    {
+      "bytes": 700,
+      "fixtureRelativePath": "posting/DALYTRAN",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/DALYTRAN",
+      "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "posting/TCATBALF",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/TCATBALF",
+      "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "posting/TRANFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/TRANFILE",
+      "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "posting/XREFFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE",
+      "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "posting/XREFFILE.1",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting/XREFFILE.1",
+      "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "reporting/CARDXREF",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/CARDXREF",
+      "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+    },
+    {
+      "bytes": 80,
+      "fixtureRelativePath": "reporting/DATEPARM",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/DATEPARM",
+      "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "reporting/TRANCATG",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANCATG",
+      "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+    },
+    {
+      "bytes": 700,
+      "fixtureRelativePath": "reporting/TRANFILE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANFILE",
+      "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7"
+    },
+    {
+      "bytes": 0,
+      "fixtureRelativePath": "reporting/TRANFILE.empty",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANFILE.empty",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 8192,
+      "fixtureRelativePath": "reporting/TRANTYPE",
+      "label": "fixture physical resource byte pin",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting/TRANTYPE",
+      "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+    }
+  ],
+  "humanApprovalClaimed": false,
+  "kind": "campaign-freeze-package-v3",
+  "limits": [
+    "Exclusion ledger is preflight/freeze evidence, not runtime result evidence.",
+    "Business checkers are inconclusive where no independent authority is bound.",
+    "No fake human approval is claimed."
+  ],
+  "officialExecutionAuthorizedOrClaimed": false,
+  "officialRuntimeStarted": false,
+  "policy": {
+    "oracle": "no oracle quarantine read; business checker remains inconclusive where unbound",
+    "t1t2": "copied byte-for-byte from campaign-freeze-package-v2",
+    "t3": "suite rebuilt from v2 by excluding only cases where parameters.guardResult is not boolean true",
+    "t4": "rebuilt with campaign-harness-v3 UnionBuilder from v3 T1/T2/T3; no official runtime executed"
+  },
+  "readinessClaim": "mechanical freeze-ready candidate only; parent still decides/launches official execution",
+  "sourcePins": [
+    {
+      "bytes": 20593,
+      "label": "campaign-freeze-package-v2-manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v2/MANIFEST.json",
+      "sha256": "865d90c6ee3db341a60b93c106df99ef01d23824ff7c7c062c8120865cfe03ac"
+    },
+    {
+      "bytes": 14240,
+      "label": "v3 package assembler/verification code",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/final-campaign-gate-v1/src/final_campaign_gate.py",
+      "sha256": "d68e7ee1607b5c07b230621db815e54d5dbaad4cf1e798f66a43029e5367cd0a"
+    },
+    {
+      "bytes": 3110,
+      "label": "TDD guard exclusion and assembly regression tests",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/final-campaign-gate-v1/tests/test_final_campaign_gate.py",
+      "sha256": "46c15ac914583b3b24d540b49210fa55103fbb193a5d05f1ffa5d725677cc80f"
+    },
+    {
+      "bytes": 26983,
+      "label": "harness load_frozen_suite/freeze_suite/UnionBuilder",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    {
+      "bytes": 34632,
+      "label": "official-capable runner per-case target/resource binding",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/src/aws_campaign_runner.py",
+      "sha256": "ad291bba4297eba850c60a2eefda9e1ca6063e89fef96fe2fde53a98fd4f9518"
+    },
+    {
+      "bytes": 44582,
+      "label": "campaign config budgets/seeds/reset/order",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    {
+      "bytes": 1448,
+      "label": "campaign config manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/MANIFEST.json",
+      "sha256": "c099cdf5cfbbf7ca58920e6766fb56fbd0d3bd0afc8503f13ebb5e385d7e34b7"
+    },
+    {
+      "bytes": 30009,
+      "label": "unified preflight orchestration",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/unified_preflight_cli.py",
+      "sha256": "40aeb520a6af1cbb331d0e8c0806a5a3e67291afb6bbab2a3b081c0a8e066e2f"
+    },
+    {
+      "bytes": 36798,
+      "label": "unified coverage collection helpers",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/coverage_runner_v3.py",
+      "sha256": "cd2f4dfad9efe7e5258a42a3e24d7b66f94c2bc06437b8047ec589b483cfeef8"
+    },
+    {
+      "bytes": 20376,
+      "label": "coverage reconciliation helpers",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/reconcile_coverage.py",
+      "sha256": "b94b1c666f6bc1228c473a9e0b3d4ceca190fc9f54c8ee4fceec7ab8a9935032"
+    },
+    {
+      "bytes": 13654,
+      "label": "API target binding helpers",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/api_target.py",
+      "sha256": "3e45af34cbf42c6cdfaf7059eed77c4f539b673269e873876a7a9a0e1e854d05"
+    },
+    {
+      "bytes": 9156,
+      "label": "AWS CardDemo protocol",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md",
+      "sha256": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7"
+    },
+    {
+      "bytes": 16432,
+      "label": "fixture physical resource manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    {
+      "bytes": 11761,
+      "label": "fixture physical resource verification",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/verification.json",
+      "sha256": "fd7f6b8e1d39aafe84e77a16ce14def5dc24c1589d7e910bbfe1979c1bca38f9"
+    },
+    {
+      "bytes": 17970,
+      "label": "T3 guard/source closure",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-substantive-closure-v1/CLOSURE.md",
+      "sha256": "4a663f40a3fe3d85a0b8c9dc5f7ceb50a9bca2e38f6f8bb47d738a3f730d03b3"
+    }
+  ],
+  "state": "frozen_bytes_pending_final_parent_gate_no_official_execution",
+  "suites": [
+    {
+      "bytes": 21204,
+      "cases": 10,
+      "condition": "T1",
+      "contractId": "E1-1",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-1/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "a41983e0a5898c1035d5fbd5b20c373c743d1f21328ae022227bd89d58d9e1bf",
+      "sourceCases": 10
+    },
+    {
+      "bytes": 2765994,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-1",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-1/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "320969f0cf969b8a7935afbc4113e4fa54a1e8d4981ca16e8ecd63a4cb7aedec",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 368850,
+      "cases": 52,
+      "condition": "T3",
+      "contractId": "E1-1",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-1/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "de22281bdc51a7f9bc78b689857ba1383feb581df59567411274c4d50d948cf6",
+      "sourceCases": 53
+    },
+    {
+      "bytes": 3100261,
+      "cases": 962,
+      "condition": "T4",
+      "contractId": "E1-1",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-1/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "62783c8cb6b6226faf41d356963ef65a18b26cd81f46b58502873b978ed57fa7"
+    },
+    {
+      "bytes": 19147,
+      "cases": 9,
+      "condition": "T1",
+      "contractId": "E1-2",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-2/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "cd0eb0cbe7efe5145ed4f78c3971264efbf0f5e2aab9861e946f7f9ed94213e3",
+      "sourceCases": 9
+    },
+    {
+      "bytes": 2672485,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-2",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-2/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "629804d8be22955ccb2c9b55d5afbecacfca8a20758d79662aa3e3a626337f6a",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 329328,
+      "cases": 52,
+      "condition": "T3",
+      "contractId": "E1-2",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-2/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "d59df2dc95def44acb937d2dda31f98e465d34f3107aaa2addadfdfeed54a47f",
+      "sourceCases": 53
+    },
+    {
+      "bytes": 2965165,
+      "cases": 961,
+      "condition": "T4",
+      "contractId": "E1-2",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-2/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "352678ca7a33d9fa324222ee5a1c45e56557ad18c1ca37ad59ff8823567e753a"
+    },
+    {
+      "bytes": 24463,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E1-3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-3/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "98e9f87e53ba5787662e8b82b4fe90024ccd990f68c9eaa274282e62dfe358dc",
+      "sourceCases": 12
+    },
+    {
+      "bytes": 1914952,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E1-3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-3/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "f65d43c3fafcfe1c71cc3be3a55fc46a13eefc2bea54b5a34f083a5f4ebabf39",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 362492,
+      "cases": 52,
+      "condition": "T3",
+      "contractId": "E1-3",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-3/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "b737cd14b5d25a49e018ef124f53b102df992bc31f0753d00271d05f8479448a",
+      "sourceCases": 53
+    },
+    {
+      "bytes": 2246089,
+      "cases": 964,
+      "condition": "T4",
+      "contractId": "E1-3",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E1-3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "76ee7515d2055bb3a1196eeb947264b3621805df665df4ff5c6248be747d31e2"
+    },
+    {
+      "bytes": 34977,
+      "cases": 18,
+      "condition": "T1",
+      "contractId": "E2-1",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-1/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "15c9b9614045acd0e50ff8c894fbdeabe268f2501bd742aa4936763323f8b5cc",
+      "sourceCases": 18
+    },
+    {
+      "bytes": 1981375,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-1",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-1/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "da7cfb5a2b9445794f4dbe4f655ba398e4430f62b0be5304ded696dd244f2398",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 472772,
+      "cases": 32,
+      "condition": "T3",
+      "contractId": "E2-1",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-1/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "2fd02c299193c1ed49b64b5ebcb2ca19943ca8bfaa1b00a95615a566a84b00da",
+      "sourceCases": 33
+    },
+    {
+      "bytes": 2437178,
+      "cases": 950,
+      "condition": "T4",
+      "contractId": "E2-1",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-1/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "32ba9a873ef4ce2a654293cc74f6b28f500c24b2ce170a809e265c10c3c2b0b9"
+    },
+    {
+      "bytes": 25311,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E2-2",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-2/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "9617981e8a6b66b0b7395f7f672267113da2e8774043ce576585bd009b174307",
+      "sourceCases": 12
+    },
+    {
+      "bytes": 4057653,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-2",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-2/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "d6b59ebb72a3c414974440864bb1443e77549a73460941394d607cfba5b32bef",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 697418,
+      "cases": 52,
+      "condition": "T3",
+      "contractId": "E2-2",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-2/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "69edec479968b1ac0aee764b1dbe5bb081736f4a7e2f1a48adaa2e815703331e",
+      "sourceCases": 53
+    },
+    {
+      "bytes": 4724512,
+      "cases": 964,
+      "condition": "T4",
+      "contractId": "E2-2",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-2/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "3a229c08e312191ff5ee29c071cd079229d5381cf4753789c1a5acae684a3725"
+    },
+    {
+      "bytes": 29055,
+      "cases": 15,
+      "condition": "T1",
+      "contractId": "E2-3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-3/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "478acd088a4d769d5af3eaeb68b00bddfa86dea8dceef06a1a990942d8384b86",
+      "sourceCases": 15
+    },
+    {
+      "bytes": 4105662,
+      "cases": 900,
+      "condition": "T2",
+      "contractId": "E2-3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-3/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "3cfe3abe28b5562cc3fda8e284342b7cfff6d60ebc21421676c2486d12113bc2",
+      "sourceCases": 900
+    },
+    {
+      "bytes": 472480,
+      "cases": 32,
+      "condition": "T3",
+      "contractId": "E2-3",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-3/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "a71a82c234359390b64a00c2dc128accc8397fde7f4b39d622c25f804d0a9650",
+      "sourceCases": 33
+    },
+    {
+      "bytes": 4555269,
+      "cases": 947,
+      "condition": "T4",
+      "contractId": "E2-3",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E2-3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "48362dc25c8954ad086f566f51da38c774d83b890b5624f53d631344a7e16170"
+    },
+    {
+      "bytes": 22945,
+      "cases": 12,
+      "condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E3-SDD-stage6r3/T1.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "87992f08146e105731e2f90c7b81fa1963a793e7c66849bd81e1e41bd0d85792",
+      "sourceCases": 12
+    },
+    {
+      "bytes": 916756,
+      "cases": 468,
+      "condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "excludedCases": 0,
+      "guardPolicy": "not applicable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E3-SDD-stage6r3/T2.json",
+      "preservedFromV2ExactBytes": true,
+      "sha256": "4713291e87a6a5835c53ba72952d1349b8f5fdd78d882234206a8b8bde08ca00",
+      "sourceCases": 468
+    },
+    {
+      "bytes": 371823,
+      "cases": 122,
+      "condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "excludedCases": 1,
+      "guardPolicy": "kept only when guardResult is boolean true",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E3-SDD-stage6r3/T3.json",
+      "preservedFromV2ExactBytes": false,
+      "sha256": "b919d4856b420821da5c110add08b577f7a03b4fbf7568d335cf5205443b08d5",
+      "sourceCases": 123
+    },
+    {
+      "bytes": 1257796,
+      "cases": 602,
+      "condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "inputConditions": [
+        "T1",
+        "T2",
+        "T3-v3-guard-qualified-only"
+      ],
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3/E3-SDD-stage6r3/T4.json",
+      "rebuiltWithHarnessUnionBuilder": true,
+      "sha256": "db6905c695384cccf474cee289cff70882d5634f72f6e01920dc861fb714e578"
+    }
+  ]
+}

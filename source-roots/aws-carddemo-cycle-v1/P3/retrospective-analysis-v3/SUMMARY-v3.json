@@ -1,0 +1,70 @@
+{
+  "applications": {
+    "official": 488,
+    "complementary": 22
+  },
+  "irepV3": {
+    "official": {
+      "not_exercised": 96,
+      "failed": 392
+    },
+    "complementary": {
+      "failed": 15,
+      "not_exercised": 7
+    }
+  },
+  "deltaRep": {
+    "official": {
+      "null": 96,
+      "omitted_totals": 392
+    },
+    "complementary": {
+      "omitted_totals": 7,
+      "null": 7,
+      "stale_eof_addition": 8
+    }
+  },
+  "exit": {
+    "official": {
+      "first_xref_abort": 2,
+      "dateparm_eof": 58,
+      "empty_tranfile_exit": 36,
+      "next_sentence_loop_exit": 392
+    },
+    "complementary": {
+      "next_sentence_loop_exit": 14,
+      "eof_branch": 8
+    }
+  },
+  "failuresByKind": {
+    "official": {
+      "omitted_totals:totals_absent": 392
+    },
+    "complementary": {
+      "omitted_totals:totals_absent": 7,
+      "stale_eof_addition:totals_differ": 8
+    }
+  },
+  "officialFailedByStrategyArm": {
+    "T1/SDD": 1,
+    "T2/SDD": 6,
+    "T3/zero-shot": 56,
+    "T3/few-shot": 56,
+    "T3/SDD": 77,
+    "T4/zero-shot": 56,
+    "T4/few-shot": 56,
+    "T4/SDD": 84
+  },
+  "complementaryFailedByScenario": {
+    "date-boundaries-in-out-v1": 7,
+    "card-break-two-groups-v1": 4,
+    "pagination-threshold-20-v1": 4
+  },
+  "observedInputsWithInRangeAfterOutOfRange": 0,
+  "limits": [
+    "Posting and interest verdicts unchanged from v2",
+    "Account totals at the final group are not invented (as in v2)",
+    "Retrospective declared invariant; no domain adjudication",
+    "Loop-exit and skip-and-continue models coincide on all observed inputs"
+  ]
+}

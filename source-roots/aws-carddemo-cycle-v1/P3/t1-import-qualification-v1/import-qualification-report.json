@@ -1,0 +1,466 @@
+{
+  "kind": "t1-real-import-qualification-v1-report",
+  "scope": "import and qualification only; no runtime campaign execution",
+  "authorization": {
+    "source": "P3/resumption-local-review-v1/TEST-PHASE-AUTHORIZATION.md",
+    "literalAuthority": "Pode seguir com toda a fase de testes ate o fim",
+    "doesNotAuthorizeNewT1ExternalGeneration": true
+  },
+  "counts": {
+    "contract_count": 7,
+    "source_scenario_occurrences": 88,
+    "accepted_harness_cases": 43,
+    "preserved_invalid_cases": 45,
+    "schema_valid_cases": 43,
+    "schema_invalid_cases": 45,
+    "valid_negative_intentional": 0,
+    "erroneous_cases_preserved": 45,
+    "harness_freeze_loadable_suites": 7,
+    "campaign_started": false,
+    "model_regeneration_performed": false,
+    "synthetic_replacement_performed": false,
+    "runtime_executed": false
+  },
+  "contractPins": [
+    {
+      "contractId": "E1-1",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/parsed.json",
+      "sourceBytes": 32688,
+      "sourceSha256": "5329a78be449706d073ed127b4db364d186d7c23ce4e76f49e5d670313e44e9e",
+      "openapiTextSha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/posting-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-report-runs"
+        }
+      ]
+    },
+    {
+      "contractId": "E1-2",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/parsed.json",
+      "sourceBytes": 33679,
+      "sourceSha256": "40a9f6e9d5f9631db0831fb3e85dd296930d262d43497103eafb88135786cf5b",
+      "openapiTextSha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-transactions"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-postings"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-reports"
+        }
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/parsed.json",
+      "sourceBytes": 32557,
+      "sourceSha256": "88acebd163468e1c19e54c313f7c436ba5cd0c63886763fe906ff84bc02bad19",
+      "openapiTextSha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-transaction-generations"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-postings"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-reports"
+        }
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/parsed.json",
+      "sourceBytes": 31447,
+      "sourceSha256": "e301f6cb1a6241ebb329f6ff44ed63a854530089d66d42f8a01ecdc1dadbcfd9",
+      "openapiTextSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-transaction-generations"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-postings"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-reports"
+        }
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/parsed.json",
+      "sourceBytes": 32425,
+      "sourceSha256": "043f964a5bb61e739508e6df2b87898bae34b9f92a56ebeb758d101a481d60f0",
+      "openapiTextSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-generation-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-posting-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-report-runs"
+        }
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/parsed.json",
+      "sourceBytes": 28249,
+      "sourceSha256": "a537c1fe8ff96ca26a59277e605683c2ca9aad5be43079e486fff5358d70ec33",
+      "openapiTextSha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest-generation-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-posting-runs"
+        },
+        {
+          "method": "POST",
+          "path": "/transaction-report-runs"
+        }
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "sourceBytes": 51697,
+      "sourceSha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "openapiTextSha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+      "operationCount": 3,
+      "operations": [
+        {
+          "method": "POST",
+          "path": "/interest"
+        },
+        {
+          "method": "POST",
+          "path": "/posting"
+        },
+        {
+          "method": "POST",
+          "path": "/reporting"
+        }
+      ]
+    }
+  ],
+  "fixturePolicy": {
+    "packageManifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+    "packageManifestSha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a",
+    "status": "candidate_needs_review_not_official_fixture",
+    "resourcePackageIdsByTrack": {
+      "posting": "posting.candidate-v1-physical-v2",
+      "interest": "interest.candidate-v1-physical-v2",
+      "reporting": "reporting.candidate-v1-physical-v2",
+      "unknown": "track-unresolved-no-fixture"
+    }
+  },
+  "suites": [
+    {
+      "contractId": "E1-1",
+      "suiteId": "T1-REAL-E1-1",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E1-1.json",
+      "freezeSha256": "b4de2c07c76a71e423ee1488f8d27949e721004160dac300c931243e7679f082",
+      "sourceScenarioCount": 10,
+      "acceptedCount": 7,
+      "preservedInvalidCount": 3,
+      "loadVerifiedCount": 7
+    },
+    {
+      "contractId": "E1-2",
+      "suiteId": "T1-REAL-E1-2",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E1-2.json",
+      "freezeSha256": "eb006efedf60b414d66f00e978df145e8508ef6ecceb89b46b9b075adbddcd3a",
+      "sourceScenarioCount": 9,
+      "acceptedCount": 6,
+      "preservedInvalidCount": 3,
+      "loadVerifiedCount": 6
+    },
+    {
+      "contractId": "E1-3",
+      "suiteId": "T1-REAL-E1-3",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E1-3.json",
+      "freezeSha256": "24b688bf28199dcd4003babce3248851b103b88d33cacb384e6d4832f6edb96d",
+      "sourceScenarioCount": 12,
+      "acceptedCount": 4,
+      "preservedInvalidCount": 8,
+      "loadVerifiedCount": 4
+    },
+    {
+      "contractId": "E2-1",
+      "suiteId": "T1-REAL-E2-1",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E2-1.json",
+      "freezeSha256": "f12176501610f81a1dbb34bed01713843b728e6c999df212a5903d740e0924a9",
+      "sourceScenarioCount": 18,
+      "acceptedCount": 10,
+      "preservedInvalidCount": 8,
+      "loadVerifiedCount": 10
+    },
+    {
+      "contractId": "E2-2",
+      "suiteId": "T1-REAL-E2-2",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E2-2.json",
+      "freezeSha256": "363a111bd727ef29bbe80d6df68b6b6cdcef0b8df3e510849d69aa2a0b2d855e",
+      "sourceScenarioCount": 12,
+      "acceptedCount": 6,
+      "preservedInvalidCount": 6,
+      "loadVerifiedCount": 6
+    },
+    {
+      "contractId": "E2-3",
+      "suiteId": "T1-REAL-E2-3",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E2-3.json",
+      "freezeSha256": "888a773b6762dee2fc1dac66925d6f0313e5303c03f621a68015f9fdd714f4f5",
+      "sourceScenarioCount": 15,
+      "acceptedCount": 7,
+      "preservedInvalidCount": 8,
+      "loadVerifiedCount": 7
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "suiteId": "T1-REAL-E3-SDD-stage6r3",
+      "freezePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES/T1-REAL-E3-SDD-stage6r3.json",
+      "freezeSha256": "a8ae4f8827f5dce93ca0e1675b75967c9a4fdac4263dc04de0884e98aa099bd0",
+      "sourceScenarioCount": 12,
+      "acceptedCount": 3,
+      "preservedInvalidCount": 9,
+      "loadVerifiedCount": 3
+    }
+  ],
+  "byContract": [
+    {
+      "contractId": "E1-1",
+      "source": {
+        "contractId": "E1-1",
+        "attempt": "02",
+        "parsedPath": "P3/t1-generation-02/parsed/E1-1.parsed.json",
+        "requestSha256": "a01794ccff48d48a94264a0d210dd1a705ffaa646eb1b8311080a3ec90663dc7",
+        "rawSseSha256": "4efbfef8567e8d550ad746c1a5617956816cd49d69ecb232b700c26b5f428c73",
+        "textSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+        "model": "gpt-6-astra",
+        "scenarioCount": 10,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+        "parsedSha256": "80d3968812b665d3f7cc5ab4f484dc6b9d0372fa0efe7ce7f480b2ca7757069c",
+        "loadedScenarioCount": 10
+      },
+      "counts": {
+        "source": 10,
+        "accepted": 7,
+        "preservedInvalid": 3,
+        "schemaValid": 7,
+        "schemaInvalid": 3,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 3
+      }
+    },
+    {
+      "contractId": "E1-2",
+      "source": {
+        "contractId": "E1-2",
+        "attempt": "02",
+        "parsedPath": "P3/t1-generation-02/parsed/E1-2.parsed.json",
+        "requestSha256": "bdc15f1441ba8be10536cdda9f161b661018e7c18fe48d56658bbea5b14bc684",
+        "rawSseSha256": "586ec5b6fb31c7832f591e2f13e9c151b9abd477cc985614537953c319844386",
+        "textSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+        "model": "gpt-6-astra",
+        "scenarioCount": 9,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+        "parsedSha256": "eb39dff14b753363fe5b419f5453651c92904a295ce81470f29e57e284d73119",
+        "loadedScenarioCount": 9
+      },
+      "counts": {
+        "source": 9,
+        "accepted": 6,
+        "preservedInvalid": 3,
+        "schemaValid": 6,
+        "schemaInvalid": 3,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 3
+      }
+    },
+    {
+      "contractId": "E1-3",
+      "source": {
+        "contractId": "E1-3",
+        "attempt": "02",
+        "parsedPath": "P3/t1-generation-02/parsed/E1-3.parsed.json",
+        "requestSha256": "324efda6ecf4fb1051296f7efa7842402a13f287cc69543b16ddcb2d057bed51",
+        "rawSseSha256": "547c16eedba0133f553aabc1aa1b9c2fd0dcbc9edd29c3606b87f50800f71a3f",
+        "textSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+        "model": "gpt-6-astra",
+        "scenarioCount": 12,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+        "parsedSha256": "bca9c3888063f5a07f7083d04f0268a378333d18041b9710333b4287f698ba08",
+        "loadedScenarioCount": 12
+      },
+      "counts": {
+        "source": 12,
+        "accepted": 4,
+        "preservedInvalid": 8,
+        "schemaValid": 4,
+        "schemaInvalid": 8,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 8
+      }
+    },
+    {
+      "contractId": "E2-1",
+      "source": {
+        "contractId": "E2-1",
+        "attempt": "03",
+        "parsedPath": "P3/t1-generation-03/parsed/E2-1.parsed.json",
+        "requestSha256": "f4a953edb6383f8e53a8c8372d0373dfe7e1a8163ecf73fbdbc6a756efd68775",
+        "rawSseSha256": "a8ff89d6e77e550f781266283fa049fe2866ee3b743e2ddd9e7644646bd85305",
+        "textSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+        "model": "gpt-6-astra",
+        "scenarioCount": 18,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+        "parsedSha256": "c0da83aa0127b34ca2b335cc34ab80c35cc5a7c416b972bf7b911be65cc672dd",
+        "loadedScenarioCount": 18
+      },
+      "counts": {
+        "source": 18,
+        "accepted": 10,
+        "preservedInvalid": 8,
+        "schemaValid": 10,
+        "schemaInvalid": 8,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 8
+      }
+    },
+    {
+      "contractId": "E2-2",
+      "source": {
+        "contractId": "E2-2",
+        "attempt": "03",
+        "parsedPath": "P3/t1-generation-03/parsed/E2-2.parsed.json",
+        "requestSha256": "f563dbea15d84215d699d6dde80fd659d226dd5513484cf4ad42534b93e97bee",
+        "rawSseSha256": "4e811c5ff5374038809b66fdbfb4b2629fceb140f1b0e61adcbe88918f693833",
+        "textSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+        "model": "gpt-6-astra",
+        "scenarioCount": 12,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+        "parsedSha256": "2ab42317995d8e815041edc128245a0e283971bed15fc90760b65edb3beb859d",
+        "loadedScenarioCount": 12
+      },
+      "counts": {
+        "source": 12,
+        "accepted": 6,
+        "preservedInvalid": 6,
+        "schemaValid": 6,
+        "schemaInvalid": 6,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 6
+      }
+    },
+    {
+      "contractId": "E2-3",
+      "source": {
+        "contractId": "E2-3",
+        "attempt": "03",
+        "parsedPath": "P3/t1-generation-03/parsed/E2-3.parsed.json",
+        "requestSha256": "18300aadd97e92c5d8f48d5f3b97e889718be4c26d12737ed16b3b68803d047e",
+        "rawSseSha256": "26361af9dfb2c20011218202df0d707c4a8dc809f8d64fba0a005c715c9d685b",
+        "textSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+        "model": "gpt-6-astra",
+        "scenarioCount": 15,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+        "parsedSha256": "e182b7e0d4784354cc0651966a1618687c9d171780cd7efc39c554cce84a2c32",
+        "loadedScenarioCount": 15
+      },
+      "counts": {
+        "source": 15,
+        "accepted": 7,
+        "preservedInvalid": 8,
+        "schemaValid": 7,
+        "schemaInvalid": 8,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 8
+      }
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "source": {
+        "contractId": "E3-SDD-stage6r3",
+        "attempt": "03",
+        "parsedPath": "P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+        "requestSha256": "22bedf5dd67b613f11c12722751ff5b97e526dae137c98b070806c17bb057f69",
+        "rawSseSha256": "332f220163cd258ec0ce458a39ac2c838a896f9f3b979a4ed5fb276d7487fa72",
+        "textSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+        "model": "gpt-6-astra",
+        "scenarioCount": 12,
+        "hashesVerified": true,
+        "completionVerified": true,
+        "parsedAbsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+        "parsedSha256": "a392da4350f29b6fe573c2f140d01b4dcd1de0e364745ec4835ab8e9a00b10de",
+        "loadedScenarioCount": 12
+      },
+      "counts": {
+        "source": 12,
+        "accepted": 3,
+        "preservedInvalid": 9,
+        "schemaValid": 3,
+        "schemaInvalid": 9,
+        "validNegativeIntentional": 0,
+        "erroneousPreserved": 9
+      }
+    }
+  ],
+  "limits": [
+    "No model regeneration and no synthetic replacement performed.",
+    "Invalid scenarios are preserved in the ledger, not repaired or silently omitted.",
+    "Model-provided expectedFromContract assertions are quarantined and not treated as independent oracle outputs.",
+    "Harness suites include only operation-mapped schema-valid requests with documented-status expectations.",
+    "No runtime/campaign execution was performed in this import qualification artifact."
+  ],
+  "artifactPaths": {
+    "ledger": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/admissibility-ledger.json",
+    "originalAdapterAttempts": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/original-suite-adapter-attempts.json",
+    "candidatesDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-import-qualification-v1/CANDIDATES"
+  }
+}

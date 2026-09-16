@@ -1,0 +1,13 @@
+       >>SOURCE FORMAT FREE
+identification division.
+program-id. PROBE.
+data division.
+working-storage section.
+01 WEIGHT-VALUE PIC 9(3)V99 VALUE 0.
+01 ZONE-VALUE PIC X VALUE "A".
+01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.
+01 STATUS-VALUE PIC X VALUE SPACE.
+procedure division.
+call "SHIPPING-QUOTE" using WEIGHT-VALUE ZONE-VALUE OUTPUT-VALUE STATUS-VALUE
+display OUTPUT-VALUE "|" STATUS-VALUE
+stop run.

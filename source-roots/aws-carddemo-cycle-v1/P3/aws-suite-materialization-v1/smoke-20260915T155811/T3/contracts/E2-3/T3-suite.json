@@ -1,0 +1,2102 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-0001-baa7d45b0ac7",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T003",
+        "t3-cell:POSTTRAN-OBL-002::E2-3::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJQT1NULVBSRVNFTlQtMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1BQlNFTlQtLTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDk5OTk5OTk5OTk5OTk5OSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0002-9e273e163f6a",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T004"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T004",
+        "t3-cell:POSTTRAN-OBL-002::E2-3::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJQT1NULVBSRVNFTlQtMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1BQlNFTlQtLTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDk5OTk5OTk5OTk5OTk5OSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T004"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0003-21f9bd4b5e36",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T005"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T005",
+        "t3-cell:POSTTRAN-OBL-002::E2-3::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJQT1NULVBSRVNFTlQtMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1BQlNFTlQtLTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDk5OTk5OTk5OTk5OTk5OSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T005"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0004-5621bf3e529f",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+        "guardResult": "unknown",
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "transactionId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "typeCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "categoryCode",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "source",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "description",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "amount",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantId",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantName",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantCity",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "merchantZip",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "cardNumber",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "originalTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "processingTimestamp",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "field": "filler",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T006"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T006",
+        "t3-cell:POSTTRAN-OBL-002::E2-3::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJQT1NULVBSRVNFTlQtMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1BQlNFTlQtLTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDk5OTk5OTk5OTk5OTk5OSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T006"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0005-f89873225b00",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN03C_TRANREPT",
+        "cellRef": "TRANREPT-OBL-002::E2-3::generateTransactionReport",
+        "guardResult": true,
+        "obligationId": "TRANREPT-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:reporting:generateTransactionReport:/transaction-report-runs",
+        "requestEvidence": {
+          "cellId": "TRANREPT-OBL-002::E2-3::generateTransactionReport",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:reporting:generateTransactionReport:/transaction-report-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "dateParameterRecords",
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "reporting.candidate-v1-physical-v2",
+            "track": "reporting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 80,
+              "byteStart": 0,
+              "dd": "DATEPARM",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "utf8Strings",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "transactionId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "typeCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "categoryCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "source",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "description",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "amount",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantName",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantCity",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantZip",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "cardNumber",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "originalTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "processingTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "filler",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "transactionId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "typeCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "categoryCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "source",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "description",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "amount",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantName",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantCity",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantZip",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "cardNumber",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "originalTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "processingTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "filler",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "TRANREPT-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:TRANREPT-T003",
+        "t3-cell:TRANREPT-OBL-002::E2-3::generateTransactionReport"
+      ],
+      "request": {
+        "body_b64": "eyJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIyMDIyLTA3LTAxIDIwMjItMDctMzEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJdLCJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJSRVBPUlQtSU4tLS0wMDEgIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUkVQT1JULU9VVC0tMDAxICIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [
+        "TRANREPT-T001",
+        "TRANREPT-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0006-c0cca7012b79",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E2-3",
+      "parameters": {
+        "capability": "CBTRN03C_TRANREPT",
+        "cellRef": "TRANREPT-OBL-002::E2-3::generateTransactionReport",
+        "guardResult": true,
+        "obligationId": "TRANREPT-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E2-3:reporting:generateTransactionReport:/transaction-report-runs",
+        "requestEvidence": {
+          "cellId": "TRANREPT-OBL-002::E2-3::generateTransactionReport",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E2-3:reporting:generateTransactionReport:/transaction-report-runs",
+          "schemaValidation": {
+            "bodyKeys": [
+              "dateParameterRecords",
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "reporting.candidate-v1-physical-v2",
+            "track": "reporting"
+          },
+          "sourceboundValues": [
+            {
+              "byteEndExclusive": 80,
+              "byteStart": 0,
+              "dd": "DATEPARM",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "utf8Strings",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "transactionId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "typeCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "categoryCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "source",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "description",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "amount",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantName",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantCity",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "merchantZip",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "cardNumber",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "originalTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "processingTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "field": "filler",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "transactionId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "typeCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "categoryCode",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "source",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "description",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "amount",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantId",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantName",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantCity",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "merchantZip",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "cardNumber",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "originalTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "processingTimestamp",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "field": "filler",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "transactionObjects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "TRANREPT-T012"
+      },
+      "provenance": [
+        "reference-executable-v4:TRANREPT-T012",
+        "t3-cell:TRANREPT-OBL-002::E2-3::generateTransactionReport"
+      ],
+      "request": {
+        "body_b64": "eyJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIyMDIyLTA3LTAxIDIwMjItMDctMzEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJdLCJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJSRVBPUlQtSU4tLS0wMDEgIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUkVQT1JULU9VVC0tMDAxICIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [
+        "TRANREPT-T001",
+        "TRANREPT-T012"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "60bdf91ad77d9508fa087904078b3f1a770e4f60a095cac3698031b320b4dede",
+  "suite_id": "T3-E2-3"
+}

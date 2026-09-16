@@ -1,0 +1,41 @@
+{
+  "acceptedCount": 1,
+  "blocked": [
+    {
+      "blocked_reason": "resource_path_missing",
+      "cellId": "A",
+      "classification": "resource",
+      "details": {
+        "dd": "PAYLOAD",
+        "path": "synthetic-evidence/synthetic-evidence/fixture-a/PAYLOAD.bin"
+      },
+      "path": [
+        "A"
+      ],
+      "transitionId": "A"
+    },
+    {
+      "blocked_reason": "synthetic abstract-only transition has no concrete evidence",
+      "cellId": "C",
+      "classification": "blocked_by_mapping",
+      "path": [
+        "C"
+      ],
+      "transitionId": "C"
+    }
+  ],
+  "blockedCount": 2,
+  "contractId": "SYNTH",
+  "fixturesPath": "synthetic-evidence/synthetic-fixtures.json",
+  "fixturesSha256": "bd4ec192a17e82abd02468a049a0ef3cd92fdf42206fac230bdb956d30d3255a",
+  "inventedValues": false,
+  "kind": "t3-real-parametric-mapper-report",
+  "mappingPath": "synthetic-evidence/synthetic-mapping.json",
+  "mappingSha256": "1b39a90bfabb51f683523d5acc3cc6c96cd10a5a46022b3341dffcac7c28d202",
+  "modelPath": "synthetic-evidence/synthetic-model.json",
+  "modelSha256": "fb77690c92ef6a9a6140189952aa054956263c01aeeb0f9ce00f66ae3f2f859c",
+  "officialCampaign": false,
+  "schemaPath": "synthetic-evidence/synthetic-openapi.json",
+  "schemaSha256": "bf49352b5e3b310ffed064ce0b57e0f7845f321e89263c71a1cdc7cf82a3fbd4",
+  "selection": "BFS over explicit mapping cells only"
+}

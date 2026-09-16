@@ -1,0 +1,87 @@
+{
+  "contract_id": "E1-3",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+  "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+  "operation_id": "generateTransactionReport",
+  "track": "reporting",
+  "request_sha256": "71becba6ad0544330be70987e132081030cc47ae0810503ab5e2db9bce4c75f6",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/registry.json",
+    "files": {
+      "CARDXREF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/CARDXREF",
+        "bytes": 8192,
+        "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "requestOwned": false
+      },
+      "DATEPARM": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/DATEPARM",
+        "bytes": 80,
+        "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "requestOwned": true
+      },
+      "TRANCATG": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/TRANCATG",
+        "bytes": 8192,
+        "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "requestOwned": false
+      },
+      "TRANFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/TRANFILE",
+        "bytes": 1400,
+        "sha256": "cfd6205015852f7e4fbe11133517f1383d6dc8463005e1a235f8490277e0f431",
+        "requestOwned": true
+      },
+      "TRANTYPE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/request-packages/E1-3-reporting-1789560868474/TRANTYPE",
+        "bytes": 8192,
+        "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "CARDXREF": {
+        "field": "cardCrossReference",
+        "token": "p3:reporting:CARDXREF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/date-boundaries-in-out-v1/reporting/CARDXREF",
+        "sourceSha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "sourceBytes": 8192
+      },
+      "TRANTYPE": {
+        "field": "transactionTypes",
+        "token": "p3:reporting:TRANTYPE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/date-boundaries-in-out-v1/reporting/TRANTYPE",
+        "sourceSha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "sourceBytes": 8192
+      },
+      "TRANCATG": {
+        "field": "transactionCategories",
+        "token": "p3:reporting:TRANCATG",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/date-boundaries-in-out-v1/reporting/TRANCATG",
+        "sourceSha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "TRANREPT": {
+        "field": "reportOutput",
+        "token": "p3:reporting:TRANREPT",
+        "dd": "TRANREPT",
+        "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+      }
+    },
+    "fixture_descriptor_sha256": "3d395248b046ddb0916c34aa408f8ad5bd7264072712ccb460efbb0ba26cb0be"
+  },
+  "semantic_ambiguities": [],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/p2b-runs/reporting-vy5n09fx/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/p2b-runs/reporting-vy5n09fx"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-3-date-boundaries-in-out-v1/replay/applications/0001-0ec074b4358e6cea/zero-shot-runs/E1-3/reporting/E1-3-reporting-1789560868474/response.json"
+}

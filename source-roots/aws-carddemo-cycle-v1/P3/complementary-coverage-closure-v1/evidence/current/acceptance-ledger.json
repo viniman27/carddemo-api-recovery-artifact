@@ -1,0 +1,3346 @@
+{
+  "kind": "complementary-coverage-closure-v1-ledger",
+  "createdUtc": "2026-09-16T12:00:41.139891+00:00",
+  "inputs": {
+    "catalog": {
+      "role": "catalog",
+      "path": "../complementary-validation-v2/scenario-catalog.json",
+      "bytes": 553414,
+      "sha256": "ba7a6632d4d44215d0baa3e8272f3c3659f28d2adae6d80033238ffc6c02826c"
+    },
+    "semanticResults": [
+      {
+        "role": "semantic_results",
+        "path": "../complementary-crossarm-semantic-v1/latest/results.json",
+        "bytes": 336856,
+        "sha256": "e87805737290bdbce73d6b31ff6778fbd94ec9490dde0c511a1dcba3a9f661e7",
+        "kind": "complementary-crossarm-semantic-v1-results",
+        "scope": "Retrospective semantic binding of preserved21 run-20260916T112642Z artifacts only; no API/COBOL/model/quarantine reruns."
+      },
+      {
+        "role": "semantic_results",
+        "path": "../complementary-interest-source-extractor-v1/latest/results.json",
+        "bytes": 160247,
+        "sha256": "cd741f12b89486cff2e5d8e2e4b2de2469bd8dec6a247011ff3fedf02012b8f7",
+        "kind": "complementary-interest-source-extractor-v1-results",
+        "scope": "Read-only source-derived rate/balance extraction over preserved cross-arm interest artifacts only; no API, COBOL business, model, or quarantine reruns."
+      },
+      {
+        "role": "semantic_results",
+        "path": "../complementary-reporting-source-extractor-v1/latest/results.json",
+        "bytes": 164115,
+        "sha256": "7b0f3a65507e034a4d91465d34b3593c8f788720a011fdd2a071fd71d95b18bb",
+        "kind": "complementary-reporting-source-extractor-v1-results",
+        "scope": "Read-only source-qualified checks over preserved seven reporting cross-arm cases from old run-20260916T112642Z; no API reruns and no output-derived oracle."
+      },
+      {
+        "role": "semantic_results",
+        "path": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+        "bytes": 57142,
+        "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734",
+        "kind": "complementary-posting-essential-v1",
+        "scope": "posting-only essential complementary scenarios; real isolated local API/COBOL; not official campaign; not oracle quarantine"
+      },
+      {
+        "role": "semantic_results",
+        "path": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+        "bytes": 31689,
+        "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2",
+        "kind": "complementary-reporting-essential-v1-results",
+        "scope": "new package only; REPORTING complementary essentials; local API {} external fixture selection; no COBOL/API/contracts/main study edits"
+      },
+      {
+        "role": "supplemental_essential_results",
+        "path": "../complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+        "bytes": 24419,
+        "sha256": "2ef0aaae7dfe81b204986d73e5c6887bb3cddf7caafa30b0de4f23855908852f",
+        "kind": null,
+        "scope": "supplemental-result-without-global-scope-accepted-only-outside-175-denominator"
+      },
+      {
+        "role": "supplemental_essential_results",
+        "path": "../complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+        "bytes": 18550,
+        "sha256": "f17505cd8550129bb278aa6bd455fdedb5c3ab2a3af830546776513dbbdc5a5c",
+        "kind": null,
+        "scope": "supplemental-result-without-global-scope-accepted-only-outside-175-denominator"
+      }
+    ],
+    "modelRegistry": {
+      "role": "model_registry",
+      "path": "../complementary-mbt-binding-v1/latest/candidate-registry.json",
+      "bytes": 81604,
+      "sha256": "b39d23e4fe4a4d66bb22872e506d5ced3e39131cf72cc282bc17596a7da3b365"
+    },
+    "campaignCoverageCsv": {
+      "role": "campaign_coverage_csv",
+      "path": "../official-analysis-v1/coverage_union_by_contract_condition_track.csv",
+      "bytes": 3528,
+      "sha256": "13919551f1fec4c68192d9e8168183dec483f0398aa9d7d72e66211714ee77b9"
+    }
+  },
+  "policies": {
+    "originalSupplementSeparation": "contract/operation cells use original/cross-arm observations only when contractId+operationId are present; supplemental essential evidence is reported separately and does not silently fill future campaign cells",
+    "denominator": "semantic denominator is obligation×contract for applicable operation track; gross 25×21 is illustrative only",
+    "notExecutedVsNA": "not_exercised remains inside applicable denominator; N/A is only other-track/outside-denominator",
+    "gcovAlignment": "main generated C counts are comparable only when source fingerprint and denominator match",
+    "structuralVsSemantic": "HTTP/schema structural PASS is not semantic PASS without checker result"
+  },
+  "denominators": {
+    "obligations": 25,
+    "contracts": 7,
+    "semantic": 175,
+    "grossIllustrative": 525
+  },
+  "summary": {
+    "byStatus": {
+      "not_exercised": 133,
+      "covered_checked": 14,
+      "inconclusive": 28,
+      "failed": 0,
+      "unobservable": 0,
+      "not_applicable": 0
+    },
+    "byTrack": {
+      "interest": {
+        "not_exercised": 42,
+        "inconclusive": 7,
+        "covered_checked": 7
+      },
+      "posting": {
+        "not_exercised": 49,
+        "covered_checked": 7,
+        "inconclusive": 7
+      },
+      "reporting": {
+        "not_exercised": 42,
+        "inconclusive": 14
+      }
+    },
+    "byContract": {
+      "E1-1": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E1-2": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E1-3": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E2-1": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E2-2": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E2-3": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      },
+      "E3-SDD-stage6r3": {
+        "not_exercised": 19,
+        "covered_checked": 2,
+        "inconclusive": 4
+      }
+    },
+    "notApplicableCells": 350,
+    "supplementalObservationStatusCounts": {
+      "inconclusive": 9,
+      "covered_checked": 10
+    }
+  },
+  "cells": [
+    {
+      "cellId": "POSTTRAN-OBL-001::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-001::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-003::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-008::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E1-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E1-1",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E1-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E1-2",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E1-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E1-3",
+      "operationId": "postDailyTransactions",
+      "arm": "zero-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E2-1::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E2-1",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E2-2::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E2-2",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E2-3::postDailyTransactions",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E2-3",
+      "operationId": "postDailyTransactions",
+      "arm": "few-shot",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "POSTTRAN-OBL-009::E3-SDD-stage6r3::posting",
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "posting",
+      "arm": "SDD",
+      "track": "posting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-posting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-001",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-002",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-003",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "non-zero rate attempts monthly interest formula and write",
+        "numeric amount value remains pending COBOL/PIC qualification",
+        "zero rate returns to scan with no interest transaction"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-006",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "covered_checked",
+      "coveredPartitions": [
+        "current timestamps are generated at runtime",
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-interest",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "covered_checked",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-007::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E1-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E1-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E1-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E1-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E1-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E1-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "zero-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E2-1::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E2-1",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E2-2::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E2-2",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E2-3::generateInterestTransactions",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E2-3",
+      "operationId": "generateInterestTransactions",
+      "arm": "few-shot",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "INTCALC-OBL-008::E3-SDD-stage6r3::interest",
+      "obligationId": "INTCALC-OBL-008",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "interest",
+      "arm": "SDD",
+      "track": "interest",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-001",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-002",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "EOF receiver/date path is unknown unless observed by runtime",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "record proc date text inside range reaches lookups/detail"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-003",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-005",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-1-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-2-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E1-3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-1-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-2-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E2-3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-006",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "inconclusive",
+      "coveredPartitions": [
+        "amount accumulates into page and account totals",
+        "each qualified transaction writes one detail line",
+        "type/category/account descriptions come from lookups"
+      ],
+      "evidence": [
+        {
+          "caseId": "CROSSARM-E3-SDD-stage6r3-reporting",
+          "source": "../complementary-crossarm-semantic-v1/latest/results.json",
+          "status": "inconclusive",
+          "lane": "original_crossarm"
+        }
+      ]
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-007::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-007",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E1-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E1-1",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E1-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E1-2",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E1-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E1-3",
+      "operationId": "generateTransactionReport",
+      "arm": "zero-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E2-1::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E2-1",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E2-2::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E2-2",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E2-3::generateTransactionReport",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E2-3",
+      "operationId": "generateTransactionReport",
+      "arm": "few-shot",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-008::E3-SDD-stage6r3::reporting",
+      "obligationId": "TRANREPT-OBL-008",
+      "contractId": "E3-SDD-stage6r3",
+      "operationId": "reporting",
+      "arm": "SDD",
+      "track": "reporting",
+      "semanticDenominator": true,
+      "status": "not_exercised",
+      "coveredPartitions": [],
+      "evidence": []
+    }
+  ],
+  "supplementalObservations": [
+    {
+      "obligationId": "POSTTRAN-OBL-001",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "inconclusive",
+      "partitions": [
+        "all DD/open statuses are 00 before first read",
+        "one required open returns non-00 and must stop before processing"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-002",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "inconclusive",
+      "partitions": [
+        "first read status 00 increments processed count",
+        "non-00/non-10 read status abends",
+        "read status 10 ends loop without processing a new record"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-003",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "covered_checked",
+      "partitions": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "covered_checked",
+      "partitions": [
+        "card absent in XREF rejects with reason 100",
+        "card present continues to account checks without format-only validation"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "covered_checked",
+      "partitions": [
+        "account absent rejects 101",
+        "account over limit rejects 102 unless later expiry check overwrites with 103",
+        "textual expiration comparison fails and final reason is 103"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "covered_checked",
+      "partitions": [
+        "normal close with reject count greater than zero returns RC 4",
+        "one validation reason writes one reject trailer"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "inconclusive",
+      "partitions": [
+        "TCATBAL I/O status outside documented set abends before account/TRANFILE effects",
+        "TCATBAL existing key rewrites balance plus amount",
+        "TCATBAL missing key creates initial category balance"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-008",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "inconclusive",
+      "partitions": [
+        "ACCOUNT rewrite invalid key records reason 109 but continues toward TRANFILE write",
+        "negative amount updates balance and debit",
+        "positive amount updates balance and credit"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-009",
+      "contractId": null,
+      "operationId": null,
+      "track": null,
+      "status": "inconclusive",
+      "partitions": [
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "TRANFILE write status 00 completes after prior effects",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "caseId": null,
+      "source": "../complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-DATE-START",
+      "contractId": null,
+      "operationId": null,
+      "track": "date",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-DATE-END",
+      "contractId": null,
+      "operationId": null,
+      "track": "date",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-DATE-OUT-BEFORE",
+      "contractId": null,
+      "operationId": null,
+      "track": "date",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-DATE-OUT-AFTER",
+      "contractId": null,
+      "operationId": null,
+      "track": "date",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-EMPTY",
+      "contractId": null,
+      "operationId": null,
+      "track": "date",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-GROUP-CARDBREAK",
+      "contractId": null,
+      "operationId": null,
+      "track": "grouping",
+      "status": "covered_checked",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-PAGINATION-20",
+      "contractId": null,
+      "operationId": null,
+      "track": "pagination",
+      "status": "inconclusive",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "R-TOTALS-EOF-GUARD",
+      "contractId": null,
+      "operationId": null,
+      "track": "totals",
+      "status": "inconclusive",
+      "partitions": [],
+      "caseId": null,
+      "source": "../complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": null,
+      "operationId": null,
+      "track": "interest",
+      "status": "inconclusive",
+      "partitions": [
+        "rates-specific-default-zero"
+      ],
+      "caseId": "rates-specific-default-zero",
+      "source": "../complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+      "lane": "supplemental"
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": null,
+      "operationId": null,
+      "track": "interest",
+      "status": "inconclusive",
+      "partitions": [
+        "single-final-eof"
+      ],
+      "caseId": "single-final-eof",
+      "source": "../complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+      "lane": "supplemental"
+    }
+  ],
+  "modelRegistry": {
+    "qualifiedObligations": [
+      "INTCALC-OBL-001",
+      "INTCALC-OBL-002",
+      "INTCALC-OBL-003",
+      "INTCALC-OBL-004",
+      "INTCALC-OBL-005",
+      "INTCALC-OBL-006",
+      "INTCALC-OBL-007",
+      "INTCALC-OBL-008",
+      "POSTTRAN-OBL-001",
+      "POSTTRAN-OBL-002",
+      "POSTTRAN-OBL-003",
+      "POSTTRAN-OBL-004",
+      "POSTTRAN-OBL-005",
+      "POSTTRAN-OBL-006",
+      "POSTTRAN-OBL-007",
+      "POSTTRAN-OBL-008",
+      "POSTTRAN-OBL-009",
+      "TRANREPT-OBL-001",
+      "TRANREPT-OBL-002",
+      "TRANREPT-OBL-003",
+      "TRANREPT-OBL-004",
+      "TRANREPT-OBL-005"
+    ],
+    "caseCount": 12,
+    "prospectiveOnly": true
+  },
+  "gcov": {
+    "inputPin": {
+      "role": "gcov_reconciliation_or_campaign_report",
+      "path": "../coverage-report-reconciliation-v1/coverage-reconciliation-report.json",
+      "bytes": 40777,
+      "sha256": "a0df28c8f459b89c36994f031f438dc9d6187abf06848e31c9744b4d80e574ba",
+      "kind": "coverage-report-reconciliation-v1"
+    },
+    "programs": {
+      "CBACT04C": {
+        "separateSeries": [
+          {
+            "sourceFingerprintSha256": "49b96b1d824a95f88c82d9d97cb04b8f415b8a5e881e46f922c835b67fce0f4b",
+            "invocations": 2,
+            "sourceFiles": [
+              "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+            ],
+            "lines": {
+              "executedMax": 585,
+              "total": 1029,
+              "percentMax": 0.568513
+            },
+            "branchesExecuted": {
+              "executedMax": 214,
+              "total": 266,
+              "percentMax": 0.804511
+            },
+            "branchesTakenAtLeastOnce": {
+              "executedMax": 116,
+              "total": 266,
+              "percentMax": 0.43609
+            }
+          }
+        ],
+        "comparability": "same_fingerprint_unionable_within_series",
+        "union": {
+          "sourceFingerprintSha256": "49b96b1d824a95f88c82d9d97cb04b8f415b8a5e881e46f922c835b67fce0f4b",
+          "invocations": 2,
+          "sourceFiles": [
+            "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+          ],
+          "lines": {
+            "executedMax": 585,
+            "total": 1029,
+            "percentMax": 0.568513
+          },
+          "branchesExecuted": {
+            "executedMax": 214,
+            "total": 266,
+            "percentMax": 0.804511
+          },
+          "branchesTakenAtLeastOnce": {
+            "executedMax": 116,
+            "total": 266,
+            "percentMax": 0.43609
+          }
+        },
+        "comparabilityGaps": []
+      },
+      "CBTRN02C": {
+        "separateSeries": [
+          {
+            "sourceFingerprintSha256": "ec51f0ddaa8d39ce0cb0d3c1a08ef8c1907e8f6b13a508a554752ac974e16dcb",
+            "invocations": 2,
+            "sourceFiles": [
+              "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+            ],
+            "lines": {
+              "executedMax": 651,
+              "total": 1120,
+              "percentMax": 0.58125
+            },
+            "branchesExecuted": {
+              "executedMax": 246,
+              "total": 288,
+              "percentMax": 0.854167
+            },
+            "branchesTakenAtLeastOnce": {
+              "executedMax": 133,
+              "total": 288,
+              "percentMax": 0.461806
+            }
+          }
+        ],
+        "comparability": "same_fingerprint_unionable_within_series",
+        "union": {
+          "sourceFingerprintSha256": "ec51f0ddaa8d39ce0cb0d3c1a08ef8c1907e8f6b13a508a554752ac974e16dcb",
+          "invocations": 2,
+          "sourceFiles": [
+            "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+          ],
+          "lines": {
+            "executedMax": 651,
+            "total": 1120,
+            "percentMax": 0.58125
+          },
+          "branchesExecuted": {
+            "executedMax": 246,
+            "total": 288,
+            "percentMax": 0.854167
+          },
+          "branchesTakenAtLeastOnce": {
+            "executedMax": 133,
+            "total": 288,
+            "percentMax": 0.461806
+          }
+        },
+        "comparabilityGaps": []
+      },
+      "CBTRN03C": {
+        "separateSeries": [
+          {
+            "sourceFingerprintSha256": "d2454bc3bbd6b1fec155a476e7dd1330b5b4a81b85f840b434021c20d2bc6aab",
+            "invocations": 2,
+            "sourceFiles": [
+              "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+            ],
+            "lines": {
+              "executedMax": 655,
+              "total": 1192,
+              "percentMax": 0.549497
+            },
+            "branchesExecuted": {
+              "executedMax": 216,
+              "total": 272,
+              "percentMax": 0.794118
+            },
+            "branchesTakenAtLeastOnce": {
+              "executedMax": 111,
+              "total": 272,
+              "percentMax": 0.408088
+            }
+          }
+        ],
+        "comparability": "same_fingerprint_unionable_within_series",
+        "union": {
+          "sourceFingerprintSha256": "d2454bc3bbd6b1fec155a476e7dd1330b5b4a81b85f840b434021c20d2bc6aab",
+          "invocations": 2,
+          "sourceFiles": [
+            "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+          ],
+          "lines": {
+            "executedMax": 655,
+            "total": 1192,
+            "percentMax": 0.549497
+          },
+          "branchesExecuted": {
+            "executedMax": 216,
+            "total": 272,
+            "percentMax": 0.794118
+          },
+          "branchesTakenAtLeastOnce": {
+            "executedMax": 111,
+            "total": 272,
+            "percentMax": 0.408088
+          }
+        },
+        "comparabilityGaps": []
+      }
+    },
+    "campaignCsvRows": 54,
+    "csvComparabilityPolicy": "csv has no generated-C source fingerprint; retained as external summary, not line-unioned here"
+  },
+  "decisiveGaps": [
+    {
+      "obligationId": "POSTTRAN-OBL-008",
+      "rank": "alta",
+      "reason": "partição de valor negativo/débito de posting ainda precisa evidência primária por contrato para alegação financeira",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-001",
+      "rank": "média",
+      "reason": "falhas de OPEN/READ/WRITE são fault-injection; documentar como indisponíveis se não executáveis sem adulterar ambiente",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-002",
+      "rank": "alta",
+      "reason": "última conta/EOF de juros bloqueia afirmação de atualização final de todas as contas",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-002",
+      "rank": "alta",
+      "reason": "totais/paginação/final account do relatório não sustentam alegação financeira global",
+      "affectedCells": 7,
+      "statuses": {
+        "inconclusive": 7
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-001",
+      "rank": "média",
+      "reason": "fronteiras de datas e paginação precisam permanecer por campo/partição, não por obrigação inteira",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-001",
+      "rank": "baixa",
+      "reason": "Data do JCL é exemplo de fonte, não calendário universal.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-003",
+      "rank": "baixa",
+      "reason": "Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "rank": "baixa",
+      "reason": "Sem fallback adicional.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "rank": "baixa",
+      "reason": "Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.",
+      "affectedCells": 7,
+      "statuses": {
+        "inconclusive": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "rank": "baixa",
+      "reason": "Não é update por cada categoria.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-008",
+      "rank": "baixa",
+      "reason": "Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-002",
+      "rank": "baixa",
+      "reason": "Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "rank": "baixa",
+      "reason": "Não há validação de formato além da busca.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "rank": "baixa",
+      "reason": "Comparação de datas é textual X(10); calendário real não é decidido.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "rank": "baixa",
+      "reason": "Não afirma rollback de sucessos anteriores.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "rank": "baixa",
+      "reason": "Status aceitos 00/23 no read; sem atomicidade/durabilidade.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-009",
+      "rank": "baixa",
+      "reason": "Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.",
+      "affectedCells": 7,
+      "statuses": {
+        "inconclusive": 7
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-003",
+      "rank": "baixa",
+      "reason": "Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "rank": "baixa",
+      "reason": "Não há linha de erro/rejeição para lookup ausente.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-005",
+      "rank": "baixa",
+      "reason": "Page-size conta linhas de header/totais; não é 20 detalhes.",
+      "affectedCells": 7,
+      "statuses": {
+        "not_exercised": 7
+      }
+    }
+  ],
+  "boundedStoppingCriteria": [
+    "all catalog semantic cells accounted exactly once",
+    "N/A excluded from denominator and not_exercised retained inside denominator",
+    "no line/branch union across mismatched generated-C fingerprints",
+    "original campaign observations not overwritten by supplemental essential evidence"
+  ]
+}

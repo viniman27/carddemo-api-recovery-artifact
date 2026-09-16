@@ -1,0 +1,67 @@
+{
+  "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735",
+  "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/registry.json",
+  "files": {
+    "CARDXREF": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/CARDXREF",
+      "bytes": 8192,
+      "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+      "requestOwned": false
+    },
+    "DATEPARM": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/DATEPARM",
+      "bytes": 80,
+      "sha256": "5472919e5dc9530ee364f1f9cd3e3d037c6fe04a134e7cb017be298f08527ccd",
+      "requestOwned": true
+    },
+    "TRANCATG": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/TRANCATG",
+      "bytes": 8192,
+      "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+      "requestOwned": false
+    },
+    "TRANFILE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/TRANFILE",
+      "bytes": 350,
+      "sha256": "83cc1e142841e21766c877c5b66a749a90e11be6fa82113b1ed0bfa9c3cf48c7",
+      "requestOwned": true
+    },
+    "TRANTYPE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-3-reporting-1789471561735/TRANTYPE",
+      "bytes": 8192,
+      "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+      "requestOwned": false
+    }
+  },
+  "bindings": {
+    "CARDXREF": {
+      "field": "cardCrossReference",
+      "token": "p3:reporting:CARDXREF",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+      "sourceSha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+      "sourceBytes": 8192
+    },
+    "TRANTYPE": {
+      "field": "transactionTypes",
+      "token": "p3:reporting:TRANTYPE",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+      "sourceSha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+      "sourceBytes": 8192
+    },
+    "TRANCATG": {
+      "field": "transactionCategories",
+      "token": "p3:reporting:TRANCATG",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+      "sourceSha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+      "sourceBytes": 8192
+    }
+  },
+  "output_bindings": {
+    "TRANREPT": {
+      "field": "reportOutput",
+      "token": "p3:reporting:TRANREPT",
+      "policy": "output resource; P2b COBOL creates it in the invocation workdir"
+    }
+  },
+  "fixture_descriptor_sha256": "4eb350bb0e21140a0bb587295f1a06ac176479d83bcd98d744fcecb8721b2994"
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "p3-campaign-config-schema-only",
+  "status": "draft_pending_freeze",
+  "execution": {
+    "mode": "schema_only_non_executing",
+    "rejectUntilFreeze": true
+  },
+  "approval": {
+    "freezeStatus": "pending_human_freeze",
+    "approvedBy": null
+  },
+  "fixtureRegistry": {
+    "path": "P3/fixture-registry.sample.json",
+    "officialFixturesFrozen": false
+  },
+  "reset": {
+    "default": "fresh_dir_per_run",
+    "beforeAfterHashChecks": "required_when_frozen"
+  },
+  "statefulSequences": {
+    "status": "pending",
+    "policy": "not allowed unless explicitly frozen as ordered sequence"
+  },
+  "pendingFreezeChoices": [
+    "t1.model",
+    "t1.budget",
+    "t1.seed",
+    "t2.budget",
+    "t2.seed",
+    "t3.modelOracle",
+    "t4.unionPolicy",
+    "oracle.failureTaxonomy",
+    "analysis.denominators"
+  ],
+  "campaigns": {
+    "t1": {"model": "pending", "budget": "pending", "seed": "pending"},
+    "t2": {"tool": "pending", "budget": "pending", "seed": "pending"},
+    "t3": {"modelOracle": "pending_independent_review"},
+    "t4": {"unionPolicy": "pending"}
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-2",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+  "contractOriginalSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+  "track": "reporting",
+  "path": "/transaction-report-runs",
+  "status": 200,
+  "requestBody": {
+    "bindings": {
+      "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+      "reportOutput": "p3-local-technical-fixture-selection:reportOutput",
+      "transactionCategories": "p3-local-technical-fixture-selection:transactionCategories",
+      "transactionTypes": "p3-local-technical-fixture-selection:transactionTypes"
+    },
+    "dateParameterRecords": [
+      "2022-09-01 2022-09-30"
+    ],
+    "transactions": [
+      {
+        "amount": 5.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": 5,
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": 1,
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-07-15-10.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-JULY--001",
+        "typeCode": "01"
+      },
+      {
+        "amount": 6.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": 5,
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": 1,
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-08-15-10.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-AUG---001",
+        "typeCode": "01"
+      }
+    ]
+  },
+  "requestBodySha256": "4e8d64da542e11a015fed76889fbea39b98642509cfbdbac7d5cb88288721f6e",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-n50xq6hi",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/empty-in-range-v1/registry.json",
+    "registrySha256": "6bbc443e54912ad44cb34c731b25b2e87feb965ddbe16d044e20cba56cf4c065"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "lines": [],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN03C",
+      "Reporting from 2022-09-01 to 2022-09-30",
+      "END OF EXECUTION OF PROGRAM CBTRN03C"
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-n50xq6hi/audit.json",
+  "durationSeconds": 0.014
+}

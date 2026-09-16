@@ -1,0 +1,24 @@
+{
+  "createdUtc": "2026-09-15T20:10:00Z",
+  "discovery": "Programmatic verification of all campaign-config-v2 sources found exactly one stale source pin.",
+  "kind": "campaign-configuration-v3-explicit-pin-amendment",
+  "noSilentRefresh": true,
+  "officialExecutionStarted": false,
+  "qualifiedStalePinsFound": [
+    {
+      "id": "coverage-runner-v3",
+      "justification": "coverage_runner_v3.py changed during qualified measurement fixes; current final-freeze v3 source pins already reference this reviewed coverage helper hash; other config sources matched their v2 pins.",
+      "new": {
+        "bytes": 36798,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/coverage_runner_v3.py",
+        "sha256": "cd2f4dfad9efe7e5258a42a3e24d7b66f94c2bc06437b8047ec589b483cfeef8"
+      },
+      "old": {
+        "bytes": 31406,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/coverage_runner_v3.py",
+        "sha256": "7af57b8245e3fba4684a435541e812edbfb8fbec889198aff52c8cf8c35e7fbf"
+      }
+    }
+  ],
+  "scope": "new v3 only; campaign-configuration-v2 preserved unchanged"
+}

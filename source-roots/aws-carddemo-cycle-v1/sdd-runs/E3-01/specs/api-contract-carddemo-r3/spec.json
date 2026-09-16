@@ -1,0 +1,76 @@
+{
+  "feature_name": "api-contract-carddemo-r3",
+  "artifact_type": "api-contract",
+  "pipeline_stage": 6,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/api-contract-carddemo-r3/requirements.md",
+  "upstream_specs": [
+    "specs/canonical-data-boundary-carddemo/spec.json"
+  ],
+  "created_at": "2026-09-13T13:11:25-03:00",
+  "updated_at": "2026-09-13T20:53:20.903870+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-13",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 6,
+        "artifact_type": "api-contract"
+      },
+      "artifact": {
+        "path": "specs/api-contract-carddemo-r3/requirements.md",
+        "sha256": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/canonical-data-boundary-carddemo/spec.json",
+          "sha256": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-6-r3-authorization.json",
+        "sha256": "0c5228634cb0f3b3c779fafe2e7e9ae5109aebeb24b116268e73a9a00dd8213e"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage6",
+  "revision_of": "api-contract-carddemo-r2",
+  "revision_basis": "failed-stage6-r2-plus-empty-output-review-and-directed-feedback",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 6",
+    "pipeline-sdd-v3 stage 6 API Contract Spec"
+  ]
+}

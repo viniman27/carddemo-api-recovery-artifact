@@ -1,0 +1,50 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-1",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+  "contractOriginalSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+  "track": "posting",
+  "path": "/transaction-postings",
+  "status": 200,
+  "requestBody": {
+    "dailyTransactions": [
+      {
+        "amount": 25.0,
+        "cardNumber": "0000000000000001",
+        "categoryCode": "0001",
+        "description": "LOCAL SYNTHETIC FIXTURE",
+        "filler": "",
+        "merchantCity": "TEST CITY",
+        "merchantId": "000000001",
+        "merchantName": "TEST MERCHANT",
+        "merchantZip": "0000000000",
+        "originalTimestamp": "2025-01-01-00.00.00.000000",
+        "processingTimestamp": "",
+        "source": "TEST",
+        "transactionId": "POSTNEWTCAT00001",
+        "typeCode": "01"
+      }
+    ]
+  },
+  "requestBodySha256": "4c3ad45c38e6c8e5c4aa27e2fc32e908498d0d5e65b9ebaeeb6cc7ab8cc93de2",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-6ru_clq4",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-new-tcatbal/registry.json",
+    "registrySha256": "1e3b174ea43cbd566857850f5b25f38bfb66b704e9e375c7bb52c0ba04566bad"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "processedCount": 1,
+    "rejectedCount": 0,
+    "returnCode": 0,
+    "transactions": [],
+    "rejects": []
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-6ru_clq4/audit.json",
+  "durationSeconds": 0.82
+}

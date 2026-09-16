@@ -1,0 +1,1092 @@
+[
+  {
+    "strategy": "T1",
+    "contract": "E2-1",
+    "caseId": "T1-REAL-E2-1-E2-1-T1-POST-003",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T1",
+    "contract": "E2-1",
+    "caseId": "T1-REAL-E2-1-E2-1-T1-REPORT-001",
+    "track": "reporting",
+    "partitions": [
+      "first_selected_card_missing"
+    ],
+    "checkNames": [
+      "missing_first_xref_abort",
+      "no_report_before_first_lookup_abort"
+    ]
+  },
+  {
+    "strategy": "T1",
+    "contract": "E2-1",
+    "caseId": "T1-REAL-E2-1-E2-1-T1-REPORT-002",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T1",
+    "contract": "E2-3",
+    "caseId": "T1-REAL-E2-3-E2-3-report-boundary-01",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-postDailyTransactions-seed104729-positive-41",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-postDailyTransactions-seed130363-positive-4",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-33",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-34",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-35",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-36",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed104729-positive-37",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-12",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-13",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-14",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-15",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-16",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-17",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed130363-positive-18",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed155921-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed155921-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed155921-positive-15",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-1",
+    "caseId": "T2-E2-1-E2-1-POST-generateTransactionReport-seed155921-positive-41",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-postDailyTransactions-seed130363-positive-4",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed104729-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed104729-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed130363-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed130363-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed130363-positive-2",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed155921-positive-0",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T2",
+    "contract": "E2-3",
+    "caseId": "T2-E2-3-E2-3-POST-generateTransactionReport-seed155921-positive-1",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0003",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0013",
+    "track": "reporting",
+    "partitions": [
+      "first_selected_card_missing"
+    ],
+    "checkNames": [
+      "missing_first_xref_abort",
+      "no_report_before_first_lookup_abort"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0014",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0060",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0123",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0619",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0620",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0652",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0653",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0654",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0655",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0656",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0719",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0720",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0731",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0732",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0733",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0734",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0735",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0736",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0737",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0819",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0820",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0834",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-1",
+    "caseId": "E2-1-T4-0860",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0011",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0120",
+    "track": "posting",
+    "partitions": [
+      "reject_100"
+    ],
+    "checkNames": [
+      "posted_fields_multiplicity",
+      "reject_bytes_reason_multiplicity",
+      "account_all_fields_after",
+      "category_all_fields_after",
+      "xref_unchanged",
+      "return_code"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0616",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0617",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0716",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0717",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0718",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0816",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  },
+  {
+    "strategy": "T4",
+    "contract": "E2-3",
+    "caseId": "E2-3-T4-0817",
+    "track": "reporting",
+    "partitions": [
+      "dateparm_eof_before_transaction_loop",
+      "selected_empty",
+      "eof_not_selected"
+    ],
+    "checkNames": [
+      "report_full_event_sequence_legacy",
+      "report_details_all_fields",
+      "report_all_subtotals_grand_financial"
+    ]
+  }
+]

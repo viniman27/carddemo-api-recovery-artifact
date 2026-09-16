@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-SYNTH-A",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T3:SYNTH",
+      "parameters": {
+        "capabilityId": "SYNTH",
+        "transitionId": "A"
+      },
+      "provenance": [
+        "T3:SYNTH:A"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [
+        "A"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "9b70512da2d4a3d146404d141a0bea493da72b22d090386cb9713539601ae9f4",
+  "suite_id": "T3"
+}

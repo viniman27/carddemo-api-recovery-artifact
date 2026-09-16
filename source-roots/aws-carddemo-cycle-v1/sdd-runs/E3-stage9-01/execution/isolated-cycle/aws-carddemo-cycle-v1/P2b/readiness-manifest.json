@@ -1,0 +1,106 @@
+{
+  "kind": "Stage9 fresh HTTP executable qualification; not official T1/T2/T3/T4",
+  "results": [
+    {
+      "url": "http://127.0.0.1:52828/posting",
+      "status": 200,
+      "raw_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da",
+      "raw_bytes": 300,
+      "body": {
+        "track": "posting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": []
+        },
+        "rejections": {
+          "availability": "available",
+          "items": []
+        },
+        "progress": {
+          "availability": "available",
+          "value": {
+            "processedRecordCount": 2,
+            "preliminaryRejectCount": 1
+          }
+        }
+      },
+      "duration_s": 0.757,
+      "track": "posting"
+    },
+    {
+      "url": "http://127.0.0.1:52828/interest",
+      "status": 200,
+      "raw_sha256": "eb4c14951a4a7730653c8f491acb5aabbc3c5cdc0fa4c6ea025d063735ccd81a",
+      "raw_bytes": 990,
+      "body": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "transactionId": "2022071800000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "System",
+              "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+              "amount": "00000000006",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantPostalText": "",
+              "cardReference": "4111111111111111",
+              "originalTimestamp": "2026-09-15-13.08.41.920000",
+              "processingTimestamp": "2026-09-15-13.08.41.920000"
+            }
+          ]
+        }
+      },
+      "duration_s": 0.277,
+      "track": "interest"
+    },
+    {
+      "url": "http://127.0.0.1:52828/reporting",
+      "status": 200,
+      "raw_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+      "raw_bytes": 565,
+      "body": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "reportShortNameText": "DALYREPT",
+                "reportLongNameText": "Daily Transaction Report",
+                "startText": "2022-07-01",
+                "endText": "2022-07-31"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "transactionId": "REPORT-IN---001",
+                "accountReference": "10000000001",
+                "typeCode": "01",
+                "typeDescription": "Purchase",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "Internet",
+                "amountText": "12.00"
+              }
+            }
+          ]
+        }
+      },
+      "duration_s": 0.144,
+      "track": "reporting"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "freezePaths": {
+    "T1": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T1.json",
+    "T2": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T2.json",
+    "T3": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T3.json"
+  },
+  "harnessModule": {
+    "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "module": "campaign_harness",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "suite-generation-freeze-load-union-report",
+  "ledger": [
+    {
+      "action": "kept",
+      "destination": "T4-0001",
+      "source": "T1:T1-SYNTH-ok"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0002",
+      "source": "T2:T2-SYNTH-seed104729-positive-0"
+    },
+    {
+      "action": "duplicate_merged",
+      "destination": "T4-0002",
+      "source": "T2:T2-SYNTH-seed104729-positive-1"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0003",
+      "source": "T2:T2-SYNTH-seed104729-negative-0"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0004",
+      "source": "T2:T2-SYNTH-seed104729-negative-1"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0005",
+      "source": "T2:T2-SYNTH-seed104729-negative-2"
+    },
+    {
+      "action": "kept",
+      "destination": "T4-0006",
+      "source": "T3:T3-SYNTH-A"
+    }
+  ],
+  "ledgerCounts": {
+    "duplicate_merged": 1,
+    "kept": 6
+  },
+  "loadedCounts": {
+    "T1": 1,
+    "T2": 5,
+    "T3": 1
+  },
+  "unionCaseCount": 6,
+  "unionPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T4-union.json",
+  "unionSuiteId": "T4"
+}

@@ -1,0 +1,132 @@
+{
+  "kind": "P2c-zero-shot executable HTTP facade QA",
+  "started_utc": "2026-09-15T11:24:40Z",
+  "localhost": "127.0.0.1:49955",
+  "contracts": {
+    "E1-1": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+      "contract_sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-1/posting-runs",
+          "request_sha256": "e279e6cd72f7b8bb2de3afe6dedc79a342304467f34b89368052e45d6b67f542",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "a1f6582ac7313e646c5104d8b402868a78538f39e00d8ba07479a3399dc454d1",
+          "audit_path": "runs-corrected/E1-1/posting/E1-1-posting-1789471480735/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-1/interest-runs",
+          "request_sha256": "638d1bb6e47e6c05b69be336956110b3c009abcb05bb18f8d3a86a2273568452",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "03cfe89481413aabe7f2e55fefaa5e057fb62b194126d4ff369d809fb659b21c",
+          "audit_path": "runs-corrected/E1-1/interest/E1-1-interest-1789471480809/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-1/transaction-report-runs",
+          "request_sha256": "9d833c70150a922cea2540bb08f49017915682fd546ec094880c0bb7be40f3ac",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "fcfbb651cf3c6c469a5e34279eccd222dd0f268fa792bd245b8853393fbfa9bf",
+          "audit_path": "runs-corrected/E1-1/reporting/E1-1-reporting-1789471480855/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        }
+      }
+    },
+    "E1-2": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+      "contract_sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-2/transaction-postings",
+          "request_sha256": "e9a5c12a1eb58f9f079bafa6ada14f5d81c2d49187ef0e7acc12f8af3ca61108",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "7d397e3531d9d20690cfad8a43ba62277b534094ee1cfa233f299d744a836f8e",
+          "audit_path": "runs-corrected/E1-2/posting/E1-2-posting-1789471480917/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-2/interest-transactions",
+          "request_sha256": "0b2a95f6c6d8547cc8d7c290e37167d65fc839f798d3786c3a6370ce8e96c159",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "343ba05b3b1f8f6f9f1479f343ba07bfe847835b770eafd2ef3306c22e386df6",
+          "audit_path": "runs-corrected/E1-2/interest/E1-2-interest-1789471480979/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-2/transaction-reports",
+          "request_sha256": "8818d52cce3eba2045dadbc9ff5f455ca47675fc9336b303bb20b1fb7abd15a3",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "b99ce4e38e90993007ad3a4a492acb209d9b34b59d99635e2ac43023df3d15cd",
+          "audit_path": "runs-corrected/E1-2/reporting/E1-2-reporting-1789471481021/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        }
+      }
+    },
+    "E1-3": {
+      "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+      "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "operations": {
+        "posting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-3/transaction-postings",
+          "request_sha256": "7883282d1fbee13d1959dc32731b918559f8d5ddb89d4e41775f66f285a45303",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "ec936ae12695dba1365ec921febec4592d547548a2243fff5622d6120cd633ff",
+          "audit_path": "runs-corrected/E1-3/posting/E1-3-posting-1789471481085/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "interest": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-3/interest-transaction-generations",
+          "request_sha256": "852461f669fe7a524f8a394a76a2716de9ef4c52efc0e830876bccf4a75bd45a",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "66aee066a3007a2d741680ab1979bb72a520663927d4a0e000403a3c78eade8e",
+          "audit_path": "runs-corrected/E1-3/interest/E1-3-interest-1789471481151/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        },
+        "reporting": {
+          "implemented": true,
+          "url": "http://127.0.0.1:49955/E1-3/transaction-reports",
+          "request_sha256": "c75d3b3e8efb5c5e3ff26932405736a38d79442510b31cd93db046ecce9a67ee",
+          "http_status": 500,
+          "exercised_http": true,
+          "response_sha256": "a1e2a8c93ef335f6218ba64f21781109a514995653c9d91955ea0866003915db",
+          "audit_path": "runs-corrected/E1-3/reporting/E1-3-reporting-1789471481193/facade-audit.json",
+          "schema_validated": false,
+          "blocked": true
+        }
+      }
+    }
+  },
+  "summary": {
+    "implemented_routes": 9,
+    "exercised_http": 9,
+    "schema_validated": 0,
+    "blocked": 9
+  },
+  "finished_utc": "2026-09-15T11:24:41Z",
+  "report_path": "runs-corrected/p2c-zero-shot-http-qa-report.json"
+}

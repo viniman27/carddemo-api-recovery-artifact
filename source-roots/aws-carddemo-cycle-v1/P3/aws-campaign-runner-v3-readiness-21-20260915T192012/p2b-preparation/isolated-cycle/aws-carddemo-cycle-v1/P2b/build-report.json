@@ -1,0 +1,593 @@
+{
+  "built": true,
+  "kind": "p3-candidate-coverage-build",
+  "coverageToolchain": "cobc -C + gcc-11 -fprofile-arcs -ftest-coverage + gcov-11",
+  "build_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+  "source_pins": {
+    "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+    "programs": [
+      "CBTRN02C",
+      "CBACT04C",
+      "CBTRN03C"
+    ],
+    "checked_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "bytes": 10142
+      },
+      {
+        "path": "app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "bytes": 52479
+      },
+      {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "bytes": 58890
+      },
+      {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "bytes": 52239
+      },
+      {
+        "path": "app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "bytes": 1125
+      },
+      {
+        "path": "app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "bytes": 736
+      },
+      {
+        "path": "app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "bytes": 898
+      },
+      {
+        "path": "app/cpy/CVTRA02Y.cpy",
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "bytes": 898
+      },
+      {
+        "path": "app/cpy/CVTRA03Y.cpy",
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "bytes": 655
+      },
+      {
+        "path": "app/cpy/CVTRA04Y.cpy",
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "bytes": 817
+      },
+      {
+        "path": "app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "bytes": 1546
+      },
+      {
+        "path": "app/cpy/CVTRA06Y.cpy",
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "bytes": 1538
+      },
+      {
+        "path": "app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "bytes": 5758
+      },
+      {
+        "path": "app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "bytes": 3662
+      },
+      {
+        "path": "app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "bytes": 2964
+      },
+      {
+        "path": "app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "bytes": 3246
+      },
+      {
+        "path": "app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "bytes": 5330
+      },
+      {
+        "path": "app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "bytes": 6427
+      },
+      {
+        "path": "app/proc/REPROC.prc",
+        "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "bytes": 2233
+      }
+    ],
+    "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus"
+  },
+  "commands_jsonl": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/command-log.jsonl",
+  "instrumentedCommands": [
+    {
+      "stage": "cobc-C",
+      "program": "CBTRN02C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-A",
+        "-Dcob_write=p2b_observed_write",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.037
+    },
+    {
+      "stage": "support-clang-object-uninstrumented",
+      "program": "write_observer.c",
+      "cmd": [
+        "clang",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/write_observer.c",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.338
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBTRN02C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o",
+        "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+        "-lcob"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//ccMim3VK.o) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/write_observer.o) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.732
+    },
+    {
+      "stage": "cobc-C",
+      "program": "CBACT04C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-m",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.023
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBACT04C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-dynamiclib",
+        "-undefined",
+        "dynamic_lookup",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//ccKU3PR8.o) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.212
+    },
+    {
+      "stage": "cobc-C",
+      "program": "CBTRN03C",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-C",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.023
+    },
+    {
+      "stage": "gcc-11-coverage",
+      "program": "CBTRN03C",
+      "cmd": [
+        "gcc-11",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-O0",
+        "-g",
+        "-fprofile-arcs",
+        "-ftest-coverage",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+        "-Wno-unused",
+        "-fsigned-char",
+        "-Wno-pointer-sign",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+        "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+        "-lcob"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//cc80xjJx.o) was built for newer macOS version (26.0) than being linked (16.0)\n",
+      "duration_s": 0.222
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "intcalc_fixture",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/intcalc_fixture",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/intcalc_fixture.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.214
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "report_fixture",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/report_fixture",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/report_fixture.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.096
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "CBACT04C_driver",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C_driver",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CBACT04C_driver.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.11
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "CEE3ABD2",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-m",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CEE3ABD.dylib",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CEE3ABD2.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "ld: warning: -undefined suppress is deprecated\nld: warning: -undefined suppress is deprecated\n",
+      "duration_s": 0.08
+    },
+    {
+      "stage": "support-cobc-uninstrumented",
+      "program": "P2B_INTEREST_DRIVER",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/interest_driver.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.091
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_TRANFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TRANFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_TRANFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.091
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_XREFFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_XREFFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_XREFFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.092
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_ACCTFILE",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_ACCTFILE",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_ACCTFILE.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.091
+    },
+    {
+      "stage": "support-io-cobc-uninstrumented",
+      "program": "io_TCATBALF",
+      "cmd": [
+        "cobc",
+        "-std=ibm",
+        "-fsign=ascii",
+        "-I",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TCATBALF",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/support-generated/io_TCATBALF.cbl"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "duration_s": 0.092
+    }
+  ],
+  "binaries": [
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+      "sha256": "04ee33ce60161e01286ecabdc2ca0e7f8de8d35c8d666d40c1d62b9ec087ec3c",
+      "bytes": 116872,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+      "sha256": "588b6e24c3c7d48df62dcc03b976ba6edf8c17d45ed5241abc0d63ae2321fff8",
+      "bytes": 100288,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+      "sha256": "229797e997519c52f77e9d7c8c97cf74369dd4921a7babea2b32086fb285dcfc",
+      "bytes": 116840,
+      "businessInstrumented": true
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+      "sha256": "3a84479d547d6d9aa676c7be5c5735e7b0e3da6e0dd816342d1b19cd7c5e9593",
+      "bytes": 52064,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C_driver",
+      "sha256": "dc09160d683f517e4f7700427b96a36e9b8fa44dcf8ae7445c6a72ccd9f5299a",
+      "bytes": 51232,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/intcalc_fixture",
+      "sha256": "4d1a8b77a3bb04c324c2220a26dc1de740143e61df37c248b1d49d0737f6268e",
+      "bytes": 53456,
+      "businessInstrumented": false
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/report_fixture",
+      "sha256": "17dc0c0c53945683adb1c3002a8e5ea39f5d8de5298e67e57795ece72fb91bf4",
+      "bytes": 52864,
+      "businessInstrumented": false
+    }
+  ],
+  "gcovPrefixPolicy": "per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation",
+  "immutableBuildPolicy": "single immutable coverage build reused for every server/application invocation; gcno not regenerated after first successful build",
+  "immutableArtifacts": [
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+      "sha256": "04ee33ce60161e01286ecabdc2ca0e7f8de8d35c8d666d40c1d62b9ec087ec3c",
+      "bytes": 116872
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+      "sha256": "910a106ae35a5275a2be049bf072a8ce483f3aeabd929e9e458c587c0c53f486",
+      "bytes": 154855
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+      "sha256": "85d0c0fef82c3ef4accd5caf4a4f64510fbd9c87ab5d114d04c55ad0062147ae",
+      "bytes": 201044
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+      "sha256": "588b6e24c3c7d48df62dcc03b976ba6edf8c17d45ed5241abc0d63ae2321fff8",
+      "bytes": 100288
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+      "sha256": "38e1da235d78c3228de730dd88d7c60481e1bc463cabc432afafb8c5ad367f33",
+      "bytes": 136999
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+      "sha256": "9760fd3f3b84eeb3b639ef188cf6c4dd1e2f46ff947f4b492cdeddd4a595ab7f",
+      "bytes": 184144
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+      "sha256": "229797e997519c52f77e9d7c8c97cf74369dd4921a7babea2b32086fb285dcfc",
+      "bytes": 116840
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+      "sha256": "066579d9a0bc0dd282411ccee388784815799743b434e6cef220126531aa00dc",
+      "bytes": 152343
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+      "sha256": "62c075e19d85089222fb5885bb622f739b078620774e0b50007e2e1c07a8aaf8",
+      "bytes": 203652
+    },
+    {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T192012/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+      "sha256": "3a84479d547d6d9aa676c7be5c5735e7b0e3da6e0dd816342d1b19cd7c5e9593",
+      "bytes": 52064
+    }
+  ]
+}

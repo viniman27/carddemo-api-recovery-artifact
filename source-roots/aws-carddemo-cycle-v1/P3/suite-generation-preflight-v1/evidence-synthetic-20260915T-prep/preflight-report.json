@@ -1,0 +1,226 @@
+{
+  "counts": {
+    "T1": 1,
+    "T2": 5,
+    "T3": 1,
+    "T4": 6
+  },
+  "gateClosedFutureOfficialInstructions": [
+    "Obtain explicit human approval before external T1 package submission or provider call.",
+    "Pin authorized model/transport and probe supported parameters only when approved; until then status remains pending approval/not_probed.",
+    "Use official AWS contracts/fixtures only after campaign gate approval; this CLI intentionally has no official generation mode.",
+    "Do not promote synthetic preparation, Schemathesis qualification, or union smoke to official T1/T2/T3/T4 evidence."
+  ],
+  "kind": "suite-generation-preflight-v1-synthetic-report",
+  "moduleEvidence": {
+    "harnessV3": {
+      "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "module": "campaign_harness",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "suiteGeneration": {
+      "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/src/suite_generation.py",
+      "module": "suite_generation",
+      "sha256": "bd2d3e5f09dffcd194656e49731aac4802e68ea832ec4279336a7647ae026861"
+    }
+  },
+  "officialCampaign": false,
+  "remainingForCampaign": [
+    "approved external T1 package/model/transport",
+    "official fixtures/resource authority",
+    "official T2 budgets and no-extra-replay runner against approved contracts",
+    "reviewed independent reference model/mapping variants",
+    "campaign authorization and execution harness run"
+  ],
+  "scope": "synthetic/preparation only; no AWS HTTP, no LLM provider call, no official T1/T2/T3 cases",
+  "t1Import": {
+    "acceptedCount": 1,
+    "contractId": "SYNTH",
+    "inputCount": 2,
+    "invalid": [
+      {
+        "classification": "not_mapped_missing_request",
+        "id": "abstract-only",
+        "index": 1,
+        "inputKeys": [
+          "id",
+          "obligation"
+        ]
+      }
+    ],
+    "invalidCount": 1,
+    "providerCalled": false,
+    "rawResponse": "Synthetic preserved response; no provider call.\n{\n  \"scenarios\": [\n    {\n      \"id\": \"ok\",\n      \"method\": \"POST\",\n      \"path\": \"/synthetic\",\n      \"body\": {}\n    },\n    {\n      \"id\": \"abstract-only\",\n      \"obligation\": \"SYNTH-OBL\"\n    }\n  ]\n}",
+    "repairedOrCompleted": false,
+    "sourceBytes": 245,
+    "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-inputs/t1-preserved-response.txt",
+    "sourceSha256": "10c132518932324bc45db607e25c7828bf504e3e680b2a86425972d67d31dfda",
+    "suiteId": "T1"
+  },
+  "t1Outbound": {
+    "externalPackageStatus": "pending_approval",
+    "modelAvailability": "not_probed",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/t1-outbound/t1-outbound-package.json",
+    "providerCalled": false
+  },
+  "t2Generation": {
+    "contractId": "SYNTH",
+    "directions": [
+      "positive",
+      "negative"
+    ],
+    "effectiveMaxExamplesPerDirection": 3,
+    "frozenRequestsPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/t2/frozen-synthetic3.1-requests.json",
+    "frozenRequestsSha256": "40aad5189fcb59cefe5037f4ddb3b4d7bf6eb08acac78c4ba421c8412178ab55",
+    "generation": [
+      {
+        "direction": "positive",
+        "generated": 2,
+        "maxExamples": 3,
+        "seconds": 0.005329291336238384,
+        "seed": 104729
+      },
+      {
+        "direction": "negative",
+        "generated": 3,
+        "maxExamples": 3,
+        "seconds": 0.00804795790463686,
+        "seed": 104729
+      }
+    ],
+    "httpCallsDuringGeneration": 0,
+    "hypothesisDatabase": null,
+    "hypothesisPhases": [
+      "generate"
+    ],
+    "hypothesisVersion": "6.168.0",
+    "kind": "t2-schemathesis-offline-generation-report",
+    "officialCampaign": false,
+    "qualificationMaxExamplesPerDirection": 3,
+    "replayDuringGeneration": false,
+    "requestedMaxExamplesPerDirection": 6,
+    "schemaPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-openapi.json",
+    "schemathesisVersion": "4.27.1",
+    "seeds": [
+      104729
+    ],
+    "shrinking": false
+  },
+  "t2Import": {
+    "acceptedCount": 5,
+    "contractId": "SYNTH",
+    "httpReplayExtra": 0,
+    "inputCount": 5,
+    "invalid": [],
+    "invalidCount": 0,
+    "offlineImportOnly": true,
+    "sourceBytes": 1993,
+    "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/t2/frozen-synthetic3.1-requests.json",
+    "sourceSha256": "40aad5189fcb59cefe5037f4ddb3b4d7bf6eb08acac78c4ba421c8412178ab55",
+    "suiteId": "T2"
+  },
+  "t3Generation": {
+    "abstractConversion": "never invent request from abstract transition",
+    "acceptedCount": 1,
+    "applicabilityV3Rule": "guard/variant without documented support is blocked",
+    "blocked": [
+      {
+        "classification": "blocked_guard_or_variant_without_v3_support",
+        "path": [
+          "C"
+        ],
+        "rule": "unsupported guard op",
+        "transitionId": "C"
+      },
+      {
+        "classification": "blocked_abstract_without_concrete_mapping",
+        "path": [
+          "C"
+        ],
+        "reason": "synthetic no concrete mapping",
+        "transitionId": "C"
+      },
+      {
+        "classification": "blocked_guard_or_variant_without_v3_support",
+        "path": [
+          "A",
+          "B"
+        ],
+        "rule": "applicability-mapping-v3 fail-closed",
+        "transitionId": "B"
+      }
+    ],
+    "blockedCount": 2,
+    "blockedRecordCount": 3,
+    "capabilityId": "SYNTH",
+    "contractId": "SYNTH",
+    "kind": "t3-synthetic-bfs-generation-report",
+    "mappingPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-inputs/t3-mapping.json",
+    "mappingSha256": "8de900e1e330780a5174d7d036115711eecc89491e99cfefe5603d14b221e660",
+    "modelPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-inputs/t3-model.json",
+    "modelSha256": "88f4e13734728b51cebd46ef45c0612d4398cc64da98c0443828e526f7d56e95",
+    "selection": "deterministic BFS, lexicographic transition ID"
+  },
+  "union": {
+    "freezePaths": {
+      "T1": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T1.json",
+      "T2": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T2.json",
+      "T3": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T3.json"
+    },
+    "harnessModule": {
+      "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "module": "campaign_harness",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "kind": "suite-generation-freeze-load-union-report",
+    "ledger": [
+      {
+        "action": "kept",
+        "destination": "T4-0001",
+        "source": "T1:T1-SYNTH-ok"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0002",
+        "source": "T2:T2-SYNTH-seed104729-positive-0"
+      },
+      {
+        "action": "duplicate_merged",
+        "destination": "T4-0002",
+        "source": "T2:T2-SYNTH-seed104729-positive-1"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0003",
+        "source": "T2:T2-SYNTH-seed104729-negative-0"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0004",
+        "source": "T2:T2-SYNTH-seed104729-negative-1"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0005",
+        "source": "T2:T2-SYNTH-seed104729-negative-2"
+      },
+      {
+        "action": "kept",
+        "destination": "T4-0006",
+        "source": "T3:T3-SYNTH-A"
+      }
+    ],
+    "ledgerCounts": {
+      "duplicate_merged": 1,
+      "kept": 6
+    },
+    "loadedCounts": {
+      "T1": 1,
+      "T2": 5,
+      "T3": 1
+    },
+    "unionCaseCount": 6,
+    "unionPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/freeze-load-union/T4-union.json",
+    "unionSuiteId": "T4"
+  }
+}

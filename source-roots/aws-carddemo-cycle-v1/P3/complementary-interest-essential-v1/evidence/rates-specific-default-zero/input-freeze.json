@@ -1,0 +1,105 @@
+{
+  "case": {
+    "case_id": "rates-specific-default-zero",
+    "parm_date": "2026091600",
+    "accounts": [
+      {
+        "acct": "00000000001",
+        "group": "STANDARD",
+        "balance": "500.00"
+      },
+      {
+        "acct": "00000000002",
+        "group": "ZERORATE",
+        "balance": "700.00"
+      },
+      {
+        "acct": "00000000003",
+        "group": "MISSING",
+        "balance": "1000.00"
+      }
+    ],
+    "xrefs": [
+      {
+        "card": "4111111111111111",
+        "acct": "00000000001"
+      },
+      {
+        "card": "4222222222222222",
+        "acct": "00000000002"
+      },
+      {
+        "card": "4333333333333333",
+        "acct": "00000000003"
+      }
+    ],
+    "disc": [
+      {
+        "group": "STANDARD",
+        "type": "01",
+        "cat": "0005",
+        "rate": "12.00"
+      },
+      {
+        "group": "ZERORATE",
+        "type": "01",
+        "cat": "0005",
+        "rate": "0.00"
+      },
+      {
+        "group": "DEFAULT",
+        "type": "01",
+        "cat": "0005",
+        "rate": "6.00"
+      }
+    ],
+    "balances": [
+      {
+        "acct": "00000000001",
+        "type": "01",
+        "cat": "0005",
+        "balance": "500.00"
+      },
+      {
+        "acct": "00000000002",
+        "type": "01",
+        "cat": "0005",
+        "balance": "700.00"
+      },
+      {
+        "acct": "00000000003",
+        "type": "01",
+        "cat": "0005",
+        "balance": "1000.00"
+      }
+    ]
+  },
+  "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/package",
+  "filePins": {
+    "TCATBALF": {
+      "bytes": 8192,
+      "sha256": "d1447021bd4a207692735e5a9e481fe1ab7950f539d433f9daf1f6480571987a"
+    },
+    "ACCTFILE": {
+      "bytes": 8192,
+      "sha256": "f939ad543e6570127da439af02be85f6f849cc7151ff54af6080dc35b9f14a39"
+    },
+    "XREFFILE": {
+      "bytes": 8192,
+      "sha256": "9a001b85842e19fa5b797551fa9394512abf44212e7ad1e79509e07205c72203"
+    },
+    "XREFFILE.1": {
+      "bytes": 8192,
+      "sha256": "e451b3e4d458991013a1b201b91c8755a1326f0073a667f51f9700f13641c391"
+    },
+    "DISCGRP": {
+      "bytes": 8192,
+      "sha256": "e615e81d67d44a5fa9958d915906ea1b55709d3ac36838e14d113afe420a9efd"
+    },
+    "PARMFILE": {
+      "bytes": 10,
+      "sha256": "e8a4e0434320371d18cbbf8e29332a77992d0129b52a7e1a426022caaa4200fe"
+    }
+  },
+  "fixtureDescriptorSha256": "4816e469bccc95dc2ab87cad393b92304c95cec8da356f876d8105ee0af69267"
+}

@@ -1,0 +1,86 @@
+{
+  "contract_id": "E1-3",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+  "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+  "operation_id": "generateTransactionReport",
+  "track": "reporting",
+  "request_sha256": "b92dabc280522dcc30b8ad3ec40b33b0451b2662e27ac58c14bdf0d4fa15d794",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "runs-corrected/request-packages/E1-3-reporting-1789471481193",
+    "registry": "runs-corrected/request-packages/E1-3-reporting-1789471481193/registry.json",
+    "files": {
+      "CARDXREF": {
+        "path": "runs-corrected/request-packages/E1-3-reporting-1789471481193/CARDXREF",
+        "bytes": 8192,
+        "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+        "requestOwned": false
+      },
+      "DATEPARM": {
+        "path": "runs-corrected/request-packages/E1-3-reporting-1789471481193/DATEPARM",
+        "bytes": 80,
+        "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+        "requestOwned": true
+      },
+      "TRANCATG": {
+        "path": "runs-corrected/request-packages/E1-3-reporting-1789471481193/TRANCATG",
+        "bytes": 8192,
+        "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+        "requestOwned": false
+      },
+      "TRANFILE": {
+        "path": "runs-corrected/request-packages/E1-3-reporting-1789471481193/TRANFILE",
+        "bytes": 350,
+        "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+        "requestOwned": true
+      },
+      "TRANTYPE": {
+        "path": "runs-corrected/request-packages/E1-3-reporting-1789471481193/TRANTYPE",
+        "bytes": 8192,
+        "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "CARDXREF": {
+        "field": "cardCrossReference",
+        "token": "p3:reporting:CARDXREF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+        "sourceSha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+        "sourceBytes": 8192
+      },
+      "TRANTYPE": {
+        "field": "transactionTypes",
+        "token": "p3:reporting:TRANTYPE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+        "sourceSha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+        "sourceBytes": 8192
+      },
+      "TRANCATG": {
+        "field": "transactionCategories",
+        "token": "p3:reporting:TRANCATG",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+        "sourceSha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "TRANREPT": {
+        "field": "reportOutput",
+        "token": "p3:reporting:TRANREPT",
+        "policy": "output resource; P2b COBOL creates it in the invocation workdir"
+      }
+    },
+    "fixture_descriptor_sha256": "6e7f88c6822860406e44d00c3d306d1811cc548a9491130ca50d2bb982005961"
+  },
+  "semantic_ambiguities": [],
+  "p2b_audit_path": "runs-corrected/p2b-runs/reporting-gta3ul3m/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected/p2b-runs/reporting-gta3ul3m"
+  ],
+  "http_status": 500,
+  "response_path": "runs-corrected/E1-3/reporting/E1-3-reporting-1789471481193/response.json"
+}

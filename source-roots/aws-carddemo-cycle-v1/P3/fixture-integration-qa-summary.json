@@ -1,0 +1,70 @@
+{
+  "generated_utc": "2026-09-14T20:56:47Z",
+  "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/local-technical-fixtures.json",
+  "registry_sha256": "bed546f5f3be4873329a778af20a69bbf75cee8e3d28467cb1b51c397e4529d6",
+  "readiness_manifest_sha256": "8f78c4f909cfeb53f9ee7d40aad8cfa0af7909307e96b8e81eaaefcc5657736f",
+  "schema_report_sha256": "283bf09d9db37b14f4db13aa31f25f833876e92a459bc9e8ca3ab157cee099dc",
+  "schema_overall_passed": true,
+  "negative_hash_adulteration": {
+    "ok": true,
+    "errorType": "FixtureConfigError",
+    "message": "fixture descriptor hash mismatch for posting: 8ca59206b4e7de0aba26cf55c4fecca2bd7bce9860a570eb4879297b163d0761 != 0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "tracks": [
+    {
+      "track": "interest",
+      "status": 200,
+      "fixtureId": "interest-local-technical-smoke-v1",
+      "fixtureHash": "eb811e53b0782a6d9e1c0abfb4d511cbd68e36581b47ff723caea5793a2ef05b",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4habgnp3/audit.json",
+      "audit_sha256": "834d5dbb00edc21ff20b659480337c1790be9d48dbacd27f9f4ee706d6df4ed4",
+      "publicItemCount": 1,
+      "stateBeforeEntryCount": 0,
+      "stateAfterEntryCount": 6,
+      "stateBeforeTreeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "stateAfterTreeSha256": "c1e6e04f581d45e1f1f9145d4cd164dadccabb1b79747aa9bd62c0f8acbbd124",
+      "resetEffective": true,
+      "selectedVia": "local_config"
+    },
+    {
+      "track": "posting",
+      "status": 200,
+      "fixtureId": "posting-local-technical-smoke-v1",
+      "fixtureHash": "8ca59206b4e7de0aba26cf55c4fecca2bd7bce9860a570eb4879297b163d0761",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-q88qbl6j/audit.json",
+      "audit_sha256": "e55c3f627a0c06e9a08bd2e7c26c61f44401ad5746c77761c75d234164a7b4e0",
+      "publicItemCount": 1,
+      "stateBeforeEntryCount": 0,
+      "stateAfterEntryCount": 14,
+      "stateBeforeTreeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "stateAfterTreeSha256": "a743d450eaa7efdb5e779ee6e02cace77ece4aab0cdf9a25bcfd3471f68b85da",
+      "resetEffective": true,
+      "selectedVia": "local_config"
+    },
+    {
+      "track": "reporting",
+      "status": 200,
+      "fixtureId": "reporting-local-technical-smoke-v1",
+      "fixtureHash": "8cc44c7add0efe9c4bd69fc3629c13b93b77c1ecc3c0944281abc09544b952de",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/audit.json",
+      "audit_sha256": "a30c6355e55bdcb9df02d4ffc9ab59e3c20f1e52e7e80347f16bcf812d32e357",
+      "publicItemCount": 4,
+      "stateBeforeEntryCount": 0,
+      "stateAfterEntryCount": 6,
+      "stateBeforeTreeSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "stateAfterTreeSha256": "2c7be0a7acf731e1f6c3c90f377bf663e5da3abe9b547cf1c5f2b9438fc53003",
+      "resetEffective": true,
+      "selectedVia": "local_config"
+    }
+  ],
+  "isolation": {
+    "uniqueAuditWorkdirs": 3,
+    "auditWorkdirs": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-4habgnp3",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-q88qbl6j",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk"
+    ],
+    "allBeforeEmpty": true,
+    "allResetEffective": true
+  }
+}

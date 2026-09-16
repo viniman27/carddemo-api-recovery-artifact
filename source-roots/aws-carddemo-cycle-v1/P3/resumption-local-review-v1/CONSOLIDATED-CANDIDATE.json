@@ -1,0 +1,220 @@
+{
+  "kind": "preparation-consolidation-candidate-overlay",
+  "status": "partial_preparation_not_campaign_release",
+  "baseConfiguration": "P3/campaign-configuration-v2/campaign-config-v2.json",
+  "pins": [
+    {
+      "path": "P3/campaign-configuration-v2/campaign-config-v2.json",
+      "bytes": 44582,
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    {
+      "path": "P3/t2-offline-preparation-v4/src/t2_offline_bridge.py",
+      "bytes": 18219,
+      "sha256": "4ab9d7c95650beb598250ce28f078a9fb9f28181b9e66fdf650a878c99c4aee4"
+    },
+    {
+      "path": "P3/t2-offline-preparation-v4/t2_offline_cli.py",
+      "bytes": 3558,
+      "sha256": "fe1e5733b5936e21af1011d54931bfd5102a206509cd16e53ab7bd9039e76061"
+    },
+    {
+      "path": "P3/t3-sdd-external-selection-v3/sdd_external_selection.py",
+      "bytes": 35586,
+      "sha256": "a9744fac60ff4ccb6a43cac7e52cafb669f6d9297834ee48f9d920550593d71a"
+    },
+    {
+      "path": "P3/t3-sdd-external-selection-v3/integrated-mapping.sdd-external-selection-v3.json",
+      "bytes": 569619,
+      "sha256": "0d16e3946eda57e1924938d43a58d5cf3313c5ebff1bac3ecba03725fe8141ee"
+    },
+    {
+      "path": "P3/t3-sdd-external-selection-v3/external-selection-plan.json",
+      "bytes": 105740,
+      "sha256": "845725cb334e6e59916e8862223f83255862d515e4735bc6b39154196085a0af"
+    },
+    {
+      "path": "P3/t3-sdd-external-selection-v3/selected-suite-real.json",
+      "bytes": 144644,
+      "sha256": "24f9ccc719ac7c6d60b1c931c263704dc1e4b7f95e0c7c729b8b3d4bdd568d1b"
+    },
+    {
+      "path": "P3/t3-campaign-adapter-v3/PARENT-RECOVERY.md",
+      "bytes": 617,
+      "sha256": "371a10031169958e9566d79eae8892d7f8b8a5e9fec3e9b2e4e9405566107a25"
+    },
+    {
+      "path": "P3/campaign-harness-v3/src/campaign_harness.py",
+      "bytes": 26983,
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    {
+      "path": "P3/fixture-materialization-v2/package/manifest.json",
+      "bytes": 16432,
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    {
+      "path": "P3/reference-executable-v4/model.json",
+      "bytes": 112525,
+      "sha256": "26b3a23d2e682726d7b9e7ea309149ada93e72133a13c5c0ab2b743b7aab48f1"
+    },
+    {
+      "path": "P3/resumption-local-review-v1/PARENT-TESTS.json",
+      "bytes": 3012,
+      "sha256": "fab0f613af43de1f003809cf928812e280160012d306c495a6d8a9f2fccf01d6"
+    }
+  ],
+  "scope": {
+    "contracts": 7,
+    "operations": 21,
+    "tracks": [
+      "posting",
+      "interest",
+      "reporting"
+    ]
+  },
+  "preservedDecisions": {
+    "T1": {
+      "automaticModelSwitch": false,
+      "automaticRetries": 0,
+      "callsPerContract": 1,
+      "inputVisibility": "contract + common instruction + metadata only; no fixtures/oracles/runtime/reference/quarantine",
+      "maxScenariosPerOperation": 12,
+      "paidFallback": false
+    },
+    "T2": {
+      "allocation": {
+        "negative": 50,
+        "positive": 50,
+        "unusedBudgetTransfer": false
+      },
+      "checks": [
+        "status_code_conformance",
+        "content_type_conformance",
+        "response_schema_conformance"
+      ],
+      "freezeBeforeReplay": true,
+      "hypothesisVersion": "6.168.0",
+      "maxExamplesPerOperationPerSeed": 100,
+      "replayRedirects": false,
+      "replayRetries": 0,
+      "seeds": [
+        104729,
+        130363,
+        155921
+      ],
+      "tool": "schemathesis",
+      "version": "4.27.1"
+    },
+    "T3": {
+      "mappingStatus": "t3-mapping-integration-v2 candidate; 44 executable-eligible recipe cells; not official cases",
+      "maxPathsPerTrackFixture": 50,
+      "reference": "reference-executable-v4 exists; PASS delimited for abstract path selection only",
+      "selection": "BFS lexicographic transition ID"
+    },
+    "T4": {
+      "freshExecution": true,
+      "identity": "exact operation/request bytes + initial package/parameters + sequence + expectation version/target",
+      "statisticallyIndependentReplica": false,
+      "unionOrder": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    "analysis": {
+      "coverage": "inadmissible on missing/stale gcda or gcov mismatch; never fabricate zero",
+      "denominators": [
+        "design units",
+        "frozen generated cases",
+        "runtime applications",
+        "independent obligations"
+      ],
+      "descriptive": true,
+      "excludeMissingUnits": false,
+      "timestampNormalization": false
+    },
+    "execution": "serial",
+    "order": [
+      "contract replica",
+      "zero-shot/few-shot/SDD",
+      "T1/T2/T3/T4",
+      "posting/interest/reporting",
+      "fixture ID",
+      "case ID"
+    ],
+    "reset": "verified new workdir before every application; compare effective resource hashes, not only directory names",
+    "sharedStateAcrossCalls": false
+  },
+  "candidateEntrypoints": {
+    "T2": "P3/t2-offline-preparation-v4/src/t2_offline_bridge.py::generate_t2_offline_suite_for_contract",
+    "T3_SDD": "P3/t3-sdd-external-selection-v3/sdd_external_selection.py::build_selected_t3_suite",
+    "T3_nonSDD": "P3/t3-campaign-adapter-v3",
+    "harness": "campaign-harness-v3"
+  },
+  "t3Static": {
+    "summary": {
+      "blocked": 7,
+      "byTrack": {
+        "interest": 6,
+        "posting": 6,
+        "reporting": 6
+      },
+      "selected": 18,
+      "selectionCategories": {
+        "branch_selected_no_output_oracle": 3,
+        "guard_eligible": 9,
+        "guard_eligible_partial_branch": 2,
+        "request_preparation_no_output_oracle": 1,
+        "request_preparation_static_only": 3
+      },
+      "totalSddObligations": 25
+    },
+    "realSuiteCases": 65,
+    "selectionReport": {
+      "acceptedCount": 65,
+      "excludedByEffectiveSelection": [
+        {
+          "caseId": "T3-0008-f4bd401b6fc8",
+          "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+          "restriction": "not_in_declared_effective_selectable_transitions",
+          "transitionId": "INTCALC-T008"
+        },
+        {
+          "caseId": "T3-0020-f4bd401b6fc8",
+          "cellRef": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+          "restriction": "not_in_declared_effective_selectable_transitions",
+          "transitionId": "INTCALC-T008"
+        },
+        {
+          "caseId": "T3-0041-f305b2e45113",
+          "cellRef": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+          "restriction": "not_in_declared_effective_selectable_transitions",
+          "transitionId": "POSTTRAN-T014"
+        }
+      ],
+      "excludedCount": 3,
+      "unfilteredAcceptedCount": 68
+    },
+    "maxDepth": 6,
+    "maxPathsPerCapability": 12,
+    "officialBudgetApplied": false
+  },
+  "authorization": {
+    "specificT1ReauthorizationReceived": false,
+    "campaignAuthorized": false,
+    "humanFixturePromotionRecorded": false,
+    "humanInspectionClaimed": false
+  },
+  "remainingMaterialWork": [
+    "T1: specific consent, then versioned transport correction tests and exact outbound/probe/seven calls if probe passes.",
+    "T2: bind real fixture packages per operation at import before official freeze; candidate placeholder is not an official resource package.",
+    "T3: parameterize final generation budget; static maxPaths=12 is not approved candidate budget=50 per track/fixture. Preserve all25 obligations and distinguish request preparation from guard/obligation evidence.",
+    "Consolidate generation/import/freeze orchestration using these pinned entrypoints, not historical runners; no official release now."
+  ],
+  "humanGate": [
+    "Review/promote exact fixture bytes and isolate resource resets, without creating oracle authority.",
+    "Approve frozen suite manifests only after actual T1-T3 generation and validation; T4 subsequent dependent union.",
+    "Campaign requires separate explicit authorization after preparation closure."
+  ]
+}

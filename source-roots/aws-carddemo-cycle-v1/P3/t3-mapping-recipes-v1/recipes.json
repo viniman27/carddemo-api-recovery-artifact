@@ -1,0 +1,1193 @@
+{
+  "guardrails": [
+    "no official AWS cases exported",
+    "blocked cells keep no usable selectors",
+    "SDD remains closed {} only where contract schema is closed empty object",
+    "selectors cite fixture resources, byte spans, bindings, or contract-authorized scalars"
+  ],
+  "inputs": {
+    "applicabilityMatrix": "casos/aws-carddemo-cycle-v1/P3/applicability-mapping-v3/applicability_matrix.json",
+    "contractPins": "casos/aws-carddemo-cycle-v1/P3/suite-adapters-preflight-v1/evidence-real-preflight-20260915T-synthetic/contract-pins.json",
+    "fixtureManifest": "casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+    "operationInventory": "casos/aws-carddemo-cycle-v1/P3/suite-adapters-preflight-v1/evidence-real-preflight-20260915T-synthetic/operation-inventory.json"
+  },
+  "kind": "t3-mapping-recipes-v1",
+  "officialCampaign": false,
+  "recipes": [
+    {
+      "contractId": "E1-1",
+      "contractPin": {
+        "bytes": 30136,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+        "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/posting-runs"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E1-1:posting:postDailyTransactions:/posting-runs",
+      "requestBody": {
+        "object": {
+          "accountFile": {
+            "authority": "fieldSelectors accountFile->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "categoryBalanceFile": {
+            "authority": "fieldSelectors categoryBalanceFile->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "crossReferenceFile": {
+            "authority": "fieldSelectors crossReferenceFile->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "dailyTransactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN 350-byte records; raw contract TransactionInput",
+              "dd": "DALYTRAN",
+              "format": "rawBase64Objects",
+              "recordLength": 350
+            }
+          },
+          "rejectFile": {
+            "fromContractScalar": {
+              "authority": "contract field rejectFile with matrix allowedSource DALYREJS; output binding name only",
+              "value": "DALYREJS"
+            }
+          },
+          "transactionFile": {
+            "authority": "fieldSelectors transactionFile->TRANFILE",
+            "fromBinding": "TRANFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E1-1",
+      "contractPin": {
+        "bytes": 30136,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+        "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-runs"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E1-1:interest:generateInterestTransactions:/interest-runs",
+      "requestBody": {
+        "object": {
+          "accountFile": {
+            "authority": "fieldSelectors accountFile->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "categoryBalanceFile": {
+            "authority": "fieldSelectors categoryBalanceFile->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "crossReferenceFile": {
+            "authority": "fieldSelectors crossReferenceFile->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "disclosureGroupFile": {
+            "authority": "fieldSelectors disclosureGroupFile->DISCGRP",
+            "fromBinding": "DISCGRP"
+          },
+          "outputTransactionFile": {
+            "fromContractScalar": {
+              "authority": "contract field outputTransactionFile; output binding name only",
+              "value": "TRANSACT"
+            }
+          },
+          "parameterDate": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies parameterDate",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          },
+          "parameterLength": {
+            "authority": "PARMFILE byte size is 10",
+            "format": "size",
+            "fromResource": "PARMFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E1-1",
+      "contractPin": {
+        "bytes": 30136,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+        "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-report-runs"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E1-1:reporting:generateTransactionReport:/transaction-report-runs",
+      "requestBody": {
+        "object": {
+          "crossReferenceFile": {
+            "authority": "fieldSelectors crossReferenceFile->CARDXREF",
+            "fromBinding": "CARDXREF"
+          },
+          "dateParameterRecords": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameterRecords",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "reportFile": {
+            "fromContractScalar": {
+              "authority": "contract field reportFile; output binding name only",
+              "value": "REPORT"
+            }
+          },
+          "transactionCategoryFile": {
+            "authority": "fieldSelectors transactionCategoryFile->TRANCATG",
+            "fromBinding": "TRANCATG"
+          },
+          "transactionTypeFile": {
+            "authority": "fieldSelectors transactionTypeFile->TRANTYPE",
+            "fromBinding": "TRANTYPE"
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE 350-byte records; raw contract TransactionInput",
+              "dd": "TRANFILE",
+              "format": "rawBase64Objects",
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E1-2",
+      "contractPin": {
+        "bytes": 31102,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+        "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-postings"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+      "requestBody": {
+        "object": {
+          "accountFile": {
+            "authority": "fieldSelectors accountFile->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "categoryBalanceFile": {
+            "authority": "fieldSelectors categoryBalanceFile->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "crossReferenceFile": {
+            "authority": "fieldSelectors crossReferenceFile->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "dailyTransactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN 350-byte records; raw contract TransactionInput",
+              "dd": "DALYTRAN",
+              "format": "rawBase64Objects",
+              "recordLength": 350
+            }
+          },
+          "transactionFile": {
+            "authority": "fieldSelectors transactionFile->TRANFILE",
+            "fromBinding": "TRANFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E1-2",
+      "contractPin": {
+        "bytes": 31102,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+        "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-transactions"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+      "requestBody": {
+        "object": {
+          "accountFile": {
+            "authority": "fieldSelectors accounts->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "categoryBalanceFile": {
+            "authority": "fieldSelectors category balance->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "crossReferenceFile": {
+            "authority": "fieldSelectors cross reference->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "disclosureGroupFile": {
+            "authority": "fieldSelectors disclosureGroups->DISCGRP",
+            "fromBinding": "DISCGRP"
+          },
+          "idPrefix": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies idPrefix",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E1-2",
+      "contractPin": {
+        "bytes": 31102,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+        "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-reports"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E1-2:reporting:generateTransactionReport:/transaction-reports",
+      "requestBody": {
+        "object": {
+          "crossReferenceFile": {
+            "authority": "fieldSelectors crossReferenceFile->CARDXREF",
+            "fromBinding": "CARDXREF"
+          },
+          "dateParameters": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameters",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "transactionCategoryFile": {
+            "authority": "fieldSelectors transactionCategoryFile->TRANCATG",
+            "fromBinding": "TRANCATG"
+          },
+          "transactionTypeFile": {
+            "authority": "fieldSelectors transactionTypeFile->TRANTYPE",
+            "fromBinding": "TRANTYPE"
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE 350-byte records; raw contract TransactionInput",
+              "dd": "TRANFILE",
+              "format": "rawBase64Objects",
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E1-3",
+      "contractPin": {
+        "bytes": 30113,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+        "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-postings"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E1-3:posting:postDailyTransactions:/transaction-postings",
+      "requestBody": {
+        "object": {
+          "accounts": {
+            "authority": "fieldSelectors accounts->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "cardCrossReference": {
+            "authority": "fieldSelectors cardCrossReference->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "categoryBalances": {
+            "authority": "fieldSelectors categoryBalances->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "dailyTransactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN 350-byte records; raw base64 contract string",
+              "dd": "DALYTRAN",
+              "format": "base64Strings",
+              "recordLength": 350
+            }
+          },
+          "rejectionOutput": {
+            "fromContractScalar": {
+              "authority": "contract field rejectionOutput with matrix allowedSource DALYREJS; output binding name only",
+              "value": "DALYREJS"
+            }
+          },
+          "transactionOutput": {
+            "authority": "fieldSelectors transactionOutput->TRANFILE",
+            "fromBinding": "TRANFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E1-3",
+      "contractPin": {
+        "bytes": 30113,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+        "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-transaction-generations"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E1-3:interest:generateInterestTransactions:/interest-transaction-generations",
+      "requestBody": {
+        "object": {
+          "accounts": {
+            "authority": "fieldSelectors accounts->ACCTFILE",
+            "fromBinding": "ACCTFILE"
+          },
+          "cardCrossReference": {
+            "authority": "fieldSelectors cross reference->XREFFILE",
+            "fromBinding": "XREFFILE"
+          },
+          "categoryBalances": {
+            "authority": "fieldSelectors category balance->TCATBALF",
+            "fromBinding": "TCATBALF"
+          },
+          "disclosureGroups": {
+            "authority": "fieldSelectors disclosureGroups->DISCGRP",
+            "fromBinding": "DISCGRP"
+          },
+          "transactionIdPrefix": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies transactionIdPrefix",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          },
+          "transactionOutput": {
+            "fromContractScalar": {
+              "authority": "contract field transactionOutput; output binding name only",
+              "value": "TRANSACT"
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E1-3",
+      "contractPin": {
+        "bytes": 30113,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+        "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-reports"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E1-3:reporting:generateTransactionReport:/transaction-reports",
+      "requestBody": {
+        "object": {
+          "cardCrossReference": {
+            "authority": "fieldSelectors cardCrossReference->CARDXREF",
+            "fromBinding": "CARDXREF"
+          },
+          "dateParameterRecords": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameterRecords",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "reportOutput": {
+            "fromContractScalar": {
+              "authority": "contract field reportOutput; output binding name only",
+              "value": "REPORT"
+            }
+          },
+          "transactionCategories": {
+            "authority": "fieldSelectors transactionCategories->TRANCATG",
+            "fromBinding": "TRANCATG"
+          },
+          "transactionTypes": {
+            "authority": "fieldSelectors transactionTypes->TRANTYPE",
+            "fromBinding": "TRANTYPE"
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE 350-byte records; raw base64 contract string",
+              "dd": "TRANFILE",
+              "format": "base64Strings",
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E2-1",
+      "contractPin": {
+        "bytes": 28899,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+        "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-postings"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E2-1:posting:postDailyTransactions:/transaction-postings",
+      "requestBody": {
+        "object": {
+          "dailyTransactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN byte spans CVTRA05Y",
+              "dd": "DALYTRAN",
+              "format": "transactionObjects",
+              "numericFields": [
+                "amount"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E2-1",
+      "contractPin": {
+        "bytes": 28899,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+        "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-transaction-generations"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E2-1:interest:generateInterestTransactions:/interest-transaction-generations",
+      "requestBody": {
+        "object": {
+          "transactionIdPrefix": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies transactionIdPrefix",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E2-1",
+      "contractPin": {
+        "bytes": 28899,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+        "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-reports"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E2-1:reporting:generateTransactionReport:/transaction-reports",
+      "requestBody": {
+        "object": {
+          "dateParameterRecords": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameterRecords",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE byte spans CVTRA05Y",
+              "dd": "TRANFILE",
+              "format": "transactionObjects",
+              "numericFields": [
+                "amount"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E2-2",
+      "contractPin": {
+        "bytes": 29973,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+        "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-posting-runs"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E2-2:posting:postDailyTransactions:/transaction-posting-runs",
+      "requestBody": {
+        "object": {
+          "bindings": {
+            "object": {
+              "accounts": {
+                "authority": "bindings.accounts->ACCTFILE",
+                "fromBinding": "ACCTFILE"
+              },
+              "categoryBalances": {
+                "authority": "bindings.categoryBalances->TCATBALF",
+                "fromBinding": "TCATBALF"
+              },
+              "crossReferences": {
+                "authority": "bindings.crossReferences->XREFFILE",
+                "fromBinding": "XREFFILE"
+              },
+              "rejectionOutput": {
+                "fromContractScalar": {
+                  "authority": "contract bindings.rejectionOutput; output binding name only",
+                  "value": "DALYREJS"
+                }
+              },
+              "transactionOutput": {
+                "authority": "bindings.transactionOutput->TRANFILE",
+                "fromBinding": "TRANFILE"
+              }
+            }
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN byte spans CVTRA05Y",
+              "dd": "DALYTRAN",
+              "format": "transactionObjects",
+              "numericFields": [
+                "categoryCode",
+                "amount",
+                "merchantId"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E2-2",
+      "contractPin": {
+        "bytes": 29973,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+        "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-generation-runs"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E2-2:interest:generateInterestTransactions:/interest-generation-runs",
+      "requestBody": {
+        "object": {
+          "bindings": {
+            "object": {
+              "accounts": {
+                "authority": "bindings.accounts->ACCTFILE",
+                "fromBinding": "ACCTFILE"
+              },
+              "categoryBalances": {
+                "authority": "bindings.categoryBalances->TCATBALF",
+                "fromBinding": "TCATBALF"
+              },
+              "crossReferences": {
+                "authority": "bindings.crossReferences->XREFFILE",
+                "fromBinding": "XREFFILE"
+              },
+              "disclosureGroups": {
+                "authority": "bindings.disclosureGroups->DISCGRP",
+                "fromBinding": "DISCGRP"
+              },
+              "transactionOutput": {
+                "fromContractScalar": {
+                  "authority": "contract bindings.transactionOutput; output binding name only",
+                  "value": "TRANSACT"
+                }
+              }
+            }
+          },
+          "parameterDate": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies parameterDate",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          },
+          "parameterLength": {
+            "authority": "PARMFILE byte size is 10",
+            "format": "size",
+            "fromResource": "PARMFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E2-2",
+      "contractPin": {
+        "bytes": 29973,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+        "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-report-runs"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E2-2:reporting:generateTransactionReport:/transaction-report-runs",
+      "requestBody": {
+        "object": {
+          "bindings": {
+            "object": {
+              "crossReferences": {
+                "authority": "bindings.crossReferences->CARDXREF",
+                "fromBinding": "CARDXREF"
+              },
+              "reportOutput": {
+                "fromContractScalar": {
+                  "authority": "contract bindings.reportOutput; output binding name only",
+                  "value": "REPORT"
+                }
+              },
+              "transactionCategories": {
+                "authority": "bindings.transactionCategories->TRANCATG",
+                "fromBinding": "TRANCATG"
+              },
+              "transactionTypes": {
+                "authority": "bindings.transactionTypes->TRANTYPE",
+                "fromBinding": "TRANTYPE"
+              }
+            }
+          },
+          "dateParameterRecords": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameterRecords",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE byte spans CVTRA05Y",
+              "dd": "TRANFILE",
+              "format": "transactionObjects",
+              "numericFields": [
+                "categoryCode",
+                "amount",
+                "merchantId"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E2-3",
+      "contractPin": {
+        "bytes": 25822,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+        "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3"
+      },
+      "fixtureSelection": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "posting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-posting-runs"
+      },
+      "operationId": "postDailyTransactions",
+      "recipeId": "E2-3:posting:postDailyTransactions:/transaction-posting-runs",
+      "requestBody": {
+        "object": {
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DALYTRAN byte spans CVTRA05Y",
+              "dd": "DALYTRAN",
+              "format": "transactionObjects",
+              "numericFields": [
+                "categoryCode",
+                "amount",
+                "merchantId"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E2-3",
+      "contractPin": {
+        "bytes": 25822,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+        "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3"
+      },
+      "fixtureSelection": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "interest"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest-generation-runs"
+      },
+      "operationId": "generateInterestTransactions",
+      "recipeId": "E2-3:interest:generateInterestTransactions:/interest-generation-runs",
+      "requestBody": {
+        "object": {
+          "transactionIdPrefix": {
+            "authority": "fixture-materialization-v2/package/manifest.json packages.interest.sequential PARMFILE supplies transactionIdPrefix",
+            "encoding": "utf8",
+            "fromBytes": "PARMFILE"
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E2-3",
+      "contractPin": {
+        "bytes": 25822,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+        "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3"
+      },
+      "fixtureSelection": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "status": "candidate_needs_review",
+        "track": "reporting"
+      },
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/transaction-report-runs"
+      },
+      "operationId": "generateTransactionReport",
+      "recipeId": "E2-3:reporting:generateTransactionReport:/transaction-report-runs",
+      "requestBody": {
+        "object": {
+          "dateParameterRecords": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource DATEPARM byte spans 0..80 for dateParameterRecords",
+              "dd": "DATEPARM",
+              "format": "utf8Strings",
+              "recordLength": 80
+            }
+          },
+          "transactions": {
+            "fromSequentialRecords": {
+              "authority": "fixture resource TRANFILE byte spans CVTRA05Y",
+              "dd": "TRANFILE",
+              "format": "transactionObjects",
+              "numericFields": [
+                "categoryCode",
+                "amount",
+                "merchantId"
+              ],
+              "recordLength": 350
+            }
+          }
+        }
+      },
+      "sddConstantEmptyObject": false,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E3-01-SDD-stage6r3",
+      "contractPin": {
+        "bytes": 51697,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+      },
+      "fixtureSelection": null,
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "recipeId": "E3-01-SDD-stage6r3:posting:posting:/posting",
+      "requestBody": {},
+      "sddConstantEmptyObject": true,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-01-SDD-stage6r3",
+      "contractPin": {
+        "bytes": 51697,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+      },
+      "fixtureSelection": null,
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "recipeId": "E3-01-SDD-stage6r3:interest:interest:/interest",
+      "requestBody": {},
+      "sddConstantEmptyObject": true,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E3-01-SDD-stage6r3",
+      "contractPin": {
+        "bytes": 51697,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+      },
+      "fixtureSelection": null,
+      "officialCampaign": false,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "recipeId": "E3-01-SDD-stage6r3:reporting:reporting:/reporting",
+      "requestBody": {},
+      "sddConstantEmptyObject": true,
+      "sourcePolicy": {
+        "noOracle": true,
+        "noRuntimeResults": true,
+        "parametricOnly": true
+      },
+      "track": "reporting"
+    }
+  ],
+  "recordLayouts": {
+    "CVTRA05Y": [
+      {
+        "byteEndExclusive": 16,
+        "byteStart": 0,
+        "name": "transactionId"
+      },
+      {
+        "byteEndExclusive": 18,
+        "byteStart": 16,
+        "name": "typeCode"
+      },
+      {
+        "byteEndExclusive": 22,
+        "byteStart": 18,
+        "name": "categoryCode"
+      },
+      {
+        "byteEndExclusive": 32,
+        "byteStart": 22,
+        "name": "source"
+      },
+      {
+        "byteEndExclusive": 132,
+        "byteStart": 32,
+        "name": "description"
+      },
+      {
+        "byteEndExclusive": 143,
+        "byteStart": 132,
+        "name": "amount"
+      },
+      {
+        "byteEndExclusive": 152,
+        "byteStart": 143,
+        "name": "merchantId"
+      },
+      {
+        "byteEndExclusive": 202,
+        "byteStart": 152,
+        "name": "merchantName"
+      },
+      {
+        "byteEndExclusive": 252,
+        "byteStart": 202,
+        "name": "merchantCity"
+      },
+      {
+        "byteEndExclusive": 262,
+        "byteStart": 252,
+        "name": "merchantZip"
+      },
+      {
+        "byteEndExclusive": 278,
+        "byteStart": 262,
+        "name": "cardNumber"
+      },
+      {
+        "byteEndExclusive": 304,
+        "byteStart": 278,
+        "name": "originalTimestamp"
+      },
+      {
+        "byteEndExclusive": 330,
+        "byteStart": 304,
+        "name": "processingTimestamp"
+      },
+      {
+        "byteEndExclusive": 350,
+        "byteStart": 330,
+        "name": "filler"
+      }
+    ],
+    "DATEPARM": [
+      {
+        "byteEndExclusive": 80,
+        "byteStart": 0,
+        "name": "dateParameterRecord"
+      }
+    ],
+    "PARMFILE": [
+      {
+        "byteEndExclusive": 10,
+        "byteStart": 0,
+        "name": "parameterDate"
+      }
+    ]
+  },
+  "scope": {
+    "cellRequestCountNotGenerated": 175,
+    "operationCount": 21
+  },
+  "status": "candidate_parametric_recipes_only_not_official_cases"
+}

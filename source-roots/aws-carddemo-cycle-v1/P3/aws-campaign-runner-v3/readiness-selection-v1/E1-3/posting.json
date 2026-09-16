@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E1-3-posting-T1-REAL-E1-3-E1-3-T1-POSTINGS-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E1-3",
+      "parameters": {
+        "category": "boundary",
+        "contractId": "E1-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "boundary",
+        "originalScenarioId": "T1-POSTINGS-001",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "d80e1a2e79926259b7f3ceea2b2fe2d66448a9ad169c4b07d9ffe321a11fcaef",
+        "sourceScenarioCanonicalSha256": "03f06072cb1e1c1bbd0ebacca39bdfa8980a9a4c475c9b51d35d4c1b826bb4ca",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E1-3:T1-POSTINGS-001",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E1-3/T1.json:T1-REAL-E1-3-E1-3-T1-POSTINGS-001"
+      ],
+      "request": {
+        "body_b64": "eyJkYWlseVRyYW5zYWN0aW9ucyI6W10sImNhcmRDcm9zc1JlZmVyZW5jZSI6IlhSRUZGSUxFIiwiYWNjb3VudHMiOiJBQ0NURklMRSIsImNhdGVnb3J5QmFsYW5jZXMiOiJUQ0FUQkFMRiIsInRyYW5zYWN0aW9uT3V0cHV0IjoiVFJBTkZJTEUiLCJyZWplY3Rpb25PdXRwdXQiOiJEQUxZUkVKUyJ9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E1-3-posting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "973231a21d2eb801100115fa851086872ef875ebca3b83f945f238bdbc719195",
+  "suite_id": "READINESS21-E1-3-posting"
+}

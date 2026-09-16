@@ -1,0 +1,997 @@
+{
+  "trials": 35,
+  "targetedFaults": 30,
+  "detectedTargeted": 30,
+  "unavailable": 4,
+  "intentionalBlindSpots": 1,
+  "limits": [
+    "small purposive output/state counterexample sample",
+    "not program mutation score",
+    "shared implementation/source; no independent reviewer",
+    "this 35-probe output-fault set does not qualify signed arithmetic; see signed-probe/qualification.json; overflow unqualified",
+    "timestamps deliberately excluded; internal ordering not observable"
+  ],
+  "byClass": [
+    {
+      "domain": "accounts",
+      "errorClass": "duplication",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "missing_observation",
+      "trials": 1,
+      "targeted": 0,
+      "detected": 0,
+      "verdicts": {
+        "inconclusive": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "omission",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "partial_record",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "reordering",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "same_length_wrong_amount",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "unexpected_empty",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "balance_not_updated",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "cycle_not_reset",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "duplication",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "missing_observation",
+      "trials": 1,
+      "targeted": 0,
+      "detected": 0,
+      "verdicts": {
+        "inconclusive": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "omission",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "partial_record",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "reordering",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "same_length_wrong_amount",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "interest",
+      "errorClass": "unexpected_empty",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "duplication",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "excluded_processing_timestamp",
+      "trials": 1,
+      "targeted": 0,
+      "detected": 0,
+      "verdicts": {
+        "pass": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "missing_observation",
+      "trials": 1,
+      "targeted": 0,
+      "detected": 0,
+      "verdicts": {
+        "inconclusive": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "omission",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "partial_record",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "reordering",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "same_length_wrong_amount",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "shifted_money_or_date_boundary",
+      "trials": 4,
+      "targeted": 4,
+      "detected": 4,
+      "verdicts": {
+        "failed": 4
+      }
+    },
+    {
+      "domain": "posting",
+      "errorClass": "unexpected_empty",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "duplication",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "missing_observation",
+      "trials": 1,
+      "targeted": 0,
+      "detected": 0,
+      "verdicts": {
+        "inconclusive": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "omission",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "reordering",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_first_subtotal",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_grand_total",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_last_subtotal",
+      "trials": 1,
+      "targeted": 1,
+      "detected": 1,
+      "verdicts": {
+        "failed": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "domain": "posting",
+      "errorClass": "same_length_wrong_amount",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "omission",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "duplication",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "reordering",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "partial_record",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "partial_record",
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "unexpected_empty",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "missing_observation",
+      "baselineVerdict": "pass",
+      "verdict": "inconclusive",
+      "targetedFault": false,
+      "detected": false,
+      "failures": [
+        "missing_evidence"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "same_length_wrong_amount",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "omission",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "duplication",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "reordering",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "partial_record",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "partial_record",
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "unexpected_empty",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "missing_observation",
+      "baselineVerdict": "pass",
+      "verdict": "inconclusive",
+      "targetedFault": false,
+      "detected": false,
+      "failures": [
+        "missing_evidence"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "same_length_wrong_amount",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "omission",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "duplication",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "reordering",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "partial_record",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "partial_record",
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "unexpected_empty",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "accounts",
+      "errorClass": "missing_observation",
+      "baselineVerdict": "pass",
+      "verdict": "inconclusive",
+      "targetedFault": false,
+      "detected": false,
+      "failures": [
+        "missing_evidence"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "balance_not_updated",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "interest",
+      "errorClass": "cycle_not_reset",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        "value_or_multiplicity",
+        "ordered_records_differ"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_first_subtotal",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 1,
+          "expected": [
+            "page_total",
+            100
+          ],
+          "observed": [
+            "page_total",
+            101
+          ]
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_last_subtotal",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 4,
+          "expected": [
+            "page_total",
+            200
+          ],
+          "observed": [
+            "page_total",
+            201
+          ]
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "wrong_grand_total",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 5,
+          "expected": [
+            "grand_total",
+            300
+          ],
+          "observed": [
+            "grand_total",
+            301
+          ]
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "omission",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 1,
+          "expected": [
+            "page_total",
+            100
+          ],
+          "observed": [
+            "detail",
+            "b",
+            200
+          ]
+        },
+        {
+          "index": 2,
+          "expected": [
+            "detail",
+            "b",
+            200
+          ],
+          "observed": [
+            "account_total",
+            300
+          ]
+        },
+        {
+          "index": 3,
+          "expected": [
+            "account_total",
+            300
+          ],
+          "observed": [
+            "page_total",
+            200
+          ]
+        },
+        {
+          "index": 4,
+          "expected": [
+            "page_total",
+            200
+          ],
+          "observed": [
+            "grand_total",
+            300
+          ]
+        },
+        {
+          "index": 5,
+          "expected": [
+            "grand_total",
+            300
+          ],
+          "observed": null
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "duplication",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 2,
+          "expected": [
+            "detail",
+            "b",
+            200
+          ],
+          "observed": [
+            "page_total",
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "expected": [
+            "account_total",
+            300
+          ],
+          "observed": [
+            "detail",
+            "b",
+            200
+          ]
+        },
+        {
+          "index": 4,
+          "expected": [
+            "page_total",
+            200
+          ],
+          "observed": [
+            "account_total",
+            300
+          ]
+        },
+        {
+          "index": 5,
+          "expected": [
+            "grand_total",
+            300
+          ],
+          "observed": [
+            "page_total",
+            200
+          ]
+        },
+        {
+          "index": 6,
+          "expected": null,
+          "observed": [
+            "grand_total",
+            300
+          ]
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "reordering",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 0,
+          "expected": [
+            "detail",
+            "a",
+            100
+          ],
+          "observed": [
+            "detail",
+            "b",
+            200
+          ]
+        },
+        {
+          "index": 1,
+          "expected": [
+            "page_total",
+            100
+          ],
+          "observed": [
+            "account_total",
+            300
+          ]
+        },
+        {
+          "index": 2,
+          "expected": [
+            "detail",
+            "b",
+            200
+          ],
+          "observed": [
+            "page_total",
+            200
+          ]
+        },
+        {
+          "index": 3,
+          "expected": [
+            "account_total",
+            300
+          ],
+          "observed": [
+            "grand_total",
+            300
+          ]
+        },
+        {
+          "index": 4,
+          "expected": [
+            "page_total",
+            200
+          ],
+          "observed": [
+            "detail",
+            "a",
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "expected": [
+            "grand_total",
+            300
+          ],
+          "observed": [
+            "page_total",
+            100
+          ]
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "reporting",
+      "errorClass": "missing_observation",
+      "baselineVerdict": "pass",
+      "verdict": "inconclusive",
+      "targetedFault": false,
+      "detected": false,
+      "failures": [
+        "missing_report"
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "excluded_processing_timestamp",
+      "baselineVerdict": "pass",
+      "verdict": "pass",
+      "targetedFault": false,
+      "detected": false,
+      "failures": [],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "shifted_money_or_date_boundary",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 0,
+          "expected": 0,
+          "observed": 102
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "shifted_money_or_date_boundary",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 0,
+          "expected": 102,
+          "observed": 0
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "shifted_money_or_date_boundary",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 0,
+          "expected": 0,
+          "observed": 103
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    },
+    {
+      "domain": "posting",
+      "errorClass": "shifted_money_or_date_boundary",
+      "baselineVerdict": "pass",
+      "verdict": "failed",
+      "targetedFault": true,
+      "detected": true,
+      "failures": [
+        {
+          "index": 0,
+          "expected": 103,
+          "observed": 0
+        }
+      ],
+      "scope": "synthetic_output_or_state_checker_qualification_not_program_mutation"
+    }
+  ]
+}

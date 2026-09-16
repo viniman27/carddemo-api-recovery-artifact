@@ -1,0 +1,11 @@
+openapi: 3.1.0
+info: {title: Membership Discount API, version: 1.0.0}
+paths:
+  /membership-discounts:
+    post:
+      operationId: calculateMembershipDiscount
+      requestBody:
+        required: true
+        content: {application/json: {schema: {type: object, required: [tier, purchaseAmount], properties: {tier: {type: string, minLength: 1, maxLength: 1}, purchaseAmount: {type: number, minimum: 0, maximum: 99999.99, multipleOf: 0.01}}}}}
+      responses:
+        '200': {description: Discount calculated; unknown tiers observably produce zero., content: {application/json: {schema: {type: object, required: [discountAmount], properties: {discountAmount: {type: number, minimum: 0, multipleOf: 0.01}}}}}}

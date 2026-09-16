@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "interest-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "interest"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:interest-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E3-SDD-stage6r3",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "posting-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:posting-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E3-SDD-stage6r3",
+      "timeout_seconds": 180.0
+    },
+    {
+      "case_id": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-positive-01",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "documented-status-no-independent-oracle"
+      },
+      "origin": "T1-real-import:E3-SDD-stage6r3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E3-SDD-stage6r3",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalScenarioId": "reporting-positive-01",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E3-SDD-stage6r3:reporting-positive-01"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "T1-REAL-E3-SDD-stage6r3",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "09313a6c7373aaf331e26f2c7b452212b72b655cf40f915286fec95c76c29e22",
+  "suite_id": "T1-REAL-E3-SDD-stage6r3"
+}

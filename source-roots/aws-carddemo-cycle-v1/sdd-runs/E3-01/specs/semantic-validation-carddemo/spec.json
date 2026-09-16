@@ -1,0 +1,74 @@
+{
+  "feature_name": "semantic-validation-carddemo",
+  "artifact_type": "semantic-validation",
+  "pipeline_stage": 8,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/semantic-validation-carddemo/requirements.md",
+  "upstream_specs": [
+    "specs/adapter-behavior-carddemo-r2/spec.json"
+  ],
+  "created_at": "2026-09-14T07:22:06-03:00",
+  "updated_at": "2026-09-14T14:56:56.322311+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-14",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 8,
+        "artifact_type": "semantic-validation"
+      },
+      "artifact": {
+        "path": "specs/semantic-validation-carddemo/requirements.md",
+        "sha256": "de4f1781459f3bbf8c472add1166826dc9dbb6229a19b67e7ecdb85a56b2d4b6"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/adapter-behavior-carddemo-r2/spec.json",
+          "sha256": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-8-authorization.json",
+        "sha256": "03a84be0f630818b24b68aeeff81255c7a08350eb119dcc684d421382afa4604"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage8",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 8",
+    "pipeline-sdd-v3 stage 8 Semantic Validation Spec"
+  ]
+}

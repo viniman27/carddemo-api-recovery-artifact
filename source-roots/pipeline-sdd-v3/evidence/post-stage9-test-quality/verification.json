@@ -1,0 +1,34 @@
+{
+  "scope": "post-stage9 generic test-quality and coverage gate",
+  "not_stage10": true,
+  "no_thesis_or_experiment_edits": true,
+  "commands": [
+    {
+      "command": "python3 -m unittest tests.test_test_quality_gate -v",
+      "result": "initial RED failed because pipeline/tools/check_test_quality_gate.py did not exist; after implementation, 5 tests passed"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "result": "27 tests passed"
+    },
+    {
+      "command": "PYTHONOPTIMIZE=1 python3 -m unittest discover -s tests -v",
+      "result": "27 tests passed"
+    },
+    {
+      "command": "python3 -m py_compile pipeline/tools/check_test_quality_gate.py tests/test_test_quality_gate.py",
+      "result": "passed"
+    },
+    {
+      "command": "python3 verify_snapshot.py",
+      "result": "ok=true; baseline missing/added/changed empty; source_mismatches empty; methodological_approval=false"
+    }
+  ],
+  "validator_behaviors_tested": [
+    "valid manifest reports ready_for_review while human_approval_granted remains false",
+    "schema-only oracle inventory cannot qualify business obligations",
+    "business oracle derived from LLM output is rejected",
+    "unknown denominator and all-not-executed coverage are rejected",
+    "T3 checker binding and T4 no-new-cases rules fail closed"
+  ]
+}

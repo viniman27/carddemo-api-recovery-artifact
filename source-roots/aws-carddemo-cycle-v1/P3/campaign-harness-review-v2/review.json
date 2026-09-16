@@ -1,0 +1,217 @@
+{
+  "artifact_hashes": {
+    "outside-in-probes/deadline_controlled_run/applications.json": "2ae4b8ca7ec6e1919b3d20d4c4eb78ba8e50aeafafb66189babd8123dd9ee467",
+    "outside-in-probes/deadline_controlled_run/receipts.json": "65d768e8c00590ddbf04ef503aa21d5303dc15690bfc6bff6da9327806829cf2",
+    "outside-in-probes/deadline_controlled_run/totals.json": "ccdfe552e6818148489a9aa13128d14e1a310cdda27dae30129cf55a656b98a4",
+    "outside-in-probes/dup_headers_run/applications.json": "7309e8d1fef419d63d2e84a8ab346d1e971a0fec364a0b6809c019c992a3083e",
+    "outside-in-probes/dup_headers_run/receipts.json": "e18a3fd58878ecb9d18ecad37e32ceffc9dcad0d36554a21d4e7cb598fbda23a",
+    "outside-in-probes/dup_headers_run/totals.json": "2227ce3984842834cf37c41e04abd16f92c9c2118bf40c693aacbf3529afcbff",
+    "outside-in-probes/expectations_run/applications.json": "8086dbd867d33ae587ce153e659b85bc04a7d01e1cf327e4ee48f54f420ac9c5",
+    "outside-in-probes/expectations_run/receipts.json": "1878c1153dbffa389cf6feedc504e8c71aa97af7bee9fe4a79c08325835187cc",
+    "outside-in-probes/expectations_run/totals.json": "bb3744571b9cdd3e9c546db3644aa1560fa8a5a86d927311c1abc25e296423d0",
+    "outside-in-probes/outside_in_probes.json": "979043909951a1cb8794e89f9917333e2a2ba89ab1767182980feb4221154799",
+    "outside-in-probes/path_traversal_run/applications.json": "2c7b2dc5a856d05651416333169697b691cc5300d121ecf1a78f7f60731aa454",
+    "outside-in-probes/path_traversal_run/receipts.json": "aa7d91e6f0764b4bc4a5c3cf539f9081e0cc2ce9981a11ed207129980babcd1d",
+    "outside-in-probes/path_traversal_run/totals.json": "2227ce3984842834cf37c41e04abd16f92c9c2118bf40c693aacbf3529afcbff",
+    "outside-in-probes/reset_bound_run/applications.json": "75ad90eb828a0cd94de3c04228a8250cc5e5a12dec8474f2baa4e6becd26f6de",
+    "outside-in-probes/reset_bound_run/applications/0001-e4dd23baf28a8c7b/state.txt": "8060ea27230537d99589039679ee26e6bcba24c2695f90f2a63e5fed524f9b7d",
+    "outside-in-probes/reset_bound_run/applications/0002-0548eb91100847b4/state.txt": "8060ea27230537d99589039679ee26e6bcba24c2695f90f2a63e5fed524f9b7d",
+    "outside-in-probes/reset_bound_run/receipts.json": "9e75c38c59d563854c8c74a381bd0f51f3f9fb2f38d7e137bc50330c3b7637ed",
+    "outside-in-probes/reset_bound_run/totals.json": "ad494ae05c6b929a2d964a5334a08f268f49abd506c72e0e467a88a1281f7af8",
+    "outside_in.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outside_in.stdout": "32433c22f7b7d917ddc481f50ec5487275af59ff80fccc756dc48195a473949a",
+    "process-check.txt": "5e6e19f2aeca35a2d6c606192cc01024a4ce637730b62180850c0fdbead545a3",
+    "semantic_probes.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "semantic_probes.stdout": "43406b95e83d272ef220e905eb535c40844cca816239f52e6d74c8160d6fe694",
+    "shutdown_hang_child.py": "90add034305152f89b8e7946e68392ee7ff1233762406263c4a1b480bb251d2c",
+    "shutdown_hang_probe.json": "fc6dfdf1ce84524514e6b6a1f5b35c5e745a05aab2c70994ec18a6419dd6ab76",
+    "unittest.stderr": "630cd2a6c9d9e1d7755c5c0f1cfe230fdac409729fcdf05c552efea923283fd2",
+    "unittest.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "blockers": [
+    {
+      "evidence": "shutdown_hang_bounded_negative timed_out_externally=true after 3.005s",
+      "id": "bounded_shutdown_missing",
+      "impact": "A stuck handler can stop serial local replay despite per-case timeout; do not accept as bounded deadline behavior.",
+      "severity": "material"
+    }
+  ],
+  "checks": {
+    "classification": {
+      "detail": "status expectations produce pass/violation separately from transport completed",
+      "result": "PASS"
+    },
+    "copy_freeze_union_integrity": {
+      "detail": "copy pins verified, source isolated, freeze tamper rejected, union order/provenance stable",
+      "result": "PASS"
+    },
+    "headers": {
+      "detail": "duplicate header order preserved on wire",
+      "result": "PASS"
+    },
+    "paths": {
+      "detail": "opaque contained workdir for malicious case_id",
+      "result": "PASS"
+    },
+    "post_timeout_quietness": {
+      "detail": "normal slow case passes, but stuck handler blocks in HTTPServer.shutdown() before bounded join",
+      "result": "FAIL"
+    },
+    "reset_effective_workdir": {
+      "detail": "per-application target receives fresh distinct workdir",
+      "result": "PASS"
+    },
+    "unsupported_checker_fail_closed": {
+      "detail": "unsupported jsonSchema is inconclusive, not pass; not an abort/violation",
+      "result": "PARTIAL"
+    }
+  },
+  "executions": {
+    "outside_in_five_fixes": {
+      "cmd": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "outside_in_probes.py",
+        "--output",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/outside-in-probes"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v2",
+      "duration_seconds": 1.961,
+      "fixes_verified": 5,
+      "probe_results": {
+        "case_id_preserved_workdir_opaque_contained": true,
+        "deadline_reaped_before_next_application": true,
+        "duplicate_headers_wire_preserved": true,
+        "expectations_separate_from_transport": true,
+        "reset_workdir_bound_to_service_state": true
+      },
+      "probes_total": 5,
+      "returncode": 0
+    },
+    "semantic_probes": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout_json": {
+        "copy_integrity": {
+          "copy_after_mutation": "B",
+          "pins_before_match_source": true,
+          "source_after_copy_mutation": "A"
+        },
+        "freeze": {
+          "loaded_case_count": 2,
+          "tamper_rejected": true
+        },
+        "union": {
+          "case_ids": [
+            "T4-0001",
+            "T4-0002"
+          ],
+          "ledger": [
+            {
+              "action": "kept",
+              "destination": "T4-0001",
+              "source": "T1:a"
+            },
+            {
+              "action": "duplicate_merged",
+              "destination": "T4-0001",
+              "source": "T2:b"
+            },
+            {
+              "action": "kept_distinct_expectation",
+              "destination": "T4-0002",
+              "source": "T2:c"
+            }
+          ],
+          "provenance": [
+            [
+              "T1:a",
+              "T2:b"
+            ],
+            [
+              "T2:c"
+            ]
+          ]
+        },
+        "unsupported_checker": {
+          "details": [
+            {
+              "unsupported_checks": [
+                "jsonSchema"
+              ]
+            },
+            {
+              "allowed_status": [
+                200
+              ],
+              "status": 200
+            }
+          ],
+          "receipt_results": [
+            "inconclusive",
+            "pass"
+          ],
+          "totals": {
+            "attempted": 2,
+            "completed": 2,
+            "deadline_failures": 0,
+            "expectation_inconclusive": 1,
+            "expectation_passes": 1,
+            "expectation_violations": 0,
+            "http_failures": 0,
+            "not_executed": 0,
+            "planned": 2,
+            "transport_failures": 0
+          }
+        }
+      }
+    },
+    "shutdown_hang_bounded_negative": {
+      "bounded_external_timeout_seconds": 3,
+      "duration_seconds": 3.005,
+      "stderr": "",
+      "stdout": "",
+      "timed_out_externally": true
+    },
+    "unittest_existing": {
+      "cmd": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "tests/test_campaign_harness.py",
+        "-v"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v2",
+      "duration_seconds": 4.49,
+      "returncode": 0
+    }
+  },
+  "no_dangling_processes_check": {
+    "interpretation": "no matching process lines after timestamp means no matching server/probe process remained",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z/process-check.txt",
+    "sha256": "5e6e19f2aeca35a2d6c606192cc01024a4ce637730b62180850c0fdbead545a3"
+  },
+  "scope": {
+    "evidence_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2/evidence-20260915T130807Z",
+    "excluded": [
+      "AWS campaigns",
+      "COBOL",
+      "contracts",
+      "oracles",
+      "quarantine"
+    ],
+    "output_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v2",
+    "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v2",
+    "v2_modified": false
+  },
+  "summary": {
+    "outside_in_fixes_verified": true,
+    "semantic_probes_ok": true,
+    "shutdown_hang_regression_reproduced": true,
+    "unittest_ok": true
+  },
+  "verdict": {
+    "campaign_authorization": "FAIL_NOT_AUTHORIZED",
+    "overall": "PARTIAL",
+    "reason": "five v1 corrections verified, but controlled target shutdown can block without effective bound when handler is stuck"
+  }
+}

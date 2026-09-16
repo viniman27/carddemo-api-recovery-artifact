@@ -1,0 +1,1070 @@
+{
+  "kind": "coverage-report-reconciliation-v1",
+  "status": "corrected-limited-reconciliation-from-existing-gcov-artifacts-only",
+  "createdUtc": "2026-09-15T13:53:41.019723+00:00",
+  "inputsPolicy": {
+    "noRerunsPerformed": true,
+    "inputArtifactsOnly": [
+      "coverage-candidate-check-v2/candidate-coverage-report.json",
+      "coverage-candidate-check-v2 existing per-invocation .gcov files",
+      "coverage-prequalification-v1/evidence-20260915Tprequal-v1/denominators-summary.json"
+    ],
+    "notOfficialCoverage": true,
+    "noBusinessOracleClaim": true
+  },
+  "sourceArtifacts": [
+    {
+      "role": "candidate_report_stale_mixed_summary_source",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/candidate-coverage-report.json",
+      "sha256": "1ff124c1349cf11780baded4271e555a747c14124df3d37a0111451081a07a78",
+      "bytes": 99119
+    },
+    {
+      "role": "candidate_runner_parser_source",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/run_candidate_coverage_check.py",
+      "sha256": "7be37f137b31ace6e660e249eb4aa879cb2e8b528dc9fed9f89e58d7af557b31",
+      "bytes": 29385
+    },
+    {
+      "role": "prequalification_denominators",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/denominators-summary.json",
+      "sha256": "6119957efc6350af073c06c31cf2dcc79d784a2597b1a623505286f1cffbec16",
+      "bytes": 2205
+    },
+    {
+      "role": "prequalification_manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/artifact-manifest.json",
+      "sha256": "41d8b6565731f46a1c70fb0154f61209cdc3b381c82d2ffd1cd61c954e09e4a1",
+      "bytes": 747
+    }
+  ],
+  "invocations": [
+    {
+      "invocationIndex": 1,
+      "track": "posting",
+      "businessProgram": "CBTRN02C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-17abk4_1",
+      "programExit": 4,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1120,
+        "branches": 288,
+        "calls": 154
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 651,
+          "total": 1120,
+          "percent": 58.13
+        },
+        "branchesExecuted": {
+          "executed": 246,
+          "total": 288,
+          "percent": 85.42
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 133,
+          "total": 288,
+          "percent": 46.18
+        },
+        "calls": {
+          "executed": 94,
+          "total": 154,
+          "percent": 61.04
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-17abk4_1/gcov/CBTRN02C.c.gcov",
+          "bytes": 193488,
+          "sha256": "ec51f0ddaa8d39ce0cb0d3c1a08ef8c1907e8f6b13a508a554752ac974e16dcb",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+          "sourceBasename": "CBTRN02C.c",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 651,
+            "total": 1120
+          },
+          "branches": {
+            "executed": 246,
+            "taken_at_least_once": 133,
+            "total": 288
+          },
+          "calls": {
+            "executed": 94,
+            "total": 154
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-17abk4_1/gcov/CBTRN02C.c.h.gcov",
+          "bytes": 8204,
+          "sha256": "28172ba2f065bb622e396d1f14f6f695de721ff46232a2ab80cf75f1ddde09cb",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h",
+          "sourceBasename": "CBTRN02C.c.h",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 12,
+            "total": 12
+          },
+          "branches": {
+            "executed": 36,
+            "taken_at_least_once": 18,
+            "total": 38
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-17abk4_1/gcov/CBTRN02C.c.l.h.gcov",
+          "bytes": 10571,
+          "sha256": "7482b8a6a5c4a1d087634c21e411597293bdb79cbeb5ddeab43730a3986460c9",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h",
+          "sourceBasename": "CBTRN02C.c.l.h",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1134,
+          "branchesTotal": 38,
+          "callsTotal": 154
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1120,
+          "branchesTotal": 288,
+          "callsTotal": 154
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    },
+    {
+      "invocationIndex": 2,
+      "track": "interest",
+      "businessProgram": "CBACT04C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-4xtgf8oh",
+      "programExit": 0,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1029,
+        "branches": 266,
+        "calls": 148
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 585,
+          "total": 1029,
+          "percent": 56.85
+        },
+        "branchesExecuted": {
+          "executed": 214,
+          "total": 266,
+          "percent": 80.45
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 116,
+          "total": 266,
+          "percent": 43.61
+        },
+        "calls": {
+          "executed": 85,
+          "total": 148,
+          "percent": 57.43
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-4xtgf8oh/gcov/CBACT04C.c.gcov",
+          "bytes": 172627,
+          "sha256": "49b96b1d824a95f88c82d9d97cb04b8f415b8a5e881e46f922c835b67fce0f4b",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+          "sourceBasename": "CBACT04C.c",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 585,
+            "total": 1029
+          },
+          "branches": {
+            "executed": 214,
+            "taken_at_least_once": 116,
+            "total": 266
+          },
+          "calls": {
+            "executed": 85,
+            "total": 148
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-4xtgf8oh/gcov/CBACT04C.c.h.gcov",
+          "bytes": 8241,
+          "sha256": "680f4e119785e183ed1edd4b96135f16d52e272b11db39a761e7f66c6b1435a9",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h",
+          "sourceBasename": "CBACT04C.c.h",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 12,
+            "total": 12
+          },
+          "branches": {
+            "executed": 34,
+            "taken_at_least_once": 17,
+            "total": 36
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-4xtgf8oh/gcov/CBACT04C.c.l.h.gcov",
+          "bytes": 10190,
+          "sha256": "b5146fe056856182a2fbd84a481ec70d622c321dfa51f199c3d114ca924c3ac4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h",
+          "sourceBasename": "CBACT04C.c.l.h",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1043,
+          "branchesTotal": 36,
+          "callsTotal": 148
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1029,
+          "branchesTotal": 266,
+          "callsTotal": 148
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    },
+    {
+      "invocationIndex": 3,
+      "track": "reporting",
+      "businessProgram": "CBTRN03C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-ljqnc895",
+      "programExit": 0,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1192,
+        "branches": 272,
+        "calls": 157
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 655,
+          "total": 1192,
+          "percent": 54.95
+        },
+        "branchesExecuted": {
+          "executed": 216,
+          "total": 272,
+          "percent": 79.41
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 111,
+          "total": 272,
+          "percent": 40.81
+        },
+        "calls": {
+          "executed": 85,
+          "total": 157,
+          "percent": 54.14
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-ljqnc895/gcov/CBTRN03C.c.gcov",
+          "bytes": 191645,
+          "sha256": "d2454bc3bbd6b1fec155a476e7dd1330b5b4a81b85f840b434021c20d2bc6aab",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+          "sourceBasename": "CBTRN03C.c",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 655,
+            "total": 1192
+          },
+          "branches": {
+            "executed": 216,
+            "taken_at_least_once": 111,
+            "total": 272
+          },
+          "calls": {
+            "executed": 85,
+            "total": 157
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-ljqnc895/gcov/CBTRN03C.c.h.gcov",
+          "bytes": 11090,
+          "sha256": "f6e79c856da088d0bc00bf8b7d9067c6b9f921e96dc4ee15e48078248ec5ab29",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h",
+          "sourceBasename": "CBTRN03C.c.h",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 40,
+            "total": 50
+          },
+          "branches": {
+            "executed": 42,
+            "taken_at_least_once": 21,
+            "total": 48
+          },
+          "calls": {
+            "executed": 0,
+            "total": 2
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-ljqnc895/gcov/CBTRN03C.c.l.h.gcov",
+          "bytes": 10978,
+          "sha256": "8b5c57634ea20c2cb65f062254fa04a589eb2cd5425fe377ba5f03fc6c4aa835",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h",
+          "sourceBasename": "CBTRN03C.c.l.h",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1244,
+          "branchesTotal": 48,
+          "callsTotal": 2
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1192,
+          "branchesTotal": 272,
+          "callsTotal": 157
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    },
+    {
+      "invocationIndex": 4,
+      "track": "posting",
+      "businessProgram": "CBTRN02C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3dfpgpsv",
+      "programExit": 4,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1120,
+        "branches": 288,
+        "calls": 154
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 651,
+          "total": 1120,
+          "percent": 58.13
+        },
+        "branchesExecuted": {
+          "executed": 246,
+          "total": 288,
+          "percent": 85.42
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 133,
+          "total": 288,
+          "percent": 46.18
+        },
+        "calls": {
+          "executed": 94,
+          "total": 154,
+          "percent": 61.04
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3dfpgpsv/gcov/CBTRN02C.c.gcov",
+          "bytes": 193488,
+          "sha256": "ec51f0ddaa8d39ce0cb0d3c1a08ef8c1907e8f6b13a508a554752ac974e16dcb",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+          "sourceBasename": "CBTRN02C.c",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 651,
+            "total": 1120
+          },
+          "branches": {
+            "executed": 246,
+            "taken_at_least_once": 133,
+            "total": 288
+          },
+          "calls": {
+            "executed": 94,
+            "total": 154
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3dfpgpsv/gcov/CBTRN02C.c.h.gcov",
+          "bytes": 8204,
+          "sha256": "28172ba2f065bb622e396d1f14f6f695de721ff46232a2ab80cf75f1ddde09cb",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h",
+          "sourceBasename": "CBTRN02C.c.h",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 12,
+            "total": 12
+          },
+          "branches": {
+            "executed": 36,
+            "taken_at_least_once": 18,
+            "total": 38
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3dfpgpsv/gcov/CBTRN02C.c.l.h.gcov",
+          "bytes": 10571,
+          "sha256": "7482b8a6a5c4a1d087634c21e411597293bdb79cbeb5ddeab43730a3986460c9",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h",
+          "sourceBasename": "CBTRN02C.c.l.h",
+          "graph": "CBTRN02C-CBTRN02C.gcno",
+          "data": "CBTRN02C-CBTRN02C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1134,
+          "branchesTotal": 38,
+          "callsTotal": 154
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1120,
+          "branchesTotal": 288,
+          "callsTotal": 154
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    },
+    {
+      "invocationIndex": 5,
+      "track": "interest",
+      "businessProgram": "CBACT04C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-3p12ctqd",
+      "programExit": 0,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1029,
+        "branches": 266,
+        "calls": 148
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 585,
+          "total": 1029,
+          "percent": 56.85
+        },
+        "branchesExecuted": {
+          "executed": 214,
+          "total": 266,
+          "percent": 80.45
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 116,
+          "total": 266,
+          "percent": 43.61
+        },
+        "calls": {
+          "executed": 85,
+          "total": 148,
+          "percent": 57.43
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-3p12ctqd/gcov/CBACT04C.c.gcov",
+          "bytes": 172627,
+          "sha256": "49b96b1d824a95f88c82d9d97cb04b8f415b8a5e881e46f922c835b67fce0f4b",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+          "sourceBasename": "CBACT04C.c",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 585,
+            "total": 1029
+          },
+          "branches": {
+            "executed": 214,
+            "taken_at_least_once": 116,
+            "total": 266
+          },
+          "calls": {
+            "executed": 85,
+            "total": 148
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-3p12ctqd/gcov/CBACT04C.c.h.gcov",
+          "bytes": 8241,
+          "sha256": "680f4e119785e183ed1edd4b96135f16d52e272b11db39a761e7f66c6b1435a9",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h",
+          "sourceBasename": "CBACT04C.c.h",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 12,
+            "total": 12
+          },
+          "branches": {
+            "executed": 34,
+            "taken_at_least_once": 17,
+            "total": 36
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-3p12ctqd/gcov/CBACT04C.c.l.h.gcov",
+          "bytes": 10190,
+          "sha256": "b5146fe056856182a2fbd84a481ec70d622c321dfa51f199c3d114ca924c3ac4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h",
+          "sourceBasename": "CBACT04C.c.l.h",
+          "graph": "CBACT04C.dylib-CBACT04C.gcno",
+          "data": "CBACT04C.dylib-CBACT04C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1043,
+          "branchesTotal": 36,
+          "callsTotal": 148
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1029,
+          "branchesTotal": 266,
+          "callsTotal": 148
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    },
+    {
+      "invocationIndex": 6,
+      "track": "reporting",
+      "businessProgram": "CBTRN03C",
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-9l3trv5i",
+      "programExit": 0,
+      "exitKind": "normal_exit_code",
+      "normalProcessExitObserved": true,
+      "reachedCobol": true,
+      "gcovPrefixObservedInCommandLog": true,
+      "businessGcdaPresent": true,
+      "measurementAdmissibility": "admissible_preparatory",
+      "inadmissibilityReasons": [],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1192,
+        "branches": 272,
+        "calls": 157
+      },
+      "mainGeneratedCMatchesPrequalificationDenominator": true,
+      "correctedMainGeneratedCCounts": {
+        "lines": {
+          "executed": 655,
+          "total": 1192,
+          "percent": 54.95
+        },
+        "branchesExecuted": {
+          "executed": 216,
+          "total": 272,
+          "percent": 79.41
+        },
+        "branchesTakenAtLeastOnce": {
+          "executed": 111,
+          "total": 272,
+          "percent": 40.81
+        },
+        "calls": {
+          "executed": 85,
+          "total": 157,
+          "percent": 54.14
+        }
+      },
+      "unitBreakdown": [
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-9l3trv5i/gcov/CBTRN03C.c.gcov",
+          "bytes": 191645,
+          "sha256": "d2454bc3bbd6b1fec155a476e7dd1330b5b4a81b85f840b434021c20d2bc6aab",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+          "sourceBasename": "CBTRN03C.c",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 655,
+            "total": 1192
+          },
+          "branches": {
+            "executed": 216,
+            "taken_at_least_once": 111,
+            "total": 272
+          },
+          "calls": {
+            "executed": 85,
+            "total": 157
+          },
+          "classification": "main_generated_c"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-9l3trv5i/gcov/CBTRN03C.c.h.gcov",
+          "bytes": 11090,
+          "sha256": "f6e79c856da088d0bc00bf8b7d9067c6b9f921e96dc4ee15e48078248ec5ab29",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h",
+          "sourceBasename": "CBTRN03C.c.h",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 40,
+            "total": 50
+          },
+          "branches": {
+            "executed": 42,
+            "taken_at_least_once": 21,
+            "total": 48
+          },
+          "calls": {
+            "executed": 0,
+            "total": 2
+          },
+          "classification": "generated_header_global"
+        },
+        {
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-9l3trv5i/gcov/CBTRN03C.c.l.h.gcov",
+          "bytes": 10978,
+          "sha256": "8b5c57634ea20c2cb65f062254fa04a589eb2cd5425fe377ba5f03fc6c4aa835",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h",
+          "sourceBasename": "CBTRN03C.c.l.h",
+          "graph": "CBTRN03C.gcno",
+          "data": "CBTRN03C.gcda",
+          "runs": 1,
+          "lines": {
+            "executed": 2,
+            "total": 2
+          },
+          "branches": {
+            "executed": 2,
+            "taken_at_least_once": 2,
+            "total": 2
+          },
+          "calls": {
+            "executed": 0,
+            "total": 0
+          },
+          "classification": "generated_header_local"
+        }
+      ],
+      "oldSummaryDiscrepancy": {
+        "oldSummaryParsed": {
+          "linesTotal": 1244,
+          "branchesTotal": 48,
+          "callsTotal": 2
+        },
+        "correctMainGeneratedC": {
+          "linesTotal": 1192,
+          "branchesTotal": 272,
+          "callsTotal": 157
+        },
+        "bugClass": "mixed_scope_stdout_summary",
+        "admissibility": "old mixed-scope summary is retained as stale evidence only and not promoted"
+      }
+    }
+  ],
+  "totalsByProgram": [
+    {
+      "program": "CBACT04C",
+      "invocationCount": 2,
+      "tracks": [
+        "interest"
+      ],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1029,
+        "branches": 266,
+        "calls": 148
+      },
+      "perInvocationMainGeneratedCCounts": [
+        {
+          "lines": {
+            "executed": 585,
+            "total": 1029,
+            "percent": 56.85
+          },
+          "branchesExecuted": {
+            "executed": 214,
+            "total": 266,
+            "percent": 80.45
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 116,
+            "total": 266,
+            "percent": 43.61
+          },
+          "calls": {
+            "executed": 85,
+            "total": 148,
+            "percent": 57.43
+          }
+        },
+        {
+          "lines": {
+            "executed": 585,
+            "total": 1029,
+            "percent": 56.85
+          },
+          "branchesExecuted": {
+            "executed": 214,
+            "total": 266,
+            "percent": 80.45
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 116,
+            "total": 266,
+            "percent": 43.61
+          },
+          "calls": {
+            "executed": 85,
+            "total": 148,
+            "percent": 57.43
+          }
+        }
+      ],
+      "stableDenominatorAcrossInvocations": true,
+      "matchesPrequalificationDenominatorAllInvocations": true,
+      "branchInterpretationLimit": "generated-C branch counters are not mapped to COBOL business decisions; no branch C is promoted as a business-decision count"
+    },
+    {
+      "program": "CBTRN02C",
+      "invocationCount": 2,
+      "tracks": [
+        "posting"
+      ],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1120,
+        "branches": 288,
+        "calls": 154
+      },
+      "perInvocationMainGeneratedCCounts": [
+        {
+          "lines": {
+            "executed": 651,
+            "total": 1120,
+            "percent": 58.13
+          },
+          "branchesExecuted": {
+            "executed": 246,
+            "total": 288,
+            "percent": 85.42
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 133,
+            "total": 288,
+            "percent": 46.18
+          },
+          "calls": {
+            "executed": 94,
+            "total": 154,
+            "percent": 61.04
+          }
+        },
+        {
+          "lines": {
+            "executed": 651,
+            "total": 1120,
+            "percent": 58.13
+          },
+          "branchesExecuted": {
+            "executed": 246,
+            "total": 288,
+            "percent": 85.42
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 133,
+            "total": 288,
+            "percent": 46.18
+          },
+          "calls": {
+            "executed": 94,
+            "total": 154,
+            "percent": 61.04
+          }
+        }
+      ],
+      "stableDenominatorAcrossInvocations": true,
+      "matchesPrequalificationDenominatorAllInvocations": true,
+      "branchInterpretationLimit": "generated-C branch counters are not mapped to COBOL business decisions; no branch C is promoted as a business-decision count"
+    },
+    {
+      "program": "CBTRN03C",
+      "invocationCount": 2,
+      "tracks": [
+        "reporting"
+      ],
+      "mainGeneratedCComparableDenominator": {
+        "lines": 1192,
+        "branches": 272,
+        "calls": 157
+      },
+      "perInvocationMainGeneratedCCounts": [
+        {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branchesExecuted": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 111,
+            "total": 272,
+            "percent": 40.81
+          },
+          "calls": {
+            "executed": 85,
+            "total": 157,
+            "percent": 54.14
+          }
+        },
+        {
+          "lines": {
+            "executed": 655,
+            "total": 1192,
+            "percent": 54.95
+          },
+          "branchesExecuted": {
+            "executed": 216,
+            "total": 272,
+            "percent": 79.41
+          },
+          "branchesTakenAtLeastOnce": {
+            "executed": 111,
+            "total": 272,
+            "percent": 40.81
+          },
+          "calls": {
+            "executed": 85,
+            "total": 157,
+            "percent": 54.14
+          }
+        }
+      ],
+      "stableDenominatorAcrossInvocations": true,
+      "matchesPrequalificationDenominatorAllInvocations": true,
+      "branchInterpretationLimit": "generated-C branch counters are not mapped to COBOL business decisions; no branch C is promoted as a business-decision count"
+    }
+  ],
+  "resetEvidenceLimited": [
+    {
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-17abk4_1",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3dfpgpsv",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "resetVerified": true,
+      "admissibilityNote": "Distinct runDir/gcovPrefix and gcda presence prove per-invocation file separation only; they do not by themselves prove counter reset semantics beyond the observed isolated artifacts."
+    },
+    {
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-4xtgf8oh",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-3p12ctqd",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "resetVerified": true,
+      "admissibilityNote": "Distinct runDir/gcovPrefix and gcda presence prove per-invocation file separation only; they do not by themselves prove counter reset semantics beyond the observed isolated artifacts."
+    },
+    {
+      "track": "reporting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-ljqnc895",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-candidate-check-v2/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-9l3trv5i",
+      "distinctRunDirs": true,
+      "distinctGcovPrefixes": true,
+      "firstGcdaCount": 1,
+      "secondGcdaCount": 1,
+      "resetVerified": true,
+      "admissibilityNote": "Distinct runDir/gcovPrefix and gcda presence prove per-invocation file separation only; they do not by themselves prove counter reset semantics beyond the observed isolated artifacts."
+    }
+  ],
+  "exit4FlushEvidence": {
+    "observedProgramExit4Invocations": [
+      1,
+      4
+    ],
+    "interpretation": "exit code 4 is preserved as a normal process exit for flush/admissibility evidence; it is not rewritten to zero success."
+  },
+  "summary": {
+    "plannedInvocations": 6,
+    "invocationsProcessed": 6,
+    "invocationsWithMainGcovUnit": 6,
+    "normalProcessExit": 6,
+    "exit4FlushObserved": 2,
+    "gcovPrefixObserved": 6,
+    "programs": [
+      "CBACT04C",
+      "CBTRN02C",
+      "CBTRN03C"
+    ]
+  },
+  "limitations": [
+    "Reconciliation reads existing .gcov units and existing JSON only; it does not reexecute COBOL, API, server, campaign, gcov, or build commands.",
+    "Main generated C, generated headers, and support/other units are separated; headers are not merged into the principal C denominator.",
+    "Comparable denominator is the main generated-C denominator from coverage-prequalification-v1, not the gcov aggregate line total that includes headers.",
+    "Generated-C branches are mechanical coverage counters and are not interpreted as COBOL business decisions.",
+    "Old candidate summaryParsed values are stale for mixed-scope branches/calls and are retained only as discrepancy evidence."
+  ]
+}

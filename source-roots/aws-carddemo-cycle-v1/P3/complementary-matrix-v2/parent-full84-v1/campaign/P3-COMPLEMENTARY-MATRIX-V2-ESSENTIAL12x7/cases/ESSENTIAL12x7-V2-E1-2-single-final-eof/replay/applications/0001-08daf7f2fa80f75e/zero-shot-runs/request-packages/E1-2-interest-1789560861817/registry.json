@@ -1,0 +1,64 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "p2c_request_materialized_local_only",
+  "fixtures": [
+    {
+      "fixtureId": "p2c-request-E1-2-interest-1789560861817",
+      "track": "interest",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "ACCTFILE",
+          "DISCGRP": "DISCGRP",
+          "PARMFILE": "PARMFILE",
+          "TCATBALF": "TCATBALF",
+          "XREFFILE": "XREFFILE",
+          "XREFFILE.1": "XREFFILE.1"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "33a6282ca7b3413c9a34cbd0b50d6c5d5b665dda92a2d7354bc2dee4319402c8",
+            "bytes": 8192
+          },
+          "DISCGRP": {
+            "sha256": "b0279b60acb5fd6bb786fa45f0921bb4cd75b29a664f9dcc0c3d680f2a8f5348",
+            "bytes": 8192
+          },
+          "PARMFILE": {
+            "sha256": "e8a4e0434320371d18cbbf8e29332a77992d0129b52a7e1a426022caaa4200fe",
+            "bytes": 10
+          },
+          "TCATBALF": {
+            "sha256": "6a6d9ede2fbf217488bcd77d1dc3f5bb5a3a33f9cad6636f999a32776665e88d",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "696222acb70901a6517720898e59450e15b7082310024e71f977c8d4790b0812",
+            "bytes": 8192
+          },
+          "XREFFILE.1": {
+            "sha256": "cfdac869222d487f8296a922697563f2f9f405673f91565d6518cea7eca5b37c",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "p2c-request-materialization",
+        "officialFixture": false,
+        "requestSha256": "32df8171dd140cb1d8e48fba249554c032a8727fc1c89a8f18cfdcb0b10dcb30",
+        "contractId": "E1-2"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": false
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "6b7cda024bed5997a1ce3531a0bd0cc4303231c2bd83b2a1ff1e2d51ba0cd8a8"
+    }
+  ]
+}

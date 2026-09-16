@@ -1,0 +1,16 @@
+official E1-1-T1 10
+official E1-2-T1 19
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/analysis.py", line 76, in <module>
+    run(args.out.resolve(),Path(__file__).resolve().parents[2])
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/analysis.py", line 60, in run
+    r=analyze(ch,fc,label,strategy,store); rows.append(r); progress.write(json.dumps(r,ensure_ascii=False)+'\n'); n+=1
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/collector.py", line 76, in analyze
+    row={'caseId':ch['case_id'],'contract':contract,'arm':params.get('contractArm') or ('zero-shot' if contract.startswith('E1-') else 'few-shot' if contract.startswith('E2-') else 'SDD'),'track':track,'lane':lane,'strategy':strategy,'originalOrigin':fc.get('origin'),'originalProvenance':fc.get('provenance',[]),'scenario':params.get('essentialScenarioId'),'status':receipt['status'],'requestKey':request_key(fc['request']),'businessObserved':False,'inputAccepted':'unknown','semanticInputKey':None,'partitions':[],'checks':[],'provenanceErrors':[],'limit':[],'auditPath':None,'responseSha256':receipt['response_sha256']}
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/collector.py", line 12, in request_key
+    raw=base64.b64decode(req.get('body_b64',''),validate=True)
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/base64.py", line 80, in b64decode
+    s = _bytes_from_decode_data(s)
+  File "<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/base64.py", line 45, in _bytes_from_decode_data
+    raise TypeError("argument should be a bytes-like object or ASCII "
+TypeError: argument should be a bytes-like object or ASCII string, not 'NoneType'

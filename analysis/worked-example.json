@@ -1,0 +1,117 @@
+{
+  "caseId": "ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1",
+  "contract": "E1-1",
+  "inputAmountsCents": [
+    111,
+    222,
+    333,
+    444
+  ],
+  "sumCents": 1110,
+  "observedGrandTotalCents": 1554,
+  "excessCents": 444,
+  "money": {
+    "inputAmounts": [
+      "1.11",
+      "2.22",
+      "3.33",
+      "4.44"
+    ],
+    "sum": "11.10",
+    "observedGrandTotal": "15.54",
+    "excess": "4.44"
+  },
+  "rawFiles": [
+    {
+      "path": "P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1/replay/applications/0001-2fc8c856ff3ad1cb/zero-shot-runs/p2b-runs/reporting-t4g6o88y/TRANFILE",
+      "sha256": "34aa29494564e0fa1e8ef5a91ab48883d5c9dde152f0d8594f5a7ceaf6fb22ac",
+      "bytes": 1400
+    },
+    {
+      "path": "P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-card-break-two-groups-v1/replay/applications/0001-2fc8c856ff3ad1cb/zero-shot-runs/p2b-runs/reporting-t4g6o88y/TRANREPT",
+      "sha256": "0606e46d59559cd5f280f77a4ae7fad2cea97a65bfcaead374905e9be4fb516c",
+      "bytes": 1729
+    }
+  ],
+  "observedEvents": [
+    [
+      "header",
+      "2022-07-01",
+      "2022-07-31"
+    ],
+    [
+      "blank"
+    ],
+    [
+      "columns"
+    ],
+    [
+      "rule"
+    ],
+    [
+      "detail",
+      "GROUP1-ITEM-0001",
+      "10000000001",
+      "01",
+      "Purchase",
+      "0005",
+      "Candidate category",
+      "System",
+      111
+    ],
+    [
+      "detail",
+      "GROUP1-ITEM-0002",
+      "10000000001",
+      "01",
+      "Purchase",
+      "0005",
+      "Candidate category",
+      "System",
+      222
+    ],
+    [
+      "account_total",
+      333
+    ],
+    [
+      "rule"
+    ],
+    [
+      "detail",
+      "GROUP2-ITEM-0001",
+      "10000000002",
+      "01",
+      "Purchase",
+      "0005",
+      "Candidate category",
+      "System",
+      333
+    ],
+    [
+      "detail",
+      "GROUP2-ITEM-0002",
+      "10000000002",
+      "01",
+      "Purchase",
+      "0005",
+      "Candidate category",
+      "System",
+      444
+    ],
+    [
+      "page_total",
+      1554
+    ],
+    [
+      "rule"
+    ],
+    [
+      "grand_total",
+      1554
+    ]
+  ],
+  "source": "preserved complementary application; no new business execution",
+  "interpretation": "Matches the source-derived legacy event sequence; differs from the declared sum-of-selected-details invariant. Not an independent business specification.",
+  "pathBase": "source-roots/aws-carddemo-cycle-v1"
+}

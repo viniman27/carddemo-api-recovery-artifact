@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-1",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-1",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "generateTransactionReport",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "T1-REPORT-001",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "3a7d1f9ad368787de39ae79876fff3906ba95cad6fbc234e27440b5e5e61f054",
+        "sourceScenarioCanonicalSha256": "401bb1435ae2946ee2b2d0f4427cf1752d3d9890e7960700a6bf14981522ced1",
+        "track": "reporting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-1:T1-REPORT-001",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-1/T1.json:T1-REAL-E2-1-E2-1-T1-REPORT-001"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiIwMDAwMDAwMDAwMDAwMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6IjAwMDUiLCJzb3VyY2UiOiJUMSIsImRlc2NyaXB0aW9uIjoiRGV0YWxoZSIsImFtb3VudCI6MS4yNSwibWVyY2hhbnRJZCI6IjAwMDAwMDAwMSIsIm1lcmNoYW50TmFtZSI6Ik0iLCJtZXJjaGFudENpdHkiOiJDIiwibWVyY2hhbnRaaXAiOiIwMDAwMCIsImNhcmROdW1iZXIiOiIwMDAwMDAwMDAwMDAwMDAxIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wMS0wMSJ9XSwiZGF0ZVBhcmFtZXRlclJlY29yZHMiOlsiMjAyMi0wMS0wMSAyMDIyLTAxLTAxIl19",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E2-1-reporting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "e835f4ee3fcfa0cb239ff8329d051fe5f23ce40a742fae8b8d2b01eb011460f4",
+  "suite_id": "READINESS21-E2-1-reporting"
+}

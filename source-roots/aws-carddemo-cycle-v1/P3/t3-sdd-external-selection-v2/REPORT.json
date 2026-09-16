@@ -1,0 +1,338 @@
+{
+  "adapterStaticCheck": {
+    "bytes": 26565,
+    "path": "P3/t3-sdd-external-selection-v2/adapter-static-check.json",
+    "sha256": "fd8d58d5720e62ae776912295a983cd5eaf32e663ef6af8789f8d99ffa89d898"
+  },
+  "blockersRemaining": [
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-003",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "observable posted-record layout depends on accepted path and generated timestamp; request {} + base fixture can select the run but not an independent expected field oracle",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-003",
+        "referenceTransitions": [
+          "POSTTRAN-T012"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              4,
+              18
+            ],
+            "path": "app/cpy/CVTRA06Y.cpy",
+            "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1"
+          },
+          {
+            "lines": [
+              4,
+              18
+            ],
+            "path": "app/cpy/CVTRA05Y.cpy",
+            "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+          },
+          {
+            "lines": [
+              424,
+              439
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Layout e cópia para transação postada"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-008",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "not_expressible",
+      "reason": "ACCOUNT update/order effect needs runtime/internal state authority; not selected by external package alone",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-008",
+        "referenceTransitions": [
+          "POSTTRAN-T013",
+          "POSTTRAN-T019",
+          "POSTTRAN-T020"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              440,
+              442
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              545,
+              559
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Atualização ACCOUNT e ordem de efeitos"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-009",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "TRANFILE write/failure after prior effects remains precondition-indeterminate without execution-state authority",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-009",
+        "referenceTransitions": [
+          "POSTTRAN-T019",
+          "POSTTRAN-T020",
+          "POSTTRAN-T021",
+          "POSTTRAN-T022"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              424,
+              442
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              562,
+              578
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              370,
+              421
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "WRITE TRANFILE após efeitos anteriores"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "INTCALC-OBL-007",
+      "operationId": "interest",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "group-break ACCOUNT update needs multi-group transition outcome; base package alone does not authorize expected effect",
+      "source": {
+        "obligationId": "INTCALC-OBL-007",
+        "referenceTransitions": [
+          "INTCALC-T010"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              194,
+              203
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              350,
+              370
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          }
+        ],
+        "title": "Update de conta em quebra de grupo"
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "INTCALC-OBL-008",
+      "operationId": "interest",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "normal EOF final-account absence is a static source finding, not fixture-selectable expected behavior",
+      "source": {
+        "obligationId": "INTCALC-OBL-008",
+        "referenceTransitions": [
+          "INTCALC-T006"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              188,
+              222
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              325,
+              348
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              350,
+              370
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          }
+        ],
+        "title": "Última conta no EOF"
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "TRANREPT-OBL-007",
+      "operationId": "reporting",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "EOF totals depend on receiver/content behavior explicitly treated as conditional/unknown",
+      "source": {
+        "obligationId": "TRANREPT-OBL-007",
+        "referenceTransitions": [
+          "TRANREPT-T010",
+          "TRANREPT-T011",
+          "TRANREPT-T013",
+          "TRANREPT-T016"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              197,
+              203
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              287,
+              322
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              50,
+              66
+            ],
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+          }
+        ],
+        "title": "Totais de página/grand no EOF condicional"
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "TRANREPT-OBL-008",
+      "operationId": "reporting",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "absence of final account total is source-static and observation-inadmissible as external selection without report oracle",
+      "source": {
+        "obligationId": "TRANREPT-OBL-008",
+        "referenceTransitions": [
+          "TRANREPT-T010"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              181,
+              184
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              197,
+              203
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              306,
+              316
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          }
+        ],
+        "title": "Ausência de Account Total final no EOF"
+      },
+      "track": "reporting"
+    }
+  ],
+  "kind": "t3-sdd-external-selection-v2-report",
+  "officialCampaign": false,
+  "officialSuiteGenerated": false,
+  "outputs": {
+    "fixtureByteCheck": {
+      "bytes": 3143,
+      "path": "P3/t3-sdd-external-selection-v2/fixture-byte-structural-check.json",
+      "sha256": "3ed1cd1e675b6f1920403ca9ab83b807a53dae81a8e4789b3109e8424cef9ca8"
+    },
+    "matrix": {
+      "bytes": 1064992,
+      "path": "P3/t3-sdd-external-selection-v2/applicability_matrix.sdd-external-selection-v2.json",
+      "sha256": "ed97ed5ece2ca592fb2fab2d52e8a26f0847534c9a78e49056a9b718036da09e"
+    },
+    "plan": {
+      "bytes": 105989,
+      "path": "P3/t3-sdd-external-selection-v2/external-selection-plan.json",
+      "sha256": "137f65a2612c28f34763c22623681f27f736bc4d325e497ff2d10f177e36f815"
+    },
+    "recipes": {
+      "bytes": 41732,
+      "path": "P3/t3-sdd-external-selection-v2/recipes.sdd-external-selection-v2.json",
+      "sha256": "663f3ce0ed91c8ee1835bfa8affea68388848b434d396fecf8c4ad1c7936710c"
+    },
+    "sddIdMigration": {
+      "bytes": 1076,
+      "path": "P3/t3-sdd-external-selection-v2/sdd-id-migration.external-selection-v2.json",
+      "sha256": "a4658a786014da3e2036dbcca34cdd919fd46b95fa7e15e002a757db1de2a69c"
+    }
+  },
+  "runtimeExecuted": false,
+  "staticFairnessCheck": {
+    "bytes": 420,
+    "path": "P3/t3-sdd-external-selection-v2/static-fairness-check.json",
+    "sha256": "18e1b4612409ddab1cfcdc35838d4648a9cc64459404d19a8bf56d7f6ee714a2"
+  },
+  "status": "candidate_static_only",
+  "summary": {
+    "adapterCases": 65,
+    "blockedCells": 7,
+    "changedMatrixCells": 18,
+    "selectedCells": 18
+  }
+}

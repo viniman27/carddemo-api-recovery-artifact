@@ -1,0 +1,104 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-1",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+  "contractOriginalSha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+  "track": "reporting",
+  "path": "/transaction-reports",
+  "status": 200,
+  "requestBody": {
+    "dateParameterRecords": [
+      "2022-07-01 2022-07-31"
+    ],
+    "transactions": [
+      {
+        "amount": 1.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": "0005",
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": "000000001",
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-07-01-00.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-START-001",
+        "typeCode": "01"
+      },
+      {
+        "amount": 2.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": "0005",
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": "000000001",
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-07-31-23.59.59.000000",
+        "source": "System",
+        "transactionId": "REPORT-END---001",
+        "typeCode": "01"
+      },
+      {
+        "amount": 3.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": "0005",
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": "000000001",
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-06-30-23.59.59.000000",
+        "source": "System",
+        "transactionId": "REPORT-BEFORE001",
+        "typeCode": "01"
+      },
+      {
+        "amount": 4.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": "0005",
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": "000000001",
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-08-01-00.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-AFTER-001",
+        "typeCode": "01"
+      }
+    ]
+  },
+  "requestBodySha256": "80bc481391883b45f472933742519c113f57dbf1cfc43076b91f155143c4984d",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-2kt9kfyv",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/date-boundaries-in-out-v1/registry.json",
+    "registrySha256": "df3467bc25e0d05c372489e69a50628b7e97fe12edb9d906e20b5013dc81f603"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "lines": [
+      "DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  ",
+      "                                                                                                                                     ",
+      "Transaction ID   Account ID  Transaction Type   Tran Category                      Tran Source            Amount                     ",
+      "-------------------------------------------------------------------------------------------------------------------------------------",
+      "REPORT-START-001 10000000001 01-Purchase        0005-Candidate category            System                   1.00                     ",
+      "REPORT-END---001 10000000001 01-Purchase        0005-Candidate category            System                   2.00                     "
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-2kt9kfyv/audit.json",
+  "durationSeconds": 0.194
+}

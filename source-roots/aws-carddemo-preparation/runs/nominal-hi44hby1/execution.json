@@ -1,0 +1,141 @@
+{
+  "case": "nominal",
+  "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1",
+  "steps": [
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TRANFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TCATBALF.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/ACCTFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "LOAD",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/XREFFILE.seed",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/CBTRN02C"
+      ],
+      "env": {
+        "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TRANFILE",
+        "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/XREFFILE",
+        "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/ACCTFILE",
+        "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TCATBALF",
+        "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/DALYTRAN",
+        "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/DALYREJS",
+        "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build"
+      },
+      "rc": 0,
+      "stdout": "START OF EXECUTION OF PROGRAM CBTRN02C\nTCATBAL record not found for key : 00000000001010001.. Creating.\nTRANSACTIONS PROCESSED :000000001\nTRANSACTIONS REJECTED  :000000000\nEND OF EXECUTION OF PROGRAM CBTRN02C\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TRANFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TRANFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TRANFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_XREFFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/XREFFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/XREFFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_ACCTFILE"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/ACCTFILE.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/ACCTFILE"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/build/io_TCATBALF"
+      ],
+      "env": {
+        "IO_MODE": "DUMP",
+        "DD_RAW": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TCATBALF.after",
+        "DD_IDX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/runs/nominal-hi44hby1/TCATBALF"
+      },
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "TRANFILE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TCATBALF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACCTFILE": "a4c2b21f75787ebd8ecb2d430c66f94142cfa435eb75953aba6738bfac4a3423",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "DALYTRAN": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2"
+  },
+  "output_sha256": {
+    "TRANFILE": "3b516f270b863c59bc8b1d46012f707e523536f08323d81c2cae8235c76aa6dd",
+    "XREFFILE": "ad894f02c91d427a1e35dbecc58d1efb482ad24f1a1002cc287bbe3f07645cf8",
+    "ACCTFILE": "401a58e5971c5bba9ec5ba2813bb814c759f538f89efbcbd0dea3b98facd442e",
+    "TCATBALF": "4c867452904c67bf685f8036761897927601b261a6f89c3351e0a72bf94dad36",
+    "DALYREJS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

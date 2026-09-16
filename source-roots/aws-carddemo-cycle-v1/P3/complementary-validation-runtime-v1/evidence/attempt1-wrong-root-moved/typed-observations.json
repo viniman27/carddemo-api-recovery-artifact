@@ -1,0 +1,123 @@
+{
+  "description": "Actual API/COBOL observations extracted from raw audits and files; no expected fields injected.",
+  "fixtureId": "runtime-api-cobol-observations-v1",
+  "observations": {
+    "interest": {
+      "transactions": [
+        {
+          "amount": "0.06",
+          "annualRate": "unknown",
+          "card": "4111111111111111",
+          "category": "5",
+          "categoryBalance": "unknown",
+          "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          "id": "2022071800000001",
+          "merchant": "000000000",
+          "rawBytes": "3230323230373138303030303030303130313030303553797374656d20202020496e742e20666f7220612f63203130303030303030303031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003030303030303030303036303030303030303030202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202034313131313131313131313131313131323032362d30392d31362d30372e34342e30332e363630303030323032362d30392d31362d30372e34342e30332e3636303030300000000000000000000000000000000000000000",
+          "source": "System",
+          "transactionWritten": true,
+          "type": "01",
+          "xrefCard": "4111111111111111"
+        }
+      ]
+    },
+    "posting": {
+      "acceptedTransactions": [
+        {
+          "daily": {
+            "amount": "12.00",
+            "card": "4111111111111111",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-PRESENT-001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2022-07-05-10.05.00.000000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "duplicatePrevalidated": false,
+          "effectOrder": [
+            "tranfile",
+            "reject"
+          ],
+          "id": "POST-PRESENT-001",
+          "posted": {
+            "amount": "12.00",
+            "card": "4111111111111111",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-PRESENT-001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2026-09-16-07.44.03.590000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "rawBytes": "504f53542d50524553454e542d303031303130303035496e7465726e6574202063616e64696461746520707572636861736520202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303132303031323334353637383946697874757265204d65726368616e742020202020202020202020202020202020202020202020202020202020202020202042726173696c69612020202020202020202020202020202020202020202020202020202020202020202020202020202020203730303030303030202034313131313131313131313131313131323032322d30372d30352d31302e30302e30302e303030303030323032362d30392d31362d30372e34342e30332e3539303030300000000000000000000000000000000000000000",
+          "traceBoundary": "account/tcatbal effects inferred from after-capture presence only; write-order trace unavailable"
+        }
+      ],
+      "rejects": [
+        {
+          "candidate": {
+            "amount": "34.00",
+            "card": "4999999999999999",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-ABSENT--001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2022-07-05-10.05.00.000000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "case": "missing-card",
+          "description": "INVALID CARD NUMBER FOUND",
+          "postedTransactionWritten": true,
+          "rawBytes": "504f53542d414253454e542d2d303031303130303035496e7465726e6574202063616e64696461746520707572636861736520202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303334303031323334353637383946697874757265204d65726368616e742020202020202020202020202020202020202020202020202020202020202020202042726173696c69612020202020202020202020202020202020202020202020202020202020202020202020202020202020203730303030303030202034393939393939393939393939393939323032322d30372d30352d31302e30302e30302e303030303030323032322d30372d30352d31302e30352e30302e303030303030202020202020202020202020202020202020202030313030494e56414c49442043415244204e554d42455220464f554e44202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020",
+          "reason": "100",
+          "rejectRecordWritten": true
+        }
+      ],
+      "returnCode": 4
+    },
+    "reporting": {
+      "accountTotal": null,
+      "dateRange": [
+        "2022-07-01",
+        "2022-07-31"
+      ],
+      "pageTotal": null,
+      "reportFraming": {
+        "bytes": 665,
+        "classification": "available",
+        "recordSize": 133
+      },
+      "transactions": [
+        {
+          "amount": "12.00",
+          "detailLine": "REPORT-IN---001  10000000001 01-Purchase        0005-Candidate category            Internet                12.00",
+          "detailWritten": true,
+          "id": "REPORT-IN---001",
+          "procDate": "unknown",
+          "reportLineBytes": "5245504f52542d494e2d2d2d303031202031303030303030303030312030312d50757263686173652020202020202020303030352d43616e6469646174652063617465676f7279202020202020202020202020496e7465726e65742020202020202020202020202020202031322e3030202020202020202020202020202020202020202020"
+        }
+      ]
+    }
+  },
+  "rawAuditPaths": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/interest-_qo4gc7e/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/posting-21wpuaev/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/reporting-6nbfkq4u/audit.json"
+  ]
+}

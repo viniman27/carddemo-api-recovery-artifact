@@ -1,0 +1,77 @@
+{
+  "checked_at_utc": "2026-09-10T17:24:43.829947+00:00",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "runs": [
+    {
+      "name": "tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "evidence": "evidence/tests.txt"
+    },
+    {
+      "name": "tests-optimized",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "evidence": "evidence/tests-optimized.txt"
+    },
+    {
+      "name": "snapshot",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "verify_snapshot.py"
+      ],
+      "exit_code": 0,
+      "evidence": "evidence/snapshot.txt"
+    }
+  ],
+  "syntax_checked": [
+    "pipeline/tools/check_anchors.py",
+    "tests/test_anchors.py"
+  ],
+  "static_security_matches": [],
+  "changed_candidate_files": [
+    "README.md",
+    "settings/rules/README.md",
+    "settings/rules/ai-assistance.md",
+    "settings/rules/run-integrity.md",
+    "settings/rules/traceability.md",
+    "settings/rules/validation-principles.md",
+    "settings/templates/pipeline/adapter-behavior-spec.md",
+    "settings/templates/pipeline/api-contract-spec.md",
+    "settings/templates/pipeline/canonical-data-boundary-spec.md",
+    "settings/templates/pipeline/capability-semantics-spec.md",
+    "settings/templates/pipeline/legacy-evidence-spec.md",
+    "settings/templates/pipeline/pipeline-scope-spec.md",
+    "settings/templates/pipeline/semantic-validation-spec.md",
+    "settings/templates/pipeline/validation-report.md",
+    "steering/glossary.md",
+    "steering/pipeline.md",
+    "steering/product.md",
+    "steering/research-questions.md",
+    "steering/structure.md",
+    "steering/tech.md",
+    "tools/README.md",
+    "tools/check_anchors.py"
+  ],
+  "change_count": 22,
+  "human_approval": false,
+  "independent_review": "passed_scoped_review",
+  "independent_review_evidence": "evidence/revisao-independente.md",
+  "aws_executed": false
+}

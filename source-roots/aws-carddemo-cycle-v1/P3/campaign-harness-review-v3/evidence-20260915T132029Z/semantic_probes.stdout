@@ -1,0 +1,74 @@
+{
+  "copy_integrity": {
+    "copy_after_mutation": "B",
+    "pins_before_match_source": true,
+    "source_after_copy_mutation": "A"
+  },
+  "freeze": {
+    "loaded_case_count": 2,
+    "tamper_rejected": true
+  },
+  "union": {
+    "case_ids": [
+      "T4-0001",
+      "T4-0002"
+    ],
+    "ledger": [
+      {
+        "action": "kept",
+        "destination": "T4-0001",
+        "source": "T1:a"
+      },
+      {
+        "action": "duplicate_merged",
+        "destination": "T4-0001",
+        "source": "T2:b"
+      },
+      {
+        "action": "kept_distinct_expectation",
+        "destination": "T4-0002",
+        "source": "T2:c"
+      }
+    ],
+    "provenance": [
+      [
+        "T1:a",
+        "T2:b"
+      ],
+      [
+        "T2:c"
+      ]
+    ]
+  },
+  "unsupported_checker": {
+    "details": [
+      {
+        "unsupported_checks": [
+          "jsonSchema"
+        ]
+      },
+      {
+        "allowed_status": [
+          200
+        ],
+        "status": 200
+      }
+    ],
+    "receipt_results": [
+      "inconclusive",
+      "pass"
+    ],
+    "totals": {
+      "attempted": 2,
+      "completed": 2,
+      "deadline_failures": 0,
+      "expectation_inconclusive": 1,
+      "expectation_passes": 1,
+      "expectation_violations": 0,
+      "http_failures": 0,
+      "not_executed": 0,
+      "planned": 2,
+      "transport_failures": 0
+    }
+  }
+}

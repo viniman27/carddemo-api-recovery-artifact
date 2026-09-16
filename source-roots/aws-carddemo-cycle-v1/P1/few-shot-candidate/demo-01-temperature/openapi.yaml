@@ -1,0 +1,13 @@
+openapi: 3.1.0
+info: {title: Temperature Conversion API, version: 1.0.0}
+paths:
+  /temperature-conversions:
+    post:
+      operationId: convertCelsiusToFahrenheit
+      description: The COBOL source does not define HTTP rounding or overflow beyond its numeric pictures.
+      requestBody:
+        required: true
+        content: {application/json: {schema: {type: object, required: [celsius], properties: {celsius: {type: number, minimum: -999.99, maximum: 999.99, multipleOf: 0.01}}}}}
+      responses:
+        '200': {description: Conversion completed when the result is representable by the COBOL output picture., content: {application/json: {schema: {type: object, required: [fahrenheit], properties: {fahrenheit: {type: number, minimum: -999.99, maximum: 999.99, multipleOf: 0.01}}}}}}
+        '400': {description: Transport rejection for an unrepresentable input; the legacy defines no error payload.}

@@ -1,0 +1,1651 @@
+{
+  "bodyCapturePatch": {
+    "patched": true,
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "preserve raw response bytes for official structural measurement without editing harness-v3 file"
+  },
+  "createdUtc": "2026-09-15T19:39:54Z",
+  "experimentalViolations": [],
+  "harnessImport": {
+    "bytes": 26983,
+    "module": "campaign_harness",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "aws-carddemo-local-readiness-runner-v3-report",
+  "localReadinessExecution": true,
+  "measurementWarnings": [],
+  "officialExecutionStarted": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only never-attempted case IDs; failed attempts are not replayed",
+    "stopPolicy": "transport/deadline/startup/lifecycle quietness stops; experimental expectation/structural violations are recorded and execution continues; measurement inadmissibility is recorded without fake zero"
+  },
+  "preparedTarget": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "isolatedContractSourceCopy": {
+      "contracts": [
+        {
+          "bytes": 30136,
+          "contractId": "E1-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+          "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt"
+        },
+        {
+          "bytes": 31102,
+          "contractId": "E1-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+          "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt"
+        },
+        {
+          "bytes": 30113,
+          "contractId": "E1-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+          "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt"
+        },
+        {
+          "bytes": 28899,
+          "contractId": "E2-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+          "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt"
+        },
+        {
+          "bytes": 29973,
+          "contractId": "E2-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+          "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt"
+        },
+        {
+          "bytes": 25822,
+          "contractId": "E2-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+          "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt"
+        }
+      ],
+      "count": 6,
+      "reason": "P2c facades load all E1/E2 response-original contracts by id inside isolated cycle"
+    },
+    "isolatedCoveragePatch": {
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair",
+      "patchedSha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "v2CommandLogPreservation": {
+        "alreadyPreservedByCoveragePatch": true,
+        "mechanical": true,
+        "patchedSha256AfterV2": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+        "scope": "isolated P2b copy only"
+      }
+    },
+    "isolatedP2bBuild": {
+      "argv": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "build"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+      "returncode": 0,
+      "stderrTail": "",
+      "stdoutTail": " false\n    }\n  ],\n  \"gcovPrefixPolicy\": \"per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation\",\n  \"immutableBuildPolicy\": \"single immutable coverage build reused for every server/application invocation; gcno not regenerated after first successful build\",\n  \"immutableArtifacts\": [\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C\",\n      \"sha256\": \"3cb31df23fd1dd432114834777265470b82400ad8b33f405d2ebadfb8811ec44\",\n      \"bytes\": 116888\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c\",\n      \"sha256\": \"da7f738c4da53714bccaffe1d64013484fe7495cced8aeeb871c96d21d4033d0\",\n      \"bytes\": 156347\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno\",\n      \"sha256\": \"ccbcd5403c4b685329480e18a5ac1927ef34ade15f5b39a5cc8bce443422c8aa\",\n      \"bytes\": 203888\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib\",\n      \"sha256\": \"ded3fea17f5f0694684b09a74ee9a8009a2f9544ef361bbb5d2032437a3d0850\",\n      \"bytes\": 100288\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c\",\n      \"sha256\": \"555465b6ec15c2e1833a4189e81d100f7b26df8cb7ea7eb1c47ff77e9f9661be\",\n      \"bytes\": 138295\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno\",\n      \"sha256\": \"9beae38c9ced5916b9a98aa7457f1bebf042a550c31d8e74011acbad481f1e82\",\n      \"bytes\": 186748\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C\",\n      \"sha256\": \"f37a4a8a82fb3d0b4761a3988bd89173c88b0646c06003ed4983a91946c8914c\",\n      \"bytes\": 116840\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c\",\n      \"sha256\": \"d628a6ebc0c20204878da188d96c9420a36cb094c657f801497ef7facc0bf1ca\",\n      \"bytes\": 153755\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno\",\n      \"sha256\": \"d28ded5525908f5801d7551324e7910a0fd2b7a2941004f90b3470dd6878d742\",\n      \"bytes\": 206532\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER\",\n      \"sha256\": \"951c608e9c97da4b6b3bc67a131c511ffc7834785169a64fe5b2a89ee38c4b9b\",\n      \"bytes\": 52064\n    }\n  ]\n}\n"
+    },
+    "isolatedP2cFewshotCoveragePatch": {
+      "mechanicalAdaptations": [
+        "command_log_unredirected_to_isolated_p2b",
+        "posting_gcov_prefix",
+        "interest_gcov_prefix",
+        "reporting_gcov_prefix",
+        "audit_measurement_provenance"
+      ],
+      "originalSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "patchScope": "isolated P2c few-shot copy only",
+      "patchedSha256": "ddd9fc32cf39e7e6be55c915a7250f576d1f57f6b57a30e6be6cc0b2a008e2a8",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "provenance": "same-invocation coverage measurement plumbing only; no original COBOL/API/contracts/public response behavior changes"
+    },
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-preparation",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "53b7a820b765dfa3891f1177fe4421b3f5cb83895de6c9c22a1586218df367bc"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "bounded local readiness qualification only; not an official campaign run and not a T4 result",
+  "stopPolicy": {
+    "reason": null,
+    "stopped": false
+  },
+  "suiteReports": [
+    {
+      "applications_inline": [
+        {
+          "case_id": "BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 2060,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "d49526b5cb003df582ef85cc4b9376c05c12bafe8249af539d66603754f5d0a2",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "zero-shot-runs/E1-1/interest/E1-1-interest-1789501191450/facade-audit.json": {
+              "sha256": "2e7791ea5ee5409ff5f9731ea512d62cac982b72cc0d7573e04fc849fdb746f4",
+              "size": 10931
+            },
+            "zero-shot-runs/E1-1/interest/E1-1-interest-1789501191450/response.json": {
+              "sha256": "e9b08d5b7b958f6b6c0d23722ae6a5ca32e47770fb4d1a5a818dc288ffca419e",
+              "size": 857
+            },
+            "zero-shot-runs/command-log.jsonl": {
+              "sha256": "37e6bbb37eb784039e274155d2002db202664f702e5bed88b0b99554552bc34f",
+              "size": 3981
+            },
+            "zero-shot-runs/http-requests.jsonl": {
+              "sha256": "ea6efcdf9b9680747861b96a7161294509e4ddc5b41ddfb0b85372836ae9e0f8",
+              "size": 623
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/ACCTFILE": {
+              "sha256": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/DISCGRP": {
+              "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/PARMFILE": {
+              "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+              "size": 10
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/TCATBALF": {
+              "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/TRANSACT": {
+              "sha256": "bbfa442025f47333ab076b826a03ef0cd50b6dd5c029b99c43deb70816b4c915",
+              "size": 350
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE": {
+              "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE.1": {
+              "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/audit.json": {
+              "sha256": "1540d6662bac2adab72aaa3e3baa18861781c34e2bbada5e8e59244dff851866",
+              "size": 28616
+            },
+            "zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda": {
+              "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5",
+              "size": 3112
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/ACCTFILE": {
+              "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/DISCGRP": {
+              "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/P2C_LINKAGE_CAPTURE.bin": {
+              "sha256": "b4bfb7e26cb312429612916859453d914a20358f1282fa3b406548956b228d1b",
+              "size": 12
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/P2C_PARAMETER_LENGTH.txt": {
+              "sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+              "size": 2
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/PARMFILE": {
+              "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+              "size": 10
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/TCATBALF": {
+              "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/XREFFILE": {
+              "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/XREFFILE.1": {
+              "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/materialization-audit.json": {
+              "sha256": "a4f84311f24a79a42f5cf02dca684144d88abf62540d0aebd7594975381d67a0",
+              "size": 7376
+            },
+            "zero-shot-runs/request-packages/E1-1-interest-1789501191450/registry.json": {
+              "sha256": "706c757ec3d7224f40285896f1434f68331035df5d4fdc427824257bc6af947d",
+              "size": 2071
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0"
+        },
+        {
+          "case_id": "BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 2079,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "207c7aa383dcfc022c4a99cbaab049043f6807d2337629c0d61ade94163cb8d9",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "zero-shot-runs/E1-1/posting/E1-1-posting-1789501192507/facade-audit.json": {
+              "sha256": "dc19064e2de37968dea772e9d13802c19230e4e004592e150d4168fba994352e",
+              "size": 8233
+            },
+            "zero-shot-runs/E1-1/posting/E1-1-posting-1789501192507/response.json": {
+              "sha256": "bedb9b86f255ae383282e9c6d65ff393fbbd4724956c546d618507429083461a",
+              "size": 407
+            },
+            "zero-shot-runs/command-log.jsonl": {
+              "sha256": "dd01dd2caf9edd4d2d53ada99c208ec11c1829e5284b3d43d88165d57cb96b55",
+              "size": 9549
+            },
+            "zero-shot-runs/http-requests.jsonl": {
+              "sha256": "2863552afc58365e07a02500a0bd020b5ce1d1d7f50bbc0c3c0d474dd6a07078",
+              "size": 619
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/ACCTFILE": {
+              "sha256": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/ACCTFILE.after": {
+              "sha256": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+              "size": 600
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYREJS": {
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+              "size": 430
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYTRAN": {
+              "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+              "size": 700
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/TCATBALF": {
+              "sha256": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/TCATBALF.after": {
+              "sha256": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+              "size": 100
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/TRANFILE": {
+              "sha256": "9fc200e1d4e2b7aead646866bc0d181edc3ab5146e6b5113d28e9e13a4b03ba9",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/TRANFILE.after": {
+              "sha256": "071772affdc1e60283179ef3de1f164315ceb33fb56a86eb4721fe81df32d6de",
+              "size": 350
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/XREFFILE": {
+              "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/XREFFILE.after": {
+              "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "size": 100
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/audit.json": {
+              "sha256": "9717ef77067f8bbf8046b159852eda5c2e470459bedf8c828ea1e1c5d2251369",
+              "size": 28487
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda": {
+              "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969",
+              "size": 3364
+            },
+            "zero-shot-runs/p2b-runs/posting-wkfilyiw/write-observations.log": {
+              "sha256": "f98033b456a8c953fb7416c38140a9adf9085430f4fde6f9b5fe5c7ab6a4dba1",
+              "size": 46
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/ACCTFILE": {
+              "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/DALYTRAN": {
+              "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+              "size": 700
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/TCATBALF": {
+              "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/TRANFILE": {
+              "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/XREFFILE": {
+              "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/materialization-audit.json": {
+              "sha256": "e1cb223d3674771efcf8547254664010d624f251477c84c0a999e445a167246d",
+              "size": 5719
+            },
+            "zero-shot-runs/request-packages/E1-1-posting-1789501192507/registry.json": {
+              "sha256": "cdf3ee35efea7b4d5d972d2d47a361188ec1ad2afef2743452a06edca33baae7",
+              "size": 1880
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805"
+        },
+        {
+          "case_id": "BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 2102,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "f5303e9cc2fb54c70d5fa51347bd9e9334a29cf55ade452aff777301eb3e8576",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "zero-shot-runs/E1-1/reporting/E1-1-reporting-1789501194345/facade-audit.json": {
+              "sha256": "74268288d6bfef7e9502644fd6ddd31fb70f41feb2360cf235064c048811e8d4",
+              "size": 7792
+            },
+            "zero-shot-runs/E1-1/reporting/E1-1-reporting-1789501194345/response.json": {
+              "sha256": "d5a07e30f17f48f97a0bb81d01ef196b499a7487e8d0604a806637834d62ab14",
+              "size": 1334
+            },
+            "zero-shot-runs/command-log.jsonl": {
+              "sha256": "a50fbc36fd95e2d49a56c9d96fc67a1e8445dd259102d0481b12e2c4058e77d5",
+              "size": 3919
+            },
+            "zero-shot-runs/http-requests.jsonl": {
+              "sha256": "137a244a4a6cd3ac7103355640ffe8abb26ccd654792c27943d537a08b36cfc2",
+              "size": 638
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/CARDXREF": {
+              "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/DATEPARM": {
+              "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+              "size": 80
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANCATG": {
+              "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANFILE": {
+              "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+              "size": 700
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANREPT": {
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469",
+              "size": 665
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANTYPE": {
+              "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+              "size": 8192
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/audit.json": {
+              "sha256": "aadfaf1b601f951d1de6795b06e4edd50b59767c3412875e2e2ec0ef38ed3865",
+              "size": 27866
+            },
+            "zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda": {
+              "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74",
+              "size": 3464
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/CARDXREF": {
+              "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/DATEPARM": {
+              "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+              "size": 80
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANCATG": {
+              "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANFILE": {
+              "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+              "size": 700
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANTYPE": {
+              "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+              "size": 8192
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/materialization-audit.json": {
+              "sha256": "5866cc7ffa956b7cb6eb811d8c80d7f5ac4193099bdf51374d042737a2ec83a1",
+              "size": 5272
+            },
+            "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/registry.json": {
+              "sha256": "39a98b321c155805430ac5be576a78d95d5b310eb8fc9824363a6527d5585cb1",
+              "size": 1882
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463"
+        }
+      ],
+      "attempted_case_count": 3,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 2060,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "d49526b5cb003df582ef85cc4b9376c05c12bafe8249af539d66603754f5d0a2",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "zero-shot-runs/E1-1/interest/E1-1-interest-1789501191450/facade-audit.json": {
+                "sha256": "2e7791ea5ee5409ff5f9731ea512d62cac982b72cc0d7573e04fc849fdb746f4",
+                "size": 10931
+              },
+              "zero-shot-runs/E1-1/interest/E1-1-interest-1789501191450/response.json": {
+                "sha256": "e9b08d5b7b958f6b6c0d23722ae6a5ca32e47770fb4d1a5a818dc288ffca419e",
+                "size": 857
+              },
+              "zero-shot-runs/command-log.jsonl": {
+                "sha256": "37e6bbb37eb784039e274155d2002db202664f702e5bed88b0b99554552bc34f",
+                "size": 3981
+              },
+              "zero-shot-runs/http-requests.jsonl": {
+                "sha256": "ea6efcdf9b9680747861b96a7161294509e4ddc5b41ddfb0b85372836ae9e0f8",
+                "size": 623
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/ACCTFILE": {
+                "sha256": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/DISCGRP": {
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/PARMFILE": {
+                "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+                "size": 10
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/TCATBALF": {
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/TRANSACT": {
+                "sha256": "bbfa442025f47333ab076b826a03ef0cd50b6dd5c029b99c43deb70816b4c915",
+                "size": 350
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE": {
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE.1": {
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/audit.json": {
+                "sha256": "1540d6662bac2adab72aaa3e3baa18861781c34e2bbada5e8e59244dff851866",
+                "size": 28616
+              },
+              "zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda": {
+                "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5",
+                "size": 3112
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/ACCTFILE": {
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/DISCGRP": {
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/P2C_LINKAGE_CAPTURE.bin": {
+                "sha256": "b4bfb7e26cb312429612916859453d914a20358f1282fa3b406548956b228d1b",
+                "size": 12
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/P2C_PARAMETER_LENGTH.txt": {
+                "sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+                "size": 2
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/PARMFILE": {
+                "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+                "size": 10
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/TCATBALF": {
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/XREFFILE": {
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/XREFFILE.1": {
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/materialization-audit.json": {
+                "sha256": "a4f84311f24a79a42f5cf02dca684144d88abf62540d0aebd7594975381d67a0",
+                "size": 7376
+              },
+              "zero-shot-runs/request-packages/E1-1-interest-1789501191450/registry.json": {
+                "sha256": "706c757ec3d7224f40285896f1434f68331035df5d4fdc427824257bc6af947d",
+                "size": 2071
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0"
+          },
+          "case_id": "BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef",
+          "contractId": "E1-1",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "interest"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local/P2B_INTEREST_DRIVER"
+                ],
+                "commandLog": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/command-log.jsonl",
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/ACCTFILE",
+                  "DD_DISCGRP": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/DISCGRP",
+                  "DD_PARMFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/PARMFILE",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/TCATBALF",
+                  "DD_TRANSACT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/TRANSACT",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE",
+                  "DD_XREFFILE.1": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/XREFFILE.1",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov",
+                  "GCOV_PREFIX_STRIP": "16"
+                },
+                "exit_code": 0
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBACT04C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 214,
+                  "taken_at_least_once": 116,
+                  "total": 266
+                },
+                "bytes": 187583,
+                "calls": {
+                  "executed": 85,
+                  "total": 148
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "lines": {
+                  "executed": 585,
+                  "total": 1029
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.c.gcov",
+                "runs": 1,
+                "sha256": "057f1cbdfffc2da789f55adf51adedd9c3ba77899f518ca33d0115839250259c",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 100288,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                  "rel": "CBACT04C.dylib",
+                  "sha256": "ded3fea17f5f0694684b09a74ee9a8009a2f9544ef361bbb5d2032437a3d0850"
+                },
+                {
+                  "bytes": 52064,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+                  "rel": "P2B_INTEREST_DRIVER",
+                  "sha256": "951c608e9c97da4b6b3bc67a131c511ffc7834785169a64fe5b2a89ee38c4b9b"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3112,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                  "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 186748,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                  "sha256": "9beae38c9ced5916b9a98aa7457f1bebf042a550c31d8e74011acbad481f1e82"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 100288,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                    "rel": "CBACT04C.dylib",
+                    "sha256": "ded3fea17f5f0694684b09a74ee9a8009a2f9544ef361bbb5d2032437a3d0850"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3112,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                    "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5"
+                  },
+                  "gcno": {
+                    "bytes": 186748,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                    "sha256": "9beae38c9ced5916b9a98aa7457f1bebf042a550c31d8e74011acbad481f1e82"
+                  },
+                  "program": "CBACT04C"
+                }
+              ],
+              "program": "CBACT04C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov",
+              "duration_s": 0.014,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "3f72d119a1d7cc8e1785437c08a87c24f0c7fe56e4c59892b415e89e511697d5"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 187583,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.c.gcov",
+                  "sha256": "057f1cbdfffc2da789f55adf51adedd9c3ba77899f518ca33d0115839250259c"
+                },
+                {
+                  "bytes": 9117,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.c.h.gcov",
+                  "sha256": "ae54e26b6f6e859c88ef51644d4e29b0409f849bcec59cb3f89021120d4746c4"
+                },
+                {
+                  "bytes": 11066,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.c.l.h.gcov",
+                  "sha256": "9bf01c2da4ee986ae2e10164ec255c96bb5a9a3297251cc741c3083aea801b58"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 186748,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "sha256": "9beae38c9ced5916b9a98aa7457f1bebf042a550c31d8e74011acbad481f1e82",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:56.85% of 1029\nBranches executed:80.45% of 266\nTaken at least once:43.61% of 266\nCalls executed:57.43% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.44% of 36\nTaken at least once:47.22% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:57.43% of 1043\n",
+              "summaryParsed": {
+                "branchesPercent": 94.44,
+                "branchesTotal": 36,
+                "callsPercent": 57.43,
+                "callsTotal": 148,
+                "linesPercent": 57.43,
+                "linesTotal": 1043,
+                "rawSummaryLines": [
+                  "Lines executed:56.85% of 1029",
+                  "Branches executed:80.45% of 266",
+                  "Taken at least once:43.61% of 266",
+                  "Calls executed:57.43% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.44% of 36",
+                  "Taken at least once:47.22% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:57.43% of 1043"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "interest-g02ru4fs",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay/applications/0001-f9f9f2c5027a78c0/zero-shot-runs/p2b-runs/interest-g02ru4fs",
+            "track": "interest"
+          },
+          "operationId": "generateInterestTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "unsupported_checks": [
+                "contract_checker",
+                "expected_status_source"
+              ]
+            },
+            "expectation_result": "inconclusive",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/interest-runs",
+            "provenance": [
+              "reference-executable-v4:INTCALC-T001",
+              "t3-cell:INTCALC-OBL-001::E1-1::generateInterestTransactions",
+              "t3-binding-closure-v1:amended-from:E1-1/T3.json:T3-0001-d3efd655d1ef"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "32e72dee2efab6312749ed2e96b74b2ee94014c0a5aacff367327679f7f3c346",
+            "response_body_b64": "eyJnZW5lcmF0ZWRUcmFuc2FjdGlvbnMiOiBbeyJyZWNvcmRCYXNlNjQiOiAiTWpBeU1qQTNNVGd3TURBd01EQXdNVEF4TURBd05WTjVjM1JsYlNBZ0lDQkpiblF1SUdadmNpQmhMMk1nTVRBd01EQXdNREF3TURFQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFNREF3TURBd01EQXdNRFl3TURBd01EQXdNREFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJMkxUQTVMVEUxTFRFMkxqTTVMalV5TGpFeU1EQXdNREl3TWpZdE1Ea3RNVFV0TVRZdU16a3VOVEl1TVRJd01EQXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9In1dLCAiZGlhZ25vc3RpY3MiOiBbIlNUQVJUIE9GIEVYRUNVVElPTiBPRiBQUk9HUkFNIENCQUNUMDRDIiwgIjEwMDAwMDAwMDAxMDEwMDA1MDAwMDAwMDUwMDAgICAgICAgICAgICAgICAgICAgICAgIiwgIjEwMDAwMDAwMDAyMDEwMDA1MDAwMDAwMDcwMDAgICAgICAgICAgICAgICAgICAgICAgIiwgIkVORCBPRiBFWEVDVVRJT04gT0YgUFJPR1JBTSBDQkFDVDA0QyJdfQ==",
+            "response_bytes": 724,
+            "response_sha256": "56973ab90b826d499418baf00cd9d8d56e7dd194295cb7f51c885560aae94a67",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-interest-T3-0001-d3efd655d1ef/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "interest"
+        },
+        {
+          "application": {
+            "case_id": "BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 2079,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "207c7aa383dcfc022c4a99cbaab049043f6807d2337629c0d61ade94163cb8d9",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "zero-shot-runs/E1-1/posting/E1-1-posting-1789501192507/facade-audit.json": {
+                "sha256": "dc19064e2de37968dea772e9d13802c19230e4e004592e150d4168fba994352e",
+                "size": 8233
+              },
+              "zero-shot-runs/E1-1/posting/E1-1-posting-1789501192507/response.json": {
+                "sha256": "bedb9b86f255ae383282e9c6d65ff393fbbd4724956c546d618507429083461a",
+                "size": 407
+              },
+              "zero-shot-runs/command-log.jsonl": {
+                "sha256": "dd01dd2caf9edd4d2d53ada99c208ec11c1829e5284b3d43d88165d57cb96b55",
+                "size": 9549
+              },
+              "zero-shot-runs/http-requests.jsonl": {
+                "sha256": "2863552afc58365e07a02500a0bd020b5ce1d1d7f50bbc0c3c0d474dd6a07078",
+                "size": 619
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/ACCTFILE": {
+                "sha256": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/ACCTFILE.after": {
+                "sha256": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+                "size": 600
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYREJS": {
+                "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+                "size": 430
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYTRAN": {
+                "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+                "size": 700
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/TCATBALF": {
+                "sha256": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/TCATBALF.after": {
+                "sha256": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+                "size": 100
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/TRANFILE": {
+                "sha256": "9fc200e1d4e2b7aead646866bc0d181edc3ab5146e6b5113d28e9e13a4b03ba9",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/TRANFILE.after": {
+                "sha256": "071772affdc1e60283179ef3de1f164315ceb33fb56a86eb4721fe81df32d6de",
+                "size": 350
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/XREFFILE": {
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/XREFFILE.after": {
+                "sha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+                "size": 100
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/audit.json": {
+                "sha256": "9717ef77067f8bbf8046b159852eda5c2e470459bedf8c828ea1e1c5d2251369",
+                "size": 28487
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda": {
+                "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969",
+                "size": 3364
+              },
+              "zero-shot-runs/p2b-runs/posting-wkfilyiw/write-observations.log": {
+                "sha256": "f98033b456a8c953fb7416c38140a9adf9085430f4fde6f9b5fe5c7ab6a4dba1",
+                "size": 46
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/ACCTFILE": {
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/DALYTRAN": {
+                "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+                "size": 700
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/TCATBALF": {
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/TRANFILE": {
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/XREFFILE": {
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/materialization-audit.json": {
+                "sha256": "e1cb223d3674771efcf8547254664010d624f251477c84c0a999e445a167246d",
+                "size": 5719
+              },
+              "zero-shot-runs/request-packages/E1-1-posting-1789501192507/registry.json": {
+                "sha256": "cdf3ee35efea7b4d5d972d2d47a361188ec1ad2afef2743452a06edca33baae7",
+                "size": 1880
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805"
+          },
+          "case_id": "BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8",
+          "contractId": "E1-1",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "posting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local/CBTRN02C"
+                ],
+                "commandLog": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/command-log.jsonl",
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov",
+                  "GCOV_PREFIX_STRIP": "16",
+                  "P2B_INVOCATION": "posting-wkfilyiw",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/write-observations.log"
+                },
+                "exit_code": 4
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN02C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 246,
+                  "taken_at_least_once": 133,
+                  "total": 288
+                },
+                "bytes": 210596,
+                "calls": {
+                  "executed": 94,
+                  "total": 154
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcno",
+                "lines": {
+                  "executed": 651,
+                  "total": 1120
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C.c.gcov",
+                "runs": 1,
+                "sha256": "29c0ee54b2188fa021e126f3a768dbcf71ee40ae2d9cb2e2a8f1fc7bd45d4b9a",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116888,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                  "rel": "CBTRN02C",
+                  "sha256": "3cb31df23fd1dd432114834777265470b82400ad8b33f405d2ebadfb8811ec44"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3364,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                  "rel": "CBTRN02C-CBTRN02C.gcda",
+                  "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 203888,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                  "rel": "CBTRN02C-CBTRN02C.gcno",
+                  "sha256": "ccbcd5403c4b685329480e18a5ac1927ef34ade15f5b39a5cc8bce443422c8aa"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116888,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                    "rel": "CBTRN02C",
+                    "sha256": "3cb31df23fd1dd432114834777265470b82400ad8b33f405d2ebadfb8811ec44"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3364,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                    "rel": "CBTRN02C-CBTRN02C.gcda",
+                    "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969"
+                  },
+                  "gcno": {
+                    "bytes": 203888,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                    "rel": "CBTRN02C-CBTRN02C.gcno",
+                    "sha256": "ccbcd5403c4b685329480e18a5ac1927ef34ade15f5b39a5cc8bce443422c8aa"
+                  },
+                  "program": "CBTRN02C"
+                }
+              ],
+              "program": "CBTRN02C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov",
+              "duration_s": 0.012,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "473e56c9b392eeac3e0d97642e28bdc592d15cce42f0f4754ea70f3f804cd969"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 210596,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C.c.gcov",
+                  "sha256": "29c0ee54b2188fa021e126f3a768dbcf71ee40ae2d9cb2e2a8f1fc7bd45d4b9a"
+                },
+                {
+                  "bytes": 9076,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C.c.h.gcov",
+                  "sha256": "e8fc82af212b7e01c0afde1b5a1a26aac39c28e4801639c839913fa290bb58e4"
+                },
+                {
+                  "bytes": 11443,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C.c.l.h.gcov",
+                  "sha256": "4f0e9c301f0c233618bdeca6546d46a149faa1d4be4acc73c5ac06b5ea85a59b"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 203888,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov/CBTRN02C-CBTRN02C.gcno",
+                "sha256": "ccbcd5403c4b685329480e18a5ac1927ef34ade15f5b39a5cc8bce443422c8aa",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:58.12% of 1120\nBranches executed:85.42% of 288\nTaken at least once:46.18% of 288\nCalls executed:61.04% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.74% of 38\nTaken at least once:47.37% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:58.64% of 1134\n",
+              "summaryParsed": {
+                "branchesPercent": 94.74,
+                "branchesTotal": 38,
+                "callsPercent": 61.04,
+                "callsTotal": 154,
+                "linesPercent": 58.64,
+                "linesTotal": 1134,
+                "rawSummaryLines": [
+                  "Lines executed:58.12% of 1120",
+                  "Branches executed:85.42% of 288",
+                  "Taken at least once:46.18% of 288",
+                  "Calls executed:61.04% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.74% of 38",
+                  "Taken at least once:47.37% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:58.64% of 1134"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 4,
+            "requestInvocation": "posting-wkfilyiw",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-5988010e1e286805/zero-shot-runs/p2b-runs/posting-wkfilyiw",
+            "track": "posting"
+          },
+          "operationId": "postDailyTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "unsupported_checks": [
+                "contract_checker",
+                "expected_status_source"
+              ]
+            },
+            "expectation_result": "inconclusive",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/posting-runs",
+            "provenance": [
+              "reference-executable-v4:POSTTRAN-T001",
+              "t3-cell:POSTTRAN-OBL-001::E1-1::postDailyTransactions",
+              "t3-binding-closure-v1:amended-from:E1-1/T3.json:T3-0019-bb43244b06b8"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "e8b3b4403b16ae15718ac78f1a9ad7e128eb24ad2b2727f683428e78be80e015",
+            "response_body_b64": "eyJ0cmFuc2FjdGlvbnNQcm9jZXNzZWQiOiAyLCAidHJhbnNhY3Rpb25zUmVqZWN0ZWQiOiAxLCAicmV0dXJuQ29kZSI6IDQsICJ3cml0dGVuVHJhbnNhY3Rpb25zIjogW10sICJyZWplY3RzIjogW10sICJkaWFnbm9zdGljcyI6IFsiU1RBUlQgT0YgRVhFQ1VUSU9OIE9GIFBST0dSQU0gQ0JUUk4wMkMiLCAiVFJBTlNBQ1RJT05TIFBST0NFU1NFRCA6MDAwMDAwMDAyIiwgIlRSQU5TQUNUSU9OUyBSRUpFQ1RFRCAgOjAwMDAwMDAwMSIsICJFTkQgT0YgRVhFQ1VUSU9OIE9GIFBST0dSQU0gQ0JUUk4wMkMiXX0=",
+            "response_bytes": 287,
+            "response_sha256": "5e52b703c1a6ccecb536dcbbd96e93865a9201a7ae21c96f6bd1459c1d787b25",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-posting-T3-0019-bb43244b06b8/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "posting"
+        },
+        {
+          "application": {
+            "case_id": "BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 2102,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "f5303e9cc2fb54c70d5fa51347bd9e9334a29cf55ade452aff777301eb3e8576",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "zero-shot-runs/E1-1/reporting/E1-1-reporting-1789501194345/facade-audit.json": {
+                "sha256": "74268288d6bfef7e9502644fd6ddd31fb70f41feb2360cf235064c048811e8d4",
+                "size": 7792
+              },
+              "zero-shot-runs/E1-1/reporting/E1-1-reporting-1789501194345/response.json": {
+                "sha256": "d5a07e30f17f48f97a0bb81d01ef196b499a7487e8d0604a806637834d62ab14",
+                "size": 1334
+              },
+              "zero-shot-runs/command-log.jsonl": {
+                "sha256": "a50fbc36fd95e2d49a56c9d96fc67a1e8445dd259102d0481b12e2c4058e77d5",
+                "size": 3919
+              },
+              "zero-shot-runs/http-requests.jsonl": {
+                "sha256": "137a244a4a6cd3ac7103355640ffe8abb26ccd654792c27943d537a08b36cfc2",
+                "size": 638
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/CARDXREF": {
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/DATEPARM": {
+                "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+                "size": 80
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANCATG": {
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANFILE": {
+                "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+                "size": 700
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANREPT": {
+                "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469",
+                "size": 665
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANTYPE": {
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+                "size": 8192
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/audit.json": {
+                "sha256": "aadfaf1b601f951d1de6795b06e4edd50b59767c3412875e2e2ec0ef38ed3865",
+                "size": 27866
+              },
+              "zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda": {
+                "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74",
+                "size": 3464
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/CARDXREF": {
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/DATEPARM": {
+                "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+                "size": 80
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANCATG": {
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANFILE": {
+                "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+                "size": 700
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANTYPE": {
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+                "size": 8192
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/materialization-audit.json": {
+                "sha256": "5866cc7ffa956b7cb6eb811d8c80d7f5ac4193099bdf51374d042737a2ec83a1",
+                "size": 5272
+              },
+              "zero-shot-runs/request-packages/E1-1-reporting-1789501194345/registry.json": {
+                "sha256": "39a98b321c155805430ac5be576a78d95d5b310eb8fc9824363a6527d5585cb1",
+                "size": 1882
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463"
+          },
+          "case_id": "BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3",
+          "contractId": "E1-1",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "reporting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local/CBTRN03C"
+                ],
+                "commandLog": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/command-log.jsonl",
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/build-local",
+                  "DD_CARDXREF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/CARDXREF",
+                  "DD_DATEPARM": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/DATEPARM",
+                  "DD_TRANCATG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANCATG",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANFILE",
+                  "DD_TRANREPT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANREPT",
+                  "DD_TRANTYPE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/TRANTYPE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov",
+                  "GCOV_PREFIX_STRIP": "16"
+                },
+                "exit_code": 0
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN03C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 216,
+                  "taken_at_least_once": 111,
+                  "total": 272
+                },
+                "bytes": 207881,
+                "calls": {
+                  "executed": 85,
+                  "total": 157
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcno",
+                "lines": {
+                  "executed": 655,
+                  "total": 1192
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.c.gcov",
+                "runs": 1,
+                "sha256": "00dd052a5b23ec03f4d4b0248e4ac6f48866580b0da8f5738f9c9e8cc31459cc",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+                "sourceBasename": "CBTRN03C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116840,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                  "rel": "CBTRN03C",
+                  "sha256": "f37a4a8a82fb3d0b4761a3988bd89173c88b0646c06003ed4983a91946c8914c"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3464,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                  "rel": "CBTRN03C.gcda",
+                  "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 206532,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                  "rel": "CBTRN03C.gcno",
+                  "sha256": "d28ded5525908f5801d7551324e7910a0fd2b7a2941004f90b3470dd6878d742"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116840,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                    "rel": "CBTRN03C",
+                    "sha256": "f37a4a8a82fb3d0b4761a3988bd89173c88b0646c06003ed4983a91946c8914c"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3464,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                    "rel": "CBTRN03C.gcda",
+                    "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74"
+                  },
+                  "gcno": {
+                    "bytes": 206532,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                    "rel": "CBTRN03C.gcno",
+                    "sha256": "d28ded5525908f5801d7551324e7910a0fd2b7a2941004f90b3470dd6878d742"
+                  },
+                  "program": "CBTRN03C"
+                }
+              ],
+              "program": "CBTRN03C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3464,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                "rel": "gcov/CBTRN03C.gcda",
+                "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3464,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcda",
+                "sha256": "6ef8b36c493710f0b2d51879757dd30c4c559d53b81231f8ef7cd3fbd30e2b74"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 207881,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.c.gcov",
+                  "sha256": "00dd052a5b23ec03f4d4b0248e4ac6f48866580b0da8f5738f9c9e8cc31459cc"
+                },
+                {
+                  "bytes": 11970,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.c.h.gcov",
+                  "sha256": "a898e24c4697ca8daa78fc8b52e06ccbedf06a55e29a8364bb7c5a774daf702b"
+                },
+                {
+                  "bytes": 11858,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.c.l.h.gcov",
+                  "sha256": "cad342b34ac6c1e413c00a150304c97cc7779cf4a36a827695ee551a194c78e7"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 206532,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov/CBTRN03C.gcno",
+                "sha256": "d28ded5525908f5801d7551324e7910a0fd2b7a2941004f90b3470dd6878d742",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:54.95% of 1192\nBranches executed:79.41% of 272\nTaken at least once:40.81% of 272\nCalls executed:54.14% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:80.00% of 50\nBranches executed:87.50% of 48\nTaken at least once:43.75% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:56.03% of 1244\n",
+              "summaryParsed": {
+                "branchesPercent": 87.5,
+                "branchesTotal": 48,
+                "callsPercent": 0.0,
+                "callsTotal": 2,
+                "linesPercent": 56.03,
+                "linesTotal": 1244,
+                "rawSummaryLines": [
+                  "Lines executed:54.95% of 1192",
+                  "Branches executed:79.41% of 272",
+                  "Taken at least once:40.81% of 272",
+                  "Calls executed:54.14% of 157",
+                  "Creating 'CBTRN03C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN03C.c.l.h.gcov'",
+                  "Lines executed:80.00% of 50",
+                  "Branches executed:87.50% of 48",
+                  "Taken at least once:43.75% of 48",
+                  "Calls executed:0.00% of 2",
+                  "Creating 'CBTRN03C.c.h.gcov'",
+                  "Lines executed:56.03% of 1244"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "reporting-sw0uyyks",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks",
+            "track": "reporting"
+          },
+          "operationId": "generateTransactionReport",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "unsupported_checks": [
+                "contract_checker",
+                "expected_status_source"
+              ]
+            },
+            "expectation_result": "inconclusive",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/transaction-report-runs",
+            "provenance": [
+              "reference-executable-v4:TRANREPT-T003",
+              "t3-cell:TRANREPT-OBL-002::E1-1::generateTransactionReport",
+              "t3-binding-closure-v1:amended-from:E1-1/T3.json:T3-0026-deffa082a6b3"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "64af3d48aa108b87b3495cefc3b6965aaa4e9ac69f3841590b531eb4943229be",
+            "response_body_b64": "eyJsaW5lcyI6IFsiREFMWVJFUFQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEYWlseSBUcmFuc2FjdGlvbiBSZXBvcnQgICAgICAgICAgICAgICAgIERhdGUgUmFuZ2U6IDIwMjItMDctMDEgdG8gMjAyMi0wNy0zMSAgICAgICAgICAgICAgICAgICIsICIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwgIlRyYW5zYWN0aW9uIElEICAgQWNjb3VudCBJRCAgVHJhbnNhY3Rpb24gVHlwZSAgIFRyYW4gQ2F0ZWdvcnkgICAgICAgICAgICAgICAgICAgICAgVHJhbiBTb3VyY2UgICAgICAgICAgICBBbW91bnQgICAgICAgICAgICAgICAgICAgICAiLCAiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSIsICJSRVBPUlQtSU4tLS0wMDEgIDEwMDAwMDAwMDAxIDAxLVB1cmNoYXNlICAgICAgICAwMDA1LUNhbmRpZGF0ZSBjYXRlZ29yeSAgICAgICAgICAgIEludGVybmV0ICAgICAgICAgICAgICAgIDEyLjAwICAgICAgICAgICAgICAgICAgICAgIl0sICJkaWFnbm9zdGljcyI6IFsiU1RBUlQgT0YgRVhFQ1VUSU9OIE9GIFBST0dSQU0gQ0JUUk4wM0MiLCAiUmVwb3J0aW5nIGZyb20gMjAyMi0wNy0wMSB0byAyMDIyLTA3LTMxIiwgIlJFUE9SVC1JTi0tLTAwMSAwMTAwMDVJbnRlcm5ldCAgY2FuZGlkYXRlIHB1cmNoYXNlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMDAxMjAwMTIzNDU2Nzg5Rml4dHVyZSBNZXJjaGFudCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCcmFzaWxpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDcwMDAwMDAwICA0MTExMTExMTExMTExMTExMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCAgICAgICAgICAgICAgICAgICAgIiwgIkVORCBPRiBFWEVDVVRJT04gT0YgUFJPR1JBTSBDQlRSTjAzQyJdfQ==",
+            "response_bytes": 1192,
+            "response_sha256": "d5722913a45cb0c5b0a407ed5c04c67d7c2b14b0e24fa56d0841eb363a922b22",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "reporting"
+        }
+      ],
+      "loaded_case_count": 3,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/inputs/T3-BINDING-CLOSURE-V1-E1-1-3TRACK.json",
+      "suite_id": "ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK",
+      "totals": {
+        "attempted": 3,
+        "completed": 3,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 3,
+        "expectation_passes": 0,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 6,
+        "transport_failures": 0
+      }
+    }
+  ],
+  "totals": {
+    "attempted": 3,
+    "completed": 3,
+    "measurement_admissible": 3,
+    "planned": 3,
+    "structural_ok": 3
+  }
+}

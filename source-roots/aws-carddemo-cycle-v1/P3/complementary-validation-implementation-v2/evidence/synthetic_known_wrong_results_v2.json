@@ -1,0 +1,1294 @@
+{
+  "fixtureId": "synthetic-known-wrong-all-tracks-v1",
+  "results": [
+    {
+      "obligationId": "POSTTRAN-OBL-001",
+      "track": "posttran",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            29,
+            61
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            193,
+            200
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            23,
+            42
+          ],
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191"
+        }
+      ],
+      "boundaries": [
+        "all DD/open statuses are 00 before first read",
+        "one required open returns non-00 and must stop before processing"
+      ],
+      "details": {
+        "sourceExpected": "Somente todos os OPEN status 00 permitem entrar no loop de DALYTRAN.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-002",
+      "track": "posttran",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            202,
+            219
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            345,
+            369
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        }
+      ],
+      "boundaries": [
+        "first read status 00 increments processed count",
+        "read status 10 ends loop without processing a new record",
+        "non-00/non-10 read status abends"
+      ],
+      "details": {
+        "sourceExpected": "WS-TRANSACTION-COUNT incrementa somente para leituras status 00. EOF seleciona fechamento sem expectativa sobre conteúdo estável do receiver.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-003",
+      "track": "posttran",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1"
+        },
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+        },
+        {
+          "lines": [
+            424,
+            439
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        }
+      ],
+      "boundaries": [
+        "accepted transaction copies business fields from DALYTRAN",
+        "processing timestamp is current-date derived and not pre-fixed"
+      ],
+      "details": {
+        "sourceExpected": {
+          "copiedFields": [
+            "id",
+            "type",
+            "category",
+            "source",
+            "description",
+            "amount",
+            "merchant",
+            "card",
+            "origTs"
+          ],
+          "procTs": "current-date-derived-not-fixture-copied"
+        },
+        "observed": [
+          {
+            "id": "post-accepted-001",
+            "rawBytes": "504f535445442d4259544553",
+            "daily": {
+              "id": "TX1001",
+              "type": "01",
+              "category": "10",
+              "source": "POS",
+              "description": "Store purchase",
+              "amount": "25.75",
+              "merchant": "M123",
+              "card": "4111111111111111",
+              "origTs": "2026-09-01-09.30.00",
+              "procTs": "input-proc-should-not-copy"
+            },
+            "posted": {
+              "id": "TX1001",
+              "type": "01",
+              "category": "10",
+              "source": "POS",
+              "description": "Store purchase",
+              "amount": "26.75",
+              "merchant": "M123",
+              "card": "4111111111111111",
+              "origTs": "2026-09-01-09.30.00",
+              "procTs": "input-proc-should-not-copy"
+            },
+            "effectOrder": [
+              "validation",
+              "tranfile",
+              "account",
+              "tcatbal"
+            ],
+            "duplicatePrevalidated": true
+          }
+        ],
+        "failures": [
+          "accepted transaction post-accepted-001 provenance missing",
+          "accepted transaction post-accepted-001 field amount not copied from daily",
+          "accepted transaction post-accepted-001 procTs was copied instead of regenerated"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "track": "posttran",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            370,
+            392
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+        }
+      ],
+      "boundaries": [
+        "card absent in XREF rejects with reason 100",
+        "card present continues to account checks without format-only validation"
+      ],
+      "details": {
+        "sourceExpected": {
+          "reason": "100",
+          "descriptionContains": "INVALID CARD NUMBER",
+          "noPostedTransaction": true
+        },
+        "observed": [
+          {
+            "case": "missing-card",
+            "rawBytes": "52454a4543542d4259544553",
+            "reason": "101",
+            "description": "ACCOUNT NOT FOUND",
+            "postedTransactionWritten": true,
+            "rejectRecordWritten": false
+          }
+        ],
+        "failures": [
+          "reject missing-card provenance missing",
+          "missing-card reject reason is not 100",
+          "missing-card reject description lacks INVALID CARD NUMBER",
+          "missing-card case wrote or did not report absence of posted transaction"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "track": "posttran",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            393,
+            421
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            4,
+            17
+          ],
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+        }
+      ],
+      "boundaries": [
+        "account absent rejects 101",
+        "account over limit rejects 102 unless later expiry check overwrites with 103",
+        "textual expiration comparison fails and final reason is 103"
+      ],
+      "details": {
+        "sourceExpected": "Conta inexistente rejeita 101; overlimit rejeita 102 salvo se expiração textual também falhar, caso em que a razão final sustentada é 103.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "track": "posttran",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            211,
+            216
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            227,
+            231
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            446,
+            465
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            176,
+            182
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        }
+      ],
+      "boundaries": [
+        "one validation reason writes one reject trailer",
+        "normal close with reject count greater than zero returns RC 4"
+      ],
+      "details": {
+        "sourceExpected": {
+          "returnCodeWhenRejectCountGreaterThanZero": 4,
+          "rejectRecordPerValidationReason": true
+        },
+        "observed": {
+          "returnCode": 0,
+          "rejects": [
+            {
+              "case": "missing-card",
+              "rawBytes": "52454a4543542d4259544553",
+              "reason": "101",
+              "description": "ACCOUNT NOT FOUND",
+              "postedTransactionWritten": true,
+              "rejectRecordWritten": false
+            }
+          ]
+        },
+        "failures": [
+          "return code is not 4 despite reject count > 0",
+          "reject missing-card did not write reject record",
+          "reject missing-card provenance missing"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "track": "posttran",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            467,
+            542
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+        }
+      ],
+      "boundaries": [
+        "TCATBAL missing key creates initial category balance",
+        "TCATBAL existing key rewrites balance plus amount",
+        "TCATBAL I/O status outside documented set abends before account/TRANFILE effects"
+      ],
+      "details": {
+        "sourceExpected": "Ausente cria saldo com amount; existente reescreve saldo+amount; falha nesta etapa impede ACCOUNT/TRANFILE.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-008",
+      "track": "posttran",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            440,
+            442
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            545,
+            559
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        }
+      ],
+      "boundaries": [
+        "positive amount updates balance and credit",
+        "negative amount updates balance and debit",
+        "ACCOUNT rewrite invalid key records reason 109 but continues toward TRANFILE write"
+      ],
+      "details": {
+        "sourceExpected": "A ausência de abend local no REWRITE ACCOUNT é decidível; após INVALID KEY o caminho de WRITE TRANFILE continua.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-009",
+      "track": "posttran",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            424,
+            442
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            562,
+            578
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        },
+        {
+          "lines": [
+            370,
+            421
+          ],
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+        }
+      ],
+      "boundaries": [
+        "TRANFILE write status 00 completes after prior effects",
+        "TRANFILE write non-00 abends after prior effects were attempted",
+        "duplicate DALYTRAN/TRAN id is not prevalidated before write"
+      ],
+      "details": {
+        "sourceExpected": {
+          "tranfileWriteAfterTcatbalAndAccountAttempted": true,
+          "duplicateIdPrevalidated": false
+        },
+        "observed": [
+          {
+            "id": "post-accepted-001",
+            "rawBytes": "504f535445442d4259544553",
+            "daily": {
+              "id": "TX1001",
+              "type": "01",
+              "category": "10",
+              "source": "POS",
+              "description": "Store purchase",
+              "amount": "25.75",
+              "merchant": "M123",
+              "card": "4111111111111111",
+              "origTs": "2026-09-01-09.30.00",
+              "procTs": "input-proc-should-not-copy"
+            },
+            "posted": {
+              "id": "TX1001",
+              "type": "01",
+              "category": "10",
+              "source": "POS",
+              "description": "Store purchase",
+              "amount": "26.75",
+              "merchant": "M123",
+              "card": "4111111111111111",
+              "origTs": "2026-09-01-09.30.00",
+              "procTs": "input-proc-should-not-copy"
+            },
+            "effectOrder": [
+              "validation",
+              "tranfile",
+              "account",
+              "tcatbal"
+            ],
+            "duplicatePrevalidated": true
+          }
+        ],
+        "failures": [
+          "transaction post-accepted-001 observed effect records missing; effectOrder flags are not accepted as COBOL write evidence",
+          "transaction post-accepted-001 provenance missing"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-001",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            28,
+            56
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            175,
+            186
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            22,
+            41
+          ],
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275"
+        }
+      ],
+      "boundaries": [
+        "required input/output files open before scan",
+        "PARM-DATE is available to transaction id construction",
+        "open failure abends before interest scan"
+      ],
+      "details": {
+        "sourceExpected": "PARM-DATE participa de TRAN-ID nas transações geradas.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-002",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            188,
+            222
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+        }
+      ],
+      "boundaries": [
+        "first TCATBAL record initializes first account group",
+        "account id change updates previous group and resets total",
+        "same account contiguous records stay in one group",
+        "same account reappearing later is a new group"
+      ],
+      "details": {
+        "sourceExpected": "Modelo depende de registros contíguos por conta; conta reaparecida depois vira novo grupo.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-003",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            200,
+            205
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            372,
+            413
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            4,
+            17
+          ],
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+        }
+      ],
+      "boundaries": [
+        "ACCOUNT lookup by TCATBAL account succeeds",
+        "ACCOUNT lookup failure abends",
+        "XREF alternate-key lookup succeeds and supplies card",
+        "XREF lookup failure abends"
+      ],
+      "details": {
+        "sourceExpected": "ACCOUNT fornece grupo/id; XREF fornece cartão para transação de juros.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            210,
+            217
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            415,
+            460
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            4,
+            10
+          ],
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+        }
+      ],
+      "boundaries": [
+        "specific group/type/category discount exists",
+        "specific missing and DEFAULT exists",
+        "both specific and DEFAULT missing abends"
+      ],
+      "details": {
+        "sourceExpected": "Usa taxa específica se existe; se ausente tenta DEFAULT; default ausente abende.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "track": "intcalc",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            213,
+            217
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            462,
+            470
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+        }
+      ],
+      "boundaries": [
+        "non-zero rate attempts monthly interest formula and write",
+        "zero rate returns to scan with no interest transaction",
+        "numeric amount value remains pending COBOL/PIC qualification"
+      ],
+      "details": {
+        "sourceExpected": {
+          "zeroRateWritesTransaction": false,
+          "formula": "(categoryBalance * annualRate) / 1200",
+          "monthlyInterestAmount": "12.50"
+        },
+        "observed": [
+          {
+            "id": "interest-zero",
+            "categoryBalance": "1500.00",
+            "annualRate": "0.00",
+            "transactionWritten": true
+          },
+          {
+            "id": "interest-nonzero",
+            "rawBytes": "494e5445524553542d4259544553",
+            "categoryBalance": "1500.00",
+            "annualRate": "10.00",
+            "amount": "12.49",
+            "transactionWritten": true,
+            "type": "99",
+            "category": "99",
+            "source": "User",
+            "description": "Interest ACCT100",
+            "merchant": "M123",
+            "card": "4222222222222222",
+            "xrefCard": "4111111111111111"
+          }
+        ],
+        "failures": [
+          "zero-rate item interest-zero provenance missing",
+          "zero-rate item interest-zero wrote interest transaction",
+          "nonzero-rate item interest-nonzero provenance missing",
+          "nonzero-rate item interest-nonzero amount 12.49 != 12.50"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-006",
+      "track": "intcalc",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            473,
+            515
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            4,
+            18
+          ],
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+        }
+      ],
+      "boundaries": [
+        "interest transaction fields are moved from PARM/account/xref/source constants",
+        "current timestamps are generated at runtime",
+        "literal/type/category physical representation stays pending review"
+      ],
+      "details": {
+        "sourceExpected": {
+          "type": "01",
+          "category": "05",
+          "source": "System",
+          "descriptionPrefix": "Int. for a/c",
+          "merchantZeroOrBlank": true,
+          "cardFromXref": true
+        },
+        "observed": [
+          {
+            "id": "interest-zero",
+            "categoryBalance": "1500.00",
+            "annualRate": "0.00",
+            "transactionWritten": true
+          },
+          {
+            "id": "interest-nonzero",
+            "rawBytes": "494e5445524553542d4259544553",
+            "categoryBalance": "1500.00",
+            "annualRate": "10.00",
+            "amount": "12.49",
+            "transactionWritten": true,
+            "type": "99",
+            "category": "99",
+            "source": "User",
+            "description": "Interest ACCT100",
+            "merchant": "M123",
+            "card": "4222222222222222",
+            "xrefCard": "4111111111111111"
+          }
+        ],
+        "failures": [
+          "interest transaction interest-zero provenance missing",
+          "interest type is not 01",
+          "interest category is not 05",
+          "interest source is not System",
+          "interest description prefix mismatch",
+          "interest merchant is not zero/blank",
+          "rawBytes missing",
+          "interest transaction interest-nonzero provenance missing",
+          "interest type is not 01",
+          "interest category is not 05",
+          "interest source is not System",
+          "interest description prefix mismatch",
+          "interest merchant is not zero/blank",
+          "interest card not supplied from XREF"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            194,
+            203
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            350,
+            370
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        }
+      ],
+      "boundaries": [
+        "group break after first group invokes account update",
+        "update adds accumulated interest and clears credit/debit",
+        "rewrite failure abends"
+      ],
+      "details": {
+        "sourceExpected": "Contas de grupos anteriores ao último são atualizadas na quebra.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-008",
+      "track": "intcalc",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            188,
+            222
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            325,
+            348
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        },
+        {
+          "lines": [
+            350,
+            370
+          ],
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+        }
+      ],
+      "boundaries": [
+        "EOF normal after empty input closes without loaded-account assumptions",
+        "EOF after last group reaches close path without final 1050 update"
+      ],
+      "details": {
+        "sourceExpected": "Pela fonte, o update final 1050 é inalcançável no EOF normal; última conta não recebe total nessa rotina.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-001",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            29,
+            57
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            19,
+            80
+          ],
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571"
+        },
+        {
+          "lines": [
+            18,
+            28
+          ],
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f"
+        }
+      ],
+      "boundaries": [
+        "effective TRANFILE input is sorted by card for report semantics",
+        "JCL/proc filter and COBOL DATEPARM are treated as separate documentary inputs",
+        "lookup/report files open before details"
+      ],
+      "details": {
+        "sourceExpected": "Modelo espera input ordenado por cartão para que quebras façam sentido.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-002",
+      "track": "tranrept",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            122,
+            125
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            219,
+            243
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            170,
+            178
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        }
+      ],
+      "boundaries": [
+        "record proc date text inside range reaches lookups/detail",
+        "record proc date text before/after range produces no detail/no accumulation",
+        "EOF receiver/date path is unknown unless observed by runtime"
+      ],
+      "details": {
+        "sourceExpected": {
+          "textualInclusiveRange": [
+            "2026-09-01",
+            "2026-09-30"
+          ],
+          "outsideRangeWritesDetail": false
+        },
+        "observed": [
+          {
+            "id": "report-before",
+            "procDate": "2026-08-31",
+            "amount": "7.00",
+            "detailWritten": true
+          },
+          {
+            "id": "report-start",
+            "procDate": "2026-09-01",
+            "amount": "10.00",
+            "detailWritten": false,
+            "detailLine": "TXR100 ACCT100 10.00",
+            "reportLineBytes": "44455441494c2d31"
+          },
+          {
+            "id": "report-inside",
+            "procDate": "2026-09-16",
+            "amount": "20.25",
+            "detailWritten": true,
+            "detailLine": "TXR101 ACCT100 20.25",
+            "reportLineBytes": ""
+          },
+          {
+            "id": "report-end",
+            "procDate": "2026-09-30",
+            "amount": "5.75",
+            "detailWritten": true,
+            "detailLine": "TXR102 ACCT100 5.75",
+            "reportLineBytes": "44455441494c2d33"
+          },
+          {
+            "id": "report-after",
+            "procDate": "2026-10-01",
+            "amount": "9.00",
+            "detailWritten": false
+          }
+        ],
+        "failures": [
+          "report transaction report-before provenance missing",
+          "record report-before detailWritten=True expected False",
+          "report transaction report-start provenance missing",
+          "record report-start detailWritten=False expected True",
+          "report transaction report-inside provenance missing",
+          "report transaction report-end provenance missing",
+          "report transaction report-after provenance missing"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-003",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            170,
+            206
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            248,
+            272
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        }
+      ],
+      "boundaries": [
+        "read status 00 keeps END=N and can process record",
+        "read status 10 sets END=Y then date test still gates total branch",
+        "read status other abends"
+      ],
+      "details": {
+        "sourceExpected": "Loop é limitado por registros status 00 + leitura EOF. O caminho EOF para totais é condicional ao teste textual anterior; arquivo vazio/receiver desconhecido deve ser modelado como unknown, não como total incondicional.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            181,
+            196
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            484,
+            512
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            4,
+            8
+          ],
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+        },
+        {
+          "lines": [
+            4,
+            7
+          ],
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667"
+        },
+        {
+          "lines": [
+            4,
+            9
+          ],
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8"
+        }
+      ],
+      "boundaries": [
+        "new card writes previous account total except first occurrence",
+        "XREF lookup missing abends",
+        "type/category lookup missing abends",
+        "successful lookups feed detail text"
+      ],
+      "details": {
+        "sourceExpected": "Detalhe usa account id e descrições dos arquivos de referência. Mudança de cartão materializa Account Total do cartão anterior.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-005",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            274,
+            290
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            324,
+            341
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            4,
+            49
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+        }
+      ],
+      "boundaries": [
+        "first detail writes report headers",
+        "line-counter modulus boundary writes page total and headers",
+        "page size is line-counter based, not 20 detail rows"
+      ],
+      "details": {
+        "sourceExpected": "Headers contêm DALYREPT, Daily Transaction Report, Date Range e colunas do copybook.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-006",
+      "track": "tranrept",
+      "status": "failed",
+      "sourceAnchors": [
+        {
+          "lines": [
+            287,
+            289
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            361,
+            374
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            15,
+            31
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+        }
+      ],
+      "boundaries": [
+        "each qualified transaction writes one detail line",
+        "amount accumulates into page and account totals",
+        "type/category/account descriptions come from lookups"
+      ],
+      "details": {
+        "sourceExpected": {
+          "detailLinePerQualifiedTransaction": true,
+          "accumulatesAmount": true,
+          "pageAndAccountTotalFromDetails": "33.00"
+        },
+        "observed": {
+          "records": [
+            {
+              "id": "report-before",
+              "procDate": "2026-08-31",
+              "amount": "7.00",
+              "detailWritten": true
+            },
+            {
+              "id": "report-inside",
+              "procDate": "2026-09-16",
+              "amount": "20.25",
+              "detailWritten": true,
+              "detailLine": "TXR101 ACCT100 20.25",
+              "reportLineBytes": ""
+            },
+            {
+              "id": "report-end",
+              "procDate": "2026-09-30",
+              "amount": "5.75",
+              "detailWritten": true,
+              "detailLine": "TXR102 ACCT100 5.75",
+              "reportLineBytes": "44455441494c2d33"
+            }
+          ],
+          "pageTotal": "1.00",
+          "accountTotal": "1.00"
+        },
+        "failures": [
+          "record report-before lacks detail line",
+          "reportLineBytes missing",
+          "report detail report-before provenance missing",
+          "reportLineBytes empty",
+          "report detail report-inside provenance missing",
+          "report detail report-end provenance missing",
+          "page total 1.00 != 33.00",
+          "account total 1.00 != 33.00"
+        ],
+        "semanticOutcome": "failed"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-007",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            197,
+            203
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            287,
+            322
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            50,
+            66
+          ],
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+        }
+      ],
+      "boundaries": [
+        "EOF branch reachable only after preceding date guard permits it",
+        "page total and grand total are written from current accumulated values",
+        "possible retained TRAN-AMT addition is conditional, not universal"
+      ],
+      "details": {
+        "sourceExpected": "Se o EOF alcançar este ramo, há risco sustentado de somar o TRAN-AMT corrente/retido antes dos totais finais; isso é condicional, não universal.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-008",
+      "track": "tranrept",
+      "status": "pending",
+      "sourceAnchors": [
+        {
+          "lines": [
+            181,
+            184
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            197,
+            203
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        },
+        {
+          "lines": [
+            306,
+            316
+          ],
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+        }
+      ],
+      "boundaries": [
+        "single-card interval has no final account total call at EOF",
+        "last card total appears only if a later card break occurred",
+        "absence of final account total does not imply page/grand totals always occur"
+      ],
+      "details": {
+        "sourceExpected": "Não há chamada final sustentada de Account Total para o último cartão no EOF. Um único cartão em intervalo não tem total de conta final pela fonte.",
+        "observed": null,
+        "pendingReason": "checker_not_implemented_in_v1_representative_slice"
+      }
+    }
+  ]
+}

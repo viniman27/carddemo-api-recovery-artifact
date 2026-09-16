@@ -1,0 +1,243 @@
+{
+  "kind": "all-arm-operationalization-intake-not-comparison",
+  "createdUtc": "2026-09-15T11:10:33.142496+00:00",
+  "contracts": [
+    {
+      "contractId": "E1-1",
+      "source": "collection-01/E1-1/response-original.txt",
+      "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+      "bytes": 30136,
+      "operations": [
+        {
+          "path": "/posting-runs",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-runs",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-report-runs",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-zero-shot"
+    },
+    {
+      "contractId": "E1-2",
+      "source": "collection-01/E1-2/response-original.txt",
+      "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+      "bytes": 31102,
+      "operations": [
+        {
+          "path": "/transaction-postings",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-transactions",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-reports",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-zero-shot"
+    },
+    {
+      "contractId": "E1-3",
+      "source": "collection-01/E1-3/response-original.txt",
+      "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+      "bytes": 30113,
+      "operations": [
+        {
+          "path": "/transaction-postings",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-transaction-generations",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-reports",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-zero-shot"
+    },
+    {
+      "contractId": "E2-1",
+      "source": "collection-01/E2-1/response-original.txt",
+      "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+      "bytes": 28899,
+      "operations": [
+        {
+          "path": "/transaction-postings",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-transaction-generations",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-reports",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-few-shot"
+    },
+    {
+      "contractId": "E2-2",
+      "source": "collection-01/E2-2/response-original.txt",
+      "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+      "bytes": 29973,
+      "operations": [
+        {
+          "path": "/transaction-posting-runs",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-generation-runs",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-report-runs",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-few-shot"
+    },
+    {
+      "contractId": "E2-3",
+      "source": "collection-01/E2-3/response-original.txt",
+      "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+      "bytes": 25822,
+      "operations": [
+        {
+          "path": "/transaction-posting-runs",
+          "method": "post",
+          "operationId": "postDailyTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/interest-generation-runs",
+          "method": "post",
+          "operationId": "generateInterestTransactions",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "path": "/transaction-report-runs",
+          "method": "post",
+          "operationId": "generateTransactionReport",
+          "documentedResponses": [
+            "200",
+            "400",
+            "500"
+          ]
+        }
+      ],
+      "runtimeImplementationStatus": "in_progress_not_verified",
+      "workDirectory": "P2c-few-shot"
+    }
+  ],
+  "contractCount": 6,
+  "operationCount": 18,
+  "reason": "Continue originally authorized API implementation; no new extraction or official testing",
+  "sddChangePolicy": "no changes from E1/E2 inspection",
+  "officialCampaignsStarted": false,
+  "delegationId": "aux-32618365"
+}

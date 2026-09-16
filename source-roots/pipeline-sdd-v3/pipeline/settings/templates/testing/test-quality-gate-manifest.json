@@ -1,0 +1,105 @@
+{
+  "run_id": "",
+  "capability": "",
+  "stage9_api_ready_for_testing": false,
+  "stage9_handoff_evidence": {
+    "path": "",
+    "api_ready_for_testing": false,
+    "campaign_ready": false
+  },
+  "prospective_freeze": {
+    "frozen_before_execution": false,
+    "freeze_id": "",
+    "frozen_at": ""
+  },
+  "descriptive_post_observation_supplementation": {
+    "used": false,
+    "separate_from_freeze": true,
+    "notes_path": ""
+  },
+  "coverage": {
+    "denominator": {
+      "known": false,
+      "count": 0,
+      "source": ""
+    },
+    "counts": {
+      "executed": 0,
+      "not_executed": 0,
+      "inconclusive": 0,
+      "not_applicable": 0
+    },
+    "not_executed_items": [],
+    "inconclusive_items": [],
+    "gap_items": [],
+    "target_policy": "fixed inventory; no percent target chosen after seeing results"
+  },
+  "fixtures": {
+    "per_case_reset": false,
+    "reset_evidence": "",
+    "resource_snapshot_compared": false
+  },
+  "oracles": [
+    {
+      "id": "O-contract",
+      "question": "contract/schema conformance",
+      "kind": "contract_schema",
+      "authority_source": {
+        "type": "approved_contract",
+        "path": ""
+      },
+      "independent_from_llm_outputs": true,
+      "wrong_output_counterexamples": []
+    },
+    {
+      "id": "O-business",
+      "question": "business/semantic obligation",
+      "kind": "business_semantic",
+      "authority_source": {
+        "type": "source_evidence",
+        "path": ""
+      },
+      "independent_from_llm_outputs": true,
+      "wrong_output_counterexamples": []
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "T1",
+      "role": "generator",
+      "bad_outputs_preserved_in_results": false
+    },
+    {
+      "id": "T2",
+      "role": "openapi_fuzz",
+      "mode": "pure_openapi",
+      "domain_fuzz_separate": false
+    },
+    {
+      "id": "T3",
+      "role": "model_based",
+      "guards_bound_to_checker": false,
+      "transitions_bound_to_checker": false
+    },
+    {
+      "id": "T4",
+      "role": "union",
+      "no_new_cases": false,
+      "fresh_reset_per_case": false,
+      "not_counted_as_independent_replica": false
+    }
+  ],
+  "mutations": {
+    "used": false,
+    "scope": "test_checker_only",
+    "source_artifacts_altered": false
+  },
+  "traceability": {
+    "checks_to_obligations": {},
+    "gaps_separate": false
+  },
+  "human_review": {
+    "required": true,
+    "approval_claimed_by_tool": false
+  }
+}

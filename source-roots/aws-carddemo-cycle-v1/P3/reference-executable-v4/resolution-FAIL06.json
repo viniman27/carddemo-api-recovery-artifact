@@ -1,0 +1,51 @@
+{
+  "fail06_material_resolution": {
+    "explicit_budget_frontier_omitted_unknown": true,
+    "manual_guard_interpreter_no_python_eval": true,
+    "positive_negative_tests": true,
+    "review_mutation_tests": [
+      "POSTTRAN-T020 rejects abend-before-write mutation",
+      "TRANREPT-T009 rejects detail/accrual for out-of-range mutation",
+      "INTCALC-T006 rejects EOF final-account-update mutation"
+    ],
+    "source_pin_line_interval_validation": true,
+    "step_and_bfs_traverse": true,
+    "structured_effects_and_observable_attempts": true,
+    "structured_guards": true,
+    "typed_finite_partitioned_domains": true,
+    "unknown_eof_explicit_not_boolean": true
+  },
+  "files": [
+    "model.json",
+    "executable_reference.py",
+    "tests/test_engine_contract.py",
+    "mechanical-validation-report.json",
+    "exposure-manifest.json",
+    "README.md",
+    "resolution-FAIL06.json"
+  ],
+  "not_claimed": [
+    "independent PASS",
+    "human review",
+    "official fixture/campaign readiness",
+    "full semantic equivalence proof",
+    "COBOL execution"
+  ],
+  "real_results": {
+    "counts": {
+      "capabilities": 3,
+      "obligations": 25,
+      "states": 25,
+      "transitions": 39
+    },
+    "sourcePins": {
+      "checkedAnchors": 94,
+      "checkedFiles": 8,
+      "errors": []
+    },
+    "unit_tests": "11 tests OK",
+    "validator_errors": [],
+    "validator_exit_code": 0
+  },
+  "status": "executable_draft_needs_review"
+}

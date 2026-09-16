@@ -1,0 +1,149 @@
+{
+  "kind": "current-local-technical-pretest-state-not-approval",
+  "createdUtc": "2026-09-15T09:57:47.289955+00:00",
+  "stage": "implementacao_das_APIs_e_preparacao_dos_testes",
+  "externalFixtureBytesIntegrationVerified": true,
+  "allPretestWorkComplete": false,
+  "officialCampaignsStarted": false,
+  "humanApprovalRecorded": false,
+  "unitQa": {
+    "bindingTests": 21,
+    "configTests": 5
+  },
+  "realHttpTracks": [
+    {
+      "track": "interest",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/interest-qjs2s9xt/audit.json",
+      "auditSha256": "07b721b9c174fc648278a19064a4403bb4664f6ce48ffa662f5a2cab1d4bd695",
+      "status": 200,
+      "reachedCobol": true,
+      "exitCode": 0,
+      "resourceCount": 5,
+      "preSnapshotCount": 5,
+      "hashesVerified": true
+    },
+    {
+      "track": "posting",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/posting-yg7swiws/audit.json",
+      "auditSha256": "63aa12ceef23840a46547f55eef395d3ab031669f4e7cc7c747bbbbac5a67e5a",
+      "status": 200,
+      "reachedCobol": true,
+      "exitCode": 0,
+      "resourceCount": 5,
+      "preSnapshotCount": 5,
+      "hashesVerified": true
+    },
+    {
+      "track": "reporting",
+      "audit": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-apqncj25/audit.json",
+      "auditSha256": "df3bee784d928c6d1c7b51c5696104fb92f2023d105fca20a73d32cc35d94117",
+      "status": 200,
+      "reachedCobol": true,
+      "exitCode": 0,
+      "resourceCount": 5,
+      "preSnapshotCount": 5,
+      "hashesVerified": true
+    }
+  ],
+  "schemaValidator": "jsonschema",
+  "schemaOverallPassed": true,
+  "protectedDocumentaryPins": [
+    {
+      "path": "PROTOCOLO.md",
+      "sha256": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7",
+      "matchesHistoricalPin": true
+    },
+    {
+      "path": "P2a/plan-binding.md",
+      "sha256": "207e18186aa173d2ef8ed8314b93a08b69886b89edb5b45d7af46bf0a7639ada",
+      "matchesHistoricalPin": true
+    },
+    {
+      "path": "sdd-runs/E3-01/reviews/stage-7-r2-authorization.json",
+      "sha256": "3e3315cfb4ae05e65f9627ae3147343259d93eabf31931c3177a105c1615cb60",
+      "matchesHistoricalPin": true
+    },
+    {
+      "path": "sdd-runs/E3-01/reviews/stage-8-authorization.json",
+      "sha256": "03a84be0f630818b24b68aeeff81255c7a08350eb119dcc684d421382afa4604",
+      "matchesHistoricalPin": true
+    },
+    {
+      "path": "sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md",
+      "sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+      "matchesHistoricalPin": true
+    },
+    {
+      "path": "sdd-runs/E3-01/specs/semantic-validation-carddemo/requirements.md",
+      "sha256": "de4f1781459f3bbf8c472add1166826dc9dbb6229a19b67e7ecdb85a56b2d4b6",
+      "matchesHistoricalPin": true
+    }
+  ],
+  "staticScanMatches": [],
+  "runtimeMutationQa": "P3/external-runtime-qa-gxywku5z/results.json",
+  "resetQa": "P3/reset-bytes-qa-il2s3sfd/report.json",
+  "technicalBlockers": [
+    "posting progress/rejections capture and occurrence order evidence",
+    "known failure event precedence versus unavailable capture",
+    "external parameterization of local interest wrapper"
+  ],
+  "humanDecisionProposal": "P3/PROPOSTA-EXPERIMENTAL-PARA-ACEITE.md",
+  "artifacts": [
+    {
+      "path": "P2b/p2b_binding.py",
+      "sha256": "0b8fd3778afa366f2ab1de8afae9260c09067a5590bfc9f837e5ca7d44a7f1b8"
+    },
+    {
+      "path": "P2b/validate_p2b.py",
+      "sha256": "ca3f57abb6735eef3aa33d85aa8ce07bb311e5e0e6cc06ca71a35f255845a41b"
+    },
+    {
+      "path": "P2b/tests/test_p2b_contract.py",
+      "sha256": "5b587851907d0c1e16af4ecc4ef8bb0aee82ba9eed6900321e33a60802dcba0b"
+    },
+    {
+      "path": "P2b/tests/test_external_bytes.py",
+      "sha256": "3d96d5d8f7a2806840d5566433bd9223a5d548d2fdcf1455aad6d390a518bd94"
+    },
+    {
+      "path": "P2b/tests/test_schema_dependency.py",
+      "sha256": "8a2dd3bd21c6929852eebd47befb199ee72e1ec421454ed76fcea909ba718277"
+    },
+    {
+      "path": "P3/pretest_config.py",
+      "sha256": "836b5770942ffb62ba2163087c2397adcf7f71fbadbe191bdd1ea6024cb595c5"
+    },
+    {
+      "path": "P3/prepare_technical_packages.py",
+      "sha256": "f56ac1c2da9a6ef22be061afdef99b754a240241460f0c3fc3833f6b14bb99a4"
+    },
+    {
+      "path": "P3/qa_external_runtime.py",
+      "sha256": "89e158507af79cce762b38bec3352aa1448e6c48d1d68acf3ca9b70c698e2575"
+    },
+    {
+      "path": "P3/qa_reset_packages.py",
+      "sha256": "b6731d0dbb112fe6ccbc2b45ddf4306589e9c65330439b7f78aa42c90dbffe88"
+    },
+    {
+      "path": "P3/technical-packages-v2-complete/registry.json",
+      "sha256": "ad71a4b12716b3a5523d6f17e07b8f28d0181314198e8881ac29340d25c5a895"
+    },
+    {
+      "path": "P2b/readiness-manifest.json",
+      "sha256": "c30f4f8bf0af7b043c4e02aa1b1b52ebcecb49410aa6ae401e9c28a577f8e3ad"
+    },
+    {
+      "path": "P2b/schema-validation-report.json",
+      "sha256": "e6613a34fa7098d03716923153c6d9be7c0fbe2b76c7c038cbc8efdae5104ee0"
+    },
+    {
+      "path": "P3/FIXTURE-INTEGRATION-V2.md",
+      "sha256": "05bcd0c2505e2401c5206a28280a0851968a06fc26ce212a3bb2a3d1571268a3"
+    },
+    {
+      "path": "P3/PROPOSTA-EXPERIMENTAL-PARA-ACEITE.md",
+      "sha256": "399c7bb81342e4fb92540214ec463ca2a3449439f9ca744c1a13054da2698876"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "minimal_call_passed_not_extraction_ready",
+  "provider_requested": "openai-codex",
+  "model_requested": "gpt-6-astra",
+  "model_recorded_in_session": "gpt-6-astra",
+  "session_id": "20260911_072803_f678c1",
+  "access_selected": "subscription",
+  "prompt": "Reply with exactly TRANSPORT_OK. Do not use tools.",
+  "response": "TRANSPORT_OK",
+  "exit_code": 0,
+  "input_tokens_recorded": 659,
+  "output_tokens_recorded": 7,
+  "flags": [
+    "--safe-mode",
+    "--oneshot",
+    "--toolsets none",
+    "--max-turns 1",
+    "--run-budget 60"
+  ],
+  "warnings": [
+    "Unknown toolsets: none",
+    "Previous local runtime update did not restart running gateways"
+  ],
+  "limits": [
+    "No private research corpus supplied",
+    "Toolset none is not recognized; do not reuse this flag as a proven isolation mechanism",
+    "No experimental token/context limits or temperature/seed support established",
+    "No quota remaining or per-call monetary price established",
+    "No extraction executed; no global configuration changed"
+  ],
+  "documentation": "https://codex-transport.nousresearch.com/docs/integrations/providers",
+  "documentation_access": "curl succeeded after web_extract gateway unavailable"
+}

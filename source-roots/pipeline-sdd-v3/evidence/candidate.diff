@@ -1,0 +1,1480 @@
+--- baseline/README.md
++++ pipeline/README.md
+@@ -1,54 +1,13 @@
+-# .sdd-v2 — Improved SDD Workspace
++# SDD pipeline v3 — review candidate
+ 
+-Evolution of `.sdd/` for the master's research pipeline on COBOL legacy modernization. Everything from v1 is preserved; v2 only adds, completes, and codifies.
++This framework derives eight separate artifacts from legacy evidence. It is not an automatic experiment runner, an approved study protocol, or a set of answers for CardDemo.
+ 
+-## What changed from `.sdd/`
++Read `steering/` and `settings/rules/README.md`. Generic optional `settings/templates/steering-custom/` integrations are NOT active in this revision: do not run their Jira/Azure/cross-repo instructions or copy their `.sdd/` destinations. Enabling one requires a separate scoped review. Only stage templates and the rules index form the default workflow. Instantiate templates from `settings/templates/pipeline/` in a separate run directory. Resolve `FRAMEWORK_ROOT`, `RUN_ROOT` and `CORPUS_ROOT` explicitly; never infer `.sdd/` or an old account-balance directory.
+ 
+-### Fixed
+-- `settings/rules/steering-principles.md` — was truncated mid-example in v1; completed (good/bad example pair, steering-vs-specs table, maintenance discipline, security notes, desired outcome).
++New runs use this order: scope → capability selection → legacy evidence → capability semantics → canonical boundary → API contract → adapter behavior → validation plan/report. Human approval is required between stages and before validation execution. No script grants it.
+ 
+-### Codified (existing practice turned into reusable assets)
+-- `settings/templates/pipeline/` — **new**: templates for the eight taxonomy artifacts plus the validation report. They codify the anatomy that stabilized in the account-balance run (Purpose → Integrity Discipline → Upstream Authority & Entry Condition → numbered body → Ambiguity handling → Completeness Gate → next-stage entry condition). In v1 this pattern existed only implicitly inside the finished specs.
+-- `steering/pipeline.md` — **new**: consolidated stage map, canonical artifact anatomy, gate discipline, identifier scheme, and stage-boundary lessons from the proof of concept.
+-- `steering/glossary.md` — **new**: canonical project vocabulary (capability, evidence anchor, canonical type, oracle, divergence, …) for artifact and research study consistency.
++The current public application target is AWS CardDemo; this is NOT the later research study Phase 2 corpus. The framework itself remains case-neutral. Run-specific facts, prepared results and expected answers do not belong here.
+ 
+-### Added (gaps in the v1 rule set)
+-- `settings/rules/traceability.md` — identifier conventions (`E/A/R/D/G/V/DIV-n`), evidence-anchor format (`file:line-range`), upstream-authority sections, traceability matrices, and what counts as broken traceability.
+-- `settings/rules/ambiguity-management.md` — full ambiguity lifecycle (open → disposed/resolved/accepted), registration requirements, propagation rules, blocking assessment.
+-- `settings/rules/validation-principles.md` — plan-before-report separation, scenario derivation discipline, oracle hierarchy, divergence registry, conformance-claim limits, coverage honesty.
+-- `settings/rules/ai-assistance.md` — stage-by-stage AI role boundaries, hallucination guards, mandatory human checkpoints, provenance for research study reproducibility.
+-- `settings/rules/README.md` — index mapping every rule to pipeline stages, with precedence order.
+-- `settings/templates/steering-custom/cobol-analysis.md` — COBOL-specific evidence-extraction heuristics (reading order, PIC/88-level/REDEFINES guidance, interpretation traps, institutional-scale extensions).
++Changes and provenance are documented in `../MELHORIAS.md`, `../CHANGELOG.md` and `../provenance.json`. The untouched v2 framework is under `../baseline/`.
+ 
+-### Extended
+-- `settings/templates/specs/init.json` — adds `artifact_type`, `pipeline_stage`, `capability`, `upstream_specs`, and a `gate` block (`completeness_gate_passed`, `gate_review_date`, `blocking_gaps`) to the v1 fields. Applies to new specs; existing spec.json files were not modified.
+-
+-### Preserved unchanged
+-- `steering/product.md`, `steering/tech.md`, `steering/structure.md`
+-- the nine v1 rules (only `steering-principles.md` was completed)
+-- all v1 templates (`specs/`, `steering/`, `steering-custom/`)
+-- the eight account-balance spec directories (research outputs — see `specs/README.md`)
+-
+-## Revision after advisor meeting (2026-06-12)
+-
+-Based on the recorded advisor discussion ("Apresentação Api"), the following research positions were incorporated:
+-
+-1. **Claim vocabulary softened** — no "verified"/"verifiable", "semantic preservation", or "equivalence" in claims; the project operates at test-based behavioral confidence. → `rules/validation-principles.md` (new "Claim vocabulary discipline"), `steering/glossary.md` ("Behavioral confidence"), validation templates.
+-2. **Optimal decomposition is an explicit non-goal** — the pipeline exposes functionalities to support migration; decomposition quality is another research line. → `steering/product.md` (new "Explicit Non-Goals").
+-3. **Legacy source is read-only** — wrapper-first adaptation (Node-to-COBOL binding in the PoC); defects are registered and reported, never silently fixed (PoC PR is an explicit exception; institutional: signal only). → new `rules/legacy-code-policy.md`, `steering/tech.md` ("Legacy Immutability Position"), adapter/validation templates.
+-4. **Rule reconstruction = documentation, optional in force** — documented rules serve boundary/contract/test derivation; the legacy core remains the runtime enforcer. → `steering/pipeline.md` (stage-boundary lessons), `capability-semantics-spec` template.
+-5. **Test suite as central, transferable artifact** — reusable against a future reimplementation behind the same API; candidate expansions: property-based testing, API fuzzing, manual tests. → `rules/validation-principles.md`, `steering/tech.md`, `semantic-validation-spec` template (new optional "Exploratory Expansion").
+-6. **OpenAPI as preferred contract format.** → `steering/tech.md`, `api-contract-spec` template.
+-7. **Cost observability (tokens per stage)** for future runs. → `steering/tech.md`, `rules/ai-assistance.md`.
+-8. **Institutional phase expectations** — multiple capabilities, domain-specialist evaluation, inter-rater agreement, cost measurement, selective automation. → `steering/product.md` (use case 2).
+-
+-## Research questions and RESTler (2026-07-08)
+-
+-Follow-up on the advisor feedback:
+-
+-- **Research questions authored** — new `steering/research-questions.md` holds the overarching RQ0 plus eight pipeline-aligned RQs (evidence fidelity, semantic-drift control, contract-first strategy, test/fuzzing confidence, human-in-the-loop value, legacy-defect policy, cost, transferability), each tied to a stage, marked as a qualitative study, with a provisional priority ranking to be re-ranked by institutional-specialist feedback. `steering/product.md` points to it.
+-- **RESTler adopted as preferred fuzzer** — `github.com/microsoft/restler-fuzzer` is the Microsoft stateful REST API fuzzer the advisor referenced. It consumes the stage-6 OpenAPI contract directly, which reinforces the OpenAPI decision. Wired into `steering/tech.md` (test mechanisms), `rules/validation-principles.md` (exploratory expansion), and the `semantic-validation-spec` template (Section 6). It is a stage-8 exploratory mechanism; latent legacy defects it surfaces route to `legacy-code-policy.md`.
+-
+-## Adoption
+-
+-To adopt v2 as the active workspace, either point the SDD tooling at `.sdd-v2/` or, after review, replace `.sdd/` with this directory (keeping the old one as backup). `WORKSPACE-NOTES.md` references to `.sdd/` paths would need the corresponding update.
++Mechanical evidence checking: see `tools/README.md`. Passing source-anchor checks establishes location/integrity only, not truth of a claim or readiness of the next stage.
+--- baseline/settings/rules/README.md
++++ pipeline/settings/rules/README.md
+@@ -20,6 +20,7 @@
+ | `validation-principles.md` | Scenario derivation, oracles, divergences, claim vocabulary, conformance limits | 8 |
+ | `legacy-code-policy.md` | Legacy source is read-only; wrapper-first; defect reporting policy | 3, 7, 8 |
+ | `ai-assistance.md` | Role boundaries, hallucination guards, provenance for reproducibility | all |
++| `run-integrity.md` | Authorized inputs, state propagation, batch failures, oracle purpose and revision control | all |
+ 
+ ## Stage numbering
+ 
+@@ -38,7 +39,7 @@
+ 
+ When rules appear to conflict, resolve in this order:
+ 
+-1. research logic recorded in `steering/`
++1. research logic recorded in `steering/`, with cross-stage input/state discipline in `run-integrity.md`
+ 2. stage discipline (`design-principles.md`, `gap-analysis.md`, `design-review.md`)
+ 3. artifact-local guidance in templates
+ 4. framework defaults
+--- baseline/settings/rules/ai-assistance.md
++++ pipeline/settings/rules/ai-assistance.md
+@@ -29,7 +29,7 @@
+ 
+ The known failure modes of LLM-based extraction must be actively guarded against:
+ 
+-- **Plausible invention**: fluent claims about legacy behavior with no anchor. Guard: every extracted claim requires an evidence anchor or an explicit inference label. Phase 1 gives this guard its only empirical support so far: an unscaffolded baseline asserted that a fill loop leaves a byte unwritten — false, falsified by recompiling the unmodified subprogram — and built three contract elements on the invented defect, while the pipeline produced no fabrication across three cases. Three runs per arm makes this an indication rather than a measurement, but it is the failure mode most worth instrumenting, and the anchoring requirement is the plausible mechanism.
++- **Plausible invention**: fluent claims about legacy behavior with no anchor. Guard: every extracted claim requires an evidence anchor or an explicit inference label. Existence of the anchor is checked mechanically; whether it supports the claim is reviewed substantively. Historical observations remain in the preserved baseline, not as evidence for this run.
+ - **Premature closure**: resolving ambiguity by picking the most common interpretation. Guard: ambiguities are recorded (`A-n`), not resolved by fluency.
+ - **Domain-pattern bleed-through**: importing "how accounting systems usually work" into a system that works differently. Guard: review must ask "is this in the COBOL, or in the training data?"
+ - **Compression drift**: meaning subtly changing across restatements. Guard: downstream restatements must be checked against upstream identifiers, not against memory of them.
+@@ -66,7 +66,9 @@
+ 
+ **Record the run count.** A generative model produces different artifacts across runs from identical input. A pipeline executed once per capability yields a sample of size one from the distribution of possible outputs, and no statement about variance is available. Where repetitions are affordable, run them; where they are not, say plainly that variance was not measured rather than letting single-run artifacts read as stable output.
+ 
+-This does not require archiving raw transcripts, but the degree of human intervention per stage is a research observation and must not be lost.
++For new runs preserve raw prompts/responses and attempts locally, or record an explicit retention restriction before execution. Hash the exact input/output versions; record requested/reported model and missing provider usage as unavailable. Do not retrospectively invent telemetry. Human intervention and review authorization are separate records.
++
++Input exposure follows `run-integrity.md`: raw evaluation outputs, prepared answers and historical specs are not extraction inputs by default. A previously exposed conversation is not a clean experimental executor.
+ 
+ Record provenance in the spec's `research.md` or in a dedicated section of the artifact, whichever the stage's template indicates.
+ 
+--- baseline/settings/rules/run-integrity.md
++++ pipeline/settings/rules/run-integrity.md
+@@ -0,0 +1,37 @@
++# Run integrity and observable state
++
++## 1. Input boundary before extraction
++
++At stage 1 record each input's relative path, SHA-256, role, allowed stages and reason: original source/dependency; original operational documentation; support; reference implementation; evaluation data/results. Only approved entries enter that stage's context. Record encoding without changing source bytes. The full upstream inventory and the selected input allowlist are different artifacts.
++
++Support, synthetic fixtures, expected outcomes, prior specs/APIs and preparation reports are excluded from extraction by default. An approved exception is an exposure, not independent discovery. Record who already saw evaluation material, including an executor's conversation context; start a clean execution context when required by the protocol. A manifest does not erase prior exposure.
++
++Scope documents identify known candidate boundaries; final capability selection belongs to stage 2. Do not claim that a candidate boundary was selected through the pipeline before that stage occurred.
++
++## 2. State across stages
++
++Stage 3 records anchored accesses/effects. Stage 4 explains their business meaning and dependencies. Stage 5 decides canonical state identity, initial authority, lifetime, reset and isolation. Stage 6 explicitly maps each requirement to the contract or declares it external/unsupported. Stage 7 specifies how it is supplied without changing business rules. Stage 8 names each scenario's setup and the means of observing it.
++
++Use one row per logical resource; a single label 'stateful' is insufficient for multiple files or processes. For batch capabilities record sequence prerequisites, record ordering, end-of-input behavior, intermediate outputs and restart boundaries when relevant. An unknown property stays an ambiguity; N/A needs a reason.
++
++## 3. Failures and repetition
++
++Distinguish business rejection, validation rejection, unavailable dependency, process failure, timeout and partial persistence. State which effects may precede failure and how they are observed. Do not infer atomicity from a non-success response, or from a process being stopped.
++
++State whether repetition is known safe, unsafe or unknown, and on which evidence. No automatic retry, rollback, compensation or idempotency key merely for API convenience. A deliberate contract divergence requires upstream decision/review and cannot be implemented silently in the wrapper.
++
++## 4. Validation authority is question-specific
++
++A reviewed contract is the reference for surface conformance. An observed legacy execution characterizes the legacy under its environment. Reviewed business obligations define the intended continuity question, grounded in evidence and explicit decisions. None is universally 'strongest'. When they conflict, register the conflict and scope the conclusion rather than picking an oracle to get a pass.
++
++Record separately: tool origin, data seen, origin of expected outcomes, and what the check can establish. A third-party fuzzer consuming a generated OpenAPI may detect schema/HTTP failures but cannot independently establish whether that OpenAPI correctly describes COBOL. Different provenance alone does not establish a correct or independent oracle.
++
++Conformance and characterization remain distinct. Report request acceptance, COBOL reachability, observed effects, oracle verdict and tool/infrastructure failures separately. Missing observations are inconclusive, not passing. Coverage of generated C arcs, COBOL-mapped lines, contract operations, model transitions and business obligations are distinct measures; declare denominator and mapping. Coverage never proves functional continuity.
++
++## 5. Revision and review
++
++Each gate review records exact artifact version/hash, upstream versions, reviewer, decision, unresolved gaps and actual authorization. A mechanical pass only removes a mechanical blocker. It neither sets human approval nor authorizes execution.
++
++If an upstream version changes, suspend dependent approvals pending review; preserve prior drafts and the change reason. Freeze the validation plan before official execution. Later exploration may form a separately identified amended plan, never retroactively repair the original result.
++
++Mechanical source-anchor checks use full relative paths and a frozen manifest. They check membership, integrity and line range, not truth or completeness. Execution anchors instead need run/log identity and environment; do not force them into a fabricated source-line anchor.
+--- baseline/settings/rules/traceability.md
++++ pipeline/settings/rules/traceability.md
+@@ -49,6 +49,8 @@
+ 
+ ### Mechanical anchor verification
+ 
++For new runs use full corpus-relative paths and hashes, not basename resolution. `tools/check_anchors.py` checks a structured source-anchor register against an explicit manifest. The register links each entry to its authoritative evidence-spec section; reconcile all E-n items during human review. It does not parse Markdown or certify that no claim was omitted. Execution evidence uses run/log anchors and is reviewed separately. See `tools/README.md` (paths relative to FRAMEWORK_ROOT).
++
+ Anchor resolution is the one completeness condition in this framework that does not require human judgement, and it should therefore be checked by script rather than by reading. A verifier walks every `E-n` in a stage-3 artifact and confirms that the file exists in the frozen source, that the line range is within bounds, and that the anchor is present and well-formed. A failure fails the gate.
+ 
+ Two boundaries keep the check honest:
+@@ -92,7 +94,7 @@
+ 
+ ## Research-specific interpretation
+ 
+-In the research study, the traceability chain is itself a result: it demonstrates that the pipeline preserves meaning across transformations.
++The traceability chain supports auditability of transformations. Existing anchors do not establish correct meaning, completeness or functional continuity. Those require substantive review and appropriate validation.
+ 
+ Therefore:
+ - traceability records are first-class research artifacts
+--- baseline/settings/rules/validation-principles.md
++++ pipeline/settings/rules/validation-principles.md
+@@ -59,10 +59,12 @@
+ 
+ Each scenario must state what plays the role of oracle, chosen from:
+ 
+-- observed legacy execution (strongest)
++- observed legacy execution (for characterization in the declared environment, not a universal strongest oracle)
+ - documented legacy evidence with anchors
+ - the reviewed API contract (for surface-level conformance)
+ - the reviewed capability semantics (for rule-level conformance)
++
++Choose authority by the question: contract for surface conformance, observed legacy for characterization, reviewed observable obligations for intended functional continuity. Conflicts are registered, not settled by a universal ranking. Tool provenance and expected-outcome provenance are reported separately.
+ 
+ The Node.js reference layer may support execution and comparison, but it is never the semantic authority.
+ When the only available oracle is the reference layer, the scenario must be labeled accordingly and its evidential weight downgraded.
+@@ -100,7 +102,7 @@
+ - The suite must be executable against any implementation exposed through the same API contract, so a future reimplementation (e.g., in Java) can be checked against the same behavioral expectations.
+ - Scenarios should therefore be phrased against the contract surface, not against adapter internals.
+ - **Transferability is a claim to be tested, not a property obtained by intent.** Phase 1 pointed a derived suite at a second implementation and found it discriminated the injected divergence with no false positives — and also that three of eight scenarios failed for a reason unrelated to behavior: the suite required a state reset that the contract did not expose and that the legacy adapter had supplied implicitly by restarting a process. Phrasing scenarios against the contract is necessary and not sufficient; the suite must also not depend on capabilities the contract omits (see "Same-provenance instruments").
+-- Expansion mechanisms may strengthen the suite beyond designed scenarios: property-based testing for large input masses, stateful API fuzzing to explore the surface (and potentially expose long-standing legacy defects), and selectively designed manual tests. The preferred fuzzer is **RESTler**, which consumes the stage-6 OpenAPI contract directly and explores stateful request sequences (see `steering/tech.md`). Results from exploratory mechanisms are labeled exploratory until scenarios are formalized with upstream anchors; fuzzing findings on the legacy behavior itself are routed to the defect-reporting policy (`legacy-code-policy.md`).
++- Expansion mechanisms may strengthen the suite beyond designed scenarios: property-based testing for large input masses, stateful API fuzzing to explore the surface (and potentially expose long-standing legacy defects), and selectively designed manual tests. Select and justify the fuzzer per run, recording actual supported stateful behavior; no framework default establishes compatibility (see `steering/tech.md`). Results from exploratory mechanisms are labeled exploratory until scenarios are formalized with upstream anchors; fuzzing findings on the legacy behavior itself are routed to the defect-reporting policy (`legacy-code-policy.md`).
+ - Exploring the limits of what test suites can and cannot establish is part of the research contribution of stages 7–8.
+ 
+ ## Same-provenance instruments
+@@ -113,7 +115,7 @@
+ 
+ - state the provenance of every instrument in the validation report
+ - report same-provenance results as **conformance regression**, useful and worth having, and never as attestation
+-- an independent attestation requires an instrument of distinct provenance — an external validator, a third-party fuzzer consuming the contract, or an implementation written by someone without access to the pipeline artifacts
++- distinct tool provenance is not sufficient for independent fidelity evidence. A third-party fuzzer consuming the generated contract checks that surface; it does not know whether the contract describes the legacy correctly. Declare the origin of expected outcomes, data exposure and the precise claim supported (see `run-integrity.md`).
+ 
+ The corollary matters more than the caveat: **a defect that only manifests under a change of provenance is undetectable by any amount of artifact review.** Every artifact can be internally coherent and mutually consistent while the suite silently depends on something the contract never declared, because the dependency is satisfied by accident as long as the backend is the one the pipeline was built against. This is why §5.1 of the validation plan exists, and why listing undeclared harness dependencies is a gate condition rather than good practice.
+ 
+@@ -175,7 +177,7 @@
+ 
+ In the research study, validation results carry the burden of the project's central argument.
+ 
+-That argument was revised by phase 1 and the revision must not be quietly undone. It was *not* established that the specification-driven pipeline achieves higher semantic fidelity than a direct code→contract jump: a pre-registered baseline scored 14 of 15 rubric items against the pipeline's 15, or 14–14 once the one biased item is discounted, for capabilities small enough to fit in a single reading of the model. What phase 1 does support is **auditability of the derivation** — that each contract element can be walked back to the evidence that founds it and the decision that shaped it, and that when a defect appears it can be attributed to a named artifact.
++The current run must support its own claims. Traceable derivations support auditability; semantic fidelity and superiority require corresponding evaluation. Historical results remain in the preserved baseline and cannot be reused as current-run outcomes.
+ 
+ Note also that the earlier phrasing of this section used "preserves semantics", which the claim vocabulary discipline above forbids. Framework text is subject to the same discipline as artifacts.
+ 
+--- baseline/settings/templates/pipeline/adapter-behavior-spec.md
++++ pipeline/settings/templates/pipeline/adapter-behavior-spec.md
+@@ -38,8 +38,19 @@
+ ## Section 4: State and Session Model
+ <!-- How adapter state realizes the canonical state scope: initialization, lifetime, isolation, persistence position. -->
+ 
++### 4.1 State Realization and Setup Boundary
++
++| Resource / requirement | Contract clause or external setup | Concrete mechanism | Observable reset/isolation check |
++|------------------------|-----------------------------------|--------------------|---------------------------------|
++| | | | |
++
++<!-- Distinguish in-sequence persistence from isolation between tests. Restarting a server is not a reset of a persistent datastore. Support remains outside corpus. -->
++
+ ## Section 5: Error and Edge Behavior
+ <!-- Adapter-level failures vs domain rejections vs validation errors; mapping to the contract's error strategy; behavior when legacy/reference dependencies are unavailable. -->
++
++### 5.1 Partial Execution and Process Lifecycle
++<!-- Specify output acceptance versus process completion, timeout/crash behavior, state already written, and retry policy inherited from stages 4–6. No silent compensation or business-rule replacement. If coverage is requested, require separate evidence that counters flush on normal exit; a response alone is insufficient. -->
+ 
+ ## Section 6: Implementation Notes (non-authoritative)
+ <!-- Technology and structure notes for implementation tasks. These do not carry semantic authority. -->
+--- baseline/settings/templates/pipeline/api-contract-spec.md
++++ pipeline/settings/templates/pipeline/api-contract-spec.md
+@@ -49,6 +49,13 @@
+ ### 5.3 Rationale for Non-Obvious Status Decisions
+ <!-- E.g., domain rejection vs transport error status choices, recorded as D-n. -->
+ 
++### 5.4 State and Recovery Contract
++<!-- Carry every stage-5 state requirement, including external/unsupported ones. Do not invent a reset endpoint. Document consumer-visible lifetime, ordering, effects on rejection/failure and retry restrictions; preserve ambiguity rather than promising rollback/idempotency. -->
++
++| State requirement / resource | Stage-5 source | Contract clause or external/unsupported | Consumer consequence |
++|------------------------------|----------------|-----------------------------------------|----------------------|
++| | | | |
++
+ ## Section 6: Traceability Matrix
+ <!-- Non-obvious mappings only (see rules/traceability.md). -->
+ 
+@@ -61,6 +68,8 @@
+ - [ ] All canonical types represented with constraints preserved or compromises recorded
+ - [ ] Outcome-variant mapping constraints satisfied
+ - [ ] Error strategy complete with rationale for non-obvious decisions
++- [ ] Each canonical state/reset requirement mapped to a clause or declared external/unsupported
++- [ ] Failure effects and repetition constraints derived, not invented
+ - [ ] Traceability matrix covers all decision-bearing mappings
+ - [ ] Human review outcome: Approve
+ 
+--- baseline/settings/templates/pipeline/canonical-data-boundary-spec.md
++++ pipeline/settings/templates/pipeline/canonical-data-boundary-spec.md
+@@ -72,6 +72,8 @@
+ - **Isolation**: whether concurrent or successive consumers observe independent state.
+ - **Downstream consequences**: what stage 6 must expose (or explicitly not expose), and what stage 8 will therefore have to obtain from outside the contract.
+ 
++For multiple resources, record the state fields above per resource, including persistent files, intermediate results and batch/job boundaries. A process restart does not reset persistent state. Map failure outcomes to the effects that may already exist and state repetition safety (safe / unsafe / unknown) with R-n/E-n or a blocking ambiguity.
++
+ If the capability is genuinely stateless, say so explicitly — an asserted absence is a decision; a blank section is not.
+ 
+ ## Section 7: Completeness Gate and Stage 6 Entry Condition
+--- baseline/settings/templates/pipeline/capability-semantics-spec.md
++++ pipeline/settings/templates/pipeline/capability-semantics-spec.md
+@@ -36,6 +36,9 @@
+ - **Scope and expression**:
+ - **Evidence**: E-{{n}}
+ 
++### 3.2 Failure, Ordering and Repetition Semantics
++<!-- Use a different subsection number if required by rule count. Derive meaning from E-n: sequence prerequisites, partial persistence, termination/end-of-input, repeated operations and restart. Explicitly state safe / unsafe / unknown retry with evidence. Do not invent atomicity, rollback or compensation. N/A requires justification. -->
++
+ ## Section 4: Data Semantics
+ <!-- The meaning of the capability's data: concept definitions, identity model, state scope, persistence semantics, initialization semantics. Meaning only — canonical types come in stage 5. -->
+ 
+--- baseline/settings/templates/pipeline/legacy-evidence-spec.md
++++ pipeline/settings/templates/pipeline/legacy-evidence-spec.md
+@@ -39,6 +39,13 @@
+ ## Section 4: Data Access and State Evidence
+ <!-- Protocols for reading/writing state, field definitions (PIC clauses, copybooks), initialization, persistence characteristics. -->
+ 
++### 4.1 Persistent Resources and Processing Sequence
++<!-- When relevant: readers/writers per resource, ordering constraints, end-of-input, intermediate outputs and effects before errors, each anchored. Unknowns are A-n entries; absence of a transaction declaration is not evidence of atomicity. Source anchors use full corpus-relative paths. -->
++
++| Resource / sequence edge | Read/write/order observation | Anchor | Unknowns |
++|--------------------------|------------------------------|--------|----------|
++| | | | |
++
+ ## Section 5: Complexity Factor Documentation
+ <!-- The factors flagged at selection time, now documented with anchors: I/O coupling, state model, structural constraints, notable rules observed (not yet interpreted). -->
+ 
+--- baseline/settings/templates/pipeline/pipeline-scope-spec.md
++++ pipeline/settings/templates/pipeline/pipeline-scope-spec.md
+@@ -17,9 +17,19 @@
+ ### 1.2 Reference Layer (if any)
+ <!-- Identify any non-authoritative comparison/execution layer and state its subordinate role explicitly. -->
+ 
++### 1.3 Input Manifest and Visibility
++<!-- Record FRAMEWORK_ROOT, RUN_ROOT, CORPUS_ROOT and frozen manifest. Separate full upstream inventory from approved inputs; full relative paths and hashes, no basename aliases. -->
++
++| Path / hash | Role | Allowed stages | Reason / approval | Prior exposure |
++|-------------|------|----------------|-------------------|----------------|
++| | source / operational doc / support / evaluation | | | |
++
++<!-- Exclude prior APIs/specs, fixtures, expected outcomes and preparation reports from extraction unless explicitly approved. An exception must be disclosed, not called independent discovery. -->
++
+ ## Section 2: Capability Boundary
+ 
+-### 2.1 In-Scope Operations
++### 2.1 Candidate Operation Boundaries
++<!-- Bound the candidate area from supplied scope information, not a completed capability selection. Stage 2 ratifies the selected capability. -->
+ ### 2.2 Out-of-Scope Capabilities
+ <!-- What is deliberately excluded and why. -->
+ ### 2.3 Proof-of-Concept vs. Institutional Scope
+@@ -52,6 +62,8 @@
+ ## Completeness Gate and Stage 2 Entry Condition
+ <!-- Explicit, checkable conditions. Example set: -->
+ - [ ] Source layer inventoried with roles assigned
++- [ ] Roots, relative-path/hash manifest, per-stage input visibility and prior exposure recorded
++- [ ] Candidate scope is not presented as an already completed stage-2 selection
+ - [ ] In-scope and out-of-scope boundaries stated and justified
+ - [ ] Known constraints registered for downstream inheritance
+ - [ ] PoC vs institutional divergences noted
+--- baseline/settings/templates/pipeline/semantic-validation-spec.md
++++ pipeline/settings/templates/pipeline/semantic-validation-spec.md
+@@ -8,7 +8,7 @@
+ 
+ ## Validation Integrity Discipline
+ - Every scenario (`V-n`) derives from an identifiable upstream element (contract clause, canonical constraint, `R-n`, or `E-n`). Intuition-only scenarios are gaps, not scenarios.
+-- Each scenario names its oracle; oracle strength ordering: legacy execution > anchored evidence > reviewed contract > reviewed semantics. Reference-layer-only oracles are labeled and downgraded.
++- Each scenario names its oracle and the question it answers: contract conformance, legacy characterization or agreed observable obligations. There is no universal strength ordering. Record conflicts and limitations; reference-layer-only expectations are explicitly labeled.
+ - Scenarios touching open ambiguities are excluded or exploratory — never conformance-bearing.
+ - Claim vocabulary stays at test level: behavioral consistency / test-based confidence, never "verified", "semantic preservation", or "equivalence" (`rules/validation-principles.md`).
+ - Scenarios are phrased against the contract surface, not adapter internals, so the suite remains transferable to a future reimplementation behind the same API.
+@@ -25,9 +25,9 @@
+ ## Section 2: Oracle Inventory
+ <!-- Available oracles for this run, their strength, and limitations. -->
+ 
+-| Oracle | Type | Strength | Limitations |
+-|--------|------|----------|-------------|
+-| | | | |
++| Oracle | Claim / question | Expected-outcome origin | Tool origin / data exposure | Limitations |
++|--------|------------------|-------------------------|-----------------------------|-------------|
++| | | | | |
+ 
+ ## Section 3: Scenario Groups
+ <!-- Group scenarios by operation or rule. For each scenario: derivation anchor, setup, stimulus, expected outcome, oracle. -->
+@@ -75,8 +75,15 @@
+ State here which conventions were modeled and from which `R-n` each comes.
+ -->
+ 
++### 5.3 State, Failure and Observation Matrix
++<!-- Trace stage-5 state through stage-6 mapping and stage-7 mechanism. Per scenario: pre-state/reset evidence, in-sequence persistence, final-state observations, allowed normalizations, partial-failure/repetition obligations. Missing observation means inconclusive. Separate HTTP acceptance, COBOL reachability, effects and oracle verdict. Do not introduce a known preparation answer as an independent oracle. -->
++
++| Scenario | State/setup source | Contract or external provision | Observations required | Verdict basis |
++|----------|--------------------|-------------------------------|-----------------------|---------------|
++| | | | | |
++
+ ## Section 6: Exploratory Expansion (optional)
+-<!-- Mechanisms beyond designed scenarios: property-based testing for input masses, stateful API fuzzing over the OpenAPI contract (preferred tool: RESTler, github.com/microsoft/restler-fuzzer — consumes OpenAPI directly, explores stateful sequences, flags HTTP 500s and checker issues), selectively designed manual tests. Results are exploratory until formalized as anchored V-n scenarios; fuzzing findings on the legacy itself become defect reports per legacy-code-policy. -->
++<!-- Mechanisms beyond designed scenarios: property-based testing for input masses, stateful API fuzzing over the OpenAPI contract (tool selected and justified per run; declare actual dependency support, budgets and checkers), selectively designed manual tests. Results are exploratory until formalized as anchored V-n scenarios; fuzzing findings on the legacy itself become defect reports per legacy-code-policy. -->
+ 
+ <!--
+ Declare the campaign BUDGET (operation count, seed) and the COUNTING UNIT (requests that
+@@ -97,6 +104,8 @@
+ - [ ] Harness dependencies not exposed by the contract listed in §5.1 (or the list asserted empty), with undeclared ones escalated upstream
+ - [ ] Oracle conventions from `R-n` modeled before execution (§5.2)
+ - [ ] Exploratory budget, seed and counting unit declared before running
++- [ ] State/setup requirements mapped end-to-end (§5.3), partial failure and repetition addressed or explicitly N/A
++- [ ] Tool independence is not confused with independent expected outcomes
+ - [ ] Execution protocol reproducible
+ - [ ] Human review outcome: Approve
+ 
+--- baseline/settings/templates/pipeline/validation-report.md
++++ pipeline/settings/templates/pipeline/validation-report.md
+@@ -37,6 +37,9 @@
+ |----------|---------------|---------------|----------|-------------|
+ | | | | | adapter defect / legacy finding |
+ 
++## Reachability, Effects and Measurement Limits
++<!-- Report HTTP acceptance, actual COBOL reachability, state effects, oracle verdict and infrastructure/tool failures separately. Distinguish operation coverage, model coverage, COBOL-mapped lines and generated C arcs, with denominators/mapping and exclusions. Do not infer business correctness from coverage. Record incomplete observations as inconclusive. -->
++
+ ## Known Divergences Registry
+ 
+ | ID | Scenario(s) | Expected vs observed | Probable origin | Disposition |
+@@ -59,6 +62,8 @@
+ - [ ] Scenario types carried through, so characterization results are not read as conformance
+ - [ ] Divergence registry complete with dispositions
+ - [ ] Conformance claims scoped to evidence
++- [ ] Expected-outcome provenance separated from tool origin
++- [ ] Reachability, state effects, oracle verdicts and infrastructure failures distinguished
+ - [ ] Exploratory counts reported with budget, seed and counting unit; harness provenance stated
+ - [ ] Upstream-origin divergences escalated
+ - [ ] Human review outcome: Approve
+--- baseline/steering/glossary.md
++++ pipeline/steering/glossary.md
+@@ -30,14 +30,14 @@
+ - **API contract** — the modern interface surface derived from the canonical boundary: operations, schemas, error strategy. Derived, never invented from source inspection.
+ - **Adapter** — the layer that connects the contract surface to legacy-faithful behavior without redefining contract semantics.
+ - **Wrapper** — the default adaptation strategy: a layer added on top of the unmodified legacy core (in the PoC, via a Node.js-to-COBOL binding) so that legacy rules keep executing where they live. The legacy source is read-only for the pipeline.
+-- **Reference layer** — the Node.js proof-of-concept implementation used for execution and comparison; explicitly non-authoritative.
++- **Reference layer** — an explicitly identified comparison or execution aid; its technology is per-run and it is not automatically the semantic authority.
+ - **Design decision (`D-n`)** — a recorded choice made where evidence underdetermines the artifact, with rationale and downstream consequences.
+ 
+ ## Validation concepts
+ 
+ - **Semantic validation** — the assessment of whether modernized behavior adheres to legacy-observed or legacy-inferred behavior.
+ - **Validation scenario (`V-n`)** — a planned, upstream-anchored behavioral check with a stated oracle.
+-- **Oracle** — the authority a scenario compares against (legacy execution > anchored evidence > reviewed contract > reviewed semantics).
++- **Oracle** — the stated reference for a particular question: reviewed contract for surface conformance, observed legacy for characterization, or agreed observable obligations for functional continuity. No universal hierarchy; conflicts and expected-outcome provenance remain explicit.
+ - **Divergence (`DIV-n`)** — an observed difference between expected and observed behavior, registered with origin and disposition.
+ - **Conformance assessment** — the scoped adherence claim the validated scenarios actually support. Never a blanket equivalence claim.
+ - **Behavioral confidence** — the claim level this project operates at: test-based consistency with observed legacy behavior for validated scenarios. Deliberately weaker than "verification" or "semantic preservation", which imply formal guarantees and are avoided in claims (see `rules/validation-principles.md`).
+@@ -45,7 +45,7 @@
+ 
+ ## Research-context terms
+ 
+-- **Proof of concept (PoC)** — the controlled run of the pipeline on the public COBOL accounting repository; a methodological rehearsal, not the empirical target.
++- **Public application / PoC** — a scoped public run used to exercise and evaluate the method. It is not automatically the later Phase 2 corpus; each application records its own inputs and framework version.
+ - **Institutional case** — the intended later application of the pipeline to real institutional COBOL legacy material.
+ - **Institutional applicability note** — an in-place remark documenting where PoC conditions diverge from expected institutional conditions.
+ - **Gap (`G-n`)** — a diagnosed discrepancy between available evidence, current representation, and required maturity for the next stage; classified blocking / important / cosmetic.
+--- baseline/steering/pipeline.md
++++ pipeline/steering/pipeline.md
+@@ -1,129 +1,52 @@
+-# Pipeline Stage Map
++# Pipeline stage map
+ 
+-This file is the consolidated project memory of the modernization pipeline: its stages, gates, artifact conventions, and identifier scheme.
++## Ordered artifacts
+ 
+-It codifies the pattern that emerged and stabilized during the account-balance proof-of-concept run, so that future runs (and the institutional case) do not need to rediscover it.
++| Stage | Artifact | Question |
++|---|---|---|
++| 1 | Pipeline Scope Spec | Which inputs and boundaries govern this run? |
++| 2 | Capability Selection Spec | Which business capability is selected, and why? |
++| 3 | Legacy Evidence Spec | What does the source or controlled execution show? |
++| 4 | Capability Semantics Spec | What do the observations mean as rules and obligations? |
++| 5 | Canonical Data Boundary Spec | What data and state meanings cross the boundary? |
++| 6 | API Contract Spec | What surface exposes those meanings and what stays external? |
++| 7 | Adapter Behavior Spec | How is the contract realized over the unchanged legacy? |
++| 8 | Semantic Validation Spec + separate Validation Report | What is assessed, observed, divergent or still unknown? |
+ 
+-## The eight stages
++Stages are cumulative. The validation plan must be approved before execution; the report is not a retroactive plan.
+ 
+-| # | Stage | Artifact | Primary question |
+-|---|-------|----------|------------------|
+-| 1 | Pipeline Scope | Pipeline Scope Spec | What legacy material and what boundaries govern this run? |
+-| 2 | Capability Selection | Capability Selection Spec | Which capability, and why this one? |
+-| 3 | Legacy Evidence | Legacy Evidence Spec | What does the legacy material observably do? |
+-| 4 | Capability Semantics | Capability Semantics Spec | What does that behavior mean, as rules? |
+-| 5 | Canonical Data Boundary | Canonical Data Boundary Spec | What are the stable, technology-neutral data meanings? |
+-| 6 | API Contract | API Contract Spec | What modern surface exposes the capability? |
+-| 7 | Adapter Behavior | Adapter Behavior Spec | How does the surface connect to legacy-faithful behavior? |
+-| 8 | Semantic Validation | Semantic Validation Spec + Validation Report | Does modernized behavior adhere to legacy behavior, and where does it diverge? |
++## Artifact anatomy and identities
+ 
+-Stages are cumulative. Each stage's completeness gate is the entry condition of the next.
++Purpose → integrity discipline → upstream authorities/entry condition → stage-specific body → ambiguities → completeness gate and next entry condition. Stage 1 identifies external inputs instead of upstream specs.
+ 
+-## Canonical artifact anatomy
++Use `E-n`, `A-n`, `R-n`, `D-n`, `G-n`, `V-n`, `DIV-n` as defined in `settings/rules/traceability.md` (FRAMEWORK_ROOT-relative). IDs are stable and scoped per capability/run. One artifact directory per stage: `[artifact-type]-[capability]`. Stage 8 additionally produces its report.
+ 
+-Every pipeline artifact (stages 1–8) follows the same anatomy, in this order:
++Keep auxiliary requirements/design/tasks separate from the authoritative artifact. Framework phase status is not research approval. A document-first task at stages 1–5 does not authorize API or adapter implementation.
+ 
+-1. **Purpose** — what question this artifact answers and for which capability run
+-2. **Integrity Discipline** — the stage-specific rules the artifact commits to (evidence quality, semantic integrity, contract integrity, etc.)
+-3. **Section 1: Upstream Authority and Entry Condition** — which upstream specs it derives from, the inherited entry condition, and inherited constraints (omitted only in stage 1, which instead states its external inputs)
+-4. **Numbered body sections** — the stage-specific content
+-5. **Ambiguity handling** — new ambiguities registered, existing ambiguities disposed
+-6. **Completeness Gate and Next-Stage Entry Condition** — explicit, checkable conditions; the gate must be passed before the next stage may claim this artifact as authority
++## Gates and revisions
+ 
+-This anatomy is enforced by the templates in `settings/templates/pipeline/`.
++A gate passes only after explicit human review of concrete conditions, not because a model wrote Approve. Record reviewer/authorization reference, exact artifact and upstream versions, decision and blocking gaps in research/review metadata alongside spec.json. Never generate a reviewer signature or authorization.
+ 
+-## Completeness gates
++Mechanical checks report their limited result separately. If upstream evidence changes, invalidate dependent approval until references and decisions are reviewed again. Blocking ambiguities cannot be removed by fluent prose. Fast-track requires explicit researcher authorization, not convenience.
+ 
+-A gate is a short list of explicitly checkable conditions written at the end of the artifact.
++## Cross-stage obligations
+ 
+-Gate rules:
+-- conditions must be verifiable by reading the artifact and its upstream chain, not by trusting intent
+-- a gate is passed only after human review (design review outcome: Approve)
+-- blocking gaps (per `gap-analysis.md`) fail the gate regardless of prose quality
+-- gate status is recorded in the spec's `spec.json` (`gate` block)
++- Evidence before interpretation; semantic uncertainty must remain visible.
++- Decisions live where made and inherit explicitly. Reference implementations are not semantic authorities.
++- State is per resource: identity, initialization, lifetime, reset, isolation and failure effects travel from stage 5 through contract, adapter and scenario setup. External reset is allowed when declared; inventing a public reset is not.
++- Batch sequence, end-of-input and intermediate persistence are investigated when relevant. Do not assume atomicity or safe retries.
++- The wrapper invokes the legacy, never silently implements its business rules or compensates defects. Separate later backend construction requires its own scope/approval.
++- Scenario type distinguishes contract conformance from legacy characterization. Transferability remains unproven until exercised with the alternative backend and declared support requirements.
++- Artifact review cannot establish properties of a runtime it has not exercised. A source anchor passing does not establish that the claim is correct.
+ 
+-## Identifier scheme
++See `settings/rules/run-integrity.md` for input isolation, state propagation, failures and question-specific oracle authority.
+ 
+-All pipeline runs use the shared identifier conventions defined in `settings/rules/traceability.md`:
++## Pipeline versus research instruments
+ 
+-`E-n` evidence · `A-n` ambiguity · `R-n` semantic rule · `D-n` design decision · `G-n` gap · `V-n` validation scenario · `DIV-n` divergence
++The framework is not the complete experiment. Comparative arms, T1–T4 campaigns, coverage, differential evaluation, statistical analysis and publication are separately scoped in each study. No historical result or fixed port/path becomes a default for a new run.
+ 
+-Identifiers are scoped per capability run and stable once assigned.
+-
+-## Spec directory conventions
+-
+-- one spec directory per stage per capability: `[artifact-type]-[capability]` (e.g., `legacy-evidence-account-balance`)
+-- the stage's authoritative artifact lives in a file named after the artifact type (e.g., `legacy-evidence-spec.md`); stage 8 additionally produces `validation-report.md`
+-- `requirements.md`, `design.md`, `tasks.md`, `research.md` support the SDD phases of producing that artifact and are interpreted stage-appropriately (document-first in stages 1–5)
+-- `spec.json` records framework phase plus pipeline metadata: `artifact_type`, `pipeline_stage`, `capability`, `upstream_specs`, and `gate` status
+-
+-## Stage-boundary decisions memory
+-
+-Lessons stabilized during the proof of concept that apply to all future runs:
+-
+-- **Design decisions live where they are made.** When a downstream stage must decide something upstream evidence cannot determine (e.g., the account-identifier decision at stage 5), record it as a `D-n` decision in that stage, with rationale, downstream consequences, and institutional applicability notes.
+-- **Reference layer is never authority.** The Node.js layer may serve execution and comparison, but authority flows only through the specification chain.
+-- **Constraints inherit explicitly.** A constraint discovered upstream (e.g., absence of account identifier) must be restated in each downstream artifact's upstream-authority section for as long as it remains binding.
+-- **Institutional applicability notes are worth writing early.** Where the proof of concept diverges from expected institutional conditions, say so in place; these notes become the transfer argument of the research study.
+-- **Rule reconstruction is documentation, not reimplementation** (advisor alignment, June 2026). Stage 4 documents business rules to support the canonical boundary, contract derivation, and test design (including test data setup) — the legacy core remains the runtime enforcer of those rules through the wrapper. Reconstructed rules are never a mandate to rewrite them in the modern layer.
+-- **Wrapping is the default adaptation strategy.** Stage 7 wraps the unmodified legacy core (e.g., via runtime binding); reimplementing behavior in the modern layer is exceptional and requires an explicit `D-n` justification. The legacy source is read-only (`rules/legacy-code-policy.md`).
+-- **Claims stay at test level.** Gate statements and validation conclusions use test-based behavioral-confidence vocabulary, never verification or semantic-preservation vocabulary (`rules/validation-principles.md`).
+-- **The test suite is a transferable output — and transferability is verified, not assumed.** Stage 8 scenarios are phrased against the contract surface so the same suite can later exercise a reimplementation exposed through the same API. Phrasing is necessary but not sufficient: the suite must also avoid depending on capabilities the contract does not expose, and the only reliable way to find such a dependency is to run the suite against a backend of different provenance. Until that is done, transferability is a design intent (`rules/validation-principles.md`).
+-- **State scope is a boundary property, decided at stage 5.** Identity, initialization, lifetime, reset and isolation of the capability's state belong in the canonical data boundary, because stage 6 cannot expose what stage 5 did not license and stage 7's state model is defined as *realizing* the canonical state scope. Legacy systems usually supply state lifecycle implicitly — process restart, region recycle, job boundary — so the decision is easy to skip and invisible once skipped.
+-
+-## Lessons carried from phase 1
+-
+-Phase 1 executed the full pipeline over three public COBOL systems (account balance, payroll, BAMS). What follows is what the execution changed about the method itself, recorded here so a later run does not have to rediscover it. Run-specific content stays in the specs.
+-
+-**The comparative hypothesis was not confirmed at small scale.** A pre-registered baseline — one generic prompt, no scaffolding — produced contracts scoring 14 of 15 rubric items against the pipeline's 15, or 14–14 discounting the one item biased toward a pipeline decision. For capabilities that fit in a single reading of the model (100–1100 lines), the framework does not measurably improve semantic fidelity of the contract. It was never tested in the regime where whole-source reading stops being possible, which is where structural decomposition would have to pay for itself. Claim auditability and traceability, which do not depend on the comparison; do not claim fidelity superiority.
+-
+-**One thing did separate the two arms, outside the instrument.** The baseline fabricated a defect that does not exist — asserting a fill loop leaves a byte unwritten, then building three contract elements on top of it — and the claim was falsified by recompiling the unmodified subprogram. The pipeline fabricated nothing across three cases. With three runs per arm this is an indication, not a measurement, but it is the plane worth instrumenting next, and the anchoring requirement is the plausible mechanism.
+-
+-**A stage-5 omission survived every gate.** The canonical boundary recorded the singleton state decision but not the state's lifecycle. Stage 6 could not expose a reset it had not been licensed to expose; stage 7 supplied one implicitly by restarting a COBOL process; stage 8 passed 8/8 because the thing it silently depended on was there. The gap surfaced only when the suite met a backend that did not restart processes. Two structural causes, both now addressed: stage 5's template had no slot for state scope, and stage 7's template already required its state model to "realize the canonical state scope" — a reference to a section stage 5 was never asked to produce.
+-
+-**The generalizable form of that lesson:** a defect that only manifests under a change of provenance cannot be found by artifact review, however careful, because every artifact is coherent and mutually consistent while the accident holds. Gates catch errors of commission; they are weak against the omission of a category no completeness condition names. The cheap countermeasure is not a second implementation but a question at the stage-8 gate — *what does the suite need that the contract does not provide?*
+-
+-**Anchoring can be mechanized; most gate conditions cannot yet.** Converting the `E-n` anchor requirement into a script moved one condition from asserted to measured (54/54 across three artifacts). The remaining conditions are still inspection-based, and inspection by the artifact's own author is the weakest link in the chain — it is what missed the stage-5 gap.
+-
+-**Scenario types must be marked.** A derived suite mixes scenarios asserting what the contract promises with scenarios recording legacy behavior the modernization chose not to correct. The second kind fails by design against a corrected reimplementation. Unmarked, a legitimate correction reads as a regression.
+-
+-**Same-provenance instruments prove self-consistency only.** Harness, contract and adapter written by one process yield "zero contract violations" as a schema regression result, not as evidence the contract describes the legacy.
+-
+-**Cost is dominated by materialization, not by the intermediate layer.** Across three cases the documental reconstruction stages (3–5) took roughly 17% of output tokens; code and test materialization (7–8 plus operationalization) took roughly 50%. Marginal cost per capability fell to 37% and then 26% of the first run, though that figure mixes template maturation with executor learning and this design cannot separate them.
+-
+-## Research instruments live outside the pipeline
+-
+-Some procedures study the method rather than execute it, and they must not be mistaken for stages. They live in `casos/analise/` alongside the artifacts:
+-
+-| Instrument | What it tests | Where |
+-|-----------|---------------|-------|
+-| Pre-registered baseline | Whether the framework improves contract fidelity over an unscaffolded direct jump | `baseline-rq2/` — `PROTOCOLO.md`, frozen `prompt.md`, 15-item `rubrica.md`, dated execution records |
+-| Transferability experiment | Whether a derived suite discriminates correctly against a second backend behind the same contract | `transferibilidade/` — report, `executar.sh`, reference reimplementations |
+-| Cost instrumentation | Token consumption per capability and per stage | `custo/` |
+-| Anchor verifier | That every `E-n` resolves to an existing file and line range | `ancoragem/verificar-ancoras.py` |
+-| Isolation experiments | Root cause of an observed anomaly, outside the legacy program | `div2/` |
+-
+-The pipeline is the object of study; these are the instruments. Keeping them separate is what stops the method from validating itself with its own gates. The one exception worth noting: the transferability *procedure* revealed a defect class no artifact review can reach, and the cheap countermeasure was folded back into the stage-8 gate as a question ("what does the suite need that the contract does not provide?") rather than as a required second implementation.
+-
+-Note also that the transferability script is currently hardcoded to the phase-1 cases (fixed ports and paths). It is reproducible for those cases and not yet a parameterized procedure; generalizing it is pending work, and the reusability claim should be scoped accordingly.
++Historical observations and instruments are preserved in `../../baseline/steering/pipeline.md`; they are not current results. The historical differential script's parameterization remains outside this revision. A public AWS run is not the future Phase 2 application, which will use other code and may use a later framework revision.
+ 
+ ## Selection versus discovery
+ 
+-When cases are chosen for one set of reasons and turn out to contrast along another, say so explicitly and date the sequence.
+-
+-Phase 1 selected three systems on structural and operational criteria — public availability, GnuCOBOL compilability, distinct domains, a self-contained capability — and only afterwards recognized that they also contrasted semantically: rule present, rule absent, property not guaranteed. That axis was **recognized a posteriori, not designed**, and the artifact record must not be arranged to suggest otherwise.
+-
+-Why it matters in both directions:
+-
+-- It **preserves** the value of a prediction that genuinely preceded observation. A non-guarantee written at stage 5 before any test ran, then confirmed at stage 8, is a dated falsifiable claim — but only if the ordering is documented and verifiable.
+-- It **limits** what a single case supports. A defect found where it was highly exposed does not establish that the method would find it where it was not; that claim would require deliberately varying the exposure, which phase 1 did not do.
+-
+-## Multi-capability future
+-
+-When a second capability enters the pipeline:
+-- stages 1 (scope) may be shared or revised per run — state which explicitly
+-- identifiers never cross capability runs
+-- cross-capability canonical types, if any, require an explicit reconciliation decision at stage 5
+-
+----
+-Document stage logic and gate discipline, not run-specific content — that belongs in the specs.
++Record why a case was selected before reporting what was discovered. Post-hoc contrasts must remain post-hoc; do not rewrite the selection record to imply advance prediction. Shared scope and cross-capability types require explicit reconciliation decisions, not identifier reuse.
+--- baseline/steering/product.md
++++ pipeline/steering/product.md
+@@ -1,123 +1,21 @@
+-# Product Overview
++# Purpose and boundaries
+ 
+-This project is a master's research proof of concept on COBOL legacy modernization using a specification-driven pipeline.
++Recover a selected COBOL business capability through an ordered, human-reviewed chain of evidence, semantics, canonical data, contract, adapter behavior and validation artifacts. The useful outcome is an executable, assessable integration boundary that can support incremental modernization.
+ 
+-It is not a conventional product development workflow.
+-The central artifact of interest is not a software product in the usual sense, but a research methodology: a structured, AI-assisted process for recovering actionable knowledge from legacy COBOL systems and progressively transforming that knowledge into integration-oriented artifacts.
++The criterion for later modernization is functional continuity: the same business objective and explicitly agreed observable obligations. This does not require identical internals, formal equivalence or preservation of every legacy defect. Deliberate differences need decisions and validation; the wrapper never silently fixes the legacy.
+ 
+-More specifically, the project investigates how legacy behavior can be reconstructed, structured, and reused to support incremental API-oriented modernization without collapsing evidence gathering, semantic interpretation, interface design, and implementation into a single step.
++## Eight artifacts
+ 
+-## Research Objective
++Pipeline Scope; Capability Selection; Legacy Evidence; Capability Semantics; Canonical Data Boundary; API Contract; Adapter Behavior; Semantic Validation Spec, followed by its separate report.
+ 
+-The main objective of the project is to evaluate the usefulness of an incremental, specification-supported approach for COBOL migration, in which selected legacy capabilities are exposed through derived API contracts and exercised by derived test suites — providing test-based behavioral confidence for a later reimplementation, without claiming formal semantic preservation.
++Evidence precedes interpretation; semantics precedes interface; interface precedes implementation. Early stages are document-first. A capability may span programs and persistent resources; neither a source file nor a batch job is automatically the unit of analysis.
+ 
+-The project is centered on the following progression:
++## Non-goals
+ 
+-COBOL legacy -> AI-assisted extraction -> structured specification -> API contract -> adapter behavior -> semantic validation
++No optimal microservice decomposition, big-bang migration, source rewrite, automatic human approval, fidelity claim from coverage, or superiority claim without a suitable comparison. A required legacy processing sequence is not forbidden by the non-goal of designing new inter-service orchestration.
+ 
+-This progression defines the logic of the research and should be preserved across specs, reviews, task generation, and implementation.
++## Framework versus application
+ 
+-The intermediate result the research targets is deliberate: exposing the functionalities of a COBOL system through an API and deriving automated tests for that API, as a controlled step that supports a migration process — not the migration itself.
++Each run states its corpus, capability, runtime, permitted inputs and study context. Historical account-balance assumptions and RQ results are not defaults for new runs. A public rehearsal is not the institutional or later Phase 2 case. Version changes between those applications are legitimate when recorded.
+ 
+-The research questions that operationalize this objective — tied to the pipeline stages and treated as a primarily qualitative study — are maintained in `steering/research-questions.md`.
+-
+-### Migration framing
+-
+-The strategic value of the pipeline is that it prepares a safer migration path: once capabilities are exposed via contracts and covered by derived test suites, a future reimplementation (e.g., in Java or another modern platform) exposed through the same API can be checked against the same tests. Code regeneration is outside the current scope, but the artifacts are designed to make that step cheaper and safer later.
+-
+-## Core Capabilities of the Methodology
+-
+-- **Legacy understanding**  
+-  Identify candidate business capabilities from COBOL source artifacts, associated data structures, and relevant dependencies.
+-
+-- **Evidence-based extraction**  
+-  Recover observable evidence from the legacy system while preserving the distinction between direct evidence, inferred interpretation, and unresolved ambiguity.
+-
+-- **Structured semantic reconstruction**  
+-  Consolidate extracted knowledge into stable intermediate artifacts, especially capability semantics and canonical data boundaries, before deriving interfaces.
+-
+-- **Specification-driven derivation**  
+-  Produce a sequence of ordered specification artifacts that progressively move from legacy understanding toward modern integration artifacts.
+-
+-- **API-oriented modernization**  
+-  Derive interface contracts from stabilized semantic and data artifacts rather than directly from raw legacy source code.
+-
+-- **Adapter-oriented operationalization**  
+-  Define how derived contracts can be connected back to legacy behavior through an adaptation layer.
+-
+-- **Semantic validation**  
+-  Assess whether the resulting artifacts and behaviors remain aligned with the behavior observed or inferred from the original legacy system.
+-
+-## Explicit Non-Goals
+-
+-The following are deliberately outside the objective of this research (advisor alignment, June 2026):
+-
+-- **Optimal microservice decomposition.** Producing a high-quality decomposition of the monolith is a separate research line. This project only exposes selected functionalities through services; the quality of the decomposition is not a claim and not a target.
+-- **Formal verification or formal semantic-preservation guarantees.** Claims stay at the level of test-based behavioral confidence. Terms such as "verified" and "semantic preservation" imply guarantees this project does not provide and must be avoided in claims (see `settings/rules/validation-principles.md`).
+-- **Rewriting or restructuring the COBOL core.** The legacy code is not modified; modernization adds a wrapper layer on top of it (see `settings/rules/legacy-code-policy.md`).
+-- **Inter-service orchestration.** The exposed services do not need to communicate with each other; each endpoint exposes a legacy functionality directly.
+-- **Big-bang API generation.** Capabilities are selected incrementally; the pipeline never targets the whole system at once.
+-
+-## Target Use Cases
+-
+-This project currently supports two complementary use cases.
+-
+-### 1. Public proof-of-concept application
+-Apply the pipeline to the public COBOL accounting repository (`cobol-accounting-system/`) in order to:
+-- exercise the specification workflow end to end
+-- reveal methodological weaknesses early
+-- refine artifact boundaries and stage transitions
+-- reduce uncertainty before moving to institutional legacy material
+-
+-### 2. Preparation for institutional application
+-Use the proof of concept to prepare for a later application of the same methodology to a real institutional COBOL legacy context, where the stakes, ambiguity, and validation requirements are expected to be higher.
+-
+-Expected characteristics of the institutional phase (to be planned, not improvised):
+-- real scale: multiple programs, copybooks, and multiple capabilities
+-- qualitative evaluation with domain specialists as a primary evidence source
+-- inter-rater agreement when multiple evaluators assess artifacts
+-- explicit cost measurement (e.g., token consumption per stage)
+-- selective automation of repetitive stages, possibly including multi-agent execution, without weakening human gates
+-
+-The public repository is therefore not the final empirical target of the research study, but an important controlled stage in the research process.
+-
+-## Value Proposition
+-
+-The value of the methodology lies in enforcing a disciplined transformation path.
+-
+-Instead of jumping directly from legacy source code to modern API implementation, the process imposes ordered intermediate artifacts and explicit stage boundaries:
+-
+-- scope before capability selection
+-- evidence before interpretation
+-- semantics before interface
+-- interface before adapter behavior
+-- validation before strong claims of adherence
+-
+-This reduces the risk of premature implementation, unsupported semantic assumptions, and weakly justified interface design.
+-
+-The methodology is therefore intended to improve:
+-- traceability
+-- analytical clarity
+-- reviewability
+-- reproducibility of the proof of concept
+-- defensibility of the resulting artifacts in a research study context
+-
+-## Intended Outcome
+-
+-A successful outcome for this project is not merely "generated code."
+-
+-A successful outcome is a coherent, traceable, and reviewable chain of artifacts showing that:
+-- a candidate legacy capability was identified
+-- its evidence was consolidated
+-- its semantics were structured
+-- its data boundary was stabilized
+-- an API contract was derived
+-- adapter behavior was specified or implemented without modifying the legacy core
+-- semantic validation was defined and supported by observable behavior
+-- the derived test suite exists as a transferable artifact, reusable against a future reimplementation exposed through the same API
+-
+-## Scope Reminder
+-
+-This steering file captures the stable identity, purpose, and value logic of the research project.
+-
+-It is not intended to enumerate feature lists, implementation details, or individual generated artifacts.+The transferable suite is an intended output, not a proven property until exercised with explicit state/setup dependencies on the relevant alternative backend. Backend construction and comparative research are separately scoped activities, not automatic ninth stages.
+--- baseline/steering/research-questions.md
++++ pipeline/steering/research-questions.md
+@@ -1,76 +1,9 @@
+-# Research Questions
++# Research questions are run-specific
+ 
+-This file is the single source of truth for the project's research questions (RQs). It is steering memory, not the research study text: it captures the stable framing agreed with the advisor and evolves as the questions are refined for the qualification document.
++The framework does not select a study's RQs, comparison arms, sample sizes or hypotheses. Declare them in the new study/run protocol before collection, under researcher approval. No results or provisional RQ numbering from account-balance or historical V4 are evidence for a new run.
+ 
+-## Status and provenance
++Useful dimensions to consider, not an approved question set: evidence grounding; adequacy of the recovered contract; human interventions; observable obligations and validation limits; execution cost; transferability under a changed backend and explicit setup protocol.
+ 
+-- **Origin**: advisor meeting of 2026-06-12 ("Apresentação Api"). The advisor asked to (a) tie the RQs to the pipeline components, (b) treat the study as mostly qualitative, and (c) list five or more RQs and prioritize them, with final prioritization informed by feedback from institutional domain specialists.
+-- **Maturity**: draft. Wording will be lapidated in the qualification document; priorities marked below are provisional until specialist feedback is collected.
+-- **Vocabulary discipline**: RQs stay at the level of *test-based behavioral confidence* and *usefulness*. They must not claim or presuppose formal verification, semantic preservation, or equivalence (see `settings/rules/validation-principles.md`).
++Auditability is a property to inspect; fidelity or superiority require corresponding evidence. No page in this steering directory establishes that an empirical hypothesis was confirmed or rejected for the current application. Historical formulations and findings remain preserved in `../../baseline/steering/research-questions.md`.
+ 
+-## Overarching question
+-
+-**RQ0.** To what extent can LLMs, embedded in a human-supervised, specification-driven process, support the extraction and operationalization of knowledge from legacy COBOL systems — through structured strategies of summarization, decomposition, and validation — so as to derive and implement API contracts backed by test-based behavioral confidence, as a controlled step supporting incremental migration?
+-
+-RQ0 is the umbrella; the questions below decompose it along the pipeline. The study is primarily qualitative: evidence comes from executing the pipeline, from researcher observation of each stage, and (in the institutional phase) from domain-specialist feedback and inter-rater agreement.
+-
+-## Pipeline-aligned questions
+-
+-Each RQ names the pipeline stage(s) it interrogates (see `steering/pipeline.md`).
+-
+-### RQ1 — Evidence extraction fidelity *(stages 3)*
+-When assisting legacy-evidence extraction under human supervision, how reliably do LLMs recover observable COBOL behavior as anchored evidence, and how well do they keep the distinction between observed evidence, inference, and ambiguity rather than inventing plausible behavior?
+-- **Method**: compare extracted evidence against source anchors; count human corrections by type (`rules/ai-assistance.md` provenance).
+-- **Priority**: high — grounds every downstream claim.
+-
+-### RQ2 — Semantic drift control via a structured intermediate spec *(stages 4–5)*
+-Does forcing an explicit, reviewable intermediate specification layer (capability semantics + canonical data boundary) between code and interface reduce semantic drift compared with a direct code→contract jump?
+-- **Method**: qualitative analysis of drift instances caught at the gate; ambiguity register outcomes.
+-- **Priority**: high — this is the methodological core of the pipeline.
+-- **Phase 1 status (July 2026): answered, hypothesis NOT confirmed.** A pre-registered baseline (frozen prompt, 15-item rubric decidable directly against the legacy, blind scoring, isolated executor) scored 14/15 against the pipeline's 15/15 — 14–14 discounting the one item biased toward a pipeline decision. For capabilities of 100–1100 lines the intermediate layer produced no measurable fidelity gain. With the comparison arm scoring at ceiling this is *no difference detected*, not evidence of no difference; the hypothesis is unconfirmed, which is distinct from false.
+-
+-### RQ2′ — Drift control beyond single-reading scale *(stages 4–5)*
+-Does the intermediate specification layer reduce semantic drift compared with a direct code→contract jump **for capabilities that exceed the context recoverable in a single reading**?
+-- **Rationale**: RQ2 was answered only in the regime where the whole source fits in one reading, so structural decomposition resolves a problem that does not arise. The regime where it would have to pay for itself was never tested.
+-- **Method**: repeat the pre-registered protocol on the institutional slice, with enough repetitions to estimate variance and a rubric extended with a behavior-fabrication item declared before execution.
+-- **Priority**: high — successor to RQ2, not a reformulation of it.
+-
+-### RQ3 — Usefulness of the "derive the API contract first" strategy *(stage 6)*
+-Is deriving an API contract (in OpenAPI) from stabilized semantics a useful and adequate way to expose selected legacy capabilities for migration support — capability-to-capability rather than function-to-function?
+-- **Method**: qualitative assessment of contract adequacy; specialist review in the institutional phase.
+-- **Priority**: high — one of the strategies flagged as most critical to institutional stakeholders.
+-
+-### RQ4 — Behavioral confidence from derived tests and fuzzing *(stages 7–8)*
+-To what extent do LLM-derived test suites, complemented by property-based testing and stateful API fuzzing (e.g., RESTler over the derived OpenAPI), provide useful behavioral confidence that a modernized surface matches observed legacy behavior — and what are the limits of test-based validation here?
+-- **Method**: scenario conformance results; divergences registry; exploratory fuzzing findings (including any latent legacy defects surfaced).
+-- **Priority**: high — central to the validation argument; the "limits of tests" framing is itself a contribution.
+-
+-### RQ5 — Value and cost of human-in-the-loop supervision *(all gates)*
+-How valuable is the human-in-the-loop / feedback strategy at each stage gate, and how much human supervision is actually required for the LLM drafts to become trustworthy stage outputs?
+-- **Method**: per-stage record of human intervention depth (none / minor / substantive / rejection); qualitative specialist feedback.
+-- **Priority**: medium-high — the advisor stressed the feedback loop as important and qualitative.
+-
+-### RQ6 — Legacy-defect handling policy *(stages 3, 8)*
+-In a migration process, should the pipeline propose corrections for defects found in the legacy code, or keep the legacy unchanged and only report them? Under which contexts (open-source proof of concept vs critical institutional system) does each policy apply?
+-- **Method**: analysis of defects surfaced (e.g., the overdraft rule); specialist stance in the institutional phase; see `rules/legacy-code-policy.md`.
+-- **Priority**: medium — explicitly raised by the advisor as a distinct RQ.
+-
+-### RQ7 — Economic viability *(all stages)*
+-What is the execution cost of the pipeline (at minimum, token consumption per stage) and is it viable relative to the human effort it would replace or assist?
+-- **Method**: instrument future runs to collect per-stage cost (`rules/ai-assistance.md`); compare against developer-time estimates.
+-- **Priority**: medium — recognized limitation of the first PoC run (cost was unmeasured); the advisor noted cost matters but is likely modest.
+-
+-### RQ8 — Transferability from proof of concept to institutional scale *(whole pipeline)*
+-Do the results obtained on the controlled public repository transfer to a real institutional COBOL system with multiple programs, copybooks, and multiple capabilities — and what additional evidence (specialist evaluation, inter-rater agreement) is needed to support that transfer?
+-- **Method**: comparative execution across the two phases; qualitative specialist evaluation; agreement measures.
+-- **Priority**: medium — the institutional phase is the true empirical target, but depends on the PoC being sound first.
+-
+-## Prioritization note
+-
+-The advisor's expectation is that, by the end of the research, a subset of these RQs will emerge as the ones institutional stakeholders care about most, while others will matter less. Provisional high-priority set: **RQ1, RQ2, RQ3, RQ4**. RQ5–RQ8 are important but secondary until specialist feedback re-ranks them. This ranking must be revisited, not treated as fixed.
+-
+-## Maintenance
+-
+-- Keep RQs tied to pipeline stages; if a proposed RQ cannot be attached to a stage or to the overarching RQ0, question whether it belongs here.
+-- When wording is finalized in the qualification document, update this file to match and note the date.
+-- Do not let RQs drift into verification/semantic-preservation vocabulary.
++The AWS public cycle and future Phase 2 have separate corpora and may use different pipeline versions. Publication planning does not authorize execution or collapse those cycles.
+--- baseline/steering/structure.md
++++ pipeline/steering/structure.md
+@@ -1,252 +1,18 @@
+-# Project Structure
++# Workspace structure
+ 
+-## Organization Philosophy
++Resolve roots explicitly in the run's scope artifact:
+ 
+-This project is structured around three distinct concerns that must remain conceptually separate:
++- `FRAMEWORK_ROOT`: this candidate's `pipeline/`; reusable rules, templates and tools, not research answers.
++- `RUN_ROOT`: a separate directory for the new capability run; specs, metadata, decisions, prompts and outputs.
++- `CORPUS_ROOT`: the approved immutable input set, governed by a relative-path/hash manifest.
++- evaluation/support directories: outside corpus and extraction context unless explicitly authorized by stage and purpose.
+ 
+-1. **legacy artifacts** — what is being studied
+-2. **specification artifacts** — what is being produced by the research pipeline
+-3. **framework infrastructure** — what supports the execution of the pipeline
++Paths in framework guidance are relative to FRAMEWORK_ROOT unless labelled otherwise. Historical `.sdd/`, case folders and sample paths in the preserved baseline are not active destinations.
+ 
+-These three layers must never be conflated.
++One directory per artifact per capability: `RUN_ROOT/specs/[artifact-type]-[capability]/`. Use the eight types from `pipeline.md`. Each includes its authoritative artifact and `spec.json`; requirements/design/tasks/research are supporting documents, never permission to skip a stage. Stage 8 has a plan and separate results report.
+ 
+-In particular:
+-- the COBOL source is evidence, not a design template
+-- generated implementation artifacts are not automatically authoritative research outputs
+-- framework metadata is not the same as project knowledge
++`spec.json.phase` describes framework drafting progress, not human research approval. `ready_for_implementation` never authorizes code from an immature stage 1–5 document.
+ 
+-The project is organized primarily by **pipeline stage and artifact role**, not by generic software-feature expansion.
++The legacy is read-only. No generated implementation, tests, known answers or unrelated APIs are copied into corpus as source evidence. Shared copybooks retain full relative paths; do not collapse different files with the same basename. Evidence identifiers are scoped to one run/capability; shared meanings require an explicit reconciliation decision.
+ 
+-## Structural Principle
+-
+-Artifact progression in this project is stage-driven and specification-driven.
+-
+-New artifacts should appear because the pipeline has advanced through a justified stage transition, not because the framework happened to generate more files.
+-
+-The expected progression is:
+-
+-legacy evidence -> capability semantics -> canonical data boundary -> API contract -> adapter behavior -> semantic validation
+-
+-This progression should be visible both conceptually and structurally.
+-
+-## Top-Level Structural Layers
+-
+-### 1. Legacy Source Layer
+-
+-**Location**: `cobol-accounting-system/`  
+-**Purpose**: Contains the public COBOL accounting system used as a controlled proof-of-concept legacy artifact.
+-
+-This directory is the empirical source of evidence for the proof-of-concept stage.
+-Its contents should be treated primarily as observational material for reverse engineering, semantic reconstruction, and traceability.
+-
+-The default stance toward this directory is:
+-- read-only for legacy evidence purposes
+-- modifiable only when explicitly working on a derived proof-of-concept implementation layer
+-- never treated as if its file structure were the target modernization architecture
+-
+-**Typical contents**
+-- `*.cob` — COBOL source programs
+-- `README.md` — project description and contextual notes
+-- `TESTPLAN.md` — available behavior/testing guidance
+-- `node-accounting-app/` — auxiliary behavioral reference layer for proof-of-concept comparison or implementation support
+-
+-### 2. Specification Layer
+-
+-**Location**: `.sdd/specs/`  
+-**Purpose**: Contains the project’s specification artifacts, one spec directory per pipeline artifact or pipeline run.
+-
+-This is the most important research workspace of the project.
+-It is where the structured outputs of the methodology are formalized and advanced through the SDD phases.
+-
+-Specs in this project must follow the official artifact taxonomy rather than arbitrary feature naming.
+-
+-### 3. Steering Layer
+-
+-**Location**: `.sdd/steering/`  
+-**Purpose**: Contains project memory — stable methodological identity, project-level rules, structural logic, and stage-aware guidance.
+-
+-Steering files are read as global memory and should preserve:
+-- project identity
+-- artifact taxonomy
+-- stage boundaries
+-- evidence discipline
+-- semantic sequencing
+-- research constraints
+-
+-Steering is not a substitute for specs and should not become a duplicate of them.
+-
+-### 4. Framework Infrastructure Layer
+-
+-**Location**: `.sdd/settings/`  
+-**Purpose**: Contains templates, rules, and internal SDD framework support files.
+-
+-This directory is framework support, not authoritative project knowledge.
+-It may shape behavior, but the methodological truth of the project resides in the steering files and the generated specification artifacts.
+-
+-## Specification Directory Pattern
+-
+-### Spec Root
+-
+-**Location**: `.sdd/specs/[feature-name]/`
+-
+-Each spec directory represents a **single specification artifact or a single stage-oriented pipeline unit** for one candidate capability.
+-
+-In this project, spec directories should ideally reflect the artifact taxonomy explicitly.
+-
+-### Preferred naming convention
+-
+-Use:
+-
+-`[artifact-type]-[capability-name]`
+-
+-Examples:
+-- `pipeline-scope-account-balance`
+-- `capability-selection-account-balance`
+-- `legacy-evidence-account-balance`
+-- `capability-semantics-account-balance`
+-- `canonical-data-boundary-account-balance`
+-- `api-contract-account-balance`
+-- `adapter-behavior-account-balance`
+-- `semantic-validation-account-balance`
+-
+-This naming convention helps preserve:
+-- stage awareness
+-- single responsibility per spec
+-- capability-centered organization
+-- traceable progression across artifacts
+-
+-### Structural rule
+-
+-A spec directory should not silently accumulate multiple conceptual roles.
+-If a spec begins to mix:
+-- semantics
+-- contract
+-- implementation
+-- validation
+-- task orchestration
+-
+-then the structure is probably wrong and the artifact should be split.
+-
+-## Standard Spec Files
+-
+-Each spec directory may contain standard SDD files such as:
+-
+-- `spec.json` — metadata and phase tracking
+-- `requirements.md`
+-- `design.md`
+-- `tasks.md`
+-
+-These files must be interpreted according to the project’s research logic.
+-
+-For example:
+-- `requirements.md` in an early-stage spec may still be document-first and analytical
+-- `design.md` must not automatically imply implementation design
+-- `tasks.md` must remain stage-aware and must not collapse semantic and implementation work
+-
+-The presence of a standard filename does not override the intended methodological role of the spec.
+-
+-## Artifact Taxonomy Memory
+-
+-This project uses the following artifact taxonomy:
+-
+-1. Pipeline Scope Spec
+-2. Capability Selection Spec
+-3. Legacy Evidence Spec
+-4. Capability Semantics Spec
+-5. Canonical Data Boundary Spec
+-6. API Contract Spec
+-7. Adapter Behavior Spec
+-8. Semantic Validation Spec
+-
+-This taxonomy is the preferred backbone of `.sdd/specs/`.
+-
+-The structure should reinforce this sequence rather than hide it.
+-
+-## Artifact Lifecycle Pattern
+-
+-Each spec directory represents a controlled unit of methodological progress.
+-
+-A spec is expected to evolve through SDD phases, but that phase progression must remain aligned with the research stage the spec belongs to.
+-
+-The `spec.json` `phase` field may track framework progression, such as:
+-
+-`initialized` -> `requirements-generated` -> `requirements-approved` -> `design-generated` -> `design-approved` -> `tasks-generated` -> `tasks-approved` -> `ready-for-implementation`
+-
+-However, in this project, readiness for implementation must be interpreted in a stage-aware way.
+-
+-For example:
+-- a capability semantics spec may be "ready-for-implementation" only in the sense that it is ready to support the next specification stage, not necessarily code generation
+-- an API contract spec may be genuinely closer to implementation readiness
+-- an adapter behavior spec may more naturally support downstream implementation tasks
+-
+-The framework phase model must therefore be interpreted through the project’s research pipeline.
+-
+-## Structural Separation Rules
+-
+-The following separations must remain explicit in the structure:
+-
+-### Legacy vs Derived Artifacts
+-Legacy materials must remain distinguishable from:
+-- derived specifications
+-- generated code
+-- validation assets
+-- modernization outputs
+-
+-### Evidence vs Semantics
+-Evidence summaries and semantic reconstructions should not be silently merged without justification.
+-
+-### Semantics vs Contract
+-The canonical meaning of a capability must be stabilized before interface-level artifacts become authoritative.
+-
+-### Contract vs Adapter
+-The interface contract and the operational adaptation layer should remain distinguishable.
+-
+-### Research Artifacts vs Framework Metadata
+-Project reasoning must not be buried inside framework internals.
+-
+-## Naming Conventions
+-
+-- **Spec directories**: `[artifact-type]-[capability]` in kebab-case
+-- **COBOL programs**: preserve original repository naming and conventions
+-- **Derived Node.js or auxiliary implementation modules**: use project-appropriate naming, but do not let these become authoritative over spec artifacts
+-- **Spec artifact files**: use the framework’s standard filenames consistently, while preserving the intended role of each artifact
+-
+-Naming must support readability, stage clarity, and traceability.
+-
+-## Code and Artifact Organization Principles
+-
+-- Claims made in any downstream artifact must be traceable to specific legacy evidence or reviewed upstream specifications.
+-- Steering files must remain concise enough to be read as project memory in full.
+-- `.sdd/specs/` should grow in a controlled way, one justified artifact at a time.
+-- Early-stage specs should remain primarily document-first.
+-- Implementation-facing code must not become the main carrier of semantic truth before the corresponding specification artifacts are stabilized.
+-- Proof-of-concept implementation artifacts are acceptable, but they must remain clearly subordinate to the specification chain.
+-
+-## Proof-of-Concept Structure Reminder
+-
+-The public COBOL accounting repository is a proof-of-concept artifact, not the final institutional case.
+-
+-Its structural role is to:
+-- provide a controlled legacy input
+-- support early evidence extraction
+-- allow experimentation with the specification pipeline
+-- expose methodological issues before transfer to the institutional context
+-
+-This distinction should remain visible in how the project is structured and discussed.
+-
+-## Desired Structural Outcome
+-
+-A good project structure in this workspace should make it easy to see:
+-
+-- what is legacy evidence
+-- what is steering memory
+-- what is specification output
+-- what is framework support
+-- what stage each artifact belongs to
+-- how artifacts connect across the modernization pipeline
+-
+-If the structure makes the project look like a generic feature implementation tree, it is too weak.
+-If it makes the methodological pipeline visible and preserves artifact boundaries, it is working.
+-
+----
+-Document structural patterns and naming rules, not file inventories.+A changed approved upstream artifact invalidates dependent approvals until review. Record the exact input/output versions and reviewers, preserving prior drafts rather than rewriting their history.
+--- baseline/steering/tech.md
++++ pipeline/steering/tech.md
+@@ -1,250 +1,27 @@
+-# Technology Stack
++# Technical discipline
+ 
+-## Technology Philosophy
++## Separate layers
+ 
+-This project has three distinct technical layers that must remain conceptually separate:
++The legacy supplies observed behavior; the reviewed specifications record meaning and decisions; the wrapper exposes the contract; research instruments evaluate claims. None substitutes for the others.
+ 
+-1. **legacy technology** — the source of evidence and behavior under study
+-2. **proof-of-concept modernization technology** — the controlled environment used to instantiate and test parts of the pipeline
+-3. **specification infrastructure** — the tools and artifacts used to drive the research workflow
++Parser-agnostic means extraction may proceed without a parser, not without evidence. Static analysis may strengthen dependency/anchor recovery but cannot decide business meaning by itself.
+ 
+-The purpose of this separation is methodological clarity.
++## Runtime and tools are per-run decisions
+ 
+-The legacy system is not the modernization target architecture.
+-The proof-of-concept implementation is not automatically the semantic authority.
+-The specification pipeline is the primary mechanism that connects evidence, semantics, interface derivation, adaptation, and validation.
++Do not assume console I/O, singleton state, one process, Node.js, a specific model, RESTler, fixed ports or `.sdd/`. Record the actual compiler/runtime, storage, bindings and unavailable dependencies. Successful compilation does not establish successful execution or mainframe fidelity.
+ 
+-## Core Technical Position
++OpenAPI remains the preferred contract format, derived at stage 6. Select a compatible fuzzer in the run protocol, recording version, budget, seed support, actual stateful behavior and limits. An external fuzzer is independent tooling, not an independent business oracle.
+ 
+-This project is specification-driven and parser-agnostic by default.
++For the current local preparation, GnuCOBOL/gcov is the existing chain; no gcobol or emulation switch is implied by this revision. Instrumentation requirements belong to the run protocol, not assumed results in the framework.
+ 
+-That means:
+-- the research pipeline must work even when a dedicated parser is not yet part of the execution flow
+-- if parsing or static-analysis support is introduced later, it should strengthen evidence extraction, not replace the specification chain
+-- LLMs are used as assistants for extraction and structuring, not as authoritative semantic or validation oracles
++## Immutable legacy, explicit support
+ 
+-No API layer is assumed at the outset.
+-The API contract is a downstream artifact to be derived from stabilized semantics and canonical data boundaries.
++Keep source and copybooks unchanged. Data loaders, reset, wrappers and runtime shims live outside the corpus. Support must not calculate missing business outcomes, compensate partial effects, invent rollback, or silently retry non-idempotent operations.
+ 
+-## Legacy Immutability Position
++Preserve raw outputs and state evidence; any normalization is declared before comparison. A process restart is not proof that persistent files were reset. A response is not proof that the process exited normally or counters were flushed.
+ 
+-The legacy COBOL code is not modified by the modernization process.
++## Reproducibility
+ 
+-- Modernization adds a wrapper layer on top of the unmodified legacy core; in the proof of concept this is realized through a Node.js-to-COBOL binding that executes the legacy code directly.
+-- Business rules implemented inside the legacy core are exercised through the wrapper, not reimplemented in the modern layer.
+-- Defects found in the legacy code are research findings to be documented and reported, not silently fixed (see `settings/rules/legacy-code-policy.md` for the full policy, including the proof-of-concept vs institutional distinction).
+-- Whether a given legacy system can be wrapped without modification is itself a research question; obstacles to wrapping must be recorded as findings.
++Resolve `FRAMEWORK_ROOT`, `RUN_ROOT` and `CORPUS_ROOT` at run setup. Record permitted inputs, source hashes, model requested/reported, configuration actually supported, raw outputs, timestamps, attempt identity and review changes. Unavailable tokens/cost remain unavailable, not zero. Tokens and human effort are separate measures.
+ 
+-## Legacy Artifact Layer
+-
+-### Source Language
+-- **Language**: COBOL
+-- **Target context**: legacy-system understanding and capability extraction
+-- **Current proof-of-concept artifact**: a public COBOL accounting repository used as a controlled legacy input
+-
+-### Structural Characteristics
+-The proof-of-concept COBOL system is treated as a small but useful legacy artifact that exposes:
+-- multiple cooperating source files
+-- procedural logic
+-- data-oriented program structure
+-- observable operations over a shared domain concept
+-
+-### Execution Characteristics
+-- interactive console-oriented execution
+-- single-process behavior in the public proof of concept
+-- simplified persistence/state model relative to enterprise COBOL environments
+-
+-This proof-of-concept legacy artifact is useful because it allows the methodology to be exercised in a controlled environment before being applied to institutional material with more complex dependencies.
+-
+-### Evidence Role
+-The legacy layer serves as:
+-- the source of code evidence
+-- the basis for capability identification
+-- the basis for semantic reconstruction
+-- the source against which downstream artifacts must remain traceable
+-
+-It must not be treated as a direct blueprint for modern interface design.
+-
+-## Proof-of-Concept Modernization Layer
+-
+-### Current Language and Runtime
+-- **Language**: JavaScript
+-- **Runtime**: Node.js
+-
+-### Current Role
+-The Node.js layer is currently part of the proof-of-concept environment.
+-Its role is not to define the modernization architecture in advance, but to provide:
+-- an execution-friendly environment for controlled experimentation
+-- a candidate adaptation or comparison surface
+-- a practical environment for testing and validation-related work
+-
+-### Important Constraint
+-The Node.js implementation or reference behavior must not become the primary semantic authority of the project.
+-
+-The authoritative chain remains:
+-
+-legacy evidence -> capability semantics -> canonical data boundary -> API contract -> adapter behavior -> semantic validation
+-
+-If Node.js artifacts are used in validation or prototyping, they remain subordinate to that chain.
+-
+-### Current Technical Characteristics
+-- no required web framework at the start
+-- possible use of simple runtime interfaces for proof-of-concept behavior
+-- implementation choices should remain lightweight until the contract layer is mature
+-- adapter-facing or API-facing code should only emerge after the corresponding specification artifacts exist
+-
+-## Specification Infrastructure Layer
+-
+-### Workflow Framework
+-- **Framework**: Spec-Driven Development (SDD)
+-- **Workspace structure**: `.sdd/`
+-- **Main directories**:
+-  - `.sdd/steering/`
+-  - `.sdd/specs/`
+-  - `.sdd/settings/`
+-
+-### AI Tooling
+-- **Primary tooling**: assistant Code / assistant Sonnet in slash-command workflow
+-- **Role of AI**:
+-  - assist evidence extraction
+-  - support semantic organization
+-  - support derivation of downstream artifacts
+-  - assist review, gap identification, and staged tasking
+-
+-AI tooling must not be treated as a substitute for evidence, semantic review, or explicit stage control.
+-
+-### Specification Artifacts
+-The project uses an ordered family of specification artifacts, including:
+-- Pipeline Scope
+-- Capability Selection
+-- Legacy Evidence
+-- Capability Semantics
+-- Canonical Data Boundary
+-- API Contract
+-- Adapter Behavior
+-- Semantic Validation
+-
+-These artifacts are the main carriers of project knowledge across the pipeline.
+-
+-### Language Policy
+-Artifact content is written in the language configured by `spec.json.language`, but conceptual reasoning and internal workflow guidance may remain English-first if that improves consistency.
+-
+-## Parsing and Static-Analysis Position
+-
+-At the current stage, the project does not require a parser as a mandatory prerequisite for the methodology to function.
+-
+-However, the project is compatible with parser-assisted or static-analysis-assisted evolution later.
+-
+-If introduced, parser or static-analysis support should primarily strengthen:
+-
+-- structural evidence extraction
+-- dependency mapping
+-- artifact segmentation
+-- identification of likely inputs and outputs
+-- traceability back to source artifacts
+-
+-Parser support should not collapse the distinction between:
+-- structural evidence
+-- semantic interpretation
+-- specification artifacts
+-
+-## API and Contract Position
+-
+-No API implementation technology should be treated as fixed before the contract stage.
+-
+-This project explicitly avoids premature commitment to:
+-- web framework choice
+-- route/controller structure
+-- transport-layer conventions
+-- public execution surface
+-
+-The correct order is:
+-1. reconstruct semantics
+-2. stabilize canonical data boundary
+-3. derive API contract
+-4. define adapter behavior
+-5. only then allow implementation-oriented decisions
+-
+-This rule is more important than framework convenience.
+-
+-Once the contract stage is reached, **OpenAPI is the preferred representation format** for the derived contract, because it is reviewable, standard, and directly consumable by test-generation and fuzzing tooling.
+-
+-## Validation Technology Position
+-
+-Validation in this project may draw on multiple technical mechanisms depending on stage maturity and available artifacts, including:
+-
+-- existing tests from the proof-of-concept environment
+-- controlled reference executions
+-- comparison of observed input/output behavior
+-- review of generated semantic artifacts
+-- integration tests for derived contracts or adapters
+-
+-Validation is not treated as merely "the test suite."
+-It is a broader technical activity aimed at assessing adherence to observed or reference behavior.
+-
+-### Test-suite-centered mechanisms
+-
+-The derived test suite is the central validation artifact and a transferable output: it is designed to be re-run against a future reimplementation exposed through the same API.
+-
+-Candidate expansion mechanisms discussed for strengthening test-based confidence:
+-- LLM-derived automated tests against the contract (baseline mechanism)
+-- property-based testing to generate large input masses
+-- stateful API fuzzing to explore the surface beyond designed scenarios — potentially exposing long-standing defects in the legacy code itself
+-- selectively designed manual tests, as a deliberate complement
+-
+-**Preferred fuzzing tool: RESTler** (`github.com/microsoft/restler-fuzzer`), Microsoft Research's stateful REST API fuzzer — the "Microsoft fuzzing" work the advisor referenced. It is a strong fit because it consumes an OpenAPI specification directly (reinforcing the choice of OpenAPI at stage 6), infers request dependencies to reach deeper stateful behavior, and flags HTTP 500s plus checker-based issues (resource leaks, hierarchy violations) with replayable logs. In this project RESTler is an exploratory validation mechanism at stage 8: findings on the exposed surface strengthen behavioral confidence, and any latent legacy defect it surfaces becomes a defect report under `settings/rules/legacy-code-policy.md`, never a silent fix. RESTler complements, and does not replace, the upstream-anchored scenario suite; its results are exploratory until formalized as anchored scenarios.
+-
+-These mechanisms explore the limits of test-based validation; none of them upgrades the claim level from behavioral confidence to formal guarantee.
+-
+-### Cost observability
+-
+-Future pipeline runs should collect execution cost metrics — at minimum, token consumption per stage — so the research study can discuss the economic viability of the approach. Cost measurement was a recognized limitation of the first proof-of-concept run.
+-
+-## Key Technical Decisions
+-
+-### 1. Specification-first, implementation-later
+-Technology choices must not overtake artifact maturity.
+-
+-### 2. Document-first early stages
+-Early stages should primarily produce structured documents, not implementation architecture.
+-
+-### 3. Parser-agnostic, parser-compatible
+-The methodology should function without requiring a parser, while remaining open to parser-assisted strengthening later.
+-
+-### 4. Contract derivation before API implementation
+-The API must be derived from stabilized semantic artifacts, not inferred casually from the proof-of-concept runtime.
+-
+-### 5. Controlled proof-of-concept implementation
+-Implementation artifacts generated in the public proof-of-concept stage are acceptable, but they are exploratory unless grounded in the corresponding specification stages.
+-
+-### 6. Validation grounded in behavior
+-Technical validation should remain tied to observed or reference behavior, not merely to generated code structure.
+-
+-## Development Environment
+-
+-### Required Tools
+-- Node.js and npm
+-- assistant Code / SDD workflow tooling
+-- optional COBOL toolchain support when direct execution of the legacy artifact is needed
+-- optional test tooling for proof-of-concept execution and validation
+-
+-### Common Working Context
+-The most common working environments in this project are:
+-- the public proof-of-concept repository
+-- the `.sdd/` specification workspace
+-- steering-guided generation and review sessions
+-
+-### Practical Command Context
+-Command usage may evolve during the project and should not be over-specified in steering unless the commands reflect a stable methodological pattern.
+-
+-Only stable, recurring commands with clear methodological value should be preserved as project memory.
+-
+-## Scope Reminder
+-
+-This file documents stable technical context and stage-aware technology decisions.
+-
+-It should not become:
+-- an exhaustive dependency inventory
+-- a full implementation manual
+-- a substitute for spec artifacts
+-- a prematurely fixed architecture document+No LLM, server or COBOL execution is triggered merely by copying this framework or running its mechanical anchor tests.
+--- baseline/tools/README.md
++++ pipeline/tools/README.md
+@@ -0,0 +1,31 @@
++# Mechanical source-anchor verifier
++
++Python standard library only. No models, COBOL execution, network, writes to corpus, or automatic human approval.
++
++From FRAMEWORK_ROOT:
++
++    python3 tools/check_anchors.py CORPUS_ROOT manifest.json anchors.json
++
++Inputs are explicit paths. The manifest is a projection of the approved source allowlist, NOT a new corpus selection. Supply only source/text dependencies authorized for source anchoring. Source bytes must match before their locations can support a mechanical pass.
++
++Manifest shape:
++
++    {"files": [{"path": "cbl/main.cbl", "sha256": "<64 lowercase hex>", "encoding": "utf-8"}]}
++
++Register shape:
++
++    {"items": [{"id": "E-1", "spec_section": "Section 2.1",
++      "anchors": [{"path": "cbl/main.cbl", "start": 1, "end": 2}]}]}
++
++These are format illustrations, not usable evidence or hashes. The tests create explicitly synthetic files and compute real hashes at execution time. No sample here is an AWS answer.
++
++Paths are POSIX relative paths, exact and case-preserved; no leading slash, empty/dot/dot-dot segments, backslashes, colon or NUL. Full paths distinguish homonymous files. Symlinks in the corpus root or entry components are rejected. Hashes must already be valid lowercase SHA-256 strings: the tool does not repair them. Encoding defaults to strict UTF-8; a different encoding must be declared. A trailing newline does not create an extra source line.
++
++Every item has a unique E-n (positive integer, no leading zero), a nonempty spec section and at least one explicit source anchor. The tool validates membership, bytes and ranges; it does not parse Markdown, check that spec_section exists, prove that every evidence item is registered, or judge meaning. Reconcile the structured register against the authoritative spec during human review. Do not convert execution evidence to fictitious source lines: run/log anchors remain separate.
++
++JSON output contains ok, errors, evidence_checked and human_approval=false. Exit 0 means only mechanical success; exit 1 means data/anchor failure. CLI usage errors use argparse's exit 2. This is not an operating-system sandbox against a concurrent process swapping files, nor a verifier of the manifest's authorization/signature.
++
++Run regressions from the workspace parent:
++
++    python3 -m unittest discover -s tests -v
++    PYTHONOPTIMIZE=1 python3 -m unittest discover -s tests -v
+--- baseline/tools/check_anchors.py
++++ pipeline/tools/check_anchors.py
+@@ -0,0 +1,102 @@
++"""Mechanical source anchoring only. Never grants human gate approval."""
++import argparse
++import hashlib
++import json
++import re
++from pathlib import Path
++
++
++def validate_register(register):
++    if not isinstance(register, dict) or not isinstance(register.get('items'), list) or not register['items']:
++        raise ValueError('nonempty items list required')
++    seen = set()
++    for item in register['items']:
++        if not isinstance(item, dict):
++            raise ValueError('evidence entry must be an object')
++        eid = item.get('id')
++        if not isinstance(eid, str) or not re.fullmatch(r'E-[1-9][0-9]*', eid) or eid in seen:
++            raise ValueError('invalid or duplicate evidence identifier')
++        seen.add(eid)
++        if not isinstance(item.get('spec_section'), str) or not item['spec_section'].strip():
++            raise ValueError('spec_section required')
++        if not isinstance(item.get('anchors'), list) or not item['anchors']:
++            raise ValueError('nonempty anchors required')
++        for anchor in item['anchors']:
++            if (not isinstance(anchor, dict) or not isinstance(anchor.get('path'), str)
++                    or type(anchor.get('start')) is not int or type(anchor.get('end')) is not int):
++                raise ValueError('anchor requires path and integer start/end')
++
++
++def relative_name(value):
++    if (not isinstance(value, str) or not value or '\\' in value or ':' in value
++            or '\x00' in value or any(part in ('', '.', '..') for part in value.split('/'))):
++        raise ValueError('invalid corpus-relative path')
++    return value
++
++
++def load_sources(corpus, manifest):
++    if not isinstance(manifest, dict) or not isinstance(manifest.get('files'), list) or not manifest['files']:
++        raise ValueError('nonempty manifest files required')
++    if corpus.is_symlink() or not corpus.is_dir():
++        raise ValueError('corpus must be a real directory')
++    root = corpus.resolve()
++    approved = {}
++    for entry in manifest['files']:
++        if not isinstance(entry, dict):
++            raise ValueError('manifest entry must be an object')
++        name = relative_name(entry.get('path'))
++        sha = entry.get('sha256')
++        if not isinstance(sha, str) or not re.fullmatch(r'[0-9a-f]{64}', sha):
++            raise ValueError('sha256 must be 64 lowercase hex characters')
++        if name in approved:
++            raise ValueError('duplicate manifest path: ' + name)
++        path = root
++        for part in name.split('/'):
++            path = path / part
++            if path.is_symlink():
++                raise ValueError('symlink forbidden: ' + name)
++        path.resolve().relative_to(root)
++        if not path.is_file():
++            raise ValueError('missing source file: ' + name)
++        approved[name] = (path, sha, entry.get('encoding', 'utf-8'))
++    sources, errors = {}, []
++    for name, (path, sha, encoding) in approved.items():
++        raw = path.read_bytes()
++        if hashlib.sha256(raw).hexdigest() != sha:
++            errors.append('source hash mismatch: ' + name)
++        sources[name] = raw.decode(encoding).splitlines()
++    return sources, errors
++
++
++def check(corpus, manifest, register):
++    validate_register(register)
++    sources, errors = load_sources(corpus, manifest)
++    for item in register['items']:
++        for anchor in item['anchors']:
++            relative_name(anchor['path'])
++            lines = sources.get(anchor['path'])
++            if lines is None:
++                errors.append('anchor outside manifest: ' + anchor['path'])
++            elif not 1 <= anchor['start'] <= anchor['end'] <= len(lines):
++                errors.append('anchor range out of bounds: ' + item['id'])
++    return {'ok': not errors, 'errors': errors,
++            'evidence_checked': len(register['items']), 'human_approval': False}
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('corpus', type=Path)
++    parser.add_argument('manifest', type=Path)
++    parser.add_argument('register', type=Path)
++    args = parser.parse_args()
++    try:
++        result = check(args.corpus, json.loads(args.manifest.read_text()),
++                       json.loads(args.register.read_text()))
++    except (ValueError, OSError, KeyError, TypeError, LookupError) as exc:
++        result = {'ok': False, 'errors': [str(exc)], 'evidence_checked': 0, 'human_approval': False}
++    print(json.dumps(result, ensure_ascii=False, indent=2))
++    return 0 if result['ok'] else 1
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())

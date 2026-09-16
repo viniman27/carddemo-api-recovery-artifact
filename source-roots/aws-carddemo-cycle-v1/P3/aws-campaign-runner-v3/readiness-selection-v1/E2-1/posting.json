@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-1",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-1",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "T1-POST-001",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "e997f27242f3a80b72aedd1daed6481d2cc992cc9dceac9cc60517fc619885d2",
+        "sourceScenarioCanonicalSha256": "a89b606e64b2c1a2b639676d107a15e8367621f9297246e674955fe93677c61b",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-1:T1-POST-001",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-1/T1.json:T1-REAL-E2-1-E2-1-T1-POST-001"
+      ],
+      "request": {
+        "body_b64": "eyJkYWlseVRyYW5zYWN0aW9ucyI6W3sidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwMDAwMDAwMDEiLCJ0eXBlQ29kZSI6IjAxIiwiY2F0ZWdvcnlDb2RlIjoiMDAwNSIsInNvdXJjZSI6IlQxIiwiZGVzY3JpcHRpb24iOiJFbnRyYWRhIiwiYW1vdW50IjoxLjI1LCJtZXJjaGFudElkIjoiMDAwMDAwMDAxIiwibWVyY2hhbnROYW1lIjoiTSIsIm1lcmNoYW50Q2l0eSI6IkMiLCJtZXJjaGFudFppcCI6IjAwMDAwIiwiY2FyZE51bWJlciI6IjAwMDAwMDAwMDAwMDAwMDEiLCJvcmlnaW5hbFRpbWVzdGFtcCI6IjIwMjItMDEtMDEiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiIn1dfQ==",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E2-1-posting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "a7e409e40c52eb6a66ca6911fcb26f8da8c061b4334c2bfeee944310745072ec",
+  "suite_id": "READINESS21-E2-1-posting"
+}

@@ -1,0 +1,58 @@
+{
+  "acceptedCount": 1,
+  "blocked": [],
+  "blockedCount": 0,
+  "contractId": "C1",
+  "freeze": {
+    "loadedCases": 1,
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-campaign-adapter-v1/evidence/synthetic-freeze/T3-synthetic.json"
+  },
+  "inconclusive": [],
+  "inconclusiveCount": 0,
+  "kind": "t3-campaign-adapter-v1-build-report",
+  "limitations": [
+    "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+    "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+    "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+  ],
+  "officialCampaign": false,
+  "selectionPlan": {
+    "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+    "budgets": {
+      "maxDepth": 2,
+      "maxPathsPerCapability": 5
+    },
+    "capabilities": [
+      "CAP-A"
+    ],
+    "omissions": [],
+    "transitionCount": 1,
+    "traversalSummaries": {
+      "CAP-A": {
+        "budget": {
+          "maxDepth": 2,
+          "maxPaths": 5
+        },
+        "completed": 1,
+        "frontier": 0,
+        "loopVisits": {},
+        "omittedCount": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "status": "candidate_not_official",
+  "traversalSummaries": {
+    "CAP-A": {
+      "budget": {
+        "maxDepth": 2,
+        "maxPaths": 5
+      },
+      "completed": 1,
+      "frontier": 0,
+      "loopVisits": {},
+      "omittedCount": 0,
+      "unknown": 0
+    }
+  }
+}

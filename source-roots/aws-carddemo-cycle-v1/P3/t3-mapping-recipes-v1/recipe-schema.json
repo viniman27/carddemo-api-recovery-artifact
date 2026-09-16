@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "kind": {
+      "const": "t3-mapping-recipes-v1"
+    },
+    "officialCampaign": {
+      "const": false
+    },
+    "recipes": {
+      "items": {
+        "properties": {
+          "officialCampaign": {
+            "const": false
+          },
+          "operation": {
+            "required": [
+              "method",
+              "path"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "recipeId",
+          "contractId",
+          "track",
+          "operation",
+          "requestBody",
+          "officialCampaign"
+        ],
+        "type": "object"
+      },
+      "maxItems": 21,
+      "minItems": 21,
+      "type": "array"
+    }
+  },
+  "required": [
+    "kind",
+    "recipes",
+    "officialCampaign"
+  ],
+  "type": "object"
+}

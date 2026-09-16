@@ -1,0 +1,1077 @@
+{
+  "cases": [
+    {
+      "case_id": "CROSSARM-E1-1-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-1",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/posting-runs",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-1:posting"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6InAzOnBvc3Rpbmc6QUNDVEZJTEUiLCJjYXRlZ29yeUJhbGFuY2VGaWxlIjoicDM6cG9zdGluZzpUQ0FUQkFMRiIsImNyb3NzUmVmZXJlbmNlRmlsZSI6InAzOnBvc3Rpbmc6WFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInJlamVjdEZpbGUiOiJwMzpwb3N0aW5nOkRBTFlSRUpTIiwidHJhbnNhY3Rpb25GaWxlIjoicDM6cG9zdGluZzpUUkFORklMRSJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-1-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-1",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-runs",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-1:interest"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6InAzOmludGVyZXN0OkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6InAzOmludGVyZXN0OlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoicDM6aW50ZXJlc3Q6WFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoicDM6aW50ZXJlc3Q6RElTQ0dSUCIsIm91dHB1dFRyYW5zYWN0aW9uRmlsZSI6InAzOmludGVyZXN0OlRSQU5TQUNUIiwicGFyYW1ldGVyRGF0ZSI6IjIwMjIwNzE4MDAiLCJwYXJhbWV0ZXJMZW5ndGgiOjEwfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-1-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-1",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-report-runs",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-1:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJjcm9zc1JlZmVyZW5jZUZpbGUiOiJwMzpyZXBvcnRpbmc6Q0FSRFhSRUYiLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyIyMDIyLTA3LTAxIDIwMjItMDctMzEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJdLCJyZXBvcnRGaWxlIjoicDM6cmVwb3J0aW5nOlRSQU5SRVBUIiwidHJhbnNhY3Rpb25DYXRlZ29yeUZpbGUiOiJwMzpyZXBvcnRpbmc6VFJBTkNBVEciLCJ0cmFuc2FjdGlvblR5cGVGaWxlIjoicDM6cmVwb3J0aW5nOlRSQU5UWVBFIiwidHJhbnNhY3Rpb25zIjpbeyJyZWNvcmRCYXNlNjQiOiJVa1ZRVDFKVUxVbE9MUzB0TURBeElEQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURFeU1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFF4TVRFeE1URXhNVEV4TVRFeE1URXlNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifSx7InJlY29yZEJhc2U2NCI6IlVrVlFUMUpVTFU5VlZDMHRNREF4SURBeE1EQXdOVWx1ZEdWeWJtVjBJQ0JqWVc1a2FXUmhkR1VnY0hWeVkyaGhjMlVnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTURBd01EQXdNRE0wTURBeE1qTTBOVFkzT0RsR2FYaDBkWEpsSUUxbGNtTm9ZVzUwSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJRUp5WVhOcGJHbGhJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ056QXdNREF3TURBZ0lEUXhNVEV4TVRFeE1URXhNVEV4TVRFeU1ESXlMVEE0TFRBeExURXdMakF3TGpBd0xqQXdNREF3TURJd01qSXRNRGd0TURFdE1UQXVNRFV1TURBdU1EQXdNREF3SUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBPSJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-2-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-2",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/transaction-postings",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-2:posting"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6InAzOnBvc3Rpbmc6QUNDVEZJTEUiLCJjYXRlZ29yeUJhbGFuY2VGaWxlIjoicDM6cG9zdGluZzpUQ0FUQkFMRiIsImNyb3NzUmVmZXJlbmNlRmlsZSI6InAzOnBvc3Rpbmc6WFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6InAzOnBvc3Rpbmc6VFJBTkZJTEUifQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-2-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-2",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-transactions",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-2:interest"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6InAzOmludGVyZXN0OkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6InAzOmludGVyZXN0OlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoicDM6aW50ZXJlc3Q6WFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoicDM6aW50ZXJlc3Q6RElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-2-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-2",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-reports",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-2:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJjcm9zc1JlZmVyZW5jZUZpbGUiOiJwMzpyZXBvcnRpbmc6Q0FSRFhSRUYiLCJkYXRlUGFyYW1ldGVycyI6WyIyMDIyLTA3LTAxIDIwMjItMDctMzEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJdLCJ0cmFuc2FjdGlvbkNhdGVnb3J5RmlsZSI6InAzOnJlcG9ydGluZzpUUkFOQ0FURyIsInRyYW5zYWN0aW9uVHlwZUZpbGUiOiJwMzpyZXBvcnRpbmc6VFJBTlRZUEUiLCJ0cmFuc2FjdGlvbnMiOlt7InJlY29yZEJhc2U2NCI6IlVrVlFUMUpVTFVsT0xTMHRNREF4SURBeE1EQXdOVWx1ZEdWeWJtVjBJQ0JqWVc1a2FXUmhkR1VnY0hWeVkyaGhjMlVnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTURBd01EQXdNREV5TURBeE1qTTBOVFkzT0RsR2FYaDBkWEpsSUUxbGNtTm9ZVzUwSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJRUp5WVhOcGJHbGhJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ056QXdNREF3TURBZ0lEUXhNVEV4TVRFeE1URXhNVEV4TVRFeU1ESXlMVEEzTFRBMUxURXdMakF3TGpBd0xqQXdNREF3TURJd01qSXRNRGN0TURVdE1UQXVNRFV1TURBdU1EQXdNREF3SUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBPSJ9LHsicmVjb3JkQmFzZTY0IjoiVWtWUVQxSlVMVTlWVkMwdE1EQXhJREF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ETTBNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTRMVEF4TFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EZ3RNREV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In1dfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-3-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-3",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/transaction-postings",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-3:posting"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50cyI6InAzOnBvc3Rpbmc6QUNDVEZJTEUiLCJjYXJkQ3Jvc3NSZWZlcmVuY2UiOiJwMzpwb3N0aW5nOlhSRUZGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlcyI6InAzOnBvc3Rpbmc6VENBVEJBTEYiLCJkYWlseVRyYW5zYWN0aW9ucyI6WyJVRTlUVkMxUVVrVlRSVTVVTFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURFeU1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFF4TVRFeE1URXhNVEV4TVRFeE1URXlNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0iLCJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0iXSwicmVqZWN0aW9uT3V0cHV0IjoicDM6cG9zdGluZzpEQUxZUkVKUyIsInRyYW5zYWN0aW9uT3V0cHV0IjoicDM6cG9zdGluZzpUUkFORklMRSJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-3-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-3",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-transaction-generations",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-3:interest"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50cyI6InAzOmludGVyZXN0OkFDQ1RGSUxFIiwiY2FyZENyb3NzUmVmZXJlbmNlIjoicDM6aW50ZXJlc3Q6WFJFRkZJTEUiLCJjYXRlZ29yeUJhbGFuY2VzIjoicDM6aW50ZXJlc3Q6VENBVEJBTEYiLCJkaXNjbG9zdXJlR3JvdXBzIjoicDM6aW50ZXJlc3Q6RElTQ0dSUCIsInRyYW5zYWN0aW9uSWRQcmVmaXgiOiIyMDIyMDcxODAwIiwidHJhbnNhY3Rpb25PdXRwdXQiOiJwMzppbnRlcmVzdDpUUkFOU0FDVCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E1-3-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "zero-shot",
+        "contractId": "E1-3",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-reports",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E1-3:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJjYXJkQ3Jvc3NSZWZlcmVuY2UiOiJwMzpyZXBvcnRpbmc6Q0FSRFhSRUYiLCJkYXRlUGFyYW1ldGVyUmVjb3JkcyI6WyJNakF5TWkwd055MHdNU0F5TURJeUxUQTNMVE14SUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0iXSwicmVwb3J0T3V0cHV0IjoicDM6cmVwb3J0aW5nOlRSQU5SRVBUIiwidHJhbnNhY3Rpb25DYXRlZ29yaWVzIjoicDM6cmVwb3J0aW5nOlRSQU5DQVRHIiwidHJhbnNhY3Rpb25UeXBlcyI6InAzOnJlcG9ydGluZzpUUkFOVFlQRSIsInRyYW5zYWN0aW9ucyI6WyJVa1ZRVDFKVUxVbE9MUzB0TURBeElEQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURFeU1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFF4TVRFeE1URXhNVEV4TVRFeE1URXlNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0iLCJVa1ZRVDFKVUxVOVZWQzB0TURBeElEQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFF4TVRFeE1URXhNVEV4TVRFeE1URXlNREl5TFRBNExUQXhMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURndE1ERXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0iXX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-1-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-1",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/transaction-postings",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-1:posting"
+      ],
+      "request": {
+        "body_b64": "eyJkYWlseVRyYW5zYWN0aW9ucyI6W3sidHJhbnNhY3Rpb25JZCI6IlBPU1QtUFJFU0VOVC0wMDEiLCJ0eXBlQ29kZSI6IjAxIiwiY2F0ZWdvcnlDb2RlIjoiMDAwNSIsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MTIuMCwibWVyY2hhbnRJZCI6IjEyMzQ1Njc4OSIsIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCJ9LHsidHJhbnNhY3Rpb25JZCI6IlBPU1QtQUJTRU5ULS0wMDEiLCJ0eXBlQ29kZSI6IjAxIiwiY2F0ZWdvcnlDb2RlIjoiMDAwNSIsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6IjEyMzQ1Njc4OSIsIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0OTk5OTk5OTk5OTk5OTk5Iiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-1-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-1",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-transaction-generations",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-1:interest"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-1-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-1",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-reports",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-1:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJSRVBPUlQtSU4tLS0wMDEgIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6IjAwMDUiLCJzb3VyY2UiOiJJbnRlcm5ldCAgIiwiZGVzY3JpcHRpb24iOiJjYW5kaWRhdGUgcHVyY2hhc2UiLCJhbW91bnQiOjEyLjAsIm1lcmNoYW50SWQiOiIxMjM0NTY3ODkiLCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAifSx7InRyYW5zYWN0aW9uSWQiOiJSRVBPUlQtT1VULS0wMDEgIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6IjAwMDUiLCJzb3VyY2UiOiJJbnRlcm5ldCAgIiwiZGVzY3JpcHRpb24iOiJjYW5kaWRhdGUgcHVyY2hhc2UiLCJhbW91bnQiOjM0LjAsIm1lcmNoYW50SWQiOiIxMjM0NTY3ODkiLCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wNS4wMC4wMDAwMDAifV0sImRhdGVQYXJhbWV0ZXJSZWNvcmRzIjpbIjIwMjItMDctMDEgMjAyMi0wNy0zMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIl19",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-2-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-2",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/transaction-posting-runs",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-2:posting"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJhY2NvdW50cyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjphY2NvdW50cyIsImNhdGVnb3J5QmFsYW5jZXMiOiJwMy1sb2NhbC10ZWNobmljYWwtZml4dHVyZS1zZWxlY3Rpb246Y2F0ZWdvcnlCYWxhbmNlcyIsImNyb3NzUmVmZXJlbmNlcyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjpjcm9zc1JlZmVyZW5jZXMiLCJyZWplY3Rpb25PdXRwdXQiOiJwMy1sb2NhbC10ZWNobmljYWwtZml4dHVyZS1zZWxlY3Rpb246cmVqZWN0aW9uT3V0cHV0IiwidHJhbnNhY3Rpb25PdXRwdXQiOiJwMy1sb2NhbC10ZWNobmljYWwtZml4dHVyZS1zZWxlY3Rpb246dHJhbnNhY3Rpb25PdXRwdXQifSwidHJhbnNhY3Rpb25zIjpbeyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1QUkVTRU5ULTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MTIuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9LHsidHJhbnNhY3Rpb25JZCI6IlBPU1QtQUJTRU5ULS0wMDEiLCJ0eXBlQ29kZSI6IjAxIiwiY2F0ZWdvcnlDb2RlIjo1LCJzb3VyY2UiOiJJbnRlcm5ldCAgIiwiZGVzY3JpcHRpb24iOiJjYW5kaWRhdGUgcHVyY2hhc2UiLCJhbW91bnQiOjM0LjAsIm1lcmNoYW50SWQiOjEyMzQ1Njc4OSwibWVyY2hhbnROYW1lIjoiRml4dHVyZSBNZXJjaGFudCIsIm1lcmNoYW50Q2l0eSI6IkJyYXNpbGlhIiwibWVyY2hhbnRaaXAiOiI3MDAwMDAwMCAgIiwiY2FyZE51bWJlciI6IjQ5OTk5OTk5OTk5OTk5OTkiLCJvcmlnaW5hbFRpbWVzdGFtcCI6IjIwMjItMDctMDUtMTAuMDAuMDAuMDAwMDAwIiwicHJvY2Vzc2luZ1RpbWVzdGFtcCI6IjIwMjItMDctMDUtMTAuMDUuMDAuMDAwMDAwIiwiZmlsbGVyIjoiICAgICAgICAgICAgICAgICAgICAifV19",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-2-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-2",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-generation-runs",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-2:interest"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJhY2NvdW50cyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjphY2NvdW50cyIsImNhdGVnb3J5QmFsYW5jZXMiOiJwMy1sb2NhbC10ZWNobmljYWwtZml4dHVyZS1zZWxlY3Rpb246Y2F0ZWdvcnlCYWxhbmNlcyIsImNyb3NzUmVmZXJlbmNlcyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjpjcm9zc1JlZmVyZW5jZXMiLCJkaXNjbG9zdXJlR3JvdXBzIjoicDMtbG9jYWwtdGVjaG5pY2FsLWZpeHR1cmUtc2VsZWN0aW9uOmRpc2Nsb3N1cmVHcm91cHMiLCJ0cmFuc2FjdGlvbk91dHB1dCI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjp0cmFuc2FjdGlvbk91dHB1dCJ9LCJwYXJhbWV0ZXJEYXRlIjoiMjAyMjA3MTgwMCIsInBhcmFtZXRlckxlbmd0aCI6MTB9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-2-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-2",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-report-runs",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "t3-binding-closure-v1-amended-case",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-2:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJjcm9zc1JlZmVyZW5jZXMiOiJwMy1sb2NhbC10ZWNobmljYWwtZml4dHVyZS1zZWxlY3Rpb246Y3Jvc3NSZWZlcmVuY2VzIiwicmVwb3J0T3V0cHV0IjoicDMtbG9jYWwtdGVjaG5pY2FsLWZpeHR1cmUtc2VsZWN0aW9uOnJlcG9ydE91dHB1dCIsInRyYW5zYWN0aW9uQ2F0ZWdvcmllcyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjp0cmFuc2FjdGlvbkNhdGVnb3JpZXMiLCJ0cmFuc2FjdGlvblR5cGVzIjoicDMtbG9jYWwtdGVjaG5pY2FsLWZpeHR1cmUtc2VsZWN0aW9uOnRyYW5zYWN0aW9uVHlwZXMifSwiZGF0ZVBhcmFtZXRlclJlY29yZHMiOlsiMjAyMi0wNy0wMSAyMDIyLTA3LTMxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiXSwidHJhbnNhY3Rpb25zIjpbeyJ0cmFuc2FjdGlvbklkIjoiUkVQT1JULUlOLS0tMDAxICIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MTIuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9LHsidHJhbnNhY3Rpb25JZCI6IlJFUE9SVC1PVVQtLTAwMSAiLCJ0eXBlQ29kZSI6IjAxIiwiY2F0ZWdvcnlDb2RlIjo1LCJzb3VyY2UiOiJJbnRlcm5ldCAgIiwiZGVzY3JpcHRpb24iOiJjYW5kaWRhdGUgcHVyY2hhc2UiLCJhbW91bnQiOjM0LjAsIm1lcmNoYW50SWQiOjEyMzQ1Njc4OSwibWVyY2hhbnROYW1lIjoiRml4dHVyZSBNZXJjaGFudCIsIm1lcmNoYW50Q2l0eSI6IkJyYXNpbGlhIiwibWVyY2hhbnRaaXAiOiI3MDAwMDAwMCAgIiwiY2FyZE51bWJlciI6IjQxMTExMTExMTExMTExMTEiLCJvcmlnaW5hbFRpbWVzdGFtcCI6IjIwMjItMDgtMDEtMTAuMDAuMDAuMDAwMDAwIiwicHJvY2Vzc2luZ1RpbWVzdGFtcCI6IjIwMjItMDgtMDEtMTAuMDUuMDAuMDAwMDAwIiwiZmlsbGVyIjoiICAgICAgICAgICAgICAgICAgICAifV19",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-3-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-3",
+        "contractOperationId": "postDailyTransactions",
+        "contractPath": "/transaction-posting-runs",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "postDailyTransactions",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-3:posting"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJQT1NULVBSRVNFTlQtMDAxIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUE9TVC1BQlNFTlQtLTAwMSIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDk5OTk5OTk5OTk5OTk5OSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wNy0wNS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-3-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-3",
+        "contractOperationId": "generateInterestTransactions",
+        "contractPath": "/interest-generation-runs",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateInterestTransactions",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-3:interest"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbklkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E2-3-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "few-shot",
+        "contractId": "E2-3",
+        "contractOperationId": "generateTransactionReport",
+        "contractPath": "/transaction-report-runs",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "generateTransactionReport",
+        "requestMaterializationSource": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E2-3:reporting"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiJSRVBPUlQtSU4tLS0wMDEgIiwidHlwZUNvZGUiOiIwMSIsImNhdGVnb3J5Q29kZSI6NSwic291cmNlIjoiSW50ZXJuZXQgICIsImRlc2NyaXB0aW9uIjoiY2FuZGlkYXRlIHB1cmNoYXNlIiwiYW1vdW50IjoxMi4wLCJtZXJjaGFudElkIjoxMjM0NTY3ODksIm1lcmNoYW50TmFtZSI6IkZpeHR1cmUgTWVyY2hhbnQiLCJtZXJjaGFudENpdHkiOiJCcmFzaWxpYSIsIm1lcmNoYW50WmlwIjoiNzAwMDAwMDAgICIsImNhcmROdW1iZXIiOiI0MTExMTExMTExMTExMTExIiwib3JpZ2luYWxUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjAwLjAwLjAwMDAwMCIsInByb2Nlc3NpbmdUaW1lc3RhbXAiOiIyMDIyLTA3LTA1LTEwLjA1LjAwLjAwMDAwMCIsImZpbGxlciI6IiAgICAgICAgICAgICAgICAgICAgIn0seyJ0cmFuc2FjdGlvbklkIjoiUkVQT1JULU9VVC0tMDAxICIsInR5cGVDb2RlIjoiMDEiLCJjYXRlZ29yeUNvZGUiOjUsInNvdXJjZSI6IkludGVybmV0ICAiLCJkZXNjcmlwdGlvbiI6ImNhbmRpZGF0ZSBwdXJjaGFzZSIsImFtb3VudCI6MzQuMCwibWVyY2hhbnRJZCI6MTIzNDU2Nzg5LCJtZXJjaGFudE5hbWUiOiJGaXh0dXJlIE1lcmNoYW50IiwibWVyY2hhbnRDaXR5IjoiQnJhc2lsaWEiLCJtZXJjaGFudFppcCI6IjcwMDAwMDAwICAiLCJjYXJkTnVtYmVyIjoiNDExMTExMTExMTExMTExMSIsIm9yaWdpbmFsVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wMC4wMC4wMDAwMDAiLCJwcm9jZXNzaW5nVGltZXN0YW1wIjoiMjAyMi0wOC0wMS0xMC4wNS4wMC4wMDAwMDAiLCJmaWxsZXIiOiIgICAgICAgICAgICAgICAgICAgICJ9XSwiZGF0ZVBhcmFtZXRlclJlY29yZHMiOlsiMjAyMi0wNy0wMSAyMDIyLTA3LTMxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiXX0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E3-SDD-stage6r3-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:posting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "SDD",
+        "contractId": "E3-SDD-stage6r3",
+        "contractOperationId": "posting",
+        "contractPath": "/posting",
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "posting",
+        "requestMaterializationSource": "PublicSDD{}",
+        "sourceCaseId": "valid-new-tcatbal",
+        "sourceGuidedComplement": true,
+        "track": "posting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E3-SDD-stage6r3:posting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E3-SDD-stage6r3-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:interest"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "INTCALC-OBL-005",
+          "INTCALC-OBL-006"
+        ],
+        "contractArm": "SDD",
+        "contractId": "E3-SDD-stage6r3",
+        "contractOperationId": "interest",
+        "contractPath": "/interest",
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "interest",
+        "requestMaterializationSource": "PublicSDD{}",
+        "sourceCaseId": "rates-specific-default-zero",
+        "sourceGuidedComplement": true,
+        "track": "interest"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E3-SDD-stage6r3:interest"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "CROSSARM-E3-SDD-stage6r3-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "semantic-checker:reporting"
+      },
+      "origin": "complementary-crossarm-v1",
+      "parameters": {
+        "checkerObligations": [
+          "TRANREPT-OBL-002",
+          "TRANREPT-OBL-006"
+        ],
+        "contractArm": "SDD",
+        "contractId": "E3-SDD-stage6r3",
+        "contractOperationId": "reporting",
+        "contractPath": "/reporting",
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "officialCampaign": false,
+        "operationId": "reporting",
+        "requestMaterializationSource": "PublicSDD{}",
+        "sourceCaseId": "date-boundaries-in-out-v1",
+        "sourceGuidedComplement": true,
+        "track": "reporting"
+      },
+      "provenance": [
+        "complementary-crossarm-v1:E3-SDD-stage6r3:reporting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "9531cb2ce71bf996ec10f79b07320230a91a82c6eb62b1efa7f9fbfda7494dc9",
+  "suite_id": "P3-COMPLEMENTARY-CROSSARM-V1"
+}

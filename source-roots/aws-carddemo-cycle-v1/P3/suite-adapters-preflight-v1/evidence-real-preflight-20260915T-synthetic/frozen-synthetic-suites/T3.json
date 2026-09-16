@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-SYN-mapped-path",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T3:SYN",
+      "parameters": {},
+      "provenance": [
+        "T3:SYN:mapped-path"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "3dab4eedd993a66b9ba6cb87d87cde943c24605c852a93515833a6f32b12e235",
+  "suite_id": "T3"
+}

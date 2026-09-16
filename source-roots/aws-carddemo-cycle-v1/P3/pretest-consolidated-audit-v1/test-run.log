@@ -1,0 +1,65 @@
+## campaign-harness-v3 unit tests
+test_body_absent_empty_and_empty_json_are_distinct_in_identity_and_wire (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_case_ids_preserved_but_workdir_paths_are_opaque_contained_and_symlink_safe (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_cli_accepts_only_synthetic_qualification_and_fails_closed_for_official_label (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_expectations_are_structural_and_do_not_confuse_transport_completed_with_pass (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_freeze_hashes_detect_suite_tampering (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_http_preserves_duplicate_header_order_on_wire (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_per_application_lifecycle_binds_server_to_fresh_workdir_and_resets_state (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_timeout_on_uncontrolled_target_aborts_remaining_not_executed (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_union_stable_order_provenance_and_distinct_expectations (tests.test_campaign_harness.CampaignHarnessTests) ... ok
+test_external_watchdog_does_not_kill_harness_for_infinite_handler (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok
+test_infinite_handler_is_not_retried_and_next_case_is_not_started_when_quiet_unproved (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok
+test_slow_controlled_handler_is_reaped_before_fast_next_case (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok
+test_startup_failure_aborts_remaining_not_executed (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok
+test_stop_failure_escalates_to_kill_reaps_and_leaves_no_target_process (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 5.434s
+
+OK
+## suite-adapters tests
+test_imported_suite_freezes_loads_and_maps_to_harness_case_suite (test_suite_adapters.SuiteAdapterTests) ... ok
+test_inventory_counts_real_operations_from_contracts_and_pins_hashes (test_suite_adapters.SuiteAdapterTests) ... ok
+test_t1_preserves_original_response_and_never_repairs_invalid_or_missing_cases (test_suite_adapters.SuiteAdapterTests) ... ok
+test_t2_imports_frozen_requests_offline_preserving_absent_empty_and_json_object (test_suite_adapters.SuiteAdapterTests) ... ok
+test_t3_accepts_external_business_request_paths_but_blocks_abstract_ids_without_mapping (test_suite_adapters.SuiteAdapterTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
+## api-harness-integration tests
+test_integration_contract (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_integration_contract (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_integration_contract
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/tests/test_integration_contract.py", line 13, in <module>
+    from api_harness_integration import (
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/api-harness-integration-v1/src/api_harness_integration.py", line 18, in <module>
+    from jsonschema import Draft202012Validator, RefResolver
+ModuleNotFoundError: No module named 'jsonschema'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+## coverage reconciliation tests
+test_parse_gcov_file_counts_real_reporting_main_unit_exactly (test_reconcile_coverage.CoverageReconciliationTests) ... ok
+test_reconcile_all_six_invocations_and_preserve_exact_main_denominators (test_reconcile_coverage.CoverageReconciliationTests) ... ok
+test_select_units_rejects_ambiguous_main_units (test_reconcile_coverage.CoverageReconciliationTests) ... ok
+test_select_units_rejects_missing_main_unit_instead_of_header_fallback (test_reconcile_coverage.CoverageReconciliationTests) ... ok
+test_stdout_parser_keeps_metrics_bound_to_each_source_unit (test_reconcile_coverage.CoverageReconciliationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.030s
+
+OK

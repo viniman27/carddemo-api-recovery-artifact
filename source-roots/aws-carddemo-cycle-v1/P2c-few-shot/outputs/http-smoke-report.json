@@ -1,0 +1,452 @@
+{
+  "kind": "p2c-few-shot-http-smoke",
+  "results": [
+    {
+      "contractId": "E2-1",
+      "track": "posting",
+      "operation": "/transaction-postings",
+      "status": 200,
+      "body": {
+        "processedCount": 1,
+        "rejectedCount": 0,
+        "returnCode": 0,
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": "0001",
+            "source": "TEST      ",
+            "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+            "amount": 25.0,
+            "merchantId": "000000001",
+            "merchantName": "TEST MERCHANT                                     ",
+            "merchantCity": "TEST CITY                                         ",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2026-09-15-08.45.25.810000",
+            "cardNumber": "0000000000000001",
+            "merchantZip": "0000000000"
+          }
+        ],
+        "rejects": []
+      },
+      "url": "http://127.0.0.1:50220/transaction-postings",
+      "requestBody": {
+        "dailyTransactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": "0001",
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": "000000001",
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ]
+      },
+      "responseRawSha256": "cd726f09c7419896458bd5c56fbbd59138afcc03ae0ab46ba3e5372391cb66c7",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/posting/1789472725794-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-_paydtwn/audit.json"
+    },
+    {
+      "contractId": "E2-1",
+      "track": "interest",
+      "operation": "/interest-transaction-generations",
+      "status": 200,
+      "body": {
+        "transactions": [
+          {
+            "transactionId": "2022071800000001",
+            "typeCode": "01",
+            "categoryCode": "0005",
+            "source": "System",
+            "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "amount": 100.0,
+            "merchantId": "000000000",
+            "merchantName": "",
+            "merchantCity": "",
+            "originalTimestamp": "2026-09-15-08.45.26.470000",
+            "processingTimestamp": "2026-09-15-08.45.26.470000",
+            "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "cardNumber": "4111111111111111",
+            "merchantZip": ""
+          }
+        ]
+      },
+      "url": "http://127.0.0.1:50222/interest-transaction-generations",
+      "requestBody": {
+        "transactionIdPrefix": "2022071800"
+      },
+      "responseRawSha256": "515b0337c55dba24710388c6ede4474d479915d736c1b7dea6a351b9612fdd7e",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/interest/1789472726076-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-drenbal2/audit.json"
+    },
+    {
+      "contractId": "E2-1",
+      "track": "reporting",
+      "operation": "/transaction-reports",
+      "status": 500,
+      "body": {
+        "diagnostics": [
+          "START OF EXECUTION OF PROGRAM CBTRN03C",
+          "Reporting from 2025-01-01 to 2025-12-31",
+          "TEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000000000000000000012025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234",
+          "INVALID CARD NUMBER : 0000000000000001",
+          "FILE STATUS IS: NNNN0023",
+          "ABENDING PROGRAM",
+          "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+          "libcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')",
+          "libcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')",
+          "libcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')",
+          "libcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')",
+          "libcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')",
+          "libcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')"
+        ]
+      },
+      "url": "http://127.0.0.1:50224/transaction-reports",
+      "requestBody": {
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": "0001",
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": "000000001",
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ],
+        "dateParameterRecords": [
+          "2025-01-01 2025-12-31"
+        ]
+      },
+      "responseRawSha256": "d2b33cc6371dbb50d89e1362f12cb423f0a28b2f10c6c3232e3c2d993c13619e",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-1/reporting/1789472726703-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-td9qbwsf/audit.json"
+    },
+    {
+      "contractId": "E2-2",
+      "track": "posting",
+      "operation": "/transaction-posting-runs",
+      "status": 200,
+      "body": {
+        "transactionsProcessed": 1,
+        "transactionsRejected": 0,
+        "returnCode": 0,
+        "postedTransactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST      ",
+            "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT                                     ",
+            "merchantCity": "TEST CITY                                         ",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2026-09-15-08.45.26.960000",
+            "cardNumber": "0000000000000001",
+            "merchantZip": "0000000000"
+          }
+        ],
+        "rejections": [],
+        "diagnostics": [
+          "START OF EXECUTION OF PROGRAM CBTRN02C",
+          "TCATBAL record not found for key : 00000000001010001.. Creating.",
+          "TRANSACTIONS PROCESSED :000000001",
+          "TRANSACTIONS REJECTED  :000000000",
+          "END OF EXECUTION OF PROGRAM CBTRN02C"
+        ]
+      },
+      "url": "http://127.0.0.1:50226/transaction-posting-runs",
+      "requestBody": {
+        "bindings": {
+          "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+          "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput",
+          "accounts": "p3-local-technical-fixture-selection:accounts",
+          "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances",
+          "rejectionOutput": "p3-local-technical-fixture-selection:rejectionOutput"
+        },
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ]
+      },
+      "responseRawSha256": "24a59f13abaec9cc8fbe21f55c3d20396a0ba7e83848f92b8382021c11090b76",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/posting/1789472726941-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-csfpk0vq/audit.json"
+    },
+    {
+      "contractId": "E2-2",
+      "track": "interest",
+      "operation": "/interest-generation-runs",
+      "status": 200,
+      "body": {
+        "generatedTransactions": [
+          {
+            "transactionId": "2022071800000001",
+            "typeCode": "01",
+            "categoryCode": 5,
+            "source": "System",
+            "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "amount": 100.0,
+            "merchantId": 0,
+            "merchantName": "",
+            "merchantCity": "",
+            "originalTimestamp": "2026-09-15-08.45.27.700000",
+            "processingTimestamp": "2026-09-15-08.45.27.700000",
+            "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "cardNumber": "4111111111111111",
+            "merchantZip": ""
+          }
+        ],
+        "diagnostics": [
+          "P2C-PARM-LENGTH=+00010",
+          "P2C-PARM-VALUE=2022071800",
+          "START OF EXECUTION OF PROGRAM CBACT04C",
+          "0000000000101000500001000000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          "END OF EXECUTION OF PROGRAM CBACT04C"
+        ]
+      },
+      "url": "http://127.0.0.1:50228/interest-generation-runs",
+      "requestBody": {
+        "bindings": {
+          "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+          "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput",
+          "accounts": "p3-local-technical-fixture-selection:accounts",
+          "disclosureGroups": "p3-local-technical-fixture-selection:disclosureGroups",
+          "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances"
+        },
+        "parameterDate": "2022071800",
+        "parameterLength": 10
+      },
+      "responseRawSha256": "ee6b93f44bbb26d04f0075e705bf0c2f31d30ad1f7d5286b733c136bdd9022b3",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/interest/1789472727219-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-9vh4_puv/audit.json"
+    },
+    {
+      "contractId": "E2-2",
+      "track": "reporting",
+      "operation": "/transaction-report-runs",
+      "status": 500,
+      "body": {
+        "diagnostics": [
+          "START OF EXECUTION OF PROGRAM CBTRN03C",
+          "Reporting from 2025-01-01 to 2025-12-31",
+          "TEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000000000000000000012025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234",
+          "INVALID CARD NUMBER : 0000000000000001",
+          "FILE STATUS IS: NNNN0023",
+          "ABENDING PROGRAM",
+          "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+          "libcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')",
+          "libcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')",
+          "libcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')",
+          "libcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')",
+          "libcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')",
+          "libcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')"
+        ],
+        "program": "CBTRN03C"
+      },
+      "url": "http://127.0.0.1:50230/transaction-report-runs",
+      "requestBody": {
+        "bindings": {
+          "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+          "transactionCategories": "p3-local-technical-fixture-selection:transactionCategories",
+          "transactionTypes": "p3-local-technical-fixture-selection:transactionTypes",
+          "reportOutput": "p3-local-technical-fixture-selection:reportOutput"
+        },
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ],
+        "dateParameterRecords": [
+          "2025-01-01 2025-12-31"
+        ]
+      },
+      "responseRawSha256": "8faa71a711901e3e7e62d118dd31d8c47976914f925630d84ed049bf12b832e3",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-2/reporting/1789472727921-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-ytq_m22m/audit.json"
+    },
+    {
+      "contractId": "E2-3",
+      "track": "posting",
+      "operation": "/transaction-posting-runs",
+      "status": 200,
+      "body": {
+        "processedCount": 1,
+        "rejectedCount": 0,
+        "returnCode": 0,
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST      ",
+            "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT                                     ",
+            "merchantCity": "TEST CITY                                         ",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2026-09-15-08.45.28.160000",
+            "cardNumber": "0000000000000001",
+            "merchantZip": "0000000000",
+            "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          }
+        ],
+        "rejects": []
+      },
+      "url": "http://127.0.0.1:50232/transaction-posting-runs",
+      "requestBody": {
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ]
+      },
+      "responseRawSha256": "8a28a13a554395bde08aad2aac359ba33ebf755f52c6da8b493135e60ec7d62e",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/posting/1789472728150-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-0uatpyf7/audit.json"
+    },
+    {
+      "contractId": "E2-3",
+      "track": "interest",
+      "operation": "/interest-generation-runs",
+      "status": 200,
+      "body": {
+        "transactions": [
+          {
+            "transactionId": "2022071800000001",
+            "typeCode": "01",
+            "categoryCode": 5,
+            "source": "System",
+            "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "amount": 100.0,
+            "merchantId": 0,
+            "merchantName": "",
+            "merchantCity": "",
+            "originalTimestamp": "2026-09-15-08.45.28.850000",
+            "processingTimestamp": "2026-09-15-08.45.28.850000",
+            "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "cardNumber": "4111111111111111",
+            "merchantZip": ""
+          }
+        ]
+      },
+      "url": "http://127.0.0.1:50234/interest-generation-runs",
+      "requestBody": {
+        "transactionIdPrefix": "2022071800"
+      },
+      "responseRawSha256": "153fe570f42d236e4b8b1d2a4c0773ac36383f7d9dfdcce230534ea6c722495e",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/interest/1789472728432-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-9_yll3f1/audit.json"
+    },
+    {
+      "contractId": "E2-3",
+      "track": "reporting",
+      "operation": "/transaction-report-runs",
+      "status": 500,
+      "body": {
+        "program": "CBTRN03C",
+        "diagnostics": [
+          "START OF EXECUTION OF PROGRAM CBTRN03C",
+          "Reporting from 2025-01-01 to 2025-12-31",
+          "TEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000000000000000000012025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234",
+          "INVALID CARD NUMBER : 0000000000000001",
+          "FILE STATUS IS: NNNN0023",
+          "ABENDING PROGRAM",
+          "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+          "libcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')",
+          "libcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')",
+          "libcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')",
+          "libcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')",
+          "libcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')",
+          "libcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')"
+        ]
+      },
+      "url": "http://127.0.0.1:50236/transaction-report-runs",
+      "requestBody": {
+        "transactions": [
+          {
+            "transactionId": "TEST000000000001",
+            "typeCode": "01",
+            "categoryCode": 1,
+            "source": "TEST",
+            "description": "LOCAL SYNTHETIC FIXTURE",
+            "amount": 25.0,
+            "merchantId": 1,
+            "merchantName": "TEST MERCHANT",
+            "merchantCity": "TEST CITY",
+            "merchantZip": "0000000000",
+            "cardNumber": "0000000000000001",
+            "originalTimestamp": "2025-01-01-00.00.00.000000",
+            "processingTimestamp": "2025-01-01-00.00.00.000000",
+            "filler": "ORIGINAL-FILLER-1234"
+          }
+        ],
+        "dateParameterRecords": [
+          "2025-01-01 2025-12-31                                                           "
+        ]
+      },
+      "responseRawSha256": "cf1a99e269ea67ee305ae37f5688a58fd78383c0f0a2446bf7145cbe2b373b29",
+      "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/E2-3/reporting/1789472729077-audit.json",
+      "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-g9pndflk/audit.json"
+    }
+  ],
+  "overallExercised": true
+}

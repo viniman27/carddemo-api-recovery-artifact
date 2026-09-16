@@ -1,0 +1,55 @@
+{
+  "validator": "openapi-spec-validator==0.7.2",
+  "originals_unchanged": true,
+  "results": [
+    {
+      "demo": "demo-01-temperature",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/temperature",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/temperature.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-01-temperature/legacy.cbl"
+      ],
+      "compile_exit": 0,
+      "compile_stderr": "",
+      "exit_code": 0,
+      "stdout": "+032.00\n",
+      "stderr": ""
+    },
+    {
+      "demo": "demo-02-shipping",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/shipping",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/shipping.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-02-shipping/legacy.cbl"
+      ],
+      "compile_exit": 1,
+      "compile_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/shipping.cbl:11: error: syntax error, unexpected C\n    9 | 01 D PIC X VALUE SPACE.\n   10 | procedure division.\n   11 > call \"SHIPPING-QUOTE\" using A B C D\n   12 | display C \"|\" D\n   13 | stop run.\n"
+    },
+    {
+      "demo": "demo-03-membership",
+      "openapi_valid": true,
+      "compile_command": [
+        "cobc",
+        "-x",
+        "-free",
+        "-o",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/membership",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/membership.cbl",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/few-shot-candidate/demo-03-membership/legacy.cbl"
+      ],
+      "compile_exit": 1,
+      "compile_stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P1/demo-verification/membership.cbl:10: error: syntax error, unexpected C\n    8 | 01 C PIC 9(5)V99 VALUE 0.\n    9 | procedure division.\n   10 > call \"MEMBERSHIP-DISCOUNT\" using A B C\n   11 | display C\n   12 | stop run.\n"
+    }
+  ],
+  "limits": "One nominal execution per demo; no overflow/boundary completeness or human approval claimed"
+}

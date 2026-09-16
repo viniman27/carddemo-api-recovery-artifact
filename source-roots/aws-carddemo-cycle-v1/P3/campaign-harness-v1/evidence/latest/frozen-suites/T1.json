@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "case_id": "t1-absent",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "nominal"
+      },
+      "origin": "T1",
+      "parameters": {},
+      "provenance": [
+        "T1:t1-absent"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 1.0
+    },
+    {
+      "case_id": "t1-empty",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "nominal"
+      },
+      "origin": "T1",
+      "parameters": {},
+      "provenance": [
+        "T1:t1-empty"
+      ],
+      "request": {
+        "body_b64": "",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 1.0
+    }
+  ],
+  "resources": {
+    "pkg-a": {
+      "state.txt": {
+        "sha256": "25718360e05d3c2d0963d1381e9dd4dae5fca789244ee4b9f861adcc0cc96218",
+        "size": 9
+      }
+    }
+  },
+  "suite_freeze_sha256": "8c8ab8dff1b34d573939138d0e4542b718b3929ad98d174e4015b41f96451384",
+  "suite_id": "T1"
+}

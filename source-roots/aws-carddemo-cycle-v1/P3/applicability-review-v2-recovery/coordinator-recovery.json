@@ -1,0 +1,1630 @@
+{
+  "status": "PARTIAL_inventory_only_generation_blocked",
+  "reviewer": "coordinator recovery; not independent semantic approval",
+  "timeout_attempts": 2,
+  "source_sha256": "2c3d3b093ae2516be83bb8ec7d5737c67cddf10ee37c92b1ff474ca2805ce65e",
+  "confirmed_guard_sensitive_admissibility_without_variant_or_block": 32,
+  "affected_cells": [
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectFile",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectionOutput",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-004",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture posting explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectFile",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectionOutput",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-005",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture posting explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectFile",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectionOutput",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-006",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture posting explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectFile",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "transactionFile",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dailyTransactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          },
+          {
+            "field": "rejectionOutput",
+            "allowedSource": [
+              "DALYREJS"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "POSTTRAN-OBL-007",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture posting explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "DALYTRAN"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=posting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "outputTransactionFile",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "idPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroups",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionIdPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture interest explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "outputTransactionFile",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "idPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroups",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionIdPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture interest explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "outputTransactionFile",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accountFile",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalanceFile",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroupFile",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "idPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "accounts",
+            "allowedSource": [
+              "ACCTFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "XREFFILE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "categoryBalances",
+            "allowedSource": [
+              "TCATBALF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "disclosureGroups",
+            "allowedSource": [
+              "DISCGRP"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionIdPrefix",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          },
+          {
+            "field": "transactionOutput",
+            "allowedSource": [
+              "TRANSACT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture interest explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "parameterDate",
+            "allowedSource": [
+              "PARMFILE",
+              "contract scalar field"
+            ],
+            "constraint": "string/scalar per request schema; cannot select account group, rate branch, EOF, or fallback state"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=interest; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-1",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "CARDXREF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dateParameterRecords",
+            "allowedSource": [
+              "DATEPARM"
+            ],
+            "constraint": "X(10)/date parameter records as schema permits; no post-observation mask"
+          },
+          {
+            "field": "reportFile",
+            "allowedSource": [
+              "TRANREPT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionCategoryFile",
+            "allowedSource": [
+              "TRANCATG"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionTypeFile",
+            "allowedSource": [
+              "TRANTYPE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "TRANFILE",
+              "TRANFILE.empty",
+              "DATEPARM"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=reporting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "crossReferenceFile",
+            "allowedSource": [
+              "CARDXREF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dateParameters",
+            "allowedSource": [
+              "DATEPARM"
+            ],
+            "constraint": "X(10)/date parameter records as schema permits; no post-observation mask"
+          },
+          {
+            "field": "transactionCategoryFile",
+            "allowedSource": [
+              "TRANCATG"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionTypeFile",
+            "allowedSource": [
+              "TRANTYPE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "TRANFILE",
+              "TRANFILE.empty",
+              "DATEPARM"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=reporting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E1-3",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "cardCrossReference",
+            "allowedSource": [
+              "CARDXREF"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "dateParameterRecords",
+            "allowedSource": [
+              "DATEPARM"
+            ],
+            "constraint": "X(10)/date parameter records as schema permits; no post-observation mask"
+          },
+          {
+            "field": "reportOutput",
+            "allowedSource": [
+              "TRANREPT"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionCategories",
+            "allowedSource": [
+              "TRANCATG"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactionTypes",
+            "allowedSource": [
+              "TRANTYPE"
+            ],
+            "constraint": "explicit field/schema/track DD role map only; no token-based resource expansion"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "TRANFILE",
+              "TRANFILE.empty",
+              "DATEPARM"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=reporting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    },
+    {
+      "obligationId": "TRANREPT-OBL-004",
+      "contractId": "E2-2",
+      "plan": {
+        "requestBody": "deterministic_from_allowed_schema_fields_when_case_is_later_frozen",
+        "fieldSelectors": [
+          {
+            "field": "bindings",
+            "allowedSource": "candidate fixture reporting explicit DD bindings only",
+            "constraint": "only schema-declared binding keys; no extra selector fields; not a business-branch selector"
+          },
+          {
+            "field": "dateParameterRecords",
+            "allowedSource": [
+              "DATEPARM"
+            ],
+            "constraint": "X(10)/date parameter records as schema permits; no post-observation mask"
+          },
+          {
+            "field": "transactions",
+            "allowedSource": [
+              "TRANFILE",
+              "TRANFILE.empty",
+              "DATEPARM"
+            ],
+            "constraint": "whole record/object values from contract schema or pinned fixture logical records only"
+          }
+        ],
+        "constraints": [],
+        "fixtureSelection": "track=reporting; choose only candidate fixture(s) listed in candidateFixtures; no selector endpoint/operation added",
+        "fixtureVariant": null,
+        "selectionMode": "schema_field_or_external_fixture_schedule",
+        "generativeUse": "candidate_mapping_only_unexercised",
+        "officialExerciseStatus": "not_exercised_by_official_package",
+        "newSelectorsIntroduced": false,
+        "blocks": []
+      }
+    }
+  ],
+  "cause": "Guard-specific blocking applies only when status is conditioned_on_external_fixture; surface status bypasses block and determines generative_admissible. Binding-field existence does not prove named variant/guard selection.",
+  "scope": "Static control-flow and matrix check only; no official cases or runtime. Existing IN_PROGRESS reports retained."
+}

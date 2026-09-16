@@ -1,0 +1,70 @@
+--- casos/aws-carddemo-cycle-v1/P3/fewshot-parent-closure-v1/evidence-archive/p2c_facade-original-ebe50eeb.py
++++ casos/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py
+@@ -312,6 +312,43 @@
+     return lines
+ 
+ 
++def cobol_precondition_failures(cmd: dict[str, Any], track: str) -> list[dict[str, Any]]:
++    """Extract source-level indexed lookup abort causes from COBOL DISPLAY text."""
++    events: list[dict[str, Any]] = []
++    lines = (cmd.get("stdout") or "").splitlines()
++    lookup_labels = {
++        "INVALID CARD NUMBER : ": ("CARDXREF", "CBTRN03C DISPLAY before 9999-ABEND-PROGRAM; CARDXREF indexed lookup precondition not met"),
++        "INVALID TRAN TYPE KEY : ": ("TRANTYPE", "CBTRN03C DISPLAY before 9999-ABEND-PROGRAM; TRANTYPE indexed lookup precondition not met"),
++        "INVALID TRAN CATG KEY : ": ("TRANCATG", "CBTRN03C DISPLAY before 9999-ABEND-PROGRAM; TRANCATG indexed lookup precondition not met"),
++    }
++    for idx, line in enumerate(lines):
++        for prefix, (lookup, authority) in lookup_labels.items():
++            if not line.startswith(prefix):
++                continue
++            status = None
++            raw_status_text = lines[idx + 1].strip() if idx + 1 < len(lines) else None
++            if raw_status_text and "FILE STATUS IS:" in raw_status_text:
++                raw_status = raw_status_text.split("FILE STATUS IS:", 1)[1].strip()
++                status = raw_status[-2:] if len(raw_status) >= 2 else raw_status
++            events.append({
++                "kind": "cobol_precondition_failure",
++                "track": track,
++                "lookup": lookup,
++                "key": line.split(":", 1)[1].strip(),
++                "fileStatus": status,
++                "rawStatusText": raw_status_text,
++                "authority": authority,
++            })
++    return events
++
++
++def reached_cobol_program(cmd: dict[str, Any], program: str, output: bytes | None = None) -> bool:
++    stdout = cmd.get("stdout") or ""
++    return (
++        output is not None and len(output) > 0
++    ) or f"START OF EXECUTION OF PROGRAM {program}" in stdout or f"END OF EXECUTION OF PROGRAM {program}" in stdout
++
++
+ def _decode_ascii(raw: bytes, label: str, audit: dict[str, Any] | None = None) -> str:
+     try:
+         return raw.decode("ascii")
+@@ -354,6 +391,12 @@
+ def _rejection_for_public(item: dict[str, Any], contract_id: str) -> dict[str, Any]:
+     if "candidate" in item:
+         tx = _tx_for_public(item["candidate"], contract_id)
++        # P2b labels this field to stress that posting rejects preserve the
++        # request-owned DALYTRAN bytes. E2-2's public Transaction schema still
++        # requires processingTimestamp; expose the captured receiver span without
++        # inventing a runtime timestamp or changing other contracts silently.
++        if contract_id == "E2-2" and "processingTimestamp" not in tx and "suppliedProcessingTimestamp" in tx:
++            tx["processingTimestamp"] = tx.pop("suppliedProcessingTimestamp")
+         reason = item.get("reason", "")
+         code = "0" + reason if len(reason) == 3 else reason
+         return {"transaction": tx, "reasonCode": code, "reasonDescription": item.get("description", "")}
+@@ -525,8 +568,9 @@
+     status, mapped = p2b.status_for_capture_observation("reporting", evidence["framing"], body2)
+     if status != 200: body2 = mapped
+     status, body2, failures = p2b.observations.apply_failure_boundary("reporting", status, body2, cmd)
++    audit["FAIL"]["events"].extend(cobol_precondition_failures(cmd, "reporting"))
+     audit["FAIL"]["events"].extend(failures)
+-    audit["RESP"] = {"status": status, "body": body2, "program_exit": cmd["exit_code"], "reached_cobol": bool(report) or "END OF EXECUTION" in cmd["stdout"]}
++    audit["RESP"] = {"status": status, "body": body2, "program_exit": cmd["exit_code"], "reached_cobol": reached_cobol_program(cmd, "CBTRN03C", report)}
+     _capture_and_write(audit, wd)
+     return status, body2, audit
+ 

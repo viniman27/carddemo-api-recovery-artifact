@@ -1,0 +1,135 @@
+{
+  "cases": [
+    {
+      "case_id": "T2-SYN-absent",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2:SYN",
+      "parameters": {},
+      "provenance": [
+        "T2:SYN:absent"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Dup",
+            "1"
+          ],
+          [
+            "X-Dup",
+            "2"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYN-present-empty",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2:SYN",
+      "parameters": {},
+      "provenance": [
+        "T2:SYN:present-empty"
+      ],
+      "request": {
+        "body_b64": "",
+        "body_kind": "bytes",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYN-empty-json-object",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2:SYN",
+      "parameters": {},
+      "provenance": [
+        "T2:SYN:empty-json-object"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYN-duplicate-empty-json-object",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2:SYN",
+      "parameters": {},
+      "provenance": [
+        "T2:SYN:duplicate-empty-json-object"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T2",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "ea75f22e09d8944b11e73c61b6b8fcf98b873a7a595d3acd55473b40885f1b70",
+  "suite_id": "T2"
+}

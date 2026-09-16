@@ -1,0 +1,87 @@
+{
+  "contract_id": "E1-2",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+  "contract_sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+  "operation_id": "postDailyTransactions",
+  "track": "posting",
+  "request_sha256": "ab7b56945730a5bae75bf7fa7b228f06638f2527356c16e04d1069714a901e52",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/registry.json",
+    "files": {
+      "ACCTFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/ACCTFILE",
+        "bytes": 8192,
+        "sha256": "e584b32532bf2166908a4c34363e304a1682047841503f2eacc2cc5a3df778e9",
+        "requestOwned": false
+      },
+      "DALYTRAN": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/DALYTRAN",
+        "bytes": 350,
+        "sha256": "bac89976a55f4860cf6145bb21bd0e335466e4fa5a0cfe7ba763549cf3fd4e0d",
+        "requestOwned": true
+      },
+      "TCATBALF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/TCATBALF",
+        "bytes": 8192,
+        "sha256": "e721cb2fd284bcda59e574ba9c10f122de524a1f4445767244ba498859585464",
+        "requestOwned": false
+      },
+      "TRANFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/TRANFILE",
+        "bytes": 8192,
+        "sha256": "7e3769dd3b30e591070a2c3f8a67df86e07cb434dc0d2d31723cfb5eb5f60607",
+        "requestOwned": false
+      },
+      "XREFFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/request-packages/E1-2-posting-1789560858449/XREFFILE",
+        "bytes": 8192,
+        "sha256": "aa37a49e1c83d7f8e2815e3d3f5b76a425f7120969ac073c6aa2af2a204872d9",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "TRANFILE": {
+        "field": "transactionFile",
+        "token": "p3:posting:TRANFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-existing-tcatbal/posting/TRANFILE",
+        "sourceSha256": "7e3769dd3b30e591070a2c3f8a67df86e07cb434dc0d2d31723cfb5eb5f60607",
+        "sourceBytes": 8192
+      },
+      "XREFFILE": {
+        "field": "crossReferenceFile",
+        "token": "p3:posting:XREFFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-existing-tcatbal/posting/XREFFILE",
+        "sourceSha256": "aa37a49e1c83d7f8e2815e3d3f5b76a425f7120969ac073c6aa2af2a204872d9",
+        "sourceBytes": 8192
+      },
+      "ACCTFILE": {
+        "field": "accountFile",
+        "token": "p3:posting:ACCTFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-existing-tcatbal/posting/ACCTFILE",
+        "sourceSha256": "e584b32532bf2166908a4c34363e304a1682047841503f2eacc2cc5a3df778e9",
+        "sourceBytes": 8192
+      },
+      "TCATBALF": {
+        "field": "categoryBalanceFile",
+        "token": "p3:posting:TCATBALF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-existing-tcatbal/posting/TCATBALF",
+        "sourceSha256": "e721cb2fd284bcda59e574ba9c10f122de524a1f4445767244ba498859585464",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {},
+    "fixture_descriptor_sha256": "e1805083cc498750cf7661387c1c0e4d5046fc7f00b5adfffa479d607e2f7e13"
+  },
+  "semantic_ambiguities": [],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/p2b-runs/posting-uvfdccp0/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/p2b-runs/posting-uvfdccp0"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-2-valid-existing-tcatbal/replay/applications/0001-07003ed9e662ce99/zero-shot-runs/E1-2/posting/E1-2-posting-1789560858449/response.json"
+}

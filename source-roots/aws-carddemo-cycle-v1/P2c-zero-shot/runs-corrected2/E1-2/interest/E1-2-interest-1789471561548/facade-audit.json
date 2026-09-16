@@ -1,0 +1,105 @@
+{
+  "contract_id": "E1-2",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+  "contract_sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+  "operation_id": "generateInterestTransactions",
+  "track": "interest",
+  "request_sha256": "7ed7bcc4fed99509a7d839d8fd93ea3b65179ed7bedeee1369032007e4766914",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/registry.json",
+    "files": {
+      "ACCTFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/ACCTFILE",
+        "bytes": 8192,
+        "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "requestOwned": false
+      },
+      "DISCGRP": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/DISCGRP",
+        "bytes": 8192,
+        "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "requestOwned": false
+      },
+      "PARMFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/PARMFILE",
+        "bytes": 10,
+        "sha256": "4c62e8bdba67e216f863d51792ead49af809844d0d2e9d4a6fbee43a9373750d",
+        "requestOwned": true
+      },
+      "TCATBALF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/TCATBALF",
+        "bytes": 8192,
+        "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "requestOwned": false
+      },
+      "XREFFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/XREFFILE",
+        "bytes": 8192,
+        "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "requestOwned": false
+      },
+      "XREFFILE.1": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/request-packages/E1-2-interest-1789471561548/XREFFILE.1",
+        "bytes": 8192,
+        "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "TCATBALF": {
+        "field": "categoryBalanceFile",
+        "token": "p3:interest:TCATBALF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "sourceSha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "sourceBytes": 8192
+      },
+      "XREFFILE": {
+        "field": "crossReferenceFile",
+        "token": "p3:interest:XREFFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "sourceSha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "sourceBytes": 8192
+      },
+      "ACCTFILE": {
+        "field": "accountFile",
+        "token": "p3:interest:ACCTFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "sourceSha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "sourceBytes": 8192
+      },
+      "DISCGRP": {
+        "field": "disclosureGroupFile",
+        "token": "p3:interest:DISCGRP",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "sourceSha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "sourceBytes": 8192
+      },
+      "XREFFILE.1": {
+        "field": "implicitAlternateIndexSidecar",
+        "token": "p3:interest:XREFFILE.1",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "sourceSha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {},
+    "fixture_descriptor_sha256": "fa1d33ac75e7620c480a65aa8d94959b116aef0b99e86b0ba479441221688692"
+  },
+  "semantic_ambiguities": [
+    {
+      "point": "CBACT04C alternate-key account lookup when multiple card rows exist for one account",
+      "recommendation": "Do not select a card in the facade; preserve runtime-selected XREFFILE alternate-key behavior and record as ambiguity if a case depends on which card is chosen."
+    }
+  ],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/p2b-runs/interest-fdzbcpvm/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/p2b-runs/interest-fdzbcpvm"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-corrected2/E1-2/interest/E1-2-interest-1789471561548/response.json"
+}

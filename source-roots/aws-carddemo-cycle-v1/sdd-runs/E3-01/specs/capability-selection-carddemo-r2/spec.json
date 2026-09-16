@@ -1,0 +1,79 @@
+{
+  "feature_name": "capability-selection-carddemo-r2",
+  "artifact_type": "capability-selection",
+  "pipeline_stage": 2,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/capability-selection-carddemo-r2/requirements.md",
+  "upstream_specs": [
+    "specs/pipeline-scope-carddemo/spec.json"
+  ],
+  "created_at": "2026-09-11T18:52:37-03:00",
+  "updated_at": "2026-09-11T21:57:35.827486+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-11",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 2,
+        "artifact_type": "capability-selection"
+      },
+      "artifact": {
+        "path": "specs/capability-selection-carddemo-r2/requirements.md",
+        "sha256": "abdb59180f379d9e14eb86dfa1d8226ec50c981346767e808fd382eb7462bbc4"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/pipeline-scope-carddemo/spec.json",
+          "sha256": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-2-r2-authorization.json",
+        "sha256": "22294af2fb12235297e57e4b084a729695864af895d4047eb4a630d7286ec1c9"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "operational_chain_identity_note": "capability is an immutable operational chain id from stage 1, not a selected business capability name",
+  "selected_business_capability": null,
+  "bridge": "local-explicit-adapter-not-native-slash-command",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 2",
+    "pipeline-sdd-v3 stage 2 Capability Selection Spec"
+  ],
+  "generation": {
+    "original_path": "prepared/capability-selection-carddemo-r2/execution/scope-original.md",
+    "sha256": "abdb59180f379d9e14eb86dfa1d8226ec50c981346767e808fd382eb7462bbc4",
+    "model": "gpt-6-astra",
+    "revision_of": "specs/capability-selection-carddemo/spec.json",
+    "human_amendment_path": "prepared/capability-selection-carddemo-r2/stage2-coverage-amendment.json",
+    "human_amendment_sha256": "15ab6d637591c57f37307778cb7fbdfbe0e8fba2b5f5a0f40599a261aa5d6503"
+  }
+}

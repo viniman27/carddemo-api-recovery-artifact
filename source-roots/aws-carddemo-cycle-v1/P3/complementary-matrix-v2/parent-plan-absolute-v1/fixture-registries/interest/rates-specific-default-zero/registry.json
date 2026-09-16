@@ -1,0 +1,64 @@
+{
+  "fixtures": [
+    {
+      "capability": "CBACT04C/INTCALC",
+      "contentSha256": "4816e469bccc95dc2ab87cad393b92304c95cec8da356f876d8105ee0af69267",
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true,
+        "notPublicRequest": true
+      },
+      "fixtureId": "rates-specific-default-zero-local-file-package-v1",
+      "materializer": {
+        "filePins": {
+          "ACCTFILE": {
+            "bytes": 8192,
+            "sha256": "f939ad543e6570127da439af02be85f6f849cc7151ff54af6080dc35b9f14a39"
+          },
+          "DISCGRP": {
+            "bytes": 8192,
+            "sha256": "e615e81d67d44a5fa9958d915906ea1b55709d3ac36838e14d113afe420a9efd"
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "sha256": "e8a4e0434320371d18cbbf8e29332a77992d0129b52a7e1a426022caaa4200fe"
+          },
+          "TCATBALF": {
+            "bytes": 8192,
+            "sha256": "d1447021bd4a207692735e5a9e481fe1ab7950f539d433f9daf1f6480571987a"
+          },
+          "XREFFILE": {
+            "bytes": 8192,
+            "sha256": "9a001b85842e19fa5b797551fa9394512abf44212e7ad1e79509e07205c72203"
+          },
+          "XREFFILE.1": {
+            "bytes": 8192,
+            "sha256": "e451b3e4d458991013a1b201b91c8755a1326f0073a667f51f9700f13641c391"
+          }
+        },
+        "files": {
+          "ACCTFILE": "package/ACCTFILE",
+          "DISCGRP": "package/DISCGRP",
+          "PARMFILE": "package/PARMFILE",
+          "TCATBALF": "package/TCATBALF",
+          "XREFFILE": "package/XREFFILE",
+          "XREFFILE.1": "package/XREFFILE.1"
+        },
+        "kind": "local_file_package"
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "P3 complementary-interest-essential-v1 generated physical indexed files"
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "suiteUse": "p3-complementary-interest-essential-local-only",
+      "track": "interest"
+    }
+  ],
+  "kind": "p3-local-technical-fixture-selection"
+}

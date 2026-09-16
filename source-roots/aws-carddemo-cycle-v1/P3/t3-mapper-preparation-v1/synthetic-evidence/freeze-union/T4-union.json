@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "case_id": "T4-0001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {},
+      "provenance": [
+        "T1:T1-synth"
+      ],
+      "request": {
+        "body_b64": "eyJwYXlsb2FkIjoiWVdKaiIsIm5hbWUiOiJvayJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0002",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "SDD": {},
+        "cellId": "B",
+        "pathEvidence": [
+          "A",
+          "B"
+        ],
+        "transitionId": "B"
+      },
+      "provenance": [
+        "T3:T3-SYNTH-B"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/sdd"
+      },
+      "resource_package_id": "external-fixture",
+      "sequence": [
+        "A",
+        "B"
+      ],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "9d24a352e27e8001b74b6aa074a7fbb6889bdbe02d6adb81a103284a5ba24984",
+  "suite_id": "T4"
+}

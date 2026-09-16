@@ -1,0 +1,155 @@
+{
+  "counts": {
+    "defects_reproduced": 5,
+    "probes_total": 5
+  },
+  "probes": {
+    "case_id_path_traversal_workdir_escape": {
+      "applications_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v2/evidence-20260915T130333Z/v1-red-probes/path_traversal_run/applications",
+      "case_id": "x/../../escaped-case",
+      "defect_reproduced": true,
+      "recorded_workdir": "evidence-20260915T130333Z/v1-red-probes/path_traversal_run/applications/0001-x/../../escaped-case",
+      "resolved_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v2/evidence-20260915T130333Z/v1-red-probes/path_traversal_run/escaped-case",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "http_failures": 0,
+        "planned": 1,
+        "transport_failures": 0
+      }
+    },
+    "deadline_cascade_on_serial_target": {
+      "defect_reproduced": true,
+      "receipts": [
+        {
+          "body_kind": "absent",
+          "case_id": "slow",
+          "content_type": null,
+          "failure_class": "deadline",
+          "method": "POST",
+          "path": "/slow",
+          "provenance": [
+            "PX:slow"
+          ],
+          "request_identity": "232d13d6b37fd5903614ea23735d066d2a06f52fa30c5a64bd43530674f4110c",
+          "response_bytes": 0,
+          "response_sha256": null,
+          "status": null
+        },
+        {
+          "body_kind": "absent",
+          "case_id": "fast-after-slow",
+          "content_type": null,
+          "failure_class": "deadline",
+          "method": "POST",
+          "path": "/fast",
+          "provenance": [
+            "PX:fast-after-slow"
+          ],
+          "request_identity": "b016153bb33a77e9d2a42a0b5c5a927a8b43f1ef049d65fc5abb43c1edeb99c9",
+          "response_bytes": 0,
+          "response_sha256": null,
+          "status": null
+        }
+      ],
+      "server_seen": [
+        {
+          "finished": 1789477415.0075672,
+          "path": "/slow",
+          "started": 1789477414.6520221
+        }
+      ],
+      "totals": {
+        "attempted": 2,
+        "completed": 0,
+        "deadline_failures": 2,
+        "http_failures": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    "duplicate_headers_wire_collapse": {
+      "defect_reproduced": true,
+      "requested_headers": [
+        [
+          "X-Dup",
+          "one"
+        ],
+        [
+          "X-Dup",
+          "two"
+        ]
+      ],
+      "server_get_all_X_Dup": [
+        "two"
+      ],
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "http_failures": 0,
+        "planned": 1,
+        "transport_failures": 0
+      }
+    },
+    "reset_copy_not_bound_to_service_state": {
+      "application_pins_before_all_match_original": true,
+      "defect_reproduced": true,
+      "service_seen": [
+        {
+          "after": "original+mutated\n",
+          "before": "original\n"
+        },
+        {
+          "after": "original+mutated+mutated\n",
+          "before": "original+mutated\n"
+        }
+      ],
+      "totals": {
+        "attempted": 2,
+        "completed": 2,
+        "deadline_failures": 0,
+        "http_failures": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    "unexpected_500_not_classified_against_expectation": {
+      "defect_reproduced": true,
+      "expectation": {
+        "checks": {
+          "status": [
+            200
+          ]
+        },
+        "expectation_id": "only-200"
+      },
+      "receipts": [
+        {
+          "body_kind": "absent",
+          "case_id": "unexpected-500",
+          "content_type": "application/json",
+          "failure_class": null,
+          "method": "POST",
+          "path": "/ok",
+          "provenance": [
+            "PX:unexpected-500"
+          ],
+          "request_identity": "bb5bb129caad42fe22f75fbb6eaa07a099e7f751291878caceb3334ef8d2e761",
+          "response_bytes": 24,
+          "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+          "status": 500
+        }
+      ],
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "http_failures": 0,
+        "planned": 1,
+        "transport_failures": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,584 @@
+[
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-1-card-break-two-groups-v1",
+    "pid": 48197,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48197,
+        "path": "/transaction-reports",
+        "contractId": "E2-1",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 2.22 is not a multiple of 0.01; 4.44 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "5b059b3cc2e781dae2fa5e432792fe3eeb030cb2010d321a46c4d523bd2c68b0",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          0,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          1,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "2.22 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          3,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "4.44 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+        "bytes": 28899,
+        "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  },
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-1-pagination-threshold-20-v1",
+    "pid": 48201,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48201,
+        "path": "/transaction-reports",
+        "contractId": "E2-1",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 1.12 is not a multiple of 0.01; 1.13 is not a multiple of 0.01; 1.14 is not a multiple of 0.01; 1.15 is not a multiple of 0.01; 1.16 is not a multiple of 0.01; 1.17 is not a multiple of 0.01; 1.18 is not a multiple of 0.01; 1.19 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "73f237219844de1b3b2d449d46b8c6d35f581fa4fe0cdc4a691225dbffa6aeac",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          11,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          12,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.12 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          13,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.13 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          14,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.14 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          15,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.15 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          16,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.16 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          17,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.17 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          18,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.18 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          19,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.19 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+        "bytes": 28899,
+        "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  },
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-2-card-break-two-groups-v1",
+    "pid": 48294,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48294,
+        "path": "/transaction-report-runs",
+        "contractId": "E2-2",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 2.22 is not a multiple of 0.01; 4.44 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "55a542fef514c4bf1717888367a577577fd07df4827bf38de6bfca5b55bed475",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          0,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          1,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "2.22 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          3,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "4.44 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+        "bytes": 29973,
+        "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  },
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-2-pagination-threshold-20-v1",
+    "pid": 48296,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48296,
+        "path": "/transaction-report-runs",
+        "contractId": "E2-2",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 1.12 is not a multiple of 0.01; 1.13 is not a multiple of 0.01; 1.14 is not a multiple of 0.01; 1.15 is not a multiple of 0.01; 1.16 is not a multiple of 0.01; 1.17 is not a multiple of 0.01; 1.18 is not a multiple of 0.01; 1.19 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "eb572a119b074e53ddd52bec172604a3a19e436ddb905606ef40c01f65b59dc4",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          11,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          12,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.12 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          13,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.13 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          14,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.14 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          15,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.15 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          16,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.16 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          17,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.17 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          18,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.18 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          19,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.19 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+        "bytes": 29973,
+        "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  },
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-3-card-break-two-groups-v1",
+    "pid": 48401,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48401,
+        "path": "/transaction-report-runs",
+        "contractId": "E2-3",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 2.22 is not a multiple of 0.01; 4.44 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "aa5ca3ed494585ab6c267f0a50774ea563a105114f8416c9de0ab48bc7094f4d",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          0,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          1,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "2.22 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          3,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "4.44 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+        "bytes": 25822,
+        "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  },
+  {
+    "caseId": "ESSENTIAL12x7-V2-E2-3-pagination-threshold-20-v1",
+    "pid": 48403,
+    "pidLinked": true,
+    "historicalLog": [
+      {
+        "pid": 48403,
+        "path": "/transaction-report-runs",
+        "contractId": "E2-3",
+        "track": "reporting",
+        "error": "1.11 is not a multiple of 0.01; 1.12 is not a multiple of 0.01; 1.13 is not a multiple of 0.01; 1.14 is not a multiple of 0.01; 1.15 is not a multiple of 0.01; 1.16 is not a multiple of 0.01; 1.17 is not a multiple of 0.01; 1.18 is not a multiple of 0.01; 1.19 is not a multiple of 0.01"
+      }
+    ],
+    "requestSha256": "326f85471a855474c7e2e51d86e0c436c887feabf11dfe5d87dac6144293f85b",
+    "rawResponse": "{}",
+    "floatErrors": [
+      {
+        "path": [
+          "transactions",
+          11,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.11 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          12,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.12 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          13,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.13 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          14,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.14 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          15,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.15 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          16,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.16 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          17,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.17 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          18,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.18 is not a multiple of 0.01"
+      },
+      {
+        "path": [
+          "transactions",
+          19,
+          "amount"
+        ],
+        "validator": "multipleOf",
+        "message": "1.19 is not a multiple of 0.01"
+      }
+    ],
+    "decimalErrors": [],
+    "classification": "pre_COBOL_binary_float_multipleOf_rejection",
+    "pins": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/campaign-report.json",
+        "bytes": 2340811,
+        "sha256": "72084913abdef0badce4cffa5134cc57f2aa00400dbe176effbb81cc59028e91"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/suite.freeze.json",
+        "bytes": 449464,
+        "sha256": "71dfc4ee810e37465834840b8b95132f22590040346ad8757d1dba68ddd5ea13"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/outputs/http-rejections.jsonl",
+        "bytes": 1780,
+        "sha256": "fad3f7dd89b6493628ad4a11b3637d686a2f362bfb67dd7c76e62ce8fca3c038"
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+        "bytes": 25822,
+        "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3"
+      }
+    ],
+    "limits": "Local validator countercheck only; no API rerun or fix; Decimal mode is diagnostic, not replacement campaign result."
+  }
+]

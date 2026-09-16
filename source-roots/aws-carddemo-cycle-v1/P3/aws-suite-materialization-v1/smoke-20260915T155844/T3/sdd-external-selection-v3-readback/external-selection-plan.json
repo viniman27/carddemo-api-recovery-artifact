@@ -1,0 +1,3261 @@
+{
+  "blockedCells": [
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-003",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "observable posted-record layout depends on accepted path and generated timestamp; request {} + base fixture can select the run but not an independent expected field oracle",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-003",
+        "referenceTransitions": [
+          "POSTTRAN-T012"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              4,
+              18
+            ],
+            "path": "app/cpy/CVTRA06Y.cpy",
+            "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1"
+          },
+          {
+            "lines": [
+              4,
+              18
+            ],
+            "path": "app/cpy/CVTRA05Y.cpy",
+            "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+          },
+          {
+            "lines": [
+              424,
+              439
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Layout e cópia para transação postada"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-008",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "not_expressible",
+      "reason": "ACCOUNT update/order effect needs runtime/internal state authority; not selected by external package alone",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-008",
+        "referenceTransitions": [
+          "POSTTRAN-T013",
+          "POSTTRAN-T019",
+          "POSTTRAN-T020"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              440,
+              442
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              545,
+              559
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Atualização ACCOUNT e ordem de efeitos"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "POSTTRAN-OBL-009",
+      "operationId": "posting",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "TRANFILE write/failure after prior effects remains precondition-indeterminate without execution-state authority",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-009",
+        "referenceTransitions": [
+          "POSTTRAN-T019",
+          "POSTTRAN-T020",
+          "POSTTRAN-T021",
+          "POSTTRAN-T022"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              424,
+              442
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              562,
+              578
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              370,
+              421
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "WRITE TRANFILE após efeitos anteriores"
+      },
+      "track": "posting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "INTCALC-OBL-007",
+      "operationId": "interest",
+      "previousApplicabilityStatus": "conditioned_on_external_fixture",
+      "reason": "group-break ACCOUNT update needs multi-group transition outcome; base package alone does not authorize expected effect",
+      "source": {
+        "obligationId": "INTCALC-OBL-007",
+        "referenceTransitions": [
+          "INTCALC-T010"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              194,
+              203
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              350,
+              370
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          }
+        ],
+        "title": "Update de conta em quebra de grupo"
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "INTCALC-OBL-008",
+      "operationId": "interest",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "normal EOF final-account absence is a static source finding, not fixture-selectable expected behavior",
+      "source": {
+        "obligationId": "INTCALC-OBL-008",
+        "referenceTransitions": [
+          "INTCALC-T006"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              188,
+              222
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              325,
+              348
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              350,
+              370
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          }
+        ],
+        "title": "Última conta no EOF"
+      },
+      "track": "interest"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "TRANREPT-OBL-007",
+      "operationId": "reporting",
+      "previousApplicabilityStatus": "precondition_indeterminate",
+      "reason": "EOF totals depend on receiver/content behavior explicitly treated as conditional/unknown",
+      "source": {
+        "obligationId": "TRANREPT-OBL-007",
+        "referenceTransitions": [
+          "TRANREPT-T010",
+          "TRANREPT-T011",
+          "TRANREPT-T013",
+          "TRANREPT-T016"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              197,
+              203
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              287,
+              322
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              50,
+              66
+            ],
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+          }
+        ],
+        "title": "Totais de página/grand no EOF condicional"
+      },
+      "track": "reporting"
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "eligible": false,
+      "obligationId": "TRANREPT-OBL-008",
+      "operationId": "reporting",
+      "previousApplicabilityStatus": "observation_inadmissible",
+      "reason": "absence of final account total is source-static and observation-inadmissible as external selection without report oracle",
+      "source": {
+        "obligationId": "TRANREPT-OBL-008",
+        "referenceTransitions": [
+          "TRANREPT-T010"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              181,
+              184
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              197,
+              203
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              306,
+              316
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          }
+        ],
+        "title": "Ausência de Account Total final no EOF"
+      },
+      "track": "reporting"
+    }
+  ],
+  "contract": {
+    "matrixContractId": "E3-01-SDD-stage6r3",
+    "pin": {
+      "bytes": 66677,
+      "id": "contract-E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a"
+    },
+    "registryContractId": "E3-SDD-stage6r3",
+    "schemaEmptyRequestByTrack": {
+      "interest": true,
+      "posting": true,
+      "reporting": true
+    }
+  },
+  "fixturesByTrack": {
+    "interest": {
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "resources": {
+        "ACCTFILE": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "10000000001",
+            "10000000002"
+          ],
+          "physicalFiles": {
+            "ACCTFILE": {
+              "bytes": 8192,
+              "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 300
+        },
+        "DISCGRP": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "STANDARD  010005",
+            "ZERORATE  010005",
+            "DEFAULT   010005"
+          ],
+          "physicalFiles": {
+            "DISCGRP": {
+              "bytes": 8192,
+              "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+            }
+          },
+          "recordCount": 3,
+          "recordSize": 50
+        },
+        "PARMFILE": {
+          "bytes": 10,
+          "recordCount": 1,
+          "recordSize": 10,
+          "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+          "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+        },
+        "TCATBALF": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "10000000001010005",
+            "10000000002010005"
+          ],
+          "physicalFiles": {
+            "TCATBALF": {
+              "bytes": 8192,
+              "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 50
+        },
+        "XREFFILE": {
+          "alternateKeyName": "FD-XREF-ACCT-ID",
+          "alternateKeys": [
+            "10000000001",
+            "10000000002"
+          ],
+          "keys": [
+            "4111111111111111",
+            "4222222222222222"
+          ],
+          "physicalFiles": {
+            "XREFFILE": {
+              "bytes": 8192,
+              "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+            },
+            "XREFFILE.1": {
+              "bytes": 8192,
+              "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 50
+        }
+      }
+    },
+    "posting": {
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "resources": {
+        "ACCTFILE": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "10000000001",
+            "10000000002"
+          ],
+          "physicalFiles": {
+            "ACCTFILE": {
+              "bytes": 8192,
+              "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 300
+        },
+        "DALYTRAN": {
+          "bytes": 700,
+          "recordCount": 2,
+          "recordSize": 350,
+          "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+          "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+        },
+        "TCATBALF": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "10000000001010005",
+            "10000000002010005"
+          ],
+          "physicalFiles": {
+            "TCATBALF": {
+              "bytes": 8192,
+              "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 50
+        },
+        "TRANFILE": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "REPORT-IN---001 ",
+            "REPORT-OUT--001 "
+          ],
+          "physicalFiles": {
+            "TRANFILE": {
+              "bytes": 8192,
+              "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 350
+        },
+        "XREFFILE": {
+          "alternateKeyName": "FD-XREF-ACCT-ID",
+          "alternateKeys": [
+            "10000000001",
+            "10000000002"
+          ],
+          "keys": [
+            "4111111111111111",
+            "4222222222222222"
+          ],
+          "physicalFiles": {
+            "XREFFILE": {
+              "bytes": 8192,
+              "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+            },
+            "XREFFILE.1": {
+              "bytes": 8192,
+              "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 50
+        }
+      }
+    },
+    "reporting": {
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "resources": {
+        "CARDXREF": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "4111111111111111",
+            "4222222222222222"
+          ],
+          "physicalFiles": {
+            "CARDXREF": {
+              "bytes": 8192,
+              "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+            }
+          },
+          "recordCount": 2,
+          "recordSize": 50
+        },
+        "DATEPARM": {
+          "bytes": 80,
+          "recordCount": 1,
+          "recordSize": 80,
+          "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+          "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+        },
+        "TRANCATG": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "010005"
+          ],
+          "physicalFiles": {
+            "TRANCATG": {
+              "bytes": 8192,
+              "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+            }
+          },
+          "recordCount": 1,
+          "recordSize": 60
+        },
+        "TRANFILE": {
+          "bytes": 700,
+          "recordCount": 2,
+          "recordSize": 350,
+          "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+          "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+        },
+        "TRANFILE.empty": {
+          "bytes": 0,
+          "recordCount": 0,
+          "recordSize": 350,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+        },
+        "TRANTYPE": {
+          "alternateKeyName": null,
+          "alternateKeys": [],
+          "keys": [
+            "01"
+          ],
+          "physicalFiles": {
+            "TRANTYPE": {
+              "bytes": 8192,
+              "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+            }
+          },
+          "recordCount": 1,
+          "recordSize": 60
+        }
+      }
+    }
+  },
+  "inputs": {
+    "adapter": {
+      "bytes": 44269,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-campaign-adapter-v3/src/t3_campaign_adapter.py",
+      "sha256": "952057dfe4052796eda98e6d3509363f3d4d72820fdd4acdf86d5ff5d91ed312"
+    },
+    "fixtures": {
+      "bytes": 16432,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    "matrix": {
+      "bytes": 1048080,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/applicability-mapping-v3/applicability_matrix.json",
+      "sha256": "70099753738d2a8942f60193d7b7877fcbd7c3d521b46bf897868fa3e43ef3fc"
+    },
+    "model": {
+      "bytes": 112525,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/model.json",
+      "sha256": "26b3a23d2e682726d7b9e7ea309149ada93e72133a13c5c0ab2b743b7aab48f1"
+    },
+    "openapi": {
+      "bytes": 66677,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a"
+    },
+    "recipes": {
+      "bytes": 40556,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/recipes.json",
+      "sha256": "efa60e01a1eb0e6f97ce6a4bce8a56c790e487bd20b45a85a87f7ff13c81498d"
+    }
+  },
+  "kind": "t3-sdd-external-selection-v3-plan",
+  "officialCampaign": false,
+  "officialSuiteGenerated": false,
+  "policy": {
+    "doesNotUnlockParent44": true,
+    "noBusinessExecution": true,
+    "noExpectedOutputsDefined": true,
+    "sddRequestBodiesRemainEmpty": true,
+    "selectionIsExternalByFixtureId": true
+  },
+  "runtimeExecuted": false,
+  "selectedCells": [
+    {
+      "cellId": "POSTTRAN-OBL-001::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "open_status=00 is selected by package physical-resource presence only",
+        "request body remains {}"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-001::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1",
+        "posting:ACCTFILE:recordCount>=1",
+        "posting:TCATBALF:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "request_preparation_static_only",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-001",
+        "referenceTransitions": [
+          "POSTTRAN-T001",
+          "POSTTRAN-T002"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              29,
+              61
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              193,
+              200
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              23,
+              42
+            ],
+            "path": "app/jcl/POSTTRAN.jcl",
+            "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191"
+          }
+        ],
+        "title": "Arquivos externos e abertura"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-002::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "read_status=00 selected by non-empty DALYTRAN sequential input",
+        "EOF/other/UnknownEOF are not selected here"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-002",
+        "referenceTransitions": [
+          "POSTTRAN-T003",
+          "POSTTRAN-T004",
+          "POSTTRAN-T005",
+          "POSTTRAN-T006"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              202,
+              219
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              345,
+              369
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Loop DALYTRAN e EOF"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-004::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "xref_exists has concrete present and absent source-bound records in DALYTRAN/CARDXREF family",
+        "no expected result is derived"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-004::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-004",
+        "referenceTransitions": [
+          "POSTTRAN-T007",
+          "POSTTRAN-T008"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              370,
+              392
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              4,
+              8
+            ],
+            "path": "app/cpy/CVACT03Y.cpy",
+            "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+          }
+        ],
+        "title": "Validação de cartão"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-005::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "account_exists=true and account state fields are source-bound in ACCTFILE for the present card",
+        "negative/expired variants are not selected"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-005::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:ACCTFILE:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-005",
+        "referenceTransitions": [
+          "POSTTRAN-T008",
+          "POSTTRAN-T009",
+          "POSTTRAN-T010",
+          "POSTTRAN-T011"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              393,
+              421
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              4,
+              17
+            ],
+            "path": "app/cpy/CVACT01Y.cpy",
+            "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+          }
+        ],
+        "title": "Validação de conta, limite e expiração textual"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-006::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "reject branch is externally selectable by DALYTRAN record with card absent from XREFFILE",
+        "reject output contents remain outside expected authority"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-006::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:DALYTRAN:recordCount>=1",
+        "posting:XREFFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-006",
+        "referenceTransitions": [
+          "POSTTRAN-T007",
+          "POSTTRAN-T009",
+          "POSTTRAN-T010",
+          "POSTTRAN-T011"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              211,
+              216
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              227,
+              231
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              446,
+              465
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              176,
+              182
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          }
+        ],
+        "title": "Rejeitos e return-code"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "POSTTRAN-OBL-007::E3-SDD-stage6r3::posting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "effectiveSelectableTransitions": [
+        "POSTTRAN-T012",
+        "POSTTRAN-T013"
+      ],
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "tcatbal_status=00 branch has package-local TCATBALF indexed resource and matching category key",
+        "status 23 and failure status other are not selected"
+      ],
+      "limits": [
+        "TCATBALF contains key 10000000001010005 for the accepted 4111111111111111/01/0005 path, so status 00 is selected.",
+        "No present-card transaction has a missing TCATBALF key, so status 23 is not selected by this fixture.",
+        "The failure status other / abend branch is not selected and no output oracle is created."
+      ],
+      "matrixCellId": "POSTTRAN-OBL-007::E3-01-SDD-stage6r3::posting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/posting"
+      },
+      "operationId": "posting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+            "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "TRANFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "REPORT-IN---001 ",
+              "REPORT-OUT--001 "
+            ],
+            "physicalFiles": {
+              "TRANFILE": {
+                "bytes": 8192,
+                "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 350
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "posting:TCATBALF:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [
+        "tcatbal_status=00"
+      ],
+      "selectionCategory": "guard_eligible_partial_branch",
+      "source": {
+        "obligationId": "POSTTRAN-OBL-007",
+        "referenceTransitions": [
+          "POSTTRAN-T012",
+          "POSTTRAN-T013",
+          "POSTTRAN-T014"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              467,
+              542
+            ],
+            "path": "app/cbl/CBTRN02C.cbl",
+            "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+          },
+          {
+            "lines": [
+              4,
+              10
+            ],
+            "path": "app/cpy/CVTRA01Y.cpy",
+            "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+          }
+        ],
+        "title": "TCATBAL create/update"
+      },
+      "status": "candidate_static_only",
+      "track": "posting",
+      "unselectedGuardPartitions": [
+        "tcatbal_status=23",
+        "tcatbal_status=other"
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-001::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "open_status=00 is selected by package physical-resource presence and PARMFILE bytes",
+        "request body remains {}"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "INTCALC-OBL-001::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1",
+        "interest:XREFFILE:recordCount>=1",
+        "interest:ACCTFILE:recordCount>=1",
+        "interest:DISCGRP:recordCount>=1",
+        "interest:PARMFILE:bytes=10"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "request_preparation_static_only",
+      "source": {
+        "obligationId": "INTCALC-OBL-001",
+        "referenceTransitions": [
+          "INTCALC-T001",
+          "INTCALC-T002"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              28,
+              56
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              175,
+              186
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              22,
+              41
+            ],
+            "path": "app/jcl/INTCALC.jcl",
+            "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275"
+          }
+        ],
+        "title": "Arquivos, parâmetro e abertura"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "INTCALC-OBL-002::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "tcatbal_read_status=00 selected by non-empty TCATBALF sequential input",
+        "EOF/other are not selected here"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "INTCALC-OBL-002::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "INTCALC-OBL-002",
+        "referenceTransitions": [
+          "INTCALC-T003",
+          "INTCALC-T004"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              188,
+              222
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              4,
+              10
+            ],
+            "path": "app/cpy/CVTRA01Y.cpy",
+            "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+          }
+        ],
+        "title": "Varredura e agrupamento por conta"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "INTCALC-OBL-003::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "new group account/xref lookup has matching ACCTFILE primary keys and XREFFILE alternate keys",
+        "missing lookup is not selected"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "INTCALC-OBL-003::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:TCATBALF:recordCount>=1",
+        "interest:XREFFILE:alternateKeys>=1",
+        "interest:ACCTFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "INTCALC-OBL-003",
+        "referenceTransitions": [
+          "INTCALC-T003"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              200,
+              205
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              372,
+              413
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              4,
+              17
+            ],
+            "path": "app/cpy/CVACT01Y.cpy",
+            "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+          },
+          {
+            "lines": [
+              4,
+              8
+            ],
+            "path": "app/cpy/CVACT03Y.cpy",
+            "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+          }
+        ],
+        "title": "Leitura ACCOUNT e XREF por conta"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "INTCALC-OBL-004::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "effectiveSelectableTransitions": [
+        "INTCALC-T007",
+        "INTCALC-T009Z"
+      ],
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "disc_rate_path specific and zero are concretely source-bound by selected account groups",
+        "DEFAULT fallback and missing-group branch remain unselected"
+      ],
+      "limits": [
+        "ACCTFILE/TCATBALF select STANDARD and ZERORATE records only.",
+        "DISCGRP includes DEFAULT as a resource, but no account/group combination forces status 23 and fallback DEFAULT.",
+        "The missing disclosure-group / abend branch is not selected and no interest-output oracle is created."
+      ],
+      "matrixCellId": "INTCALC-OBL-004::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:DISCGRP:keys include STANDARD/ZERORATE; DEFAULT resource exists but fallback is not selected"
+      ],
+      "selectedGuardPartitions": [
+        "disc_rate_path=specific",
+        "disc_rate_path=zero"
+      ],
+      "selectionCategory": "guard_eligible_partial_branch",
+      "source": {
+        "obligationId": "INTCALC-OBL-004",
+        "referenceTransitions": [
+          "INTCALC-T007",
+          "INTCALC-T008",
+          "INTCALC-T009Z"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              210,
+              217
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              415,
+              460
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              4,
+              10
+            ],
+            "path": "app/cpy/CVTRA02Y.cpy",
+            "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+          }
+        ],
+        "title": "Taxa específica ou DEFAULT"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": [
+        "disc_rate_path=default",
+        "disc_rate_path=missing"
+      ]
+    },
+    {
+      "cellId": "INTCALC-OBL-005::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "rate nonzero and zero partitions are selectable by DISCGRP records; formula expected output is not generated"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "INTCALC-OBL-005::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:DISCGRP:keys include nonzero and zero rates",
+        "interest:TCATBALF:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "INTCALC-OBL-005",
+        "referenceTransitions": [
+          "INTCALC-T007",
+          "INTCALC-T009",
+          "INTCALC-T009Z"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              213,
+              217
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              462,
+              470
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              9,
+              10
+            ],
+            "path": "app/cpy/CVTRA02Y.cpy",
+            "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+          }
+        ],
+        "title": "Fórmula e guarda de juros"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "INTCALC-OBL-006::E3-SDD-stage6r3::interest",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "guardBasis": [
+        "interest transaction field sources are available as parameter and lookup bytes",
+        "write outcome remains unchecked"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "INTCALC-OBL-006::E3-01-SDD-stage6r3::interest",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/interest"
+      },
+      "operationId": "interest",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "resources": {
+          "ACCTFILE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "physicalFiles": {
+              "ACCTFILE": {
+                "bytes": 8192,
+                "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 300
+          },
+          "DISCGRP": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "STANDARD  010005",
+              "ZERORATE  010005",
+              "DEFAULT   010005"
+            ],
+            "physicalFiles": {
+              "DISCGRP": {
+                "bytes": 8192,
+                "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+              }
+            },
+            "recordCount": 3,
+            "recordSize": 50
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "recordCount": 1,
+            "recordSize": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+            "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+          },
+          "TCATBALF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "10000000001010005",
+              "10000000002010005"
+            ],
+            "physicalFiles": {
+              "TCATBALF": {
+                "bytes": 8192,
+                "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "XREFFILE": {
+            "alternateKeyName": "FD-XREF-ACCT-ID",
+            "alternateKeys": [
+              "10000000001",
+              "10000000002"
+            ],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "XREFFILE": {
+                "bytes": 8192,
+                "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+              },
+              "XREFFILE.1": {
+                "bytes": 8192,
+                "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          }
+        }
+      },
+      "resourceChecks": [
+        "interest:PARMFILE:bytes=10",
+        "interest:XREFFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "request_preparation_no_output_oracle",
+      "source": {
+        "obligationId": "INTCALC-OBL-006",
+        "referenceTransitions": [
+          "INTCALC-T009",
+          "INTCALC-T010",
+          "INTCALC-T011"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              473,
+              515
+            ],
+            "path": "app/cbl/CBACT04C.cbl",
+            "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+          },
+          {
+            "lines": [
+              4,
+              18
+            ],
+            "path": "app/cpy/CVTRA05Y.cpy",
+            "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+          }
+        ],
+        "title": "Campos da transação de juros"
+      },
+      "status": "candidate_static_only",
+      "track": "interest",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-001::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "previous not_mapped for SDD reporting is corrected in the versioned copy: /reporting operation plus external reporting package supply the selectable file context",
+        "SORT/REPROC execution is not claimed"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-001::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:CARDXREF:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "request_preparation_static_only",
+      "source": {
+        "obligationId": "TRANREPT-OBL-001",
+        "referenceTransitions": [
+          "TRANREPT-T001",
+          "TRANREPT-T002"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              29,
+              57
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              19,
+              80
+            ],
+            "path": "app/jcl/TRANREPT.jcl",
+            "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571"
+          },
+          {
+            "lines": [
+              18,
+              28
+            ],
+            "path": "app/proc/REPROC.prc",
+            "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f"
+          }
+        ],
+        "title": "Contexto JCL e arquivos"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-002::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "DATEPARM 2022-07-01..2022-07-31 and TRANFILE with at least one 2022-07 record select date_window=in_range",
+        "EOF receiver behavior not selected"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-002::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:TRANFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "TRANREPT-OBL-002",
+        "referenceTransitions": [
+          "TRANREPT-T003",
+          "TRANREPT-T012"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              122,
+              125
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              219,
+              243
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              170,
+              178
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          }
+        ],
+        "title": "DATEPARM e filtro textual antes do EOF"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-003::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "TRANFILE includes an out-of-range August record against July DATEPARM, selecting the skip-detail branch",
+        "empty-input/UnknownEOF is not promoted"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-003::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:DATEPARM:recordCount=1",
+        "reporting:TRANFILE:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "TRANREPT-OBL-003",
+        "referenceTransitions": [
+          "TRANREPT-T009"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              170,
+              206
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              248,
+              272
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          }
+        ],
+        "title": "Leitura TRANFILE e EOF condicional"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-004::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "lookups for the in-range transaction have matching package-local indexed resources",
+        "absent lookup abend is not selected"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-004::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:CARDXREF:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "guard_eligible",
+      "source": {
+        "obligationId": "TRANREPT-OBL-004",
+        "referenceTransitions": [
+          "TRANREPT-T003"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              181,
+              196
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              484,
+              512
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              4,
+              8
+            ],
+            "path": "app/cpy/CVACT03Y.cpy",
+            "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+          },
+          {
+            "lines": [
+              4,
+              7
+            ],
+            "path": "app/cpy/CVTRA03Y.cpy",
+            "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667"
+          },
+          {
+            "lines": [
+              4,
+              9
+            ],
+            "path": "app/cpy/CVTRA04Y.cpy",
+            "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8"
+          }
+        ],
+        "title": "Quebra por cartão e lookups"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-005::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "first-detail/header branch is selectable from one in-range transaction",
+        "page-boundary after 20 lines is not selected"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-005::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:DATEPARM:recordCount=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "source": {
+        "obligationId": "TRANREPT-OBL-005",
+        "referenceTransitions": [
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T015"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              274,
+              290
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              324,
+              341
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              4,
+              49
+            ],
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+          }
+        ],
+        "title": "Cabeçalhos e paginação"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    },
+    {
+      "cellId": "TRANREPT-OBL-006::E3-SDD-stage6r3::reporting",
+      "classification": "externally_selectable_sdd_empty_request",
+      "contractId": "E3-SDD-stage6r3",
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "guardBasis": [
+        "detail/accrual branch has transaction and lookup bytes",
+        "edited-money expected formatting is not asserted"
+      ],
+      "limits": [
+        "No output/status oracle is created; this is local static selection only."
+      ],
+      "matrixCellId": "TRANREPT-OBL-006::E3-01-SDD-stage6r3::reporting",
+      "matrixContractId": "E3-01-SDD-stage6r3",
+      "noExpected": true,
+      "operation": {
+        "method": "post",
+        "path": "/reporting"
+      },
+      "operationId": "reporting",
+      "oracleAuthority": "none_defined_for_output_status_or_business_effect",
+      "requestBody": {},
+      "requestBodyPreservedEmpty": true,
+      "resourceAuthority": {
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "resources": {
+          "CARDXREF": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "4111111111111111",
+              "4222222222222222"
+            ],
+            "physicalFiles": {
+              "CARDXREF": {
+                "bytes": 8192,
+                "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+              }
+            },
+            "recordCount": 2,
+            "recordSize": 50
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "recordCount": 1,
+            "recordSize": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+          },
+          "TRANCATG": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "010005"
+            ],
+            "physicalFiles": {
+              "TRANCATG": {
+                "bytes": 8192,
+                "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "recordCount": 2,
+            "recordSize": 350,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+          },
+          "TRANFILE.empty": {
+            "bytes": 0,
+            "recordCount": 0,
+            "recordSize": 350,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+          },
+          "TRANTYPE": {
+            "alternateKeyName": null,
+            "alternateKeys": [],
+            "keys": [
+              "01"
+            ],
+            "physicalFiles": {
+              "TRANTYPE": {
+                "bytes": 8192,
+                "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+              }
+            },
+            "recordCount": 1,
+            "recordSize": 60
+          }
+        }
+      },
+      "resourceChecks": [
+        "reporting:TRANFILE:recordCount>=1",
+        "reporting:TRANTYPE:recordCount>=1",
+        "reporting:TRANCATG:recordCount>=1"
+      ],
+      "selectedGuardPartitions": [],
+      "selectionCategory": "branch_selected_no_output_oracle",
+      "source": {
+        "obligationId": "TRANREPT-OBL-006",
+        "referenceTransitions": [
+          "TRANREPT-T016"
+        ],
+        "sourceAnchors": [
+          {
+            "lines": [
+              287,
+              289
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              361,
+              374
+            ],
+            "path": "app/cbl/CBTRN03C.cbl",
+            "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+          },
+          {
+            "lines": [
+              15,
+              31
+            ],
+            "path": "app/cpy/CVTRA07Y.cpy",
+            "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+          }
+        ],
+        "title": "Linha de detalhe e acumulação"
+      },
+      "status": "candidate_static_only",
+      "track": "reporting",
+      "unselectedGuardPartitions": []
+    }
+  ],
+  "status": "candidate_static_only",
+  "summary": {
+    "blocked": 7,
+    "byTrack": {
+      "interest": 6,
+      "posting": 6,
+      "reporting": 6
+    },
+    "selected": 18,
+    "selectionCategories": {
+      "branch_selected_no_output_oracle": 3,
+      "guard_eligible": 9,
+      "guard_eligible_partial_branch": 2,
+      "request_preparation_no_output_oracle": 1,
+      "request_preparation_static_only": 3
+    },
+    "totalSddObligations": 25
+  }
+}

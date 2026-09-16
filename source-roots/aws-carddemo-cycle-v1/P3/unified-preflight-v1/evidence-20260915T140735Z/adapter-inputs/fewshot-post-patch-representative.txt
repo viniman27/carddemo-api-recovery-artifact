@@ -1,0 +1,31 @@
+Fewshot representative preserved post-patch request. No model call.
+```json
+[
+  {
+    "id": "fewshot-e2-2-interest-post-patch",
+    "method": "POST",
+    "path": "/interest-generation-runs",
+    "body": {
+      "bindings": {
+        "disclosureGroups": "p3-local-technical-fixture-selection:disclosureGroups",
+        "accounts": "p3-local-technical-fixture-selection:accounts",
+        "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances",
+        "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput",
+        "crossReferences": "p3-local-technical-fixture-selection:crossReferences"
+      },
+      "parameterDate": "2022071800",
+      "parameterLength": 10
+    },
+    "expectedStatus": [
+      200,
+      400,
+      500,
+      503
+    ],
+    "parameters": {
+      "track": "interest",
+      "postPatchFewshotSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d"
+    }
+  }
+]
+```

@@ -1,0 +1,180 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "technical_local_only",
+  "fixtures": [
+    {
+      "fixtureId": "posting-native-technical-v2",
+      "track": "posting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "posting/ACCTFILE",
+          "DALYTRAN": "posting/DALYTRAN",
+          "TCATBALF": "posting/TCATBALF",
+          "TRANFILE": "posting/TRANFILE",
+          "XREFFILE": "posting/XREFFILE"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "2d1d9d1098a8b44c9b258f0019374f6575bd1b0be18d3e36379d21b78a201568",
+            "bytes": 8192
+          },
+          "DALYTRAN": {
+            "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2",
+            "bytes": 350
+          },
+          "TCATBALF": {
+            "sha256": "ed8b01b8da73f34fcf14922a2c994a88e763891de61ff161d927e6a9f83edbf2",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "0bcb9694dfefc8c8e682e033f0572521136f9dc6910179c22b6536a131fee460",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "f98863b0972f2ba1d22ed7e18599133e656e81f9062949c12c7480a2c833ce9a",
+            "bytes": 37
+          }
+        }
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "existing binding synthetic constructors and RAWIO",
+        "bindingSha256": "99c5b6dd4302b82d4664ce224dcd651827cdd4b2b610f83fab03e069606fa011"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "4d8e4dc0528301de43dd2d6dd08379b51e80928d16d6326f223c43f7edbcbb94"
+    },
+    {
+      "fixtureId": "interest-native-technical-v2",
+      "track": "interest",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "interest/ACCTFILE",
+          "DISCGRP": "interest/DISCGRP",
+          "TCATBALF": "interest/TCATBALF",
+          "XREFFILE": "interest/XREFFILE",
+          "XREFFILE.1": "interest/XREFFILE.1"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+            "bytes": 8192
+          },
+          "DISCGRP": {
+            "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+            "bytes": 8192
+          },
+          "TCATBALF": {
+            "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "f98863b0972f2ba1d22ed7e18599133e656e81f9062949c12c7480a2c833ce9a",
+            "bytes": 37
+          },
+          "XREFFILE.1": {
+            "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "existing technical seed executable, not expected outcomes",
+        "generatorSha256": "a524257fd8846e4e344147f86048e55b3bdf56ffcbe31509f8148bfc2ef48fc2",
+        "driverSha256": "b20c2f3d3395e19bf93df3b0ba67ac80e15e7eb14787ed41baabe1153d90ee74",
+        "driverParameter": "2022071800",
+        "parameterLimitation": "fixed technical support driver; not a public default or parameterization proof",
+        "physicalResourceAmendment": "Include observed GnuCOBOL BDB alternate-key sidecar XREFFILE.1; previous package failed open status 35. No source repair."
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "83ffa75531ff32ea68e105e9ec9b22d7b15694730f8b36f8112ab8d32978134a"
+    },
+    {
+      "fixtureId": "reporting-native-technical-v2",
+      "track": "reporting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "CARDXREF": "reporting/CARDXREF",
+          "DATEPARM": "reporting/DATEPARM",
+          "TRANCATG": "reporting/TRANCATG",
+          "TRANFILE": "reporting/TRANFILE",
+          "TRANTYPE": "reporting/TRANTYPE"
+        },
+        "filePins": {
+          "CARDXREF": {
+            "sha256": "f98863b0972f2ba1d22ed7e18599133e656e81f9062949c12c7480a2c833ce9a",
+            "bytes": 37
+          },
+          "DATEPARM": {
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+            "bytes": 80
+          },
+          "TRANCATG": {
+            "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+            "bytes": 350
+          },
+          "TRANTYPE": {
+            "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "local_synthetic_support",
+        "officialFixture": false,
+        "source": "prior technical smoke INPUT resources, not expected outputs",
+        "files": [
+          {
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/TRANFILE",
+            "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063"
+          },
+          {
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runs/reporting-tkb0lzyk/DATEPARM",
+            "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f"
+          }
+        ],
+        "lookupGeneratorSha256": "360c7876f1af34e2fe2219876a95ec6673a28f7ca3ff8823532a9a05233d41b0",
+        "selection": "exact prior technical input sequence; no upstream SORT/JCL execution claim"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": true
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "d5825d608e0e353a800417e4cb235999955429f4854f50e6810762b818f9b354"
+    }
+  ]
+}

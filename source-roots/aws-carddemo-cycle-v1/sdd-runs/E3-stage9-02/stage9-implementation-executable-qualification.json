@@ -1,0 +1,1064 @@
+{
+  "kind": "stage9-implementation-executable-qualification-report",
+  "artifact_type": "implementation-executable-qualification",
+  "run_id": "E3-stage9-02",
+  "upstream_run_id": "E3-01",
+  "campaign_boundary": "not_T1_T2_T3_T4",
+  "adoption": {
+    "mode": "source_adoption_and_build",
+    "generated_from_scratch": false,
+    "claim": "Stage 9 adopts explicitly pinned existing source files and builds fresh executable artifacts in the run workspace."
+  },
+  "upstream": {
+    "run_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "stages": {
+      "1": {
+        "spec": "specs/pipeline-scope-carddemo/spec.json",
+        "sha256": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+        "bytes": 2188
+      },
+      "2": {
+        "spec": "specs/capability-selection-carddemo-r2/spec.json",
+        "sha256": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+        "bytes": 2974
+      },
+      "3": {
+        "spec": "specs/legacy-evidence-carddemo-r2/spec.json",
+        "sha256": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+        "bytes": 2725
+      },
+      "4": {
+        "spec": "specs/capability-semantics-carddemo/spec.json",
+        "sha256": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+        "bytes": 2646
+      },
+      "5": {
+        "spec": "specs/canonical-data-boundary-carddemo/spec.json",
+        "sha256": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+        "bytes": 2667
+      },
+      "6": {
+        "spec": "specs/api-contract-carddemo-r3/spec.json",
+        "sha256": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+        "bytes": 2481
+      },
+      "7": {
+        "spec": "specs/adapter-behavior-carddemo-r2/spec.json",
+        "sha256": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+        "bytes": 2499
+      },
+      "8": {
+        "spec": "specs/semantic-validation-carddemo/spec.json",
+        "sha256": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1",
+        "bytes": 2371
+      }
+    },
+    "stage8_gate": {
+      "status": "current",
+      "reasons": [],
+      "human_approval_granted": false,
+      "ok": true,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline/tools/check_gate.py",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+        "specs/semantic-validation-carddemo/spec.json"
+      ],
+      "exit_code": 0
+    },
+    "hashes": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    },
+    "approved_1_to_8_current": true
+  },
+  "implementation": {
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+    "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+    "bytes": 39014
+  },
+  "qualification": {
+    "kind": "Stage9 fresh HTTP executable qualification; not official T1/T2/T3/T4",
+    "localhost": "127.0.0.1:52997",
+    "results": [
+      {
+        "url": "http://127.0.0.1:52997/posting",
+        "status": 200,
+        "raw_sha256": "f92cf4f3d68356feba90b45d52d2fac17ef920c58dd64e715718bb7baaed97cc",
+        "raw_bytes": 891,
+        "body": {
+          "track": "posting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": [
+              {
+                "transactionId": "TEST000000000001",
+                "typeCode": "01",
+                "categoryCode": "0001",
+                "source": "TEST      ",
+                "description": "LOCAL SYNTHETIC FIXTURE                                                                             ",
+                "amount": "00000002500",
+                "merchantId": "000000001",
+                "merchantName": "TEST MERCHANT                                     ",
+                "merchantCity": "TEST CITY                                         ",
+                "merchantPostalText": "0000000000",
+                "cardReference": "0000000000000001",
+                "originalTimestamp": "2025-01-01-00.00.00.000000",
+                "processingTimestamp": "2026-09-15-13.32.24.000000"
+              }
+            ]
+          },
+          "rejections": {
+            "availability": "available",
+            "items": []
+          },
+          "progress": {
+            "availability": "available",
+            "value": {
+              "processedRecordCount": 1,
+              "preliminaryRejectCount": 0
+            }
+          }
+        },
+        "duration_s": 1.7,
+        "track": "posting"
+      },
+      {
+        "url": "http://127.0.0.1:52997/interest",
+        "status": 200,
+        "raw_sha256": "481a22013b22e8b15fbabdd6c6554478f3618a3b0d5bdb775ff9562bd96971b4",
+        "raw_bytes": 990,
+        "body": {
+          "track": "interest",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": [
+              {
+                "transactionId": "2022071800000001",
+                "typeCode": "01",
+                "categoryCode": "0005",
+                "source": "System",
+                "description": "Int. for a/c 00000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "amount": "00000010000",
+                "merchantId": "000000000",
+                "merchantName": "",
+                "merchantCity": "",
+                "merchantPostalText": "",
+                "cardReference": "4111111111111111",
+                "originalTimestamp": "2026-09-15-13.32.25.860000",
+                "processingTimestamp": "2026-09-15-13.32.25.860000"
+              }
+            ]
+          }
+        },
+        "duration_s": 0.603,
+        "track": "interest"
+      },
+      {
+        "url": "http://127.0.0.1:52997/reporting",
+        "status": 200,
+        "raw_sha256": "3b23608f612159d0925be6d104a377a808c6716832e7deeb631fd5510e1643d3",
+        "raw_bytes": 728,
+        "body": {
+          "track": "reporting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "records": {
+            "availability": "available",
+            "items": [
+              {
+                "kind": "header",
+                "value": {
+                  "reportShortNameText": "DALYREPT",
+                  "reportLongNameText": "Daily Transaction Report",
+                  "startText": "2026-09-14",
+                  "endText": "2026-09-14"
+                }
+              },
+              {
+                "kind": "detail",
+                "value": {
+                  "transactionId": "2022071800000001",
+                  "accountReference": "00000000001",
+                  "typeCode": "01",
+                  "typeDescription": "System transact",
+                  "categoryCode": "0005",
+                  "categoryDescription": "Interest charge",
+                  "source": "System",
+                  "amountText": "100.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "page",
+                  "valueText": "+        200.00"
+                }
+              },
+              {
+                "kind": "total",
+                "value": {
+                  "label": "grand",
+                  "valueText": "+        200.00"
+                }
+              }
+            ]
+          }
+        },
+        "duration_s": 0.311,
+        "track": "reporting"
+      }
+    ],
+    "current_run_dirs": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-v7yzkioi",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-hxj90hr5",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-q8l8k6e6"
+    ],
+    "audits": [
+      {
+        "track": "interest",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-v7yzkioi/audit.json",
+        "audit_sha256": "a8fdda4800a78391b94a6f1d4e77280274a69a70f026aed0d6a55b99a6e2512f",
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "captures_count": 1,
+        "state_after_entry_count": 7
+      },
+      {
+        "track": "posting",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-hxj90hr5/audit.json",
+        "audit_sha256": "39f916e818cccb29bce4a5afa7656d712415adfdd62bde1bfcfbd437b6ec290e",
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "captures_count": 7,
+        "state_after_entry_count": 11
+      },
+      {
+        "track": "reporting",
+        "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-q8l8k6e6/audit.json",
+        "audit_sha256": "815dc93d23019c9b451ee97d5728e4fc878d3ac7dab22756d10a64e4881a9807",
+        "reached_cobol": true,
+        "program_exit": 0,
+        "response_status": 200,
+        "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "captures_count": 1,
+        "state_after_entry_count": 6
+      }
+    ],
+    "server_lifecycle": {
+      "pid": 75326,
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "serve",
+        "--port-file",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/server.port"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "schema_validation": {
+      "exit_code": 0,
+      "stdout": "{\n  \"p2a_openapi\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml\",\n  \"readiness_manifest\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/readiness-manifest.json\",\n  \"validator\": \"jsonschema\",\n  \"cases\": [\n    {\n      \"track\": \"posting\",\n      \"schema\": \"PostingEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"interest\",\n      \"schema\": \"InterestEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"reporting\",\n      \"schema\": \"ReportingEnvelope\",\n      \"status\": 200,\n      \"valid\": true,\n      \"errors\": []\n    },\n    {\n      \"track\": \"posting-bad-request\",\n      \"schema\": \"InterfaceError\",\n      \"status\": 400,\n      \"valid\": true,\n      \"errors\": []\n    }\n  ],\n  \"overall_passed\": true\n}\n",
+      "stderr": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/validate_p2b.py:11: DeprecationWarning: jsonschema.RefResolver is deprecated as of v4.18.0, in favor of the https://github.com/python-jsonschema/referencing library, which provides more compliant referencing behavior as well as more flexible APIs for customization. A future release will remove RefResolver. Please file a feature request (on referencing) if you are missing an API for the kind of customization you need.\n  from jsonschema import Draft202012Validator, RefResolver\n"
+    },
+    "overall_passed": true
+  },
+  "limits": [
+    "qualificação técnica estreita por localhost e três POST {}",
+    "não é campanha T1/T2/T3/T4 nem avaliação independente",
+    "não afirma fidelidade semântica plena; reutiliza Stage6r3/7r2/8 aprovados",
+    "falhas COBOL não-zero são preservadas nos audits, não reescritas como sucesso de programa"
+  ],
+  "input_manifest": {
+    "path": "stage9-input-manifest.json",
+    "sha256": "62764065b5767cc38f682f10d2cf673ce389b9831b8b9ea06b6ba0b33e4376da",
+    "bytes": 14035
+  },
+  "manifest_pin_verification": {
+    "checked_count": 53,
+    "checked": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+        "bytes": 39014
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runtime_observations.py",
+        "sha256": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+        "bytes": 5151
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/write_observer.c",
+        "sha256": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+        "bytes": 1923
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/interest_driver.cbl",
+        "sha256": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080",
+        "bytes": 920
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/validate_p2b.py",
+        "sha256": "ca3f57abb6735eef3aa33d85aa8ce07bb311e5e0e6cc06ca71a35f255845a41b",
+        "bytes": 2154
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+        "bytes": 51697
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+        "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a",
+        "bytes": 66677
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/validation-report.json",
+        "sha256": "9a7e5e180c80e242e5ee6a01c345d85d4efe9e1d286556a41f1bd2910f1e806f",
+        "bytes": 19445
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/plan-binding.md",
+        "sha256": "207e18186aa173d2ef8ed8314b93a08b69886b89edb5b45d7af46bf0a7639ada",
+        "bytes": 5071
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/PARMFILE",
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "bytes": 10
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/ACCTFILE",
+        "sha256": "2d1d9d1098a8b44c9b258f0019374f6575bd1b0be18d3e36379d21b78a201568",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/DALYTRAN",
+        "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2",
+        "bytes": 350
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TCATBALF",
+        "sha256": "ed8b01b8da73f34fcf14922a2c994a88e763891de61ff161d927e6a9f83edbf2",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TRANFILE",
+        "sha256": "0bcb9694dfefc8c8e682e033f0572521136f9dc6910179c22b6536a131fee460",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/XREFFILE",
+        "sha256": "d91290e6b5be906e6335b066b977a6179021d29e4357872f3f57be6437ab8356",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+        "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/DATEPARM",
+        "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+        "bytes": 80
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+        "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANFILE",
+        "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+        "bytes": 350
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+        "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+        "bytes": 8192
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/evidence/research-package.json",
+        "sha256": "63ba5c47ecb21349549744b912af3b150654e7e435724dba499e3c88369f15a2",
+        "bytes": 4556
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "bytes": 10142
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "bytes": 52479
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "bytes": 58890
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "bytes": 52239
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "bytes": 1125
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "bytes": 736
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "bytes": 898
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy",
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "bytes": 898
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy",
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "bytes": 655
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy",
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "bytes": 817
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "bytes": 1546
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy",
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "bytes": 1538
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "bytes": 5758
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "bytes": 3662
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "bytes": 2964
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "bytes": 3246
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "bytes": 5330
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "bytes": 6427
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc",
+        "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "bytes": 2233
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CBACT04C_driver.cbl",
+        "sha256": "e7a7c7ae2b669d36dd8f6dce894fba7530bae18c8e2ac562402250318b886d28",
+        "bytes": 292
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CEE3ABD0.cbl",
+        "sha256": "b81a494b0e917eb078e0009c5f4e0db88f3f2ba367a7cc59dfc917a631c41130",
+        "bytes": 159
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CEE3ABD2.cbl",
+        "sha256": "099ff2967e949720a2c725bee2c23fd424c573761575def216eba3a0dc0c6bd2",
+        "bytes": 291
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/intcalc_fixture.cbl",
+        "sha256": "8cf6cda1dcd2e90577e23c290dadc3105ccfe1b3a9adee306e6d100054478f94",
+        "bytes": 2863
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/load_idx.cbl",
+        "sha256": "8fd4799622e778dbbf6e0bf13d6052376812abdd492466c77885d0757e7e8f19",
+        "bytes": 1029
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/report_fixture.cbl",
+        "sha256": "2a6944f071e900422ba4f8ae07ed594af45cc451a3133177c06841ad98d996bf",
+        "bytes": 1784
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "sha256": "e37aea9bac1a04eef616f74b9264b11d63b0564c9ae706cace4db30be37cea2e",
+        "bytes": 7007
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "sha256": "b0d7748b5bdf494eaf78e12cea8be15361858b3be99fbd91b5bac55ba7d65f4a",
+        "bytes": 14976112
+      }
+    ]
+  },
+  "source_workspace": {
+    "adoption_mode": "source_adoption_and_build",
+    "generated_from_scratch": false,
+    "implementation": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+    "implementation_sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+    "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle",
+    "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "copied_files": [
+      {
+        "label": "implementation_sources",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "sha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+        "bytes": 39014
+      },
+      {
+        "label": "implementation_sources",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/runtime_observations.py",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/runtime_observations.py",
+        "sha256": "b37bab6034723d3ed4a9412c45368e15bc85079c53f8c7cefb1568d0c2912ebd",
+        "bytes": 5151
+      },
+      {
+        "label": "implementation_sources",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/write_observer.c",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/write_observer.c",
+        "sha256": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+        "bytes": 1923
+      },
+      {
+        "label": "implementation_sources",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/interest_driver.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/interest_driver.cbl",
+        "sha256": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080",
+        "bytes": 920
+      },
+      {
+        "label": "implementation_sources",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2b/validate_p2b.py",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/validate_p2b.py",
+        "sha256": "ca3f57abb6735eef3aa33d85aa8ce07bb311e5e0e6cc06ca71a35f255845a41b",
+        "bytes": 2154
+      },
+      {
+        "label": "contract.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+        "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444",
+        "bytes": 51697
+      },
+      {
+        "label": "contract.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+        "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a",
+        "bytes": 66677
+      },
+      {
+        "label": "contract.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/validation-report.json",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/validation-report.json",
+        "sha256": "9a7e5e180c80e242e5ee6a01c345d85d4efe9e1d286556a41f1bd2910f1e806f",
+        "bytes": 19445
+      },
+      {
+        "label": "contract.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/plan-binding.md",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2a/plan-binding.md",
+        "sha256": "207e18186aa173d2ef8ed8314b93a08b69886b89edb5b45d7af46bf0a7639ada",
+        "bytes": 5071
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/PARMFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/PARMFILE",
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "bytes": 10
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/ACCTFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/ACCTFILE",
+        "sha256": "2d1d9d1098a8b44c9b258f0019374f6575bd1b0be18d3e36379d21b78a201568",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/DALYTRAN",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/DALYTRAN",
+        "sha256": "8e58b42b598dd048a72a294baceedb11f073ad88d781135b8e18b6bf24659fc2",
+        "bytes": 350
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TCATBALF",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TCATBALF",
+        "sha256": "ed8b01b8da73f34fcf14922a2c994a88e763891de61ff161d927e6a9f83edbf2",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TRANFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/TRANFILE",
+        "sha256": "0bcb9694dfefc8c8e682e033f0572521136f9dc6910179c22b6536a131fee460",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/XREFFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/posting/XREFFILE",
+        "sha256": "d91290e6b5be906e6335b066b977a6179021d29e4357872f3f57be6437ab8356",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+        "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/DATEPARM",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/DATEPARM",
+        "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+        "bytes": 80
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+        "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANFILE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANFILE",
+        "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+        "bytes": 350
+      },
+      {
+        "label": "resources.0",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+        "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+        "bytes": 8192
+      },
+      {
+        "label": "resources.1",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/evidence/research-package.json",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/evidence/research-package.json",
+        "sha256": "63ba5c47ecb21349549744b912af3b150654e7e435724dba499e3c88369f15a2",
+        "bytes": 4556
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/LICENSE",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "bytes": 10142
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "bytes": 52479
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "bytes": 58890
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "bytes": 52239
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "bytes": 1125
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "bytes": 736
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "bytes": 898
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy",
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "bytes": 898
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy",
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "bytes": 655
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy",
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "bytes": 817
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "bytes": 1546
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy",
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "bytes": 1538
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "bytes": 5758
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "bytes": 3662
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "bytes": 2964
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "bytes": 3246
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "bytes": 5330
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "bytes": 6427
+      },
+      {
+        "label": "resources.2",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc",
+        "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "bytes": 2233
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CBACT04C_driver.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CBACT04C_driver.cbl",
+        "sha256": "e7a7c7ae2b669d36dd8f6dce894fba7530bae18c8e2ac562402250318b886d28",
+        "bytes": 292
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CEE3ABD0.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CEE3ABD0.cbl",
+        "sha256": "b81a494b0e917eb078e0009c5f4e0db88f3f2ba367a7cc59dfc917a631c41130",
+        "bytes": 159
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/CEE3ABD2.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/CEE3ABD2.cbl",
+        "sha256": "099ff2967e949720a2c725bee2c23fd424c573761575def216eba3a0dc0c6bd2",
+        "bytes": 291
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/intcalc_fixture.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/intcalc_fixture.cbl",
+        "sha256": "8cf6cda1dcd2e90577e23c290dadc3105ccfe1b3a9adee306e6d100054478f94",
+        "bytes": 2863
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/load_idx.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/load_idx.cbl",
+        "sha256": "8fd4799622e778dbbf6e0bf13d6052376812abdd492466c77885d0757e7e8f19",
+        "bytes": 1029
+      },
+      {
+        "label": "resources.3",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/support/report_fixture.cbl",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/expanded-batch/support/report_fixture.cbl",
+        "sha256": "2a6944f071e900422ba4f8ae07ed594af45cc451a3133177c06841ad98d996bf",
+        "bytes": 1784
+      },
+      {
+        "label": "fixture_registry",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+        "sha256": "e37aea9bac1a04eef616f74b9264b11d63b0564c9ae706cace4db30be37cea2e",
+        "bytes": 7007
+      }
+    ],
+    "copied_file_count": 52,
+    "preexisting_binaries_copied": []
+  },
+  "build": {
+    "command": {
+      "cmd": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "build"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+      "env_override": {},
+      "exit_code": 0,
+      "stdout": "{\n  \"built\": true,\n  \"build_dir\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build\",\n  \"source_pins\": {\n    \"commit\": \"59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e\",\n    \"programs\": [\n      \"CBTRN02C\",\n      \"CBACT04C\",\n      \"CBTRN03C\"\n    ],\n    \"checked_files\": [\n      {\n        \"path\": \"LICENSE\",\n        \"sha256\": \"09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b\",\n        \"bytes\": 10142\n      },\n      {\n        \"path\": \"app/cbl/CBACT04C.cbl\",\n        \"sha256\": \"5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4\",\n        \"bytes\": 52479\n      },\n      {\n        \"path\": \"app/cbl/CBTRN02C.cbl\",\n        \"sha256\": \"708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f\",\n        \"bytes\": 58890\n      },\n      {\n        \"path\": \"app/cbl/CBTRN03C.cbl\",\n        \"sha256\": \"8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef\",\n        \"bytes\": 52239\n      },\n      {\n        \"path\": \"app/cpy/CVACT01Y.cpy\",\n        \"sha256\": \"81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728\",\n        \"bytes\": 1125\n      },\n      {\n        \"path\": \"app/cpy/CVACT03Y.cpy\",\n        \"sha256\": \"ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370\",\n        \"bytes\": 736\n      },\n      {\n        \"path\": \"app/cpy/CVTRA01Y.cpy\",\n        \"sha256\": \"50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba\",\n        \"bytes\": 898\n      },\n      {\n        \"path\": \"app/cpy/CVTRA02Y.cpy\",\n        \"sha256\": \"7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c\",\n        \"bytes\": 898\n      },\n      {\n        \"path\": \"app/cpy/CVTRA03Y.cpy\",\n        \"sha256\": \"fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667\",\n        \"bytes\": 655\n      },\n      {\n        \"path\": \"app/cpy/CVTRA04Y.cpy\",\n        \"sha256\": \"89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8\",\n        \"bytes\": 817\n      },\n      {\n        \"path\": \"app/cpy/CVTRA05Y.cpy\",\n        \"sha256\": \"d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec\",\n        \"bytes\": 1546\n      },\n      {\n        \"path\": \"app/cpy/CVTRA06Y.cpy\",\n        \"sha256\": \"c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1\",\n        \"bytes\": 1538\n      },\n      {\n        \"path\": \"app/cpy/CVTRA07Y.cpy\",\n        \"sha256\": \"72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa\",\n        \"bytes\": 5758\n      },\n      {\n        \"path\": \"app/jcl/COMBTRAN.jcl\",\n        \"sha256\": \"ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c\",\n        \"bytes\": 3662\n      },\n      {\n        \"path\": \"app/jcl/INTCALC.jcl\",\n        \"sha256\": \"61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275\",\n        \"bytes\": 2964\n      },\n      {\n        \"path\": \"app/jcl/POSTTRAN.jcl\",\n        \"sha256\": \"ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191\",\n        \"bytes\": 3246\n      },\n      {\n        \"path\": \"app/jcl/TRANBKP.jcl\",\n        \"sha256\": \"457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183\",\n        \"bytes\": 5330\n      },\n      {\n        \"path\": \"app/jcl/TRANREPT.jcl\",\n        \"sha256\": \"7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571\",\n        \"bytes\": 6427\n      },\n      {\n        \"path\": \"app/proc/REPROC.prc\",\n        \"sha256\": \"4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f\",\n        \"bytes\": 2233\n      }\n    ],\n    \"source_root\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-preparation/research-corpus\"\n  },\n  \"commands_jsonl\": \"<WORKSPACE>/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/command-log.jsonl\"\n}\n",
+      "stderr": "",
+      "duration_s": 1.572
+    },
+    "built_files": [
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+        "sha256": "d994a45d9915e27a442ec79281baf8c6152e48fe8f26394e33b7694197379bfc",
+        "bytes": 73584,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C_driver",
+        "sha256": "c6faa99f4575ead84e0e8747f85c79f712d9a366e93438afb0fb6f7e2f35e3c1",
+        "bytes": 51232,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+        "sha256": "708f10437326133efe7624f81c776d7603d0730c3e69351632d2ea591790ed8d",
+        "bytes": 73928,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+        "sha256": "e7e8384f1ee83cc508bacdd1f4615113121fd3f7cf042d5c70d7f0330b177ef8",
+        "bytes": 73176,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CEE3ABD.dylib",
+        "sha256": "815c4f96136259284082c01155c81acadd8a820430ad3796db2ff831108bc224",
+        "bytes": 51232,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+        "sha256": "34515737d93b3700872dfe095a66f8940c02f32e580f4c81db010caad2263b47",
+        "bytes": 52064,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/intcalc_fixture",
+        "sha256": "ac9821a6af6f92c5a73fe4f4ed2f584b13db0c1b972706ff50be7047af402f06",
+        "bytes": 53456,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_ACCTFILE",
+        "sha256": "8ee339fd3cfb1abb737af22ce4bd81df4394fd279c2796202a7261ff440dd07f",
+        "bytes": 52280,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TCATBALF",
+        "sha256": "bfe1f6786085cb50d4fe60e88f2c2dabd20cc2c5cb884822c309c55c89869a4f",
+        "bytes": 52280,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_TRANFILE",
+        "sha256": "1207fa69273c6a2594ec0f1e5f2077915e6b86cdc670ba0f3569077d3a78d267",
+        "bytes": 52280,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/io_XREFFILE",
+        "sha256": "7384c5464a04e5dd037b8aac3ddd1b3d417416d23c57f076c946aa0cca56355e",
+        "bytes": 52280,
+        "fresh_in_this_workspace": true
+      },
+      {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/execution/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/report_fixture",
+        "sha256": "f72881cf1c46ff6ff7963ace157a2879e6d6bb6e95f02ae2df8c714903580957",
+        "bytes": 52864,
+        "fresh_in_this_workspace": true
+      }
+    ],
+    "built_file_count": 12
+  },
+  "package": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/E3-stage9-02-stage9-executable-package.tar.gz",
+    "sha256": "1e92fa17f8bd51353271b914495a636be903012617a18fa1490f81d734408d10",
+    "bytes": 164970,
+    "launch_script": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-stage9-02/launch_stage9.py"
+  },
+  "stage1_to_8_hash_preservation": {
+    "preserved": true,
+    "changed": [],
+    "before": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    },
+    "after": {
+      "stage1": "c71fe711834fec66fb417335a2f60cde5b9f3b5b63968849c71ecc513b465978",
+      "stage2": "7d218739f4f338d568805051ec2e7f9ce70128d832c0dfbcdc11c34f704d2973",
+      "stage3": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7",
+      "stage4": "0cc4b961f75d95c86e34fa7269ed6a74c1da4b6f7d5ed9e6b4cde43c4e82bbcb",
+      "stage5": "4f6005cba97aa29d3a73e6cc4e36d2b0401fe159bcdfc5f28b0c2447080a10ef",
+      "stage6": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd",
+      "stage7": "94984c957b3d4aebfb16a613ced217752fc56d04becc81060aaa7fb388210933",
+      "stage8": "b7d9ffb3421fcbe9bff3787859b872239fd466e25132f9a81c467e14df7285b1"
+    }
+  },
+  "gate_metadata": {
+    "human_approval_granted": false,
+    "stage9_review_status": "pending",
+    "false_approved": false
+  }
+}

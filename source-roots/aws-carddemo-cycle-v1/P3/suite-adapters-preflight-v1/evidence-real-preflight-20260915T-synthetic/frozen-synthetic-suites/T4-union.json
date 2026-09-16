@@ -1,0 +1,108 @@
+{
+  "cases": [
+    {
+      "case_id": "T4-0001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {},
+      "provenance": [
+        "T1:T1-SYN-nominal",
+        "T2:T2-SYN-empty-json-object",
+        "T2:T2-SYN-duplicate-empty-json-object",
+        "T3:T3-SYN-mapped-path"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0002",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {},
+      "provenance": [
+        "T2:T2-SYN-absent"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Dup",
+            "1"
+          ],
+          [
+            "X-Dup",
+            "2"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0003",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {},
+      "provenance": [
+        "T2:T2-SYN-present-empty"
+      ],
+      "request": {
+        "body_b64": "",
+        "body_kind": "bytes",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-pkg",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "42490287aa3c6edde45f25139818ba2119309b4ba88c28dc117fac21715faac8",
+  "suite_id": "T4"
+}

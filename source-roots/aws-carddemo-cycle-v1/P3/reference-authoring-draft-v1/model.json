@@ -1,0 +1,160 @@
+{
+  "status": "draft_needs_independent_review",
+  "model_type": "finite_source_anchored_mbt_draft",
+  "global_boundaries": {
+    "not_modeled": [
+      "runtime outputs",
+      "official cases",
+      "contracts",
+      "atomicity/durability",
+      "calendar validity",
+      "rounding beyond source PIC/COMPUTE",
+      "post-failure persisted state"
+    ],
+    "determination_criteria": "expectations are decidable only when line-anchored source states the guard/action; otherwise obligation records a limit"
+  },
+  "capabilities": [
+    {
+      "id": "CBTRN02C_POSTTRAN",
+      "program": "CBTRN02C",
+      "job": "POSTTRAN",
+      "states": [
+        "open",
+        "read_daily",
+        "validate",
+        "reject",
+        "post_tcatbal",
+        "post_account",
+        "write_tran",
+        "close",
+        "abend"
+      ],
+      "transitions": [
+        {
+          "transition": "open_fail->abend"
+        },
+        {
+          "transition": "read_00->validate"
+        },
+        {
+          "transition": "read_10->close"
+        },
+        {
+          "transition": "xref_missing/account_missing/limit/expiration->reject"
+        },
+        {
+          "transition": "valid->post_tcatbal->post_account->write_tran->read_daily"
+        }
+      ],
+      "path_selection": "status codes, key existence, group/card change, date/rate/limit guards",
+      "loop_bound": "number of status-00 input records plus EOF read; unexpected status enters abend",
+      "coverage_obligations": [
+        "POSTTRAN-OBL-001",
+        "POSTTRAN-OBL-002",
+        "POSTTRAN-OBL-003",
+        "POSTTRAN-OBL-004",
+        "POSTTRAN-OBL-005",
+        "POSTTRAN-OBL-006",
+        "POSTTRAN-OBL-007",
+        "POSTTRAN-OBL-008"
+      ]
+    },
+    {
+      "id": "CBACT04C_INTCALC",
+      "program": "CBACT04C",
+      "job": "INTCALC",
+      "states": [
+        "open",
+        "read_tcatbal",
+        "new_account",
+        "rate_lookup",
+        "compute_write_interest",
+        "update_previous_account",
+        "close",
+        "abend"
+      ],
+      "transitions": [
+        {
+          "transition": "open_fail->abend"
+        },
+        {
+          "transition": "read_00_same_account->rate_lookup"
+        },
+        {
+          "transition": "read_00_new_account->update previous except first + load account/xref"
+        },
+        {
+          "transition": "rate_missing->default_or_abend"
+        },
+        {
+          "transition": "rate_zero->read_next"
+        },
+        {
+          "transition": "rate_nonzero->compute_write_interest"
+        },
+        {
+          "transition": "read_10->close without final account update"
+        }
+      ],
+      "path_selection": "status codes, key existence, group/card change, date/rate/limit guards",
+      "loop_bound": "number of status-00 input records plus EOF read; unexpected status enters abend",
+      "coverage_obligations": [
+        "INTCALC-OBL-001",
+        "INTCALC-OBL-002",
+        "INTCALC-OBL-003",
+        "INTCALC-OBL-004",
+        "INTCALC-OBL-005",
+        "INTCALC-OBL-006",
+        "INTCALC-OBL-007",
+        "INTCALC-OBL-008"
+      ]
+    },
+    {
+      "id": "CBTRN03C_TRANREPT",
+      "program": "CBTRN03C",
+      "job": "TRANREPT",
+      "states": [
+        "jcl_context",
+        "open",
+        "read_dateparm",
+        "read_tran",
+        "lookup",
+        "write_headers_detail",
+        "write_totals",
+        "close",
+        "abend"
+      ],
+      "transitions": [
+        {
+          "transition": "jcl_reproc_sort_filter precedes program as documentary context"
+        },
+        {
+          "transition": "dateparm_00->read_tran"
+        },
+        {
+          "transition": "tran_00_in_range->lookup/write detail"
+        },
+        {
+          "transition": "tran_00_out_of_range->no rigid expectation pending NEXT SENTENCE review"
+        },
+        {
+          "transition": "tran_10->write totals with current TRAN-AMT branch"
+        },
+        {
+          "transition": "lookup_missing->abend"
+        }
+      ],
+      "path_selection": "status codes, key existence, group/card change, date/rate/limit guards",
+      "loop_bound": "number of status-00 input records plus EOF read; unexpected status enters abend",
+      "coverage_obligations": [
+        "TRANREPT-OBL-001",
+        "TRANREPT-OBL-002",
+        "TRANREPT-OBL-003",
+        "TRANREPT-OBL-004",
+        "TRANREPT-OBL-005",
+        "TRANREPT-OBL-006",
+        "TRANREPT-OBL-007"
+      ]
+    }
+  ]
+}

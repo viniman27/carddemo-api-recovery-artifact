@@ -1,0 +1,43 @@
+{
+  "kind": "aws-campaign-runner-v1-output-manifest",
+  "createdUtc": "2026-09-15T18:57:35Z",
+  "scope": "official-capable wrapper only; no official execution",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 2799,
+      "sha256": "a4901bbcbbbcd846c66ccd794aa7a038ef6034231bf4c911e776ce9073cd71c8"
+    },
+    {
+      "path": "aws_campaign_runner_cli.py",
+      "bytes": 275,
+      "sha256": "892e1dbfe9b90290608ac6b48ae88120a99fb095a7132635b51fb79a5a17290b"
+    },
+    {
+      "path": "evidence-synthetic-plan/T1-plan-only.json",
+      "bytes": 992,
+      "sha256": "27f50547396681caab947f79556e8c05a6873fa75ac4b86bf8f9782076172598"
+    },
+    {
+      "path": "evidence-synthetic-plan/plan.json",
+      "bytes": 3681,
+      "sha256": "7226907925bf04f6c0a14f68277b70c841228e5ec5bfe134c6df3faf19d0d3c5"
+    },
+    {
+      "path": "src/aws_campaign_runner.py",
+      "bytes": 24266,
+      "sha256": "77f06a48e7af1e4e030e56b9f33961770f6c4200a6cc1b1c5d6b61a2445fb489"
+    },
+    {
+      "path": "tests/test_aws_campaign_runner.py",
+      "bytes": 7411,
+      "sha256": "67ef5fa6c51e371675605527ef232e4d8b91a7552db6da2ec46c3886d9769ee2"
+    }
+  ],
+  "verification": {
+    "unitTests": "P2a/.venv/bin/python -m unittest discover -s P3/aws-campaign-runner-v1/tests -v",
+    "cliPlan": "P2a/.venv/bin/python P3/aws-campaign-runner-v1/aws_campaign_runner_cli.py --mode plan ...",
+    "blockedExecuteVerified": true,
+    "officialExecutionStarted": false
+  }
+}

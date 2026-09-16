@@ -1,0 +1,2129 @@
+{
+  "bodyCapturePatch": {
+    "patched": true,
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "preserve raw response bytes for official structural measurement without editing harness-v3 file"
+  },
+  "createdUtc": "2026-09-15T19:28:23Z",
+  "experimentalViolations": [],
+  "harnessImport": {
+    "bytes": 26983,
+    "module": "campaign_harness",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "aws-carddemo-local-readiness-runner-v3-report",
+  "localReadinessExecution": true,
+  "measurementWarnings": [
+    {
+      "admissibility": "inadmissible_or_limited",
+      "case_id": "READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+      "reasons": [
+        "gcov_prefix_not_observed_for_business_command"
+      ],
+      "track": "interest"
+    },
+    {
+      "admissibility": "inadmissible_or_limited",
+      "case_id": "READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01",
+      "reasons": [
+        "gcov_prefix_not_observed_for_business_command"
+      ],
+      "track": "interest"
+    }
+  ],
+  "officialExecutionStarted": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only never-attempted case IDs; failed attempts are not replayed",
+    "stopPolicy": "transport/deadline/startup/lifecycle quietness stops; experimental expectation/structural violations are recorded and execution continues; measurement inadmissibility is recorded without fake zero"
+  },
+  "preparedTarget": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "isolatedContractSourceCopy": {
+      "contracts": [
+        {
+          "bytes": 30136,
+          "contractId": "E1-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+          "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt"
+        },
+        {
+          "bytes": 31102,
+          "contractId": "E1-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+          "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt"
+        },
+        {
+          "bytes": 30113,
+          "contractId": "E1-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+          "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt"
+        },
+        {
+          "bytes": 28899,
+          "contractId": "E2-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+          "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt"
+        },
+        {
+          "bytes": 29973,
+          "contractId": "E2-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+          "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt"
+        },
+        {
+          "bytes": 25822,
+          "contractId": "E2-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+          "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt"
+        }
+      ],
+      "count": 6,
+      "reason": "P2c facades load all E1/E2 response-original contracts by id inside isolated cycle"
+    },
+    "isolatedCoveragePatch": {
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair",
+      "patchedSha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "v2CommandLogPreservation": {
+        "alreadyPreservedByCoveragePatch": true,
+        "mechanical": true,
+        "patchedSha256AfterV2": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+        "scope": "isolated P2b copy only"
+      }
+    },
+    "isolatedP2bBuild": {
+      "argv": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "build"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+      "returncode": 0,
+      "stderrTail": "",
+      "stdoutTail": "sinessInstrumented\": false\n    }\n  ],\n  \"gcovPrefixPolicy\": \"per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation\",\n  \"immutableBuildPolicy\": \"single immutable coverage build reused for every server/application invocation; gcno not regenerated after first successful build\",\n  \"immutableArtifacts\": [\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C\",\n      \"sha256\": \"15b72a8bbe1b7f4db3d2149ec27dfb4e8ca8ffdf46b22fcebffab576ebe3c01a\",\n      \"bytes\": 116872\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c\",\n      \"sha256\": \"2c43a936f223a79bdb21b603ea3f84d3e041418b9291fcd70c0b91b9ace46991\",\n      \"bytes\": 155601\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno\",\n      \"sha256\": \"29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781\",\n      \"bytes\": 203444\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib\",\n      \"sha256\": \"e2ce136a8fe5b0933e7c914ddad5d4b0aaf831b378b4d9c921d6a12817a1a9b4\",\n      \"bytes\": 100288\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c\",\n      \"sha256\": \"5ac47d04ad9cf15fb06ba873b56cbdbf663d5595a9e01ef331d838452afd342b\",\n      \"bytes\": 137647\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno\",\n      \"sha256\": \"d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601\",\n      \"bytes\": 186340\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C\",\n      \"sha256\": \"9aebc054796dcf01d235476e5ec7be8901124a33cfdd5bf7788d416b4928b997\",\n      \"bytes\": 116840\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c\",\n      \"sha256\": \"239d9f81dbd62a37307762b3a0cc904cd83add5e921e87ef0427dc39f6477388\",\n      \"bytes\": 153049\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno\",\n      \"sha256\": \"5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20\",\n      \"bytes\": 206068\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER\",\n      \"sha256\": \"28618c2950ad11903e50c170075a95cb45a1447eea96dabcd32fbf8dc010b9da\",\n      \"bytes\": 52064\n    }\n  ]\n}\n"
+    },
+    "isolatedP2cFewshotCoveragePatch": {
+      "mechanicalAdaptations": [
+        "command_log_unredirected_to_isolated_p2b",
+        "posting_gcov_prefix",
+        "interest_gcov_prefix",
+        "reporting_gcov_prefix",
+        "audit_measurement_provenance"
+      ],
+      "originalSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "patchScope": "isolated P2c few-shot copy only",
+      "patchedSha256": "ddd9fc32cf39e7e6be55c915a7250f576d1f57f6b57a30e6be6cc0b2a008e2a8",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "provenance": "same-invocation coverage measurement plumbing only; no original COBOL/API/contracts/public response behavior changes"
+    },
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-preparation",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "8b09f8f08f8773786656659061d708f0e95dc26115c2cc296f95c6b2dd1e82e2"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "bounded local readiness qualification only; not an official campaign run and not a T4 result",
+  "stopPolicy": {
+    "reason": null,
+    "stopped": false
+  },
+  "suiteReports": [
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99365,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases/READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001/replay/applications/0001-181404d70287db5f"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "926300fba228d77eaf2a1c2957e98931f9e115d20c708c2ccab5815771e87448",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases/READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001/replay/applications/0001-181404d70287db5f"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99365,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases/READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001/replay/applications/0001-181404d70287db5f"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "926300fba228d77eaf2a1c2957e98931f9e115d20c708c2ccab5815771e87448",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases/READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001/replay/applications/0001-181404d70287db5f"
+          },
+          "case_id": "READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001",
+          "contractId": "E2-1",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "posting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov",
+                  "GCOV_PREFIX_STRIP": "16",
+                  "P2B_INVOCATION": "posting-q4kilbk0",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/write-observations.log"
+                },
+                "exit_code": 4
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN02C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 188,
+                  "taken_at_least_once": 101,
+                  "total": 288
+                },
+                "bytes": 209905,
+                "calls": {
+                  "executed": 45,
+                  "total": 154
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcno",
+                "lines": {
+                  "executed": 508,
+                  "total": 1120
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C.c.gcov",
+                "runs": 1,
+                "sha256": "6bc40cb3431786c595e52ee253b47678a54d605f165ff70166680b23895d4c38",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116872,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                  "rel": "CBTRN02C",
+                  "sha256": "15b72a8bbe1b7f4db3d2149ec27dfb4e8ca8ffdf46b22fcebffab576ebe3c01a"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3364,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                  "rel": "CBTRN02C-CBTRN02C.gcda",
+                  "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 203444,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                  "rel": "CBTRN02C-CBTRN02C.gcno",
+                  "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116872,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                    "rel": "CBTRN02C",
+                    "sha256": "15b72a8bbe1b7f4db3d2149ec27dfb4e8ca8ffdf46b22fcebffab576ebe3c01a"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3364,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                    "rel": "CBTRN02C-CBTRN02C.gcda",
+                    "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+                  },
+                  "gcno": {
+                    "bytes": 203444,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                    "rel": "CBTRN02C-CBTRN02C.gcno",
+                    "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781"
+                  },
+                  "program": "CBTRN02C"
+                }
+              ],
+              "program": "CBTRN02C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov",
+              "duration_s": 0.012,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 209905,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C.c.gcov",
+                  "sha256": "6bc40cb3431786c595e52ee253b47678a54d605f165ff70166680b23895d4c38"
+                },
+                {
+                  "bytes": 8926,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C.c.h.gcov",
+                  "sha256": "692abde20ee11269d27523b64861f672c9d5f4465ee7d7b08f6a64fc56f04a3c"
+                },
+                {
+                  "bytes": 11293,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C.c.l.h.gcov",
+                  "sha256": "087e5d80e5a93d466f6478243cbf413d291241f4dc0a45cc0a3223ed1545cb09"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 203444,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov/CBTRN02C-CBTRN02C.gcno",
+                "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:45.36% of 1120\nBranches executed:65.28% of 288\nTaken at least once:35.07% of 288\nCalls executed:29.22% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:78.95% of 38\nTaken at least once:39.47% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:46.03% of 1134\n",
+              "summaryParsed": {
+                "branchesPercent": 78.95,
+                "branchesTotal": 38,
+                "callsPercent": 29.22,
+                "callsTotal": 154,
+                "linesPercent": 46.03,
+                "linesTotal": 1134,
+                "rawSummaryLines": [
+                  "Lines executed:45.36% of 1120",
+                  "Branches executed:65.28% of 288",
+                  "Taken at least once:35.07% of 288",
+                  "Calls executed:29.22% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:78.95% of 38",
+                  "Taken at least once:39.47% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:46.03% of 1134"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 4,
+            "requestInvocation": "posting-q4kilbk0",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-q4kilbk0",
+            "track": "posting"
+          },
+          "operationId": "postDailyTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/transaction-postings",
+            "provenance": [
+              "t1-generation-real:E2-1:T1-POST-001",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-1/T1.json:T1-REAL-E2-1-E2-1-T1-POST-001"
+            ],
+            "request_headers": [],
+            "request_identity": "363912d2157c077dd4804b5844cd14dee13bb366ba6220e00a5f70f26fdabd3d",
+            "response_body_b64": "eyJwcm9jZXNzZWRDb3VudCI6IDEsICJyZWplY3RlZENvdW50IjogMSwgInJldHVybkNvZGUiOiA0LCAidHJhbnNhY3Rpb25zIjogW10sICJyZWplY3RzIjogW119",
+            "response_bytes": 93,
+            "response_sha256": "65d80abe777b8060102d4769ea2265cd31bb4b761224f6517ba129456b71d123",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-posting/cases/READINESS21-E2-1-posting-T1-REAL-E2-1-E2-1-T1-POST-001/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "posting"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/posting.json",
+      "suite_id": "READINESS21-E2-1-posting",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99400,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases/READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001/replay/applications/0001-f0f45bc9a3388ab9"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "9ad15eb8fcb50ef1c9c0e36867ce4a7dc9da60e3ded6726c11e5ec5fedd72201",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases/READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001/replay/applications/0001-f0f45bc9a3388ab9"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99400,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases/READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001/replay/applications/0001-f0f45bc9a3388ab9"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "9ad15eb8fcb50ef1c9c0e36867ce4a7dc9da60e3ded6726c11e5ec5fedd72201",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases/READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001/replay/applications/0001-f0f45bc9a3388ab9"
+          },
+          "case_id": "READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+          "contractId": "E2-1",
+          "measurement": {
+            "admissibility": "inadmissible_or_limited",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "interest"
+            },
+            "businessCommandEnvEvidence": [],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBACT04C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 214,
+                  "taken_at_least_once": 116,
+                  "total": 266
+                },
+                "bytes": 186791,
+                "calls": {
+                  "executed": 85,
+                  "total": 148
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "lines": {
+                  "executed": 585,
+                  "total": 1029
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.c.gcov",
+                "runs": 1,
+                "sha256": "310f3ede0b599ec4693402f079a333ad1b09c9d307a6ebde05f8a6811f9d739b",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 100288,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                  "rel": "CBACT04C.dylib",
+                  "sha256": "e2ce136a8fe5b0933e7c914ddad5d4b0aaf831b378b4d9c921d6a12817a1a9b4"
+                },
+                {
+                  "bytes": 52064,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+                  "rel": "P2B_INTEREST_DRIVER",
+                  "sha256": "28618c2950ad11903e50c170075a95cb45a1447eea96dabcd32fbf8dc010b9da"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3112,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                  "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 186340,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                  "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 100288,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                    "rel": "CBACT04C.dylib",
+                    "sha256": "e2ce136a8fe5b0933e7c914ddad5d4b0aaf831b378b4d9c921d6a12817a1a9b4"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3112,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                    "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+                  },
+                  "gcno": {
+                    "bytes": 186340,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                    "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601"
+                  },
+                  "program": "CBACT04C"
+                }
+              ],
+              "program": "CBACT04C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 186791,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.c.gcov",
+                  "sha256": "310f3ede0b599ec4693402f079a333ad1b09c9d307a6ebde05f8a6811f9d739b"
+                },
+                {
+                  "bytes": 8965,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.c.h.gcov",
+                  "sha256": "862292f26d19585f8d1c654580e5cd668303e23d540aeeca048fec3c63b2f301"
+                },
+                {
+                  "bytes": 10914,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.c.l.h.gcov",
+                  "sha256": "a85a500fa4d0e781f7d1cb5b16c5b8e385e9c73e4c61349243e0f38f27525ebd"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 186340,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:56.85% of 1029\nBranches executed:80.45% of 266\nTaken at least once:43.61% of 266\nCalls executed:57.43% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.44% of 36\nTaken at least once:47.22% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:57.43% of 1043\n",
+              "summaryParsed": {
+                "branchesPercent": 94.44,
+                "branchesTotal": 36,
+                "callsPercent": 57.43,
+                "callsTotal": 148,
+                "linesPercent": 57.43,
+                "linesTotal": 1043,
+                "rawSummaryLines": [
+                  "Lines executed:56.85% of 1029",
+                  "Branches executed:80.45% of 266",
+                  "Taken at least once:43.61% of 266",
+                  "Calls executed:57.43% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.44% of 36",
+                  "Taken at least once:47.22% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:57.43% of 1043"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ],
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "interest-_77uv5bp",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-_77uv5bp",
+            "track": "interest"
+          },
+          "operationId": "generateInterestTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/interest-transaction-generations",
+            "provenance": [
+              "t1-generation-real:E2-1:T1-INTEREST-001",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-1/T1.json:T1-REAL-E2-1-E2-1-T1-INTEREST-001"
+            ],
+            "request_headers": [],
+            "request_identity": "0d51d6d55d3042625feb52f4faa2fcc3705949cfd9fd4444bbf64ac5cc974a09",
+            "response_body_b64": "eyJ0cmFuc2FjdGlvbnMiOiBbeyJ0cmFuc2FjdGlvbklkIjogIjIwMjIwNzE4MDAwMDAwMDEiLCAidHlwZUNvZGUiOiAiMDEiLCAiY2F0ZWdvcnlDb2RlIjogIjAwMDUiLCAic291cmNlIjogIlN5c3RlbSIsICJkZXNjcmlwdGlvbiI6ICJJbnQuIGZvciBhL2MgMTAwMDAwMDAwMDFcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDAiLCAiYW1vdW50IjogMC4wNiwgIm1lcmNoYW50SWQiOiAiMDAwMDAwMDAwIiwgIm1lcmNoYW50TmFtZSI6ICIiLCAibWVyY2hhbnRDaXR5IjogIiIsICJvcmlnaW5hbFRpbWVzdGFtcCI6ICIyMDI2LTA5LTE1LTE2LjI4LjIxLjEzMDAwMCIsICJwcm9jZXNzaW5nVGltZXN0YW1wIjogIjIwMjYtMDktMTUtMTYuMjguMjEuMTMwMDAwIiwgImZpbGxlciI6ICJcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDAiLCAiY2FyZE51bWJlciI6ICI0MTExMTExMTExMTExMTExIiwgIm1lcmNoYW50WmlwIjogIiJ9XX0=",
+            "response_bytes": 992,
+            "response_sha256": "2d5a17d4a269f3a58467cad63cc76ce4b5bb73d60ea19254a181f7a23edeb4b3",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-interest/cases/READINESS21-E2-1-interest-T1-REAL-E2-1-E2-1-T1-INTEREST-001/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "interest"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/interest.json",
+      "suite_id": "READINESS21-E2-1-interest",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99445,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases/READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001/replay/applications/0001-9fcd55ef85a82d7d"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "84390543df9d97779a1e88acc5dd6391b344485f56831186cf86c3716469ffe9",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases/READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001/replay/applications/0001-9fcd55ef85a82d7d"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99445,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases/READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001/replay/applications/0001-9fcd55ef85a82d7d"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "84390543df9d97779a1e88acc5dd6391b344485f56831186cf86c3716469ffe9",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases/READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001/replay/applications/0001-9fcd55ef85a82d7d"
+          },
+          "case_id": "READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001",
+          "contractId": "E2-1",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "reporting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_CARDXREF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/CARDXREF",
+                  "DD_DATEPARM": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/DATEPARM",
+                  "DD_TRANCATG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/TRANCATG",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/TRANFILE",
+                  "DD_TRANREPT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/TRANREPT",
+                  "DD_TRANTYPE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/TRANTYPE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov",
+                  "GCOV_PREFIX_STRIP": "16"
+                },
+                "exit_code": 12
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN03C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 126,
+                  "taken_at_least_once": 65,
+                  "total": 272
+                },
+                "bytes": 207199,
+                "calls": {
+                  "executed": 42,
+                  "total": 157
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcno",
+                "lines": {
+                  "executed": 439,
+                  "total": 1192
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.c.gcov",
+                "runs": 1,
+                "sha256": "0f99ae1d9a45f19b5c6a0c1e066529f3c60f8b4d5a0480876e09f6ff495fdc38",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+                "sourceBasename": "CBTRN03C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116840,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                  "rel": "CBTRN03C",
+                  "sha256": "9aebc054796dcf01d235476e5ec7be8901124a33cfdd5bf7788d416b4928b997"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3384,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                  "rel": "CBTRN03C.gcda",
+                  "sha256": "d944080c35e1dc38f6a8a185f416a981fd9639b73e0876571f9a3c970a8f0067"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 206068,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                  "rel": "CBTRN03C.gcno",
+                  "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116840,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                    "rel": "CBTRN03C",
+                    "sha256": "9aebc054796dcf01d235476e5ec7be8901124a33cfdd5bf7788d416b4928b997"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3384,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                    "rel": "CBTRN03C.gcda",
+                    "sha256": "d944080c35e1dc38f6a8a185f416a981fd9639b73e0876571f9a3c970a8f0067"
+                  },
+                  "gcno": {
+                    "bytes": 206068,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                    "rel": "CBTRN03C.gcno",
+                    "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20"
+                  },
+                  "program": "CBTRN03C"
+                }
+              ],
+              "program": "CBTRN03C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3384,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                "rel": "gcov/CBTRN03C.gcda",
+                "sha256": "d944080c35e1dc38f6a8a185f416a981fd9639b73e0876571f9a3c970a8f0067",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3384,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcda",
+                "sha256": "d944080c35e1dc38f6a8a185f416a981fd9639b73e0876571f9a3c970a8f0067"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 207199,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.c.gcov",
+                  "sha256": "0f99ae1d9a45f19b5c6a0c1e066529f3c60f8b4d5a0480876e09f6ff495fdc38"
+                },
+                {
+                  "bytes": 11813,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.c.h.gcov",
+                  "sha256": "c6ca1f3da784c4af6927a98b885734dd381a9d1babc11ab1fb6958a2da44f3b2"
+                },
+                {
+                  "bytes": 11704,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.c.l.h.gcov",
+                  "sha256": "3c6ae96503ac0ecf095b3bb797868a598573ae4dbf18505565bb416fc8c0a4eb"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 206068,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov/CBTRN03C.gcno",
+                "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:36.83% of 1192\nBranches executed:46.32% of 272\nTaken at least once:23.90% of 272\nCalls executed:26.75% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:24.00% of 50\nBranches executed:33.33% of 48\nTaken at least once:16.67% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:36.41% of 1244\n",
+              "summaryParsed": {
+                "branchesPercent": 33.33,
+                "branchesTotal": 48,
+                "callsPercent": 0.0,
+                "callsTotal": 2,
+                "linesPercent": 36.41,
+                "linesTotal": 1244,
+                "rawSummaryLines": [
+                  "Lines executed:36.83% of 1192",
+                  "Branches executed:46.32% of 272",
+                  "Taken at least once:23.90% of 272",
+                  "Calls executed:26.75% of 157",
+                  "Creating 'CBTRN03C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN03C.c.l.h.gcov'",
+                  "Lines executed:24.00% of 50",
+                  "Branches executed:33.33% of 48",
+                  "Taken at least once:16.67% of 48",
+                  "Calls executed:0.00% of 2",
+                  "Creating 'CBTRN03C.c.h.gcov'",
+                  "Lines executed:36.41% of 1244"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 12,
+            "requestInvocation": "reporting-lbmkpg_2",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-lbmkpg_2",
+            "track": "reporting"
+          },
+          "operationId": "generateTransactionReport",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 500
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/transaction-reports",
+            "provenance": [
+              "t1-generation-real:E2-1:T1-REPORT-001",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-1/T1.json:T1-REAL-E2-1-E2-1-T1-REPORT-001"
+            ],
+            "request_headers": [],
+            "request_identity": "bd61678c167b64e8af6cff53503bd0b3295bbb63aeaf38ade8b78f540992b531",
+            "response_body_b64": "eyJkaWFnbm9zdGljcyI6IFsiU1RBUlQgT0YgRVhFQ1VUSU9OIE9GIFBST0dSQU0gQ0JUUk4wM0MiLCAiUmVwb3J0aW5nIGZyb20gMjAyMi0wMS0wMSB0byAyMDIyLTAxLTAxIiwgIjAwMDAwMDAwMDAwMDAwMDEwMTAwMDVUMSAgICAgICAgRGV0YWxoZSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMDAwMTI1MDAwMDAwMDAxTSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwICAgICAwMDAwMDAwMDAwMDAwMDAxICAgICAgICAgICAgICAgICAgICAgICAgICAyMDIyLTAxLTAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwgIklOVkFMSUQgQ0FSRCBOVU1CRVIgOiAwMDAwMDAwMDAwMDAwMDAxIiwgIkZJTEUgU1RBVFVTIElTOiBOTk5OMDAyMyIsICJBQkVORElORyBQUk9HUkFNIiwgIkxPQ0FMLUNFRTNBQkQvMiBDT0RFPSswMDAwMDAwOTk5IFRJTUlORz0rMDAwMDAwMDAwMCIsICJsaWJjb2I6IHdhcm5pbmc6IGltcGxpY2l0IENMT1NFIG9mIERBVEUtUEFSTVMtRklMRSAoJ0RBVEVQQVJNJykiLCAibGliY29iOiB3YXJuaW5nOiBpbXBsaWNpdCBDTE9TRSBvZiBUUkFOQ0FURy1GSUxFICgnVFJBTkNBVEcnKSIsICJsaWJjb2I6IHdhcm5pbmc6IGltcGxpY2l0IENMT1NFIG9mIFRSQU5UWVBFLUZJTEUgKCdUUkFOVFlQRScpIiwgImxpYmNvYjogd2FybmluZzogaW1wbGljaXQgQ0xPU0Ugb2YgWFJFRi1GSUxFICgnQ0FSRFhSRUYnKSIsICJsaWJjb2I6IHdhcm5pbmc6IGltcGxpY2l0IENMT1NFIG9mIFJFUE9SVC1GSUxFICgnVFJBTlJFUFQnKSIsICJsaWJjb2I6IHdhcm5pbmc6IGltcGxpY2l0IENMT1NFIG9mIFRSQU5TQUNULUZJTEUgKCdUUkFORklMRScpIl19",
+            "response_bytes": 987,
+            "response_sha256": "c930fd67084f2824f10953110bdfe8a76eee42c04471c3fbf865815c84e69f54",
+            "status": 500
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-1-reporting/cases/READINESS21-E2-1-reporting-T1-REAL-E2-1-E2-1-T1-REPORT-001/replay",
+          "structuralCheck": {
+            "classification": "documented_500_schema_valid",
+            "detail": {
+              "status": 500
+            },
+            "ok": true
+          },
+          "track": "reporting"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/reporting.json",
+      "suite_id": "READINESS21-E2-1-reporting",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99454,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases/READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02/replay/applications/0001-7f290364417bcc25"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "96b7f7f6ed375d7b97bc110f4ceede5ac0ac23d4e2d164c68dc059aa839c0f8a",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases/READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02/replay/applications/0001-7f290364417bcc25"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99454,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases/READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02/replay/applications/0001-7f290364417bcc25"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "96b7f7f6ed375d7b97bc110f4ceede5ac0ac23d4e2d164c68dc059aa839c0f8a",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases/READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02/replay/applications/0001-7f290364417bcc25"
+          },
+          "case_id": "READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02",
+          "contractId": "E2-3",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "posting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov",
+                  "GCOV_PREFIX_STRIP": "16",
+                  "P2B_INVOCATION": "posting-3jl8qr1j",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/write-observations.log"
+                },
+                "exit_code": 4
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN02C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 188,
+                  "taken_at_least_once": 101,
+                  "total": 288
+                },
+                "bytes": 209905,
+                "calls": {
+                  "executed": 45,
+                  "total": 154
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcno",
+                "lines": {
+                  "executed": 508,
+                  "total": 1120
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C.c.gcov",
+                "runs": 1,
+                "sha256": "dbe41a47037d46748868e5c5c115bd4c0a6f6e5a9525071c6881e55ca67b3536",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116872,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                  "rel": "CBTRN02C",
+                  "sha256": "15b72a8bbe1b7f4db3d2149ec27dfb4e8ca8ffdf46b22fcebffab576ebe3c01a"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3364,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                  "rel": "CBTRN02C-CBTRN02C.gcda",
+                  "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 203444,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                  "rel": "CBTRN02C-CBTRN02C.gcno",
+                  "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116872,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                    "rel": "CBTRN02C",
+                    "sha256": "15b72a8bbe1b7f4db3d2149ec27dfb4e8ca8ffdf46b22fcebffab576ebe3c01a"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3364,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                    "rel": "CBTRN02C-CBTRN02C.gcda",
+                    "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+                  },
+                  "gcno": {
+                    "bytes": 203444,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                    "rel": "CBTRN02C-CBTRN02C.gcno",
+                    "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781"
+                  },
+                  "program": "CBTRN02C"
+                }
+              ],
+              "program": "CBTRN02C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "f517447afa00a907a91f1386d5d55f29eb8d82fb2c7f7d96cc296e74d9471bab"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 209905,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C.c.gcov",
+                  "sha256": "dbe41a47037d46748868e5c5c115bd4c0a6f6e5a9525071c6881e55ca67b3536"
+                },
+                {
+                  "bytes": 8926,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C.c.h.gcov",
+                  "sha256": "1599a84dc4b512660d69c60b81d5459113481e162822b15d8cd28587e0530f40"
+                },
+                {
+                  "bytes": 11293,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C.c.l.h.gcov",
+                  "sha256": "fd3caef9e9226cc417442859aeb54f036030774774d28f9a320448c4bf20b690"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 203444,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov/CBTRN02C-CBTRN02C.gcno",
+                "sha256": "29d6c23fb9816241df07c71e26648f0a95e2ce8186291e9f96531dbdf81de781",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:45.36% of 1120\nBranches executed:65.28% of 288\nTaken at least once:35.07% of 288\nCalls executed:29.22% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:78.95% of 38\nTaken at least once:39.47% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:46.03% of 1134\n",
+              "summaryParsed": {
+                "branchesPercent": 78.95,
+                "branchesTotal": 38,
+                "callsPercent": 29.22,
+                "callsTotal": 154,
+                "linesPercent": 46.03,
+                "linesTotal": 1134,
+                "rawSummaryLines": [
+                  "Lines executed:45.36% of 1120",
+                  "Branches executed:65.28% of 288",
+                  "Taken at least once:35.07% of 288",
+                  "Calls executed:29.22% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:78.95% of 38",
+                  "Taken at least once:39.47% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:46.03% of 1134"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 4,
+            "requestInvocation": "posting-3jl8qr1j",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-3jl8qr1j",
+            "track": "posting"
+          },
+          "operationId": "postDailyTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/transaction-posting-runs",
+            "provenance": [
+              "t1-generation-real:E2-3:posting-positive-02",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-3/T1.json:T1-REAL-E2-3-E2-3-posting-positive-02"
+            ],
+            "request_headers": [],
+            "request_identity": "5adf85c767e4fdeb9145c5101bdc74caacaa6d417a10507b2daff201e7ad1763",
+            "response_body_b64": "eyJwcm9jZXNzZWRDb3VudCI6IDEsICJyZWplY3RlZENvdW50IjogMSwgInJldHVybkNvZGUiOiA0LCAidHJhbnNhY3Rpb25zIjogW10sICJyZWplY3RzIjogW119",
+            "response_bytes": 93,
+            "response_sha256": "65d80abe777b8060102d4769ea2265cd31bb4b761224f6517ba129456b71d123",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-posting/cases/READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "posting"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/posting.json",
+      "suite_id": "READINESS21-E2-3-posting",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99464,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases/READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01/replay/applications/0001-fe9e3add2a9fc863"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "902bfd6624572c4e3d4413f766ce7feeea2aa41508f43a8c5f3bfb1abe70d869",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases/READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01/replay/applications/0001-fe9e3add2a9fc863"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99464,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases/READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01/replay/applications/0001-fe9e3add2a9fc863"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "902bfd6624572c4e3d4413f766ce7feeea2aa41508f43a8c5f3bfb1abe70d869",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases/READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01/replay/applications/0001-fe9e3add2a9fc863"
+          },
+          "case_id": "READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01",
+          "contractId": "E2-3",
+          "measurement": {
+            "admissibility": "inadmissible_or_limited",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "interest"
+            },
+            "businessCommandEnvEvidence": [],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBACT04C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 214,
+                  "taken_at_least_once": 116,
+                  "total": 266
+                },
+                "bytes": 186791,
+                "calls": {
+                  "executed": 85,
+                  "total": 148
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "lines": {
+                  "executed": 585,
+                  "total": 1029
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.c.gcov",
+                "runs": 1,
+                "sha256": "a49ab559f00d990e07fa3917d878c21a34d4fce7ab3a972b24af95065192c7ba",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 100288,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                  "rel": "CBACT04C.dylib",
+                  "sha256": "e2ce136a8fe5b0933e7c914ddad5d4b0aaf831b378b4d9c921d6a12817a1a9b4"
+                },
+                {
+                  "bytes": 52064,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER",
+                  "rel": "P2B_INTEREST_DRIVER",
+                  "sha256": "28618c2950ad11903e50c170075a95cb45a1447eea96dabcd32fbf8dc010b9da"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3112,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                  "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 186340,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                  "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                  "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 100288,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib",
+                    "rel": "CBACT04C.dylib",
+                    "sha256": "e2ce136a8fe5b0933e7c914ddad5d4b0aaf831b378b4d9c921d6a12817a1a9b4"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3112,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcda",
+                    "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+                  },
+                  "gcno": {
+                    "bytes": 186340,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno",
+                    "rel": "CBACT04C.dylib-CBACT04C.gcno",
+                    "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601"
+                  },
+                  "program": "CBACT04C"
+                }
+              ],
+              "program": "CBACT04C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3112,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "sha256": "a6da197c951a3f1f0303388170284b5441a00f33cb8bc6093990698d4fd8adab"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 186791,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.c.gcov",
+                  "sha256": "a49ab559f00d990e07fa3917d878c21a34d4fce7ab3a972b24af95065192c7ba"
+                },
+                {
+                  "bytes": 8965,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.c.h.gcov",
+                  "sha256": "89d90fc6264ba555867ce972e4e2d72d41d1e121e83c477970965414b1c1a113"
+                },
+                {
+                  "bytes": 10914,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.c.l.h.gcov",
+                  "sha256": "b6e5d36ae981a75ea896af7e53fc1686ec007a31fd014d049cead3d8d4ba092f"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 186340,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov/CBACT04C.dylib-CBACT04C.gcno",
+                "sha256": "d57b965ea8c013424bfe2569824783c85902807edbf8aa16fd42746893da4601",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:56.85% of 1029\nBranches executed:80.45% of 266\nTaken at least once:43.61% of 266\nCalls executed:57.43% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.44% of 36\nTaken at least once:47.22% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:57.43% of 1043\n",
+              "summaryParsed": {
+                "branchesPercent": 94.44,
+                "branchesTotal": 36,
+                "callsPercent": 57.43,
+                "callsTotal": 148,
+                "linesPercent": 57.43,
+                "linesTotal": 1043,
+                "rawSummaryLines": [
+                  "Lines executed:56.85% of 1029",
+                  "Branches executed:80.45% of 266",
+                  "Taken at least once:43.61% of 266",
+                  "Calls executed:57.43% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.44% of 36",
+                  "Taken at least once:47.22% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:57.43% of 1043"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ],
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "interest-u044xy1d",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-u044xy1d",
+            "track": "interest"
+          },
+          "operationId": "generateInterestTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/interest-generation-runs",
+            "provenance": [
+              "t1-generation-real:E2-3:interest-positive-01",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-3/T1.json:T1-REAL-E2-3-E2-3-interest-positive-01"
+            ],
+            "request_headers": [],
+            "request_identity": "acdf46df0043b9954662e57875ca1f5287afae002eca4f0c1e390bcd84f3e796",
+            "response_body_b64": "eyJ0cmFuc2FjdGlvbnMiOiBbeyJ0cmFuc2FjdGlvbklkIjogIkFCQ0RFRkdISUowMDAwMDEiLCAidHlwZUNvZGUiOiAiMDEiLCAiY2F0ZWdvcnlDb2RlIjogNSwgInNvdXJjZSI6ICJTeXN0ZW0iLCAiZGVzY3JpcHRpb24iOiAiSW50LiBmb3IgYS9jIDEwMDAwMDAwMDAxXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwXHUwMDAwIiwgImFtb3VudCI6IDAuMDYsICJtZXJjaGFudElkIjogMCwgIm1lcmNoYW50TmFtZSI6ICIiLCAibWVyY2hhbnRDaXR5IjogIiIsICJvcmlnaW5hbFRpbWVzdGFtcCI6ICIyMDI2LTA5LTE1LTE2LjI4LjIzLjEyMDAwMCIsICJwcm9jZXNzaW5nVGltZXN0YW1wIjogIjIwMjYtMDktMTUtMTYuMjguMjMuMTIwMDAwIiwgImZpbGxlciI6ICJcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDBcdTAwMDAiLCAiY2FyZE51bWJlciI6ICI0MTExMTExMTExMTExMTExIiwgIm1lcmNoYW50WmlwIjogIiJ9XX0=",
+            "response_bytes": 977,
+            "response_sha256": "072d6298ea2381e922ba24beec50cd7b2c3f9e1acc2e14b7f257fa33fe44a1ee",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-interest/cases/READINESS21-E2-3-interest-T1-REAL-E2-3-E2-3-interest-positive-01/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "interest"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/interest.json",
+      "suite_id": "READINESS21-E2-3-interest",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    },
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 99476,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases/READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02/replay/applications/0001-3fbd2b5bb184c1d9"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "7d96506f20ae2206191531bc90abd74d4d163021704c7472c669d8ed542f21a9",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+              "size": 709
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases/READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02/replay/applications/0001-3fbd2b5bb184c1d9"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 99476,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases/READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02/replay/applications/0001-3fbd2b5bb184c1d9"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "7d96506f20ae2206191531bc90abd74d4d163021704c7472c669d8ed542f21a9",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "d102ee6dbd750d8f75a20403bc186fbe4422bbf7bd4f7d6cb13e0cc65ad06a24",
+                "size": 709
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases/READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02/replay/applications/0001-3fbd2b5bb184c1d9"
+          },
+          "case_id": "READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02",
+          "contractId": "E2-3",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "reporting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_CARDXREF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/CARDXREF",
+                  "DD_DATEPARM": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/DATEPARM",
+                  "DD_TRANCATG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/TRANCATG",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/TRANFILE",
+                  "DD_TRANREPT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/TRANREPT",
+                  "DD_TRANTYPE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/TRANTYPE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov",
+                  "GCOV_PREFIX_STRIP": "16"
+                },
+                "exit_code": 0
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN03C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 174,
+                  "taken_at_least_once": 89,
+                  "total": 272
+                },
+                "bytes": 207186,
+                "calls": {
+                  "executed": 46,
+                  "total": 157
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcno",
+                "lines": {
+                  "executed": 517,
+                  "total": 1192
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.c.gcov",
+                "runs": 1,
+                "sha256": "56fc6b92f103d84857970536e60f712e97bb5a109ffa0cab1efe1d2c79cc2bf4",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+                "sourceBasename": "CBTRN03C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116840,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                  "rel": "CBTRN03C",
+                  "sha256": "9aebc054796dcf01d235476e5ec7be8901124a33cfdd5bf7788d416b4928b997"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3384,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                  "rel": "CBTRN03C.gcda",
+                  "sha256": "5341e9cddbcce16f61f1a7e9422262f32e277d74b27452a8bc3e389f8a216909"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 206068,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                  "rel": "CBTRN03C.gcno",
+                  "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116840,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C",
+                    "rel": "CBTRN03C",
+                    "sha256": "9aebc054796dcf01d235476e5ec7be8901124a33cfdd5bf7788d416b4928b997"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3384,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                    "rel": "CBTRN03C.gcda",
+                    "sha256": "5341e9cddbcce16f61f1a7e9422262f32e277d74b27452a8bc3e389f8a216909"
+                  },
+                  "gcno": {
+                    "bytes": 206068,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno",
+                    "rel": "CBTRN03C.gcno",
+                    "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20"
+                  },
+                  "program": "CBTRN03C"
+                }
+              ],
+              "program": "CBTRN03C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3384,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                "rel": "gcov/CBTRN03C.gcda",
+                "sha256": "5341e9cddbcce16f61f1a7e9422262f32e277d74b27452a8bc3e389f8a216909",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3384,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcda",
+                "sha256": "5341e9cddbcce16f61f1a7e9422262f32e277d74b27452a8bc3e389f8a216909"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 207186,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.c.gcov",
+                  "sha256": "56fc6b92f103d84857970536e60f712e97bb5a109ffa0cab1efe1d2c79cc2bf4"
+                },
+                {
+                  "bytes": 11813,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.c.h.gcov",
+                  "sha256": "f68db1d73315bd62cd675a4ede95ab099e36dd4743a7639bae13aac4492bb016"
+                },
+                {
+                  "bytes": 11704,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.c.l.h.gcov",
+                  "sha256": "111eb3c88f54a15d89908a3a357336b426ba9bdade9ebde23e8c9e4412bbb066"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 206068,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov/CBTRN03C.gcno",
+                "sha256": "5a82277cd9b0e7c04105320b20d68da02fdbb8d9b81d17c38473398669093a20",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:43.37% of 1192\nBranches executed:63.97% of 272\nTaken at least once:32.72% of 272\nCalls executed:29.30% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:48.00% of 50\nBranches executed:62.50% of 48\nTaken at least once:31.25% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:43.65% of 1244\n",
+              "summaryParsed": {
+                "branchesPercent": 62.5,
+                "branchesTotal": 48,
+                "callsPercent": 0.0,
+                "callsTotal": 2,
+                "linesPercent": 43.65,
+                "linesTotal": 1244,
+                "rawSummaryLines": [
+                  "Lines executed:43.37% of 1192",
+                  "Branches executed:63.97% of 272",
+                  "Taken at least once:32.72% of 272",
+                  "Calls executed:29.30% of 157",
+                  "Creating 'CBTRN03C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN03C.c.l.h.gcov'",
+                  "Lines executed:48.00% of 50",
+                  "Branches executed:62.50% of 48",
+                  "Taken at least once:31.25% of 48",
+                  "Calls executed:0.00% of 2",
+                  "Creating 'CBTRN03C.c.h.gcov'",
+                  "Lines executed:43.65% of 1244"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "reporting-bcho3cg1",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-bcho3cg1",
+            "track": "reporting"
+          },
+          "operationId": "generateTransactionReport",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/transaction-report-runs",
+            "provenance": [
+              "t1-generation-real:E2-3:report-positive-02",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-3/T1.json:T1-REAL-E2-3-E2-3-report-positive-02"
+            ],
+            "request_headers": [],
+            "request_identity": "0204561ae4d7cdafa2682a76cc264ec7574a4b75c5965e05238ac7a4b34adb1c",
+            "response_body_b64": "eyJsaW5lcyI6IFtdfQ==",
+            "response_bytes": 13,
+            "response_sha256": "fde6cb9ea71d9460330da7d1f23965fea313a3bd36510741d5373f684068b14f",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-coverage-closure-v1/evidence-20260915T192816Z/READINESS21-E2-3-reporting/cases/READINESS21-E2-3-reporting-T1-REAL-E2-3-E2-3-report-positive-02/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "reporting"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/reporting.json",
+      "suite_id": "READINESS21-E2-3-reporting",
+      "totals": {
+        "attempted": 1,
+        "completed": 1,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 1,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 0
+      }
+    }
+  ],
+  "totals": {
+    "attempted": 6,
+    "completed": 6,
+    "measurement_admissible": 4,
+    "planned": 6,
+    "structural_ok": 6
+  }
+}

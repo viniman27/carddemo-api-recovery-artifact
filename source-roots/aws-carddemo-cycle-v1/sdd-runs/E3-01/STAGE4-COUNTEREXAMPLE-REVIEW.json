@@ -1,0 +1,136 @@
+{
+  "recorded_at": "2026-09-12T11:57:03.322193+00:00",
+  "reviewed_artifact": {
+    "path": "specs/capability-semantics-carddemo/requirements.md",
+    "sha256": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93"
+  },
+  "method": "Risk-oriented documentary counterexample review; no COBOL execution, no quarantine/preparation outputs, not independent empirical evidence",
+  "technical_recommendation": "Approve within the existing conditional documentary scope; human gate decision remains external",
+  "human_approval_granted": false,
+  "sample_count": 12,
+  "blocking_contradictions_found_in_sample": 0,
+  "source_manifest_reference": "specs/legacy-evidence-carddemo-r2/anchor-manifest.json",
+  "cases": [
+    {
+      "id": "CE-01",
+      "check_type": "Rule review",
+      "tracks": "posting",
+      "passage": "R-2; A-9",
+      "source_refs": "CBTRN02C.cbl:370-421",
+      "objection": "Suppose both amount and expiration alternatives occur, or card lookup fails before account lookup. Could the rule retain 102 or perform unguarded account checks?",
+      "conclusion": "The later 103 assignment replaces 102; account lookup is reason-zero guarded. R-2 explicitly preserves both.",
+      "disposition": "Accept; R-2/A-9 unchanged."
+    },
+    {
+      "id": "CE-02",
+      "check_type": "Rule review",
+      "tracks": "posting",
+      "passage": "R-5",
+      "source_refs": "CBTRN02C.cbl:545-559",
+      "objection": "A negative amount could be silently converted into a positive debit by a conventional financial interpretation.",
+      "conclusion": "The source ADD uses the signed amount. R-5 explicitly retains signed addition, rather than absolute-value normalization.",
+      "disposition": "Accept; R-5 unchanged."
+    },
+    {
+      "id": "CE-03",
+      "check_type": "Failure with persisted effects",
+      "tracks": "posting",
+      "passage": "R-5, R-6, R-18; A-9, A-10, A-17",
+      "source_refs": "CBTRN02C.cbl:424-442,545-579",
+      "objection": "Account rewrite assigns 109 and returns, or final transaction WRITE fails after earlier operations. Does rejection imply no prior effects or stop subsequent writing?",
+      "conclusion": "There is no reason recheck between account and transaction calls. Earlier category/account operations precede final WRITE. Rules state attempted order, no reject reselection, and no guaranteed rollback or durable partial state. Actual persistence is not observed.",
+      "disposition": "Accept within documented runtime limits; retain A-10/A-17, no new outcome claim."
+    },
+    {
+      "id": "CE-04",
+      "check_type": "Omitted obligation",
+      "tracks": "interest",
+      "passage": "R-7, R-8; A-11",
+      "source_refs": "CBACT04C.cbl:188-228,325-370",
+      "objection": "Only one account group reaches normal EOF. Does the specification insert an expected final-account flush?",
+      "conclusion": "Default pre-test loop and outer/inner IF nesting provide no final flush on the stated path. R-8 preserves that deduction and distinguishes transaction writing from account update.",
+      "disposition": "Accept; no remedial final flush or observed balance claim."
+    },
+    {
+      "id": "CE-05",
+      "check_type": "Rule review",
+      "tracks": "interest",
+      "passage": "R-9, R-10; A-12",
+      "source_refs": "CBACT04C.cbl:210-217,415-470",
+      "objection": "Missing disclosure could be interpreted as a zero rate; zero or negative balance could be assumed to suppress transaction generation.",
+      "conclusion": "Status 23 selects a DEFAULT reread, not zero-rate substitution. The computation selector is nonzero rate; no positive-balance guard occurs there. R-9/R-10 preserve this. Arithmetic exceptions and actual outputs remain outside this sample.",
+      "disposition": "Accept; A-12 remains open."
+    },
+    {
+      "id": "CE-06",
+      "check_type": "Claimed dependency absence",
+      "tracks": "interest",
+      "passage": "R-11; A-13",
+      "source_refs": "CBACT04C.cbl:518-520",
+      "objection": "Does an empty local fee paragraph justify claiming no fees anywhere in CardDemo?",
+      "conclusion": "The inspected paragraph contains a placeholder comment and EXIT. R-11 explicitly limits the absence to that paragraph and does not claim application-wide absence. No unsupplied fee modules inspected.",
+      "disposition": "Accept bounded absence; retain A-13."
+    },
+    {
+      "id": "CE-07",
+      "check_type": "Rule review",
+      "tracks": "reporting",
+      "passage": "R-12; A-14",
+      "source_refs": "CBTRN03C.cbl:170-213",
+      "objection": "An out-of-range transaction precedes a later eligible one. Does the rule promise ordinary skip-and-continue filtering?",
+      "conclusion": "NEXT SENTENCE targets beyond the separator period at END-PERFORM, followed by closes. R-12 describes loop-sentence exit under standard COBOL semantics, not processing all later eligible records. This is a static deduction, not a test run.",
+      "disposition": "Accept; no conventional filter substituted."
+    },
+    {
+      "id": "CE-08",
+      "check_type": "Omitted obligation",
+      "tracks": "reporting",
+      "passage": "R-14, R-15; A-14, A-15",
+      "source_refs": "CBTRN03C.cbl:170-204,274-322",
+      "objection": "EOF storage retains a prior record versus does not retain it. Could the specification assert unconditional duplicate contribution or mandatory final account totals?",
+      "conclusion": "Date comparison precedes EOF test; the EOF alternative has an extra ADD and no account-total call. R-15 makes repeated contribution conditional on storage and date premises, and explicitly omits final account emission.",
+      "disposition": "Accept; buffer and numerical outcomes stay unresolved."
+    },
+    {
+      "id": "CE-09",
+      "check_type": "Omitted obligation",
+      "tracks": "reporting",
+      "passage": "R-13, R-16; A-15",
+      "source_refs": "CBTRN03C.cbl:179-196,274-341,361-374",
+      "objection": "Different cards might map to one account; headers and total records also advance the line counter. Are groups silently normalized to accounts or page size to detail count?",
+      "conclusion": "Grouping compares cards, and several non-detail paragraphs increment the line counter. R-13/R-16 preserve both distinctions. Actual card/account mappings and complete rendered output remain unknown.",
+      "disposition": "Accept; no account cardinality or twenty-detail-record page guarantee."
+    },
+    {
+      "id": "CE-10",
+      "check_type": "Failure with persisted effects",
+      "tracks": "reporting",
+      "passage": "R-13, R-14, R-18; A-4, A-17",
+      "source_refs": "CBTRN03C.cbl:179-196,306-322,343-359,484-512",
+      "objection": "At card change, a previous-group total write precedes a failing new-card lookup. Could an error be treated as an empty/unchanged report?",
+      "conclusion": "The total call precedes xref lookup. R-13 gives that order and R-14/R-18 limit writes and abend effects. Prior output attempts exist; durability and external termination are unmeasured.",
+      "disposition": "Accept jointly across rules; preserve A-4/A-17 and ordering in downstream derivation."
+    },
+    {
+      "id": "CE-11",
+      "check_type": "Claimed dependency absence",
+      "tracks": "posting, interest, reporting",
+      "passage": "R-18, R-19; A-2, A-8, A-16, A-17",
+      "source_refs": "REPROC.prc:19-29; CBTRN02C.cbl:574-577; CBTRN03C.cbl:486-510",
+      "objection": "Does the visible corpus imply standalone execution or a known CEE3ABD implementation?",
+      "conclusion": "REPROC references unsupplied REPROCT; error sites invoke an external routine. R-18/R-19 explicitly deny dependency closure, known external failure behavior and proven cycle schedule. There is no global no-dependency claim to endorse.",
+      "disposition": "Accept retained unknowns; no invented external implementation."
+    },
+    {
+      "id": "CE-12",
+      "check_type": "Rule review",
+      "tracks": "reporting",
+      "passage": "R-17; A-14, A-16",
+      "source_refs": "TRANREPT.jcl:37-74; CBTRN03C.cbl:170-177,220-243",
+      "objection": "A wider DATEPARM range could be treated as overriding the upstream SORT range or the final result as a simple interval intersection.",
+      "conclusion": "The JCL literals and separate COBOL date input are distinct. R-17 uses a conditional executable-job premise and warns that NEXT SENTENCE defeats a simple full-output intersection description. DATEPARM contents remain unsupplied.",
+      "disposition": "Accept; no preferred date source or execution claim."
+    }
+  ],
+  "limits": "Not exhaustive semantic validation, behavioral completeness, runtime fidelity or an approved expected-output oracle. All existing residual runtime/configuration ambiguities remain constraints."
+}

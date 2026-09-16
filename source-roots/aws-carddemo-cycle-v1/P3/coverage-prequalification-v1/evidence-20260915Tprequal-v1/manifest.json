@@ -1,0 +1,4766 @@
+{
+  "kind": "gnucobol-gcc-gcov-isolated-prequalification",
+  "status": "preparatory-not-official-coverage",
+  "createdUtc": "2026-09-15T13:27:40.764316+00:00",
+  "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1",
+  "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+  "scope": [
+    "CBTRN02C",
+    "CBACT04C",
+    "CBTRN03C"
+  ],
+  "notPerformed": [
+    "no P2b build() invocation",
+    "no official campaign",
+    "no model call",
+    "no business oracle/readiness claim"
+  ],
+  "toolVersions": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "tools": {
+      "cobc": "/opt/homebrew/bin/cobc",
+      "gcc": "/opt/homebrew/bin/gcc-11",
+      "gcov": "/opt/homebrew/bin/gcov-11"
+    },
+    "cobcInfo": "cobc (GnuCOBOL) 3.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Jul 28 2023 18:42:18\nPackaged  Jul 28 2023 17:02:56 UTC\nC version \"Apple LLVM 21.0.0 (clang-2100.0.123.102)\"\n\nbuild information\nbuild environment        : aarch64-apple-darwin25.4.0\nCC                       : clang\nC version                : \"Apple LLVM 21.0.0 (clang-2100.0.123.102)\"\nCPPFLAGS                 :  -I/opt/homebrew/Cellar/gmp/6.3.0/include\nCFLAGS                   : -O2 -pipe\nLD                       : /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld\nLDFLAGS                  : \n\nGnuCOBOL information\nCOB_CC                   : clang\nCOB_CFLAGS               : -pipe\n                           -I/opt/homebrew/Cellar/gmp/6.3.0/include\n                           -I/opt/homebrew/Cellar/gnucobol/3.2_1/include\n                           -Wno-unused -fsigned-char -Wno-pointer-sign\n                           -Qunused-arguments\n                           -Wno-deprecated-non-prototype\nCOB_DEBUG_FLAGS          : -ggdb3 -fasynchronous-unwind-tables\nCOB_LDFLAGS              : \nCOB_LIBS                 : -L/opt/homebrew/Cellar/gnucobol/3.2_1/lib\n                           -lcob\nCOB_CONFIG_DIR           : /opt/homebrew/Cellar/gnucobol/3.2_1/share/gnucobol/config\nCOB_COPY_DIR             : /opt/homebrew/Cellar/gnucobol/3.2_1/share/gnucobol/copy\nCOB_MSG_FORMAT           : GCC\nCOB_OBJECT_EXT           : o\nCOB_MODULE_EXT           : dylib\nCOB_EXE_EXT              : \n64bit-mode               : yes\nBINARY-C-LONG            : 8 bytes\nendianness               : little-endian\nnative EBCDIC            : no\nextended screen I/O      : ncurses\nvariable file format     : 0\nsequential file handler  : built-in\nindexed file handler     : BDB\nmathematical library     : GMP\nXML library              : libxml2\nJSON library             : json-c\n",
+    "cobcVersion": "cobc (GnuCOBOL) 3.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Jul 28 2023 18:42:18\nPackaged  Jul 28 2023 17:02:56 UTC\nC version \"Apple LLVM 21.0.0 (clang-2100.0.123.102)\"\n",
+    "gcc11Version": "gcc-11 (Homebrew GCC 11.5.0) 11.5.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "gcov11Version": "gcov (Homebrew GCC 11.5.0) 11.5.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "xcrunSdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "manualGccFlags": {
+      "includeFlags": [
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+        "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include"
+      ],
+      "libFlags": [
+        "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+        "-lcob"
+      ]
+    },
+    "note": "cobc was built with clang and emits a clang-only -Qunused-arguments when COB_CC=gcc-11 is used directly; this run uses cobc -C then gcc-11/gcov-11 manually."
+  },
+  "buildAndDenominators": {
+    "copiedPinnedFiles": [
+      {
+        "path": "LICENSE",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/LICENSE",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "bytes": 10142,
+        "expectedSha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "expectedBytes": 10142,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cbl/CBACT04C.cbl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBACT04C.cbl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBACT04C.cbl",
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "bytes": 52479,
+        "expectedSha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+        "expectedBytes": 52479,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN02C.cbl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBTRN02C.cbl",
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "bytes": 58890,
+        "expectedSha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+        "expectedBytes": 58890,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cbl/CBTRN03C.cbl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBTRN03C.cbl",
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "bytes": 52239,
+        "expectedSha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+        "expectedBytes": 52239,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVACT01Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT01Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVACT01Y.cpy",
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "bytes": 1125,
+        "expectedSha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+        "expectedBytes": 1125,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVACT03Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVACT03Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVACT03Y.cpy",
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "bytes": 736,
+        "expectedSha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+        "expectedBytes": 736,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA01Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA01Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA01Y.cpy",
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "bytes": 898,
+        "expectedSha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+        "expectedBytes": 898,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA02Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA02Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA02Y.cpy",
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "bytes": 898,
+        "expectedSha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+        "expectedBytes": 898,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA03Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA03Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA03Y.cpy",
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "bytes": 655,
+        "expectedSha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+        "expectedBytes": 655,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA04Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA04Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA04Y.cpy",
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "bytes": 817,
+        "expectedSha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+        "expectedBytes": 817,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA05Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA05Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA05Y.cpy",
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "bytes": 1546,
+        "expectedSha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+        "expectedBytes": 1546,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA06Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA06Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA06Y.cpy",
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "bytes": 1538,
+        "expectedSha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+        "expectedBytes": 1538,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/cpy/CVTRA07Y.cpy",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/cpy/CVTRA07Y.cpy",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy/CVTRA07Y.cpy",
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "bytes": 5758,
+        "expectedSha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+        "expectedBytes": 5758,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/jcl/COMBTRAN.jcl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/COMBTRAN.jcl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/jcl/COMBTRAN.jcl",
+        "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "bytes": 3662,
+        "expectedSha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+        "expectedBytes": 3662,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/jcl/INTCALC.jcl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/INTCALC.jcl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/jcl/INTCALC.jcl",
+        "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "bytes": 2964,
+        "expectedSha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+        "expectedBytes": 2964,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/jcl/POSTTRAN.jcl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/POSTTRAN.jcl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/jcl/POSTTRAN.jcl",
+        "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "bytes": 3246,
+        "expectedSha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+        "expectedBytes": 3246,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/jcl/TRANBKP.jcl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANBKP.jcl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/jcl/TRANBKP.jcl",
+        "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "bytes": 5330,
+        "expectedSha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+        "expectedBytes": 5330,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/jcl/TRANREPT.jcl",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/jcl/TRANREPT.jcl",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/jcl/TRANREPT.jcl",
+        "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "bytes": 6427,
+        "expectedSha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+        "expectedBytes": 6427,
+        "hashOk": true,
+        "bytesOk": true
+      },
+      {
+        "path": "app/proc/REPROC.prc",
+        "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus/app/proc/REPROC.prc",
+        "copy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/proc/REPROC.prc",
+        "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "bytes": 2233,
+        "expectedSha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+        "expectedBytes": 2233,
+        "hashOk": true,
+        "bytesOk": true
+      }
+    ],
+    "p2bComponentsReadOnlyHashes": {
+      "p2b_binding.py": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "write_observer.c": "1ff69960896fb6ac803e3938d293150f0d374b946d23674e1bfada064ba2a16c",
+      "interest_driver.cbl": "e4696e70df2dc94165f69e500f9612d4196aca98fa3e29f223d28239ff41f080"
+    },
+    "commands": [
+      {
+        "stage": "cobc-C",
+        "program": "CBTRN02C",
+        "cmd": [
+          "/opt/homebrew/bin/cobc",
+          "-std=ibm",
+          "-fsign=ascii",
+          "-I",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy",
+          "-x",
+          "-C",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN02C.c",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBTRN02C.cbl"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "stage": "gcc-11-coverage",
+        "program": "CBTRN02C",
+        "cmd": [
+          "/opt/homebrew/bin/gcc-11",
+          "-isysroot",
+          "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+          "-O0",
+          "-g",
+          "-fprofile-arcs",
+          "-ftest-coverage",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+          "-Wno-unused",
+          "-fsigned-char",
+          "-Wno-pointer-sign",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN02C",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN02C.c",
+          "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+          "-lcob"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "ld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//ccHlaRJ5.o) was built for newer macOS version (26.0) than being linked (16.0)\n"
+      },
+      {
+        "stage": "cobc-C",
+        "program": "CBACT04C",
+        "cmd": [
+          "/opt/homebrew/bin/cobc",
+          "-std=ibm",
+          "-fsign=ascii",
+          "-I",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy",
+          "-m",
+          "-C",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBACT04C.c",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBACT04C.cbl"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "stage": "gcc-11-coverage",
+        "program": "CBACT04C",
+        "cmd": [
+          "/opt/homebrew/bin/gcc-11",
+          "-isysroot",
+          "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+          "-O0",
+          "-g",
+          "-fprofile-arcs",
+          "-ftest-coverage",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+          "-Wno-unused",
+          "-fsigned-char",
+          "-Wno-pointer-sign",
+          "-dynamiclib",
+          "-undefined",
+          "dynamic_lookup",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBACT04C.dylib",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBACT04C.c"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//cckAiZul.o) was built for newer macOS version (26.0) than being linked (16.0)\n"
+      },
+      {
+        "stage": "cobc-C",
+        "program": "CBTRN03C",
+        "cmd": [
+          "/opt/homebrew/bin/cobc",
+          "-std=ibm",
+          "-fsign=ascii",
+          "-I",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cpy",
+          "-x",
+          "-C",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN03C.c",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/source-tree/app/cbl/CBTRN03C.cbl"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "stage": "gcc-11-coverage",
+        "program": "CBTRN03C",
+        "cmd": [
+          "/opt/homebrew/bin/gcc-11",
+          "-isysroot",
+          "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+          "-O0",
+          "-g",
+          "-fprofile-arcs",
+          "-ftest-coverage",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gmp/6.3.0/include",
+          "-I/opt/homebrew/Cellar/gnucobol/3.2_1/include",
+          "-Wno-unused",
+          "-fsigned-char",
+          "-Wno-pointer-sign",
+          "-o",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN03C",
+          "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN03C.c",
+          "-L/opt/homebrew/Cellar/gnucobol/3.2_1/lib",
+          "-lcob"
+        ],
+        "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "ld: warning: object file (/var/folders/gf/7w_1y5q54j51r9tk2127jdvr0000gn/T//ccpNveLY.o) was built for newer macOS version (26.0) than being linked (16.0)\nld: warning: dylib (/opt/homebrew/Cellar/gnucobol/3.2_1/lib/libcob.dylib) was built for newer macOS version (26.0) than being linked (16.0)\n"
+      }
+    ],
+    "binaries": [
+      {
+        "program": "CBTRN02C",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN02C",
+        "sha256": "a050d7e62a538168ec454199c5e42578ec9adbdc38a033d4c463122fd7455fc7",
+        "kind": "executable"
+      },
+      {
+        "program": "CBACT04C",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBACT04C.dylib",
+        "sha256": "ac51c9d60089f3d01e1a0bbd85b78a853c43ca77b097a0215f0bf716ad1f85d0",
+        "kind": "module"
+      },
+      {
+        "program": "CBTRN03C",
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN03C",
+        "sha256": "8835513226511cf49fd88087c200991b3272fc469caa0a0823041ff2c690603f",
+        "kind": "executable"
+      }
+    ],
+    "denominators": [
+      {
+        "program": "CBTRN02C",
+        "originalSource": "app/cbl/CBTRN02C.cbl",
+        "intermediateC": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN02C.c",
+        "intermediateCSha256": "ef1e5b19b5376b82181eab91e779f1749c7dc4986da8f443e05f881b2cf31d7e",
+        "gcovNoRunExit": 0,
+        "gcovNoRunSummary": {
+          "cLinePercent": 0.0,
+          "cLineDenominator": 1120,
+          "branchExecPercent": 0.0,
+          "branchExecDenominator": 288,
+          "branchTakenPercent": 0.0,
+          "branchTakenDenominator": 288,
+          "callExecPercent": 0.0,
+          "callExecDenominator": 154
+        },
+        "cobolSourceAttribution": {
+          "sourceBasename": "CBTRN02C.cbl",
+          "attributableCobolLineDenominator": 366,
+          "lineNumbers": [
+            0,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            202,
+            203,
+            204,
+            205,
+            206,
+            208,
+            209,
+            210,
+            211,
+            212,
+            214,
+            215,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            232,
+            234,
+            236,
+            237,
+            238,
+            239,
+            240,
+            242,
+            244,
+            245,
+            247,
+            248,
+            249,
+            250,
+            252,
+            254,
+            255,
+            256,
+            257,
+            258,
+            260,
+            262,
+            263,
+            265,
+            266,
+            267,
+            268,
+            270,
+            273,
+            274,
+            275,
+            276,
+            277,
+            279,
+            281,
+            282,
+            284,
+            285,
+            286,
+            287,
+            289,
+            291,
+            292,
+            293,
+            294,
+            295,
+            297,
+            299,
+            300,
+            302,
+            303,
+            304,
+            305,
+            307,
+            309,
+            310,
+            311,
+            312,
+            313,
+            315,
+            317,
+            318,
+            320,
+            321,
+            322,
+            323,
+            325,
+            327,
+            328,
+            329,
+            330,
+            331,
+            333,
+            335,
+            336,
+            338,
+            339,
+            340,
+            341,
+            343,
+            345,
+            346,
+            347,
+            348,
+            351,
+            352,
+            354,
+            357,
+            358,
+            360,
+            361,
+            363,
+            364,
+            365,
+            366,
+            369,
+            370,
+            371,
+            372,
+            373,
+            375,
+            378,
+            380,
+            382,
+            383,
+            385,
+            386,
+            390,
+            392,
+            393,
+            394,
+            395,
+            397,
+            398,
+            403,
+            407,
+            408,
+            410,
+            411,
+            414,
+            415,
+            417,
+            418,
+            422,
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431,
+            432,
+            433,
+            434,
+            435,
+            436,
+            437,
+            438,
+            440,
+            441,
+            442,
+            444,
+            446,
+            447,
+            448,
+            450,
+            451,
+            452,
+            453,
+            455,
+            457,
+            458,
+            460,
+            461,
+            462,
+            463,
+            465,
+            467,
+            469,
+            470,
+            471,
+            473,
+            474,
+            476,
+            478,
+            481,
+            482,
+            484,
+            486,
+            487,
+            489,
+            490,
+            491,
+            492,
+            495,
+            496,
+            498,
+            501,
+            503,
+            504,
+            505,
+            506,
+            507,
+            508,
+            510,
+            512,
+            513,
+            515,
+            517,
+            518,
+            520,
+            521,
+            522,
+            523,
+            526,
+            527,
+            528,
+            530,
+            531,
+            533,
+            535,
+            536,
+            538,
+            539,
+            540,
+            541,
+            545,
+            547,
+            548,
+            549,
+            551,
+            554,
+            556,
+            557,
+            560,
+            562,
+            563,
+            564,
+            566,
+            567,
+            569,
+            571,
+            572,
+            574,
+            575,
+            576,
+            577,
+            579,
+            582,
+            583,
+            584,
+            585,
+            586,
+            588,
+            590,
+            591,
+            593,
+            594,
+            595,
+            596,
+            598,
+            600,
+            601,
+            602,
+            603,
+            604,
+            606,
+            608,
+            609,
+            611,
+            612,
+            613,
+            614,
+            616,
+            619,
+            620,
+            621,
+            622,
+            623,
+            625,
+            627,
+            628,
+            630,
+            631,
+            632,
+            633,
+            635,
+            637,
+            638,
+            639,
+            640,
+            641,
+            643,
+            645,
+            646,
+            648,
+            649,
+            650,
+            651,
+            653,
+            655,
+            656,
+            657,
+            658,
+            659,
+            661,
+            663,
+            664,
+            666,
+            667,
+            668,
+            669,
+            671,
+            674,
+            675,
+            676,
+            677,
+            678,
+            680,
+            682,
+            683,
+            685,
+            686,
+            687,
+            688,
+            690,
+            692,
+            693,
+            694,
+            695,
+            696,
+            697,
+            698,
+            699,
+            700,
+            701,
+            702,
+            703,
+            705,
+            707,
+            708,
+            709,
+            710,
+            711,
+            714,
+            715,
+            717,
+            718,
+            719,
+            720,
+            721,
+            723,
+            724,
+            725,
+            727
+          ],
+          "operationTagsByLine": {
+            "0": [
+              "Paragraph Default Error Handler"
+            ],
+            "194": [
+              "Entry     CBTRN02C",
+              "DISPLAY"
+            ],
+            "195": [
+              "PERFORM"
+            ],
+            "196": [
+              "PERFORM"
+            ],
+            "197": [
+              "PERFORM"
+            ],
+            "198": [
+              "PERFORM"
+            ],
+            "199": [
+              "PERFORM"
+            ],
+            "200": [
+              "PERFORM"
+            ],
+            "202": [
+              "PERFORM",
+              "UNTIL"
+            ],
+            "203": [
+              "IF"
+            ],
+            "204": [
+              "PERFORM"
+            ],
+            "205": [
+              "IF"
+            ],
+            "206": [
+              "ADD"
+            ],
+            "208": [
+              "MOVE"
+            ],
+            "209": [
+              "MOVE"
+            ],
+            "210": [
+              "PERFORM"
+            ],
+            "211": [
+              "IF"
+            ],
+            "212": [
+              "PERFORM"
+            ],
+            "214": [
+              "ADD"
+            ],
+            "215": [
+              "PERFORM"
+            ],
+            "221": [
+              "PERFORM"
+            ],
+            "222": [
+              "PERFORM"
+            ],
+            "223": [
+              "PERFORM"
+            ],
+            "224": [
+              "PERFORM"
+            ],
+            "225": [
+              "PERFORM"
+            ],
+            "226": [
+              "PERFORM"
+            ],
+            "227": [
+              "DISPLAY"
+            ],
+            "228": [
+              "DISPLAY"
+            ],
+            "229": [
+              "IF"
+            ],
+            "230": [
+              "MOVE"
+            ],
+            "232": [
+              "DISPLAY"
+            ],
+            "234": [
+              "GOBACK"
+            ],
+            "236": [
+              "Paragraph 0000-DALYTRAN-OPEN"
+            ],
+            "237": [
+              "MOVE"
+            ],
+            "238": [
+              "OPEN"
+            ],
+            "239": [
+              "IF"
+            ],
+            "240": [
+              "MOVE"
+            ],
+            "242": [
+              "MOVE"
+            ],
+            "244": [
+              "IF"
+            ],
+            "245": [
+              "CONTINUE"
+            ],
+            "247": [
+              "DISPLAY"
+            ],
+            "248": [
+              "MOVE"
+            ],
+            "249": [
+              "PERFORM"
+            ],
+            "250": [
+              "PERFORM"
+            ],
+            "252": [
+              "EXIT"
+            ],
+            "254": [
+              "Paragraph 0100-TRANFILE-OPEN"
+            ],
+            "255": [
+              "MOVE"
+            ],
+            "256": [
+              "OPEN"
+            ],
+            "257": [
+              "IF"
+            ],
+            "258": [
+              "MOVE"
+            ],
+            "260": [
+              "MOVE"
+            ],
+            "262": [
+              "IF"
+            ],
+            "263": [
+              "CONTINUE"
+            ],
+            "265": [
+              "DISPLAY"
+            ],
+            "266": [
+              "MOVE"
+            ],
+            "267": [
+              "PERFORM"
+            ],
+            "268": [
+              "PERFORM"
+            ],
+            "270": [
+              "EXIT"
+            ],
+            "273": [
+              "Paragraph 0200-XREFFILE-OPEN"
+            ],
+            "274": [
+              "MOVE"
+            ],
+            "275": [
+              "OPEN"
+            ],
+            "276": [
+              "IF"
+            ],
+            "277": [
+              "MOVE"
+            ],
+            "279": [
+              "MOVE"
+            ],
+            "281": [
+              "IF"
+            ],
+            "282": [
+              "CONTINUE"
+            ],
+            "284": [
+              "DISPLAY"
+            ],
+            "285": [
+              "MOVE"
+            ],
+            "286": [
+              "PERFORM"
+            ],
+            "287": [
+              "PERFORM"
+            ],
+            "289": [
+              "EXIT"
+            ],
+            "291": [
+              "Paragraph 0300-DALYREJS-OPEN"
+            ],
+            "292": [
+              "MOVE"
+            ],
+            "293": [
+              "OPEN"
+            ],
+            "294": [
+              "IF"
+            ],
+            "295": [
+              "MOVE"
+            ],
+            "297": [
+              "MOVE"
+            ],
+            "299": [
+              "IF"
+            ],
+            "300": [
+              "CONTINUE"
+            ],
+            "302": [
+              "DISPLAY"
+            ],
+            "303": [
+              "MOVE"
+            ],
+            "304": [
+              "PERFORM"
+            ],
+            "305": [
+              "PERFORM"
+            ],
+            "307": [
+              "EXIT"
+            ],
+            "309": [
+              "Paragraph 0400-ACCTFILE-OPEN"
+            ],
+            "310": [
+              "MOVE"
+            ],
+            "311": [
+              "OPEN"
+            ],
+            "312": [
+              "IF"
+            ],
+            "313": [
+              "MOVE"
+            ],
+            "315": [
+              "MOVE"
+            ],
+            "317": [
+              "IF"
+            ],
+            "318": [
+              "CONTINUE"
+            ],
+            "320": [
+              "DISPLAY"
+            ],
+            "321": [
+              "MOVE"
+            ],
+            "322": [
+              "PERFORM"
+            ],
+            "323": [
+              "PERFORM"
+            ],
+            "325": [
+              "EXIT"
+            ],
+            "327": [
+              "Paragraph 0500-TCATBALF-OPEN"
+            ],
+            "328": [
+              "MOVE"
+            ],
+            "329": [
+              "OPEN"
+            ],
+            "330": [
+              "IF"
+            ],
+            "331": [
+              "MOVE"
+            ],
+            "333": [
+              "MOVE"
+            ],
+            "335": [
+              "IF"
+            ],
+            "336": [
+              "CONTINUE"
+            ],
+            "338": [
+              "DISPLAY"
+            ],
+            "339": [
+              "MOVE"
+            ],
+            "340": [
+              "PERFORM"
+            ],
+            "341": [
+              "PERFORM"
+            ],
+            "343": [
+              "EXIT"
+            ],
+            "345": [
+              "Paragraph 1000-DALYTRAN-GET-NEXT"
+            ],
+            "346": [
+              "READ"
+            ],
+            "347": [
+              "IF"
+            ],
+            "348": [
+              "MOVE"
+            ],
+            "351": [
+              "IF"
+            ],
+            "352": [
+              "MOVE"
+            ],
+            "354": [
+              "MOVE"
+            ],
+            "357": [
+              "IF"
+            ],
+            "358": [
+              "CONTINUE"
+            ],
+            "360": [
+              "IF"
+            ],
+            "361": [
+              "MOVE"
+            ],
+            "363": [
+              "DISPLAY"
+            ],
+            "364": [
+              "MOVE"
+            ],
+            "365": [
+              "PERFORM"
+            ],
+            "366": [
+              "PERFORM"
+            ],
+            "369": [
+              "EXIT"
+            ],
+            "370": [
+              "Paragraph 1500-VALIDATE-TRAN"
+            ],
+            "371": [
+              "PERFORM"
+            ],
+            "372": [
+              "IF"
+            ],
+            "373": [
+              "PERFORM"
+            ],
+            "375": [
+              "CONTINUE"
+            ],
+            "378": [
+              "EXIT"
+            ],
+            "380": [
+              "Paragraph 1500-A-LOOKUP-XREF"
+            ],
+            "382": [
+              "MOVE"
+            ],
+            "383": [
+              "READ"
+            ],
+            "385": [
+              "MOVE"
+            ],
+            "386": [
+              "MOVE"
+            ],
+            "390": [
+              "CONTINUE"
+            ],
+            "392": [
+              "EXIT"
+            ],
+            "393": [
+              "Paragraph 1500-B-LOOKUP-ACCT"
+            ],
+            "394": [
+              "MOVE"
+            ],
+            "395": [
+              "READ"
+            ],
+            "397": [
+              "MOVE"
+            ],
+            "398": [
+              "MOVE"
+            ],
+            "403": [
+              "COMPUTE"
+            ],
+            "407": [
+              "IF"
+            ],
+            "408": [
+              "CONTINUE"
+            ],
+            "410": [
+              "MOVE"
+            ],
+            "411": [
+              "MOVE"
+            ],
+            "414": [
+              "IF"
+            ],
+            "415": [
+              "CONTINUE"
+            ],
+            "417": [
+              "MOVE"
+            ],
+            "418": [
+              "MOVE"
+            ],
+            "422": [
+              "EXIT"
+            ],
+            "424": [
+              "Paragraph 2000-POST-TRANSACTION"
+            ],
+            "425": [
+              "MOVE"
+            ],
+            "426": [
+              "MOVE"
+            ],
+            "427": [
+              "MOVE"
+            ],
+            "428": [
+              "MOVE"
+            ],
+            "429": [
+              "MOVE"
+            ],
+            "430": [
+              "MOVE"
+            ],
+            "431": [
+              "MOVE"
+            ],
+            "432": [
+              "MOVE"
+            ],
+            "433": [
+              "MOVE"
+            ],
+            "434": [
+              "MOVE"
+            ],
+            "435": [
+              "MOVE"
+            ],
+            "436": [
+              "MOVE"
+            ],
+            "437": [
+              "PERFORM"
+            ],
+            "438": [
+              "MOVE"
+            ],
+            "440": [
+              "PERFORM"
+            ],
+            "441": [
+              "PERFORM"
+            ],
+            "442": [
+              "PERFORM"
+            ],
+            "444": [
+              "EXIT"
+            ],
+            "446": [
+              "Paragraph 2500-WRITE-REJECT-REC"
+            ],
+            "447": [
+              "MOVE"
+            ],
+            "448": [
+              "MOVE"
+            ],
+            "450": [
+              "MOVE"
+            ],
+            "451": [
+              "WRITE"
+            ],
+            "452": [
+              "IF"
+            ],
+            "453": [
+              "MOVE"
+            ],
+            "455": [
+              "MOVE"
+            ],
+            "457": [
+              "IF"
+            ],
+            "458": [
+              "CONTINUE"
+            ],
+            "460": [
+              "DISPLAY"
+            ],
+            "461": [
+              "MOVE"
+            ],
+            "462": [
+              "PERFORM"
+            ],
+            "463": [
+              "PERFORM"
+            ],
+            "465": [
+              "EXIT"
+            ],
+            "467": [
+              "Paragraph 2700-UPDATE-TCATBAL"
+            ],
+            "469": [
+              "MOVE"
+            ],
+            "470": [
+              "MOVE"
+            ],
+            "471": [
+              "MOVE"
+            ],
+            "473": [
+              "MOVE"
+            ],
+            "474": [
+              "READ"
+            ],
+            "476": [
+              "DISPLAY"
+            ],
+            "478": [
+              "MOVE"
+            ],
+            "481": [
+              "IF"
+            ],
+            "482": [
+              "MOVE"
+            ],
+            "484": [
+              "MOVE"
+            ],
+            "486": [
+              "IF"
+            ],
+            "487": [
+              "CONTINUE"
+            ],
+            "489": [
+              "DISPLAY"
+            ],
+            "490": [
+              "MOVE"
+            ],
+            "491": [
+              "PERFORM"
+            ],
+            "492": [
+              "PERFORM"
+            ],
+            "495": [
+              "IF"
+            ],
+            "496": [
+              "PERFORM"
+            ],
+            "498": [
+              "PERFORM"
+            ],
+            "501": [
+              "EXIT"
+            ],
+            "503": [
+              "Paragraph 2700-A-CREATE-TCATBAL-REC"
+            ],
+            "504": [
+              "INITIALIZE"
+            ],
+            "505": [
+              "MOVE"
+            ],
+            "506": [
+              "MOVE"
+            ],
+            "507": [
+              "MOVE"
+            ],
+            "508": [
+              "ADD"
+            ],
+            "510": [
+              "WRITE"
+            ],
+            "512": [
+              "IF"
+            ],
+            "513": [
+              "MOVE"
+            ],
+            "515": [
+              "MOVE"
+            ],
+            "517": [
+              "IF"
+            ],
+            "518": [
+              "CONTINUE"
+            ],
+            "520": [
+              "DISPLAY"
+            ],
+            "521": [
+              "MOVE"
+            ],
+            "522": [
+              "PERFORM"
+            ],
+            "523": [
+              "PERFORM"
+            ],
+            "526": [
+              "Paragraph 2700-B-UPDATE-TCATBAL-REC"
+            ],
+            "527": [
+              "ADD"
+            ],
+            "528": [
+              "REWRITE"
+            ],
+            "530": [
+              "IF"
+            ],
+            "531": [
+              "MOVE"
+            ],
+            "533": [
+              "MOVE"
+            ],
+            "535": [
+              "IF"
+            ],
+            "536": [
+              "CONTINUE"
+            ],
+            "538": [
+              "DISPLAY"
+            ],
+            "539": [
+              "MOVE"
+            ],
+            "540": [
+              "PERFORM"
+            ],
+            "541": [
+              "PERFORM"
+            ],
+            "545": [
+              "Paragraph 2800-UPDATE-ACCOUNT-REC"
+            ],
+            "547": [
+              "ADD"
+            ],
+            "548": [
+              "IF"
+            ],
+            "549": [
+              "ADD"
+            ],
+            "551": [
+              "ADD"
+            ],
+            "554": [
+              "REWRITE"
+            ],
+            "556": [
+              "MOVE"
+            ],
+            "557": [
+              "MOVE"
+            ],
+            "560": [
+              "EXIT"
+            ],
+            "562": [
+              "Paragraph 2900-WRITE-TRANSACTION-FILE"
+            ],
+            "563": [
+              "MOVE"
+            ],
+            "564": [
+              "WRITE"
+            ],
+            "566": [
+              "IF"
+            ],
+            "567": [
+              "MOVE"
+            ],
+            "569": [
+              "MOVE"
+            ],
+            "571": [
+              "IF"
+            ],
+            "572": [
+              "CONTINUE"
+            ],
+            "574": [
+              "DISPLAY"
+            ],
+            "575": [
+              "MOVE"
+            ],
+            "576": [
+              "PERFORM"
+            ],
+            "577": [
+              "PERFORM"
+            ],
+            "579": [
+              "EXIT"
+            ],
+            "582": [
+              "Paragraph 9000-DALYTRAN-CLOSE"
+            ],
+            "583": [
+              "MOVE"
+            ],
+            "584": [
+              "CLOSE"
+            ],
+            "585": [
+              "IF"
+            ],
+            "586": [
+              "MOVE"
+            ],
+            "588": [
+              "MOVE"
+            ],
+            "590": [
+              "IF"
+            ],
+            "591": [
+              "CONTINUE"
+            ],
+            "593": [
+              "DISPLAY"
+            ],
+            "594": [
+              "MOVE"
+            ],
+            "595": [
+              "PERFORM"
+            ],
+            "596": [
+              "PERFORM"
+            ],
+            "598": [
+              "EXIT"
+            ],
+            "600": [
+              "Paragraph 9100-TRANFILE-CLOSE"
+            ],
+            "601": [
+              "MOVE"
+            ],
+            "602": [
+              "CLOSE"
+            ],
+            "603": [
+              "IF"
+            ],
+            "604": [
+              "MOVE"
+            ],
+            "606": [
+              "MOVE"
+            ],
+            "608": [
+              "IF"
+            ],
+            "609": [
+              "CONTINUE"
+            ],
+            "611": [
+              "DISPLAY"
+            ],
+            "612": [
+              "MOVE"
+            ],
+            "613": [
+              "PERFORM"
+            ],
+            "614": [
+              "PERFORM"
+            ],
+            "616": [
+              "EXIT"
+            ],
+            "619": [
+              "Paragraph 9200-XREFFILE-CLOSE"
+            ],
+            "620": [
+              "MOVE"
+            ],
+            "621": [
+              "CLOSE"
+            ],
+            "622": [
+              "IF"
+            ],
+            "623": [
+              "MOVE"
+            ],
+            "625": [
+              "MOVE"
+            ],
+            "627": [
+              "IF"
+            ],
+            "628": [
+              "CONTINUE"
+            ],
+            "630": [
+              "DISPLAY"
+            ],
+            "631": [
+              "MOVE"
+            ],
+            "632": [
+              "PERFORM"
+            ],
+            "633": [
+              "PERFORM"
+            ],
+            "635": [
+              "EXIT"
+            ],
+            "637": [
+              "Paragraph 9300-DALYREJS-CLOSE"
+            ],
+            "638": [
+              "MOVE"
+            ],
+            "639": [
+              "CLOSE"
+            ],
+            "640": [
+              "IF"
+            ],
+            "641": [
+              "MOVE"
+            ],
+            "643": [
+              "MOVE"
+            ],
+            "645": [
+              "IF"
+            ],
+            "646": [
+              "CONTINUE"
+            ],
+            "648": [
+              "DISPLAY"
+            ],
+            "649": [
+              "MOVE"
+            ],
+            "650": [
+              "PERFORM"
+            ],
+            "651": [
+              "PERFORM"
+            ],
+            "653": [
+              "EXIT"
+            ],
+            "655": [
+              "Paragraph 9400-ACCTFILE-CLOSE"
+            ],
+            "656": [
+              "MOVE"
+            ],
+            "657": [
+              "CLOSE"
+            ],
+            "658": [
+              "IF"
+            ],
+            "659": [
+              "MOVE"
+            ],
+            "661": [
+              "MOVE"
+            ],
+            "663": [
+              "IF"
+            ],
+            "664": [
+              "CONTINUE"
+            ],
+            "666": [
+              "DISPLAY"
+            ],
+            "667": [
+              "MOVE"
+            ],
+            "668": [
+              "PERFORM"
+            ],
+            "669": [
+              "PERFORM"
+            ],
+            "671": [
+              "EXIT"
+            ],
+            "674": [
+              "Paragraph 9500-TCATBALF-CLOSE"
+            ],
+            "675": [
+              "MOVE"
+            ],
+            "676": [
+              "CLOSE"
+            ],
+            "677": [
+              "IF"
+            ],
+            "678": [
+              "MOVE"
+            ],
+            "680": [
+              "MOVE"
+            ],
+            "682": [
+              "IF"
+            ],
+            "683": [
+              "CONTINUE"
+            ],
+            "685": [
+              "DISPLAY"
+            ],
+            "686": [
+              "MOVE"
+            ],
+            "687": [
+              "PERFORM"
+            ],
+            "688": [
+              "PERFORM"
+            ],
+            "690": [
+              "EXIT"
+            ],
+            "692": [
+              "Paragraph Z-GET-DB2-FORMAT-TIMESTAMP"
+            ],
+            "693": [
+              "MOVE"
+            ],
+            "694": [
+              "MOVE"
+            ],
+            "695": [
+              "MOVE"
+            ],
+            "696": [
+              "MOVE"
+            ],
+            "697": [
+              "MOVE"
+            ],
+            "698": [
+              "MOVE"
+            ],
+            "699": [
+              "MOVE"
+            ],
+            "700": [
+              "MOVE"
+            ],
+            "701": [
+              "MOVE"
+            ],
+            "702": [
+              "MOVE"
+            ],
+            "703": [
+              "MOVE"
+            ],
+            "705": [
+              "EXIT"
+            ],
+            "707": [
+              "Paragraph 9999-ABEND-PROGRAM"
+            ],
+            "708": [
+              "DISPLAY"
+            ],
+            "709": [
+              "MOVE"
+            ],
+            "710": [
+              "MOVE"
+            ],
+            "711": [
+              "CALL"
+            ],
+            "714": [
+              "Paragraph 9910-DISPLAY-IO-STATUS"
+            ],
+            "715": [
+              "IF"
+            ],
+            "717": [
+              "MOVE"
+            ],
+            "718": [
+              "MOVE"
+            ],
+            "719": [
+              "MOVE"
+            ],
+            "720": [
+              "MOVE"
+            ],
+            "721": [
+              "DISPLAY"
+            ],
+            "723": [
+              "MOVE"
+            ],
+            "724": [
+              "MOVE"
+            ],
+            "725": [
+              "DISPLAY"
+            ],
+            "727": [
+              "EXIT"
+            ]
+          }
+        },
+        "limitations": [
+          "C line/branch denominators are for generated C, including runtime scaffolding emitted by GnuCOBOL.",
+          "COBOL denominator is unique original source lines annotated in generated C; it is a mapping aid, not an official campaign metric.",
+          "C branch counters are not mapped to business decisions and must not be read as COBOL decision coverage."
+        ]
+      },
+      {
+        "program": "CBACT04C",
+        "originalSource": "app/cbl/CBACT04C.cbl",
+        "intermediateC": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBACT04C.c",
+        "intermediateCSha256": "5780e8c98e725df650eb1506755b67366ac1e30ab4bf45add5e3bf6289105a7e",
+        "gcovNoRunExit": 0,
+        "gcovNoRunSummary": {
+          "cLinePercent": 0.0,
+          "cLineDenominator": 1029,
+          "branchExecPercent": 0.0,
+          "branchExecDenominator": 266,
+          "branchTakenPercent": 0.0,
+          "branchTakenDenominator": 266,
+          "callExecPercent": 0.0,
+          "callExecDenominator": 148
+        },
+        "cobolSourceAttribution": {
+          "sourceBasename": "CBACT04C.cbl",
+          "attributableCobolLineDenominator": 317,
+          "lineNumbers": [
+            0,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            198,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            220,
+            224,
+            225,
+            226,
+            227,
+            228,
+            230,
+            232,
+            234,
+            235,
+            236,
+            237,
+            238,
+            240,
+            242,
+            243,
+            245,
+            246,
+            247,
+            248,
+            250,
+            252,
+            253,
+            254,
+            255,
+            256,
+            258,
+            260,
+            261,
+            263,
+            264,
+            265,
+            266,
+            268,
+            270,
+            271,
+            272,
+            273,
+            274,
+            276,
+            278,
+            279,
+            281,
+            282,
+            283,
+            284,
+            286,
+            289,
+            290,
+            291,
+            292,
+            293,
+            295,
+            297,
+            298,
+            300,
+            301,
+            302,
+            303,
+            305,
+            307,
+            308,
+            309,
+            310,
+            311,
+            313,
+            315,
+            316,
+            318,
+            319,
+            320,
+            321,
+            323,
+            325,
+            326,
+            327,
+            328,
+            330,
+            331,
+            333,
+            336,
+            337,
+            339,
+            340,
+            342,
+            343,
+            344,
+            345,
+            348,
+            350,
+            352,
+            353,
+            354,
+            356,
+            357,
+            358,
+            360,
+            362,
+            363,
+            365,
+            366,
+            367,
+            368,
+            370,
+            372,
+            373,
+            375,
+            378,
+            379,
+            381,
+            383,
+            384,
+            386,
+            387,
+            388,
+            389,
+            391,
+            393,
+            394,
+            397,
+            400,
+            401,
+            403,
+            405,
+            406,
+            408,
+            409,
+            410,
+            411,
+            413,
+            415,
+            416,
+            418,
+            419,
+            422,
+            423,
+            425,
+            428,
+            429,
+            431,
+            432,
+            433,
+            434,
+            436,
+            437,
+            438,
+            440,
+            443,
+            444,
+            446,
+            447,
+            449,
+            452,
+            453,
+            455,
+            456,
+            457,
+            458,
+            460,
+            462,
+            464,
+            467,
+            468,
+            470,
+            473,
+            474,
+            476,
+            482,
+            483,
+            484,
+            485,
+            490,
+            491,
+            492,
+            493,
+            494,
+            495,
+            496,
+            497,
+            498,
+            500,
+            501,
+            502,
+            504,
+            507,
+            508,
+            510,
+            511,
+            512,
+            513,
+            515,
+            518,
+            520,
+            522,
+            523,
+            524,
+            525,
+            526,
+            528,
+            530,
+            531,
+            533,
+            534,
+            535,
+            536,
+            538,
+            541,
+            542,
+            543,
+            544,
+            545,
+            547,
+            549,
+            550,
+            552,
+            553,
+            554,
+            555,
+            557,
+            559,
+            560,
+            561,
+            562,
+            563,
+            565,
+            567,
+            568,
+            570,
+            571,
+            572,
+            573,
+            575,
+            577,
+            578,
+            579,
+            580,
+            581,
+            583,
+            585,
+            586,
+            588,
+            589,
+            590,
+            591,
+            593,
+            595,
+            596,
+            597,
+            598,
+            599,
+            601,
+            603,
+            604,
+            606,
+            607,
+            608,
+            609,
+            611,
+            613,
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622,
+            623,
+            624,
+            626,
+            628,
+            629,
+            630,
+            631,
+            632,
+            635,
+            636,
+            638,
+            639,
+            640,
+            641,
+            642,
+            644,
+            645,
+            646,
+            648
+          ],
+          "operationTagsByLine": {
+            "0": [
+              "Paragraph Default Error Handler"
+            ],
+            "181": [
+              "Entry     CBACT04C",
+              "DISPLAY"
+            ],
+            "182": [
+              "PERFORM"
+            ],
+            "183": [
+              "PERFORM"
+            ],
+            "184": [
+              "PERFORM"
+            ],
+            "185": [
+              "PERFORM"
+            ],
+            "186": [
+              "PERFORM"
+            ],
+            "188": [
+              "PERFORM",
+              "UNTIL"
+            ],
+            "189": [
+              "IF"
+            ],
+            "190": [
+              "PERFORM"
+            ],
+            "191": [
+              "IF"
+            ],
+            "192": [
+              "ADD"
+            ],
+            "193": [
+              "DISPLAY"
+            ],
+            "194": [
+              "IF"
+            ],
+            "195": [
+              "IF"
+            ],
+            "196": [
+              "PERFORM"
+            ],
+            "198": [
+              "MOVE"
+            ],
+            "200": [
+              "MOVE"
+            ],
+            "201": [
+              "MOVE"
+            ],
+            "202": [
+              "MOVE"
+            ],
+            "203": [
+              "PERFORM"
+            ],
+            "204": [
+              "MOVE"
+            ],
+            "205": [
+              "PERFORM"
+            ],
+            "210": [
+              "MOVE"
+            ],
+            "211": [
+              "MOVE"
+            ],
+            "212": [
+              "MOVE"
+            ],
+            "213": [
+              "PERFORM"
+            ],
+            "214": [
+              "IF"
+            ],
+            "215": [
+              "PERFORM"
+            ],
+            "216": [
+              "PERFORM"
+            ],
+            "220": [
+              "PERFORM"
+            ],
+            "224": [
+              "PERFORM"
+            ],
+            "225": [
+              "PERFORM"
+            ],
+            "226": [
+              "PERFORM"
+            ],
+            "227": [
+              "PERFORM"
+            ],
+            "228": [
+              "PERFORM"
+            ],
+            "230": [
+              "DISPLAY"
+            ],
+            "232": [
+              "GOBACK"
+            ],
+            "234": [
+              "Paragraph 0000-TCATBALF-OPEN"
+            ],
+            "235": [
+              "MOVE"
+            ],
+            "236": [
+              "OPEN"
+            ],
+            "237": [
+              "IF"
+            ],
+            "238": [
+              "MOVE"
+            ],
+            "240": [
+              "MOVE"
+            ],
+            "242": [
+              "IF"
+            ],
+            "243": [
+              "CONTINUE"
+            ],
+            "245": [
+              "DISPLAY"
+            ],
+            "246": [
+              "MOVE"
+            ],
+            "247": [
+              "PERFORM"
+            ],
+            "248": [
+              "PERFORM"
+            ],
+            "250": [
+              "EXIT"
+            ],
+            "252": [
+              "Paragraph 0100-XREFFILE-OPEN"
+            ],
+            "253": [
+              "MOVE"
+            ],
+            "254": [
+              "OPEN"
+            ],
+            "255": [
+              "IF"
+            ],
+            "256": [
+              "MOVE"
+            ],
+            "258": [
+              "MOVE"
+            ],
+            "260": [
+              "IF"
+            ],
+            "261": [
+              "CONTINUE"
+            ],
+            "263": [
+              "DISPLAY"
+            ],
+            "264": [
+              "MOVE"
+            ],
+            "265": [
+              "PERFORM"
+            ],
+            "266": [
+              "PERFORM"
+            ],
+            "268": [
+              "EXIT"
+            ],
+            "270": [
+              "Paragraph 0200-DISCGRP-OPEN"
+            ],
+            "271": [
+              "MOVE"
+            ],
+            "272": [
+              "OPEN"
+            ],
+            "273": [
+              "IF"
+            ],
+            "274": [
+              "MOVE"
+            ],
+            "276": [
+              "MOVE"
+            ],
+            "278": [
+              "IF"
+            ],
+            "279": [
+              "CONTINUE"
+            ],
+            "281": [
+              "DISPLAY"
+            ],
+            "282": [
+              "MOVE"
+            ],
+            "283": [
+              "PERFORM"
+            ],
+            "284": [
+              "PERFORM"
+            ],
+            "286": [
+              "EXIT"
+            ],
+            "289": [
+              "Paragraph 0300-ACCTFILE-OPEN"
+            ],
+            "290": [
+              "MOVE"
+            ],
+            "291": [
+              "OPEN"
+            ],
+            "292": [
+              "IF"
+            ],
+            "293": [
+              "MOVE"
+            ],
+            "295": [
+              "MOVE"
+            ],
+            "297": [
+              "IF"
+            ],
+            "298": [
+              "CONTINUE"
+            ],
+            "300": [
+              "DISPLAY"
+            ],
+            "301": [
+              "MOVE"
+            ],
+            "302": [
+              "PERFORM"
+            ],
+            "303": [
+              "PERFORM"
+            ],
+            "305": [
+              "EXIT"
+            ],
+            "307": [
+              "Paragraph 0400-TRANFILE-OPEN"
+            ],
+            "308": [
+              "MOVE"
+            ],
+            "309": [
+              "OPEN"
+            ],
+            "310": [
+              "IF"
+            ],
+            "311": [
+              "MOVE"
+            ],
+            "313": [
+              "MOVE"
+            ],
+            "315": [
+              "IF"
+            ],
+            "316": [
+              "CONTINUE"
+            ],
+            "318": [
+              "DISPLAY"
+            ],
+            "319": [
+              "MOVE"
+            ],
+            "320": [
+              "PERFORM"
+            ],
+            "321": [
+              "PERFORM"
+            ],
+            "323": [
+              "EXIT"
+            ],
+            "325": [
+              "Paragraph 1000-TCATBALF-GET-NEXT"
+            ],
+            "326": [
+              "READ"
+            ],
+            "327": [
+              "IF"
+            ],
+            "328": [
+              "MOVE"
+            ],
+            "330": [
+              "IF"
+            ],
+            "331": [
+              "MOVE"
+            ],
+            "333": [
+              "MOVE"
+            ],
+            "336": [
+              "IF"
+            ],
+            "337": [
+              "CONTINUE"
+            ],
+            "339": [
+              "IF"
+            ],
+            "340": [
+              "MOVE"
+            ],
+            "342": [
+              "DISPLAY"
+            ],
+            "343": [
+              "MOVE"
+            ],
+            "344": [
+              "PERFORM"
+            ],
+            "345": [
+              "PERFORM"
+            ],
+            "348": [
+              "EXIT"
+            ],
+            "350": [
+              "Paragraph 1050-UPDATE-ACCOUNT"
+            ],
+            "352": [
+              "ADD"
+            ],
+            "353": [
+              "MOVE"
+            ],
+            "354": [
+              "MOVE"
+            ],
+            "356": [
+              "REWRITE"
+            ],
+            "357": [
+              "IF"
+            ],
+            "358": [
+              "MOVE"
+            ],
+            "360": [
+              "MOVE"
+            ],
+            "362": [
+              "IF"
+            ],
+            "363": [
+              "CONTINUE"
+            ],
+            "365": [
+              "DISPLAY"
+            ],
+            "366": [
+              "MOVE"
+            ],
+            "367": [
+              "PERFORM"
+            ],
+            "368": [
+              "PERFORM"
+            ],
+            "370": [
+              "EXIT"
+            ],
+            "372": [
+              "Paragraph 1100-GET-ACCT-DATA"
+            ],
+            "373": [
+              "READ"
+            ],
+            "375": [
+              "DISPLAY"
+            ],
+            "378": [
+              "IF"
+            ],
+            "379": [
+              "MOVE"
+            ],
+            "381": [
+              "MOVE"
+            ],
+            "383": [
+              "IF"
+            ],
+            "384": [
+              "CONTINUE"
+            ],
+            "386": [
+              "DISPLAY"
+            ],
+            "387": [
+              "MOVE"
+            ],
+            "388": [
+              "PERFORM"
+            ],
+            "389": [
+              "PERFORM"
+            ],
+            "391": [
+              "EXIT"
+            ],
+            "393": [
+              "Paragraph 1110-GET-XREF-DATA"
+            ],
+            "394": [
+              "READ"
+            ],
+            "397": [
+              "DISPLAY"
+            ],
+            "400": [
+              "IF"
+            ],
+            "401": [
+              "MOVE"
+            ],
+            "403": [
+              "MOVE"
+            ],
+            "405": [
+              "IF"
+            ],
+            "406": [
+              "CONTINUE"
+            ],
+            "408": [
+              "DISPLAY"
+            ],
+            "409": [
+              "MOVE"
+            ],
+            "410": [
+              "PERFORM"
+            ],
+            "411": [
+              "PERFORM"
+            ],
+            "413": [
+              "EXIT"
+            ],
+            "415": [
+              "Paragraph 1200-GET-INTEREST-RATE"
+            ],
+            "416": [
+              "READ"
+            ],
+            "418": [
+              "DISPLAY"
+            ],
+            "419": [
+              "DISPLAY"
+            ],
+            "422": [
+              "IF"
+            ],
+            "423": [
+              "MOVE"
+            ],
+            "425": [
+              "MOVE"
+            ],
+            "428": [
+              "IF"
+            ],
+            "429": [
+              "CONTINUE"
+            ],
+            "431": [
+              "DISPLAY"
+            ],
+            "432": [
+              "MOVE"
+            ],
+            "433": [
+              "PERFORM"
+            ],
+            "434": [
+              "PERFORM"
+            ],
+            "436": [
+              "IF"
+            ],
+            "437": [
+              "MOVE"
+            ],
+            "438": [
+              "PERFORM"
+            ],
+            "440": [
+              "EXIT"
+            ],
+            "443": [
+              "Paragraph 1200-A-GET-DEFAULT-INT-RATE"
+            ],
+            "444": [
+              "READ"
+            ],
+            "446": [
+              "IF"
+            ],
+            "447": [
+              "MOVE"
+            ],
+            "449": [
+              "MOVE"
+            ],
+            "452": [
+              "IF"
+            ],
+            "453": [
+              "CONTINUE"
+            ],
+            "455": [
+              "DISPLAY"
+            ],
+            "456": [
+              "MOVE"
+            ],
+            "457": [
+              "PERFORM"
+            ],
+            "458": [
+              "PERFORM"
+            ],
+            "460": [
+              "EXIT"
+            ],
+            "462": [
+              "Paragraph 1300-COMPUTE-INTEREST"
+            ],
+            "464": [
+              "COMPUTE"
+            ],
+            "467": [
+              "ADD"
+            ],
+            "468": [
+              "PERFORM"
+            ],
+            "470": [
+              "EXIT"
+            ],
+            "473": [
+              "Paragraph 1300-B-WRITE-TX"
+            ],
+            "474": [
+              "ADD"
+            ],
+            "476": [
+              "STRING"
+            ],
+            "482": [
+              "MOVE"
+            ],
+            "483": [
+              "MOVE"
+            ],
+            "484": [
+              "MOVE"
+            ],
+            "485": [
+              "STRING"
+            ],
+            "490": [
+              "MOVE"
+            ],
+            "491": [
+              "MOVE"
+            ],
+            "492": [
+              "MOVE"
+            ],
+            "493": [
+              "MOVE"
+            ],
+            "494": [
+              "MOVE"
+            ],
+            "495": [
+              "MOVE"
+            ],
+            "496": [
+              "PERFORM"
+            ],
+            "497": [
+              "MOVE"
+            ],
+            "498": [
+              "MOVE"
+            ],
+            "500": [
+              "WRITE"
+            ],
+            "501": [
+              "IF"
+            ],
+            "502": [
+              "MOVE"
+            ],
+            "504": [
+              "MOVE"
+            ],
+            "507": [
+              "IF"
+            ],
+            "508": [
+              "CONTINUE"
+            ],
+            "510": [
+              "DISPLAY"
+            ],
+            "511": [
+              "MOVE"
+            ],
+            "512": [
+              "PERFORM"
+            ],
+            "513": [
+              "PERFORM"
+            ],
+            "515": [
+              "EXIT"
+            ],
+            "518": [
+              "Paragraph 1400-COMPUTE-FEES"
+            ],
+            "520": [
+              "EXIT"
+            ],
+            "522": [
+              "Paragraph 9000-TCATBALF-CLOSE"
+            ],
+            "523": [
+              "MOVE"
+            ],
+            "524": [
+              "CLOSE"
+            ],
+            "525": [
+              "IF"
+            ],
+            "526": [
+              "MOVE"
+            ],
+            "528": [
+              "MOVE"
+            ],
+            "530": [
+              "IF"
+            ],
+            "531": [
+              "CONTINUE"
+            ],
+            "533": [
+              "DISPLAY"
+            ],
+            "534": [
+              "MOVE"
+            ],
+            "535": [
+              "PERFORM"
+            ],
+            "536": [
+              "PERFORM"
+            ],
+            "538": [
+              "EXIT"
+            ],
+            "541": [
+              "Paragraph 9100-XREFFILE-CLOSE"
+            ],
+            "542": [
+              "MOVE"
+            ],
+            "543": [
+              "CLOSE"
+            ],
+            "544": [
+              "IF"
+            ],
+            "545": [
+              "MOVE"
+            ],
+            "547": [
+              "MOVE"
+            ],
+            "549": [
+              "IF"
+            ],
+            "550": [
+              "CONTINUE"
+            ],
+            "552": [
+              "DISPLAY"
+            ],
+            "553": [
+              "MOVE"
+            ],
+            "554": [
+              "PERFORM"
+            ],
+            "555": [
+              "PERFORM"
+            ],
+            "557": [
+              "EXIT"
+            ],
+            "559": [
+              "Paragraph 9200-DISCGRP-CLOSE"
+            ],
+            "560": [
+              "MOVE"
+            ],
+            "561": [
+              "CLOSE"
+            ],
+            "562": [
+              "IF"
+            ],
+            "563": [
+              "MOVE"
+            ],
+            "565": [
+              "MOVE"
+            ],
+            "567": [
+              "IF"
+            ],
+            "568": [
+              "CONTINUE"
+            ],
+            "570": [
+              "DISPLAY"
+            ],
+            "571": [
+              "MOVE"
+            ],
+            "572": [
+              "PERFORM"
+            ],
+            "573": [
+              "PERFORM"
+            ],
+            "575": [
+              "EXIT"
+            ],
+            "577": [
+              "Paragraph 9300-ACCTFILE-CLOSE"
+            ],
+            "578": [
+              "MOVE"
+            ],
+            "579": [
+              "CLOSE"
+            ],
+            "580": [
+              "IF"
+            ],
+            "581": [
+              "MOVE"
+            ],
+            "583": [
+              "MOVE"
+            ],
+            "585": [
+              "IF"
+            ],
+            "586": [
+              "CONTINUE"
+            ],
+            "588": [
+              "DISPLAY"
+            ],
+            "589": [
+              "MOVE"
+            ],
+            "590": [
+              "PERFORM"
+            ],
+            "591": [
+              "PERFORM"
+            ],
+            "593": [
+              "EXIT"
+            ],
+            "595": [
+              "Paragraph 9400-TRANFILE-CLOSE"
+            ],
+            "596": [
+              "MOVE"
+            ],
+            "597": [
+              "CLOSE"
+            ],
+            "598": [
+              "IF"
+            ],
+            "599": [
+              "MOVE"
+            ],
+            "601": [
+              "MOVE"
+            ],
+            "603": [
+              "IF"
+            ],
+            "604": [
+              "CONTINUE"
+            ],
+            "606": [
+              "DISPLAY"
+            ],
+            "607": [
+              "MOVE"
+            ],
+            "608": [
+              "PERFORM"
+            ],
+            "609": [
+              "PERFORM"
+            ],
+            "611": [
+              "EXIT"
+            ],
+            "613": [
+              "Paragraph Z-GET-DB2-FORMAT-TIMESTAMP"
+            ],
+            "614": [
+              "MOVE"
+            ],
+            "615": [
+              "MOVE"
+            ],
+            "616": [
+              "MOVE"
+            ],
+            "617": [
+              "MOVE"
+            ],
+            "618": [
+              "MOVE"
+            ],
+            "619": [
+              "MOVE"
+            ],
+            "620": [
+              "MOVE"
+            ],
+            "621": [
+              "MOVE"
+            ],
+            "622": [
+              "MOVE"
+            ],
+            "623": [
+              "MOVE"
+            ],
+            "624": [
+              "MOVE"
+            ],
+            "626": [
+              "EXIT"
+            ],
+            "628": [
+              "Paragraph 9999-ABEND-PROGRAM"
+            ],
+            "629": [
+              "DISPLAY"
+            ],
+            "630": [
+              "MOVE"
+            ],
+            "631": [
+              "MOVE"
+            ],
+            "632": [
+              "CALL"
+            ],
+            "635": [
+              "Paragraph 9910-DISPLAY-IO-STATUS"
+            ],
+            "636": [
+              "IF"
+            ],
+            "638": [
+              "MOVE"
+            ],
+            "639": [
+              "MOVE"
+            ],
+            "640": [
+              "MOVE"
+            ],
+            "641": [
+              "MOVE"
+            ],
+            "642": [
+              "DISPLAY"
+            ],
+            "644": [
+              "MOVE"
+            ],
+            "645": [
+              "MOVE"
+            ],
+            "646": [
+              "DISPLAY"
+            ],
+            "648": [
+              "EXIT"
+            ]
+          }
+        },
+        "limitations": [
+          "C line/branch denominators are for generated C, including runtime scaffolding emitted by GnuCOBOL.",
+          "COBOL denominator is unique original source lines annotated in generated C; it is a mapping aid, not an official campaign metric.",
+          "C branch counters are not mapped to business decisions and must not be read as COBOL decision coverage."
+        ]
+      },
+      {
+        "program": "CBTRN03C",
+        "originalSource": "app/cbl/CBTRN03C.cbl",
+        "intermediateC": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/instrumented-build/CBTRN03C.c",
+        "intermediateCSha256": "f0956e123625e487dc63f2d10174f51b2265aba86ecf4cc6affc2a2986682a4f",
+        "gcovNoRunExit": 0,
+        "gcovNoRunSummary": {
+          "cLinePercent": 0.0,
+          "cLineDenominator": 1192,
+          "branchExecPercent": 0.0,
+          "branchExecDenominator": 272,
+          "branchTakenPercent": 0.0,
+          "branchTakenDenominator": 272,
+          "callExecPercent": 0.0,
+          "callExecDenominator": 157
+        },
+        "cobolSourceAttribution": {
+          "sourceBasename": "CBTRN03C.cbl",
+          "attributableCobolLineDenominator": 346,
+          "lineNumbers": [
+            0,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            168,
+            170,
+            171,
+            172,
+            173,
+            175,
+            177,
+            179,
+            180,
+            181,
+            182,
+            183,
+            185,
+            186,
+            187,
+            189,
+            190,
+            191,
+            193,
+            195,
+            196,
+            198,
+            199,
+            200,
+            202,
+            203,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            215,
+            217,
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            228,
+            231,
+            232,
+            235,
+            236,
+            238,
+            239,
+            240,
+            241,
+            248,
+            249,
+            251,
+            252,
+            253,
+            254,
+            255,
+            257,
+            260,
+            261,
+            263,
+            264,
+            266,
+            267,
+            268,
+            269,
+            272,
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            282,
+            283,
+            284,
+            287,
+            289,
+            290,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            304,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            316,
+            318,
+            319,
+            320,
+            321,
+            322,
+            324,
+            325,
+            326,
+            327,
+            329,
+            330,
+            331,
+            333,
+            334,
+            335,
+            337,
+            338,
+            339,
+            341,
+            343,
+            345,
+            346,
+            347,
+            349,
+            351,
+            352,
+            354,
+            355,
+            356,
+            357,
+            359,
+            361,
+            362,
+            363,
+            364,
+            365,
+            366,
+            367,
+            368,
+            369,
+            370,
+            371,
+            372,
+            373,
+            374,
+            376,
+            377,
+            378,
+            379,
+            380,
+            382,
+            384,
+            385,
+            387,
+            388,
+            389,
+            390,
+            392,
+            394,
+            395,
+            396,
+            397,
+            398,
+            400,
+            402,
+            403,
+            405,
+            406,
+            407,
+            408,
+            410,
+            412,
+            413,
+            414,
+            415,
+            416,
+            418,
+            420,
+            421,
+            423,
+            424,
+            425,
+            426,
+            428,
+            430,
+            431,
+            432,
+            433,
+            434,
+            436,
+            438,
+            439,
+            441,
+            442,
+            443,
+            444,
+            446,
+            448,
+            449,
+            450,
+            451,
+            452,
+            454,
+            456,
+            457,
+            459,
+            460,
+            461,
+            462,
+            464,
+            466,
+            467,
+            468,
+            469,
+            470,
+            472,
+            474,
+            475,
+            477,
+            478,
+            479,
+            480,
+            482,
+            484,
+            485,
+            487,
+            488,
+            489,
+            490,
+            492,
+            494,
+            495,
+            497,
+            498,
+            499,
+            500,
+            502,
+            504,
+            505,
+            507,
+            508,
+            509,
+            510,
+            512,
+            514,
+            515,
+            516,
+            517,
+            518,
+            520,
+            522,
+            523,
+            525,
+            526,
+            527,
+            528,
+            530,
+            532,
+            533,
+            534,
+            535,
+            536,
+            538,
+            540,
+            541,
+            543,
+            544,
+            545,
+            546,
+            548,
+            551,
+            552,
+            553,
+            554,
+            555,
+            557,
+            559,
+            560,
+            562,
+            563,
+            564,
+            565,
+            567,
+            569,
+            570,
+            571,
+            572,
+            573,
+            575,
+            577,
+            578,
+            580,
+            581,
+            582,
+            583,
+            585,
+            587,
+            588,
+            589,
+            590,
+            591,
+            593,
+            595,
+            596,
+            598,
+            599,
+            600,
+            601,
+            603,
+            605,
+            606,
+            607,
+            608,
+            609,
+            611,
+            613,
+            614,
+            616,
+            617,
+            618,
+            619,
+            621,
+            626,
+            627,
+            628,
+            629,
+            630,
+            633,
+            634,
+            636,
+            637,
+            638,
+            639,
+            640,
+            642,
+            643,
+            644,
+            646
+          ],
+          "operationTagsByLine": {
+            "0": [
+              "Paragraph Default Error Handler"
+            ],
+            "160": [
+              "Entry     CBTRN03C",
+              "DISPLAY"
+            ],
+            "161": [
+              "PERFORM"
+            ],
+            "162": [
+              "PERFORM"
+            ],
+            "163": [
+              "PERFORM"
+            ],
+            "164": [
+              "PERFORM"
+            ],
+            "165": [
+              "PERFORM"
+            ],
+            "166": [
+              "PERFORM"
+            ],
+            "168": [
+              "PERFORM"
+            ],
+            "170": [
+              "PERFORM",
+              "UNTIL"
+            ],
+            "171": [
+              "IF"
+            ],
+            "172": [
+              "PERFORM"
+            ],
+            "173": [
+              "IF"
+            ],
+            "175": [
+              "CONTINUE"
+            ],
+            "177": [
+              "NEXT SENTENCE"
+            ],
+            "179": [
+              "IF"
+            ],
+            "180": [
+              "DISPLAY"
+            ],
+            "181": [
+              "IF"
+            ],
+            "182": [
+              "IF"
+            ],
+            "183": [
+              "PERFORM"
+            ],
+            "185": [
+              "MOVE"
+            ],
+            "186": [
+              "MOVE"
+            ],
+            "187": [
+              "PERFORM"
+            ],
+            "189": [
+              "MOVE"
+            ],
+            "190": [
+              "PERFORM"
+            ],
+            "191": [
+              "MOVE"
+            ],
+            "193": [
+              "MOVE"
+            ],
+            "195": [
+              "PERFORM"
+            ],
+            "196": [
+              "PERFORM"
+            ],
+            "198": [
+              "DISPLAY"
+            ],
+            "199": [
+              "DISPLAY"
+            ],
+            "200": [
+              "ADD"
+            ],
+            "202": [
+              "PERFORM"
+            ],
+            "203": [
+              "PERFORM"
+            ],
+            "208": [
+              "PERFORM"
+            ],
+            "209": [
+              "PERFORM"
+            ],
+            "210": [
+              "PERFORM"
+            ],
+            "211": [
+              "PERFORM"
+            ],
+            "212": [
+              "PERFORM"
+            ],
+            "213": [
+              "PERFORM"
+            ],
+            "215": [
+              "DISPLAY"
+            ],
+            "217": [
+              "GOBACK"
+            ],
+            "220": [
+              "Paragraph 0550-DATEPARM-READ"
+            ],
+            "221": [
+              "READ"
+            ],
+            "222": [
+              "EVALUATE"
+            ],
+            "223": [
+              "WHEN"
+            ],
+            "224": [
+              "MOVE"
+            ],
+            "225": [
+              "WHEN"
+            ],
+            "226": [
+              "MOVE"
+            ],
+            "228": [
+              "MOVE"
+            ],
+            "231": [
+              "IF"
+            ],
+            "232": [
+              "DISPLAY"
+            ],
+            "235": [
+              "IF"
+            ],
+            "236": [
+              "MOVE"
+            ],
+            "238": [
+              "DISPLAY"
+            ],
+            "239": [
+              "MOVE"
+            ],
+            "240": [
+              "PERFORM"
+            ],
+            "241": [
+              "PERFORM"
+            ],
+            "248": [
+              "Paragraph 1000-TRANFILE-GET-NEXT"
+            ],
+            "249": [
+              "READ"
+            ],
+            "251": [
+              "EVALUATE"
+            ],
+            "252": [
+              "WHEN"
+            ],
+            "253": [
+              "MOVE"
+            ],
+            "254": [
+              "WHEN"
+            ],
+            "255": [
+              "MOVE"
+            ],
+            "257": [
+              "MOVE"
+            ],
+            "260": [
+              "IF"
+            ],
+            "261": [
+              "CONTINUE"
+            ],
+            "263": [
+              "IF"
+            ],
+            "264": [
+              "MOVE"
+            ],
+            "266": [
+              "DISPLAY"
+            ],
+            "267": [
+              "MOVE"
+            ],
+            "268": [
+              "PERFORM"
+            ],
+            "269": [
+              "PERFORM"
+            ],
+            "272": [
+              "EXIT"
+            ],
+            "274": [
+              "Paragraph 1100-WRITE-TRANSACTION-REPORT"
+            ],
+            "275": [
+              "IF"
+            ],
+            "276": [
+              "MOVE"
+            ],
+            "277": [
+              "MOVE"
+            ],
+            "278": [
+              "MOVE"
+            ],
+            "279": [
+              "PERFORM"
+            ],
+            "282": [
+              "IF"
+            ],
+            "283": [
+              "PERFORM"
+            ],
+            "284": [
+              "PERFORM"
+            ],
+            "287": [
+              "ADD"
+            ],
+            "289": [
+              "PERFORM"
+            ],
+            "290": [
+              "EXIT"
+            ],
+            "293": [
+              "Paragraph 1110-WRITE-PAGE-TOTALS"
+            ],
+            "294": [
+              "MOVE"
+            ],
+            "295": [
+              "MOVE"
+            ],
+            "296": [
+              "PERFORM"
+            ],
+            "297": [
+              "ADD"
+            ],
+            "298": [
+              "MOVE"
+            ],
+            "299": [
+              "ADD"
+            ],
+            "300": [
+              "MOVE"
+            ],
+            "301": [
+              "PERFORM"
+            ],
+            "302": [
+              "ADD"
+            ],
+            "304": [
+              "EXIT"
+            ],
+            "306": [
+              "Paragraph 1120-WRITE-ACCOUNT-TOTALS"
+            ],
+            "307": [
+              "MOVE"
+            ],
+            "308": [
+              "MOVE"
+            ],
+            "309": [
+              "PERFORM"
+            ],
+            "310": [
+              "MOVE"
+            ],
+            "311": [
+              "ADD"
+            ],
+            "312": [
+              "MOVE"
+            ],
+            "313": [
+              "PERFORM"
+            ],
+            "314": [
+              "ADD"
+            ],
+            "316": [
+              "EXIT"
+            ],
+            "318": [
+              "Paragraph 1110-WRITE-GRAND-TOTALS"
+            ],
+            "319": [
+              "MOVE"
+            ],
+            "320": [
+              "MOVE"
+            ],
+            "321": [
+              "PERFORM"
+            ],
+            "322": [
+              "EXIT"
+            ],
+            "324": [
+              "Paragraph 1120-WRITE-HEADERS"
+            ],
+            "325": [
+              "MOVE"
+            ],
+            "326": [
+              "PERFORM"
+            ],
+            "327": [
+              "ADD"
+            ],
+            "329": [
+              "MOVE"
+            ],
+            "330": [
+              "PERFORM"
+            ],
+            "331": [
+              "ADD"
+            ],
+            "333": [
+              "MOVE"
+            ],
+            "334": [
+              "PERFORM"
+            ],
+            "335": [
+              "ADD"
+            ],
+            "337": [
+              "MOVE"
+            ],
+            "338": [
+              "PERFORM"
+            ],
+            "339": [
+              "ADD"
+            ],
+            "341": [
+              "EXIT"
+            ],
+            "343": [
+              "Paragraph 1111-WRITE-REPORT-REC"
+            ],
+            "345": [
+              "WRITE"
+            ],
+            "346": [
+              "IF"
+            ],
+            "347": [
+              "MOVE"
+            ],
+            "349": [
+              "MOVE"
+            ],
+            "351": [
+              "IF"
+            ],
+            "352": [
+              "CONTINUE"
+            ],
+            "354": [
+              "DISPLAY"
+            ],
+            "355": [
+              "MOVE"
+            ],
+            "356": [
+              "PERFORM"
+            ],
+            "357": [
+              "PERFORM"
+            ],
+            "359": [
+              "EXIT"
+            ],
+            "361": [
+              "Paragraph 1120-WRITE-DETAIL"
+            ],
+            "362": [
+              "INITIALIZE"
+            ],
+            "363": [
+              "MOVE"
+            ],
+            "364": [
+              "MOVE"
+            ],
+            "365": [
+              "MOVE"
+            ],
+            "366": [
+              "MOVE"
+            ],
+            "367": [
+              "MOVE"
+            ],
+            "368": [
+              "MOVE"
+            ],
+            "369": [
+              "MOVE"
+            ],
+            "370": [
+              "MOVE"
+            ],
+            "371": [
+              "MOVE"
+            ],
+            "372": [
+              "PERFORM"
+            ],
+            "373": [
+              "ADD"
+            ],
+            "374": [
+              "EXIT"
+            ],
+            "376": [
+              "Paragraph 0000-TRANFILE-OPEN"
+            ],
+            "377": [
+              "MOVE"
+            ],
+            "378": [
+              "OPEN"
+            ],
+            "379": [
+              "IF"
+            ],
+            "380": [
+              "MOVE"
+            ],
+            "382": [
+              "MOVE"
+            ],
+            "384": [
+              "IF"
+            ],
+            "385": [
+              "CONTINUE"
+            ],
+            "387": [
+              "DISPLAY"
+            ],
+            "388": [
+              "MOVE"
+            ],
+            "389": [
+              "PERFORM"
+            ],
+            "390": [
+              "PERFORM"
+            ],
+            "392": [
+              "EXIT"
+            ],
+            "394": [
+              "Paragraph 0100-REPTFILE-OPEN"
+            ],
+            "395": [
+              "MOVE"
+            ],
+            "396": [
+              "OPEN"
+            ],
+            "397": [
+              "IF"
+            ],
+            "398": [
+              "MOVE"
+            ],
+            "400": [
+              "MOVE"
+            ],
+            "402": [
+              "IF"
+            ],
+            "403": [
+              "CONTINUE"
+            ],
+            "405": [
+              "DISPLAY"
+            ],
+            "406": [
+              "MOVE"
+            ],
+            "407": [
+              "PERFORM"
+            ],
+            "408": [
+              "PERFORM"
+            ],
+            "410": [
+              "EXIT"
+            ],
+            "412": [
+              "Paragraph 0200-CARDXREF-OPEN"
+            ],
+            "413": [
+              "MOVE"
+            ],
+            "414": [
+              "OPEN"
+            ],
+            "415": [
+              "IF"
+            ],
+            "416": [
+              "MOVE"
+            ],
+            "418": [
+              "MOVE"
+            ],
+            "420": [
+              "IF"
+            ],
+            "421": [
+              "CONTINUE"
+            ],
+            "423": [
+              "DISPLAY"
+            ],
+            "424": [
+              "MOVE"
+            ],
+            "425": [
+              "PERFORM"
+            ],
+            "426": [
+              "PERFORM"
+            ],
+            "428": [
+              "EXIT"
+            ],
+            "430": [
+              "Paragraph 0300-TRANTYPE-OPEN"
+            ],
+            "431": [
+              "MOVE"
+            ],
+            "432": [
+              "OPEN"
+            ],
+            "433": [
+              "IF"
+            ],
+            "434": [
+              "MOVE"
+            ],
+            "436": [
+              "MOVE"
+            ],
+            "438": [
+              "IF"
+            ],
+            "439": [
+              "CONTINUE"
+            ],
+            "441": [
+              "DISPLAY"
+            ],
+            "442": [
+              "MOVE"
+            ],
+            "443": [
+              "PERFORM"
+            ],
+            "444": [
+              "PERFORM"
+            ],
+            "446": [
+              "EXIT"
+            ],
+            "448": [
+              "Paragraph 0400-TRANCATG-OPEN"
+            ],
+            "449": [
+              "MOVE"
+            ],
+            "450": [
+              "OPEN"
+            ],
+            "451": [
+              "IF"
+            ],
+            "452": [
+              "MOVE"
+            ],
+            "454": [
+              "MOVE"
+            ],
+            "456": [
+              "IF"
+            ],
+            "457": [
+              "CONTINUE"
+            ],
+            "459": [
+              "DISPLAY"
+            ],
+            "460": [
+              "MOVE"
+            ],
+            "461": [
+              "PERFORM"
+            ],
+            "462": [
+              "PERFORM"
+            ],
+            "464": [
+              "EXIT"
+            ],
+            "466": [
+              "Paragraph 0500-DATEPARM-OPEN"
+            ],
+            "467": [
+              "MOVE"
+            ],
+            "468": [
+              "OPEN"
+            ],
+            "469": [
+              "IF"
+            ],
+            "470": [
+              "MOVE"
+            ],
+            "472": [
+              "MOVE"
+            ],
+            "474": [
+              "IF"
+            ],
+            "475": [
+              "CONTINUE"
+            ],
+            "477": [
+              "DISPLAY"
+            ],
+            "478": [
+              "MOVE"
+            ],
+            "479": [
+              "PERFORM"
+            ],
+            "480": [
+              "PERFORM"
+            ],
+            "482": [
+              "EXIT"
+            ],
+            "484": [
+              "Paragraph 1500-A-LOOKUP-XREF"
+            ],
+            "485": [
+              "READ"
+            ],
+            "487": [
+              "DISPLAY"
+            ],
+            "488": [
+              "MOVE"
+            ],
+            "489": [
+              "PERFORM"
+            ],
+            "490": [
+              "PERFORM"
+            ],
+            "492": [
+              "EXIT"
+            ],
+            "494": [
+              "Paragraph 1500-B-LOOKUP-TRANTYPE"
+            ],
+            "495": [
+              "READ"
+            ],
+            "497": [
+              "DISPLAY"
+            ],
+            "498": [
+              "MOVE"
+            ],
+            "499": [
+              "PERFORM"
+            ],
+            "500": [
+              "PERFORM"
+            ],
+            "502": [
+              "EXIT"
+            ],
+            "504": [
+              "Paragraph 1500-C-LOOKUP-TRANCATG"
+            ],
+            "505": [
+              "READ"
+            ],
+            "507": [
+              "DISPLAY"
+            ],
+            "508": [
+              "MOVE"
+            ],
+            "509": [
+              "PERFORM"
+            ],
+            "510": [
+              "PERFORM"
+            ],
+            "512": [
+              "EXIT"
+            ],
+            "514": [
+              "Paragraph 9000-TRANFILE-CLOSE"
+            ],
+            "515": [
+              "ADD"
+            ],
+            "516": [
+              "CLOSE"
+            ],
+            "517": [
+              "IF"
+            ],
+            "518": [
+              "SUBTRACT"
+            ],
+            "520": [
+              "ADD"
+            ],
+            "522": [
+              "IF"
+            ],
+            "523": [
+              "CONTINUE"
+            ],
+            "525": [
+              "DISPLAY"
+            ],
+            "526": [
+              "MOVE"
+            ],
+            "527": [
+              "PERFORM"
+            ],
+            "528": [
+              "PERFORM"
+            ],
+            "530": [
+              "EXIT"
+            ],
+            "532": [
+              "Paragraph 9100-REPTFILE-CLOSE"
+            ],
+            "533": [
+              "ADD"
+            ],
+            "534": [
+              "CLOSE"
+            ],
+            "535": [
+              "IF"
+            ],
+            "536": [
+              "SUBTRACT"
+            ],
+            "538": [
+              "ADD"
+            ],
+            "540": [
+              "IF"
+            ],
+            "541": [
+              "CONTINUE"
+            ],
+            "543": [
+              "DISPLAY"
+            ],
+            "544": [
+              "MOVE"
+            ],
+            "545": [
+              "PERFORM"
+            ],
+            "546": [
+              "PERFORM"
+            ],
+            "548": [
+              "EXIT"
+            ],
+            "551": [
+              "Paragraph 9200-CARDXREF-CLOSE"
+            ],
+            "552": [
+              "MOVE"
+            ],
+            "553": [
+              "CLOSE"
+            ],
+            "554": [
+              "IF"
+            ],
+            "555": [
+              "MOVE"
+            ],
+            "557": [
+              "MOVE"
+            ],
+            "559": [
+              "IF"
+            ],
+            "560": [
+              "CONTINUE"
+            ],
+            "562": [
+              "DISPLAY"
+            ],
+            "563": [
+              "MOVE"
+            ],
+            "564": [
+              "PERFORM"
+            ],
+            "565": [
+              "PERFORM"
+            ],
+            "567": [
+              "EXIT"
+            ],
+            "569": [
+              "Paragraph 9300-TRANTYPE-CLOSE"
+            ],
+            "570": [
+              "MOVE"
+            ],
+            "571": [
+              "CLOSE"
+            ],
+            "572": [
+              "IF"
+            ],
+            "573": [
+              "MOVE"
+            ],
+            "575": [
+              "MOVE"
+            ],
+            "577": [
+              "IF"
+            ],
+            "578": [
+              "CONTINUE"
+            ],
+            "580": [
+              "DISPLAY"
+            ],
+            "581": [
+              "MOVE"
+            ],
+            "582": [
+              "PERFORM"
+            ],
+            "583": [
+              "PERFORM"
+            ],
+            "585": [
+              "EXIT"
+            ],
+            "587": [
+              "Paragraph 9400-TRANCATG-CLOSE"
+            ],
+            "588": [
+              "MOVE"
+            ],
+            "589": [
+              "CLOSE"
+            ],
+            "590": [
+              "IF"
+            ],
+            "591": [
+              "MOVE"
+            ],
+            "593": [
+              "MOVE"
+            ],
+            "595": [
+              "IF"
+            ],
+            "596": [
+              "CONTINUE"
+            ],
+            "598": [
+              "DISPLAY"
+            ],
+            "599": [
+              "MOVE"
+            ],
+            "600": [
+              "PERFORM"
+            ],
+            "601": [
+              "PERFORM"
+            ],
+            "603": [
+              "EXIT"
+            ],
+            "605": [
+              "Paragraph 9500-DATEPARM-CLOSE"
+            ],
+            "606": [
+              "MOVE"
+            ],
+            "607": [
+              "CLOSE"
+            ],
+            "608": [
+              "IF"
+            ],
+            "609": [
+              "MOVE"
+            ],
+            "611": [
+              "MOVE"
+            ],
+            "613": [
+              "IF"
+            ],
+            "614": [
+              "CONTINUE"
+            ],
+            "616": [
+              "DISPLAY"
+            ],
+            "617": [
+              "MOVE"
+            ],
+            "618": [
+              "PERFORM"
+            ],
+            "619": [
+              "PERFORM"
+            ],
+            "621": [
+              "EXIT"
+            ],
+            "626": [
+              "Paragraph 9999-ABEND-PROGRAM"
+            ],
+            "627": [
+              "DISPLAY"
+            ],
+            "628": [
+              "MOVE"
+            ],
+            "629": [
+              "MOVE"
+            ],
+            "630": [
+              "CALL"
+            ],
+            "633": [
+              "Paragraph 9910-DISPLAY-IO-STATUS"
+            ],
+            "634": [
+              "IF"
+            ],
+            "636": [
+              "MOVE"
+            ],
+            "637": [
+              "MOVE"
+            ],
+            "638": [
+              "MOVE"
+            ],
+            "639": [
+              "MOVE"
+            ],
+            "640": [
+              "DISPLAY"
+            ],
+            "642": [
+              "MOVE"
+            ],
+            "643": [
+              "MOVE"
+            ],
+            "644": [
+              "DISPLAY"
+            ],
+            "646": [
+              "EXIT"
+            ]
+          }
+        },
+        "limitations": [
+          "C line/branch denominators are for generated C, including runtime scaffolding emitted by GnuCOBOL.",
+          "COBOL denominator is unique original source lines annotated in generated C; it is a mapping aid, not an official campaign metric.",
+          "C branch counters are not mapped to business decisions and must not be read as COBOL decision coverage."
+        ]
+      }
+    ]
+  },
+  "syntheticFlushProbe": {
+    "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/flush_probe.cbl",
+    "sourceSha256": "7a23958e142e6df6a954c250ac10c3b59e4c2e2dd1de10a2cc9c14bff7c4809b",
+    "results": [
+      {
+        "mode": "normal",
+        "startedUtc": "2026-09-15T13:27:37.761302+00:00",
+        "run": {
+          "exit_code": 0,
+          "stdout": "FLUSH-PROBE-READY\nFLUSH-PROBE-NORMAL-END\n",
+          "stderr": ""
+        },
+        "gcnoFiles": [
+          "flush_probe-flush_probe.gcno",
+          "flush_probe-technical_sleep.gcno"
+        ],
+        "gcdaFiles": [
+          "flush_probe-flush_probe.gcda",
+          "flush_probe-technical_sleep.gcda"
+        ],
+        "hasGcda": true,
+        "gcov": {
+          "cmd": [
+            "/opt/homebrew/bin/gcov-11",
+            "-b",
+            "-c",
+            "-o",
+            "flush_probe-flush_probe.gcno",
+            "flush_probe.c"
+          ],
+          "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/normal",
+          "exit_code": 0,
+          "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/normal/flush_probe.c'\nLines executed:88.24% of 102\nBranches executed:63.64% of 22\nTaken at least once:36.36% of 22\nCalls executed:92.31% of 13\nCreating 'flush_probe.c.gcov'\n\nLines executed:88.24% of 102\n",
+          "stderr": "",
+          "gcnoUsed": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/normal/flush_probe-flush_probe.gcno",
+          "summary": {
+            "cLinePercent": 88.24,
+            "cLineDenominator": 102,
+            "branchExecPercent": 63.64,
+            "branchExecDenominator": 22,
+            "branchTakenPercent": 36.36,
+            "branchTakenDenominator": 22,
+            "callExecPercent": 92.31,
+            "callExecDenominator": 13
+          },
+          "gcovFile": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/normal/flush_probe.c.gcov"
+        },
+        "artifactHashes": {
+          "flush_probe-flush_probe.gcno": "796e09e1b1b81014b69c217ec30cc17001f50897953cd9f45c5e49ed3eb6233e",
+          "flush_probe-flush_probe.gcda": "a7e0b0458f38c8e9d56283312ae9f54ab74657b95190a50e502a3259cb889632",
+          "technical_sleep.c": "d52eb725b8afc4641344a700e1b10db0cc4b5716818143a2772e01ab8a9141cc",
+          "flush_probe.c": "e203ded3e162c979b2de58867bd6ae5614dd3af938445911821e943ea082c655",
+          "flush_probe.cbl": "7a23958e142e6df6a954c250ac10c3b59e4c2e2dd1de10a2cc9c14bff7c4809b",
+          "flush_probe.c.gcov": "ae8fe1766bd83f8790da5780c72dbdba9a330e431d76888fc651d0209b3c12c1",
+          "flush_probe-technical_sleep.gcda": "c7429d572e440631653e55737f641ee4e1ae91152c360fa4bc552d23a8a5d5a5",
+          "flush_probe-technical_sleep.gcno": "a757126352427e108b72ce16de73760aa851e9ac10fa9781491ebb9448ab2ac5"
+        }
+      },
+      {
+        "mode": "interrupted",
+        "startedUtc": "2026-09-15T13:27:40.450417+00:00",
+        "run": {
+          "signal": "SIGKILL",
+          "exit_code": -9,
+          "stdout": "FLUSH-PROBE-READY\n",
+          "stderr": ""
+        },
+        "gcnoFiles": [
+          "flush_probe-flush_probe.gcno",
+          "flush_probe-technical_sleep.gcno"
+        ],
+        "gcdaFiles": [],
+        "hasGcda": false,
+        "gcov": {
+          "cmd": [
+            "/opt/homebrew/bin/gcov-11",
+            "-b",
+            "-c",
+            "-o",
+            "flush_probe-flush_probe.gcno",
+            "flush_probe.c"
+          ],
+          "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/interrupted",
+          "exit_code": 0,
+          "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/interrupted/flush_probe.c'\nLines executed:0.00% of 102\nBranches executed:0.00% of 22\nTaken at least once:0.00% of 22\nCalls executed:0.00% of 13\nCreating 'flush_probe.c.gcov'\n\nLines executed:0.00% of 102\n",
+          "stderr": "flush_probe-flush_probe.gcda:cannot open data file, assuming not executed\n",
+          "gcnoUsed": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/interrupted/flush_probe-flush_probe.gcno",
+          "summary": {
+            "cLinePercent": 0.0,
+            "cLineDenominator": 102,
+            "branchExecPercent": 0.0,
+            "branchExecDenominator": 22,
+            "branchTakenPercent": 0.0,
+            "branchTakenDenominator": 22,
+            "callExecPercent": 0.0,
+            "callExecDenominator": 13
+          },
+          "gcovFile": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/coverage-prequalification-v1/evidence-20260915Tprequal-v1/synthetic-flush-probe/interrupted/flush_probe.c.gcov"
+        },
+        "artifactHashes": {
+          "flush_probe-flush_probe.gcno": "23581e7b9989a5cd2a852fdb49daa67abe2c77f21baea8c35720a42c0228f8f1",
+          "technical_sleep.c": "d52eb725b8afc4641344a700e1b10db0cc4b5716818143a2772e01ab8a9141cc",
+          "flush_probe.c": "00b1f9a96e7dbf49c04d197ed8b5996767242caa4a7640574a2d1c7a0d61a987",
+          "flush_probe.cbl": "7a23958e142e6df6a954c250ac10c3b59e4c2e2dd1de10a2cc9c14bff7c4809b",
+          "flush_probe.c.gcov": "141cdca2e6348269f55b96b90ad3d30f15c50bcf52c744cd0d9f49d442b92906",
+          "flush_probe-technical_sleep.gcno": "fca944b7cb822121de4c3ba017df5fd5ef3cffa01fe5b35955011c4b6321de96"
+        }
+      }
+    ],
+    "interpretation": "Normal STOP RUN produced .gcda; SIGKILL before COBOL termination did not produce flush data in this probe."
+  },
+  "qualificationConclusion": {
+    "qualifiedNow": [
+      "Pinned original source bytes can be copied and hash-verified in a fresh P3-local tree.",
+      "Generated C can be instrumented with GCC 11 and read by gcov-11.",
+      "Normal COBOL termination flushes .gcda in the isolated synthetic probe."
+    ],
+    "stillToIntegrate": [
+      "AWS/P2b binding coverage flush has not been integrated or proven; child process lifecycle must be changed/verified separately if it currently kills after response.",
+      "Official denominators and admission rules must be frozen before campaigns.",
+      "C branch counters remain generated-C technical counters, not business-decision counters."
+    ]
+  }
+}

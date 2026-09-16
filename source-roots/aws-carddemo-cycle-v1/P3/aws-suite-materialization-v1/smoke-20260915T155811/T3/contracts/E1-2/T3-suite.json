@@ -1,0 +1,1364 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-0001-c025c786553c",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBACT04C_INTCALC",
+        "cellRef": "INTCALC-OBL-001::E1-2::generateInterestTransactions",
+        "guardResult": true,
+        "obligationId": "INTCALC-OBL-001",
+        "officialCampaign": false,
+        "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+        "requestEvidence": {
+          "cellId": "INTCALC-OBL-001::E1-2::generateInterestTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "disclosureGroupFile",
+              "idPrefix"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "interest.candidate-v1-physical-v2",
+            "track": "interest"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "DISCGRP",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 10,
+              "byteStart": 0,
+              "dd": "PARMFILE",
+              "encoding": "utf8",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "INTCALC-T001"
+      },
+      "provenance": [
+        "reference-executable-v4:INTCALC-T001",
+        "t3-cell:INTCALC-OBL-001::E1-2::generateInterestTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoiRElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [
+        "INTCALC-T001"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0002-ff68f8200e73",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBACT04C_INTCALC",
+        "cellRef": "INTCALC-OBL-001::E1-2::generateInterestTransactions",
+        "guardResult": true,
+        "obligationId": "INTCALC-OBL-001",
+        "officialCampaign": false,
+        "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+        "requestEvidence": {
+          "cellId": "INTCALC-OBL-001::E1-2::generateInterestTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "disclosureGroupFile",
+              "idPrefix"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "interest.candidate-v1-physical-v2",
+            "track": "interest"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "DISCGRP",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 10,
+              "byteStart": 0,
+              "dd": "PARMFILE",
+              "encoding": "utf8",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "INTCALC-T002"
+      },
+      "provenance": [
+        "reference-executable-v4:INTCALC-T002",
+        "t3-cell:INTCALC-OBL-001::E1-2::generateInterestTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoiRElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [
+        "INTCALC-T002"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0003-49f543b2b35b",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBACT04C_INTCALC",
+        "cellRef": "INTCALC-OBL-002::E1-2::generateInterestTransactions",
+        "guardResult": true,
+        "obligationId": "INTCALC-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+        "requestEvidence": {
+          "cellId": "INTCALC-OBL-002::E1-2::generateInterestTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "disclosureGroupFile",
+              "idPrefix"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "interest.candidate-v1-physical-v2",
+            "track": "interest"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "DISCGRP",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 10,
+              "byteStart": 0,
+              "dd": "PARMFILE",
+              "encoding": "utf8",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "INTCALC-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:INTCALC-T003",
+        "t3-cell:INTCALC-OBL-002::E1-2::generateInterestTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoiRElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [
+        "INTCALC-T001",
+        "INTCALC-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0004-56e56de785de",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBACT04C_INTCALC",
+        "cellRef": "INTCALC-OBL-003::E1-2::generateInterestTransactions",
+        "guardResult": true,
+        "obligationId": "INTCALC-OBL-003",
+        "officialCampaign": false,
+        "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+        "requestEvidence": {
+          "cellId": "INTCALC-OBL-003::E1-2::generateInterestTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "disclosureGroupFile",
+              "idPrefix"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "interest.candidate-v1-physical-v2",
+            "track": "interest"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "DISCGRP",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 10,
+              "byteStart": 0,
+              "dd": "PARMFILE",
+              "encoding": "utf8",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "INTCALC-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:INTCALC-T003",
+        "t3-cell:INTCALC-OBL-003::E1-2::generateInterestTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoiRElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [
+        "INTCALC-T001",
+        "INTCALC-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0005-fcaf0c4d21ad",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBACT04C_INTCALC",
+        "cellRef": "INTCALC-OBL-002::E1-2::generateInterestTransactions",
+        "guardResult": true,
+        "obligationId": "INTCALC-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+        "requestEvidence": {
+          "cellId": "INTCALC-OBL-002::E1-2::generateInterestTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:interest:generateInterestTransactions:/interest-transactions",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "disclosureGroupFile",
+              "idPrefix"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "interest.candidate-v1-physical-v2",
+            "track": "interest"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "DISCGRP",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 10,
+              "byteStart": 0,
+              "dd": "PARMFILE",
+              "encoding": "utf8",
+              "fixtureId": "interest.candidate-v1-physical-v2",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "INTCALC-T004"
+      },
+      "provenance": [
+        "reference-executable-v4:INTCALC-T004",
+        "t3-cell:INTCALC-OBL-002::E1-2::generateInterestTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkaXNjbG9zdXJlR3JvdXBGaWxlIjoiRElTQ0dSUCIsImlkUHJlZml4IjoiMjAyMjA3MTgwMCJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "interest.candidate-v1-physical-v2",
+      "sequence": [
+        "INTCALC-T001",
+        "INTCALC-T004"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0006-7d9924f1dcb3",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-001::E1-2::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-001",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-001::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T001"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T001",
+        "t3-cell:POSTTRAN-OBL-001::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0007-7ca33c4a56af",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-001::E1-2::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-001",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-001::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T002"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T002",
+        "t3-cell:POSTTRAN-OBL-001::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T002"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0008-4f52ce294059",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T003",
+        "t3-cell:POSTTRAN-OBL-002::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0009-e53372096d92",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T004"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T004",
+        "t3-cell:POSTTRAN-OBL-002::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T004"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0010-21bc69d24737",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+        "guardResult": true,
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T005"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T005",
+        "t3-cell:POSTTRAN-OBL-002::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T005"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0011-86274e8c0f56",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN02C_POSTTRAN",
+        "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+        "guardResult": "unknown",
+        "obligationId": "POSTTRAN-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+        "requestEvidence": {
+          "cellId": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:posting:postDailyTransactions:/transaction-postings",
+          "schemaValidation": {
+            "bodyKeys": [
+              "accountFile",
+              "categoryBalanceFile",
+              "crossReferenceFile",
+              "dailyTransactions",
+              "transactionFile"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "posting.candidate-v1-physical-v2",
+            "track": "posting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "ACCTFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TCATBALF",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "XREFFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "DALYTRAN",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANFILE",
+              "fixtureId": "posting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            }
+          ]
+        },
+        "transitionId": "POSTTRAN-T006"
+      },
+      "provenance": [
+        "reference-executable-v4:POSTTRAN-T006",
+        "t3-cell:POSTTRAN-OBL-002::E1-2::postDailyTransactions"
+      ],
+      "request": {
+        "body_b64": "eyJhY2NvdW50RmlsZSI6IkFDQ1RGSUxFIiwiY2F0ZWdvcnlCYWxhbmNlRmlsZSI6IlRDQVRCQUxGIiwiY3Jvc3NSZWZlcmVuY2VGaWxlIjoiWFJFRkZJTEUiLCJkYWlseVRyYW5zYWN0aW9ucyI6W3sicmVjb3JkQmFzZTY0IjoiVUU5VFZDMVFVa1ZUUlU1VUxUQXdNVEF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ERXlNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTNMVEExTFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EY3RNRFV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In0seyJyZWNvcmRCYXNlNjQiOiJVRTlUVkMxQlFsTkZUbFF0TFRBd01UQXhNREF3TlVsdWRHVnlibVYwSUNCallXNWthV1JoZEdVZ2NIVnlZMmhoYzJVZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ01EQXdNREF3TURNME1EQXhNak0wTlRZM09EbEdhWGgwZFhKbElFMWxjbU5vWVc1MElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUVKeVlYTnBiR2xoSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdOekF3TURBd01EQWdJRFE1T1RrNU9UazVPVGs1T1RrNU9Ua3lNREl5TFRBM0xUQTFMVEV3TGpBd0xqQXdMakF3TURBd01ESXdNakl0TURjdE1EVXRNVEF1TURVdU1EQXVNREF3TURBd0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQT0ifV0sInRyYW5zYWN0aW9uRmlsZSI6IlRSQU5GSUxFIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [
+        "POSTTRAN-T001",
+        "POSTTRAN-T006"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0012-203683ff895a",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN03C_TRANREPT",
+        "cellRef": "TRANREPT-OBL-002::E1-2::generateTransactionReport",
+        "guardResult": true,
+        "obligationId": "TRANREPT-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:reporting:generateTransactionReport:/transaction-reports",
+        "requestEvidence": {
+          "cellId": "TRANREPT-OBL-002::E1-2::generateTransactionReport",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:reporting:generateTransactionReport:/transaction-reports",
+          "schemaValidation": {
+            "bodyKeys": [
+              "crossReferenceFile",
+              "dateParameters",
+              "transactionCategoryFile",
+              "transactionTypeFile",
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "reporting.candidate-v1-physical-v2",
+            "track": "reporting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "CARDXREF",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 80,
+              "byteStart": 0,
+              "dd": "DATEPARM",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "utf8Strings",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANCATG",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TRANTYPE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "TRANREPT-T003"
+      },
+      "provenance": [
+        "reference-executable-v4:TRANREPT-T003",
+        "t3-cell:TRANREPT-OBL-002::E1-2::generateTransactionReport"
+      ],
+      "request": {
+        "body_b64": "eyJjcm9zc1JlZmVyZW5jZUZpbGUiOiJDQVJEWFJFRiIsImRhdGVQYXJhbWV0ZXJzIjpbIjIwMjItMDctMDEgMjAyMi0wNy0zMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIl0sInRyYW5zYWN0aW9uQ2F0ZWdvcnlGaWxlIjoiVFJBTkNBVEciLCJ0cmFuc2FjdGlvblR5cGVGaWxlIjoiVFJBTlRZUEUiLCJ0cmFuc2FjdGlvbnMiOlt7InJlY29yZEJhc2U2NCI6IlVrVlFUMUpVTFVsT0xTMHRNREF4SURBeE1EQXdOVWx1ZEdWeWJtVjBJQ0JqWVc1a2FXUmhkR1VnY0hWeVkyaGhjMlVnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTURBd01EQXdNREV5TURBeE1qTTBOVFkzT0RsR2FYaDBkWEpsSUUxbGNtTm9ZVzUwSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJRUp5WVhOcGJHbGhJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ056QXdNREF3TURBZ0lEUXhNVEV4TVRFeE1URXhNVEV4TVRFeU1ESXlMVEEzTFRBMUxURXdMakF3TGpBd0xqQXdNREF3TURJd01qSXRNRGN0TURVdE1UQXVNRFV1TURBdU1EQXdNREF3SUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBPSJ9LHsicmVjb3JkQmFzZTY0IjoiVWtWUVQxSlVMVTlWVkMwdE1EQXhJREF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ETTBNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTRMVEF4TFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EZ3RNREV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In1dfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [
+        "TRANREPT-T001",
+        "TRANREPT-T003"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T3-0013-ed9f7114026f",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:E1-2",
+      "parameters": {
+        "capability": "CBTRN03C_TRANREPT",
+        "cellRef": "TRANREPT-OBL-002::E1-2::generateTransactionReport",
+        "guardResult": true,
+        "obligationId": "TRANREPT-OBL-002",
+        "officialCampaign": false,
+        "recipeId": "E1-2:reporting:generateTransactionReport:/transaction-reports",
+        "requestEvidence": {
+          "cellId": "TRANREPT-OBL-002::E1-2::generateTransactionReport",
+          "compiler": "t3-mapper-preparation-v1/src/t3_mapper.py::build_request_from_explicit_mapping",
+          "inventedValues": false,
+          "officialCampaign": false,
+          "recipeId": "E1-2:reporting:generateTransactionReport:/transaction-reports",
+          "schemaValidation": {
+            "bodyKeys": [
+              "crossReferenceFile",
+              "dateParameters",
+              "transactionCategoryFile",
+              "transactionTypeFile",
+              "transactions"
+            ],
+            "schemaPresent": true,
+            "schemaType": "object",
+            "valid": true
+          },
+          "sddConstantEmptyObject": false,
+          "selectedFixture": {
+            "fixtureId": "reporting.candidate-v1-physical-v2",
+            "track": "reporting"
+          },
+          "sourceboundValues": [
+            {
+              "dd": "CARDXREF",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 80,
+              "byteStart": 0,
+              "dd": "DATEPARM",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "utf8Strings",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "dd": "TRANCATG",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "dd": "TRANTYPE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "selector": "fromBinding"
+            },
+            {
+              "byteEndExclusive": 350,
+              "byteStart": 0,
+              "dd": "TRANFILE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 0,
+              "selector": "fromSequentialRecords"
+            },
+            {
+              "byteEndExclusive": 700,
+              "byteStart": 350,
+              "dd": "TRANFILE",
+              "fixtureId": "reporting.candidate-v1-physical-v2",
+              "format": "rawBase64Objects",
+              "recordIndex": 1,
+              "selector": "fromSequentialRecords"
+            }
+          ]
+        },
+        "transitionId": "TRANREPT-T012"
+      },
+      "provenance": [
+        "reference-executable-v4:TRANREPT-T012",
+        "t3-cell:TRANREPT-OBL-002::E1-2::generateTransactionReport"
+      ],
+      "request": {
+        "body_b64": "eyJjcm9zc1JlZmVyZW5jZUZpbGUiOiJDQVJEWFJFRiIsImRhdGVQYXJhbWV0ZXJzIjpbIjIwMjItMDctMDEgMjAyMi0wNy0zMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIl0sInRyYW5zYWN0aW9uQ2F0ZWdvcnlGaWxlIjoiVFJBTkNBVEciLCJ0cmFuc2FjdGlvblR5cGVGaWxlIjoiVFJBTlRZUEUiLCJ0cmFuc2FjdGlvbnMiOlt7InJlY29yZEJhc2U2NCI6IlVrVlFUMUpVTFVsT0xTMHRNREF4SURBeE1EQXdOVWx1ZEdWeWJtVjBJQ0JqWVc1a2FXUmhkR1VnY0hWeVkyaGhjMlVnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTURBd01EQXdNREV5TURBeE1qTTBOVFkzT0RsR2FYaDBkWEpsSUUxbGNtTm9ZVzUwSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJRUp5WVhOcGJHbGhJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ056QXdNREF3TURBZ0lEUXhNVEV4TVRFeE1URXhNVEV4TVRFeU1ESXlMVEEzTFRBMUxURXdMakF3TGpBd0xqQXdNREF3TURJd01qSXRNRGN0TURVdE1UQXVNRFV1TURBdU1EQXdNREF3SUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBPSJ9LHsicmVjb3JkQmFzZTY0IjoiVWtWUVQxSlVMVTlWVkMwdE1EQXhJREF4TURBd05VbHVkR1Z5Ym1WMElDQmpZVzVrYVdSaGRHVWdjSFZ5WTJoaGMyVWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdNREF3TURBd01ETTBNREF4TWpNME5UWTNPRGxHYVhoMGRYSmxJRTFsY21Ob1lXNTBJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lFSnlZWE5wYkdsaElDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnTnpBd01EQXdNREFnSURReE1URXhNVEV4TVRFeE1URXhNVEV5TURJeUxUQTRMVEF4TFRFd0xqQXdMakF3TGpBd01EQXdNREl3TWpJdE1EZ3RNREV0TVRBdU1EVXVNREF1TURBd01EQXdJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0E9In1dfQ==",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "reporting.candidate-v1-physical-v2",
+      "sequence": [
+        "TRANREPT-T001",
+        "TRANREPT-T012"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "a3378bd2315c533d580502fbc552a6a0502983f8642847303f1e56bf7b3bc094",
+  "suite_id": "T3-E1-2"
+}

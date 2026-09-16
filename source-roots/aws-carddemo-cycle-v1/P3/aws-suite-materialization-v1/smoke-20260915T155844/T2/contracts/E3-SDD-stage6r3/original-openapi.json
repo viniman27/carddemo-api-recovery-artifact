@@ -1,0 +1,1838 @@
+{
+  "components": {
+    "schemas": {
+      "GeneratedInterestTransaction": {
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "amount: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "cardReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "cardReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "description: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantCity": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "merchantCity: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "merchantId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantName": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "merchantName: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantPostalText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "merchantPostalText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "originalTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "originalTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "processingTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "processingTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "source": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "source: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "transactionId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "transactionId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6/D-11",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "transactionId",
+          "typeCode",
+          "categoryCode",
+          "source",
+          "description",
+          "amount",
+          "merchantId",
+          "merchantName",
+          "merchantCity",
+          "merchantPostalText",
+          "cardReference",
+          "originalTimestamp",
+          "processingTimestamp"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-6",
+          "note": "Generated interest transaction fields; no fee/suffix public",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestCategoryBasis": {
+        "additionalProperties": false,
+        "properties": {
+          "accountReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6",
+              "note": "accountReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryBalance": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6",
+              "note": "categoryBalance: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "accountReference",
+          "typeCode",
+          "categoryCode",
+          "categoryBalance"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-6",
+          "note": "External description only; not request",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestEnvelope": {
+        "additionalProperties": false,
+        "properties": {
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "outputs": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InterestOutputAvailability"
+              },
+              {
+                "properties": {
+                  "availability": {
+                    "const": "available"
+                  }
+                }
+              }
+            ],
+            "x-traceability": {
+              "clause": "§3.4/D-16",
+              "note": "Required available outputs; items may be []",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "track": {
+            "const": "interest"
+          }
+        },
+        "required": [
+          "track",
+          "completeness",
+          "durability",
+          "outputs"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/D-16/C-11/C-12",
+          "note": "Interest envelope; outputs available required for 200",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestIdentifierBasis": {
+        "additionalProperties": false,
+        "properties": {
+          "parameterText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-6",
+              "note": "parameterText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "parameterText"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-6",
+          "note": "External identifier basis only; not request",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestInterfaceError": {
+        "additionalProperties": false,
+        "properties": {
+          "availableContent": {
+            "$ref": "#/components/schemas/InterestEnvelope",
+            "x-traceability": {
+              "clause": "§3.4/C-12/D-16",
+              "note": "Optional only when corresponding envelope has at least one actual available observation",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "category": {
+            "enum": [
+              "request_representation",
+              "technical_failure",
+              "content_unavailable"
+            ],
+            "type": "string"
+          },
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "track": {
+            "const": "interest"
+          }
+        },
+        "required": [
+          "track",
+          "category",
+          "completeness",
+          "durability"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/§5/C-12/D-13/D-16",
+          "note": "interest error envelope; known failure 500 precedence; no internal diagnostics",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestOutputAvailability": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "available",
+                "x-traceability": {
+                  "clause": "§3.4/C-6/D-16",
+                  "note": "Available means actual represented observation; items may be empty",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              },
+              "items": {
+                "items": {
+                  "$ref": "#/components/schemas/GeneratedInterestTransaction"
+                },
+                "type": "array",
+                "x-traceability": {
+                  "clause": "§3.4/C-6/D-16",
+                  "note": "Ordered array; duplicates retained; no minItems",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability",
+              "items"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-6/D-16",
+              "note": "InterestOutputAvailability available variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "unavailable",
+                "x-traceability": {
+                  "clause": "§3.4/C-6/D-16",
+                  "note": "Unavailable has no items property",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-6/D-16",
+              "note": "InterestOutputAvailability unavailable variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/C-6/D-16",
+          "note": "InterestOutputAvailability availability oneOf; unavailable items forbidden",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterestRequest": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4 Requests/D-14/C-9",
+          "note": "Required empty closed JSON object; missing body/null/array/properties invalid",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "InterfaceError": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PostingInterfaceError"
+          },
+          {
+            "$ref": "#/components/schemas/InterestInterfaceError"
+          },
+          {
+            "$ref": "#/components/schemas/ReportingInterfaceError"
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/§5/C-12",
+          "note": "Track-specific interface errors",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingCandidate": {
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "amount: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "cardReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "cardReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "description: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantCity": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantCity: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantName": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantName: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantPostalText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantPostalText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "originalTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "originalTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "source": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "source: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "suppliedProcessingTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "suppliedProcessingTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "transactionId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "transactionId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "transactionId",
+          "typeCode",
+          "categoryCode",
+          "source",
+          "description",
+          "amount",
+          "merchantId",
+          "merchantName",
+          "merchantCity",
+          "merchantPostalText",
+          "cardReference",
+          "originalTimestamp",
+          "suppliedProcessingTimestamp"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-5",
+          "note": "Posting candidate/source daily fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingEnvelope": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "properties": {
+              "outputs": {
+                "properties": {
+                  "availability": {
+                    "const": "available"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "properties": {
+              "rejections": {
+                "properties": {
+                  "availability": {
+                    "const": "available"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "properties": {
+              "progress": {
+                "properties": {
+                  "availability": {
+                    "const": "available"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "outputs": {
+            "$ref": "#/components/schemas/PostingTransactionAvailability"
+          },
+          "progress": {
+            "$ref": "#/components/schemas/ProgressAvailability"
+          },
+          "rejections": {
+            "$ref": "#/components/schemas/PostingRejectionAvailability"
+          },
+          "track": {
+            "const": "posting"
+          }
+        },
+        "required": [
+          "track",
+          "completeness",
+          "durability",
+          "outputs",
+          "rejections",
+          "progress"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/D-16/C-10/C-12",
+          "note": "Posting envelope; any available outputs/rejections/progress required for 200",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingInterfaceError": {
+        "additionalProperties": false,
+        "properties": {
+          "availableContent": {
+            "$ref": "#/components/schemas/PostingEnvelope",
+            "x-traceability": {
+              "clause": "§3.4/C-12/D-16",
+              "note": "Optional only when corresponding envelope has at least one actual available observation",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "category": {
+            "enum": [
+              "request_representation",
+              "technical_failure",
+              "content_unavailable"
+            ],
+            "type": "string"
+          },
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "track": {
+            "const": "posting"
+          }
+        },
+        "required": [
+          "track",
+          "category",
+          "completeness",
+          "durability"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/§5/C-12/D-13/D-16",
+          "note": "posting error envelope; known failure 500 precedence; no internal diagnostics",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingProgress": {
+        "additionalProperties": false,
+        "properties": {
+          "preliminaryRejectCount": {
+            "type": "integer",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-16",
+              "note": "preliminaryRejectCount: integer progress count only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "processedRecordCount": {
+            "type": "integer",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-16",
+              "note": "processedRecordCount: integer progress count only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "processedRecordCount",
+          "preliminaryRejectCount"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-5/D-16",
+          "note": "Progress counts; not committed/durable output counts",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingRejection": {
+        "additionalProperties": false,
+        "properties": {
+          "candidate": {
+            "$ref": "#/components/schemas/PostingCandidate",
+            "x-traceability": {
+              "clause": "§3.2/C-5",
+              "note": "Rejection retains original candidate context",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5",
+              "note": "description: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "reason": {
+            "enum": [
+              "100",
+              "101",
+              "102",
+              "103"
+            ],
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5",
+              "note": "Preliminary rejection reasons only; 109 remains internal",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "candidate",
+          "reason",
+          "description"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-5",
+          "note": "Posting rejection content",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingRejectionAvailability": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "available",
+                "x-traceability": {
+                  "clause": "§3.4/C-5/D-16",
+                  "note": "Available means actual represented observation; items may be empty",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              },
+              "items": {
+                "items": {
+                  "$ref": "#/components/schemas/PostingRejection"
+                },
+                "type": "array",
+                "x-traceability": {
+                  "clause": "§3.4/C-5/D-16",
+                  "note": "Ordered array; duplicates retained; no minItems",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability",
+              "items"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-5/D-16",
+              "note": "PostingRejectionAvailability available variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "unavailable",
+                "x-traceability": {
+                  "clause": "§3.4/C-5/D-16",
+                  "note": "Unavailable has no items property",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-5/D-16",
+              "note": "PostingRejectionAvailability unavailable variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/C-5/D-16",
+          "note": "PostingRejectionAvailability availability oneOf; unavailable items forbidden",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingRequest": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4 Requests/D-14/C-9",
+          "note": "Required empty closed JSON object; missing body/null/array/properties invalid",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingTransaction": {
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "amount: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "cardReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "cardReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "description: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantCity": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantCity: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantName": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantName: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "merchantPostalText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "merchantPostalText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "originalTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "originalTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "processingTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "processingTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "source": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "source: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "transactionId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "transactionId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.2/C-5/D-11",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "transactionId",
+          "typeCode",
+          "categoryCode",
+          "source",
+          "description",
+          "amount",
+          "merchantId",
+          "merchantName",
+          "merchantCity",
+          "merchantPostalText",
+          "cardReference",
+          "originalTimestamp",
+          "processingTimestamp"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.2/C-5",
+          "note": "Prepared posted transaction fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "PostingTransactionAvailability": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "available",
+                "x-traceability": {
+                  "clause": "§3.4/D-15/D-16",
+                  "note": "Available means actual represented observation; items may be empty",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              },
+              "items": {
+                "items": {
+                  "$ref": "#/components/schemas/PostingTransaction"
+                },
+                "type": "array",
+                "x-traceability": {
+                  "clause": "§3.4/D-15/D-16",
+                  "note": "Ordered array; duplicates retained; no minItems",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability",
+              "items"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/D-15/D-16",
+              "note": "PostingTransactionAvailability available variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "unavailable",
+                "x-traceability": {
+                  "clause": "§3.4/D-15/D-16",
+                  "note": "Unavailable has no items property",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/D-15/D-16",
+              "note": "PostingTransactionAvailability unavailable variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/D-15/D-16",
+          "note": "PostingTransactionAvailability availability oneOf; unavailable items forbidden",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ProgressAvailability": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "available"
+              },
+              "value": {
+                "$ref": "#/components/schemas/PostingProgress"
+              }
+            },
+            "required": [
+              "availability",
+              "value"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-5/D-16",
+              "note": "Progress available, including zero counts",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "unavailable"
+              }
+            },
+            "required": [
+              "availability"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-5/D-16",
+              "note": "Progress unavailable omits value",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/C-5/D-16",
+          "note": "Posting progress availability",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportDetail": {
+        "additionalProperties": false,
+        "properties": {
+          "accountReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "accountReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "amountText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "amountText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryDescription": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "categoryDescription: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "source": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "source: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "transactionId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "transactionId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeDescription": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "typeDescription: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "transactionId",
+          "accountReference",
+          "typeCode",
+          "typeDescription",
+          "categoryCode",
+          "categoryDescription",
+          "source",
+          "amountText"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.3/C-7",
+          "note": "Report receiver detail fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportHeaderContext": {
+        "additionalProperties": false,
+        "properties": {
+          "endText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "endText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "reportLongNameText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "reportLongNameText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "reportShortNameText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "reportShortNameText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "startText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7",
+              "note": "startText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "reportShortNameText",
+          "reportLongNameText",
+          "startText",
+          "endText"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.3/C-7",
+          "note": "Report header context",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportRecord": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "header"
+              },
+              "value": {
+                "$ref": "#/components/schemas/ReportHeaderContext"
+              }
+            },
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-7/C-8",
+              "note": "Header record",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "detail"
+              },
+              "value": {
+                "$ref": "#/components/schemas/ReportDetail"
+              }
+            },
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-7/C-8",
+              "note": "Detail record",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "total"
+              },
+              "value": {
+                "$ref": "#/components/schemas/ReportTotal"
+              }
+            },
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-7/C-8",
+              "note": "Total record",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/C-7/C-8/D-15",
+          "note": "Mixed ordered reporting records union",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportRecordAvailability": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "available",
+                "x-traceability": {
+                  "clause": "§3.4/C-8/D-16",
+                  "note": "Available means actual represented observation; items may be empty",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              },
+              "items": {
+                "items": {
+                  "$ref": "#/components/schemas/ReportRecord"
+                },
+                "type": "array",
+                "x-traceability": {
+                  "clause": "§3.4/C-8/D-16",
+                  "note": "Ordered array; duplicates retained; no minItems",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability",
+              "items"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-8/D-16",
+              "note": "ReportRecordAvailability available variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "const": "unavailable",
+                "x-traceability": {
+                  "clause": "§3.4/C-8/D-16",
+                  "note": "Unavailable has no items property",
+                  "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+                }
+              }
+            },
+            "required": [
+              "availability"
+            ],
+            "type": "object",
+            "x-traceability": {
+              "clause": "§3.4/C-8/D-16",
+              "note": "ReportRecordAvailability unavailable variant",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        ],
+        "x-traceability": {
+          "clause": "§3.4/C-8/D-16",
+          "note": "ReportRecordAvailability availability oneOf; unavailable items forbidden",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportTotal": {
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "enum": [
+              "page",
+              "account",
+              "grand"
+            ],
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-8",
+              "note": "Source-labelled totals only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "valueText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3/C-7/C-8",
+              "note": "valueText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "label",
+          "valueText"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.3/C-7/C-8",
+          "note": "Report total occurrence",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportingDateBasis": {
+        "additionalProperties": false,
+        "properties": {
+          "endText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "endText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "startText": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "startText: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "startText",
+          "endText"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.3",
+          "note": "External date basis only; not request",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportingEnvelope": {
+        "additionalProperties": false,
+        "properties": {
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "records": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReportRecordAvailability"
+              },
+              {
+                "properties": {
+                  "availability": {
+                    "const": "available"
+                  }
+                }
+              }
+            ],
+            "x-traceability": {
+              "clause": "§3.4/D-16",
+              "note": "Required available records; items may be []",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "track": {
+            "const": "reporting"
+          }
+        },
+        "required": [
+          "track",
+          "completeness",
+          "durability",
+          "records"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/D-16/C-8/C-12",
+          "note": "Reporting envelope; records available required for 200",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportingInterfaceError": {
+        "additionalProperties": false,
+        "properties": {
+          "availableContent": {
+            "$ref": "#/components/schemas/ReportingEnvelope",
+            "x-traceability": {
+              "clause": "§3.4/C-12/D-16",
+              "note": "Optional only when corresponding envelope has at least one actual available observation",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "category": {
+            "enum": [
+              "request_representation",
+              "technical_failure",
+              "content_unavailable"
+            ],
+            "type": "string"
+          },
+          "completeness": {
+            "const": "not_attested"
+          },
+          "durability": {
+            "const": "unknown"
+          },
+          "track": {
+            "const": "reporting"
+          }
+        },
+        "required": [
+          "track",
+          "category",
+          "completeness",
+          "durability"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4/§5/C-12/D-13/D-16",
+          "note": "reporting error envelope; known failure 500 precedence; no internal diagnostics",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportingRequest": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.4 Requests/D-14/C-9",
+          "note": "Required empty closed JSON object; missing body/null/array/properties invalid",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      },
+      "ReportingTransactionBasis": {
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "amount: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "cardReference": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "cardReference: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "categoryCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "categoryCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "processingTimestamp": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "processingTimestamp: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "source": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "source: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "transactionId": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "transactionId: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "typeCode": {
+            "type": "string",
+            "x-traceability": {
+              "clause": "§3.3",
+              "note": "typeCode: string representation; no regex/length/coercion invented",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "required": [
+          "transactionId",
+          "cardReference",
+          "typeCode",
+          "categoryCode",
+          "source",
+          "amount",
+          "processingTimestamp"
+        ],
+        "type": "object",
+        "x-traceability": {
+          "clause": "§3.3",
+          "note": "External description only; not request",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      }
+    }
+  },
+  "info": {
+    "description": "Mechanical OpenAPI 3.1 materialization of approved Stage 6 r3 only; no runtime binding or semantic execution claim.",
+    "title": "AWS CardDemo E3-01 SDD Stage6r3 Mechanical Contract",
+    "version": "p2a-2026-09-14",
+    "x-traceability": {
+      "clause": "Purpose/Contract Integrity Discipline",
+      "note": "Materialized without source/spec semantic edits",
+      "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+    }
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "openapi": "3.1.0",
+  "paths": {
+    "/interest": {
+      "post": {
+        "operationId": "interest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InterestRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-traceability": {
+            "clause": "§3.4 Requests/D-14",
+            "note": "Body required; empty closed JSON object only",
+            "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestEnvelope"
+                }
+              }
+            },
+            "description": "Permitted observation available; no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "200 observation boundary, no minItems",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Request representation mismatch",
+            "x-traceability": {
+              "clause": "§5.2/C-9/C-12",
+              "note": "400 request_representation only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Known technical failure at response boundary",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-13",
+              "note": "Known failure precedence over 200/503; may include availableContent",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "No representable observation and no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "content_unavailable none; not observed empty",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "summary": "interest",
+        "tags": [
+          "interest"
+        ],
+        "x-traceability": {
+          "clause": "C-2/C-6/C-9/C-11-C-14",
+          "note": "interest operation; no selector/reset/polling/telemetry/default business fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      }
+    },
+    "/posting": {
+      "post": {
+        "operationId": "posting",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostingRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-traceability": {
+            "clause": "§3.4 Requests/D-14",
+            "note": "Body required; empty closed JSON object only",
+            "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostingEnvelope"
+                }
+              }
+            },
+            "description": "Permitted observation available; no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "200 observation boundary, no minItems",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Request representation mismatch",
+            "x-traceability": {
+              "clause": "§5.2/C-9/C-12",
+              "note": "400 request_representation only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Known technical failure at response boundary",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-13",
+              "note": "Known failure precedence over 200/503; may include availableContent",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "No representable observation and no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "content_unavailable none; not observed empty",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "summary": "posting",
+        "tags": [
+          "posting"
+        ],
+        "x-traceability": {
+          "clause": "C-1/C-5/C-9/C-10/C-12-C-14",
+          "note": "posting operation; no selector/reset/polling/telemetry/default business fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      }
+    },
+    "/reporting": {
+      "post": {
+        "operationId": "reporting",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportingRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-traceability": {
+            "clause": "§3.4 Requests/D-14",
+            "note": "Body required; empty closed JSON object only",
+            "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportingEnvelope"
+                }
+              }
+            },
+            "description": "Permitted observation available; no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "200 observation boundary, no minItems",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Request representation mismatch",
+            "x-traceability": {
+              "clause": "§5.2/C-9/C-12",
+              "note": "400 request_representation only",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "Known technical failure at response boundary",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-13",
+              "note": "Known failure precedence over 200/503; may include availableContent",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterfaceError"
+                }
+              }
+            },
+            "description": "No representable observation and no known technical failure",
+            "x-traceability": {
+              "clause": "§5.2/C-12/D-16",
+              "note": "content_unavailable none; not observed empty",
+              "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+            }
+          }
+        },
+        "summary": "reporting",
+        "tags": [
+          "reporting"
+        ],
+        "x-traceability": {
+          "clause": "C-3/C-7-C-9/C-12-C-14",
+          "note": "reporting operation; no selector/reset/polling/telemetry/default business fields",
+          "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md"
+        }
+      }
+    }
+  },
+  "x-traceability": {
+    "approved_inputs": {
+      "<REDACTED_LOCAL_PATH>/WORKSPACE-NOTES.md": "be2e0ea2e3ce50ab7d85c9d22a05c1ccb9801d5fac63e2e1318a68cdec9b1e45",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/POST-PIPELINE-READINESS.md": "aee4ee2a78e56befe51c1e96c7ec98fe9d5cfbbe83e79c8628d52c21ca2e7952",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27"
+    },
+    "scope": "P2a OpenAPI + binding plan only",
+    "stage6": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+    "stage7": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md"
+  }
+}

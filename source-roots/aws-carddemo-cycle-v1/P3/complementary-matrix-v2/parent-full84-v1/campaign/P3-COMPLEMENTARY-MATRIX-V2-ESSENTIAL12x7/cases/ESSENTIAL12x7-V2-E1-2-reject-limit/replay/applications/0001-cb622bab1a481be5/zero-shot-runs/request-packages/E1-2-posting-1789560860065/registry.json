@@ -1,0 +1,59 @@
+{
+  "kind": "p3-local-technical-fixture-selection",
+  "status": "p2c_request_materialized_local_only",
+  "fixtures": [
+    {
+      "fixtureId": "p2c-request-E1-2-posting-1789560860065",
+      "track": "posting",
+      "materializer": {
+        "kind": "local_file_package",
+        "files": {
+          "ACCTFILE": "ACCTFILE",
+          "DALYTRAN": "DALYTRAN",
+          "TCATBALF": "TCATBALF",
+          "TRANFILE": "TRANFILE",
+          "XREFFILE": "XREFFILE"
+        },
+        "filePins": {
+          "ACCTFILE": {
+            "sha256": "7546f7a6cf3595f92d72509203f7a2ea81aa95fab59210e0af8a2b87a05f15d3",
+            "bytes": 8192
+          },
+          "DALYTRAN": {
+            "sha256": "107279b71a763b3b7b652c4c85f6080b8348e614fabf2669204c7017bf3cb194",
+            "bytes": 350
+          },
+          "TCATBALF": {
+            "sha256": "c17bf8968196a75ddf5dbe4ebf22768670139c639984cca97fb2666efc707627",
+            "bytes": 8192
+          },
+          "TRANFILE": {
+            "sha256": "8be0fdf1af48abb444bd7a1aaf02abac654580c323e1509230353262494585bc",
+            "bytes": 8192
+          },
+          "XREFFILE": {
+            "sha256": "a3529afe07535f5ba3a7109ed099f27fc57902d794423a1d86d0ddbd7aaa138a",
+            "bytes": 8192
+          }
+        }
+      },
+      "provenance": {
+        "class": "p2c-request-materialization",
+        "officialFixture": false,
+        "requestSha256": "36e84c224a551f4c2297ff149da92f1860da86d7f3fee1a97bc8854d2a47ef1d",
+        "contractId": "E1-2"
+      },
+      "exposure": {
+        "label": "technical-only",
+        "notOracle": true,
+        "notExtractionInput": true,
+        "notPublicRequest": false
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "contentSha256": "a61dbba31cae44441c75e05571d76caa3993b189e63672900a3f30631d3c6939"
+    }
+  ]
+}

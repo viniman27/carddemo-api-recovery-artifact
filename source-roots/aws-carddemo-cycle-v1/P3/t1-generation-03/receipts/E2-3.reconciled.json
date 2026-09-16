@@ -1,0 +1,106 @@
+{
+  "contractId": "E2-3",
+  "label": "E2-3",
+  "startedUtc": "2026-09-15T18:43:24.588579Z",
+  "requestPath": "outbound-effective/E2-3.request.json",
+  "requestBytes": 28694,
+  "requestSha256": "18300aadd97e92c5d8f48d5f3b97e889718be4c26d12737ed16b3b68803d047e",
+  "modelRequested": "gpt-6-astra",
+  "store": false,
+  "stream": true,
+  "tools": [],
+  "previous_response_id": "omitted",
+  "retries": 0,
+  "fallback": false,
+  "followRedirects": false,
+  "redirectsDisabled": true,
+  "finishedUtc": "2026-09-15T18:45:15.678332Z",
+  "elapsedSeconds": 111.089,
+  "httpStatus": 200,
+  "rawSsePath": "raw-sse/E2-3.sse.txt",
+  "rawSseBytes": 988930,
+  "rawSseSha256": "26361af9dfb2c20011218202df0d707c4a8dc809f8d64fba0a005c715c9d685b",
+  "classification": "complete",
+  "parsedPath": "parsed/E2-3.parsed.json",
+  "returnedModel": "gpt-6-astra",
+  "responseStatus": "completed",
+  "responseId": "resp_0a1c94bbc6e7f233016aa991cd61b887d2ad03d0654aa193ea",
+  "outputTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+  "terminalEventTypes": [
+    "response.completed"
+  ],
+  "usage": {
+    "attribution": {
+      "items": {
+        "msg_0a1c94bbc6e7f233016aa991cd6c6c87d2b096f06463f7c978": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "content": [
+            {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 5885,
+              "output_tokens": 0
+            }
+          ],
+          "input_tokens": 5885,
+          "output_tokens": 0
+        },
+        "rs_0a1c94bbc6e7f233016aa991ceb62887d2ab624556607b79f1": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "input_tokens": 2,
+          "output_tokens": 88
+        },
+        "msg_0a1c94bbc6e7f233016aa991d16be087d2ade1924edd26cd3b": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "content": [
+            {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 0,
+              "output_tokens": 3549
+            }
+          ],
+          "input_tokens": 0,
+          "output_tokens": 3549
+        }
+      }
+    },
+    "input_tokens": 5887,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3637,
+    "output_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "total_tokens": 9524
+  },
+  "outputValidation": {
+    "contractId": "E2-3",
+    "validJson": true,
+    "strictTopScenarios": true,
+    "scenarioCount": 15,
+    "error": null,
+    "scenarioIds": [
+      "posting-boundary-01",
+      "posting-positive-02",
+      "posting-negative-03",
+      "posting-negative-04",
+      "posting-negative-05",
+      "interest-positive-01",
+      "interest-boundary-02",
+      "interest-negative-03",
+      "interest-negative-04",
+      "interest-negative-05",
+      "report-boundary-01",
+      "report-positive-02",
+      "report-positive-03",
+      "report-negative-04",
+      "report-negative-05"
+    ]
+  }
+}

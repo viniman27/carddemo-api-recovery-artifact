@@ -1,0 +1,49 @@
+{
+  "kind": "e2-2-reporting-valid-card-next-precondition-probe",
+  "scope": "modified request uses CARDXREF key present in copied-current fixture; not oracle/campaign",
+  "requestSha256": "0fd150da3486338dcf453fe28162d92b81731ea3f08c2b75bdb4b58ce1a1c235",
+  "requestCardNumber": "4111111111111111",
+  "status": 500,
+  "schemaErrors": [],
+  "schemaOk": true,
+  "responseSha256": "2524b82a3c9654e17eb3ca01906d9724251cc91fe68220c7561eb47810f40512",
+  "body": {
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN03C",
+      "Reporting from 2025-01-01 to 2025-12-31",
+      "TEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000041111111111111112025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234",
+      "INVALID TRAN CATG KEY : 010001",
+      "FILE STATUS IS: NNNN0023",
+      "ABENDING PROGRAM",
+      "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+      "libcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')",
+      "libcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')",
+      "libcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')",
+      "libcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')",
+      "libcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')",
+      "libcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')"
+    ],
+    "program": "CBTRN03C"
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fewshot-integration-diagnosis-v1/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-y1mwhtp6/audit.json",
+  "reachedCobol": true,
+  "programExit": 12,
+  "failureEvents": [
+    {
+      "kind": "cobol_precondition_failure",
+      "track": "reporting",
+      "lookup": "TRANCATG",
+      "key": "010001",
+      "fileStatus": "23",
+      "rawStatusText": "FILE STATUS IS: NNNN0023",
+      "authority": "CBTRN03C DISPLAY before 9999-ABEND-PROGRAM; TRANCATG indexed lookup precondition not met"
+    },
+    {
+      "kind": "local_compatibility_abort",
+      "raw": "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000",
+      "authority": "local CEE3ABD2 compatibility diagnostic; cause/effects not inferred"
+    }
+  ],
+  "programStdout": "START OF EXECUTION OF PROGRAM CBTRN03C\nReporting from 2025-01-01 to 2025-12-31\nTEST000000000001010001TEST      LOCAL SYNTHETIC FIXTURE                                                                             00000002500000000001TEST MERCHANT                                     TEST CITY                                         000000000041111111111111112025-01-01-00.00.00.0000002025-01-01-00.00.00.000000ORIGINAL-FILLER-1234\nINVALID TRAN CATG KEY : 010001\nFILE STATUS IS: NNNN0023\nABENDING PROGRAM\n",
+  "programStderr": "LOCAL-CEE3ABD/2 CODE=+0000000999 TIMING=+0000000000\nlibcob: warning: implicit CLOSE of DATE-PARMS-FILE ('DATEPARM')\nlibcob: warning: implicit CLOSE of TRANCATG-FILE ('TRANCATG')\nlibcob: warning: implicit CLOSE of TRANTYPE-FILE ('TRANTYPE')\nlibcob: warning: implicit CLOSE of XREF-FILE ('CARDXREF')\nlibcob: warning: implicit CLOSE of REPORT-FILE ('TRANREPT')\nlibcob: warning: implicit CLOSE of TRANSACT-FILE ('TRANFILE')\n"
+}

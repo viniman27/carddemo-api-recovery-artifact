@@ -1,0 +1,229 @@
+[
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0001",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        500
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T1:t1-absent",
+      "T2:t2-duplicate"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "b5fc65ed173d683abec52a8dfa5180e10a70820895b3362b40759e07255598c8",
+    "response_bytes": 64,
+    "response_sha256": "db979dd6b9ac7d1d0e15b68e670b015d28227a126dfcd285880ce2ced1649bdf",
+    "status": 200
+  },
+  {
+    "body_kind": "bytes",
+    "case_id": "T4-0002",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        500
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T1:t1-empty"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "4a03668f8b7cc89aa72c5a459ee233c448bfd9da31caa12ab75ffeb70249092d",
+    "response_bytes": 58,
+    "response_sha256": "f42454f44fd0fe706d669bcd1313cd350aec29acc93afd9c2366b13fe1a66bd4",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0003",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        500
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T1:t1-dup-headers"
+    ],
+    "request_headers": [
+      [
+        "X-Dup",
+        "one"
+      ],
+      [
+        "X-Dup",
+        "two"
+      ]
+    ],
+    "request_identity": "999fef3f68c539dd7d960259c6a5fd3c68757a7acfcb7a4958adf769dc431c32",
+    "response_bytes": 64,
+    "response_sha256": "db979dd6b9ac7d1d0e15b68e670b015d28227a126dfcd285880ce2ced1649bdf",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0004",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T2:t2-distinct-expectation"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "6e88f9c33da9a582596a8050f6497d0aaa550152ba08e288199bb6037a5240b6",
+    "response_bytes": 64,
+    "response_sha256": "db979dd6b9ac7d1d0e15b68e670b015d28227a126dfcd285880ce2ced1649bdf",
+    "status": 200
+  },
+  {
+    "body_kind": "json",
+    "case_id": "T4-0005",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200,
+        500
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T3:t3-json-empty-object"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "0302d0af42137e50f8ebe7a21d047ef4a9a7bf662f641af573fe6555a22f90ef",
+    "response_bytes": 60,
+    "response_sha256": "cfc2f14ad8f307af20c340bdda95c1eb10f3f58485958b5d570ec73563ef9426",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0006",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        500
+      ],
+      "status": 500
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/documented-500",
+    "provenance": [
+      "T3:t3-doc-500"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "29141958062420b56d5fdb755d12ffd57aa33fd3e551caf3120523ab13b8ce8d",
+    "response_bytes": 26,
+    "response_sha256": "aa8d4da425c86db6070f8716c491e139b7a38759af387c6fde3b49b888aa4875",
+    "status": 500
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0007",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "unsupported_checks": [
+        "jsonSchema"
+      ]
+    },
+    "expectation_result": "inconclusive",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/ok",
+    "provenance": [
+      "T3:t3-unsupported-check"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "585c0de2641c6c07f1bf3aa64163dc9a439a0ba65769bf3234a1d9481305ef5a",
+    "response_bytes": 64,
+    "response_sha256": "db979dd6b9ac7d1d0e15b68e670b015d28227a126dfcd285880ce2ced1649bdf",
+    "status": 200
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "T4-0008",
+    "content_type": null,
+    "expectation_detail": {},
+    "expectation_result": "not_evaluated",
+    "failure_class": "deadline",
+    "method": "POST",
+    "path": "/deadline",
+    "provenance": [
+      "T3:t3-deadline"
+    ],
+    "request_headers": [
+      [
+        "X-Synthetic",
+        "qualification"
+      ]
+    ],
+    "request_identity": "798906fc3207bd6cf98803bde63597071f1cc222cceef6dd8466c3dbc5a2d8da",
+    "response_bytes": 0,
+    "response_sha256": null,
+    "status": null
+  }
+]

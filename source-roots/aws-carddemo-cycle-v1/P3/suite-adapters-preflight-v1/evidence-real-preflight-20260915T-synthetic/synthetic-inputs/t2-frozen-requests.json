@@ -1,0 +1,63 @@
+{
+  "kind": "synthetic-frozen-requests-not-generated-here",
+  "requests": [
+    {
+      "body": {
+        "kind": "absent"
+      },
+      "headers": [
+        [
+          "X-Dup",
+          "1"
+        ],
+        [
+          "X-Dup",
+          "2"
+        ]
+      ],
+      "id": "absent",
+      "method": "POST",
+      "operationId": "posting",
+      "path": "/posting"
+    },
+    {
+      "body": {
+        "base64": "",
+        "kind": "bytes"
+      },
+      "id": "present-empty",
+      "method": "POST",
+      "operationId": "posting",
+      "path": "/posting"
+    },
+    {
+      "body": {
+        "kind": "json",
+        "value": {}
+      },
+      "id": "empty-json-object",
+      "method": "POST",
+      "operationId": "posting",
+      "path": "/posting"
+    },
+    {
+      "body": {
+        "kind": "json",
+        "value": {}
+      },
+      "id": "duplicate-empty-json-object",
+      "method": "POST",
+      "operationId": "posting",
+      "path": "/posting"
+    },
+    {
+      "body": {
+        "kind": "absent"
+      },
+      "id": "invalid-relative-path",
+      "method": "POST",
+      "operationId": "posting",
+      "path": "posting"
+    }
+  ]
+}

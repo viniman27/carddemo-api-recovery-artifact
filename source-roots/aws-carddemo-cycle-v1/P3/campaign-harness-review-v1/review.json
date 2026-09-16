@@ -1,0 +1,249 @@
+{
+  "artifact_hashes": {
+    "cli_status": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/cli.status",
+      "sha256": "63bdd8720c48323f3d166c3084a8408e7e1e2d20755380bf36acf32a9fe0e453"
+    },
+    "demo_report": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/demo-output/report.json",
+      "sha256": "a2411282ff8fb772c89537f16d63a0ee13125524d960dd38dd3da336f4f3d0d9"
+    },
+    "probes_json": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/probes-output-v2/outside_in_probes.json",
+      "sha256": "f6b3cc228f6fded946448d920b24176f2bf0e19aab0ccee1673ced034da29193"
+    },
+    "unittest_stderr": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/unittest.stderr",
+      "sha256": "e550a8701ad56d22bc2271b95a484ae9fdced3572f85b6b6c993566907b18401"
+    }
+  },
+  "evidence_dir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z",
+  "findings": [
+    {
+      "consequence": "Casos congelados com headers duplicados/ordenados podem ser executados com outro estímulo no serviço, quebrando identidade e dedupe.",
+      "evidence": {
+        "defect_reproduced": true,
+        "requested_headers": [
+          [
+            "X-Dup",
+            "one"
+          ],
+          [
+            "X-Dup",
+            "two"
+          ]
+        ],
+        "server_get_all_X_Dup": [
+          "two"
+        ],
+        "totals": {
+          "attempted": 1,
+          "completed": 1,
+          "deadline_failures": 0,
+          "http_failures": 0,
+          "planned": 1,
+          "transport_failures": 0
+        }
+      },
+      "id": "duplicate_headers_wire_collapse",
+      "reproduced": true,
+      "title": "Headers HTTP duplicados são perdidos no envio real"
+    },
+    {
+      "consequence": "A evidência de pins antes/depois não prova que a aplicação usou aquele estado; efeitos podem vazar entre aplicações e distorcer resultados experimentais.",
+      "evidence": {
+        "application_pins_before_all_match_original": true,
+        "defect_reproduced": true,
+        "service_seen": [
+          {
+            "after": "original+mutated\n",
+            "before": "original\n"
+          },
+          {
+            "after": "original+mutated+mutated\n",
+            "before": "original+mutated\n"
+          }
+        ],
+        "totals": {
+          "attempted": 2,
+          "completed": 2,
+          "deadline_failures": 0,
+          "http_failures": 0,
+          "planned": 2,
+          "transport_failures": 0
+        }
+      },
+      "id": "reset_copy_not_bound_to_service_state",
+      "reproduced": true,
+      "title": "Reset copia arquivos, mas não vincula o serviço ao diretório fresco"
+    },
+    {
+      "consequence": "Um caso lento gerou dois deadlines: o request seguinte nem chegou ao handler antes do timeout; totais por caso podem superestimar falhas independentes.",
+      "evidence": {
+        "defect_reproduced": true,
+        "receipts": [
+          {
+            "body_kind": "absent",
+            "case_id": "slow",
+            "content_type": null,
+            "failure_class": "deadline",
+            "method": "POST",
+            "path": "/slow",
+            "provenance": [
+              "PX:slow"
+            ],
+            "request_identity": "232d13d6b37fd5903614ea23735d066d2a06f52fa30c5a64bd43530674f4110c",
+            "response_bytes": 0,
+            "response_sha256": null,
+            "status": null
+          },
+          {
+            "body_kind": "absent",
+            "case_id": "fast-after-slow",
+            "content_type": null,
+            "failure_class": "deadline",
+            "method": "POST",
+            "path": "/fast",
+            "provenance": [
+              "PX:fast-after-slow"
+            ],
+            "request_identity": "b016153bb33a77e9d2a42a0b5c5a927a8b43f1ef049d65fc5abb43c1edeb99c9",
+            "response_bytes": 0,
+            "response_sha256": null,
+            "status": null
+          }
+        ],
+        "server_seen": [
+          {
+            "finished": 1789476670.759792,
+            "path": "/slow",
+            "started": 1789476670.4048152
+          }
+        ],
+        "totals": {
+          "attempted": 2,
+          "completed": 0,
+          "deadline_failures": 2,
+          "http_failures": 0,
+          "planned": 2,
+          "transport_failures": 0
+        }
+      },
+      "id": "deadline_cascade_on_serial_target",
+      "reproduced": true,
+      "title": "Deadline pode contaminar a aplicação seguinte em alvo serial"
+    },
+    {
+      "consequence": "Status fora de expectation.checks não incrementa http_failures; taxas de sucesso/aderência podem ser infladas.",
+      "evidence": {
+        "defect_reproduced": true,
+        "expectation": {
+          "checks": {
+            "status": [
+              200
+            ]
+          },
+          "expectation_id": "only-200"
+        },
+        "receipts": [
+          {
+            "body_kind": "absent",
+            "case_id": "unexpected-500",
+            "content_type": "application/json",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/ok",
+            "provenance": [
+              "PX:unexpected-500"
+            ],
+            "request_identity": "bb5bb129caad42fe22f75fbb6eaa07a099e7f751291878caceb3334ef8d2e761",
+            "response_bytes": 24,
+            "response_sha256": "85a997e1bba7b33abfc0d29cb29b9d062dd36ccc66332cdf41bb84ce6bc10b26",
+            "status": 500
+          }
+        ],
+        "totals": {
+          "attempted": 1,
+          "completed": 1,
+          "deadline_failures": 0,
+          "http_failures": 0,
+          "planned": 1,
+          "transport_failures": 0
+        }
+      },
+      "id": "unexpected_500_not_classified_against_expectation",
+      "reproduced": true,
+      "title": "Expectativas não são avaliadas; 500 inesperado conta como completed"
+    },
+    {
+      "consequence": "Um ID com separadores cria diretório fora de applications/, contaminando organização/evidência e abrindo escrita em local não pretendido dentro do output.",
+      "evidence": {
+        "applications_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/probes-output-v2/path_traversal_run/applications",
+        "case_id": "x/../../escaped-case",
+        "defect_reproduced": true,
+        "recorded_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/probes-output-v2/path_traversal_run/applications/0001-x/../../escaped-case",
+        "resolved_workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/probes-output-v2/path_traversal_run/escaped-case",
+        "totals": {
+          "attempted": 1,
+          "completed": 1,
+          "deadline_failures": 0,
+          "http_failures": 0,
+          "planned": 1,
+          "transport_failures": 0
+        }
+      },
+      "id": "case_id_path_traversal_workdir_escape",
+      "reproduced": true,
+      "title": "case_id permite path traversal no workdir de aplicação"
+    }
+  ],
+  "positive_controls": [
+    "freeze/load detectou adulteração no demo e testes unitários",
+    "body ausente, bytes vazios e JSON {} são distintos no teste existente",
+    "união T4 preservou ordem T1→T2→T3 e proveniência no demo",
+    "CLI falhou fechada para mode official-aws com exit 2",
+    "redirect/retry não foram observados como automáticos nos probes; o núcleo usa http.client sem seguir redirect por padrão e uma chamada por case"
+  ],
+  "real_execution": {
+    "built_in_tests": {
+      "raw_stderr_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v1/evidence-20260915T125017Z/unittest.stderr",
+      "status": "OK",
+      "tests_reported": 6
+    },
+    "official_cli_fail_closed": {
+      "exit_status": 2
+    },
+    "outside_in_probes": {
+      "defects_reproduced": 5,
+      "exit_status": 0,
+      "probes_total": 5
+    },
+    "qualification_demo": {
+      "documented500NotHttpFailure": true,
+      "firstRunTotals": {
+        "attempted": 6,
+        "completed": 5,
+        "deadline_failures": 1,
+        "http_failures": 0,
+        "planned": 6,
+        "transport_failures": 0
+      },
+      "freshCopyVerified": true,
+      "httpCallsObserved": 12,
+      "secondRunTotals": {
+        "attempted": 6,
+        "completed": 5,
+        "deadline_failures": 1,
+        "http_failures": 0,
+        "planned": 6,
+        "transport_failures": 0
+      },
+      "status": "OK",
+      "tamperDetected": true,
+      "union_cases": 6
+    }
+  },
+  "reviewed_at_utc": "2026-09-15T12:50:17Z",
+  "scope": "núcleo serial sintético campaign-harness-v1; nenhuma campanha AWS/COBOL/oráculo/quarentena lida ou executada",
+  "verdict": "FAIL"
+}

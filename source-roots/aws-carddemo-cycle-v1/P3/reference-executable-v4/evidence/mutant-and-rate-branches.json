@@ -1,0 +1,38 @@
+{
+  "status": "draft_needs_review",
+  "mutant": "POSTTRAN-T003 append emit interest_write_attempt",
+  "validator_errors": [
+    "event interest_write_attempt not source-scoped to CBTRN02C_POSTTRAN in POSTTRAN-T003"
+  ],
+  "rejected": true,
+  "reason": "interest_write_attempt is source-scoped to CBACT04C_INTCALC, not CBTRN02C_POSTTRAN; this is a typed capability check plus representative behavioral mutant, not a proof of full event semantics.",
+  "zero_rate_trace": [
+    {
+      "transitionId": "INTCALC-T009Z",
+      "guardResult": true,
+      "state": {
+        "state": "I_OPENED",
+        "values": {
+          "open_status": "00",
+          "tcatbal_read_status": "00",
+          "new_group": true,
+          "disc_rate_path": "zero",
+          "interest_write_status": "00",
+          "tcatbal_records_seen": 1,
+          "events": [
+            "interest_rate_zero_no_interest_write"
+          ],
+          "attempts": []
+        }
+      }
+    }
+  ],
+  "nonzero_rate_trace_ids": {
+    "specific": [
+      "INTCALC-T007"
+    ],
+    "default": [
+      "INTCALC-T007"
+    ]
+  }
+}

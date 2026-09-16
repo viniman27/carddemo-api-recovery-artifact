@@ -1,0 +1,76 @@
+{
+  "feature_name": "adapter-behavior-carddemo-r2",
+  "artifact_type": "adapter-behavior",
+  "pipeline_stage": 7,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/adapter-behavior-carddemo-r2/requirements.md",
+  "upstream_specs": [
+    "specs/api-contract-carddemo-r3/spec.json"
+  ],
+  "created_at": "2026-09-13T19:04:33-03:00",
+  "updated_at": "2026-09-14T10:07:45.409331+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-14",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 7,
+        "artifact_type": "adapter-behavior"
+      },
+      "artifact": {
+        "path": "specs/adapter-behavior-carddemo-r2/requirements.md",
+        "sha256": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/api-contract-carddemo-r3/spec.json",
+          "sha256": "2ec40d54f4d89198ccc9e0cac602ba4192ee063290d9f226c0b1ac101899a0bd"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-7-r2-authorization.json",
+        "sha256": "3e3315cfb4ae05e65f9627ae3147343259d93eabf31931c3177a105c1615cb60"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage7",
+  "revision_of": "adapter-behavior-carddemo",
+  "revision_basis": "failed-original-stage7-plus-directed-feedback-and-design-evidence-review",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 7",
+    "pipeline-sdd-v3 stage 7 Adapter Behavior Spec"
+  ]
+}

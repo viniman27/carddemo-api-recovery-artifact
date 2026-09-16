@@ -1,0 +1,2040 @@
+{
+  "kind": "unified-preflight-v2-report",
+  "scope": "single executable technical preflight with fresh same-invocation coverage; not campaign; not official T1/T2/T3/T4 generation",
+  "harnessImport": {
+    "module": "campaign_harness",
+    "file": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "bodyCapturePatch": {
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "collect raw response bytes for ContractChecker while preserving harness-v3 module file/hash",
+    "originalFunctionId": 4394500592
+  },
+  "prepared": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1",
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-preparation",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "f63757d9a428b1e4c5fbd52146229e1edccf00c83d6b8fff2587f6043011ed01",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "isolatedCoveragePatch": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchedSha256": "560ce02bf435629b1cdb1a7e7853699893d127ea0ff49043501a7835f82b841a",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair"
+    }
+  },
+  "sourceHashes": [
+    {
+      "program": "CBTRN02C",
+      "path": "app/cbl/CBTRN02C.cbl",
+      "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+      "bytes": 58890
+    },
+    {
+      "program": "CBACT04C",
+      "path": "app/cbl/CBACT04C.cbl",
+      "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+      "bytes": 52479
+    },
+    {
+      "program": "CBTRN03C",
+      "path": "app/cbl/CBTRN03C.cbl",
+      "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+      "bytes": 52239
+    }
+  ],
+  "targetHashes": {
+    "p2bBinding": "560ce02bf435629b1cdb1a7e7853699893d127ea0ff49043501a7835f82b841a",
+    "buildReport": "14e13cf45d68a78f0aee90d20eaa2e04d384da1887d352d14a53311ebde43f0d"
+  },
+  "adapterEvidence": {
+    "input": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/adapter-inputs/fresh-smoke-adapter-inputs.json",
+    "input_sha256": "765f0d9c5847df22adbeb4558abc051dcab225db4e8a46aca1ead61736b490da",
+    "unionLedger": [
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-posting",
+        "action": "kept",
+        "destination": "T4-0001"
+      },
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-interest",
+        "action": "kept",
+        "destination": "T4-0002"
+      },
+      {
+        "source": "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-reporting",
+        "action": "kept",
+        "destination": "T4-0003"
+      },
+      {
+        "source": "FEWSHOT-SMOKE:FEWSHOT-SMOKE-E2-2-interest-current",
+        "action": "kept",
+        "destination": "T4-0004"
+      },
+      {
+        "source": "ZEROSHOT-SMOKE:ZEROSHOT-SMOKE-E1-1-posting-current",
+        "action": "kept",
+        "destination": "T4-0005"
+      }
+    ],
+    "fewshotFacade": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "sha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d"
+    },
+    "zeroshotFacade": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2c-zero-shot/p2c_facade.py",
+      "sha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00"
+    }
+  },
+  "runs": {
+    "unionFirst": {
+      "suite_id": "UNION-QUALIFICATION-NOT-T4",
+      "frozen": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/freeze/UNION-QUALIFICATION-NOT-T4.json",
+      "frozen_sha256": "058b53d2fc3d1fea7c4e4e83c699ef5107a553aca287b78449dc82dab85db460",
+      "loaded_case_count": 5,
+      "moduleEvidence": {
+        "replayFunction": "campaign_harness.replay_suite",
+        "target": "isolated P2b API over instrumented COBOL"
+      },
+      "totals": {
+        "planned": 5,
+        "attempted": 5,
+        "completed": 5,
+        "deadline_failures": 0,
+        "transport_failures": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "expectation_passes": 5,
+        "expectation_violations": 0,
+        "expectation_inconclusive": 0
+      },
+      "receipts": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/receipts.json",
+      "applications": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications.json",
+      "newAuditCount": 5,
+      "checks": [
+        {
+          "case_id": "T4-0001",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/posting",
+            "status": 200,
+            "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 4,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "posting",
+            "businessProgram": "CBTRN02C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl",
+            "requestInvocation": "posting-yy03c1bl",
+            "programExit": 4,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "bytes": 3364,
+                "sha256": "a30a595474d10eef1743a23c4a0f643af84db271319c816e1d1d379a5129e582",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN02C-CBTRN02C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:0.00% of 1120\nBranches executed:0.00% of 288\nTaken at least once:0.00% of 288\nCalls executed:0.00% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 38\nTaken at least once:0.00% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:0.00% of 1134\n",
+              "stderr": "CBTRN02C-CBTRN02C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.014,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1120",
+                  "Branches executed:0.00% of 288",
+                  "Taken at least once:0.00% of 288",
+                  "Calls executed:0.00% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 38",
+                  "Taken at least once:0.00% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:0.00% of 1134"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1134,
+                "branchesPercent": 0.0,
+                "branchesTotal": 38,
+                "callsPercent": 0.0,
+                "callsTotal": 154
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov/CBTRN02C.c.gcov",
+                  "bytes": 200580,
+                  "sha256": "703c0e33d82adeb0a56526f0f7885db21280d69c605d3ae9d500193ba0b0ebc7"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov/CBTRN02C.c.h.gcov",
+                  "bytes": 8294,
+                  "sha256": "1d89353a8f6eabd7e9346fce0f1749c21d26dc4e56509bfc4044669008d488ef"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov/CBTRN02C.c.l.h.gcov",
+                  "bytes": 10661,
+                  "sha256": "f26da239e5096c88c3bac2a8608d5816d8859272fee7cac42c0f0da61ac7d354"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov/CBTRN02C.c.gcov",
+                "bytes": 200580,
+                "sha256": "703c0e33d82adeb0a56526f0f7885db21280d69c605d3ae9d500193ba0b0ebc7",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c",
+                "graph": "CBTRN02C-CBTRN02C.gcno",
+                "data": "CBTRN02C-CBTRN02C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1120
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 288
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 154
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0002",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/interest",
+            "status": 200,
+            "response_sha256": "52a8de8c68251d6c5110e0cb76eec9208e6407abc4d1965729a6b43571702696"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "interest",
+            "businessProgram": "CBACT04C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b",
+            "requestInvocation": "interest-y9u1tb3b",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "bytes": 3112,
+                "sha256": "21d3b6792ab063c268fa8b293c43b0385d2665ecaacf6c0285ff148b2c79a943",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBACT04C.dylib-CBACT04C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:0.00% of 1029\nBranches executed:0.00% of 266\nTaken at least once:0.00% of 266\nCalls executed:0.00% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 36\nTaken at least once:0.00% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:0.00% of 1043\n",
+              "stderr": "CBACT04C.dylib-CBACT04C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1029",
+                  "Branches executed:0.00% of 266",
+                  "Taken at least once:0.00% of 266",
+                  "Calls executed:0.00% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 36",
+                  "Taken at least once:0.00% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:0.00% of 1043"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1043,
+                "branchesPercent": 0.0,
+                "branchesTotal": 36,
+                "callsPercent": 0.0,
+                "callsTotal": 148
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov/CBACT04C.c.gcov",
+                  "bytes": 178804,
+                  "sha256": "ae949ecbf295c09881938863d34b1ee88c132b8b391e33ef45d5b42234b45007"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov/CBACT04C.c.h.gcov",
+                  "bytes": 8331,
+                  "sha256": "7edb57fdfe99d99278782edc4d6fa7dba64db70ea0b89ff6122715064eb70c65"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov/CBACT04C.c.l.h.gcov",
+                  "bytes": 10280,
+                  "sha256": "cce08c62a5d12999edae8601474074b669f12b361eb65f85cfb6b8139994bf4d"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov/CBACT04C.c.gcov",
+                "bytes": 178804,
+                "sha256": "ae949ecbf295c09881938863d34b1ee88c132b8b391e33ef45d5b42234b45007",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c",
+                "graph": "CBACT04C.dylib-CBACT04C.gcno",
+                "data": "CBACT04C.dylib-CBACT04C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1029
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 266
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 148
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0003",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/reporting",
+            "status": 200,
+            "response_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "reporting",
+            "businessProgram": "CBTRN03C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42",
+            "requestInvocation": "reporting-mk22_c42",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov/CBTRN03C.gcda",
+                "rel": "gcov/CBTRN03C.gcda",
+                "bytes": 3464,
+                "sha256": "938fcbc11693bddec3040c4682fba20c3b11605b4d8a8d0cb9a27cba92891af2",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN03C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:0.00% of 1192\nBranches executed:0.00% of 272\nTaken at least once:0.00% of 272\nCalls executed:0.00% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:0.00% of 50\nBranches executed:0.00% of 48\nTaken at least once:0.00% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:0.00% of 1244\n",
+              "stderr": "CBTRN03C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1192",
+                  "Branches executed:0.00% of 272",
+                  "Taken at least once:0.00% of 272",
+                  "Calls executed:0.00% of 157",
+                  "Creating 'CBTRN03C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBTRN03C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 50",
+                  "Branches executed:0.00% of 48",
+                  "Taken at least once:0.00% of 48",
+                  "Calls executed:0.00% of 2",
+                  "Creating 'CBTRN03C.c.h.gcov'",
+                  "Lines executed:0.00% of 1244"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1244,
+                "branchesPercent": 0.0,
+                "branchesTotal": 48,
+                "callsPercent": 0.0,
+                "callsTotal": 2
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov/CBTRN03C.c.gcov",
+                  "bytes": 198341,
+                  "sha256": "e41e39a90384c3fc19a22ee8c2f118395480b032566795c2399f57b671628f55"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov/CBTRN03C.c.h.gcov",
+                  "bytes": 11177,
+                  "sha256": "c3f6900daea58a98d9a8f2f5efaa85d186b912ac8a8d8ab3d24b1f7bf6a1708c"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov/CBTRN03C.c.l.h.gcov",
+                  "bytes": 11068,
+                  "sha256": "7e8211d9bd547bd19f677cbc49963ba077f35634cb93e99957bceb49447fc225"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov/CBTRN03C.c.gcov",
+                "bytes": 198341,
+                "sha256": "e41e39a90384c3fc19a22ee8c2f118395480b032566795c2399f57b671628f55",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+                "sourceBasename": "CBTRN03C.c",
+                "graph": "CBTRN03C.gcno",
+                "data": "CBTRN03C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1192
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 272
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 157
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0004",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/interest",
+            "status": 200,
+            "response_sha256": "9ad526bd2f12fc3a5ce9e304f2b6d9fc5869cc5923a3af0a554fe2c9070a0255"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "interest",
+            "businessProgram": "CBACT04C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi",
+            "requestInvocation": "interest-11ae3ssi",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "bytes": 3112,
+                "sha256": "c243b817b89de29bbd4c85405015fa9a7c2440d198c3aff7da6f64babcabc981",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBACT04C.dylib-CBACT04C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:0.00% of 1029\nBranches executed:0.00% of 266\nTaken at least once:0.00% of 266\nCalls executed:0.00% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 36\nTaken at least once:0.00% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:0.00% of 1043\n",
+              "stderr": "CBACT04C.dylib-CBACT04C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1029",
+                  "Branches executed:0.00% of 266",
+                  "Taken at least once:0.00% of 266",
+                  "Calls executed:0.00% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 36",
+                  "Taken at least once:0.00% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:0.00% of 1043"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1043,
+                "branchesPercent": 0.0,
+                "branchesTotal": 36,
+                "callsPercent": 0.0,
+                "callsTotal": 148
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov/CBACT04C.c.gcov",
+                  "bytes": 178804,
+                  "sha256": "ae949ecbf295c09881938863d34b1ee88c132b8b391e33ef45d5b42234b45007"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov/CBACT04C.c.h.gcov",
+                  "bytes": 8331,
+                  "sha256": "7edb57fdfe99d99278782edc4d6fa7dba64db70ea0b89ff6122715064eb70c65"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov/CBACT04C.c.l.h.gcov",
+                  "bytes": 10280,
+                  "sha256": "cce08c62a5d12999edae8601474074b669f12b361eb65f85cfb6b8139994bf4d"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov/CBACT04C.c.gcov",
+                "bytes": 178804,
+                "sha256": "ae949ecbf295c09881938863d34b1ee88c132b8b391e33ef45d5b42234b45007",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c",
+                "graph": "CBACT04C.dylib-CBACT04C.gcno",
+                "data": "CBACT04C.dylib-CBACT04C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1029
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 266
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 148
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0005",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/posting",
+            "status": 200,
+            "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 4,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "posting",
+            "businessProgram": "CBTRN02C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb",
+            "requestInvocation": "posting-k8x9c1vb",
+            "programExit": 4,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb",
+                "exit_code": 4,
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov",
+                  "GCOV_PREFIX_STRIP": "15",
+                  "P2B_INVOCATION": "posting-k8x9c1vb",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/write-observations.log"
+                }
+              }
+            ],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "bytes": 3364,
+                "sha256": "a3ce5bfc3e84f3758cac10f9e691ebf4ee624f24108a06ae12cf8ed38896c0bb",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN02C-CBTRN02C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:58.12% of 1120\nBranches executed:85.42% of 288\nTaken at least once:46.18% of 288\nCalls executed:61.04% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.74% of 38\nTaken at least once:47.37% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:58.64% of 1134\n",
+              "stderr": "",
+              "duration_s": 0.009,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:58.12% of 1120",
+                  "Branches executed:85.42% of 288",
+                  "Taken at least once:46.18% of 288",
+                  "Calls executed:61.04% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.74% of 38",
+                  "Taken at least once:47.37% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:58.64% of 1134"
+                ],
+                "linesPercent": 58.64,
+                "linesTotal": 1134,
+                "branchesPercent": 94.74,
+                "branchesTotal": 38,
+                "callsPercent": 61.04,
+                "callsTotal": 154
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov/CBTRN02C.c.gcov",
+                  "bytes": 200220,
+                  "sha256": "768730a3d6f7ed203810d98d88cd9d018b6f0e2e9d8492219b4c45ed31f41bfe"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov/CBTRN02C.c.h.gcov",
+                  "bytes": 8294,
+                  "sha256": "962a0883aa3ba3f3f46c5636e5b591c43f580d1f8ba6eb5fd3ab607b763cf401"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov/CBTRN02C.c.l.h.gcov",
+                  "bytes": 10661,
+                  "sha256": "8c2706e833fda763077893d147610ab3779f3c2ebad5445888294243a08666bd"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov/CBTRN02C.c.gcov",
+                "bytes": 200220,
+                "sha256": "768730a3d6f7ed203810d98d88cd9d018b6f0e2e9d8492219b4c45ed31f41bfe",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c",
+                "graph": "CBTRN02C-CBTRN02C.gcno",
+                "data": "CBTRN02C-CBTRN02C.gcda",
+                "runs": 1,
+                "lines": {
+                  "executed": 651,
+                  "total": 1120
+                },
+                "branches": {
+                  "executed": 246,
+                  "taken_at_least_once": 133,
+                  "total": 288
+                },
+                "calls": {
+                  "executed": 94,
+                  "total": 154
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "admissible_preparatory",
+            "inadmissibilityReasons": []
+          }
+        }
+      ],
+      "applications_inline": [
+        {
+          "case_id": "T4-0001",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0001-fed8608331d7f8eb",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "31b930650af549baf449aafde272628fc5d04553cf2b27a9004bd2b7391ca69a",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 61495,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0001-fed8608331d7f8eb",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0002",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0002-d45c12f0c3397357",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "1a32188e921c0f6dedf0f9a7bc5dc0100b15e0205e62472631e5e589b0cfa2c1",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 61619,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0002-d45c12f0c3397357",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0003",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0003-9217da88412678ff",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "9362f6746e93bb0a978d87f6022e7044731ae81ed3074aae89512483d3f416b9",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 61745,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0003-9217da88412678ff",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0004",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0004-f793f09d746f626c",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "e7fc97a4493c1de49eb581d26b985ff2d108b34131ea38540f2c0eb49a001efc",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 61858,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0004-f793f09d746f626c",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0005",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0005-dd0c1acf5da35e17",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "d524bd0f5812371fa8b53a85fb257ffde143ff9c606212caa33db330b5f0429d",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 61955,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-first/replay/applications/0005-dd0c1acf5da35e17",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        }
+      ]
+    },
+    "unionResetQualificationNotT4": {
+      "suite_id": "UNION-QUALIFICATION-NOT-T4",
+      "frozen": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/freeze/UNION-QUALIFICATION-NOT-T4.json",
+      "frozen_sha256": "058b53d2fc3d1fea7c4e4e83c699ef5107a553aca287b78449dc82dab85db460",
+      "loaded_case_count": 5,
+      "moduleEvidence": {
+        "replayFunction": "campaign_harness.replay_suite",
+        "target": "isolated P2b API over instrumented COBOL"
+      },
+      "totals": {
+        "planned": 5,
+        "attempted": 5,
+        "completed": 5,
+        "deadline_failures": 0,
+        "transport_failures": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "expectation_passes": 5,
+        "expectation_violations": 0,
+        "expectation_inconclusive": 0
+      },
+      "receipts": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/receipts.json",
+      "applications": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications.json",
+      "newAuditCount": 5,
+      "checks": [
+        {
+          "case_id": "T4-0001",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/posting",
+            "status": 200,
+            "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 4,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "posting",
+            "businessProgram": "CBTRN02C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr",
+            "requestInvocation": "posting-2jokfinr",
+            "programExit": 4,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "bytes": 3364,
+                "sha256": "171aa636028ac1de3b0bd542d63c7cfef300f0bc28b5aac16eeacd5eca153243",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN02C-CBTRN02C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:0.00% of 1120\nBranches executed:0.00% of 288\nTaken at least once:0.00% of 288\nCalls executed:0.00% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 38\nTaken at least once:0.00% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:0.00% of 1134\n",
+              "stderr": "CBTRN02C-CBTRN02C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.012,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1120",
+                  "Branches executed:0.00% of 288",
+                  "Taken at least once:0.00% of 288",
+                  "Calls executed:0.00% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 38",
+                  "Taken at least once:0.00% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:0.00% of 1134"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1134,
+                "branchesPercent": 0.0,
+                "branchesTotal": 38,
+                "callsPercent": 0.0,
+                "callsTotal": 154
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov/CBTRN02C.c.gcov",
+                  "bytes": 200580,
+                  "sha256": "f807304857080621b5416b6dade44466c9689c8efd22d600cf79c88feab24a40"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov/CBTRN02C.c.h.gcov",
+                  "bytes": 8294,
+                  "sha256": "b59e30237ee7767a66696eb18db97519520463eb85c0cd3aa103b414bd005a2b"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov/CBTRN02C.c.l.h.gcov",
+                  "bytes": 10661,
+                  "sha256": "345d41996050f3410bea9d84c1bfb2f281de3ccd188d2eb41e33b4c845a46294"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov/CBTRN02C.c.gcov",
+                "bytes": 200580,
+                "sha256": "f807304857080621b5416b6dade44466c9689c8efd22d600cf79c88feab24a40",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c",
+                "graph": "CBTRN02C-CBTRN02C.gcno",
+                "data": "CBTRN02C-CBTRN02C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1120
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 288
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 154
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0002",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/interest",
+            "status": 200,
+            "response_sha256": "a7bbfe793c76906b65b641ce39695ff81d402974b081530da0688db8aad9dddb"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "interest",
+            "businessProgram": "CBACT04C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg",
+            "requestInvocation": "interest-s64iy6cg",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "bytes": 3112,
+                "sha256": "6fe2a12d9678b791da35f400e27a741be2db5ae4e46bf8ba199447e6e86c741e",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBACT04C.dylib-CBACT04C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:0.00% of 1029\nBranches executed:0.00% of 266\nTaken at least once:0.00% of 266\nCalls executed:0.00% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 36\nTaken at least once:0.00% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:0.00% of 1043\n",
+              "stderr": "CBACT04C.dylib-CBACT04C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1029",
+                  "Branches executed:0.00% of 266",
+                  "Taken at least once:0.00% of 266",
+                  "Calls executed:0.00% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 36",
+                  "Taken at least once:0.00% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:0.00% of 1043"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1043,
+                "branchesPercent": 0.0,
+                "branchesTotal": 36,
+                "callsPercent": 0.0,
+                "callsTotal": 148
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov/CBACT04C.c.gcov",
+                  "bytes": 178804,
+                  "sha256": "69e6226c308d3527b55d4e51737a8600b58e96c7541737787348e5f0e0e22694"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov/CBACT04C.c.h.gcov",
+                  "bytes": 8331,
+                  "sha256": "7a329a0520ebae6417376dfbbdaf7c6a9478fd392a5023b0e4a89f99a82f5c68"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov/CBACT04C.c.l.h.gcov",
+                  "bytes": 10280,
+                  "sha256": "0f7e326c9e8b07bbb3d3da77587f87bf3fd3ee6844d07672eca6a10e98fa1a0c"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov/CBACT04C.c.gcov",
+                "bytes": 178804,
+                "sha256": "69e6226c308d3527b55d4e51737a8600b58e96c7541737787348e5f0e0e22694",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c",
+                "graph": "CBACT04C.dylib-CBACT04C.gcno",
+                "data": "CBACT04C.dylib-CBACT04C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1029
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 266
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 148
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0003",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/reporting",
+            "status": 200,
+            "response_sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "reporting",
+            "businessProgram": "CBTRN03C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885",
+            "requestInvocation": "reporting-kpbth885",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov/CBTRN03C.gcda",
+                "rel": "gcov/CBTRN03C.gcda",
+                "bytes": 3464,
+                "sha256": "e1f4c719375b8a3d87e913027b3e26f61ba7f2dd6a28865337a673f23fb23c96",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN03C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c'\nLines executed:0.00% of 1192\nBranches executed:0.00% of 272\nTaken at least once:0.00% of 272\nCalls executed:0.00% of 157\nCreating 'CBTRN03C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBTRN03C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c.h'\nLines executed:0.00% of 50\nBranches executed:0.00% of 48\nTaken at least once:0.00% of 48\nCalls executed:0.00% of 2\nCreating 'CBTRN03C.c.h.gcov'\n\nLines executed:0.00% of 1244\n",
+              "stderr": "CBTRN03C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1192",
+                  "Branches executed:0.00% of 272",
+                  "Taken at least once:0.00% of 272",
+                  "Calls executed:0.00% of 157",
+                  "Creating 'CBTRN03C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBTRN03C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 50",
+                  "Branches executed:0.00% of 48",
+                  "Taken at least once:0.00% of 48",
+                  "Calls executed:0.00% of 2",
+                  "Creating 'CBTRN03C.c.h.gcov'",
+                  "Lines executed:0.00% of 1244"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1244,
+                "branchesPercent": 0.0,
+                "branchesTotal": 48,
+                "callsPercent": 0.0,
+                "callsTotal": 2
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov/CBTRN03C.c.gcov",
+                  "bytes": 198341,
+                  "sha256": "8289596da3e062f5ff8c1de2b11fd51cf22644e9411c47b49c4e423789d35580"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov/CBTRN03C.c.h.gcov",
+                  "bytes": 11177,
+                  "sha256": "29090cc0e71b01fefe20a68d921d925d19110c1fd7a24c158b45a96cb5d94a1a"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov/CBTRN03C.c.l.h.gcov",
+                  "bytes": 11068,
+                  "sha256": "8f4c5cc7861bf5f1a08aa12487856c6ff35d50dd938f55cf60bbb162c2346672"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov/CBTRN03C.c.gcov",
+                "bytes": 198341,
+                "sha256": "8289596da3e062f5ff8c1de2b11fd51cf22644e9411c47b49c4e423789d35580",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c",
+                "sourceBasename": "CBTRN03C.c",
+                "graph": "CBTRN03C.gcno",
+                "data": "CBTRN03C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1192
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 272
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 157
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0004",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/interest",
+            "status": 200,
+            "response_sha256": "8a60d45aca3c972626ec1108e1bf4251c4517c839401b4c161dd6cb55c2f3208"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 0,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "interest",
+            "businessProgram": "CBACT04C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu",
+            "requestInvocation": "interest-fl0reusu",
+            "programExit": 0,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov",
+            "gcovPrefixObservedInCommandLog": false,
+            "businessCommandEnvEvidence": [],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "rel": "gcov/CBACT04C.dylib-CBACT04C.gcda",
+                "bytes": 3112,
+                "sha256": "b7d9ac7f5de90b4fb35a611872535e792f5d2bda0b3d39f2852cafc63f6657ef",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBACT04C.dylib-CBACT04C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c'\nLines executed:0.00% of 1029\nBranches executed:0.00% of 266\nTaken at least once:0.00% of 266\nCalls executed:0.00% of 148\nCreating 'CBACT04C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.l.h'\nLines executed:0.00% of 2\nBranches executed:0.00% of 2\nTaken at least once:0.00% of 2\nNo calls\nCreating 'CBACT04C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c.h'\nLines executed:0.00% of 12\nBranches executed:0.00% of 36\nTaken at least once:0.00% of 36\nNo calls\nCreating 'CBACT04C.c.h.gcov'\n\nLines executed:0.00% of 1043\n",
+              "stderr": "CBACT04C.dylib-CBACT04C.gcda:stamp mismatch with notes file\n",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:0.00% of 1029",
+                  "Branches executed:0.00% of 266",
+                  "Taken at least once:0.00% of 266",
+                  "Calls executed:0.00% of 148",
+                  "Creating 'CBACT04C.c.gcov'",
+                  "Lines executed:0.00% of 2",
+                  "Branches executed:0.00% of 2",
+                  "Taken at least once:0.00% of 2",
+                  "Creating 'CBACT04C.c.l.h.gcov'",
+                  "Lines executed:0.00% of 12",
+                  "Branches executed:0.00% of 36",
+                  "Taken at least once:0.00% of 36",
+                  "Creating 'CBACT04C.c.h.gcov'",
+                  "Lines executed:0.00% of 1043"
+                ],
+                "linesPercent": 0.0,
+                "linesTotal": 1043,
+                "branchesPercent": 0.0,
+                "branchesTotal": 36,
+                "callsPercent": 0.0,
+                "callsTotal": 148
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov/CBACT04C.c.gcov",
+                  "bytes": 178804,
+                  "sha256": "69e6226c308d3527b55d4e51737a8600b58e96c7541737787348e5f0e0e22694"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov/CBACT04C.c.h.gcov",
+                  "bytes": 8331,
+                  "sha256": "7a329a0520ebae6417376dfbbdaf7c6a9478fd392a5023b0e4a89f99a82f5c68"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov/CBACT04C.c.l.h.gcov",
+                  "bytes": 10280,
+                  "sha256": "0f7e326c9e8b07bbb3d3da77587f87bf3fd3ee6844d07672eca6a10e98fa1a0c"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov/CBACT04C.c.gcov",
+                "bytes": 178804,
+                "sha256": "69e6226c308d3527b55d4e51737a8600b58e96c7541737787348e5f0e0e22694",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c",
+                "sourceBasename": "CBACT04C.c",
+                "graph": "CBACT04C.dylib-CBACT04C.gcno",
+                "data": "CBACT04C.dylib-CBACT04C.gcda",
+                "runs": 0,
+                "lines": {
+                  "executed": 0,
+                  "total": 1029
+                },
+                "branches": {
+                  "executed": 0,
+                  "taken_at_least_once": 0,
+                  "total": 266
+                },
+                "calls": {
+                  "executed": 0,
+                  "total": 148
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "inadmissible_or_limited",
+            "inadmissibilityReasons": [
+              "gcov_prefix_not_observed_for_business_command"
+            ]
+          }
+        },
+        {
+          "case_id": "T4-0005",
+          "suite_id": null,
+          "request": {
+            "method": "POST",
+            "path": "/posting",
+            "status": 200,
+            "response_sha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da"
+          },
+          "checker": {
+            "ok": true,
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            }
+          },
+          "reach": {
+            "audit_found": true,
+            "audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/audit.json",
+            "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/audit.json",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub",
+            "workdir_under_isolated_cycle": true,
+            "fixture_registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+            "fixture_registry_isolated": true,
+            "reached_cobol": true,
+            "program_exit": 4,
+            "response_status_in_audit": 200,
+            "failure_events": [],
+            "admissibleSameInvocation": true,
+            "inadmissibilityReasons": []
+          },
+          "coverage": {
+            "track": "posting",
+            "businessProgram": "CBTRN02C",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub",
+            "requestInvocation": "posting-6wznzcub",
+            "programExit": 4,
+            "normalProcessExitObserved": true,
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub",
+                "exit_code": 4,
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov",
+                  "GCOV_PREFIX_STRIP": "15",
+                  "P2B_INVOCATION": "posting-6wznzcub",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/write-observations.log"
+                }
+              }
+            ],
+            "gcdaFiles": [
+              {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "bytes": 3364,
+                "sha256": "7df337ff6d1c7b911f2437dadc2a272d0a9be5f902f89d2ad8b936b40bfc8f5e",
+                "business": true,
+                "supportExcluded": false
+              }
+            ],
+            "businessGcdaPresent": true,
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "CBTRN02C-CBTRN02C.gcno",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov",
+              "env_override": {},
+              "exit_code": 0,
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:58.12% of 1120\nBranches executed:85.42% of 288\nTaken at least once:46.18% of 288\nCalls executed:61.04% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:94.74% of 38\nTaken at least once:47.37% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:58.64% of 1134\n",
+              "stderr": "",
+              "duration_s": 0.01,
+              "summaryParsed": {
+                "rawSummaryLines": [
+                  "Lines executed:58.12% of 1120",
+                  "Branches executed:85.42% of 288",
+                  "Taken at least once:46.18% of 288",
+                  "Calls executed:61.04% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:94.74% of 38",
+                  "Taken at least once:47.37% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:58.64% of 1134"
+                ],
+                "linesPercent": 58.64,
+                "linesTotal": 1134,
+                "branchesPercent": 94.74,
+                "branchesTotal": 38,
+                "callsPercent": 61.04,
+                "callsTotal": 154
+              },
+              "gcovFiles": [
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov/CBTRN02C.c.gcov",
+                  "bytes": 200220,
+                  "sha256": "9928cdc75f79d3eb2e38a35232ad2f3f820e126b2638b22f4488c67325d0a477"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov/CBTRN02C.c.h.gcov",
+                  "bytes": 8294,
+                  "sha256": "f65f44d4a1eb60fb7655e6408f10ed5750a38d707e8ed9f4b8cb55459375694b"
+                },
+                {
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov/CBTRN02C.c.l.h.gcov",
+                  "bytes": 10661,
+                  "sha256": "55575f107fddc958551d8b7179a6b05230d08cb46a6e7d79768004d43386178e"
+                }
+              ]
+            },
+            "correctedParser": {
+              "mainGeneratedC": {
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov/CBTRN02C.c.gcov",
+                "bytes": 200220,
+                "sha256": "9928cdc75f79d3eb2e38a35232ad2f3f820e126b2638b22f4488c67325d0a477",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c",
+                "graph": "CBTRN02C-CBTRN02C.gcno",
+                "data": "CBTRN02C-CBTRN02C.gcda",
+                "runs": 1,
+                "lines": {
+                  "executed": 651,
+                  "total": 1120
+                },
+                "branches": {
+                  "executed": 246,
+                  "taken_at_least_once": 133,
+                  "total": 288
+                },
+                "calls": {
+                  "executed": 94,
+                  "total": 154
+                },
+                "classification": "main_generated_c"
+              },
+              "unitCount": 3,
+              "selectionRule": "program.c only; no header/support fallback"
+            },
+            "measurementAdmissibility": "admissible_preparatory",
+            "inadmissibilityReasons": []
+          }
+        }
+      ],
+      "applications_inline": [
+        {
+          "case_id": "T4-0001",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0001-fed8608331d7f8eb",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "ca2115d7560434e0785816a2c25697d9c240d6ffce000df49283e99523694f45",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 62063,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0001-fed8608331d7f8eb",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0002",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0002-d45c12f0c3397357",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "65a55dd7950ccd1d33bac8089f867a0b7dc0803b20ad3a0236ca6acade64ac89",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 62171,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0002-d45c12f0c3397357",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0003",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0003-9217da88412678ff",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "219dc1b78c44cafa16f2ee41f9095241704f8404c128e855018909232b512cc4",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 62269,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0003-9217da88412678ff",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0004",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0004-f793f09d746f626c",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "1207cea6aa7f726fcb6134d471b269c2e840d3c8d940b1f31b4e37f4f94f8a3c",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 62387,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0004-f793f09d746f626c",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        },
+        {
+          "case_id": "T4-0005",
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0005-dd0c1acf5da35e17",
+          "pins_before": {},
+          "pins_after": {
+            "server.port": {
+              "sha256": "32aea26f5ff126ab02a0c4076d3b52d5edfb3809be4b4d519aece48277a44fc4",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "failure_class": null,
+          "target_quiet": true,
+          "lifecycle": {
+            "pid": 62484,
+            "started": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/union-reset-qualification/replay/applications/0005-dd0c1acf5da35e17",
+            "reaped": true,
+            "quiet_proven": true,
+            "quiet_tree_proven": true
+          }
+        }
+      ]
+    }
+  },
+  "resetComparison": [
+    {
+      "case_id": "T4-0001",
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-yy03c1bl/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-2jokfinr/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "a30a595474d10eef1743a23c4a0f643af84db271319c816e1d1d379a5129e582"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "171aa636028ac1de3b0bd542d63c7cfef300f0bc28b5aac16eeacd5eca153243"
+      },
+      "businessGcdaBothPresent": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0002",
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-y9u1tb3b/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-s64iy6cg/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "21d3b6792ab063c268fa8b293c43b0385d2665ecaacf6c0285ff148b2c79a943"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "6fe2a12d9678b791da35f400e27a741be2db5ae4e46bf8ba199447e6e86c741e"
+      },
+      "businessGcdaBothPresent": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0003",
+      "track": "reporting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-mk22_c42/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-kpbth885/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN03C.gcda": "938fcbc11693bddec3040c4682fba20c3b11605b4d8a8d0cb9a27cba92891af2"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN03C.gcda": "e1f4c719375b8a3d87e913027b3e26f61ba7f2dd6a28865337a673f23fb23c96"
+      },
+      "businessGcdaBothPresent": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0004",
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-11ae3ssi/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-fl0reusu/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "c243b817b89de29bbd4c85405015fa9a7c2440d198c3aff7da6f64babcabc981"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "b7d9ac7f5de90b4fb35a611872535e792f5d2bda0b3d39f2852cafc63f6657ef"
+      },
+      "businessGcdaBothPresent": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0005",
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-k8x9c1vb/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v2/evidence-20260915T141454Z/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-6wznzcub/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "a3ce5bfc3e84f3758cac10f9e691ebf4ee624f24108a06ae12cf8ed38896c0bb"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "7df337ff6d1c7b911f2437dadc2a272d0a9be5f902f89d2ad8b936b40bfc8f5e"
+      },
+      "businessGcdaBothPresent": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    }
+  ],
+  "counts": {
+    "technical_smoke_cases": 5,
+    "sdd_cases": 3,
+    "fewshot_cases": 1,
+    "zeroshot_cases": 1,
+    "union_reset_cases": 5,
+    "http_completed": 10,
+    "checker_ok": 10,
+    "reached_cobol": 10,
+    "business_gcda_present": 10,
+    "gcov_prefix_observed": 2,
+    "admissible_preparatory_coverage": 2,
+    "reset_rows_verified": 5
+  },
+  "blockersPreserved": [
+    "No campaign authorization is created by this preflight.",
+    "Union qualification is dependent smoke only and not official T4.",
+    "Absence of business .gcda is inadmissible, not zero coverage.",
+    "program_exit=4 is preserved as a normal non-zero precondition/status, not rewritten to success.",
+    "Manifest is candidate-only and contains no campaign authorization."
+  ],
+  "businessSourceEdited": false
+}

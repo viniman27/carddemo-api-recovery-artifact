@@ -1,0 +1,4021 @@
+{
+  "kind": "t1-real-import-per-case-admissibility-ledger-v2",
+  "createdUtc": "2026-09-15T19:11:26Z",
+  "cases": [
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 0,
+      "originalScenarioId": "posting-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/posting-runs",
+      "operationPath": "/posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "8887021218e3516821a0b2bfcaac15688c9889d49ce06bc2f9f37f8c679c019c",
+      "sourceScenarioCanonicalSha256": "a68151e519685cf7885c79db1e29e75802e901e2de40312d4115f933da3acb36",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [
+            {
+              "transactionId": "T1",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "System",
+              "description": "",
+              "amount": "1.00",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "A",
+              "originalTimestamp": "",
+              "processingTimestamp": ""
+            }
+          ],
+          "transactionFile": "TRANFILE",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "categoryBalanceFile": "TCATBALF",
+          "rejectFile": "DALYREJS"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-posting-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 1,
+      "originalScenarioId": "posting-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/posting-runs",
+      "operationPath": "/posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "199d53528c001bd3642b87140d71922c924df70acfe4cfc0ce03b85421dbe099",
+      "sourceScenarioCanonicalSha256": "984d3857c27e385d483070e719d93f4eb2ef02041b11182756b8e01e6ed5a729",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [],
+          "transactionFile": "TRANFILE",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "categoryBalanceFile": "TCATBALF",
+          "rejectFile": "DALYREJS"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-posting-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 2,
+      "originalScenarioId": "posting-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/posting-runs",
+      "operationPath": "/posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "ccfc29a5d0a2210072116ef6ec05e44b70f503a647657e282a11a8a7b67da215",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-posting-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dailyTransactions' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 3,
+      "originalScenarioId": "interest-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-runs",
+      "operationPath": "/interest-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "c2fac2fb48f1cb400a2af233370bf28787cbdb833a30b1f1c91c92521013d82c",
+      "sourceScenarioCanonicalSha256": "4b920cdab50ca44318f02cddda87857068ac00b8ef8a8da0599f1a960281acaf",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "parameterDate": "2022071800",
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "disclosureGroupFile": "DISCGRP",
+          "accountFile": "ACCTFILE",
+          "outputTransactionFile": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-interest-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 4,
+      "originalScenarioId": "interest-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-runs",
+      "operationPath": "/interest-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "cb05a4586e84c36ccf48647a6a7dcfa6df6f66d5438824ce61742644b83dc13f",
+      "sourceScenarioCanonicalSha256": "a462d08fef6c481efa56bd20c5540d4d7cbe4a66ca313073bf11a7715c7d0f14",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "parameterDate": "ABCDEFGHIJ",
+          "parameterLength": -32768,
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "disclosureGroupFile": "DISCGRP",
+          "accountFile": "ACCTFILE",
+          "outputTransactionFile": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-interest-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 5,
+      "originalScenarioId": "interest-boundary-02",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-runs",
+      "operationPath": "/interest-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "fc4b74dbe7f596d638ebce952ea8fd5876b9bf2fbbd12ed5c7003099d48f496b",
+      "sourceScenarioCanonicalSha256": "55be08bae6b4bbe02bef2133c5b7f5723cede1dcaf8a8ac68d5dc3e6b86223e0",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "parameterDate": "2022071800",
+          "parameterLength": 32767,
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "disclosureGroupFile": "DISCGRP",
+          "accountFile": "ACCTFILE",
+          "outputTransactionFile": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-interest-boundary-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 6,
+      "originalScenarioId": "interest-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-runs",
+      "operationPath": "/interest-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "e5cc5bcb08dfd091ce8c53368bcb4e62ee5feea9df93666bd78486a955e4c27a",
+      "sourceScenarioCanonicalSha256": "45db414c9f567fb3e24c3682dd98409e93cfab3371f3a1f5e5183c3e581158c4",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "parameterDate": "202207180",
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "disclosureGroupFile": "DISCGRP",
+          "accountFile": "ACCTFILE",
+          "outputTransactionFile": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-interest-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'202207180' is too short"
+      ],
+      "jsonPath": [
+        "parameterDate"
+      ],
+      "schemaPath": [
+        "properties",
+        "parameterDate",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 7,
+      "originalScenarioId": "report-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "12308588634d26e4185921b84e422a9271bf4a30d2cbc3318a402c68542b07cd",
+      "sourceScenarioCanonicalSha256": "2fce88dd3d1b843142787318f33737a5ae077941cc295cfc052d00ec7b64577a",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [
+            {
+              "transactionId": "T1",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "System",
+              "description": "",
+              "amount": "0.00",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "A",
+              "originalTimestamp": "",
+              "processingTimestamp": ""
+            }
+          ],
+          "dateParameterRecords": [],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG",
+          "reportFile": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-report-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 8,
+      "originalScenarioId": "report-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "556b53a4adb9578fbb3f3e26d74a644d345345f77af2cab3b331180cc7312096",
+      "sourceScenarioCanonicalSha256": "7e7b382456263c2db899dc8818c9a8cb6c927d6897112ca53291ac22749f324c",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG",
+          "reportFile": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-report-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-1.parsed.json",
+      "sourceTextSha256": "2187822dc4c32f9d57df02d121934cfac5a28dacf6390b65ddd3568b8ad161fd",
+      "scenarioIndex": 9,
+      "originalScenarioId": "report-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "9aa2900bca36896f924f29bb8a3ece661b3a0082d9b6df54da97159f0191c5d2",
+      "sourceScenarioCanonicalSha256": "6d99cfe8b3ff988ee635d5ba7eedf57ebac4c11f87def15a542e81447b21ed69",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            "2022-07-18 2022-07-18"
+          ],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG",
+          "reportFile": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-1-E1-1-report-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'2022-07-18 2022-07-18' is too short"
+      ],
+      "jsonPath": [
+        "dateParameterRecords",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameterRecords",
+        "items",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 0,
+      "originalScenarioId": "E1-2-postings-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "aee02d3c733b1db3309fe4902e0d61e9199319a9ab83d5bfa0739d6bb94bfb54",
+      "sourceScenarioCanonicalSha256": "9d9dd14e0e280be79bb39186d8f214c5a81dc016e7aa83eb2d1b82d8dd8e1411",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [
+            {
+              "id": "0000000000000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "",
+              "description": "",
+              "amount": "0.00",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": "",
+              "filler": ""
+            }
+          ],
+          "transactionFile": "TRANFILE",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "categoryBalanceFile": "TCATBALF"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-postings-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 1,
+      "originalScenarioId": "E1-2-postings-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "adade6ca42ebb451db1ab7eafb872c9c2f3c36de1c7045ec414ebbace9ead796",
+      "sourceScenarioCanonicalSha256": "f95bbc01070e0283d7b18c50811151c64dd880c7bc49f6de151742e23aa9edfa",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [],
+          "transactionFile": "TRANFILE",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "categoryBalanceFile": "TCATBALF"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-postings-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 2,
+      "originalScenarioId": "E1-2-postings-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "2afa49b240eb11af28315ed67b1dd91759402b50b6482805e404b0d2573040df",
+      "sourceScenarioCanonicalSha256": "a2d8dcd56640ca347218b36f4f1d198ec8acab0091c1c205b441afea01e11048",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionFile": "TRANFILE",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "categoryBalanceFile": "TCATBALF"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-postings-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dailyTransactions' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 3,
+      "originalScenarioId": "E1-2-interest-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-transactions",
+      "operationPath": "/interest-transactions",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "5b0df748464aa00e9ca1dd17758524581121d56275c486c698c0a6004c6bda4f",
+      "sourceScenarioCanonicalSha256": "a35f2627c227113bbdb779c5d45cc166982c5eb32c6b580789528666f3d421ff",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "idPrefix": "2022071800",
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "disclosureGroupFile": "DISCGRP"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-interest-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 4,
+      "originalScenarioId": "E1-2-interest-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-transactions",
+      "operationPath": "/interest-transactions",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "89c8b283f03b0ced6162ca733562c08078356f505ed3d2d5b0e55add71854a79",
+      "sourceScenarioCanonicalSha256": "581eab41dfb465c368a76e6940638b61a1cc3b1c9faa96baf79166a3f1c9b307",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "idPrefix": "          ",
+          "categoryBalanceFile": "",
+          "crossReferenceFile": "",
+          "accountFile": "",
+          "disclosureGroupFile": ""
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-interest-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 5,
+      "originalScenarioId": "E1-2-interest-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transactions",
+      "operationPath": "/interest-transactions",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "addafd996a7f97127bbbc2635db4962c309ac2bd522fad966e62e0f3de2bf70a",
+      "sourceScenarioCanonicalSha256": "d5444741276c064564786a00c8724fb3e279fa12d50c24f945a76d3c2922615b",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "idPrefix": "123456789",
+          "categoryBalanceFile": "TCATBALF",
+          "crossReferenceFile": "XREFFILE",
+          "accountFile": "ACCTFILE",
+          "disclosureGroupFile": "DISCGRP"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-interest-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'123456789' is too short"
+      ],
+      "jsonPath": [
+        "idPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "idPrefix",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 6,
+      "originalScenarioId": "E1-2-reports-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f0d3302b90bf0338555caf674b032f1ef1b695516bf8ceeea4f289d7bd31ce14",
+      "sourceScenarioCanonicalSha256": "218264abcfab92feb7afcd4c8777e6f88ce8a60b6e7ac5991d02481c8df34707",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [
+            {
+              "id": "0000000000000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "",
+              "description": "",
+              "amount": "0.00",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": "0123456789",
+              "filler": ""
+            }
+          ],
+          "dateParameters": [
+            "01234567890123456789012345678901234567890123456789012345678901234567890123456789"
+          ],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-reports-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 7,
+      "originalScenarioId": "E1-2-reports-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "558cc4344f265de6c0d81e0edc56d76efce2889191d5d46ae98e1c18744df280",
+      "sourceScenarioCanonicalSha256": "f5acc40d7f22cddeb25491c50c15344d8862f00ee10676e40715b34863a1285e",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameters": [],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-reports-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-2.parsed.json",
+      "sourceTextSha256": "ea87c864740af93a5f65c99a59b2dc81cfe206ba5e398d04d74445a3ea7f71b3",
+      "scenarioIndex": 8,
+      "originalScenarioId": "E1-2-reports-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "5207c38e40e7e7b7fbfe12e2b6b238a12c3e4e3d4636defa1f0131808fef3ba1",
+      "sourceScenarioCanonicalSha256": "2bae2bc2a5466ea434a0654872b53bbe48750caf60cc8bff981bc90a777c06a6",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameters": [
+            ""
+          ],
+          "crossReferenceFile": "CARDXREF",
+          "transactionTypeFile": "TRANTYPE",
+          "transactionCategoryFile": "TRANCATG"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-2-E1-2-E1-2-reports-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'' is too short"
+      ],
+      "jsonPath": [
+        "dateParameters",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameters",
+        "items",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 0,
+      "originalScenarioId": "T1-POSTINGS-001",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d80e1a2e79926259b7f3ceea2b2fe2d66448a9ad169c4b07d9ffe321a11fcaef",
+      "sourceScenarioCanonicalSha256": "03f06072cb1e1c1bbd0ebacca39bdfa8980a9a4c475c9b51d35d4c1b826bb4ca",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [],
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "categoryBalances": "TCATBALF",
+          "transactionOutput": "TRANFILE",
+          "rejectionOutput": "DALYREJS"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-POSTINGS-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 1,
+      "originalScenarioId": "T1-POSTINGS-002",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "absent",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "absent",
+      "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+      "sourceScenarioCanonicalSha256": "3591a9aaaa29534cd4ce38386e659ab1204d0d5a4ba07c7306dafcb00da07fda",
+      "sourceRequest": {
+        "bodyKind": "absent"
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-POSTINGS-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "request body absent but required"
+      ],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 2,
+      "originalScenarioId": "T1-POSTINGS-003",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "5752d7bba176fbbe9c43121a42ffd553349b854ef29d2de7dea91b31b7659818",
+      "sourceScenarioCanonicalSha256": "780e6c71b0d7084878fda213472a58c2ad265d7e2f2036157d8231e5151294cf",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [],
+          "cardCrossReference": "",
+          "accounts": "ACCTFILE",
+          "categoryBalances": "TCATBALF",
+          "transactionOutput": "TRANFILE",
+          "rejectionOutput": "DALYREJS"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-POSTINGS-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'' should be non-empty"
+      ],
+      "jsonPath": [
+        "cardCrossReference"
+      ],
+      "schemaPath": [
+        "properties",
+        "cardCrossReference",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 3,
+      "originalScenarioId": "T1-POSTINGS-004",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "812029107eccb536c2f5620394fcb13ea0cc5e0900c8702d363ee03a8d19e13a",
+      "sourceScenarioCanonicalSha256": "914733cc43d9438aed946db1a8fd1ac677fb674b00bc5bd05ce48456ed52b2e5",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": null,
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "categoryBalances": "TCATBALF",
+          "transactionOutput": "TRANFILE",
+          "rejectionOutput": "DALYREJS"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-POSTINGS-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'array'"
+      ],
+      "jsonPath": [
+        "dailyTransactions"
+      ],
+      "schemaPath": [
+        "properties",
+        "dailyTransactions",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 4,
+      "originalScenarioId": "T1-INTEREST-001",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "364ccb73a29bfd14a869c2372fa5d28acd166e501bb8cd26ef1b1c4d23a90519",
+      "sourceScenarioCanonicalSha256": "103decdc92c183853cbf3a6a8088abcf8a6395b569b98a4bf08d0fa97c524da8",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "2022071800",
+          "categoryBalances": "TCATBALF",
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "disclosureGroups": "DISCGRP",
+          "transactionOutput": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-INTEREST-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 5,
+      "originalScenarioId": "T1-INTEREST-002",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "339549604ff75bd680df7a35933641acc6563bb7524e7dd8d732f2e1e6869920",
+      "sourceScenarioCanonicalSha256": "4c304ad7b89ad5e7420b3899bd7e85f24d160c91788b7b88a557e0dca724e542",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "XXXXXXXXXX",
+          "categoryBalances": "TCATBALF",
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "disclosureGroups": "DISCGRP",
+          "transactionOutput": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-INTEREST-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 6,
+      "originalScenarioId": "T1-INTEREST-003",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "c48e249c9db8c8db42df905745c89928c4b9248580b2872cdfa4738c594e6f0d",
+      "sourceScenarioCanonicalSha256": "2cc6dce2620aed25dbed8577d8edf52838827d866657f74ed19592dc1977d9b7",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "XXXXXXXXX",
+          "categoryBalances": "TCATBALF",
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "disclosureGroups": "DISCGRP",
+          "transactionOutput": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-INTEREST-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'XXXXXXXXX' is too short"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 7,
+      "originalScenarioId": "T1-INTEREST-004",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "9e7057e2ca74d9cd85a72f6b19acd071ce23d6769626dc27e0857f808a7372af",
+      "sourceScenarioCanonicalSha256": "aac18be1a3e4909031cd91cd25398230671fc91c252bfbb830489b8b82afab1f",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "XXXXXXXXXXX",
+          "categoryBalances": "TCATBALF",
+          "cardCrossReference": "XREFFILE",
+          "accounts": "ACCTFILE",
+          "disclosureGroups": "DISCGRP",
+          "transactionOutput": "TRANSACT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-INTEREST-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'XXXXXXXXXXX' is too long"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "maxLength"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 8,
+      "originalScenarioId": "T1-REPORTS-001",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "e52cb26bda2f4735da0886c570e7eb2673a791e9da77338351d1a28fb4ff871a",
+      "sourceScenarioCanonicalSha256": "6ce38d966955ceaa4c0eeb57dc7c54db6f7b8b4e4e2bc00256bd4ef15693f004",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [],
+          "cardCrossReference": "CARDXREF",
+          "transactionTypes": "TRANTYPE",
+          "transactionCategories": "TRANCATG",
+          "reportOutput": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-REPORTS-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 9,
+      "originalScenarioId": "T1-REPORTS-002",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "e7786f0863ff82d0b40a68e26ec37828a0945fbeeddf845be445550210b2f6cf",
+      "sourceScenarioCanonicalSha256": "d84c2dd913a7db86b06372b53b6d674efcd0821fd56eb1382c2fc875fed08cf4",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "cardCrossReference": "CARDXREF",
+          "transactionTypes": "TRANTYPE",
+          "transactionCategories": "TRANCATG",
+          "reportOutput": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-REPORTS-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dateParameterRecords' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 10,
+      "originalScenarioId": "T1-REPORTS-003",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "6e923fcd0b48263a35bee917033c6133eba3bfdbdefa5c1cb172f3f1279134e5",
+      "sourceScenarioCanonicalSha256": "43e74b59f947d7a31004ff5e24e594b9953f6fbb5c8b448a7e4d5536bb2a8652",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": "",
+          "cardCrossReference": "CARDXREF",
+          "transactionTypes": "TRANTYPE",
+          "transactionCategories": "TRANCATG",
+          "reportOutput": "TRANREPT"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-REPORTS-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'' is not of type 'array'"
+      ],
+      "jsonPath": [
+        "dateParameterRecords"
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameterRecords",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E1-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-02/parsed/E1-3.parsed.json",
+      "sourceTextSha256": "08deb713efee2ba01840bd30045e2b0d2de4e7fc3997b6ca7c4ee5604bf3b8e3",
+      "scenarioIndex": 11,
+      "originalScenarioId": "T1-REPORTS-004",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "0222b2644105a1f2afbefbc9b33eacde3e981d95eefe7a3a73cbde73bc52f78b",
+      "sourceScenarioCanonicalSha256": "08425ec594d559b1205221d601f054021589b698cdf1d965e4062c6933d989cb",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [],
+          "cardCrossReference": "CARDXREF",
+          "transactionTypes": "TRANTYPE",
+          "transactionCategories": "TRANCATG",
+          "reportOutput": ""
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E1-3-E1-3-T1-REPORTS-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'' should be non-empty"
+      ],
+      "jsonPath": [
+        "reportOutput"
+      ],
+      "schemaPath": [
+        "properties",
+        "reportOutput",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 0,
+      "originalScenarioId": "T1-POST-001",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "e997f27242f3a80b72aedd1daed6481d2cc992cc9dceac9cc60517fc619885d2",
+      "sourceScenarioCanonicalSha256": "a89b606e64b2c1a2b639676d107a15e8367621f9297246e674955fe93677c61b",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [
+            {
+              "transactionId": "0000000000000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "T1",
+              "description": "Entrada",
+              "amount": 1.25,
+              "merchantId": "000000001",
+              "merchantName": "M",
+              "merchantCity": "C",
+              "merchantZip": "00000",
+              "cardNumber": "0000000000000001",
+              "originalTimestamp": "2022-01-01",
+              "processingTimestamp": ""
+            }
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 1,
+      "originalScenarioId": "T1-POST-002",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d2f88c429389dfc348f6d3b2c89094ebc1a5506230860931256b077d80f7c8a3",
+      "sourceScenarioCanonicalSha256": "27e1ba9ab364151f7f6e8da528f70ee82ca68e783bfede821d0b67297445a4bf",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 2,
+      "originalScenarioId": "T1-POST-003",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "c0657fb48dbbce44ce26cfd9d845b328b6af070a51242a45009dd559a5704fdf",
+      "sourceScenarioCanonicalSha256": "7766f0a83151e5005d02df83905c162f69e29d82f0a57aa2be53396ce18cd71f",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [
+            {
+              "transactionId": "",
+              "typeCode": "",
+              "categoryCode": "0000",
+              "source": "",
+              "description": "",
+              "amount": -999999999.99,
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": "",
+              "filler": ""
+            }
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 3,
+      "originalScenarioId": "T1-POST-004",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "1a970a17c2dcea4d7c137bff7e19efe6cb474133703ba9138c40a58ead350878",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dailyTransactions' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 4,
+      "originalScenarioId": "T1-POST-005",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "6340da17df6858e9d2abb9b032e6a57977d5f8781dc3945348e5ae71148e28cb",
+      "sourceScenarioCanonicalSha256": "dbd38d904fbea789cb76a77096c6fc82d2501726c173f574421d1423f293da60",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": null
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-005",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'array'"
+      ],
+      "jsonPath": [
+        "dailyTransactions"
+      ],
+      "schemaPath": [
+        "properties",
+        "dailyTransactions",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 5,
+      "originalScenarioId": "T1-POST-006",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-postings",
+      "operationPath": "/transaction-postings",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d3cd9138f3281be4b79c3c9b8f7afed6ecaaf505808e9a1277ac972f04713742",
+      "sourceScenarioCanonicalSha256": "b96506c956ef5d8b2be439c0634d0e6fff2e3be991cb10c4b9bd5ea969dd362e",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "dailyTransactions": [
+            {}
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-POST-006",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactionId' is a required property"
+      ],
+      "jsonPath": [
+        "dailyTransactions",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dailyTransactions",
+        "items",
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 6,
+      "originalScenarioId": "T1-INTEREST-001",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "c55d857c82c045b3cf38370537ed55d43974fa0d7d278b83a1fc1c8ebc6eee86",
+      "sourceScenarioCanonicalSha256": "4ea202f085c4e0d9875370b913d6ca678911d259c289f4f52dc355c141ef014e",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "2022071800"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 7,
+      "originalScenarioId": "T1-INTEREST-002",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "377b43b692ce3fe3811e7dda6f1287abaea21ba21579f3c706a9958682049061",
+      "sourceScenarioCanonicalSha256": "c0184475c2a3538b593a0b1b398e1461e42c72c3582eb84f8c217237ff8d27d5",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "AB CD"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 8,
+      "originalScenarioId": "T1-INTEREST-003",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "b3c1bd4e444541f70be9079a71ddb3c73210b86e452c63f8c41c7e109235f355",
+      "sourceScenarioCanonicalSha256": "329114427d464fa7e2084c8e9e67da0351afc4e538a35653a0e7b724f0269fb6",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": ""
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 9,
+      "originalScenarioId": "T1-INTEREST-004",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "458d589919aa9607516217b376c9bd49b15e6144483b4f2d85fbbe0b7042f509",
+      "sourceScenarioCanonicalSha256": "c3272ecd0eac452439e0960950b08024e60ee4335614356c8f041c1ae7be8bb1",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "12345678901"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'12345678901' is too long"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "maxLength"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 10,
+      "originalScenarioId": "T1-INTEREST-005",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "344c790b9f2c602ce54c9db7910cff7e011053d5da18a1238bac8f3772c44134",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-005",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactionIdPrefix' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 11,
+      "originalScenarioId": "T1-INTEREST-006",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-transaction-generations",
+      "operationPath": "/interest-transaction-generations",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "bebd1d8c79d0881f481d0e66db8fe1ffd132773c1a7084b4710f727e1e333758",
+      "sourceScenarioCanonicalSha256": "c329906c388572a9a22bc24064ba4b9601e8d6c4dcf9062464bd266bd06caf52",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": 2022071800
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-INTEREST-006",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "2022071800 is not of type 'string'"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 12,
+      "originalScenarioId": "T1-REPORT-001",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "3a7d1f9ad368787de39ae79876fff3906ba95cad6fbc234e27440b5e5e61f054",
+      "sourceScenarioCanonicalSha256": "401bb1435ae2946ee2b2d0f4427cf1752d3d9890e7960700a6bf14981522ced1",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [
+            {
+              "transactionId": "0000000000000001",
+              "typeCode": "01",
+              "categoryCode": "0005",
+              "source": "T1",
+              "description": "Detalhe",
+              "amount": 1.25,
+              "merchantId": "000000001",
+              "merchantName": "M",
+              "merchantCity": "C",
+              "merchantZip": "00000",
+              "cardNumber": "0000000000000001",
+              "originalTimestamp": "",
+              "processingTimestamp": "2022-01-01"
+            }
+          ],
+          "dateParameterRecords": [
+            "2022-01-01 2022-01-01"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-001",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 13,
+      "originalScenarioId": "T1-REPORT-002",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "b9631cf7cffe3f8c121be10830329ebb34c62b704cadde371e0ca16dc99f067c",
+      "sourceScenarioCanonicalSha256": "e74bc9bfaf9574042e3db33f5ac5e9c03e576062980270c2d4f4d495d0d7a3d7",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-002",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 14,
+      "originalScenarioId": "T1-REPORT-003",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "a1446f4a4d4273214988d41c3ea999548d187504ac91ba36c835d89e6b712169",
+      "sourceScenarioCanonicalSha256": "57b7bb93f7874df77253942470950d115a39ef74f196f0f21637954d8504e907",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            ""
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-003",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 15,
+      "originalScenarioId": "T1-REPORT-004",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "982fcc9edd0d10dd130de80d77cbb557b8d70831dedde6cb01a998d4de7e673a",
+      "sourceScenarioCanonicalSha256": "dc94372d2befa36cb2eed64a653eed631422b9fd9d0a1d2ca5c6d16a4435621e",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            "2022-12-31X2022-01-01",
+            "IGNORADO"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-004",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 16,
+      "originalScenarioId": "T1-REPORT-005",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d489a7e017582b79d584e84ce260d149bdc9b493c4c5cb55abc358e18e6ad150",
+      "sourceScenarioCanonicalSha256": "004e6db01e51a2cc04731b08b333214304b1d922e57b77ba4c5fc92411b68eea",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-005",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dateParameterRecords' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-1",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-1.parsed.json",
+      "sourceTextSha256": "6ace15d725094cc1883e0ee004e06c811015e22bf4a475ab804ac39d87bcda2f",
+      "scenarioIndex": 17,
+      "originalScenarioId": "T1-REPORT-006",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-reports",
+      "operationPath": "/transaction-reports",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "4f313e60bb748c9df9ad4cba9b87c84c6c887bec7f9e6fd995bb0608222ded10",
+      "sourceScenarioCanonicalSha256": "2fdfcf608f7dc28005e771a7a74551404c9624570e2e67882ac1fa1c8c68bd44",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            20220101
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-1-E2-1-T1-REPORT-006",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "20220101 is not of type 'string'"
+      ],
+      "jsonPath": [
+        "dateParameterRecords",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameterRecords",
+        "items",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 0,
+      "originalScenarioId": "posting-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "2ae7d354d8944902fa73b436e85fae47decee3aaae7938f8dca51ab2cc198083",
+      "sourceScenarioCanonicalSha256": "c53a788a3a3feb531ea074067867c21cab84e28227a6c2675eaf1deb975928a9",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "accounts": "",
+            "categoryBalances": "",
+            "transactionOutput": "",
+            "rejectionOutput": ""
+          },
+          "transactions": [
+            {
+              "transactionId": "",
+              "typeCode": "",
+              "categoryCode": 0,
+              "source": "",
+              "description": "",
+              "amount": -0.01,
+              "merchantId": 0,
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": ""
+            }
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-posting-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 1,
+      "originalScenarioId": "posting-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "af55a35ee56d937786e2fe7d13df214e45b93d636e8ac2a6c3dc0aa76b157d27",
+      "sourceScenarioCanonicalSha256": "30077a7a19a8d73fd04872b515e9bf257bd0f4d3e4e3cb6cad953e5c44ffa20b",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "accounts": "",
+            "categoryBalances": "",
+            "transactionOutput": "",
+            "rejectionOutput": ""
+          },
+          "transactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-posting-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 2,
+      "originalScenarioId": "posting-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "9653cb64eea47207b73980730df4936a1eefe3ec0fd99d5399cd0a2af2124dc1",
+      "sourceScenarioCanonicalSha256": "662e6506a3a4907d31d30dad0a2bae37baec2b35c2b3ebac6e7eedfdfafedc80",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "accounts": "",
+            "categoryBalances": "",
+            "transactionOutput": "",
+            "rejectionOutput": ""
+          }
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-posting-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactions' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 3,
+      "originalScenarioId": "posting-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "ca9abfd77e3f6c1aafcdbeecf3d07825805aa8972828f72d48598b4b00289da1",
+      "sourceScenarioCanonicalSha256": "ee8c53a1b33b94eff1ad798ef8eda104c1ac8186a128bd7087e10615efc740ca",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "accounts": "",
+            "categoryBalances": "",
+            "transactionOutput": "",
+            "rejectionOutput": ""
+          },
+          "transactions": [
+            {
+              "transactionId": "",
+              "typeCode": "",
+              "categoryCode": 0,
+              "source": "",
+              "description": "",
+              "amount": 0.001,
+              "merchantId": 0,
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": ""
+            }
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-posting-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "0.001 is not a multiple of 0.01"
+      ],
+      "jsonPath": [
+        "transactions",
+        0,
+        "amount"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactions",
+        "items",
+        "properties",
+        "amount",
+        "multipleOf"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 4,
+      "originalScenarioId": "interest-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3064b9da06424dae598d5a02b8d08d8519fc8de3471d07a0604af14d9698d2d",
+      "sourceScenarioCanonicalSha256": "a9e25c1f3a9132985874f1ffc1cef19df4c62a9fdc33bb7ed464aa118eff4802",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "categoryBalances": "",
+            "crossReferences": "",
+            "accounts": "",
+            "disclosureGroups": "",
+            "transactionOutput": ""
+          },
+          "parameterDate": "ABCDEFGHIJ"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-interest-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 5,
+      "originalScenarioId": "interest-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f0edaea3f911cbf2ff8c625dce89023e5271b9ec7b58c37ade4fea0ae3055e00",
+      "sourceScenarioCanonicalSha256": "8b87d946cbd0c9cfabec81a58c217316f67acc14168ee2886f5291eb3b2082a4",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "categoryBalances": "",
+            "crossReferences": "",
+            "accounts": "",
+            "disclosureGroups": "",
+            "transactionOutput": ""
+          },
+          "parameterDate": "",
+          "parameterLength": -9999
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-interest-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 6,
+      "originalScenarioId": "interest-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "70c3414590dfe8abb3ec6aeff0de4d2ad65b7d19e1c3bedc3cff176c2b51f275",
+      "sourceScenarioCanonicalSha256": "fdba77ad017154a0763f1b1ab6edaaa4f4b1be8c83b2a3d81b154fcc43881447",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "categoryBalances": "",
+            "crossReferences": "",
+            "accounts": "",
+            "disclosureGroups": "",
+            "transactionOutput": ""
+          },
+          "parameterDate": "ABCDEFGHIJK"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-interest-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'ABCDEFGHIJK' is too long"
+      ],
+      "jsonPath": [
+        "parameterDate"
+      ],
+      "schemaPath": [
+        "properties",
+        "parameterDate",
+        "maxLength"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 7,
+      "originalScenarioId": "interest-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "4fdb6ff6f359d16557cb07c478dac13aa63bb6b9cdb37f85a4a19391edfd6f7c",
+      "sourceScenarioCanonicalSha256": "454bd9920bdfa3ef6f75386c277a00416789ef5c3bf12be2cf7baae8c901c280",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "categoryBalances": "",
+            "crossReferences": "",
+            "accounts": "",
+            "disclosureGroups": "",
+            "transactionOutput": ""
+          },
+          "parameterDate": "",
+          "parameterLength": 10000
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-interest-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "10000 is greater than the maximum of 9999"
+      ],
+      "jsonPath": [
+        "parameterLength"
+      ],
+      "schemaPath": [
+        "properties",
+        "parameterLength",
+        "maximum"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 8,
+      "originalScenarioId": "report-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "e7048d0fef1adb707ed82c2d324c893b5dcf021eb09d20849ddc9c9fd1a65f36",
+      "sourceScenarioCanonicalSha256": "1ef40e58ff17c656061b73b79582c8a9d9e1c4070dabc2319202da8ff41ea9b3",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "transactionTypes": "",
+            "transactionCategories": "",
+            "reportOutput": ""
+          },
+          "transactions": [],
+          "dateParameterRecords": [
+            "ZZZZZZZZZZ?AAAAAAAAAA",
+            "BBBBBBBBBB!CCCCCCCCCC"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-report-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 9,
+      "originalScenarioId": "report-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "8ffcf8981a41a8c7d93d37a191cd564b5a88f3b1c29f6fb323eafd5db650d7e7",
+      "sourceScenarioCanonicalSha256": "68fa4895eab764abe450c0e1d8fa7641ea3cbc8e0c73dff2949808dc5c9a03c0",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "transactionTypes": "",
+            "transactionCategories": "",
+            "reportOutput": ""
+          },
+          "transactions": [],
+          "dateParameterRecords": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-report-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 10,
+      "originalScenarioId": "report-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "3ec540ba960fecfe3d0b102ed548368839da2f542f4a59b7d55aa051c9883f08",
+      "sourceScenarioCanonicalSha256": "98ce065591686239a68f34d3c8b4477fdd86cbd5f5befbf40227a68f0e8777d0",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "transactionTypes": "",
+            "transactionCategories": "",
+            "reportOutput": ""
+          },
+          "transactions": [],
+          "dateParameterRecords": [
+            "123456789012345678901234567890123456789012345678901234567890123456789012345678901"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-report-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'123456789012345678901234567890123456789012345678901234567890123456789012345678901' is too long"
+      ],
+      "jsonPath": [
+        "dateParameterRecords",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameterRecords",
+        "items",
+        "maxLength"
+      ]
+    },
+    {
+      "contractId": "E2-2",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-2.parsed.json",
+      "sourceTextSha256": "6ee82f4f4c95b50e05c09010b923953ee96c67136eb338cd609713ea14d14669",
+      "scenarioIndex": 11,
+      "originalScenarioId": "report-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "fb9be81edda27956569aa3b2784eae0288881d249104affcb2ade6c6e11de47c",
+      "sourceScenarioCanonicalSha256": "60185e6aca5f62385331e48be97bc80edfc01524836d28c2d79a389311cc70de",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "bindings": {
+            "crossReferences": "",
+            "transactionTypes": "",
+            "transactionCategories": "",
+            "reportOutput": ""
+          },
+          "transactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-2-E2-2-report-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dateParameterRecords' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 0,
+      "originalScenarioId": "posting-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d489a7e017582b79d584e84ce260d149bdc9b493c4c5cb55abc358e18e6ad150",
+      "sourceScenarioCanonicalSha256": "2866f88ea5360ddcb5fb16421db68d75c662a5f908ce3c09341f4aec7892360f",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-posting-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 1,
+      "originalScenarioId": "posting-positive-02",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "7bd2a0b4709c6c19f6abd3598d99eed720d67210acab6fb1bee080edd7c410fe",
+      "sourceScenarioCanonicalSha256": "2a2373c92b427d814a833bd27def23b599ec608f5558e2bd904c0728c80761c7",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [
+            {
+              "transactionId": "",
+              "typeCode": "",
+              "categoryCode": 0,
+              "source": "",
+              "description": "",
+              "amount": 0,
+              "merchantId": 0,
+              "merchantName": "",
+              "merchantCity": "",
+              "merchantZip": "",
+              "cardNumber": "",
+              "originalTimestamp": "",
+              "processingTimestamp": "",
+              "filler": ""
+            }
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-posting-positive-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 2,
+      "originalScenarioId": "posting-negative-03",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "a42ed313a03014cc4dc5d39e8020a7e0e89dfa85671d3487e1ebc372eedaa08e",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-posting-negative-03",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactions' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 3,
+      "originalScenarioId": "posting-negative-04",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "acf30fa3d1cd53df327f19b7be6d29410c1a1427370113aa8d1b0da186a2bccf",
+      "sourceScenarioCanonicalSha256": "d72d18b64543a05e18dc960f32b8d47e2b5d90b7484f3692f95cc7008e1c4982",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [
+            {}
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-posting-negative-04",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactionId' is a required property"
+      ],
+      "jsonPath": [
+        "transactions",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "transactions",
+        "items",
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 4,
+      "originalScenarioId": "posting-negative-05",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-posting-runs",
+      "operationPath": "/transaction-posting-runs",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "c858e0d74953ed5842b70b98da484c0cc2756ae065a0100616325e8e978597f4",
+      "sourceScenarioCanonicalSha256": "575027436451004722406095a3ab1ce41c4b4ac1bd1bec0d07354daf41ff575a",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": null
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-posting-negative-05",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'array'"
+      ],
+      "jsonPath": [
+        "transactions"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactions",
+        "type"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 5,
+      "originalScenarioId": "interest-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f1d10b1c37e812cf8b8ca90fcfa5ad95d475f3600442517db99122c52bdbe9ed",
+      "sourceScenarioCanonicalSha256": "4089bb74cb9fbe79d9d8f6c4df60f82b2893756a62821506762d9d68bae3465f",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "ABCDEFGHIJ"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-interest-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 6,
+      "originalScenarioId": "interest-boundary-02",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "a21988cb779f311eff45bd99c28e5c14a0a678e20571ef1917e10886d7731a2c",
+      "sourceScenarioCanonicalSha256": "d18466134314c3a28984f194954472ca5d538dc308aeb3e016ce1cdb078fd46c",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "          "
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-interest-boundary-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 7,
+      "originalScenarioId": "interest-negative-03",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "73348df8de436ff90f586e1ae2e65935e8eff23a493a678bd7b3acedd8367016",
+      "sourceScenarioCanonicalSha256": "5400ab8766d98bb809e279ccc67e0af87a80805d27a3b780126a52053057174b",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "123456789"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-interest-negative-03",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'123456789' is too short"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 8,
+      "originalScenarioId": "interest-negative-04",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "458d589919aa9607516217b376c9bd49b15e6144483b4f2d85fbbe0b7042f509",
+      "sourceScenarioCanonicalSha256": "c040595b1154aa36f1c78a901254e01a2abf3410540b0e86914755a919e102f1",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactionIdPrefix": "12345678901"
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-interest-negative-04",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'12345678901' is too long"
+      ],
+      "jsonPath": [
+        "transactionIdPrefix"
+      ],
+      "schemaPath": [
+        "properties",
+        "transactionIdPrefix",
+        "maxLength"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 9,
+      "originalScenarioId": "interest-negative-05",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest-generation-runs",
+      "operationPath": "/interest-generation-runs",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "cc74ef03ee77adbb0c2c21db4ea348e475a074115759f11f56fd68d8956b036a",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-interest-negative-05",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'transactionIdPrefix' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 10,
+      "originalScenarioId": "report-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "b9631cf7cffe3f8c121be10830329ebb34c62b704cadde371e0ca16dc99f067c",
+      "sourceScenarioCanonicalSha256": "78efcfdf0f88e99e017d2cde9472672f4fbe912773d46537f2e3f3c67f524c5c",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-report-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 11,
+      "originalScenarioId": "report-positive-02",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d9f452c276f4e1de535ab1261fdd492de13a3b9454884671572d22f1b2b254aa",
+      "sourceScenarioCanonicalSha256": "9d14ec42e71f7108d454b4f4659593b8779c1a75526f12badfdcfa32d2ee7347",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            "12345678901234567890123456789012345678901234567890123456789012345678901234567890"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-report-positive-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 12,
+      "originalScenarioId": "report-positive-03",
+      "category": "positive",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "67053b508316e37e6771db5aa87e6f0a38e8997c1e4d324318f45e5d1cd7e6a4",
+      "sourceScenarioCanonicalSha256": "7bc6fd9c9085a2aed12cdbe585089c9cf3f23c8893a27416b807cf9b1ba480af",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            "12345678901234567890123456789012345678901234567890123456789012345678901234567890",
+            "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij"
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-report-positive-03",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 13,
+      "originalScenarioId": "report-negative-04",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "a1446f4a4d4273214988d41c3ea999548d187504ac91ba36c835d89e6b712169",
+      "sourceScenarioCanonicalSha256": "74fc693ed0bb11779625cb4c2614339e13e5bb29491cebffebd40b7d7e08f6ba",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": [],
+          "dateParameterRecords": [
+            ""
+          ]
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-report-negative-04",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'' is too short"
+      ],
+      "jsonPath": [
+        "dateParameterRecords",
+        0
+      ],
+      "schemaPath": [
+        "properties",
+        "dateParameterRecords",
+        "items",
+        "minLength"
+      ]
+    },
+    {
+      "contractId": "E2-3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E2-3.parsed.json",
+      "sourceTextSha256": "3c5355b8d0ad456ecbbe27a3ab87b82bb18b5b74f66bd6b442ee1692117368a4",
+      "scenarioIndex": 14,
+      "originalScenarioId": "report-negative-05",
+      "category": "negative",
+      "method": "POST",
+      "path": "/transaction-report-runs",
+      "operationPath": "/transaction-report-runs",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "d489a7e017582b79d584e84ce260d149bdc9b493c4c5cb55abc358e18e6ad150",
+      "sourceScenarioCanonicalSha256": "3cdc99d93a9b4a3a6b41b88057b019dec1f653921cc7cda3dc5d0fdc37b61aef",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {
+          "transactions": []
+        }
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E2-3-E2-3-report-negative-05",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "'dateParameterRecords' is a required property"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "required"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 0,
+      "originalScenarioId": "interest-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/interest",
+      "operationPath": "/interest",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "6079308f81def6c9e2d179da93bfb402aaa9cbdb129bbddad2ed3aec0b120031",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 1,
+      "originalScenarioId": "interest-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest",
+      "operationPath": "/interest",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "absent",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "absent",
+      "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+      "sourceScenarioCanonicalSha256": "d03ed85360cbef3fedbe7ddcd434038d06bc1d1f6d2813296fe196ffd952845d",
+      "sourceRequest": {
+        "bodyKind": "absent"
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "request body absent but required"
+      ],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 2,
+      "originalScenarioId": "interest-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/interest",
+      "operationPath": "/interest",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+      "sourceScenarioCanonicalSha256": "86a1f2142e6ea0bf141f9e05ce04128926312456c567eb495cc1b819b60d4ac5",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": null
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 3,
+      "originalScenarioId": "interest-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/interest",
+      "operationPath": "/interest",
+      "track": "interest",
+      "resourcePackageId": "interest.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+      "sourceScenarioCanonicalSha256": "c35c345421c557a97e648d690884751c89370a9df61bf1b05d5362db4127f0e6",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": []
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_generation_preserved",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-interest-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "[] is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 4,
+      "originalScenarioId": "posting-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/posting",
+      "operationPath": "/posting",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "5a2fcbffbc31fa3fc13b553efa3d80a0322f7551bbe0f7eb581d56f012d2a4be",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 5,
+      "originalScenarioId": "posting-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/posting",
+      "operationPath": "/posting",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "absent",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "absent",
+      "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+      "sourceScenarioCanonicalSha256": "5048d00b505827cf8426e23507f02773981f25bfa3544fde50058ccf1bb2dddf",
+      "sourceRequest": {
+        "bodyKind": "absent"
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "request body absent but required"
+      ],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 6,
+      "originalScenarioId": "posting-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/posting",
+      "operationPath": "/posting",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+      "sourceScenarioCanonicalSha256": "d23377ba2883a574717eafed8546abf8b2d69b261a161c8bf3cad98a5b5057ad",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": null
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 7,
+      "originalScenarioId": "posting-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/posting",
+      "operationPath": "/posting",
+      "track": "posting",
+      "resourcePackageId": "posting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+      "sourceScenarioCanonicalSha256": "34533a4fb69eaf856c672e890d85334026e7c1e9734cd7f127759cfcc71ceb7c",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": []
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_generation_preserved",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-posting-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "[] is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 8,
+      "originalScenarioId": "reporting-positive-01",
+      "category": "positive",
+      "method": "POST",
+      "path": "/reporting",
+      "operationPath": "/reporting",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "f3ea95b379586c45fc4fd3856686d52cc1ce6ce77de40df0c8784574c1c48f40",
+      "sourceScenarioCanonicalSha256": "47b4500b177fe0f8cb8c85109e3e6f1a9721bd8f8cf9679ea6e31c92ed248991",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": {}
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_valid",
+      "classification": "executable_schema_valid",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_valid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-positive-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 9,
+      "originalScenarioId": "reporting-negative-01",
+      "category": "negative",
+      "method": "POST",
+      "path": "/reporting",
+      "operationPath": "/reporting",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "absent",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "absent",
+      "sourceRequestCanonicalSha256": "e7192d0051e8e267c6a0abc06693f96cf517d65df7382e2039095c3d53e6bde5",
+      "sourceScenarioCanonicalSha256": "4deff0761e6406ede9d193835d1d3519b42d6d12c3211094692111a31c5f013b",
+      "sourceRequest": {
+        "bodyKind": "absent"
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-negative-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "request body absent but required"
+      ],
+      "jsonPath": null,
+      "schemaPath": null
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 10,
+      "originalScenarioId": "reporting-negative-02",
+      "category": "negative",
+      "method": "POST",
+      "path": "/reporting",
+      "operationPath": "/reporting",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "7cf933b2c95ef59f113823c6bbf1409aa9dee07a7ac36fe51c13d606313d8315",
+      "sourceScenarioCanonicalSha256": "2d6271c8b158b633f19d0b4ef423d7f3e5955a0363aa16571faff82009c3a697",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": null
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_negative_intentional",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-negative-02",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "None is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "sourceParsedPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t1-generation-03/parsed/E3-SDD-stage6r3.parsed.json",
+      "sourceTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+      "scenarioIndex": 11,
+      "originalScenarioId": "reporting-boundary-01",
+      "category": "boundary",
+      "method": "POST",
+      "path": "/reporting",
+      "operationPath": "/reporting",
+      "track": "reporting",
+      "resourcePackageId": "reporting.candidate-v1-physical-v2",
+      "bodyState": "json",
+      "sourceHeadersState": "absent",
+      "sourceQueryState": "absent",
+      "sourceBodyKind": "json",
+      "sourceRequestCanonicalSha256": "55a755916a6005af6deb575c9248a5fad156aad8e7684f5162301cbd2018ccfc",
+      "sourceScenarioCanonicalSha256": "cb0b5e93b4ee7eb447839355df015a63cea43c9bb6dc765795ed9ca536dac351",
+      "sourceRequest": {
+        "bodyKind": "json",
+        "bodyJson": []
+      },
+      "operationAdmissibility": "operation_in_original_contract",
+      "schemaAdmissibility": "schema_invalid",
+      "classification": "executable_schema_invalid_generation_preserved",
+      "materializationStatus": "materialized",
+      "materializationErrors": [],
+      "acceptedIntoHarnessSuite": true,
+      "executionEligibility": "executable_stimulus_schema_invalid",
+      "candidateCaseId": "T1-REAL-E3-SDD-stage6r3-E3-SDD-stage6r3-reporting-boundary-01",
+      "expectedAssertionsQuarantined": true,
+      "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+      "schemaErrors": [
+        "[] is not of type 'object'"
+      ],
+      "jsonPath": [],
+      "schemaPath": [
+        "type"
+      ]
+    }
+  ]
+}

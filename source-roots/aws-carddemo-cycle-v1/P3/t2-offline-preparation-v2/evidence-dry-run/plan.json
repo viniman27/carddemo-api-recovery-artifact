@@ -1,0 +1,69 @@
+{
+  "blockers": [
+    "T1 specific external-send consent is still missing; no provider call or probe is allowed here.",
+    "T3 v2 selection remains unbound because current pins are t3-campaign-adapter-v3 + sdd-external-selection-v1 + substantive-review-v1; do not invent a v2 pin.",
+    "This runner prepares/generates candidate offline T2 artifacts only; it does not authorize or start official AWS freeze/campaign."
+  ],
+  "contracts": 7,
+  "dryRunDefault": true,
+  "errorPolicy": {
+    "failClosedOnPinMismatch": true,
+    "noRepairOfGeneratedRequests": true,
+    "noReplayDuringGeneration": true
+  },
+  "kind": "t2-offline-preparation-v2-plan",
+  "networkAllowed": false,
+  "officialCampaign": false,
+  "operations": 21,
+  "policy": {
+    "budgetTransfer": "disabled",
+    "budgetUnit": "operation × seed × direction",
+    "generationReplay": "disabled",
+    "hypothesisDatabase": null,
+    "hypothesisVersion": "6.168.0",
+    "occurrencesAreNotDiversity": true,
+    "perOperationPerSeed": {
+      "negative": 50,
+      "positive": 50,
+      "total": 100
+    },
+    "retries": "disabled",
+    "schemathesisVersion": "4.27.1",
+    "seeds": [
+      104729,
+      130363,
+      155921
+    ],
+    "shrinkingDuringGeneration": false,
+    "tool": "Schemathesis"
+  },
+  "registryValidation": {
+    "authorization": {
+      "campaignAuthorized": false,
+      "externalT1SendAuthorized": false,
+      "officialCampaignsStarted": false,
+      "probeAuthorizedNow": false
+    },
+    "contractCount": 7,
+    "errors": [],
+    "failedPins": [],
+    "ok": true,
+    "operationCount": 21
+  },
+  "reset": {
+    "beforeAfterHashChecks": "required_for_official_freeze",
+    "default": "fresh_dir_per_run",
+    "source": "current config / campaign protocol"
+  },
+  "union": {
+    "builder": "campaign-harness-v3 UnionBuilder",
+    "independentReplica": false,
+    "order": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "status": "blocked_until_T1_T2_T3_official_suites_exist"
+  },
+  "version": "2.0-local-candidate"
+}

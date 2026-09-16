@@ -1,0 +1,87 @@
+{
+  "casePreservation": "excluded cases are not deleted from v1/v2; v3 omits them from official candidate suites and records source IDs/reasons here",
+  "excluded": [
+    {
+      "caseId": "BINDCLOSE-E1-1-posting-T3-0024-4709fbec2133",
+      "cellRef": "POSTTRAN-OBL-002::E1-1::postDailyTransactions",
+      "contractId": "E1-1",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-4709fbec2133",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E1-2-posting-T3-0024-86274e8c0f56",
+      "cellRef": "POSTTRAN-OBL-002::E1-2::postDailyTransactions",
+      "contractId": "E1-2",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-86274e8c0f56",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E1-3-posting-T3-0024-f0ece0aff992",
+      "cellRef": "POSTTRAN-OBL-002::E1-3::postDailyTransactions",
+      "contractId": "E1-3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-f0ece0aff992",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-1-posting-T3-0004-0fb66254f978",
+      "cellRef": "POSTTRAN-OBL-002::E2-1::postDailyTransactions",
+      "contractId": "E2-1",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0004-0fb66254f978",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-2-posting-T3-0024-c62c1f8d665f",
+      "cellRef": "POSTTRAN-OBL-002::E2-2::postDailyTransactions",
+      "contractId": "E2-2",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0024-c62c1f8d665f",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E2-3-posting-T3-0004-5621bf3e529f",
+      "cellRef": "POSTTRAN-OBL-002::E2-3::postDailyTransactions",
+      "contractId": "E2-3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0004-5621bf3e529f",
+      "transitionId": "POSTTRAN-T006"
+    },
+    {
+      "caseId": "BINDCLOSE-E3-SDD-stage6r3-posting-T3-0036-01687de65244",
+      "cellRef": "POSTTRAN-OBL-002::E3-01-SDD-stage6r3::posting",
+      "contractId": "E3-SDD-stage6r3",
+      "guardResult": "unknown",
+      "guardResultType": "str",
+      "obligationId": "POSTTRAN-OBL-002",
+      "reason": "excluded from v3 because T3 guardResult is not boolean true; case preserved only in v1/v2 sources",
+      "sourceCaseId": "T3-0036-01687de65244",
+      "transitionId": "POSTTRAN-T006"
+    }
+  ],
+  "excludedCount": 7,
+  "guardValueCounts": {
+    "str:'unknown'": 7
+  },
+  "policy": "exclude every T3 case whose guardResult is not the boolean value true; string 'true', false, unknown, null, missing, or numeric truthy values are not qualified"
+}

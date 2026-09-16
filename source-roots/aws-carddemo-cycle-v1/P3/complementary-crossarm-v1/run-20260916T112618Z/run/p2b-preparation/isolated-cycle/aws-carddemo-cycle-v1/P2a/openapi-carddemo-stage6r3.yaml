@@ -1,0 +1,1345 @@
+openapi: 3.1.0
+info:
+  title: AWS CardDemo E3-01 SDD Stage6r3 Mechanical Contract
+  version: p2a-2026-09-14
+  description: Mechanical OpenAPI 3.1 materialization of approved Stage 6 r3 only;
+    no runtime binding or semantic execution claim.
+  x-traceability:
+    source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+    clause: Purpose/Contract Integrity Discipline
+    note: Materialized without source/spec semantic edits
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema
+paths:
+  /posting:
+    post:
+      operationId: posting
+      summary: posting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostingRequest'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4 Requests/D-14
+          note: Body required; empty closed JSON object only
+      responses:
+        '200':
+          description: Permitted observation available; no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostingEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: 200 observation boundary, no minItems
+        '400':
+          description: Request representation mismatch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-9/C-12
+            note: 400 request_representation only
+        '500':
+          description: Known technical failure at response boundary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-13
+            note: Known failure precedence over 200/503; may include availableContent
+        '503':
+          description: No representable observation and no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: content_unavailable none; not observed empty
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: C-1/C-5/C-9/C-10/C-12-C-14
+        note: posting operation; no selector/reset/polling/telemetry/default business
+          fields
+      tags:
+      - posting
+  /interest:
+    post:
+      operationId: interest
+      summary: interest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InterestRequest'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4 Requests/D-14
+          note: Body required; empty closed JSON object only
+      responses:
+        '200':
+          description: Permitted observation available; no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterestEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: 200 observation boundary, no minItems
+        '400':
+          description: Request representation mismatch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-9/C-12
+            note: 400 request_representation only
+        '500':
+          description: Known technical failure at response boundary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-13
+            note: Known failure precedence over 200/503; may include availableContent
+        '503':
+          description: No representable observation and no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: content_unavailable none; not observed empty
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: C-2/C-6/C-9/C-11-C-14
+        note: interest operation; no selector/reset/polling/telemetry/default business
+          fields
+      tags:
+      - interest
+  /reporting:
+    post:
+      operationId: reporting
+      summary: reporting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportingRequest'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4 Requests/D-14
+          note: Body required; empty closed JSON object only
+      responses:
+        '200':
+          description: Permitted observation available; no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportingEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: 200 observation boundary, no minItems
+        '400':
+          description: Request representation mismatch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-9/C-12
+            note: 400 request_representation only
+        '500':
+          description: Known technical failure at response boundary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-13
+            note: Known failure precedence over 200/503; may include availableContent
+        '503':
+          description: No representable observation and no known technical failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterfaceError'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §5.2/C-12/D-16
+            note: content_unavailable none; not observed empty
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: C-3/C-7-C-9/C-12-C-14
+        note: reporting operation; no selector/reset/polling/telemetry/default business
+          fields
+      tags:
+      - reporting
+components:
+  schemas:
+    PostingRequest:
+      type: object
+      additionalProperties: false
+      required: []
+      properties: {}
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4 Requests/D-14/C-9
+        note: Required empty closed JSON object; missing body/null/array/properties
+          invalid
+    InterestRequest:
+      type: object
+      additionalProperties: false
+      required: []
+      properties: {}
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4 Requests/D-14/C-9
+        note: Required empty closed JSON object; missing body/null/array/properties
+          invalid
+    ReportingRequest:
+      type: object
+      additionalProperties: false
+      required: []
+      properties: {}
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4 Requests/D-14/C-9
+        note: Required empty closed JSON object; missing body/null/array/properties
+          invalid
+    PostingCandidate:
+      type: object
+      additionalProperties: false
+      required:
+      - transactionId
+      - typeCode
+      - categoryCode
+      - source
+      - description
+      - amount
+      - merchantId
+      - merchantName
+      - merchantCity
+      - merchantPostalText
+      - cardReference
+      - originalTimestamp
+      - suppliedProcessingTimestamp
+      properties:
+        transactionId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'transactionId: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        source:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'source: string representation; no regex/length/coercion invented'
+        description:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'description: string representation; no regex/length/coercion invented'
+        amount:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'amount: string representation; no regex/length/coercion invented'
+        merchantId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantId: string representation; no regex/length/coercion invented'
+        merchantName:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantName: string representation; no regex/length/coercion invented'
+        merchantCity:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantCity: string representation; no regex/length/coercion invented'
+        merchantPostalText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantPostalText: string representation; no regex/length/coercion
+              invented'
+        cardReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'cardReference: string representation; no regex/length/coercion
+              invented'
+        originalTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'originalTimestamp: string representation; no regex/length/coercion
+              invented'
+        suppliedProcessingTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'suppliedProcessingTimestamp: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-5
+        note: Posting candidate/source daily fields
+    PostingTransaction:
+      type: object
+      additionalProperties: false
+      required: &id001
+      - transactionId
+      - typeCode
+      - categoryCode
+      - source
+      - description
+      - amount
+      - merchantId
+      - merchantName
+      - merchantCity
+      - merchantPostalText
+      - cardReference
+      - originalTimestamp
+      - processingTimestamp
+      properties:
+        transactionId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'transactionId: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        source:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'source: string representation; no regex/length/coercion invented'
+        description:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'description: string representation; no regex/length/coercion invented'
+        amount:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'amount: string representation; no regex/length/coercion invented'
+        merchantId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantId: string representation; no regex/length/coercion invented'
+        merchantName:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantName: string representation; no regex/length/coercion invented'
+        merchantCity:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantCity: string representation; no regex/length/coercion invented'
+        merchantPostalText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'merchantPostalText: string representation; no regex/length/coercion
+              invented'
+        cardReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'cardReference: string representation; no regex/length/coercion
+              invented'
+        originalTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'originalTimestamp: string representation; no regex/length/coercion
+              invented'
+        processingTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-11
+            note: 'processingTimestamp: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-5
+        note: Prepared posted transaction fields
+    PostingRejection:
+      type: object
+      additionalProperties: false
+      required:
+      - candidate
+      - reason
+      - description
+      properties:
+        candidate:
+          $ref: '#/components/schemas/PostingCandidate'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5
+            note: Rejection retains original candidate context
+        reason:
+          type: string
+          enum:
+          - '100'
+          - '101'
+          - '102'
+          - '103'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5
+            note: Preliminary rejection reasons only; 109 remains internal
+        description:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5
+            note: 'description: string representation; no regex/length/coercion invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-5
+        note: Posting rejection content
+    PostingProgress:
+      type: object
+      additionalProperties: false
+      required:
+      - processedRecordCount
+      - preliminaryRejectCount
+      properties:
+        processedRecordCount:
+          type: integer
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-16
+            note: 'processedRecordCount: integer progress count only'
+        preliminaryRejectCount:
+          type: integer
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-5/D-16
+            note: 'preliminaryRejectCount: integer progress count only'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-5/D-16
+        note: Progress counts; not committed/durable output counts
+    InterestCategoryBasis:
+      type: object
+      additionalProperties: false
+      required:
+      - accountReference
+      - typeCode
+      - categoryCode
+      - categoryBalance
+      properties:
+        accountReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6
+            note: 'accountReference: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        categoryBalance:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6
+            note: 'categoryBalance: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-6
+        note: External description only; not request
+    InterestIdentifierBasis:
+      type: object
+      additionalProperties: false
+      required:
+      - parameterText
+      properties:
+        parameterText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6
+            note: 'parameterText: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-6
+        note: External identifier basis only; not request
+    GeneratedInterestTransaction:
+      type: object
+      additionalProperties: false
+      required: *id001
+      properties:
+        transactionId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'transactionId: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        source:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'source: string representation; no regex/length/coercion invented'
+        description:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'description: string representation; no regex/length/coercion invented'
+        amount:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'amount: string representation; no regex/length/coercion invented'
+        merchantId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'merchantId: string representation; no regex/length/coercion invented'
+        merchantName:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'merchantName: string representation; no regex/length/coercion invented'
+        merchantCity:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'merchantCity: string representation; no regex/length/coercion invented'
+        merchantPostalText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'merchantPostalText: string representation; no regex/length/coercion
+              invented'
+        cardReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'cardReference: string representation; no regex/length/coercion
+              invented'
+        originalTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'originalTimestamp: string representation; no regex/length/coercion
+              invented'
+        processingTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.2/C-6/D-11
+            note: 'processingTimestamp: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.2/C-6
+        note: Generated interest transaction fields; no fee/suffix public
+    ReportingTransactionBasis:
+      type: object
+      additionalProperties: false
+      required:
+      - transactionId
+      - cardReference
+      - typeCode
+      - categoryCode
+      - source
+      - amount
+      - processingTimestamp
+      properties:
+        transactionId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'transactionId: string representation; no regex/length/coercion
+              invented'
+        cardReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'cardReference: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        source:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'source: string representation; no regex/length/coercion invented'
+        amount:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'amount: string representation; no regex/length/coercion invented'
+        processingTimestamp:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'processingTimestamp: string representation; no regex/length/coercion
+              invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.3
+        note: External description only; not request
+    ReportingDateBasis:
+      type: object
+      additionalProperties: false
+      required:
+      - startText
+      - endText
+      properties:
+        startText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'startText: string representation; no regex/length/coercion invented'
+        endText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3
+            note: 'endText: string representation; no regex/length/coercion invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.3
+        note: External date basis only; not request
+    ReportDetail:
+      type: object
+      additionalProperties: false
+      required:
+      - transactionId
+      - accountReference
+      - typeCode
+      - typeDescription
+      - categoryCode
+      - categoryDescription
+      - source
+      - amountText
+      properties:
+        transactionId:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'transactionId: string representation; no regex/length/coercion
+              invented'
+        accountReference:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'accountReference: string representation; no regex/length/coercion
+              invented'
+        typeCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'typeCode: string representation; no regex/length/coercion invented'
+        typeDescription:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'typeDescription: string representation; no regex/length/coercion
+              invented'
+        categoryCode:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'categoryCode: string representation; no regex/length/coercion invented'
+        categoryDescription:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'categoryDescription: string representation; no regex/length/coercion
+              invented'
+        source:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'source: string representation; no regex/length/coercion invented'
+        amountText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'amountText: string representation; no regex/length/coercion invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.3/C-7
+        note: Report receiver detail fields
+    ReportHeaderContext:
+      type: object
+      additionalProperties: false
+      required:
+      - reportShortNameText
+      - reportLongNameText
+      - startText
+      - endText
+      properties:
+        reportShortNameText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'reportShortNameText: string representation; no regex/length/coercion
+              invented'
+        reportLongNameText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'reportLongNameText: string representation; no regex/length/coercion
+              invented'
+        startText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'startText: string representation; no regex/length/coercion invented'
+        endText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7
+            note: 'endText: string representation; no regex/length/coercion invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.3/C-7
+        note: Report header context
+    ReportTotal:
+      type: object
+      additionalProperties: false
+      required:
+      - label
+      - valueText
+      properties:
+        label:
+          type: string
+          enum:
+          - page
+          - account
+          - grand
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-8
+            note: Source-labelled totals only
+        valueText:
+          type: string
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.3/C-7/C-8
+            note: 'valueText: string representation; no regex/length/coercion invented'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.3/C-7/C-8
+        note: Report total occurrence
+    ReportRecord:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - kind
+        - value
+        properties:
+          kind:
+            const: header
+          value:
+            $ref: '#/components/schemas/ReportHeaderContext'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-7/C-8
+          note: Header record
+      - type: object
+        additionalProperties: false
+        required:
+        - kind
+        - value
+        properties:
+          kind:
+            const: detail
+          value:
+            $ref: '#/components/schemas/ReportDetail'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-7/C-8
+          note: Detail record
+      - type: object
+        additionalProperties: false
+        required:
+        - kind
+        - value
+        properties:
+          kind:
+            const: total
+          value:
+            $ref: '#/components/schemas/ReportTotal'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-7/C-8
+          note: Total record
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/C-7/C-8/D-15
+        note: Mixed ordered reporting records union
+    PostingTransactionAvailability:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        - items
+        properties:
+          availability:
+            const: available
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/D-15/D-16
+              note: Available means actual represented observation; items may be empty
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/PostingTransaction'
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/D-15/D-16
+              note: Ordered array; duplicates retained; no minItems
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/D-15/D-16
+          note: PostingTransactionAvailability available variant
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        properties:
+          availability:
+            const: unavailable
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/D-15/D-16
+              note: Unavailable has no items property
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/D-15/D-16
+          note: PostingTransactionAvailability unavailable variant
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/D-15/D-16
+        note: PostingTransactionAvailability availability oneOf; unavailable items
+          forbidden
+    PostingRejectionAvailability:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        - items
+        properties:
+          availability:
+            const: available
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-5/D-16
+              note: Available means actual represented observation; items may be empty
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/PostingRejection'
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-5/D-16
+              note: Ordered array; duplicates retained; no minItems
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-5/D-16
+          note: PostingRejectionAvailability available variant
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        properties:
+          availability:
+            const: unavailable
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-5/D-16
+              note: Unavailable has no items property
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-5/D-16
+          note: PostingRejectionAvailability unavailable variant
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/C-5/D-16
+        note: PostingRejectionAvailability availability oneOf; unavailable items forbidden
+    InterestOutputAvailability:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        - items
+        properties:
+          availability:
+            const: available
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-6/D-16
+              note: Available means actual represented observation; items may be empty
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/GeneratedInterestTransaction'
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-6/D-16
+              note: Ordered array; duplicates retained; no minItems
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-6/D-16
+          note: InterestOutputAvailability available variant
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        properties:
+          availability:
+            const: unavailable
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-6/D-16
+              note: Unavailable has no items property
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-6/D-16
+          note: InterestOutputAvailability unavailable variant
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/C-6/D-16
+        note: InterestOutputAvailability availability oneOf; unavailable items forbidden
+    ReportRecordAvailability:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        - items
+        properties:
+          availability:
+            const: available
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-8/D-16
+              note: Available means actual represented observation; items may be empty
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/ReportRecord'
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-8/D-16
+              note: Ordered array; duplicates retained; no minItems
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-8/D-16
+          note: ReportRecordAvailability available variant
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        properties:
+          availability:
+            const: unavailable
+            x-traceability:
+              source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+              clause: §3.4/C-8/D-16
+              note: Unavailable has no items property
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-8/D-16
+          note: ReportRecordAvailability unavailable variant
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/C-8/D-16
+        note: ReportRecordAvailability availability oneOf; unavailable items forbidden
+    ProgressAvailability:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        - value
+        properties:
+          availability:
+            const: available
+          value:
+            $ref: '#/components/schemas/PostingProgress'
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-5/D-16
+          note: Progress available, including zero counts
+      - type: object
+        additionalProperties: false
+        required:
+        - availability
+        properties:
+          availability:
+            const: unavailable
+        x-traceability:
+          source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+          clause: §3.4/C-5/D-16
+          note: Progress unavailable omits value
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/C-5/D-16
+        note: Posting progress availability
+    PostingEnvelope:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - completeness
+      - durability
+      - outputs
+      - rejections
+      - progress
+      properties:
+        track:
+          const: posting
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        outputs:
+          $ref: '#/components/schemas/PostingTransactionAvailability'
+        rejections:
+          $ref: '#/components/schemas/PostingRejectionAvailability'
+        progress:
+          $ref: '#/components/schemas/ProgressAvailability'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/D-16/C-10/C-12
+        note: Posting envelope; any available outputs/rejections/progress required
+          for 200
+      anyOf:
+      - properties:
+          outputs:
+            properties:
+              availability:
+                const: available
+      - properties:
+          rejections:
+            properties:
+              availability:
+                const: available
+      - properties:
+          progress:
+            properties:
+              availability:
+                const: available
+    InterestEnvelope:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - completeness
+      - durability
+      - outputs
+      properties:
+        track:
+          const: interest
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        outputs:
+          allOf:
+          - $ref: '#/components/schemas/InterestOutputAvailability'
+          - properties:
+              availability:
+                const: available
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.4/D-16
+            note: Required available outputs; items may be []
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/D-16/C-11/C-12
+        note: Interest envelope; outputs available required for 200
+    ReportingEnvelope:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - completeness
+      - durability
+      - records
+      properties:
+        track:
+          const: reporting
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        records:
+          allOf:
+          - $ref: '#/components/schemas/ReportRecordAvailability'
+          - properties:
+              availability:
+                const: available
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.4/D-16
+            note: Required available records; items may be []
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/D-16/C-8/C-12
+        note: Reporting envelope; records available required for 200
+    PostingInterfaceError:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - category
+      - completeness
+      - durability
+      properties:
+        track:
+          const: posting
+        category:
+          type: string
+          enum:
+          - request_representation
+          - technical_failure
+          - content_unavailable
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        availableContent:
+          $ref: '#/components/schemas/PostingEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.4/C-12/D-16
+            note: Optional only when corresponding envelope has at least one actual
+              available observation
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/§5/C-12/D-13/D-16
+        note: posting error envelope; known failure 500 precedence; no internal diagnostics
+    InterestInterfaceError:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - category
+      - completeness
+      - durability
+      properties:
+        track:
+          const: interest
+        category:
+          type: string
+          enum:
+          - request_representation
+          - technical_failure
+          - content_unavailable
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        availableContent:
+          $ref: '#/components/schemas/InterestEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.4/C-12/D-16
+            note: Optional only when corresponding envelope has at least one actual
+              available observation
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/§5/C-12/D-13/D-16
+        note: interest error envelope; known failure 500 precedence; no internal diagnostics
+    ReportingInterfaceError:
+      type: object
+      additionalProperties: false
+      required:
+      - track
+      - category
+      - completeness
+      - durability
+      properties:
+        track:
+          const: reporting
+        category:
+          type: string
+          enum:
+          - request_representation
+          - technical_failure
+          - content_unavailable
+        completeness:
+          const: not_attested
+        durability:
+          const: unknown
+        availableContent:
+          $ref: '#/components/schemas/ReportingEnvelope'
+          x-traceability:
+            source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+            clause: §3.4/C-12/D-16
+            note: Optional only when corresponding envelope has at least one actual
+              available observation
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/§5/C-12/D-13/D-16
+        note: reporting error envelope; known failure 500 precedence; no internal
+          diagnostics
+    InterfaceError:
+      oneOf:
+      - $ref: '#/components/schemas/PostingInterfaceError'
+      - $ref: '#/components/schemas/InterestInterfaceError'
+      - $ref: '#/components/schemas/ReportingInterfaceError'
+      x-traceability:
+        source: sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+        clause: §3.4/§5/C-12
+        note: Track-specific interface errors
+x-traceability:
+  approved_inputs:
+    ? <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+    : 6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27
+    ? <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md
+    : b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f
+    <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/POST-PIPELINE-READINESS.md: aee4ee2a78e56befe51c1e96c7ec98fe9d5cfbbe83e79c8628d52c21ca2e7952
+    <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md: af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7
+    <REDACTED_LOCAL_PATH>/WORKSPACE-NOTES.md: be2e0ea2e3ce50ab7d85c9d22a05c1ccb9801d5fac63e2e1318a68cdec9b1e45
+  stage6: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md
+  stage7: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md
+  scope: P2a OpenAPI + binding plan only

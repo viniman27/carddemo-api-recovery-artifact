@@ -1,0 +1,134 @@
+[
+  {
+    "id": "temp-0",
+    "demo": "demo-01-temperature",
+    "program": "CELSIUS-TO-FAHRENHEIT",
+    "vars": "01 INPUT-VALUE PIC S9(3)V99 VALUE -40.\n01 OUTPUT-VALUE PIC S9(3)V99 VALUE ZERO.",
+    "args": "INPUT-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "-40.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "temp-1",
+    "demo": "demo-01-temperature",
+    "program": "CELSIUS-TO-FAHRENHEIT",
+    "vars": "01 INPUT-VALUE PIC S9(3)V99 VALUE 0.\n01 OUTPUT-VALUE PIC S9(3)V99 VALUE ZERO.",
+    "args": "INPUT-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "32.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "temp-2",
+    "demo": "demo-01-temperature",
+    "program": "CELSIUS-TO-FAHRENHEIT",
+    "vars": "01 INPUT-VALUE PIC S9(3)V99 VALUE 100.\n01 OUTPUT-VALUE PIC S9(3)V99 VALUE ZERO.",
+    "args": "INPUT-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "212.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "temp-3",
+    "demo": "demo-01-temperature",
+    "program": "CELSIUS-TO-FAHRENHEIT",
+    "vars": "01 INPUT-VALUE PIC S9(3)V99 VALUE -999.99.\n01 OUTPUT-VALUE PIC S9(3)V99 VALUE ZERO.",
+    "args": "INPUT-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": null,
+    "flag": null,
+    "classification": "overflow_observation_only"
+  },
+  {
+    "id": "ship-0",
+    "demo": "demo-02-shipping",
+    "program": "SHIPPING-QUOTE",
+    "vars": "01 WEIGHT-VALUE PIC 9(3)V99 VALUE 0.\n01 ZONE-VALUE PIC X VALUE \"A\".\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.\n01 STATUS-VALUE PIC X VALUE SPACE.",
+    "args": "WEIGHT-VALUE ZONE-VALUE OUTPUT-VALUE STATUS-VALUE",
+    "display": "OUTPUT-VALUE \"|\" STATUS-VALUE",
+    "expected": "0.00",
+    "flag": "Y",
+    "classification": "asserted"
+  },
+  {
+    "id": "ship-1",
+    "demo": "demo-02-shipping",
+    "program": "SHIPPING-QUOTE",
+    "vars": "01 WEIGHT-VALUE PIC 9(3)V99 VALUE 2.\n01 ZONE-VALUE PIC X VALUE \"B\".\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.\n01 STATUS-VALUE PIC X VALUE SPACE.",
+    "args": "WEIGHT-VALUE ZONE-VALUE OUTPUT-VALUE STATUS-VALUE",
+    "display": "OUTPUT-VALUE \"|\" STATUS-VALUE",
+    "expected": "4.50",
+    "flag": "Y",
+    "classification": "asserted"
+  },
+  {
+    "id": "ship-2",
+    "demo": "demo-02-shipping",
+    "program": "SHIPPING-QUOTE",
+    "vars": "01 WEIGHT-VALUE PIC 9(3)V99 VALUE 2.\n01 ZONE-VALUE PIC X VALUE \"Z\".\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.\n01 STATUS-VALUE PIC X VALUE SPACE.",
+    "args": "WEIGHT-VALUE ZONE-VALUE OUTPUT-VALUE STATUS-VALUE",
+    "display": "OUTPUT-VALUE \"|\" STATUS-VALUE",
+    "expected": "0.00",
+    "flag": "N",
+    "classification": "asserted"
+  },
+  {
+    "id": "ship-3",
+    "demo": "demo-02-shipping",
+    "program": "SHIPPING-QUOTE",
+    "vars": "01 WEIGHT-VALUE PIC 9(3)V99 VALUE 999.99.\n01 ZONE-VALUE PIC X VALUE \"B\".\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.\n01 STATUS-VALUE PIC X VALUE SPACE.",
+    "args": "WEIGHT-VALUE ZONE-VALUE OUTPUT-VALUE STATUS-VALUE",
+    "display": "OUTPUT-VALUE \"|\" STATUS-VALUE",
+    "expected": "2249.97",
+    "flag": "Y",
+    "classification": "asserted"
+  },
+  {
+    "id": "member-0",
+    "demo": "demo-03-membership",
+    "program": "MEMBERSHIP-DISCOUNT",
+    "vars": "01 TIER-VALUE PIC X VALUE \"G\".\n01 PURCHASE-VALUE PIC 9(5)V99 VALUE 0.\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.",
+    "args": "TIER-VALUE PURCHASE-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "0.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "member-1",
+    "demo": "demo-03-membership",
+    "program": "MEMBERSHIP-DISCOUNT",
+    "vars": "01 TIER-VALUE PIC X VALUE \"S\".\n01 PURCHASE-VALUE PIC 9(5)V99 VALUE 100.\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.",
+    "args": "TIER-VALUE PURCHASE-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "5.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "member-2",
+    "demo": "demo-03-membership",
+    "program": "MEMBERSHIP-DISCOUNT",
+    "vars": "01 TIER-VALUE PIC X VALUE \"Z\".\n01 PURCHASE-VALUE PIC 9(5)V99 VALUE 100.\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.",
+    "args": "TIER-VALUE PURCHASE-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "0.00",
+    "flag": null,
+    "classification": "asserted"
+  },
+  {
+    "id": "member-3",
+    "demo": "demo-03-membership",
+    "program": "MEMBERSHIP-DISCOUNT",
+    "vars": "01 TIER-VALUE PIC X VALUE \"G\".\n01 PURCHASE-VALUE PIC 9(5)V99 VALUE 99999.99.\n01 OUTPUT-VALUE PIC 9(5)V99 VALUE ZERO.",
+    "args": "TIER-VALUE PURCHASE-VALUE OUTPUT-VALUE",
+    "display": "OUTPUT-VALUE",
+    "expected": "9999.99",
+    "flag": null,
+    "classification": "asserted"
+  }
+]

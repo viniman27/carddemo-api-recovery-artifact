@@ -1,0 +1,58 @@
+{
+  "inventoryTotals": {
+    "contractually_impossible": 7,
+    "implementation_missing": 72,
+    "missing_fixture_variant": 28,
+    "observation_without_authority": 14,
+    "recipe_available_unexercised": 54
+  },
+  "kind": "t3-mapping-integration-v2-red-v1-repro",
+  "v1": {
+    "examples": [
+      "POSTTRAN-OBL-004::E1-1::postDailyTransactions",
+      "POSTTRAN-OBL-004::E1-2::postDailyTransactions",
+      "POSTTRAN-OBL-004::E1-3::postDailyTransactions",
+      "POSTTRAN-OBL-004::E2-1::postDailyTransactions",
+      "POSTTRAN-OBL-004::E2-2::postDailyTransactions"
+    ],
+    "harnessFile": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v1/src/campaign_harness.py",
+    "mappingFile": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-integration-v1/src/mapping_integration.py",
+    "reopenedBlockedOrDiagnosticsCells": 56,
+    "v1AllowedLinked": 119
+  },
+  "v2Results": {
+    "enrichedSummary": {
+      "blockedCellsWithoutSelectors": 121,
+      "cellsTotal": 175,
+      "classificationTotals": {
+        "contractually_impossible": 7,
+        "implementation_missing": 72,
+        "missing_fixture_variant": 28,
+        "observation_without_authority": 14,
+        "recipe_available_unexercised": 54
+      },
+      "duplicateRecipeJoinKeys": [],
+      "executableEligibleCellsWithLinkedRecipe": 54,
+      "recipeExistsButNotExecutableEligible": 65,
+      "recipesTotal": 21,
+      "uniqueRecipeJoinKeys": 21,
+      "v3AllowedCellsMissingRecipe": 0,
+      "v3AllowedCellsWithLinkedRecipe": 119
+    },
+    "inventoryTotals": {
+      "contractually_impossible": 7,
+      "implementation_missing": 72,
+      "missing_fixture_variant": 28,
+      "observation_without_authority": 14,
+      "recipe_available_unexercised": 54
+    },
+    "recipeValidation": {
+      "compileFailures": [],
+      "kind": "t3-integrated-recipes-static-validation",
+      "officialCampaign": false,
+      "operationRecipes": 21,
+      "recipeSchemaValidated": true,
+      "status": "candidate"
+    }
+  }
+}

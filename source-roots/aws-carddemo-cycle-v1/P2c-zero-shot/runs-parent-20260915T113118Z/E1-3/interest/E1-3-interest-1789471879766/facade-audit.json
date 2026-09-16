@@ -1,0 +1,111 @@
+{
+  "contract_id": "E1-3",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+  "contract_sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+  "operation_id": "generateInterestTransactions",
+  "track": "interest",
+  "request_sha256": "5d216108ccc3a40a439b0fe12eaf0313b052b2b1de67bd15234b41186367db17",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/registry.json",
+    "files": {
+      "ACCTFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/ACCTFILE",
+        "bytes": 8192,
+        "sha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "requestOwned": false
+      },
+      "DISCGRP": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/DISCGRP",
+        "bytes": 8192,
+        "sha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "requestOwned": false
+      },
+      "PARMFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/PARMFILE",
+        "bytes": 10,
+        "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "requestOwned": true
+      },
+      "TCATBALF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/TCATBALF",
+        "bytes": 8192,
+        "sha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "requestOwned": false
+      },
+      "XREFFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/XREFFILE",
+        "bytes": 8192,
+        "sha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "requestOwned": false
+      },
+      "XREFFILE.1": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/request-packages/E1-3-interest-1789471879766/XREFFILE.1",
+        "bytes": 8192,
+        "sha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "TCATBALF": {
+        "field": "categoryBalances",
+        "token": "p3:interest:TCATBALF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/TCATBALF",
+        "sourceSha256": "be9ebbfd5ba241a81bba73123aa3870484c660e731ae61b34d4b9d2e060bcda7",
+        "sourceBytes": 8192
+      },
+      "XREFFILE": {
+        "field": "cardCrossReference",
+        "token": "p3:interest:XREFFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE",
+        "sourceSha256": "3fed6a8f73a8cbb1f654991b3d747437a1dc9f3688b88ca6981fca5a961004e2",
+        "sourceBytes": 8192
+      },
+      "ACCTFILE": {
+        "field": "accounts",
+        "token": "p3:interest:ACCTFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/ACCTFILE",
+        "sourceSha256": "291339953a4abaac1083f076e00487fa0d5f1a79e8702d3a3f917267733ae636",
+        "sourceBytes": 8192
+      },
+      "DISCGRP": {
+        "field": "disclosureGroups",
+        "token": "p3:interest:DISCGRP",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/DISCGRP",
+        "sourceSha256": "6d344f1985307b31245fb878571c3c8277b857cf88dc3312a7eb0b601f5d7f54",
+        "sourceBytes": 8192
+      },
+      "XREFFILE.1": {
+        "field": "implicitAlternateIndexSidecar",
+        "token": "p3:interest:XREFFILE.1",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/interest/XREFFILE.1",
+        "sourceSha256": "d1c7709f0872b0569381e71b0b64b4b015a918da779d18fbc3281295b46b6176",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "TRANSACT": {
+        "field": "transactionOutput",
+        "token": "p3:interest:TRANSACT",
+        "policy": "output resource; P2b COBOL creates it in the invocation workdir"
+      }
+    },
+    "fixture_descriptor_sha256": "f84f941aeee674f46081d26d436539c90ea8e63ae3e6a9af61d7dcb592d91fb8"
+  },
+  "semantic_ambiguities": [
+    {
+      "point": "CBACT04C alternate-key account lookup when multiple card rows exist for one account",
+      "recommendation": "Do not select a card in the facade; preserve runtime-selected XREFFILE alternate-key behavior and record as ambiguity if a case depends on which card is chosen."
+    }
+  ],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/p2b-runs/interest-mq92l3yf/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/p2b-runs/interest-mq92l3yf"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2c-zero-shot/runs-parent-20260915T113118Z/E1-3/interest/E1-3-interest-1789471879766/response.json"
+}

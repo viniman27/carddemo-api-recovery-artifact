@@ -1,0 +1,39 @@
+{
+  "cells": [
+    {
+      "cellId": "A",
+      "fixtureSelection": {
+        "fixtureId": "fixture-a"
+      },
+      "operation": {
+        "method": "post",
+        "path": "/synthetic"
+      },
+      "requestBody": {
+        "name": {
+          "literal": "ok"
+        },
+        "payload": {
+          "encoding": "base64",
+          "fromBytes": "PAYLOAD"
+        }
+      },
+      "transitionId": "A"
+    },
+    {
+      "cellId": "B",
+      "operation": {
+        "method": "post",
+        "path": "/sdd"
+      },
+      "requestBody": {},
+      "sddConstantEmptyObject": true,
+      "transitionId": "B"
+    },
+    {
+      "blocked_reason": "synthetic abstract-only transition has no concrete evidence",
+      "cellId": "C",
+      "transitionId": "C"
+    }
+  ]
+}

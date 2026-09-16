@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "prepare.py"
+    ],
+    "rc": 0,
+    "stdout": "{\n  \"corpus_files\": 8,\n  \"external_calls\": [\n    \"CEE3ABD\"\n  ],\n  \"compile_rc\": 0,\n  \"diagnostics\": \"\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "build_helpers.py"
+    ],
+    "rc": 0,
+    "stdout": "Built external raw indexed-file loaders/dumpers: TRANFILE, XREFFILE, ACCTFILE, TCATBALF\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "-m",
+      "unittest",
+      "test_io",
+      "test_abend",
+      "test_posttran",
+      "test_safety",
+      "-v"
+    ],
+    "rc": 0,
+    "stdout": "",
+    "stderr": "test_raw_record_roundtrip (test_io.IndexedIOTests) ... ok\ntest_missing_input_terminates_with_explicit_local_abend (test_abend.AbendTests) ... ok\ntest_credit_limit (test_posttran.PosttranTests) ... ok\ntest_duplicate_preserves_observed_partial_updates (test_posttran.PosttranTests) ... ok\ntest_empty_batch (test_posttran.PosttranTests) ... ok\ntest_expired_account (test_posttran.PosttranTests) ... ok\ntest_invalid_card (test_posttran.PosttranTests) ... ok\ntest_missing_account (test_posttran.PosttranTests) ... ok\ntest_nominal_posting (test_posttran.PosttranTests) ... ok\ntest_reset_repeats_state_except_processing_timestamp (test_posttran.PosttranTests) ... ok\ntest_failure_is_not_disabled_by_optimized_python (test_safety.IntegrityGuardTests) ... ok\ntest_loader_refuses_existing_file (test_safety.ScopeGuardTests) ... ok\ntest_loader_rejects_external_path (test_safety.ScopeGuardTests) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 2.703s\n\nOK\n"
+  }
+]

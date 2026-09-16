@@ -1,0 +1,441 @@
+{
+  "blockedBecause": [
+    "T3 missing executable independent model/mappings/runner authority",
+    "T2 official all-contract generation absent",
+    "T1 provider package/parameters not verified and payloads not sent",
+    "T4 depends on frozen T1/T2/T3"
+  ],
+  "budgetsSeedsOrder": {
+    "T1": {
+      "automaticModelSwitch": false,
+      "automaticRetries": 0,
+      "callsPerContract": 1,
+      "maxScenariosPerOperation": 12,
+      "paidFallback": false
+    },
+    "T2": {
+      "allocation": {
+        "negative": 50,
+        "positive": 50
+      },
+      "hypothesisVersion": "6.168.0",
+      "maxExamplesPerOperationPerSeed": 100,
+      "seeds": [
+        104729,
+        130363,
+        155921
+      ],
+      "tool": "schemathesis",
+      "version": "4.27.1"
+    },
+    "T3": {
+      "maxPathsPerTrackFixture": 50,
+      "selection": "BFS lexicographic transition ID",
+      "status": "blocked_missing_independent_model_and_mappings"
+    },
+    "T4": {
+      "statisticallyIndependentReplica": false,
+      "unionOrder": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    "globalOrder": [
+      "contract replica",
+      "zero-shot/few-shot/SDD",
+      "T1/T2/T3/T4",
+      "posting/interest/reporting",
+      "fixture ID",
+      "case ID"
+    ]
+  },
+  "campaignAuthorization": {
+    "authorized": false,
+    "notReleased": true,
+    "officialCampaignsStarted": false,
+    "runnerConfigurationCalled": false
+  },
+  "canonicalInputs": [
+    {
+      "bytes": 9156,
+      "id": "protocol",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md",
+      "sha256": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7"
+    },
+    {
+      "bytes": 10059,
+      "id": "status-flow",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/STATUS-FLUXO.md",
+      "sha256": "9358a79731cbcb3bf976754b942f726fe2569a22ba76abb4f741fc808768bca0"
+    },
+    {
+      "bytes": 4732,
+      "id": "direction-delegated",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/experimental-direction-delegated-v1.json",
+      "sha256": "a7fcbce15daea2b055c765a9b91b69d43f43b1e9412034c32f16981adbc66e8f"
+    },
+    {
+      "bytes": 2494,
+      "id": "current-pretest-state",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/current-pretest-state-v4.json",
+      "sha256": "f8e4fd1278b117c70a44a532a10ce260b832d64dd308d80d14df6b78fa5cab0c"
+    },
+    {
+      "bytes": 3723,
+      "id": "unified-preflight-v3-candidate-current5x2-gcovclean",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/candidate-manifest.json",
+      "sha256": "a6be97275088f6ad36ac9ace028bd48a480b3b6f5643cabb7e34b5e303d78603"
+    },
+    {
+      "bytes": 32088,
+      "id": "unified-preflight-v3-evidence-manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-manifest.json",
+      "sha256": "ad5edc4958df41e6498cf9ea7500b0fa71c0f90ebbadd631949294c2b32feb51"
+    },
+    {
+      "bytes": 16432,
+      "id": "fixture-materialization-v2-manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    {
+      "bytes": 19747,
+      "id": "reference-v4-executable",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/executable_reference.py",
+      "sha256": "443ef90519ae11828577669567d2d3a2fc5678a7e83f1e7f3c559aa7d12049e2"
+    },
+    {
+      "bytes": 865,
+      "id": "reference-review-disposition-v2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-review-disposition-v2.json",
+      "sha256": "bd86d11f99411ed55c05b9f469d42c56bcdcc8011f00cc0d390312b86be099e6"
+    },
+    {
+      "bytes": 32688,
+      "id": "contract-E1-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/parsed.json",
+      "sha256": "5329a78be449706d073ed127b4db364d186d7c23ce4e76f49e5d670313e44e9e"
+    },
+    {
+      "bytes": 33679,
+      "id": "contract-E1-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/parsed.json",
+      "sha256": "40a9f6e9d5f9631db0831fb3e85dd296930d262d43497103eafb88135786cf5b"
+    },
+    {
+      "bytes": 32557,
+      "id": "contract-E1-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/parsed.json",
+      "sha256": "88acebd163468e1c19e54c313f7c436ba5cd0c63886763fe906ff84bc02bad19"
+    },
+    {
+      "bytes": 31447,
+      "id": "contract-E2-1",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/parsed.json",
+      "sha256": "e301f6cb1a6241ebb329f6ff44ed63a854530089d66d42f8a01ecdc1dadbcfd9"
+    },
+    {
+      "bytes": 32425,
+      "id": "contract-E2-2",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/parsed.json",
+      "sha256": "043f964a5bb61e739508e6df2b87898bae34b9f92a56ebeb758d101a481d60f0"
+    },
+    {
+      "bytes": 28249,
+      "id": "contract-E2-3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/parsed.json",
+      "sha256": "a537c1fe8ff96ca26a59277e605683c2ca9aad5be43079e486fff5358d70ec33"
+    },
+    {
+      "bytes": 66677,
+      "id": "contract-E3-SDD-stage6r3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "sha256": "4c4f525a80cdfb3f208e123c193f06986c1ea28edcecae6c3df7ae3f35b0b10a"
+    }
+  ],
+  "canonicalRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+  "contracts": {
+    "count": 7,
+    "ids": [
+      "E1-1",
+      "E1-2",
+      "E1-3",
+      "E2-1",
+      "E2-2",
+      "E2-3",
+      "E3-SDD-stage6r3"
+    ],
+    "operationsTotal": 21
+  },
+  "createdUtc": "2026-09-15T15:07:18.363176+00:00",
+  "evidenceInputs": [
+    {
+      "bytes": 298,
+      "id": "t3-synthetic-mapping-preflight",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/evidence-synthetic-20260915T-prep/synthetic-inputs/t3-mapping.json",
+      "sha256": "8de900e1e330780a5174d7d036115711eecc89491e99cfefe5603d14b221e660"
+    }
+  ],
+  "externalProviderPackage": {
+    "notInvented": true,
+    "status": "pending_not_verified"
+  },
+  "forbiddenClaims": [
+    "campaign authorization",
+    "human signed approval",
+    "official fixtures",
+    "official T1/T2/T3/T4 results",
+    "runner configuration execution"
+  ],
+  "generatedArtifacts": [
+    {
+      "bytes": 2090,
+      "id": "acceptance-ptbr",
+      "path": "ACCEPTANCE-PTBR.md",
+      "sha256": "5de889a69db0e6351a78ecb440778bdebed9a6c880f94e7aba48b9e775a2b71d"
+    },
+    {
+      "bytes": 986,
+      "id": "fixtures-digest",
+      "path": "FIXTURES-CANDIDATES-DIGEST.json",
+      "sha256": "c09c18fb657663421201828bf75dfdda2d0f1a7fa9a5c22d1e9fc7e7ecc49ff3"
+    },
+    {
+      "bytes": 34324,
+      "id": "t1-payload-E1-1",
+      "path": "t1-outbound-payloads/E1-1.payload.json",
+      "sha256": "f01d11054c4fad471b3345cef415bf178e369dc26df65551558234d07d42ae35"
+    },
+    {
+      "bytes": 35339,
+      "id": "t1-payload-E1-2",
+      "path": "t1-outbound-payloads/E1-2.payload.json",
+      "sha256": "b28e74438b7334d1affbaefeb1ef8076f830deff7b907c7834a215a29d222814"
+    },
+    {
+      "bytes": 34241,
+      "id": "t1-payload-E1-3",
+      "path": "t1-outbound-payloads/E1-3.payload.json",
+      "sha256": "7ebdcd1691d38943e1600899cc5ac226164a573dfa8e6e95fe7bdaa5b03573c3"
+    },
+    {
+      "bytes": 33130,
+      "id": "t1-payload-E2-1",
+      "path": "t1-outbound-payloads/E2-1.payload.json",
+      "sha256": "13455a8461a71271b7e0ab732694dce154c2c47fe0778b2decf1f3ea419dee42"
+    },
+    {
+      "bytes": 34106,
+      "id": "t1-payload-E2-2",
+      "path": "t1-outbound-payloads/E2-2.payload.json",
+      "sha256": "03709067f8cf71961365d45ad636c346ab1b2cf8284c767878ad974548205570"
+    },
+    {
+      "bytes": 29932,
+      "id": "t1-payload-E2-3",
+      "path": "t1-outbound-payloads/E2-3.payload.json",
+      "sha256": "73cd0a5472d07a785e5d98331a14046dbd2574c2649dd47e045428c44126ffd2"
+    },
+    {
+      "bytes": 75934,
+      "id": "t1-payload-E3-SDD-stage6r3",
+      "path": "t1-outbound-payloads/E3-SDD-stage6r3.payload.json",
+      "sha256": "472fcec876636b8f22577ddfe05c8f344d57558082fc87b846386c6d57468c67"
+    },
+    {
+      "bytes": 1257,
+      "id": "report-md",
+      "path": "REPORT.md",
+      "sha256": "dc3d4b4d54105152a4efa19ab8f1f214a9493a34ffedb051bffd0fdc47db60f4"
+    }
+  ],
+  "humanAuthority": {
+    "delegationQuote": "Deixo ao seu criterio, se ja considerar que estamos prontos, vamos aos testes, se nao faca as revisoes necessarias.",
+    "delegationReal": true,
+    "label": "prepared-local-blocked",
+    "notClaimed": "human signature or approval of placeholders",
+    "signedAuthorization": "not_supplied"
+  },
+  "isolationAndErrorPolicy": {
+    "coverage": "inadmissible on missing gcda/gcov mismatch; never fabricated zero",
+    "missingOutput": "do not treat as positive empty",
+    "newWorkdirPerApplication": true,
+    "redirects": false,
+    "replayRetries": 0,
+    "resetMustCompareEffectiveResources": true,
+    "sharedStateAcrossCalls": false,
+    "technicalFailure": "attribute before outcome comparison"
+  },
+  "kind": "pre-campaign-acceptance-package-v1-manifest",
+  "modelParameters": {
+    "notInvented": true,
+    "status": "pending_not_verified",
+    "values": {}
+  },
+  "outputRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1",
+  "overallStatus": "blocked_pre_campaign_not_ready_to_execute",
+  "readinessMatrix": {
+    "T1": {
+      "missing": [
+        "external provider/model/package authorization",
+        "returned model/version and supported parameters",
+        "preserved T1 responses and parser import result"
+      ],
+      "overall": "prepared_pending_external_provider_package",
+      "prepared": [
+        "7 outbound payloads built locally from corresponding contract + common instruction + metadata",
+        "budget frozen: one generation call per contract, max 12 scenarios/op, zero automatic retries/fallback/model switch",
+        "payloads not sent; provider parameters pending_not_verified"
+      ]
+    },
+    "T2": {
+      "missing": [
+        "official T2 suites for all 7 contracts/21 operations",
+        "runner-bound generation/replay manifests per contract",
+        "authority to execute against AWS cycle targets"
+      ],
+      "overall": "partially_prepared_missing_official_generation_per_contract",
+      "prepared": [
+        "schemathesis tool direction decided: 4.27.1, Hypothesis 6.168.0, seeds 104729/130363/155921, max 100 examples/op/seed with 50/50 positive/negative allocation",
+        "synthetic OpenAPI 3.1 qualification exists"
+      ]
+    },
+    "T3": {
+      "missing": [
+        "independent source-authoritative MBT model frozen for official campaign",
+        "concrete operational mappings for 7 contracts × operations",
+        "executable T3 runner integration for campaign",
+        "human/source authority for expectations distinct from exposed implementation context"
+      ],
+      "nextMinimalCode": [
+        "materialize reference package with independent obligation IDs and reviewed source anchors",
+        "implement mapper contract->HTTP request for each public operation or mark non-executable with reason",
+        "add T3 freeze/import runner that rejects abstract/guard-sensitive transitions without mappings",
+        "wire T3 into harness without executing campaign"
+      ],
+      "overall": "blocked",
+      "prepared": [
+        "reference drafts/review artifacts exist as candidates",
+        "synthetic t3 mapping preflight demonstrates classification shape only"
+      ]
+    },
+    "T4": {
+      "missing": [
+        "frozen constituent T1/T2/T3 suites",
+        "official union manifest for all contract/operation units",
+        "execution authority and reset/deadline evidence per official application"
+      ],
+      "overall": "blocked_until_T1_T2_T3_frozen",
+      "prepared": [
+        "union order decided T1→T2→T3",
+        "identity rule decided: exact operation/request bytes + initial package/parameters + sequence + expectation version/target",
+        "preflight union smoke exists but is not official T4"
+      ]
+    }
+  },
+  "scope": "prepare concrete verifiable package only; no provider call, no HTTP AWS official cases, no campaign execution",
+  "t1OutboundPayloads": [
+    {
+      "arm": "zero-shot",
+      "bytes": 34324,
+      "contractId": "E1-1",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E1-1.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "f01d11054c4fad471b3345cef415bf178e369dc26df65551558234d07d42ae35"
+    },
+    {
+      "arm": "zero-shot",
+      "bytes": 35339,
+      "contractId": "E1-2",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E1-2.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "b28e74438b7334d1affbaefeb1ef8076f830deff7b907c7834a215a29d222814"
+    },
+    {
+      "arm": "zero-shot",
+      "bytes": 34241,
+      "contractId": "E1-3",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E1-3.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "7ebdcd1691d38943e1600899cc5ac226164a573dfa8e6e95fe7bdaa5b03573c3"
+    },
+    {
+      "arm": "few-shot",
+      "bytes": 33130,
+      "contractId": "E2-1",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E2-1.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "13455a8461a71271b7e0ab732694dce154c2c47fe0778b2decf1f3ea419dee42"
+    },
+    {
+      "arm": "few-shot",
+      "bytes": 34106,
+      "contractId": "E2-2",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E2-2.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "03709067f8cf71961365d45ad636c346ab1b2cf8284c767878ad974548205570"
+    },
+    {
+      "arm": "few-shot",
+      "bytes": 29932,
+      "contractId": "E2-3",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E2-3.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "73cd0a5472d07a785e5d98331a14046dbd2574c2649dd47e045428c44126ffd2"
+    },
+    {
+      "arm": "SDD",
+      "bytes": 75934,
+      "contractId": "E3-SDD-stage6r3",
+      "operations": 3,
+      "payloadPath": "t1-outbound-payloads/E3-SDD-stage6r3.payload.json",
+      "sendStatus": "not_sent",
+      "sha256": "472fcec876636b8f22577ddfe05c8f344d57558082fc87b846386c6d57468c67"
+    }
+  ],
+  "toolchain": [
+    {
+      "bytes": 1267,
+      "id": "common-t1-instruction",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/COMMON-T1-INSTRUCTION.md",
+      "sha256": "7b0a5ea01d672e7fbf80baad9b09a0c7a84bcf00e69db81530369f5db088493f"
+    },
+    {
+      "bytes": 989,
+      "id": "toolversions",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/TOOLVERSIONS.json",
+      "sha256": "6cf207a5b769c29c686def2a84cc70b3c9ff60f8c4c29197dd0d090aac65f64e"
+    },
+    {
+      "bytes": 19529,
+      "id": "suite-generation",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/suite-generation-preflight-v1/src/suite_generation.py",
+      "sha256": "bd2d3e5f09dffcd194656e49731aac4802e68ea832ec4279336a7647ae026861"
+    },
+    {
+      "bytes": 10966,
+      "id": "parser-suite-adapters",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/src/suite_adapters.py",
+      "sha256": "7f06f94bd31a6808caf66af1399b783d060dc4be90263de5963fa2754701fbf1"
+    },
+    {
+      "bytes": 26983,
+      "id": "campaign-harness-v3",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    {
+      "bytes": 8436,
+      "id": "verify-manifest",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/pre-campaign-acceptance-package-v1/tools/verify_manifest.py",
+      "sha256": "1272b0fda52180c6e3e0335850ffa35e1d29b8bdd26b171eae0bb3c1e79cdd6a"
+    }
+  ]
+}

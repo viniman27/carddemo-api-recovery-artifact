@@ -1,0 +1,2715 @@
+{
+  "budget": {
+    "maxDepth": 6,
+    "maxPathsPerTrackFixture": 1
+  },
+  "byContract": {
+    "E1-1": 13,
+    "E1-2": 13,
+    "E1-3": 13,
+    "E2-1": 6,
+    "E2-2": 13,
+    "E2-3": 6,
+    "E3-SDD-stage6r3": 18
+  },
+  "contractsAttempted": 7,
+  "contractsSucceeded": 7,
+  "errors": [],
+  "kind": "aws-t3-real-offline-materialization-v1",
+  "networkCallsDuringGeneration": 0,
+  "officialCampaign": false,
+  "reports": [
+    {
+      "acceptedCount": 13,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-008::E1-1::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E1-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E1-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E1-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E1-1::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 10,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E1-1",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E1-1/T3-suite.json",
+      "suiteReadbackCases": 13,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 13,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-008::E1-2::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E1-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E1-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E1-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E1-2::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 10,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E1-2",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E1-2/T3-suite.json",
+      "suiteReadbackCases": 13,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 13,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-008::E1-3::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E1-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E1-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E1-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E1-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E1-3::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E1-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 10,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E1-3",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E1-3/T3-suite.json",
+      "suiteReadbackCases": 13,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 6,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-001::E2-1::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T001"
+        },
+        {
+          "cellId": "INTCALC-OBL-001::E2-1::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T002"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T002"
+        },
+        {
+          "cellId": "INTCALC-OBL-002::E2-1::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T003"
+        },
+        {
+          "cellId": "INTCALC-OBL-003::E2-1::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T003"
+        },
+        {
+          "cellId": "INTCALC-OBL-002::E2-1::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T004"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T004"
+        },
+        {
+          "cellId": "INTCALC-OBL-008::E2-1::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "POSTTRAN-OBL-001::E2-1::postDailyTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "POSTTRAN-T001"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "POSTTRAN-T001"
+        },
+        {
+          "cellId": "POSTTRAN-OBL-001::E2-1::postDailyTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "POSTTRAN-T002"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "POSTTRAN-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E2-1::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E2-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E2-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E2-1::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-1::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 17,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E2-1",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E2-1/T3-suite.json",
+      "suiteReadbackCases": 6,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 13,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-008::E2-2::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E2-2::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E2-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E2-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E2-2::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-2::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 10,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E2-2",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E2-2/T3-suite.json",
+      "suiteReadbackCases": 13,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 6,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-001::E2-3::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T001"
+        },
+        {
+          "cellId": "INTCALC-OBL-001::E2-3::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T002"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T002"
+        },
+        {
+          "cellId": "INTCALC-OBL-002::E2-3::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T003"
+        },
+        {
+          "cellId": "INTCALC-OBL-003::E2-3::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T003"
+        },
+        {
+          "cellId": "INTCALC-OBL-002::E2-3::generateInterestTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T004"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "INTCALC-T004"
+        },
+        {
+          "cellId": "INTCALC-OBL-008::E2-3::generateInterestTransactions",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "POSTTRAN-OBL-001::E2-3::postDailyTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "POSTTRAN-T001"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "POSTTRAN-T001"
+        },
+        {
+          "cellId": "POSTTRAN-OBL-001::E2-3::postDailyTransactions",
+          "classification": "implementation_missing",
+          "path": [
+            "POSTTRAN-T002"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true",
+          "status": "blocked",
+          "transitionId": "POSTTRAN-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T001"
+        },
+        {
+          "cellId": "TRANREPT-OBL-001::E2-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "reason": "operation exists, but no concrete implementation mapping is authorized for this obligation step",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T002"
+        },
+        {
+          "cellId": "TRANREPT-OBL-004::E2-3::generateTransactionReport",
+          "classification": "implementation_missing",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "recipe exists but is not executable-eligible because upstream plan authority blocks generation: upstream generative_admissible is not true; generativeUse=blocked; selectorUsableForGeneration=False",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-005::E2-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T003"
+        },
+        {
+          "cellId": "TRANREPT-OBL-003::E2-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T009"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E2-3::generateTransactionReport",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E2-3::generateTransactionReport",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 17,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E2-3",
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E2-3/T3-suite.json",
+      "suiteReadbackCases": 6,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      }
+    },
+    {
+      "acceptedCount": 18,
+      "blocked": [
+        {
+          "cellId": "INTCALC-OBL-008::E3-01-SDD-stage6r3::interest",
+          "classification": "observation_without_authority",
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "INTCALC-T006"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-008::E3-01-SDD-stage6r3::reporting",
+          "classification": "observation_without_authority",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010"
+          ],
+          "reason": "required observation has no pre-campaign authority without oracle/runtime/internal-state evidence",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T010"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T011"
+        },
+        {
+          "cellId": "TRANREPT-OBL-007::E3-01-SDD-stage6r3::reporting",
+          "classification": "missing_fixture_variant",
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "reason": "required variant/precondition is not currently established by permitted fixtures; absence is not treated as contract impossibility",
+          "status": "blocked",
+          "transitionId": "TRANREPT-T013"
+        }
+      ],
+      "blockedCount": 5,
+      "budget": {
+        "maxDepth": 6,
+        "maxPathsPerTrackFixture": 1
+      },
+      "contractId": "E3-SDD-stage6r3",
+      "excludedByEffectiveSelection": [],
+      "excludedCount": 0,
+      "inconclusive": [],
+      "inconclusiveCount": 0,
+      "kind": "t3-campaign-adapter-v3-build-report",
+      "limitations": [
+        "contract checker is documented as a separate independent obligation and is not inferred from runtime/API/results",
+        "unsupported cells remain blocked; transitions without joined cells remain inconclusive",
+        "no official AWS suite is generated unless an explicit output path is supplied by the caller"
+      ],
+      "officialCampaign": false,
+      "selectionPlan": {
+        "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+        "budgets": {
+          "maxDepth": 6,
+          "maxPathsPerCapability": 1
+        },
+        "capabilities": [
+          "CBTRN02C_POSTTRAN",
+          "CBACT04C_INTCALC",
+          "CBTRN03C_TRANREPT"
+        ],
+        "omissions": [
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T002"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T003"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T004"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T005"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T005"
+          },
+          {
+            "capability": "CBTRN02C_POSTTRAN",
+            "path": [
+              "POSTTRAN-T001",
+              "POSTTRAN-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "POSTTRAN-T006"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T002"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T003"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T004"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T004"
+          },
+          {
+            "capability": "CBACT04C_INTCALC",
+            "path": [
+              "INTCALC-T001",
+              "INTCALC-T006"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "INTCALC-T006"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T002"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T002"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T003"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T003"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T009"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T009"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T010"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T010"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T011"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T011"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T012"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T012"
+          },
+          {
+            "capability": "CBTRN03C_TRANREPT",
+            "path": [
+              "TRANREPT-T001",
+              "TRANREPT-T013"
+            ],
+            "reason": "max_paths_per_capability",
+            "transitionId": "TRANREPT-T013"
+          }
+        ],
+        "transitionCount": 19,
+        "traversalSummaries": {
+          "CBACT04C_INTCALC": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "I_OPENED": 1
+            },
+            "omittedCount": 4,
+            "unknown": 0
+          },
+          "CBTRN02C_POSTTRAN": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "P_OPENED": 1
+            },
+            "omittedCount": 5,
+            "unknown": 1
+          },
+          "CBTRN03C_TRANREPT": {
+            "budget": {
+              "maxDepth": 6,
+              "maxPaths": 1
+            },
+            "completed": 0,
+            "frontier": 0,
+            "loopVisits": {
+              "R_LOOP": 1
+            },
+            "omittedCount": 7,
+            "unknown": 1
+          }
+        }
+      },
+      "status": "candidate_not_official",
+      "suitePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/contracts/E3-SDD-stage6r3/T3-suite.json",
+      "suiteReadbackCases": 18,
+      "traversalSummaries": {
+        "CBACT04C_INTCALC": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "I_OPENED": 1
+          },
+          "omittedCount": 4,
+          "unknown": 0
+        },
+        "CBTRN02C_POSTTRAN": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "P_OPENED": 1
+          },
+          "omittedCount": 5,
+          "unknown": 1
+        },
+        "CBTRN03C_TRANREPT": {
+          "budget": {
+            "maxDepth": 6,
+            "maxPaths": 1
+          },
+          "completed": 0,
+          "frontier": 0,
+          "loopVisits": {
+            "R_LOOP": 1
+          },
+          "omittedCount": 7,
+          "unknown": 1
+        }
+      },
+      "unfilteredAcceptedCount": 18
+    }
+  ],
+  "requestOccurrences": 82,
+  "resourcePackageCounts": {
+    "interest.candidate-v1-physical-v2": 25,
+    "posting.candidate-v1-physical-v2": 38,
+    "reporting.candidate-v1-physical-v2": 19
+  },
+  "runtimeExecuted": false,
+  "status": "PASS",
+  "suite": {
+    "bytes": 522745,
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/T3-AWS-offline-all7-suite.json",
+    "sha256": "7a79aed42f63b185ffa78942d2fca9e72947c6f93dbdab5087a3b4e409941173"
+  }
+}

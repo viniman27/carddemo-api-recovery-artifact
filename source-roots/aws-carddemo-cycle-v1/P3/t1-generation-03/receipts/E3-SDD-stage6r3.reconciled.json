@@ -1,0 +1,103 @@
+{
+  "contractId": "E3-SDD-stage6r3",
+  "label": "E3-SDD-stage6r3",
+  "startedUtc": "2026-09-15T18:45:15.715049Z",
+  "requestPath": "outbound-effective/E3-SDD-stage6r3.request.json",
+  "requestBytes": 74287,
+  "requestSha256": "22bedf5dd67b613f11c12722751ff5b97e526dae137c98b070806c17bb057f69",
+  "modelRequested": "gpt-6-astra",
+  "store": false,
+  "stream": true,
+  "tools": [],
+  "previous_response_id": "omitted",
+  "retries": 0,
+  "fallback": false,
+  "followRedirects": false,
+  "redirectsDisabled": true,
+  "finishedUtc": "2026-09-15T18:47:11.218970Z",
+  "elapsedSeconds": 115.503,
+  "httpStatus": 200,
+  "rawSsePath": "raw-sse/E3-SDD-stage6r3.sse.txt",
+  "rawSseBytes": 1009046,
+  "rawSseSha256": "332f220163cd258ec0ce458a39ac2c838a896f9f3b979a4ed5fb276d7487fa72",
+  "classification": "complete",
+  "parsedPath": "parsed/E3-SDD-stage6r3.parsed.json",
+  "returnedModel": "gpt-6-astra",
+  "responseStatus": "completed",
+  "responseId": "resp_08ceb35f1678e994016aa9923cb5e487d29ee453f102937fad",
+  "outputTextSha256": "98584609ffa9543823064b52e5534cfb3ca9dfb302917788f9f11ba7284b50f5",
+  "terminalEventTypes": [
+    "response.completed"
+  ],
+  "usage": {
+    "attribution": {
+      "items": {
+        "msg_08ceb35f1678e994016aa9923cbdb487d2907e3f2da14a8dcc": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "content": [
+            {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 16328,
+              "output_tokens": 0
+            }
+          ],
+          "input_tokens": 16328,
+          "output_tokens": 0
+        },
+        "rs_08ceb35f1678e994016aa9923e175887d285f7c2942b472f4d": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "input_tokens": 2,
+          "output_tokens": 89
+        },
+        "msg_08ceb35f1678e994016aa99240e14c87d28d633d895e888c14": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "content": [
+            {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 0,
+              "output_tokens": 3609
+            }
+          ],
+          "input_tokens": 0,
+          "output_tokens": 3609
+        }
+      }
+    },
+    "input_tokens": 16330,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3698,
+    "output_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "total_tokens": 20028
+  },
+  "outputValidation": {
+    "contractId": "E3-SDD-stage6r3",
+    "validJson": true,
+    "strictTopScenarios": true,
+    "scenarioCount": 12,
+    "error": null,
+    "scenarioIds": [
+      "interest-positive-01",
+      "interest-negative-01",
+      "interest-negative-02",
+      "interest-boundary-01",
+      "posting-positive-01",
+      "posting-negative-01",
+      "posting-negative-02",
+      "posting-boundary-01",
+      "reporting-positive-01",
+      "reporting-negative-01",
+      "reporting-negative-02",
+      "reporting-boundary-01"
+    ]
+  }
+}

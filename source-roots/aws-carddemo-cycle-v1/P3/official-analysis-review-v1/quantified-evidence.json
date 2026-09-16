@@ -1,0 +1,2543 @@
+{
+  "sources": {
+    "campaign_report": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/campaign-report.json",
+    "campaign_report_sha256": "bdef12959aebfcf38f06e9e0720d7e211cdd66d9d7084043d1cfe496188e68aa",
+    "freeze_package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-freeze-package-v3",
+    "manifest_sha256": "0dfc7eb85dc25668f225f61523b3b7909297cf3d12430fc67d2855de70236bef"
+  },
+  "global": {
+    "cases": 12700,
+    "suites": 28,
+    "attempted": 12700,
+    "completed": 12700,
+    "measurement_admissible": 1070,
+    "planned": 12700,
+    "structural_ok": 12700
+  },
+  "status_counts": {
+    "500": 7254,
+    "200": 1068,
+    "400": 4378
+  },
+  "structural_counts": {
+    "documented_500_schema_valid": 7254,
+    "schema_valid": 5446
+  },
+  "expectation_counts": {
+    "pass": 11912,
+    "inconclusive": 788
+  },
+  "measurement_counts": {
+    "inadmissible_or_limited": 11630,
+    "admissible_preparatory": 1070
+  },
+  "by_experiment_test_status": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 31
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 2700
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "status": 500,
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 2759
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "status": 200,
+      "count": 16
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 1
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "status": 200,
+      "count": 159
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 1674
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 867
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 88
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "status": 400,
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 263
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 1730
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 868
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "status": 200,
+      "count": 3
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 9
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "status": 200,
+      "count": 18
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 450
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 122
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 143
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 459
+    }
+  ],
+  "by_experiment_test_measurement": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 31
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 2700
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 2759
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 17
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 159
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 2541
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 88
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 264
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 2597
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 3
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 9
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 18
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 450
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 122
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 143
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 459
+    }
+  ],
+  "by_experiment_test_response_class": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "response_class": "technical-schema-validation",
+      "count": 14
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "response_class": "technical-unresolved-local-binding-token",
+      "count": 17
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "response_class": "json-other",
+      "count": 320
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "response_class": "technical-encoding-ascii",
+      "count": 310
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "response_class": "technical-schema-validation",
+      "count": 1139
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "response_class": "technical-unresolved-local-binding-token",
+      "count": 931
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "response_class": "cobol-observable-diagnostic",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "response_class": "technical-schema-validation",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "response_class": "cobol-observable-diagnostic",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "response_class": "json-other",
+      "count": 320
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "response_class": "technical-encoding-ascii",
+      "count": 310
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "response_class": "technical-schema-validation",
+      "count": 1181
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "response_class": "technical-unresolved-local-binding-token",
+      "count": 948
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "response_class": "business-shaped-json",
+      "count": 11
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "response_class": "cobol-observable-diagnostic",
+      "count": 1
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "response_class": "empty-json-object",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "response_class": "json-other",
+      "count": 5
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "response_class": "business-shaped-json",
+      "count": 122
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "response_class": "empty-json-object",
+      "count": 1674
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "response_class": "json-other",
+      "count": 291
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "response_class": "technical-encoding-ascii",
+      "count": 613
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "response_class": "business-shaped-json",
+      "count": 64
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "response_class": "cobol-observable-diagnostic",
+      "count": 24
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "response_class": "empty-json-object",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "response_class": "business-shaped-json",
+      "count": 197
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "response_class": "cobol-observable-diagnostic",
+      "count": 25
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "response_class": "empty-json-object",
+      "count": 1730
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "response_class": "json-other",
+      "count": 296
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "response_class": "technical-encoding-ascii",
+      "count": 613
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "response_class": "business-shaped-json",
+      "count": 3
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "response_class": "request-representation-rejection",
+      "count": 9
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "response_class": "business-shaped-json",
+      "count": 18
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "response_class": "request-representation-rejection",
+      "count": 450
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "response_class": "business-shaped-json",
+      "count": 122
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "response_class": "business-shaped-json",
+      "count": 143
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "response_class": "request-representation-rejection",
+      "count": 459
+    }
+  ],
+  "by_contract_test_status": [
+    {
+      "contractId": "E1-1",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 10
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 900
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 24
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T3",
+      "status": 500,
+      "count": 28
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 24
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 938
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 9
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 900
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 52
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 52
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 909
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 12
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 900
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 52
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 52
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 912
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T1",
+      "status": 200,
+      "count": 9
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 8
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T1",
+      "status": 500,
+      "count": 1
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T2",
+      "status": 200,
+      "count": 120
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 377
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 403
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 32
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 161
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 385
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 404
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 12
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 834
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 66
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 24
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T3",
+      "status": 400,
+      "count": 28
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 24
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 874
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 66
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T1",
+      "status": 200,
+      "count": 7
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 8
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T2",
+      "status": 200,
+      "count": 39
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 463
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T2",
+      "status": 500,
+      "count": 398
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 32
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 78
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 471
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T4",
+      "status": 500,
+      "count": 398
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T1",
+      "status": 200,
+      "count": 3
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T1",
+      "status": 400,
+      "count": 9
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T2",
+      "status": 200,
+      "count": 18
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T2",
+      "status": 400,
+      "count": 450
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T3",
+      "status": 200,
+      "count": 122
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T4",
+      "status": 200,
+      "count": 143
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T4",
+      "status": 400,
+      "count": 459
+    }
+  ],
+  "by_contract_test_measurement": [
+    {
+      "contractId": "E1-1",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 10
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 900
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 24
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T3",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 28
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 24
+    },
+    {
+      "contractId": "E1-1",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 938
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 9
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 900
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 52
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 52
+    },
+    {
+      "contractId": "E1-2",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 909
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 12
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 900
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 52
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 52
+    },
+    {
+      "contractId": "E1-3",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 912
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T1",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 10
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 8
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T2",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 120
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 780
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 32
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 162
+    },
+    {
+      "contractId": "E2-1",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 788
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 12
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 900
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 24
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T3",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 28
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 24
+    },
+    {
+      "contractId": "E2-2",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 940
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T1",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 7
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 8
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T2",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 39
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 861
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 32
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 78
+    },
+    {
+      "contractId": "E2-3",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 869
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T1",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 3
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T1",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 9
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T2",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 18
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T2",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 450
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T3",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 122
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T4",
+      "measurement_admissibility": "admissible_preparatory",
+      "count": 143
+    },
+    {
+      "contractId": "E3-SDD-stage6r3",
+      "test_condition": "T4",
+      "measurement_admissibility": "inadmissible_or_limited",
+      "count": 459
+    }
+  ],
+  "by_track_status": [
+    {
+      "experiment": "E1",
+      "track": "interest",
+      "status": 200,
+      "count": 108
+    },
+    {
+      "experiment": "E1",
+      "track": "interest",
+      "status": 500,
+      "count": 1822
+    },
+    {
+      "experiment": "E1",
+      "track": "posting",
+      "status": 200,
+      "count": 36
+    },
+    {
+      "experiment": "E1",
+      "track": "posting",
+      "status": 500,
+      "count": 1820
+    },
+    {
+      "experiment": "E1",
+      "track": "reporting",
+      "status": 200,
+      "count": 112
+    },
+    {
+      "experiment": "E1",
+      "track": "reporting",
+      "status": 500,
+      "count": 1876
+    },
+    {
+      "experiment": "E2",
+      "track": "interest",
+      "status": 200,
+      "count": 120
+    },
+    {
+      "experiment": "E2",
+      "track": "interest",
+      "status": 400,
+      "count": 1050
+    },
+    {
+      "experiment": "E2",
+      "track": "interest",
+      "status": 500,
+      "count": 696
+    },
+    {
+      "experiment": "E2",
+      "track": "posting",
+      "status": 200,
+      "count": 200
+    },
+    {
+      "experiment": "E2",
+      "track": "posting",
+      "status": 400,
+      "count": 1204
+    },
+    {
+      "experiment": "E2",
+      "track": "posting",
+      "status": 500,
+      "count": 454
+    },
+    {
+      "experiment": "E2",
+      "track": "reporting",
+      "status": 200,
+      "count": 206
+    },
+    {
+      "experiment": "E2",
+      "track": "reporting",
+      "status": 400,
+      "count": 1206
+    },
+    {
+      "experiment": "E2",
+      "track": "reporting",
+      "status": 500,
+      "count": 586
+    },
+    {
+      "experiment": "E3",
+      "track": "interest",
+      "status": 200,
+      "count": 70
+    },
+    {
+      "experiment": "E3",
+      "track": "interest",
+      "status": 400,
+      "count": 306
+    },
+    {
+      "experiment": "E3",
+      "track": "posting",
+      "status": 200,
+      "count": 48
+    },
+    {
+      "experiment": "E3",
+      "track": "posting",
+      "status": 400,
+      "count": 306
+    },
+    {
+      "experiment": "E3",
+      "track": "reporting",
+      "status": 200,
+      "count": 168
+    },
+    {
+      "experiment": "E3",
+      "track": "reporting",
+      "status": 400,
+      "count": 306
+    }
+  ],
+  "allowed_status_by_experiment_test_contract_track": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-1",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 4
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-1",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 3
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-1",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 3
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-2",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 3
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-2",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 3
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-2",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 3
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-3",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 4
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-3",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 4
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "contractId": "E1-3",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 4
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-1",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-1",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-1",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-2",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-2",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-2",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-3",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-3",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "contractId": "E1-3",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 300
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-1",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-1",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-1",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-2",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-2",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-2",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-3",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "contractId": "E1-3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 304
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 303
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-1",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 303
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 303
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 303
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-2",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 303
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "interest",
+      "allowed_status": "200,500",
+      "count": 304
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "posting",
+      "allowed_status": "200,500",
+      "count": 304
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "contractId": "E1-3",
+      "track": "reporting",
+      "allowed_status": "200,500",
+      "count": 304
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-1",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 6
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-1",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 6
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-1",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 6
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-2",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-2",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-2",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-3",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 5
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-3",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 5
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "contractId": "E2-3",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 5
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-1",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-1",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-1",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-2",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-2",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-2",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-3",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-3",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "contractId": "E2-3",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 300
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-1",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-1",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-2",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-2",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-2",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "contractId": "E2-3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-1",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 306
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-1",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-1",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 306
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-1",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-1",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 306
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 18
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 304
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 6
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 304
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-2",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 304
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-3",
+      "track": "interest",
+      "allowed_status": "200,400,500",
+      "count": 305
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 4
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-3",
+      "track": "posting",
+      "allowed_status": "200,400,500",
+      "count": 305
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "contractId": "E2-3",
+      "track": "reporting",
+      "allowed_status": "200,400,500",
+      "count": 305
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "interest",
+      "allowed_status": "200,400,500,503",
+      "count": 4
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "posting",
+      "allowed_status": "200,400,500,503",
+      "count": 4
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "reporting",
+      "allowed_status": "200,400,500,503",
+      "count": 4
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "interest",
+      "allowed_status": "200,400,500,503",
+      "count": 156
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "posting",
+      "allowed_status": "200,400,500,503",
+      "count": 156
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "reporting",
+      "allowed_status": "200,400,500,503",
+      "count": 156
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 17
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 77
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "interest",
+      "allowed_status": "",
+      "count": 28
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "interest",
+      "allowed_status": "200,400,500,503",
+      "count": 160
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "posting",
+      "allowed_status": "",
+      "count": 17
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "posting",
+      "allowed_status": "200,400,500,503",
+      "count": 160
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "reporting",
+      "allowed_status": "",
+      "count": 77
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "contractId": "E3-SDD-stage6r3",
+      "track": "reporting",
+      "allowed_status": "200,400,500,503",
+      "count": 160
+    }
+  ],
+  "empty_object_requests_by_experiment_test_track": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 1
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 9
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 7
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 8
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 9
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 8
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 8
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 2
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 2
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 39
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 20
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 41
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 22
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 1
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 1
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 1
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 6
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 6
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 6
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 28
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 17
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 77
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "track": "interest",
+      "request_body_empty_object": true,
+      "count": 35
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "track": "posting",
+      "request_body_empty_object": true,
+      "count": 24
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "track": "reporting",
+      "request_body_empty_object": true,
+      "count": 84
+    }
+  ],
+  "measurement_reasons": [
+    {
+      "experiment": "E1",
+      "test_condition": "T1",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 31
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T2",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 2700
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "measurement_reasons": "",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T3",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 28
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "measurement_reasons": "",
+      "count": 128
+    },
+    {
+      "experiment": "E1",
+      "test_condition": "T4",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 2759
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "measurement_reasons": "",
+      "count": 17
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T1",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "measurement_reasons": "",
+      "count": 159
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T2",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 2541
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "measurement_reasons": "",
+      "count": 88
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T3",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 28
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "measurement_reasons": "",
+      "count": 264
+    },
+    {
+      "experiment": "E2",
+      "test_condition": "T4",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 2597
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "measurement_reasons": "",
+      "count": 3
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T1",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 9
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "measurement_reasons": "",
+      "count": 18
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T2",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 450
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T3",
+      "measurement_reasons": "",
+      "count": 122
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "measurement_reasons": "",
+      "count": 143
+    },
+    {
+      "experiment": "E3",
+      "test_condition": "T4",
+      "measurement_reasons": "audit_missing_for_current_case_track",
+      "count": 459
+    }
+  ],
+  "top_response_hashes": [
+    {
+      "status": 400,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "class": "empty-json-object",
+      "count": 3460,
+      "excerpt": "{}"
+    },
+    {
+      "status": 400,
+      "sha256": "4c215236f1192c46fdfee3b2d99f6af53eb0a070f97fcfbca1dd2a69a8ad2a29",
+      "class": "request-representation-rejection",
+      "count": 306,
+      "excerpt": "{\"track\": \"interest\", \"category\": \"request_representation\", \"completeness\": \"not_attested\", \"durability\": \"unknown\"}"
+    },
+    {
+      "status": 400,
+      "sha256": "8fd0f23219a41ca9f28898b1127c583f862da244c937242724e53633e392b548",
+      "class": "request-representation-rejection",
+      "count": 306,
+      "excerpt": "{\"track\": \"posting\", \"category\": \"request_representation\", \"completeness\": \"not_attested\", \"durability\": \"unknown\"}"
+    },
+    {
+      "status": 400,
+      "sha256": "b02b137bcacaba181e80b1d28737d9750eacaa9f2d8c0f2603fe0ff5abc461ac",
+      "class": "request-representation-rejection",
+      "count": 306,
+      "excerpt": "{\"track\": \"reporting\", \"category\": \"request_representation\", \"completeness\": \"not_attested\", \"durability\": \"unknown\"}"
+    },
+    {
+      "status": 500,
+      "sha256": "d055b2a241806b3eb67d32b9d421b7011c8fb1f6a03320190db8b168817b1c7f",
+      "class": "technical-encoding-ascii",
+      "count": 184,
+      "excerpt": "{\"outcome\": \"failed\", \"program\": \"CBTRN03C\", \"diagnostics\": [\"ValueError('string argument should contain only ASCII characters')\"]}"
+    },
+    {
+      "status": 200,
+      "sha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+      "class": "business-shaped-json",
+      "count": 168,
+      "excerpt": "{\"track\": \"reporting\", \"completeness\": \"not_attested\", \"durability\": \"unknown\", \"records\": {\"availability\": \"available\", \"items\": [{\"kind\": \"header\", \"value\": {\"reportShortNameText\": \"DALYREPT\", \"reportLongNameText\": \"Daily Transaction Report\", \"startText\": \"2022-07-01\", \"endText\": \"2022-07-31\"}}, {"
+    },
+    {
+      "status": 500,
+      "sha256": "6a573cacb84760fcf354dc35328a369737ed7595ef316971206caf386811def5",
+      "class": "technical-encoding-ascii",
+      "count": 156,
+      "excerpt": "{\"outcome\": \"failed\", \"program\": \"CBTRN02C\", \"diagnostics\": [\"ValueError('string argument should contain only ASCII characters')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "0c2dc810e5127264353cf51c7e2adb3feb2b2dc106cd09d0e225895bf03cb35f",
+      "class": "technical-schema-validation",
+      "count": 152,
+      "excerpt": "{\"outcome\": \"failed\", \"program\": \"CBTRN03C\", \"diagnostics\": [\"<ValidationError: \\\"'' should be non-empty\\\">\"]}"
+    },
+    {
+      "status": 200,
+      "sha256": "65d80abe777b8060102d4769ea2265cd31bb4b761224f6517ba129456b71d123",
+      "class": "business-shaped-json",
+      "count": 144,
+      "excerpt": "{\"processedCount\": 1, \"rejectedCount\": 1, \"returnCode\": 4, \"transactions\": [], \"rejects\": []}"
+    },
+    {
+      "status": 500,
+      "sha256": "88d62f1729e5581ea05097b7173fef29e3aeee57704ad3e53ef35bbf24b174f5",
+      "class": "technical-schema-validation",
+      "count": 134,
+      "excerpt": "{\"program\": \"CBTRN02C\", \"diagnostics\": [\"<ValidationError: \\\"'dailyTransactions' is a required property\\\">\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "07b116110fcc367c3e8a370efd6dcfbb960a4aab3c57ae2c970dc02a57905b29",
+      "class": "technical-schema-validation",
+      "count": 132,
+      "excerpt": "{\"outcome\": \"failed\", \"program\": \"CBTRN02C\", \"diagnostics\": [\"<ValidationError: \\\"'' should be non-empty\\\">\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "89eb3a64921cb7a6b56002d3dd2e2e22a63fd394bbf3cce7211e108043fde44b",
+      "class": "technical-schema-validation",
+      "count": 116,
+      "excerpt": "{\"message\": \"technical_failure\", \"program\": \"CBTRN02C\", \"diagnostics\": [\"<ValidationError: \\\"'' should be non-empty\\\">\"]}"
+    },
+    {
+      "status": 200,
+      "sha256": "49f62b61fd891923f29a62f8b00a3b3f36e7e16f46a7abb40316cfd99b0db184",
+      "class": "business-shaped-json",
+      "count": 112,
+      "excerpt": "{\"lines\": [\"DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  \", \"                                                                                                                                     \", \"Transaction ID"
+    },
+    {
+      "status": 500,
+      "sha256": "7cba391a86bffe6fbc4eb7752c37b7e5e05261ac5975ffb8bae79ed7c790578d",
+      "class": "technical-unresolved-local-binding-token",
+      "count": 110,
+      "excerpt": "{\"program\": \"CBTRN02C\", \"diagnostics\": [\"ValueError(\\\"unresolved local binding token: ''\\\")\"]}"
+    },
+    {
+      "status": 200,
+      "sha256": "fde6cb9ea71d9460330da7d1f23965fea313a3bd36510741d5373f684068b14f",
+      "class": "business-shaped-json",
+      "count": 94,
+      "excerpt": "{\"lines\": []}"
+    },
+    {
+      "status": 500,
+      "sha256": "1a57d7e1f194fc8a9c7765c67e0ed8b3fd05f7e1023df636c47ca352f09539d0",
+      "class": "technical-encoding-ascii",
+      "count": 94,
+      "excerpt": "{\"program\": \"CBTRN03C\", \"diagnostics\": [\"ValueError('string argument should contain only ASCII characters')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "550c29ecdc42742a8af5f18faad6a0de4af2cc0c0584ed4abc32d049ad166642",
+      "class": "json-other",
+      "count": 94,
+      "excerpt": "{\"diagnostics\": [\"JSONDecodeError('Expecting value: line 1 column 1 (char 0)')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "2fcb7f01689b312ceec677d1288a9f702b6af1edf48d072e639000760c14e278",
+      "class": "technical-schema-validation",
+      "count": 88,
+      "excerpt": "{\"outcome\": \"failed\", \"program\": \"CBACT04C\", \"diagnostics\": [\"<ValidationError: \\\"'' should be non-empty\\\">\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "ae0fa9eea290b7bc9c088e470720bcf9382afaa095f488c2dd35cd9e1be69bae",
+      "class": "technical-unresolved-local-binding-token",
+      "count": 86,
+      "excerpt": "{\"message\": \"technical_failure\", \"program\": \"CBTRN02C\", \"diagnostics\": [\"ValueError(\\\"unresolved local binding token: '0'\\\")\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "fd6aa406387b3ce1c7c87e185824a4e354ae6adf6b07379ec04d358393575c54",
+      "class": "technical-unresolved-local-binding-token",
+      "count": 80,
+      "excerpt": "{\"program\": \"CBACT04C\", \"diagnostics\": [\"ValueError(\\\"unresolved local binding token: ''\\\")\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "053a02761201c7ffd240081bd036d65cba51cb5e45e8dc0769cdf4257effbeed",
+      "class": "json-other",
+      "count": 78,
+      "excerpt": "{\"program\": \"CBACT04C\", \"diagnostics\": [\"JSONDecodeError('Expecting value: line 1 column 1 (char 0)')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "4559f872d08c4700041fccfc2fc0a53d28bbf2b25861e5705c38df72006acc0c",
+      "class": "technical-encoding-ascii",
+      "count": 76,
+      "excerpt": "{\"program\": \"CBTRN02C\", \"diagnostics\": [\"ValueError('string argument should contain only ASCII characters')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "47f76ed23f8b05aee99343a827e3d77a78d0963473ea5250519e1f6d5eb888f7",
+      "class": "technical-encoding-ascii",
+      "count": 72,
+      "excerpt": "{\"message\": \"technical_failure\", \"program\": \"CBTRN02C\", \"diagnostics\": [\"ValueError('string argument should contain only ASCII characters')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "fdb3e61823c7c9a51fa1335df319b13abc63f2cfb650bc46b73d1a9911e014cd",
+      "class": "json-other",
+      "count": 68,
+      "excerpt": "{\"program\": \"CBTRN02C\", \"diagnostics\": [\"JSONDecodeError('Expecting value: line 1 column 1 (char 0)')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "55d6ceda144c255621632fec110770f58647fb0952e8cba4f58a7b55ab679bf8",
+      "class": "technical-schema-validation",
+      "count": 56,
+      "excerpt": "{\"message\": \"technical_failure\", \"program\": \"CBTRN03C\", \"diagnostics\": [\"<ValidationError: \\\"'MjAyMi0wNy0wMSAyMDIyLTA3LTMxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA=' is too long\\\">\"]}"
+    },
+    {
+      "status": 200,
+      "sha256": "848434f4eb67e94ed5117a6c96f11b5e19d1ecaf3eea32d47200237f71c8ecbe",
+      "class": "cobol-observable-diagnostic",
+      "count": 56,
+      "excerpt": "{\"lines\": [\"DALYREPT                              Daily Transaction Report                 Date Range: 2022-07-01 to 2022-07-31                  \", \"                                                                                                                                     \", \"Transaction ID"
+    },
+    {
+      "status": 200,
+      "sha256": "4afc07cf3f7131db36369cf8c3eddff5f52dd5e9f3ca8f1f6a6a52aae08a5273",
+      "class": "cobol-observable-diagnostic",
+      "count": 56,
+      "excerpt": "{\"outcome\": \"completed\", \"returnCode\": 0, \"diagnostics\": [\"START OF EXECUTION OF PROGRAM CBTRN03C\", \"Reporting from 2022-07-01 to 2022-07-31\", \"REPORT-IN---001 010005Internet  candidate purchase                                                                                  00000001200123456789Fixt"
+    },
+    {
+      "status": 500,
+      "sha256": "213668e82e33b2ffad5f3d0b940f57bf2a408be05ce3986f7398660969239ecd",
+      "class": "json-other",
+      "count": 52,
+      "excerpt": "{\"program\": \"CBTRN03C\", \"diagnostics\": [\"JSONDecodeError('Expecting value: line 1 column 1 (char 0)')\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "8b4850fe132756ad009646fe3d758b691166527ee959efd2234ca5398548c58b",
+      "class": "technical-schema-validation",
+      "count": 50,
+      "excerpt": "{\"message\": \"technical_failure\", \"program\": \"CBACT04C\", \"diagnostics\": [\"<ValidationError: \\\"'' should be non-empty\\\">\"]}"
+    },
+    {
+      "status": 500,
+      "sha256": "72df12a33d37a69735afa54d7dda9e03d1b2715164f3c8369203cd8bf49385aa",
+      "class": "technical-schema-validation",
+      "count": 50,
+      "excerpt": "{\"program\": \"CBACT04C\", \"diagnostics\": [\"<ValidationError: \\\"'idPrefix' is a required property\\\">\"]}"
+    }
+  ]
+}

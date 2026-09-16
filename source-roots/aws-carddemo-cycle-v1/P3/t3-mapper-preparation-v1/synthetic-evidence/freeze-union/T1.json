@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "case_id": "T1-synth",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "synthetic",
+      "parameters": {},
+      "provenance": [
+        "T1:T1-synth"
+      ],
+      "request": {
+        "body_b64": "eyJwYXlsb2FkIjoiWVdKaiIsIm5hbWUiOiJvayJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/synthetic"
+      },
+      "resource_package_id": "synthetic",
+      "sequence": [],
+      "suite_id": "T1",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "d53d7bd4a84c5eebfdcad64d929decb98268c01b4a8a8611ef1b64de846bbc39",
+  "suite_id": "T1"
+}

@@ -1,0 +1,262 @@
+{
+  "commit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+  "metric": "physical lines including comments and blanks; unique paths; COPY expansion not counted repeatedly",
+  "baseline_policy": "All COBOL/copybooks in the three legacy-cobol trees, including auxiliary programs and BAMS test; excludes generated wrappers and repeated contract copies",
+  "baseline": {
+    "account-balance": {
+      "files": [
+        {
+          "path": "data.cob",
+          "physical_lines": 23,
+          "sha256": "2b1a0396eaa2122028f85989d9fbcfbbb318619a8c991074f556afa2072f3a21"
+        },
+        {
+          "path": "main.cob",
+          "physical_lines": 36,
+          "sha256": "c45a53ef1178a9bcafd021e5cdc57cec663fa2a9cf4cb5cecb74d13ef7834f4b"
+        },
+        {
+          "path": "operations.cob",
+          "physical_lines": 41,
+          "sha256": "cfd386fc469de75f46fd62d308538650ba03dbb4fbe502cb126f8ae9fcecab50"
+        }
+      ],
+      "physical_lines": 100
+    },
+    "payroll": {
+      "files": [
+        {
+          "path": "enhanced_modules.cbl",
+          "physical_lines": 90,
+          "sha256": "7b50764a00e98459c34d37bc4c93e559cbba5a7ba12a0a0532c09cb89320f53c"
+        },
+        {
+          "path": "payroll.cbl",
+          "physical_lines": 638,
+          "sha256": "2bc7f85631059172c18f2d1359e2a29d63c092f071f92cc7d33556cac357e80e"
+        }
+      ],
+      "physical_lines": 728
+    },
+    "bams": {
+      "files": [
+        {
+          "path": "BarnCampReport.cbl",
+          "physical_lines": 166,
+          "sha256": "f1f75c2aa09a7f21ccd62d520ba9a7ac4720a65f660c2ad8a0e58b59e67b7ad2"
+        },
+        {
+          "path": "DD-Attendee.cpy",
+          "physical_lines": 30,
+          "sha256": "695e061cfb2a2c4225c0d31a6ddb334b876092d750697a36e016289e9084bf74"
+        },
+        {
+          "path": "DD-CommandKeys.cpy",
+          "physical_lines": 17,
+          "sha256": "80b5c5c1a8e5a96a4462fe3bef0e2428c764607fcb8cb428af7dede02041748b"
+        },
+        {
+          "path": "DD-HlEvent.cpy",
+          "physical_lines": 6,
+          "sha256": "c5dd1f4bc960ff7b8d94da94b0fee43e15477524523b6be3d46000c6379ed732"
+        },
+        {
+          "path": "DD-ScreenHeader.cpy",
+          "physical_lines": 2,
+          "sha256": "ce745d754d3f4aa65dc662d064d09cbffa9d38b7d90bddb2be4d0e5093b8fe68"
+        },
+        {
+          "path": "ExportAttendees.cbl",
+          "physical_lines": 91,
+          "sha256": "4e78e6739ce1d6d25e7aceb9441a8ea6d753eb7890c0c043a485d868564bf040"
+        },
+        {
+          "path": "ImportAttendees.cbl",
+          "physical_lines": 135,
+          "sha256": "30a33874b6618563ead95503b33557666ac31be9165005dedfa583d6b0ada0de"
+        },
+        {
+          "path": "SC-EditScreen.cpy",
+          "physical_lines": 29,
+          "sha256": "2c1ee173f242ebc7a0b2a0f185882dc2b79ffaecfaac1d9478664d090a8631fd"
+        },
+        {
+          "path": "SC-HomeScreen.cpy",
+          "physical_lines": 31,
+          "sha256": "03c437c3b43369d7f7a33f39c6f9593c6af4599477dd5dfdd6af6bc3d9bdd8e6"
+        },
+        {
+          "path": "SC-ListScreen.cpy",
+          "physical_lines": 8,
+          "sha256": "2647cc1ee18e1facc5cf788eac510757079b00d7a9a4ac9e46fed648acf3a3c7"
+        },
+        {
+          "path": "SC-SearchScreen.cpy",
+          "physical_lines": 12,
+          "sha256": "e47308f8ff58ed1af53c72368718680224416ff00de0f7c0547d4df5993f45ba"
+        },
+        {
+          "path": "SC-ViewScreen.cpy",
+          "physical_lines": 28,
+          "sha256": "412afe12c0baeba797b6222d2f6f575fa721accfa62481c892e1f35fd4253267"
+        },
+        {
+          "path": "bams.cbl",
+          "physical_lines": 465,
+          "sha256": "8363ae35607dcbb046651c05e7ed12deaa5c8346e48f7ec7b817613048ea9f25"
+        },
+        {
+          "path": "createAuthCode.cbl",
+          "physical_lines": 27,
+          "sha256": "dc7225a64951ca79650e5fcdb00966664c769d40cd02899800d6119f940aee19"
+        },
+        {
+          "path": "createAuthCodeTest.cbl",
+          "physical_lines": 59,
+          "sha256": "4fadc9038fd24e950827d81f563ff84e0451a22b7c450a8ede53480a0216f101"
+        }
+      ],
+      "physical_lines": 1106
+    }
+  },
+  "baseline_total": 1934,
+  "selection": {
+    "programs": [
+      {
+        "path": "app/cbl/CBACT04C.cbl",
+        "physical_lines": 652,
+        "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+      },
+      {
+        "path": "app/cbl/CBSTM03A.CBL",
+        "physical_lines": 924,
+        "sha256": "23c8753b6b4e0c24d4560c83861fe8162626bab195faec0fe88cf80b8bf432b5"
+      },
+      {
+        "path": "app/cbl/CBSTM03B.CBL",
+        "physical_lines": 230,
+        "sha256": "ac004f7f40dcb3f2a14dfb83a743f83fed9383675bc93452f3424c40cb6475a7"
+      },
+      {
+        "path": "app/cbl/CBTRN02C.cbl",
+        "physical_lines": 731,
+        "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+      },
+      {
+        "path": "app/cbl/CBTRN03C.cbl",
+        "physical_lines": 649,
+        "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+      }
+    ],
+    "copybooks": [
+      {
+        "path": "app/cpy/COSTM01.CPY",
+        "physical_lines": 38,
+        "sha256": "108170f314aa951281fdda321c4609c89638caee8d4d7085d08cdca5dc6bec36"
+      },
+      {
+        "path": "app/cpy/CUSTREC.cpy",
+        "physical_lines": 26,
+        "sha256": "f87a0a041fbd8f38dc9c23a9519b917af9c7008527e9cb924f91c2fb4e0a2ecc"
+      },
+      {
+        "path": "app/cpy/CVACT01Y.cpy",
+        "physical_lines": 20,
+        "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+      },
+      {
+        "path": "app/cpy/CVACT03Y.cpy",
+        "physical_lines": 11,
+        "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+      },
+      {
+        "path": "app/cpy/CVTRA01Y.cpy",
+        "physical_lines": 13,
+        "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+      },
+      {
+        "path": "app/cpy/CVTRA02Y.cpy",
+        "physical_lines": 13,
+        "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c"
+      },
+      {
+        "path": "app/cpy/CVTRA03Y.cpy",
+        "physical_lines": 10,
+        "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667"
+      },
+      {
+        "path": "app/cpy/CVTRA04Y.cpy",
+        "physical_lines": 12,
+        "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8"
+      },
+      {
+        "path": "app/cpy/CVTRA05Y.cpy",
+        "physical_lines": 21,
+        "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+      },
+      {
+        "path": "app/cpy/CVTRA06Y.cpy",
+        "physical_lines": 21,
+        "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1"
+      },
+      {
+        "path": "app/cpy/CVTRA07Y.cpy",
+        "physical_lines": 73,
+        "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa"
+      }
+    ],
+    "copy_dependencies": {
+      "app/cbl/CBSTM03B.CBL": [],
+      "app/cbl/CBSTM03A.CBL": [
+        "COSTM01",
+        "CVACT03Y",
+        "CUSTREC",
+        "CVACT01Y"
+      ],
+      "app/cpy/CVACT01Y.cpy": [],
+      "app/cpy/CUSTREC.cpy": [],
+      "app/cpy/CVACT03Y.cpy": [],
+      "app/cpy/COSTM01.CPY": [],
+      "app/cbl/CBTRN03C.cbl": [
+        "CVTRA05Y",
+        "CVACT03Y",
+        "CVTRA03Y",
+        "CVTRA04Y",
+        "CVTRA07Y"
+      ],
+      "app/cpy/CVTRA07Y.cpy": [],
+      "app/cpy/CVTRA04Y.cpy": [],
+      "app/cpy/CVTRA03Y.cpy": [],
+      "app/cpy/CVTRA05Y.cpy": [],
+      "app/cbl/CBACT04C.cbl": [
+        "CVTRA01Y",
+        "CVACT03Y",
+        "CVTRA02Y",
+        "CVACT01Y",
+        "CVTRA05Y"
+      ],
+      "app/cpy/CVTRA02Y.cpy": [],
+      "app/cpy/CVTRA01Y.cpy": [],
+      "app/cbl/CBTRN02C.cbl": [
+        "CVTRA06Y",
+        "CVTRA05Y",
+        "CVACT03Y",
+        "CVACT01Y",
+        "CVTRA01Y"
+      ],
+      "app/cpy/CVTRA06Y.cpy": []
+    },
+    "program_lines": 3186,
+    "copybook_lines": 258,
+    "total": 3444,
+    "ratio_to_baseline": 1.78076525336091,
+    "jcl_not_in_loc": [
+      "POSTTRAN.jcl",
+      "INTCALC.jcl",
+      "TRANBKP.jcl",
+      "COMBTRAN.jcl",
+      "TRANREPT.jcl",
+      "CREASTMT.JCL"
+    ]
+  }
+}

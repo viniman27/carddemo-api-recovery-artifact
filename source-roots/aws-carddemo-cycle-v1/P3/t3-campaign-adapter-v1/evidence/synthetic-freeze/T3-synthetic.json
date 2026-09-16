@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "T3-0001-94bcaebc6240",
+      "expectation": {
+        "checks": {
+          "contract_checker": "documented_separate_independent_obligation",
+          "expected_status_source": "not_runtime_not_api_not_results",
+          "status": "inconclusive_until_checker_bound"
+        },
+        "expectation_id": "contract-checker-independent-obligation"
+      },
+      "origin": "T3-v4-adapter:C1",
+      "parameters": {
+        "capability": "CAP-A",
+        "cellRef": "OBL-A::C1::op",
+        "guardResult": true,
+        "obligationId": "OBL-A",
+        "officialCampaign": false,
+        "recipeId": "r-a",
+        "requestEvidence": {
+          "inventedValues": false,
+          "officialCampaign": false,
+          "selectedFixture": {
+            "fixtureId": "fixture-ok",
+            "track": "synthetic"
+          },
+          "sourceboundValues": [
+            {
+              "bytes": 3,
+              "dd": "PAYLOAD",
+              "fixtureId": "fixture-ok",
+              "selector": "fromBytes"
+            }
+          ]
+        },
+        "transitionId": "TA"
+      },
+      "provenance": [
+        "reference-executable-v4:TA",
+        "t3-cell:OBL-A::C1::op"
+      ],
+      "request": {
+        "body_b64": "eyJwYXlsb2FkIjoiWVdKaiJ9",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "fixture-ok",
+      "sequence": [
+        "TA"
+      ],
+      "suite_id": "T3",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "aa09d156ef59ec349e0ad1990e5cd0e96baeaf044c80be758e509b57d5962c8b",
+  "suite_id": "T3"
+}

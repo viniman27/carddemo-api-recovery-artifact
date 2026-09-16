@@ -1,0 +1,104 @@
+{
+  "resultCount": 2,
+  "allCaseChecksPass": true,
+  "matrix": [
+    {
+      "obligationId": "INTCALC-OBL-001",
+      "description": "TCATBALF sequential balance input partition is physically materialized and read",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "TCATBALF before/after pins"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-002",
+      "description": "ACCTFILE account lookup/group id drives disclosure lookup",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "ACCTFILE qualified dump before/after"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-003",
+      "description": "XREFFILE alternate account lookup supplies generated transaction card",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "XREFFILE.1 sidecar + transaction cardReference"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-004",
+      "description": "DISCGRP specific/default lookup partitions are exercised",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero"
+      ],
+      "evidence": [
+        "STANDARD/ZERORATE/DEFAULT DISCGRP records"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-005",
+      "description": "Nonzero rate computes monthly interest from source formula",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "independent Decimal expected vs TRANSACT amount"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-006",
+      "description": "Generated transaction fixed fields and raw bytes are preserved",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "350-byte TRANSACT record provenance"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-007",
+      "description": "Zero-rate partition writes no interest transaction",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero"
+      ],
+      "evidence": [
+        "ZERORATE input with no matching output transaction"
+      ]
+    },
+    {
+      "obligationId": "INTCALC-OBL-008",
+      "description": "EOF final-account legacy limitation is observed without idealizing account rewrite",
+      "status": "covered",
+      "cases": [
+        "rates-specific-default-zero",
+        "single-final-eof"
+      ],
+      "evidence": [
+        "final account account-delta zero despite TRANSACT output"
+      ]
+    }
+  ],
+  "omissions": [
+    "Local P3 technical cases only; not official campaign fixtures or proof of all 25 checker obligations.",
+    "EOF final-account behavior records source-supported limitation, not desired finance behavior."
+  ]
+}

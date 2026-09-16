@@ -1,0 +1,800 @@
+{
+  "command": "python3 <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3/executable_reference.py <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v3 --traverse CBTRN02C_POSTTRAN --traverse CBACT04C_INTCALC --traverse CBTRN03C_TRANREPT --max-depth 8 --max-paths 80",
+  "counts": {
+    "capabilities": 3,
+    "obligations": 25,
+    "states": 25,
+    "transitions": 39
+  },
+  "errors": [],
+  "exit_code": 0,
+  "sourcePins": {
+    "checkedAnchors": 94,
+    "checkedFiles": 8,
+    "errors": []
+  },
+  "status": "executable_draft_needs_review",
+  "stderr": "",
+  "traversals": {
+    "CBACT04C_INTCALC": {
+      "budget": {
+        "maxDepth": 8,
+        "maxPaths": 80
+      },
+      "capability": "CBACT04C_INTCALC",
+      "completed": [
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T002"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "intcalc_eof_no_final_account_update",
+            "close_attempt"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T006"
+          ],
+          "state": "I_CLOSE"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T008"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "interest_compute_attempt",
+            "interest_write_attempt",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T011"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "interest_compute_attempt",
+            "interest_write_attempt",
+            "account_update_attempt",
+            "tcatbal_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T004"
+          ],
+          "state": "I_ABEND"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "interest_compute_attempt",
+            "interest_write_attempt",
+            "account_update_attempt",
+            "tcatbal_read_attempt",
+            "intcalc_eof_no_final_account_update",
+            "close_attempt"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T006"
+          ],
+          "state": "I_CLOSE"
+        },
+        {
+          "events": [
+            "intcalc_open_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "interest_compute_attempt",
+            "interest_write_attempt",
+            "account_update_attempt",
+            "tcatbal_read_attempt",
+            "group_start",
+            "abend"
+          ],
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T003",
+            "INTCALC-T008"
+          ],
+          "state": "I_ABEND"
+        }
+      ],
+      "frontier": [
+        {
+          "path": [
+            "INTCALC-T001",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009",
+            "INTCALC-T010",
+            "INTCALC-T003",
+            "INTCALC-T007",
+            "INTCALC-T009"
+          ],
+          "state": "I_WRITE_INTEREST"
+        }
+      ],
+      "loopVisits": {
+        "I_OPENED": 2
+      },
+      "omittedCount": 1,
+      "unknown": []
+    },
+    "CBTRN02C_POSTTRAN": {
+      "budget": {
+        "maxDepth": 8,
+        "maxPaths": 80
+      },
+      "capability": "CBTRN02C_POSTTRAN",
+      "completed": [
+        {
+          "events": [
+            "open_attempt",
+            "abend"
+          ],
+          "path": [
+            "POSTTRAN-T002"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T004"
+          ],
+          "state": "P_CLOSE"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T005"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "unknown_eof_receiver_path"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "reject_write_attempt"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T007"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "reject_write_attempt"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T009"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "reject_write_attempt"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T010"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "reject_write_attempt"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T011"
+          ],
+          "state": "P_REJECT"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "tcatbal_update_attempt",
+            "abend"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T014"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "tcatbal_update_attempt",
+            "account_rewrite_attempt",
+            "tranfile_write_attempt_pending",
+            "tranfile_write_attempt",
+            "abend"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "events": [
+            "open_attempt",
+            "daily_read_attempt",
+            "daily_record_counted",
+            "lookup_attempt",
+            "tcatbal_update_attempt",
+            "account_rewrite_attempt",
+            "account_rewrite_invalid_key_continues",
+            "tranfile_write_attempt_pending",
+            "tranfile_write_attempt",
+            "abend"
+          ],
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T022"
+          ],
+          "state": "P_ABEND"
+        }
+      ],
+      "frontier": [
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T003"
+          ],
+          "state": "P_VALIDATE_XREF"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T004"
+          ],
+          "state": "P_CLOSE"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T005"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T021",
+            "POSTTRAN-T003"
+          ],
+          "state": "P_VALIDATE_XREF"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T021",
+            "POSTTRAN-T004"
+          ],
+          "state": "P_CLOSE"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T021",
+            "POSTTRAN-T005"
+          ],
+          "state": "P_ABEND"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T021",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        }
+      ],
+      "loopVisits": {
+        "P_OPENED": 3
+      },
+      "omittedCount": 8,
+      "unknown": [
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T019",
+            "POSTTRAN-T021",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        },
+        {
+          "path": [
+            "POSTTRAN-T001",
+            "POSTTRAN-T003",
+            "POSTTRAN-T008",
+            "POSTTRAN-T012",
+            "POSTTRAN-T013",
+            "POSTTRAN-T020",
+            "POSTTRAN-T021",
+            "POSTTRAN-T006"
+          ],
+          "state": "P_UNKNOWN"
+        }
+      ]
+    },
+    "CBTRN03C_TRANREPT": {
+      "budget": {
+        "maxDepth": 8,
+        "maxPaths": 80
+      },
+      "capability": "CBTRN03C_TRANREPT",
+      "completed": [
+        {
+          "events": [
+            "report_open_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T002"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T012"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "unknown_eof_receiver_path"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range",
+            "report_read_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range",
+            "report_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T012"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range",
+            "unknown_eof_receiver_path"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "page_total_attempt",
+            "grand_total_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "report_read_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T011"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "report_read_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T012"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "unknown_eof_receiver_path"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range",
+            "report_read_attempt",
+            "page_total_attempt",
+            "grand_total_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "abend"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T003",
+            "TRANREPT-T015"
+          ],
+          "state": "R_ABEND"
+        },
+        {
+          "events": [
+            "report_open_attempt",
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt",
+            "report_read_attempt",
+            "page_total_attempt",
+            "grand_total_attempt",
+            "close_attempt"
+          ],
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T010",
+            "TRANREPT-T016"
+          ],
+          "state": "R_CLOSE"
+        }
+      ],
+      "frontier": [],
+      "loopVisits": {
+        "R_LOOP": 3
+      },
+      "omittedCount": 4,
+      "unknown": [
+        {
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        },
+        {
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T009",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        },
+        {
+          "path": [
+            "TRANREPT-T001",
+            "TRANREPT-T003",
+            "TRANREPT-T014",
+            "TRANREPT-T013"
+          ],
+          "state": "R_UNKNOWN"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,589 @@
+{
+  "p2a_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a",
+  "input_hashes_before_validation": {
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/POST-PIPELINE-READINESS.md": "aee4ee2a78e56befe51c1e96c7ec98fe9d5cfbbe83e79c8628d52c21ca2e7952",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7",
+    "<REDACTED_LOCAL_PATH>/WORKSPACE-NOTES.md": "be2e0ea2e3ce50ab7d85c9d22a05c1ccb9801d5fac63e2e1318a68cdec9b1e45"
+  },
+  "commands": [
+    {
+      "cmd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python -m openapi_spec_validator <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "exit_code": 0,
+      "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml: OK\n"
+    },
+    {
+      "cmd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python -m openapi_spec_validator <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "exit_code": 0,
+      "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json: OK\n"
+    }
+  ],
+  "openapi_validation": [
+    {
+      "validator": "openapi-spec-validator",
+      "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "passed": true,
+      "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml: OK\n"
+    },
+    {
+      "validator": "openapi-spec-validator",
+      "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json",
+      "passed": true,
+      "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.json: OK\n"
+    },
+    {
+      "validator": "openapi_spec_validator.validate",
+      "target": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "passed": true,
+      "output": "OK"
+    }
+  ],
+  "json_schema_2020_12_cases": [
+    {
+      "case": "PostingRequest: empty object accepted",
+      "schema": "PostingRequest",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {}
+    },
+    {
+      "case": "PostingRequest: null body rejected",
+      "schema": "PostingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "None is not of type 'object'"
+      ],
+      "instance": null
+    },
+    {
+      "case": "PostingRequest: array body rejected",
+      "schema": "PostingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "[] is not of type 'object'"
+      ],
+      "instance": []
+    },
+    {
+      "case": "PostingRequest: properties/body business fields rejected",
+      "schema": "PostingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "Additional properties are not allowed ('selector' was unexpected)"
+      ],
+      "instance": {
+        "selector": "x"
+      }
+    },
+    {
+      "case": "InterestRequest: empty object accepted",
+      "schema": "InterestRequest",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {}
+    },
+    {
+      "case": "InterestRequest: null body rejected",
+      "schema": "InterestRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "None is not of type 'object'"
+      ],
+      "instance": null
+    },
+    {
+      "case": "InterestRequest: array body rejected",
+      "schema": "InterestRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "[] is not of type 'object'"
+      ],
+      "instance": []
+    },
+    {
+      "case": "InterestRequest: properties/body business fields rejected",
+      "schema": "InterestRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "Additional properties are not allowed ('selector' was unexpected)"
+      ],
+      "instance": {
+        "selector": "x"
+      }
+    },
+    {
+      "case": "ReportingRequest: empty object accepted",
+      "schema": "ReportingRequest",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {}
+    },
+    {
+      "case": "ReportingRequest: null body rejected",
+      "schema": "ReportingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "None is not of type 'object'"
+      ],
+      "instance": null
+    },
+    {
+      "case": "ReportingRequest: array body rejected",
+      "schema": "ReportingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "[] is not of type 'object'"
+      ],
+      "instance": []
+    },
+    {
+      "case": "ReportingRequest: properties/body business fields rejected",
+      "schema": "ReportingRequest",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "Additional properties are not allowed ('selector' was unexpected)"
+      ],
+      "instance": {
+        "selector": "x"
+      }
+    },
+    {
+      "case": "body absence policy: OpenAPI requestBody.required is true on all operations",
+      "schema": "paths.*.post.requestBody.required",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [],
+      "instance": "ABSENT_BODY_SENTINEL",
+      "note": "Absence is invalid because requestBody.required is true; this is an OpenAPI operation-level rule, not a JSON instance schema."
+    },
+    {
+      "case": "PostingTransactionAvailability: observed empty array accepted",
+      "schema": "PostingTransactionAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "available",
+        "items": []
+      }
+    },
+    {
+      "case": "PostingTransactionAvailability: unavailable without items accepted",
+      "schema": "PostingTransactionAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "unavailable"
+      }
+    },
+    {
+      "case": "PostingTransactionAvailability: unavailable items forbidden",
+      "schema": "PostingTransactionAvailability",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'availability': 'unavailable', 'items': []} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "availability": "unavailable",
+        "items": []
+      }
+    },
+    {
+      "case": "PostingRejectionAvailability: observed empty array accepted",
+      "schema": "PostingRejectionAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "available",
+        "items": []
+      }
+    },
+    {
+      "case": "PostingRejectionAvailability: unavailable without items accepted",
+      "schema": "PostingRejectionAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "unavailable"
+      }
+    },
+    {
+      "case": "PostingRejectionAvailability: unavailable items forbidden",
+      "schema": "PostingRejectionAvailability",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'availability': 'unavailable', 'items': []} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "availability": "unavailable",
+        "items": []
+      }
+    },
+    {
+      "case": "InterestOutputAvailability: observed empty array accepted",
+      "schema": "InterestOutputAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "available",
+        "items": []
+      }
+    },
+    {
+      "case": "InterestOutputAvailability: unavailable without items accepted",
+      "schema": "InterestOutputAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "unavailable"
+      }
+    },
+    {
+      "case": "InterestOutputAvailability: unavailable items forbidden",
+      "schema": "InterestOutputAvailability",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'availability': 'unavailable', 'items': []} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "availability": "unavailable",
+        "items": []
+      }
+    },
+    {
+      "case": "ReportRecordAvailability: observed empty array accepted",
+      "schema": "ReportRecordAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "available",
+        "items": []
+      }
+    },
+    {
+      "case": "ReportRecordAvailability: unavailable without items accepted",
+      "schema": "ReportRecordAvailability",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "availability": "unavailable"
+      }
+    },
+    {
+      "case": "ReportRecordAvailability: unavailable items forbidden",
+      "schema": "ReportRecordAvailability",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'availability': 'unavailable', 'items': []} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "availability": "unavailable",
+        "items": []
+      }
+    },
+    {
+      "case": "posting progress-only 200 shape accepted; not output fulfillment",
+      "schema": "PostingEnvelope",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "track": "posting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "unavailable"
+        },
+        "rejections": {
+          "availability": "unavailable"
+        },
+        "progress": {
+          "availability": "available",
+          "value": {
+            "processedRecordCount": 0,
+            "preliminaryRejectCount": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "posting all-unavailable envelope barred from 200/availableContent",
+      "schema": "PostingEnvelope",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'track': 'posting', 'completeness': 'not_attested', 'durability': 'unknown', 'outputs': {'availability': 'unavailable'}, 'rejections': {'availability': 'unavailable'}, 'progress': {'availability': 'unavailable'}} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "track": "posting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "unavailable"
+        },
+        "rejections": {
+          "availability": "unavailable"
+        },
+        "progress": {
+          "availability": "unavailable"
+        }
+      }
+    },
+    {
+      "case": "interest observed empty outputs accepted",
+      "schema": "InterestEnvelope",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": []
+        }
+      }
+    },
+    {
+      "case": "interest unavailable outputs forbidden for 200/availableContent",
+      "schema": "InterestEnvelope",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "'available' was expected"
+      ],
+      "instance": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "unavailable"
+        }
+      }
+    },
+    {
+      "case": "reporting observed empty records accepted",
+      "schema": "ReportingEnvelope",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": []
+        }
+      }
+    },
+    {
+      "case": "reporting unavailable records forbidden for 200/availableContent",
+      "schema": "ReportingEnvelope",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "'available' was expected"
+      ],
+      "instance": {
+        "track": "reporting",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "unavailable"
+        }
+      }
+    },
+    {
+      "case": "knownfailure availableContent accepts available empty observation",
+      "schema": "InterfaceError",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "track": "interest",
+        "category": "technical_failure",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "availableContent": {
+          "track": "interest",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "available",
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "case": "knownfailure availableContent rejects all-unavailable envelope",
+      "schema": "InterfaceError",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "{'track': 'posting', 'category': 'technical_failure', 'completeness': 'not_attested', 'durability': 'unknown', 'availableContent': {'track': 'posting', 'completeness': 'not_attested', 'durability': 'unknown', 'outputs': {'availability': 'unavailable'}, 'rejections': {'availability': 'unavailable'}, 'progress': {'availability': 'unavailable'}}} is not valid under any of the given schemas"
+      ],
+      "instance": {
+        "track": "posting",
+        "category": "technical_failure",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "availableContent": {
+          "track": "posting",
+          "completeness": "not_attested",
+          "durability": "unknown",
+          "outputs": {
+            "availability": "unavailable"
+          },
+          "rejections": {
+            "availability": "unavailable"
+          },
+          "progress": {
+            "availability": "unavailable"
+          }
+        }
+      }
+    },
+    {
+      "case": "503 content_unavailable carries no substantive observation",
+      "schema": "InterfaceError",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "errors": [],
+      "instance": {
+        "track": "reporting",
+        "category": "content_unavailable",
+        "completeness": "not_attested",
+        "durability": "unknown"
+      }
+    },
+    {
+      "case": "reason 109 remains nonpublic/forbidden",
+      "schema": "PostingRejection",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "'109' is not one of ['100', '101', '102', '103']"
+      ],
+      "instance": {
+        "candidate": {
+          "transactionId": "x",
+          "typeCode": "x",
+          "categoryCode": "x",
+          "source": "x",
+          "description": "x",
+          "amount": "x",
+          "merchantId": "x",
+          "merchantName": "x",
+          "merchantCity": "x",
+          "merchantPostalText": "x",
+          "cardReference": "x",
+          "originalTimestamp": "x",
+          "suppliedProcessingTimestamp": "x"
+        },
+        "reason": "109",
+        "description": "x"
+      }
+    },
+    {
+      "case": "closed objects reject unknown fields",
+      "schema": "InterestEnvelope",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "errors": [
+        "Additional properties are not allowed ('extra' was unexpected)"
+      ],
+      "instance": {
+        "track": "interest",
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": []
+        },
+        "extra": "x"
+      }
+    }
+  ],
+  "counts": {
+    "paths": 3,
+    "operations": 3,
+    "component_schemas": 28,
+    "json_schema_cases": 36,
+    "json_schema_cases_passed": 36,
+    "openapi_validator_checks": 3,
+    "openapi_validator_checks_passed": 3
+  },
+  "blockers": [],
+  "input_hashes_after_validation": {
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/POST-PIPELINE-READINESS.md": "aee4ee2a78e56befe51c1e96c7ec98fe9d5cfbbe83e79c8628d52c21ca2e7952",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7",
+    "<REDACTED_LOCAL_PATH>/WORKSPACE-NOTES.md": "be2e0ea2e3ce50ab7d85c9d22a05c1ccb9801d5fac63e2e1318a68cdec9b1e45"
+  },
+  "input_hashes_unchanged": true,
+  "overall_passed": true
+}

@@ -1,0 +1,69 @@
+{
+  "duration_seconds": 0.382,
+  "external_timeout_seconds": 3,
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "{\"applications\": [{\"case_id\": \"hang\", \"failure_class\": \"deadline\", \"lifecycle\": {\"exitcode\": -15, \"pid\": 53492, \"pid_alive_after_reap\": false, \"quiet_proven\": true, \"reaped\": true, \"started\": true, \"startup_error\": null, \"stop_method\": \"terminate\", \"stop_requested\": true}, \"pins_after\": {\"attempts.txt\": {\"sha256\": \"74a02f560cc1d8e023280b5f08a1ee7266e4bec6cea61ca457dc1a758d080fc8\", \"size\": 4}}, \"pins_before\": {}, \"target_quiet\": true, \"workdir\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/shutdown-hang-run/applications/0001-f12be79ee4b16d20\"}], \"duration_seconds\": 0.319, \"receipts\": [{\"body_kind\": \"absent\", \"case_id\": \"hang\", \"content_type\": null, \"expectation_detail\": {}, \"expectation_result\": \"not_evaluated\", \"failure_class\": \"deadline\", \"method\": \"POST\", \"path\": \"/hang\", \"provenance\": [\"PX:hang\"], \"request_headers\": [], \"request_identity\": \"7d523e33804c7fbc0156abeee203d1ecd82b46daf90cc360b0fa94a59460d43c\", \"response_bytes\": 0, \"response_sha256\": null, \"status\": null}], \"totals\": {\"attempted\": 1, \"completed\": 0, \"deadline_failures\": 1, \"expectation_inconclusive\": 0, \"expectation_passes\": 0, \"expectation_violations\": 0, \"http_failures\": 0, \"not_executed\": 0, \"planned\": 1, \"transport_failures\": 0}}\n",
+  "stdout_json": {
+    "applications": [
+      {
+        "case_id": "hang",
+        "failure_class": "deadline",
+        "lifecycle": {
+          "exitcode": -15,
+          "pid": 53492,
+          "pid_alive_after_reap": false,
+          "quiet_proven": true,
+          "reaped": true,
+          "started": true,
+          "startup_error": null,
+          "stop_method": "terminate",
+          "stop_requested": true
+        },
+        "pins_after": {
+          "attempts.txt": {
+            "sha256": "74a02f560cc1d8e023280b5f08a1ee7266e4bec6cea61ca457dc1a758d080fc8",
+            "size": 4
+          }
+        },
+        "pins_before": {},
+        "target_quiet": true,
+        "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-review-v3/evidence-20260915T132029Z/shutdown-hang-run/applications/0001-f12be79ee4b16d20"
+      }
+    ],
+    "duration_seconds": 0.319,
+    "receipts": [
+      {
+        "body_kind": "absent",
+        "case_id": "hang",
+        "content_type": null,
+        "expectation_detail": {},
+        "expectation_result": "not_evaluated",
+        "failure_class": "deadline",
+        "method": "POST",
+        "path": "/hang",
+        "provenance": [
+          "PX:hang"
+        ],
+        "request_headers": [],
+        "request_identity": "7d523e33804c7fbc0156abeee203d1ecd82b46daf90cc360b0fa94a59460d43c",
+        "response_bytes": 0,
+        "response_sha256": null,
+        "status": null
+      }
+    ],
+    "totals": {
+      "attempted": 1,
+      "completed": 0,
+      "deadline_failures": 1,
+      "expectation_inconclusive": 0,
+      "expectation_passes": 0,
+      "expectation_violations": 0,
+      "http_failures": 0,
+      "not_executed": 0,
+      "planned": 1,
+      "transport_failures": 0
+    }
+  },
+  "timed_out_externally": false
+}

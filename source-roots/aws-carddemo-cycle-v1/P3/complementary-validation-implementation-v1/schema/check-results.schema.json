@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/aws-carddemo-complementary-validation-implementation-v1/check-results.schema.json",
+  "type": "object",
+  "required": ["fixtureId", "results"],
+  "additionalProperties": false,
+  "properties": {
+    "fixtureId": {"type": "string", "minLength": 1},
+    "results": {
+      "type": "array",
+      "minItems": 25,
+      "maxItems": 25,
+      "items": {
+        "type": "object",
+        "required": ["obligationId", "track", "status", "sourceAnchors", "boundaries", "details"],
+        "additionalProperties": false,
+        "properties": {
+          "obligationId": {"type": "string", "pattern": "^(POSTTRAN|INTCALC|TRANREPT)-OBL-[0-9]{3}$"},
+          "track": {"type": "string"},
+          "status": {"enum": ["pass", "failed", "pending", "inconclusive"]},
+          "sourceAnchors": {"type": "array", "items": {"type": "object"}},
+          "boundaries": {"type": "array", "items": {"type": "string"}},
+          "details": {
+            "type": "object",
+            "required": ["sourceExpected", "observed"],
+            "properties": {
+              "sourceExpected": {},
+              "observed": {},
+              "failures": {"type": "array", "items": {"type": "string"}},
+              "pendingReason": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

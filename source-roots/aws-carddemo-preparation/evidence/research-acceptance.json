@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/verify.py"
+    ],
+    "rc": 0,
+    "stdout": "{\n  \"corpus_files\": 8,\n  \"external_calls\": [\n    \"CEE3ABD\"\n  ],\n  \"compile_rc\": 0,\n  \"diagnostics\": \"\"\n}\nBuilt external raw indexed-file loaders/dumpers: TRANFILE, XREFFILE, ACCTFILE, TCATBALF\ntest_raw_record_roundtrip (test_io.IndexedIOTests) ... ok\ntest_missing_input_terminates_with_explicit_local_abend (test_abend.AbendTests) ... ok\ntest_credit_limit (test_posttran.PosttranTests) ... ok\ntest_duplicate_preserves_observed_partial_updates (test_posttran.PosttranTests) ... ok\ntest_empty_batch (test_posttran.PosttranTests) ... ok\ntest_expired_account (test_posttran.PosttranTests) ... ok\ntest_invalid_card (test_posttran.PosttranTests) ... ok\ntest_missing_account (test_posttran.PosttranTests) ... ok\ntest_nominal_posting (test_posttran.PosttranTests) ... ok\ntest_reset_repeats_state_except_processing_timestamp (test_posttran.PosttranTests) ... ok\ntest_failure_is_not_disabled_by_optimized_python (test_safety.IntegrityGuardTests) ... ok\ntest_loader_refuses_existing_file (test_safety.ScopeGuardTests) ... ok\ntest_loader_rejects_external_path (test_safety.ScopeGuardTests) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 2.703s\n\nOK\n{\n  \"all_upstream_files_unchanged\": 329,\n  \"selected_files_byte_identical_to_archive_and_source\": 8,\n  \"source_copybook_physical_lines\": 817,\n  \"coverage_collected_by_this_command\": false,\n  \"formal_pipeline_started\": false\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/expanded-batch/verify_batch.py",
+      "--coverage"
+    ],
+    "rc": 0,
+    "stdout": "{\n  \"stage\": \"<WORKSPACE>/aws-carddemo-preparation/expanded-batch/runs/verified-k07x3jk3\",\n  \"programs_exercised\": [\n    \"CBTRN02C\",\n    \"CBACT04C\",\n    \"CBTRN03C\"\n  ],\n  \"blocked_programs\": {\n    \"CBSTM03A\": \"z/OS PSA/TCB/TIOT dereference, actual SIGSEGV before business processing; see verified-deehe0as\",\n    \"CBSTM03B\": \"Compiled but excluded with blocked statement capability\"\n  },\n  \"nominal_runs\": [\n    {\n      \"case\": \"nominal-a\",\n      \"interest_bytes\": 350,\n      \"interest_amount_ascii\": \"00000010025\",\n      \"account_before_hex\": \"303030303030303532353030\",\n      \"account_after_hex\": \"303030303030303532353030\",\n      \"report_bytes\": 1064,\n      \"report_sha256\": \"34890d2349c90e997d9c279e44eee6411c9c634c94e2677ed9e128ea3b33bfd6\"\n    },\n    {\n      \"case\": \"nominal-b\",\n      \"interest_bytes\": 350,\n      \"interest_amount_ascii\": \"00000010025\",\n      \"account_before_hex\": \"303030303030303532353030\",\n      \"account_after_hex\": \"303030303030303532353030\",\n      \"report_bytes\": 1064,\n      \"report_sha256\": \"34890d2349c90e997d9c279e44eee6411c9c634c94e2677ed9e128ea3b33bfd6\"\n    }\n  ],\n  \"negative_paths\": [\n    \"missing DISCGRP -> rc12\",\n    \"missing DATEPARM -> rc12\"\n  ],\n  \"coverage\": [\n    {\n      \"program\": \"CBTRN02C\",\n      \"report\": \"<WORKSPACE>/aws-carddemo-preparation/expanded-batch/runs/verified-k07x3jk3/build/CBTRN02C.cbl.gcov\",\n      \"positive_source_line_counters\": 242\n    },\n    {\n      \"program\": \"CBACT04C\",\n      \"report\": \"<WORKSPACE>/aws-carddemo-preparation/expanded-batch/runs/verified-k07x3jk3/build/CBACT04C.cbl.gcov\",\n      \"positive_source_line_counters\": 226\n    },\n    {\n      \"program\": \"CBTRN03C\",\n      \"report\": \"<WORKSPACE>/aws-carddemo-preparation/expanded-batch/runs/verified-k07x3jk3/build/CBTRN03C.cbl.gcov\",\n      \"positive_source_line_counters\": 264\n    }\n  ],\n  \"instrumentation\": {\n    \"enabled\": true,\n    \"COB_CC\": \"gcc-11\",\n    \"COB_CFLAGS\": \"-I/opt/homebrew/include -fsigned-char\"\n  },\n  \"repeatability\": \"Interest bytes except 278:330 timestamps; account balance\",\n  \"all_commands_expected_rc\": true,\n  \"source_unchanged\": true,\n  \"limitations\": [\n    \"Local BDB/LE support, not mainframe equivalence\",\n    \"Synthetic datasets\",\n    \"Statement excluded: requires z/OS memory structures\",\n    \"No formal pipeline gate executed\"\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/package_research.py"
+    ],
+    "rc": 0,
+    "stdout": "{\n  \"files\": 19,\n  \"programs\": [\n    \"CBTRN02C\",\n    \"CBACT04C\",\n    \"CBTRN03C\"\n  ],\n  \"physical_code_copybook_lines\": 2226,\n  \"prior_baseline\": 1934,\n  \"pipeline_input\": \"<WORKSPACE>/aws-carddemo-preparation/research-corpus\"\n}\n",
+    "stderr": ""
+  }
+]

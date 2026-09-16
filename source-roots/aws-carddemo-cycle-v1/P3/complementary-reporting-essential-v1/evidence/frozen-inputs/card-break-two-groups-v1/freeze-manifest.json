@@ -1,0 +1,133 @@
+{
+  "caseId": "card-break-two-groups-v1",
+  "dateRange": [
+    "2022-07-01",
+    "2022-07-31"
+  ],
+  "expectedDetailIds": [
+    "GROUP1-ITEM-0001",
+    "GROUP1-ITEM-0002",
+    "GROUP2-ITEM-0001",
+    "GROUP2-ITEM-0002"
+  ],
+  "filePins": {
+    "CARDXREF": {
+      "bytes": 8192,
+      "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+    },
+    "DATEPARM": {
+      "bytes": 80,
+      "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237"
+    },
+    "TRANCATG": {
+      "bytes": 8192,
+      "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+    },
+    "TRANFILE": {
+      "bytes": 1400,
+      "sha256": "a99d40244ec8f083558d4a3fb8cbd777d9fbcd79966d598aac051afee2a34ce4"
+    },
+    "TRANTYPE": {
+      "bytes": 8192,
+      "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+    }
+  },
+  "fixtureRegistry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/frozen-inputs/card-break-two-groups-v1/fixture-registry.json",
+  "partitions": [
+    "group:first-card",
+    "group:card-break",
+    "order:multiplicity"
+  ],
+  "purpose": "Two card/account groups in already sorted input to exercise source account-break branch without asserting final EOF account total correctness.",
+  "qualifiedTotalOracle": "inconclusive-eof-branch",
+  "sourceFacts": {
+    "cbtrn03c_path": "app/cbl/CBTRN03C.cbl",
+    "cbtrn03c_sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+    "cvtra07y_path": "app/cpy/CVTRA07Y.cpy",
+    "cvtra07y_sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+    "date_filter_lines": [
+      170,
+      178
+    ],
+    "detail_layout_lines": [
+      15,
+      31
+    ],
+    "eof_total_lines": [
+      197,
+      204
+    ],
+    "eof_totals_has_stale_tran_amt_guard": true,
+    "page_size_source_value": 20,
+    "qualification": "source-grounded byte/order checks; final totals qualified only as inconclusive under EOF branch unless selected and observed",
+    "report_record_bytes": 133,
+    "source_root": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus",
+    "total_layout_lines": [
+      50,
+      66
+    ],
+    "transaction_record_bytes": 350
+  },
+  "transactions": [
+    {
+      "amount_cents": 111,
+      "card": "4111111111111111",
+      "category_code": "0005",
+      "description": "Reporting boundary fixture",
+      "merchant": "000000001",
+      "merchant_city": "Sometown",
+      "merchant_name": "Report Merchant",
+      "merchant_postal": "70000000",
+      "orig_ts": "2022-07-01-00.00.00.000000",
+      "proc_ts": "2022-07-10-10.00.00.000000",
+      "source": "System",
+      "transaction_id": "GROUP1-ITEM-0001",
+      "type_code": "01"
+    },
+    {
+      "amount_cents": 222,
+      "card": "4111111111111111",
+      "category_code": "0005",
+      "description": "Reporting boundary fixture",
+      "merchant": "000000001",
+      "merchant_city": "Sometown",
+      "merchant_name": "Report Merchant",
+      "merchant_postal": "70000000",
+      "orig_ts": "2022-07-01-00.00.00.000000",
+      "proc_ts": "2022-07-11-10.00.00.000000",
+      "source": "System",
+      "transaction_id": "GROUP1-ITEM-0002",
+      "type_code": "01"
+    },
+    {
+      "amount_cents": 333,
+      "card": "4222222222222222",
+      "category_code": "0005",
+      "description": "Reporting boundary fixture",
+      "merchant": "000000001",
+      "merchant_city": "Sometown",
+      "merchant_name": "Report Merchant",
+      "merchant_postal": "70000000",
+      "orig_ts": "2022-07-01-00.00.00.000000",
+      "proc_ts": "2022-07-12-10.00.00.000000",
+      "source": "System",
+      "transaction_id": "GROUP2-ITEM-0001",
+      "type_code": "01"
+    },
+    {
+      "amount_cents": 444,
+      "card": "4222222222222222",
+      "category_code": "0005",
+      "description": "Reporting boundary fixture",
+      "merchant": "000000001",
+      "merchant_city": "Sometown",
+      "merchant_name": "Report Merchant",
+      "merchant_postal": "70000000",
+      "orig_ts": "2022-07-01-00.00.00.000000",
+      "proc_ts": "2022-07-13-10.00.00.000000",
+      "source": "System",
+      "transaction_id": "GROUP2-ITEM-0002",
+      "type_code": "01"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "contract_id": "E1-1",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+  "contract_sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+  "operation_id": "generateTransactionReport",
+  "track": "reporting",
+  "request_sha256": "77d808b5370ae65f141258b04c78901290e69851763af4760e1d22c2ba50df9c",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/registry.json",
+    "files": {
+      "CARDXREF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/CARDXREF",
+        "bytes": 8192,
+        "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "requestOwned": false
+      },
+      "DATEPARM": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/DATEPARM",
+        "bytes": 80,
+        "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "requestOwned": true
+      },
+      "TRANCATG": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANCATG",
+        "bytes": 8192,
+        "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "requestOwned": false
+      },
+      "TRANFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANFILE",
+        "bytes": 700,
+        "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "requestOwned": true
+      },
+      "TRANTYPE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/request-packages/E1-1-reporting-1789501194345/TRANTYPE",
+        "bytes": 8192,
+        "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "CARDXREF": {
+        "field": "crossReferenceFile",
+        "token": "p3:reporting:CARDXREF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/reporting/CARDXREF",
+        "sourceSha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "sourceBytes": 8192
+      },
+      "TRANTYPE": {
+        "field": "transactionTypeFile",
+        "token": "p3:reporting:TRANTYPE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/reporting/TRANTYPE",
+        "sourceSha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "sourceBytes": 8192
+      },
+      "TRANCATG": {
+        "field": "transactionCategoryFile",
+        "token": "p3:reporting:TRANCATG",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package/reporting/TRANCATG",
+        "sourceSha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "TRANREPT": {
+        "field": "reportFile",
+        "token": "p3:reporting:TRANREPT",
+        "dd": "TRANREPT",
+        "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+      }
+    },
+    "fixture_descriptor_sha256": "7d1e00d42fdbff442976c214c14e856b4efe23f1ecd3a2f2aa78f6b5d762caa3"
+  },
+  "semantic_ambiguities": [],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/p2b-runs/reporting-sw0uyyks"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/zeroshot-coverage-closure-v1/real-readiness-E1-1-3track/ZEROSHOT-COVERAGE-CLOSURE-E1-1-3TRACK/cases/BINDCLOSE-E1-1-reporting-T3-0026-deffa082a6b3/replay/applications/0001-356cbd64e73f2463/zero-shot-runs/E1-1/reporting/E1-1-reporting-1789501194345/response.json"
+}

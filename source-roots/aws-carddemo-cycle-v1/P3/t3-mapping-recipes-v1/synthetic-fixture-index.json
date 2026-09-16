@@ -1,0 +1,241 @@
+{
+  "fixtures": [
+    {
+      "bindings": {
+        "ACCTFILE": "ACCTFILE",
+        "DALYTRAN": "DALYTRAN",
+        "TCATBALF": "TCATBALF",
+        "TRANFILE": "TRANFILE",
+        "XREFFILE": "XREFFILE",
+        "XREFFILE.1": "XREFFILE.1"
+      },
+      "fixtureId": "posting.candidate-v1-physical-v2",
+      "keys": {
+        "ACCTFILE": {
+          "primary": [
+            "10000000001",
+            "10000000002"
+          ]
+        },
+        "TCATBALF": {
+          "primary": [
+            "10000000001010005",
+            "10000000002010005"
+          ]
+        },
+        "TRANFILE": {
+          "primary": [
+            "REPORT-IN---001 ",
+            "REPORT-OUT--001 "
+          ]
+        },
+        "XREFFILE": {
+          "alternate": [
+            "10000000001",
+            "10000000002"
+          ],
+          "primary": [
+            "4111111111111111",
+            "4222222222222222"
+          ]
+        }
+      },
+      "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/synthetic-homologous-fixtures/posting",
+      "resources": [
+        {
+          "bytes": 36,
+          "dd": "ACCTFILE",
+          "path": "ACCTFILE",
+          "sha256": "9446912c1eac637b9ae3d156a140be69e43b565651284116c66baf8aadeb01e3"
+        },
+        {
+          "bytes": 700,
+          "dd": "DALYTRAN",
+          "path": "DALYTRAN",
+          "sha256": "b4c23ef1a03bfebdefc57c4f3e97f921aab08e1e955c9ea07dab301803aa912f"
+        },
+        {
+          "bytes": 36,
+          "dd": "TCATBALF",
+          "path": "TCATBALF",
+          "sha256": "fcd20fe04c5d1131e9f39ade48872a7dba32a87c0db06fb2c3eaf4b9792f77fe"
+        },
+        {
+          "bytes": 700,
+          "dd": "TRANFILE",
+          "path": "TRANFILE",
+          "sha256": "b4c23ef1a03bfebdefc57c4f3e97f921aab08e1e955c9ea07dab301803aa912f"
+        },
+        {
+          "bytes": 36,
+          "dd": "XREFFILE",
+          "path": "XREFFILE",
+          "sha256": "9908fa6b06ffff5e46e57d513e83ad3769aba014f078224c9e4f0e5af860e5dc"
+        },
+        {
+          "bytes": 44,
+          "dd": "XREFFILE.1",
+          "path": "XREFFILE.1",
+          "sha256": "d940bd97d4b5770a3963fbf5ca64e023c76b72102d4a65dc7ddd2afd4f0aab7d"
+        }
+      ],
+      "status": "candidate_needs_review",
+      "track": "posting"
+    },
+    {
+      "bindings": {
+        "ACCTFILE": "ACCTFILE",
+        "DISCGRP": "DISCGRP",
+        "PARMFILE": "PARMFILE",
+        "TCATBALF": "TCATBALF",
+        "XREFFILE": "XREFFILE",
+        "XREFFILE.1": "XREFFILE.1"
+      },
+      "fixtureId": "interest.candidate-v1-physical-v2",
+      "keys": {
+        "ACCTFILE": {
+          "primary": [
+            "10000000001",
+            "10000000002"
+          ]
+        },
+        "DISCGRP": {
+          "primary": [
+            "STANDARD  010005",
+            "ZERORATE  010005",
+            "DEFAULT   010005"
+          ]
+        },
+        "TCATBALF": {
+          "primary": [
+            "10000000001010005",
+            "10000000002010005"
+          ]
+        },
+        "XREFFILE": {
+          "alternate": [
+            "10000000001",
+            "10000000002"
+          ],
+          "primary": [
+            "4111111111111111",
+            "4222222222222222"
+          ]
+        }
+      },
+      "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/synthetic-homologous-fixtures/interest",
+      "resources": [
+        {
+          "bytes": 36,
+          "dd": "ACCTFILE",
+          "path": "ACCTFILE",
+          "sha256": "9446912c1eac637b9ae3d156a140be69e43b565651284116c66baf8aadeb01e3"
+        },
+        {
+          "bytes": 32,
+          "dd": "DISCGRP",
+          "path": "DISCGRP",
+          "sha256": "b6200c3ee951c2a2a7a8e86523636bce6943457f03cc3aaf7dedfe1b3191b6ce"
+        },
+        {
+          "bytes": 10,
+          "dd": "PARMFILE",
+          "path": "PARMFILE",
+          "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+        },
+        {
+          "bytes": 36,
+          "dd": "TCATBALF",
+          "path": "TCATBALF",
+          "sha256": "fcd20fe04c5d1131e9f39ade48872a7dba32a87c0db06fb2c3eaf4b9792f77fe"
+        },
+        {
+          "bytes": 36,
+          "dd": "XREFFILE",
+          "path": "XREFFILE",
+          "sha256": "9908fa6b06ffff5e46e57d513e83ad3769aba014f078224c9e4f0e5af860e5dc"
+        },
+        {
+          "bytes": 44,
+          "dd": "XREFFILE.1",
+          "path": "XREFFILE.1",
+          "sha256": "d940bd97d4b5770a3963fbf5ca64e023c76b72102d4a65dc7ddd2afd4f0aab7d"
+        }
+      ],
+      "status": "candidate_needs_review",
+      "track": "interest"
+    },
+    {
+      "bindings": {
+        "CARDXREF": "CARDXREF",
+        "DATEPARM": "DATEPARM",
+        "TRANCATG": "TRANCATG",
+        "TRANFILE": "TRANFILE",
+        "TRANFILE.empty": "TRANFILE.empty",
+        "TRANTYPE": "TRANTYPE"
+      },
+      "fixtureId": "reporting.candidate-v1-physical-v2",
+      "keys": {
+        "CARDXREF": {
+          "primary": [
+            "4111111111111111",
+            "4222222222222222"
+          ]
+        },
+        "TRANCATG": {
+          "primary": [
+            "010005"
+          ]
+        },
+        "TRANTYPE": {
+          "primary": [
+            "01"
+          ]
+        }
+      },
+      "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/synthetic-homologous-fixtures/reporting",
+      "resources": [
+        {
+          "bytes": 36,
+          "dd": "CARDXREF",
+          "path": "CARDXREF",
+          "sha256": "b30878c8e373ce9b5d7b12e035fc43df169e1ba63744023f736f58f1f65ea1d3"
+        },
+        {
+          "bytes": 80,
+          "dd": "DATEPARM",
+          "path": "DATEPARM",
+          "sha256": "977eb655f982819c7784cf08c5bef0fe328ea3673815ab086744f3c988ce05fd"
+        },
+        {
+          "bytes": 36,
+          "dd": "TRANCATG",
+          "path": "TRANCATG",
+          "sha256": "8fec953f35865b8a45613e50696d570429953fda501ae0a2f501b6fc45649a9c"
+        },
+        {
+          "bytes": 700,
+          "dd": "TRANFILE",
+          "path": "TRANFILE",
+          "sha256": "b4c23ef1a03bfebdefc57c4f3e97f921aab08e1e955c9ea07dab301803aa912f"
+        },
+        {
+          "bytes": 0,
+          "dd": "TRANFILE.empty",
+          "path": "TRANFILE.empty",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 36,
+          "dd": "TRANTYPE",
+          "path": "TRANTYPE",
+          "sha256": "3367b8a61b7c12564ca6f4ebf39706f636ce4e239158b0868dd60976deb7f650"
+        }
+      ],
+      "status": "candidate_needs_review",
+      "track": "reporting"
+    }
+  ],
+  "kind": "t3-synthetic-homologous-fixture-index",
+  "officialFixture": false
+}

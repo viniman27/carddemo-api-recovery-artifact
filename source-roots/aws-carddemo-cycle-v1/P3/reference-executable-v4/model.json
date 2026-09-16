@@ -1,0 +1,3918 @@
+{
+  "status": "draft_needs_review",
+  "model_type": "finite_executable_mbt_reference_v4",
+  "schema": "local/reference-mbt-executable-v4",
+  "authority": "reference-authoring-input-v1 + reference-authoring-draft-v2 + reference-independent-review-v3",
+  "non_claims": [
+    "not an official fixture/campaign",
+    "not COBOL execution",
+    "not full formal equivalence/SAT proof",
+    "effects are observable attempts/control events, not durability or commit",
+    "not proof of full semantic equivalence; event capability scopes are targeted behavioral checks, not automatic COBOL semantics"
+  ],
+  "unknown_policy": "UnknownEOF is an explicit valuation that leads only to unknown terminal/frontier paths; it never satisfies ordinary equality and never means retained last receiver.",
+  "obligations": [
+    {
+      "id": "POSTTRAN-OBL-001",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Arquivos externos e abertura",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            29,
+            61
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            193,
+            200
+          ]
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "lines": [
+            23,
+            42
+          ]
+        }
+      ],
+      "preconditions": "DDs documentais do POSTTRAN disponíveis.",
+      "guard_or_transition": "OPEN DALYTRAN input, TRANFILE output, XREF input, DALYREJS output, ACCOUNT I-O, TCATBAL I-O; status diferente de 00 em qualquer OPEN chama erro/abend.",
+      "required_observation": "status de abertura, mensagens, terminação",
+      "decidable_expectation": "Somente todos os OPEN status 00 permitem entrar no loop de DALYTRAN.",
+      "limits_and_review_notes": "JCL é evidência documental; não prova alocação local, commit ou durabilidade.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-001",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-002",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Loop DALYTRAN e EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            202,
+            219
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            345,
+            369
+          ]
+        }
+      ],
+      "preconditions": "Arquivos abertos.",
+      "guard_or_transition": "READ DALYTRAN status 00 mantém END-OF-FILE=N e processa; status 10 move END-OF-FILE=Y; outro status abende.",
+      "required_observation": "contador TRANSACTIONS PROCESSED, fechamento/abend",
+      "decidable_expectation": "WS-TRANSACTION-COUNT incrementa somente para leituras status 00. EOF seleciona fechamento sem expectativa sobre conteúdo estável do receiver.",
+      "limits_and_review_notes": "Não assumir retenção de último registro no EOF nem conteúdo observável do buffer após status 10.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-002",
+        "v2_change": "revised_eof_limit_explicit"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-003",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Layout e cópia para transação postada",
+      "source_anchors": [
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "lines": [
+            4,
+            18
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "lines": [
+            4,
+            18
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            424,
+            439
+          ]
+        }
+      ],
+      "preconditions": "Transação validada sem razão de falha.",
+      "guard_or_transition": "Move campos DALYTRAN para TRAN e substitui TRAN-PROC-TS por timestamp DB2-formatado.",
+      "required_observation": "registro TRANFILE se escrita for alcançada e bem-sucedida",
+      "decidable_expectation": "Campos id/tipo/categoria/source/desc/amount/merchant/card/orig-ts vêm do DALYTRAN; proc-ts vem de CURRENT-DATE formatado.",
+      "limits_and_review_notes": "Formato/calendário do timestamp é ambiente; valor real não é fixado.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-003",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-004",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Validação de cartão",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            370,
+            392
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        }
+      ],
+      "preconditions": "Registro diário lido; razão zerada.",
+      "guard_or_transition": "READ XREF por DALYTRAN-CARD-NUM; INVALID KEY define razão 100 e descrição INVALID CARD NUMBER FOUND.",
+      "required_observation": "DALYREJS e ausência de postagem",
+      "decidable_expectation": "Cartão ausente rejeita com trailer 100 e não entra em POST.",
+      "limits_and_review_notes": "Não há validação de formato além da busca.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-004",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-005",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Validação de conta, limite e expiração textual",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            393,
+            421
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "lines": [
+            4,
+            17
+          ]
+        }
+      ],
+      "preconditions": "XREF encontrado.",
+      "guard_or_transition": "Conta ausente razão 101; conta presente calcula credit-debit+amount, razão 102 se excede limite; depois compara ACCT-EXPIRAION-DATE >= DALYTRAN-ORIG-TS(1:10) e pode mover razão 103.",
+      "required_observation": "trailer de rejeição ou caminho aceito",
+      "decidable_expectation": "Conta inexistente rejeita 101; overlimit rejeita 102 salvo se expiração textual também falhar, caso em que a razão final sustentada é 103.",
+      "limits_and_review_notes": "Comparação de datas é textual X(10); calendário real não é decidido.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-005",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-006",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Rejeitos e return-code",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            211,
+            216
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            227,
+            231
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            446,
+            465
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            176,
+            182
+          ]
+        }
+      ],
+      "preconditions": "Razão de validação diferente de zero.",
+      "guard_or_transition": "Incrementa contador, escreve 350 bytes originais + trailer 80; ao final RC=4 se reject count>0.",
+      "required_observation": "DALYREJS, contador e RETURN-CODE",
+      "decidable_expectation": "Cada rejeição alcançada gera um registro de rejeito; execução normal com algum rejeito retorna 4.",
+      "limits_and_review_notes": "Não afirma rollback de sucessos anteriores.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-006",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-007",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "TCATBAL create/update",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            467,
+            542
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Transação aceita.",
+      "guard_or_transition": "Chave = XREF-ACCT-ID + type + category; status 23 cria registro inicializado, status 00 atualiza; ambos somam DALYTRAN-AMT; status diferente de 00/23 em READ ou diferente de 00 em WRITE/REWRITE abende.",
+      "required_observation": "registro TCATBAL ou abend",
+      "decidable_expectation": "Ausente cria saldo com amount; existente reescreve saldo+amount; falha nesta etapa impede ACCOUNT/TRANFILE.",
+      "limits_and_review_notes": "Status aceitos 00/23 no read; sem atomicidade/durabilidade.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-007",
+        "v2_change": "revised_failure_path_explicit"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-008",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Atualização ACCOUNT e ordem de efeitos",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            440,
+            442
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            545,
+            559
+          ]
+        }
+      ],
+      "preconditions": "Transação aceita, TCATBAL concluído e conta carregada.",
+      "guard_or_transition": "Soma amount ao saldo; se amount>=0 soma ao credit, senão ao debit; REWRITE INVALID KEY move razão 109/descrição mas não chama abend local e o fluxo retorna para escrever TRANFILE.",
+      "required_observation": "ACCOUNT lógico, WS-VALIDATION-FAIL-REASON 109 possível, próxima tentativa de TRANFILE",
+      "decidable_expectation": "A ausência de abend local no REWRITE ACCOUNT é decidível; após INVALID KEY o caminho de WRITE TRANFILE continua.",
+      "limits_and_review_notes": "Não afirmar persistência do rewrite falho nem rollback; razão 109 nesse ponto não transforma a transação em rejeito.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-008",
+        "v2_change": "resolves_FAIL-05"
+      }
+    },
+    {
+      "id": "POSTTRAN-OBL-009",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "WRITE TRANFILE após efeitos anteriores",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            424,
+            442
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            562,
+            578
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            370,
+            421
+          ]
+        }
+      ],
+      "preconditions": "Transação aceita e rotinas TCATBAL/ACCOUNT retornaram ao chamador.",
+      "guard_or_transition": "WRITE FD-TRANFILE-REC; status 00 conclui postagem, status diferente de 00 exibe erro e chama abend. Não há validação prévia de duplicidade de DALYTRAN-ID/TRAN-ID na validação.",
+      "required_observation": "TRANFILE ou mensagem/abend após efeitos anteriores",
+      "decidable_expectation": "Falha de escrita de TRANFILE é caminho observável depois de TCATBAL e ACCOUNT terem sido tentados; não é rejeição validatória.",
+      "limits_and_review_notes": "Não confundir ordem de chamadas com commit/durabilidade; estado externo pós-abend é fora de autoridade.",
+      "history": {
+        "v1_id": "POSTTRAN-OBL-009",
+        "v2_change": "new_resolves_FAIL-04"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-001",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Arquivos, parâmetro e abertura",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            28,
+            56
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            175,
+            186
+          ]
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "lines": [
+            22,
+            41
+          ]
+        }
+      ],
+      "preconditions": "Job INTCALC com PARM e DDs documentais.",
+      "guard_or_transition": "Abre TCATBAL input sequencial, XREF/DISCGRP input, ACCOUNT I-O, TRANSACT output; falha abende.",
+      "required_observation": "status e registros de saída",
+      "decidable_expectation": "PARM-DATE participa de TRAN-ID nas transações geradas.",
+      "limits_and_review_notes": "Data do JCL é exemplo de fonte, não calendário universal.",
+      "history": {
+        "v1_id": "INTCALC-OBL-001",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-002",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Varredura e agrupamento por conta",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            188,
+            222
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "TCATBAL disponível.",
+      "guard_or_transition": "A cada registro status 00, se TRANCAT-ACCT-ID muda, atualiza conta anterior exceto primeiro registro, zera total e carrega nova conta/xref.",
+      "required_observation": "updates ACCOUNT por grupo",
+      "decidable_expectation": "Modelo depende de registros contíguos por conta; conta reaparecida depois vira novo grupo.",
+      "limits_and_review_notes": "Ordenação não é verificada pelo programa/JCL.",
+      "history": {
+        "v1_id": "INTCALC-OBL-002",
+        "v2_change": "revised_first_record_group_break_explicit"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-003",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Leitura ACCOUNT e XREF por conta",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            200,
+            205
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            372,
+            413
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "lines": [
+            4,
+            17
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        }
+      ],
+      "preconditions": "Novo grupo.",
+      "guard_or_transition": "Lê ACCOUNT por TRANCAT-ACCT-ID e XREF por alternate key FD-XREF-ACCT-ID; status não 00 abende.",
+      "required_observation": "abend ou campos usados",
+      "decidable_expectation": "ACCOUNT fornece grupo/id; XREF fornece cartão para transação de juros.",
+      "limits_and_review_notes": "Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado.",
+      "history": {
+        "v1_id": "INTCALC-OBL-003",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-004",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Taxa específica ou DEFAULT",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            210,
+            217
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            415,
+            460
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Conta e TCATBAL carregados.",
+      "guard_or_transition": "Lê DISCGRP por group/type/category; status 23 tenta group DEFAULT preservando type/category; DEFAULT ausente abende.",
+      "required_observation": "DIS-INT-RATE ou abend",
+      "decidable_expectation": "Usa taxa específica se existe; se ausente tenta DEFAULT; default ausente abende.",
+      "limits_and_review_notes": "Sem fallback adicional.",
+      "history": {
+        "v1_id": "INTCALC-OBL-004",
+        "v2_change": "revised_default_partition_explicit"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-005",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Fórmula e guarda de juros",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            213,
+            217
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            462,
+            470
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "lines": [
+            9,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Taxa lida.",
+      "guard_or_transition": "Só se DIS-INT-RATE != 0 calcula (TRAN-CAT-BAL*DIS-INT-RATE)/1200, acumula WS-TOTAL-INT e escreve TX.",
+      "required_observation": "TRAN-AMT e total acumulado",
+      "decidable_expectation": "Taxa zero não gera transação; taxa diferente de zero gera valor pela fórmula fonte.",
+      "limits_and_review_notes": "Arredondamento/truncamento/overflow dependem de PIC/compilador; não fixado.",
+      "history": {
+        "v1_id": "INTCALC-OBL-005",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-006",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Campos da transação de juros",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            473,
+            515
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "lines": [
+            4,
+            18
+          ]
+        }
+      ],
+      "preconditions": "Juros calculados.",
+      "guard_or_transition": "TRAN-ID=PARM-DATE+sufixo; type 01; cat 05; source System; desc Int. for a/c + ACCT-ID; amount mensal; merchant zero/spaces; card XREF; timestamps current.",
+      "required_observation": "TRANSACT output",
+      "decidable_expectation": "Cada cálculo escreve uma transação de sistema com esses MOVEs.",
+      "limits_and_review_notes": "Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture.",
+      "history": {
+        "v1_id": "INTCALC-OBL-006",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-007",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Update de conta em quebra de grupo",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            194,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            350,
+            370
+          ]
+        }
+      ],
+      "preconditions": "Mudança de conta depois da primeira.",
+      "guard_or_transition": "1050 soma WS-TOTAL-INT ao saldo, zera credit/debit e reescreve.",
+      "required_observation": "ACCOUNT",
+      "decidable_expectation": "Contas de grupos anteriores ao último são atualizadas na quebra.",
+      "limits_and_review_notes": "Não é update por cada categoria.",
+      "history": {
+        "v1_id": "INTCALC-OBL-007",
+        "v2_change": "revised_group_break_explicit"
+      }
+    },
+    {
+      "id": "INTCALC-OBL-008",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Última conta no EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            188,
+            222
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            325,
+            348
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            350,
+            370
+          ]
+        }
+      ],
+      "preconditions": "EOF normal após zero ou mais registros.",
+      "guard_or_transition": "READ status 10 move END-OF-FILE=Y dentro de iteração iniciada com END=N; PERFORM UNTIL termina antes do ELSE externo.",
+      "required_observation": "ACCOUNT do último grupo",
+      "decidable_expectation": "Pela fonte, o update final 1050 é inalcançável no EOF normal; última conta não recebe total nessa rotina.",
+      "limits_and_review_notes": "Achado estático; não confirmado por execução. Para arquivo vazio, não assumir conta carregada.",
+      "history": {
+        "v1_id": "INTCALC-OBL-008",
+        "v2_change": "revised_eof_empty_limit_explicit"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-001",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Contexto JCL e arquivos",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            29,
+            57
+          ]
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "lines": [
+            19,
+            80
+          ]
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "lines": [
+            18,
+            28
+          ]
+        }
+      ],
+      "preconditions": "JCL TRANREPT documental.",
+      "guard_or_transition": "REPROC descarrega, SORT ordena por card e filtra por proc date, STEP10 roda CBTRN03C com arquivos de lookup e report.",
+      "required_observation": "TRANFILE efetivo e TRANREPT",
+      "decidable_expectation": "Modelo espera input ordenado por cartão para que quebras façam sentido.",
+      "limits_and_review_notes": "JCL não foi executado; datas do SORT podem divergir do DATEPARM.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-001",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-002",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "DATEPARM e filtro textual antes do EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            122,
+            125
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            219,
+            243
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            178
+          ]
+        }
+      ],
+      "preconditions": "DATEPARM disponível.",
+      "guard_or_transition": "Lê start/end X(10); após cada READ TRANFILE, inclusive quando EOF foi marcado, testa TRAN-PROC-TS(1:10) >= start e <= end antes do ramo END-OF-FILE. Fora do intervalo executa NEXT SENTENCE.",
+      "required_observation": "mensagem e presença/ausência de detalhe/totais",
+      "decidable_expectation": "Somente registros cujo texto de proc date está no intervalo alcançam lookups/detalhe; fora do intervalo não produz detalhe nem acumula valor. EOF só alcança totais se o valor observável/retido em TRAN-PROC-TS satisfizer o teste textual.",
+      "limits_and_review_notes": "Sem validação calendárica. Conteúdo do receiver em EOF é desconhecido quando não há autoridade de runtime; seleção EOF pode ser condicional/unknown, não fixa.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-002",
+        "v2_change": "resolves_FAIL-01_FAIL-03"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-003",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Leitura TRANFILE e EOF condicional",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            206
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            248,
+            272
+          ]
+        }
+      ],
+      "preconditions": "Arquivos abertos e DATEPARM ok.",
+      "guard_or_transition": "READ status 00 deixa END=N; status 10 move END=Y; outros abendem. O teste de data acontece após o READ e antes do IF END=N/ELSE de totais.",
+      "required_observation": "relatório, ausência de relatório ou abend",
+      "decidable_expectation": "Loop é limitado por registros status 00 + leitura EOF. O caminho EOF para totais é condicional ao teste textual anterior; arquivo vazio/receiver desconhecido deve ser modelado como unknown, não como total incondicional.",
+      "limits_and_review_notes": "Não assumir retenção de último registro no EOF nem conteúdo estável do receiver.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-003",
+        "v2_change": "resolves_FAIL-01"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-004",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Quebra por cartão e lookups",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            181,
+            196
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            484,
+            512
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "lines": [
+            4,
+            7
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "lines": [
+            4,
+            9
+          ]
+        }
+      ],
+      "preconditions": "Transação no intervalo e END=N.",
+      "guard_or_transition": "Em card novo escreve total anterior se não primeira ocorrência; lê XREF. Para todo registro lê tipo e categoria; chave ausente abende.",
+      "required_observation": "detalhe ou abend",
+      "decidable_expectation": "Detalhe usa account id e descrições dos arquivos de referência. Mudança de cartão materializa Account Total do cartão anterior.",
+      "limits_and_review_notes": "Não há linha de erro/rejeição para lookup ausente.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-004",
+        "v2_change": "revised_card_break_explicit"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-005",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Cabeçalhos e paginação",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            274,
+            290
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            324,
+            341
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            4,
+            49
+          ]
+        }
+      ],
+      "preconditions": "Primeiro detalhe ou boundary.",
+      "guard_or_transition": "Primeiro detalhe escreve headers com date range; quando MOD(line-counter,20)=0 escreve page total e headers.",
+      "required_observation": "linhas de relatório",
+      "decidable_expectation": "Headers contêm DALYREPT, Daily Transaction Report, Date Range e colunas do copybook.",
+      "limits_and_review_notes": "Page-size conta linhas de header/totais; não é 20 detalhes.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-005",
+        "v2_change": "semantically_preserved_from_v1"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-006",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Linha de detalhe e acumulação",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            287,
+            289
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            361,
+            374
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            15,
+            31
+          ]
+        }
+      ],
+      "preconditions": "Lookups concluídos para registro no intervalo.",
+      "guard_or_transition": "Soma TRAN-AMT a WS-PAGE-TOTAL e WS-ACCOUNT-TOTAL; move id, account, type code/desc, category code/desc, source e amount para detail.",
+      "required_observation": "TRANREPT detail e acumuladores",
+      "decidable_expectation": "Cada transação processada no intervalo gera uma linha e acumula o valor exatamente nessa rotina.",
+      "limits_and_review_notes": "Edição monetária é a do PIC; sem arredondamento inventado.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-006",
+        "v2_change": "revised_accumulation_explicit"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-007",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Totais de página/grand no EOF condicional",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            197,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            287,
+            322
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            50,
+            66
+          ]
+        }
+      ],
+      "preconditions": "END=Y após READ e teste textual anterior não desviou por NEXT SENTENCE.",
+      "guard_or_transition": "Ramo ELSE de END soma TRAN-AMT corrente a page/account, escreve page totals, soma page ao grand, zera page e escreve grand totals.",
+      "required_observation": "Page Total/Grand Total",
+      "decidable_expectation": "Se o EOF alcançar este ramo, há risco sustentado de somar o TRAN-AMT corrente/retido antes dos totais finais; isso é condicional, não universal.",
+      "limits_and_review_notes": "Sem expectativa para receiver no EOF quando runtime não estabelece retenção; sem expectativa para registros fora de intervalo.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-007",
+        "v2_change": "resolves_FAIL-01"
+      }
+    },
+    {
+      "id": "TRANREPT-OBL-008",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Ausência de Account Total final no EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            181,
+            184
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            197,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            306,
+            316
+          ]
+        }
+      ],
+      "preconditions": "Um ou mais detalhes para último cartão sem mudança subsequente de cartão.",
+      "guard_or_transition": "1120-WRITE-ACCOUNT-TOTALS é chamado apenas em mudança de cartão quando não é primeira ocorrência; ramo EOF chama page/grand totals e não chama 1120.",
+      "required_observation": "Account Total final ausente/presente só por mudança anterior",
+      "decidable_expectation": "Não há chamada final sustentada de Account Total para o último cartão no EOF. Um único cartão em intervalo não tem total de conta final pela fonte.",
+      "limits_and_review_notes": "Isto não implica que page/grand totals ocorram sempre; dependem de TRANREPT-OBL-007.",
+      "history": {
+        "v1_id": "TRANREPT-OBL-008",
+        "v2_change": "new_resolves_FAIL-02"
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CBTRN02C_POSTTRAN",
+      "program": "CBTRN02C",
+      "job": "POSTTRAN",
+      "initialState": "P_START",
+      "variables": {
+        "open_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "read_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "10",
+            "other",
+            "UnknownEOF"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "10",
+              "values": [
+                "10"
+              ]
+            },
+            {
+              "id": "other",
+              "values": [
+                "other"
+              ]
+            },
+            {
+              "id": "unknowneof",
+              "values": [
+                "UnknownEOF"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "xref_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": true
+        },
+        "account_exists": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": true
+        },
+        "within_limit": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": true
+        },
+        "not_expired_textual": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": true
+        },
+        "tcatbal_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "23",
+            "other"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "23",
+              "values": [
+                "23"
+              ]
+            },
+            {
+              "id": "other",
+              "values": [
+                "other"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "rewrite_invalid_key": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": false
+        },
+        "tranfile_write_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "reject_reason": {
+          "type": "enum",
+          "domain": [
+            "none",
+            "100",
+            "101",
+            "102",
+            "103",
+            "109"
+          ],
+          "partitions": [
+            {
+              "id": "none",
+              "values": [
+                "none"
+              ]
+            },
+            {
+              "id": "100",
+              "values": [
+                "100"
+              ]
+            },
+            {
+              "id": "101",
+              "values": [
+                "101"
+              ]
+            },
+            {
+              "id": "102",
+              "values": [
+                "102"
+              ]
+            },
+            {
+              "id": "103",
+              "values": [
+                "103"
+              ]
+            },
+            {
+              "id": "109",
+              "values": [
+                "109"
+              ]
+            }
+          ],
+          "initial": "none"
+        },
+        "daily_records_seen": {
+          "type": "int",
+          "domain": [
+            0,
+            1,
+            2
+          ],
+          "partitions": [
+            {
+              "id": "0",
+              "values": [
+                0
+              ]
+            },
+            {
+              "id": "1",
+              "values": [
+                1
+              ]
+            },
+            {
+              "id": "2",
+              "values": [
+                2
+              ]
+            }
+          ],
+          "initial": 0
+        }
+      },
+      "states": [
+        {
+          "id": "P_START",
+          "terminal": false
+        },
+        {
+          "id": "P_OPENED",
+          "terminal": false
+        },
+        {
+          "id": "P_VALIDATE_XREF",
+          "terminal": false
+        },
+        {
+          "id": "P_VALIDATE_ACCOUNT",
+          "terminal": false
+        },
+        {
+          "id": "P_REJECT",
+          "terminal": false
+        },
+        {
+          "id": "P_TCATBAL",
+          "terminal": false
+        },
+        {
+          "id": "P_ACCOUNT_REWRITE",
+          "terminal": false
+        },
+        {
+          "id": "P_TRANFILE_WRITE",
+          "terminal": false
+        },
+        {
+          "id": "P_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "P_ABEND",
+          "terminal": true
+        },
+        {
+          "id": "P_UNKNOWN",
+          "terminal": true
+        }
+      ],
+      "loopPolicy": {
+        "strategy": "BFS transition-id order with explicit budget",
+        "loopStates": [
+          "P_OPENED"
+        ],
+        "bounds": {
+          "daily_records": 2
+        }
+      },
+      "transitions": [
+        {
+          "id": "POSTTRAN-T001",
+          "from": "P_START",
+          "to": "P_OPENED",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "open_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                29,
+                61
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                193,
+                200
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T002",
+          "from": "P_START",
+          "to": "P_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "open_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                29,
+                61
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                193,
+                200
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T003",
+          "from": "P_OPENED",
+          "to": "P_VALIDATE_XREF",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "read_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "daily_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "daily_record_counted"
+            },
+            {
+              "op": "inc",
+              "var": "daily_records_seen",
+              "by": 1
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                202,
+                219
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T004",
+          "from": "P_OPENED",
+          "to": "P_CLOSE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "read_status"
+            },
+            "right": {
+              "value": "10",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "close_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                202,
+                219
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T005",
+          "from": "P_OPENED",
+          "to": "P_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "read_status"
+            },
+            "right": {
+              "value": "other",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "daily_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                202,
+                219
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T006",
+          "from": "P_OPENED",
+          "to": "P_UNKNOWN",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "unknown",
+            "var": "read_status"
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "unknown_eof_receiver_path"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                202,
+                219
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                345,
+                369
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T007",
+          "from": "P_VALIDATE_XREF",
+          "to": "P_REJECT",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "xref_exists"
+            },
+            "right": {
+              "value": false,
+              "type": "bool"
+            }
+          },
+          "effects": [
+            {
+              "op": "set",
+              "var": "reject_reason",
+              "value": "100"
+            },
+            {
+              "op": "emit",
+              "event": "reject_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                370,
+                392
+              ]
+            },
+            {
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+              "lines": [
+                4,
+                8
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                211,
+                216
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                227,
+                231
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T008",
+          "from": "P_VALIDATE_XREF",
+          "to": "P_VALIDATE_ACCOUNT",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "xref_exists"
+            },
+            "right": {
+              "value": true,
+              "type": "bool"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "lookup_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                370,
+                392
+              ]
+            },
+            {
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+              "lines": [
+                4,
+                8
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T009",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "account_exists"
+            },
+            "right": {
+              "value": false,
+              "type": "bool"
+            }
+          },
+          "effects": [
+            {
+              "op": "set",
+              "var": "reject_reason",
+              "value": "101"
+            },
+            {
+              "op": "emit",
+              "event": "reject_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                393,
+                421
+              ]
+            },
+            {
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+              "lines": [
+                4,
+                17
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T010",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "account_exists"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "within_limit"
+                },
+                "right": {
+                  "value": false,
+                  "type": "bool"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "set",
+              "var": "reject_reason",
+              "value": "102"
+            },
+            {
+              "op": "emit",
+              "event": "reject_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                393,
+                421
+              ]
+            },
+            {
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+              "lines": [
+                4,
+                17
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T011",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_REJECT",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "account_exists"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "right": {
+                  "value": false,
+                  "type": "bool"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "set",
+              "var": "reject_reason",
+              "value": "103"
+            },
+            {
+              "op": "emit",
+              "event": "reject_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                393,
+                421
+              ]
+            },
+            {
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+              "lines": [
+                4,
+                17
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T012",
+          "from": "P_VALIDATE_ACCOUNT",
+          "to": "P_TCATBAL",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "account_exists"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "within_limit"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "right": {
+                  "value": true,
+                  "type": "bool"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tcatbal_update_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-003",
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                467,
+                542
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+              "lines": [
+                4,
+                10
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T013",
+          "from": "P_TCATBAL",
+          "to": "P_ACCOUNT_REWRITE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "in",
+            "left": {
+              "var": "tcatbal_status"
+            },
+            "values": [
+              "00",
+              "23"
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "account_rewrite_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007",
+            "POSTTRAN-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                440,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T014",
+          "from": "P_TCATBAL",
+          "to": "P_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tcatbal_status"
+            },
+            "right": {
+              "value": "other",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                467,
+                542
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+              "lines": [
+                4,
+                10
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T019",
+          "from": "P_ACCOUNT_REWRITE",
+          "to": "P_TRANFILE_WRITE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "rewrite_invalid_key"
+            },
+            "right": {
+              "value": false,
+              "type": "bool"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tranfile_write_attempt_pending"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-008",
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                440,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T020",
+          "from": "P_ACCOUNT_REWRITE",
+          "to": "P_TRANFILE_WRITE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "rewrite_invalid_key"
+            },
+            "right": {
+              "value": true,
+              "type": "bool"
+            }
+          },
+          "effects": [
+            {
+              "op": "set",
+              "var": "reject_reason",
+              "value": "109"
+            },
+            {
+              "op": "emit",
+              "event": "account_rewrite_invalid_key_continues"
+            },
+            {
+              "op": "emit",
+              "event": "tranfile_write_attempt_pending"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-008",
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                440,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                545,
+                559
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T021",
+          "from": "P_TRANFILE_WRITE",
+          "to": "P_OPENED",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tranfile_write_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tranfile_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "POSTTRAN-T022",
+          "from": "P_TRANFILE_WRITE",
+          "to": "P_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tranfile_write_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tranfile_write_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "POSTTRAN-OBL-009"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                424,
+                442
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+              "lines": [
+                562,
+                578
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        }
+      ]
+    },
+    {
+      "id": "CBACT04C_INTCALC",
+      "program": "CBACT04C",
+      "job": "INTCALC",
+      "initialState": "I_START",
+      "variables": {
+        "open_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "tcatbal_read_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "10",
+            "other"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "10",
+              "values": [
+                "10"
+              ]
+            },
+            {
+              "id": "other",
+              "values": [
+                "other"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "new_group": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": true
+        },
+        "disc_rate_path": {
+          "type": "enum",
+          "domain": [
+            "specific",
+            "default",
+            "missing",
+            "zero"
+          ],
+          "partitions": [
+            {
+              "id": "specific",
+              "values": [
+                "specific"
+              ]
+            },
+            {
+              "id": "default",
+              "values": [
+                "default"
+              ]
+            },
+            {
+              "id": "missing",
+              "values": [
+                "missing"
+              ]
+            },
+            {
+              "id": "zero",
+              "values": [
+                "zero"
+              ]
+            }
+          ],
+          "initial": "specific"
+        },
+        "interest_write_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "tcatbal_records_seen": {
+          "type": "int",
+          "domain": [
+            0,
+            1,
+            2
+          ],
+          "partitions": [
+            {
+              "id": "0",
+              "values": [
+                0
+              ]
+            },
+            {
+              "id": "1",
+              "values": [
+                1
+              ]
+            },
+            {
+              "id": "2",
+              "values": [
+                2
+              ]
+            }
+          ],
+          "initial": 0
+        }
+      },
+      "states": [
+        {
+          "id": "I_START",
+          "terminal": false
+        },
+        {
+          "id": "I_OPENED",
+          "terminal": false
+        },
+        {
+          "id": "I_GROUP",
+          "terminal": false
+        },
+        {
+          "id": "I_RATE",
+          "terminal": false
+        },
+        {
+          "id": "I_WRITE_INTEREST",
+          "terminal": false
+        },
+        {
+          "id": "I_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "I_ABEND",
+          "terminal": true
+        }
+      ],
+      "loopPolicy": {
+        "strategy": "BFS transition-id order with explicit budget",
+        "loopStates": [
+          "I_OPENED"
+        ],
+        "bounds": {
+          "tcatbal_records": 2
+        }
+      },
+      "transitions": [
+        {
+          "id": "INTCALC-T001",
+          "from": "I_START",
+          "to": "I_OPENED",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "intcalc_open_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                28,
+                56
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                175,
+                186
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T002",
+          "from": "I_START",
+          "to": "I_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "intcalc_open_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                28,
+                56
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                175,
+                186
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T003",
+          "from": "I_OPENED",
+          "to": "I_GROUP",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tcatbal_read_attempt"
+            },
+            {
+              "op": "inc",
+              "var": "tcatbal_records_seen",
+              "by": 1
+            },
+            {
+              "op": "emit",
+              "event": "group_start"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                188,
+                222
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+              "lines": [
+                4,
+                10
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                200,
+                205
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                372,
+                413
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T004",
+          "from": "I_OPENED",
+          "to": "I_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "right": {
+              "value": "other",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tcatbal_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                188,
+                222
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+              "lines": [
+                4,
+                10
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T006",
+          "from": "I_OPENED",
+          "to": "I_CLOSE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "right": {
+              "value": "10",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "tcatbal_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "intcalc_eof_no_final_account_update"
+            },
+            {
+              "op": "emit",
+              "event": "close_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                194,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                350,
+                370
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T007",
+          "from": "I_GROUP",
+          "to": "I_RATE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "in",
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "values": [
+              "specific",
+              "default"
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "interest_compute_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004",
+            "INTCALC-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                210,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                213,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                462,
+                470
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T008",
+          "from": "I_GROUP",
+          "to": "I_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "right": {
+              "value": "missing",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                210,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T009",
+          "from": "I_RATE",
+          "to": "I_WRITE_INTEREST",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "true"
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "interest_write_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-005",
+            "INTCALC-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                213,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                462,
+                470
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T010",
+          "from": "I_WRITE_INTEREST",
+          "to": "I_OPENED",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "interest_write_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "account_update_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-006",
+            "INTCALC-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                473,
+                515
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA05Y.cpy",
+              "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+              "lines": [
+                4,
+                18
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction",
+          "sourceJustification": "Abstract account-update attempt retained from v3 for group-break update obligation; EOF final update remains separate on INTCALC-T006/INTCALC-OBL-008 and has no account_update_attempt."
+        },
+        {
+          "id": "INTCALC-T011",
+          "from": "I_WRITE_INTEREST",
+          "to": "I_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "interest_write_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-006"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                473,
+                515
+              ]
+            },
+            {
+              "path": "app/cpy/CVTRA05Y.cpy",
+              "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+              "lines": [
+                4,
+                18
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "INTCALC-T009Z",
+          "from": "I_GROUP",
+          "to": "I_OPENED",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "right": {
+              "value": "zero",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "interest_rate_zero_no_interest_write"
+            },
+            {
+              "op": "inc",
+              "var": "tcatbal_records_seen",
+              "by": 1
+            }
+          ],
+          "obligationRefs": [
+            "INTCALC-OBL-004",
+            "INTCALC-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                210,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                415,
+                460
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                213,
+                217
+              ]
+            },
+            {
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+              "lines": [
+                462,
+                470
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction",
+          "sourceJustification": "CBACT04C.cbl:213-217 computes/writes interest only when DIS-INT-RATE NOT = 0; zero falls through without interest write attempt."
+        }
+      ]
+    },
+    {
+      "id": "CBTRN03C_TRANREPT",
+      "program": "CBTRN03C",
+      "job": "TRANREPT",
+      "initialState": "R_START",
+      "variables": {
+        "open_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "read_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "10",
+            "other",
+            "UnknownEOF"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "10",
+              "values": [
+                "10"
+              ]
+            },
+            {
+              "id": "other",
+              "values": [
+                "other"
+              ]
+            },
+            {
+              "id": "unknowneof",
+              "values": [
+                "UnknownEOF"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "date_window": {
+          "type": "enum",
+          "domain": [
+            "in_range",
+            "out_of_range"
+          ],
+          "partitions": [
+            {
+              "id": "in_range",
+              "values": [
+                "in_range"
+              ]
+            },
+            {
+              "id": "out_of_range",
+              "values": [
+                "out_of_range"
+              ]
+            }
+          ],
+          "initial": "in_range"
+        },
+        "card_changed": {
+          "type": "bool",
+          "domain": [
+            true,
+            false
+          ],
+          "partitions": [
+            {
+              "id": "true",
+              "values": [
+                true
+              ]
+            },
+            {
+              "id": "false",
+              "values": [
+                false
+              ]
+            }
+          ],
+          "initial": false
+        },
+        "write_status": {
+          "type": "enum",
+          "domain": [
+            "00",
+            "not_00"
+          ],
+          "partitions": [
+            {
+              "id": "00",
+              "values": [
+                "00"
+              ]
+            },
+            {
+              "id": "not_00",
+              "values": [
+                "not_00"
+              ]
+            }
+          ],
+          "initial": "00"
+        },
+        "report_records_seen": {
+          "type": "int",
+          "domain": [
+            0,
+            1,
+            2
+          ],
+          "partitions": [
+            {
+              "id": "0",
+              "values": [
+                0
+              ]
+            },
+            {
+              "id": "1",
+              "values": [
+                1
+              ]
+            },
+            {
+              "id": "2",
+              "values": [
+                2
+              ]
+            }
+          ],
+          "initial": 0
+        }
+      },
+      "states": [
+        {
+          "id": "R_START",
+          "terminal": false
+        },
+        {
+          "id": "R_LOOP",
+          "terminal": false
+        },
+        {
+          "id": "R_DETAIL",
+          "terminal": false
+        },
+        {
+          "id": "R_TOTALS",
+          "terminal": false
+        },
+        {
+          "id": "R_CLOSE",
+          "terminal": true
+        },
+        {
+          "id": "R_ABEND",
+          "terminal": true
+        },
+        {
+          "id": "R_UNKNOWN",
+          "terminal": true
+        }
+      ],
+      "loopPolicy": {
+        "strategy": "BFS transition-id order with explicit budget",
+        "loopStates": [
+          "R_LOOP"
+        ],
+        "bounds": {
+          "tran_records": 2
+        }
+      },
+      "transitions": [
+        {
+          "id": "TRANREPT-T001",
+          "from": "R_START",
+          "to": "R_LOOP",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_open_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                29,
+                57
+              ]
+            },
+            {
+              "path": "app/jcl/TRANREPT.jcl",
+              "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+              "lines": [
+                19,
+                80
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T002",
+          "from": "R_START",
+          "to": "R_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "open_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_open_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-001"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                29,
+                57
+              ]
+            },
+            {
+              "path": "app/jcl/TRANREPT.jcl",
+              "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+              "lines": [
+                19,
+                80
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T003",
+          "from": "R_LOOP",
+          "to": "R_DETAIL",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "read_status"
+                },
+                "right": {
+                  "value": "00",
+                  "type": "enum"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "date_window"
+                },
+                "right": {
+                  "value": "in_range",
+                  "type": "enum"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "lookup_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "report_detail_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "account_accrual_attempt"
+            },
+            {
+              "op": "inc",
+              "var": "report_records_seen",
+              "by": 1
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002",
+            "TRANREPT-OBL-004",
+            "TRANREPT-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                122,
+                125
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                219,
+                243
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                274,
+                290
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                324,
+                341
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T009",
+          "from": "R_LOOP",
+          "to": "R_LOOP",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "read_status"
+                },
+                "right": {
+                  "value": "00",
+                  "type": "enum"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "date_window"
+                },
+                "right": {
+                  "value": "out_of_range",
+                  "type": "enum"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "tranrept_skip_detail_out_of_range"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-003"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                170,
+                206
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                248,
+                272
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T010",
+          "from": "R_LOOP",
+          "to": "R_TOTALS",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "read_status"
+                },
+                "right": {
+                  "value": "10",
+                  "type": "enum"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "date_window"
+                },
+                "right": {
+                  "value": "in_range",
+                  "type": "enum"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "page_total_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "grand_total_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-007",
+            "TRANREPT-OBL-008"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                322
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                181,
+                184
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T011",
+          "from": "R_LOOP",
+          "to": "R_CLOSE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "var": "read_status"
+                },
+                "right": {
+                  "value": "10",
+                  "type": "enum"
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "var": "date_window"
+                },
+                "right": {
+                  "value": "out_of_range",
+                  "type": "enum"
+                }
+              }
+            ]
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "close_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                322
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T012",
+          "from": "R_LOOP",
+          "to": "R_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "read_status"
+            },
+            "right": {
+              "value": "other",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "report_read_attempt"
+            },
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-002"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                122,
+                125
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                219,
+                243
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T013",
+          "from": "R_LOOP",
+          "to": "R_UNKNOWN",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "unknown",
+            "var": "read_status"
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "unknown_eof_receiver_path"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                322
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T014",
+          "from": "R_DETAIL",
+          "to": "R_LOOP",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "write_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [],
+          "obligationRefs": [
+            "TRANREPT-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                274,
+                290
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                324,
+                341
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T015",
+          "from": "R_DETAIL",
+          "to": "R_ABEND",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "write_status"
+            },
+            "right": {
+              "value": "not_00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "abend"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-005"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                274,
+                290
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                324,
+                341
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        },
+        {
+          "id": "TRANREPT-T016",
+          "from": "R_TOTALS",
+          "to": "R_CLOSE",
+          "inputEvent": "external_observation",
+          "guard": {
+            "op": "eq",
+            "left": {
+              "var": "write_status"
+            },
+            "right": {
+              "value": "00",
+              "type": "enum"
+            }
+          },
+          "effects": [
+            {
+              "op": "emit",
+              "event": "close_attempt"
+            }
+          ],
+          "obligationRefs": [
+            "TRANREPT-OBL-006",
+            "TRANREPT-OBL-007"
+          ],
+          "sourceAnchors": [
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                289
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                361,
+                374
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                197,
+                203
+              ]
+            },
+            {
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+              "lines": [
+                287,
+                322
+              ]
+            }
+          ],
+          "pathClass": "source_anchored_executable_abstraction"
+        }
+      ]
+    }
+  ],
+  "review_sensitive_obligation_tests": [
+    {
+      "transition": "POSTTRAN-T020",
+      "reject_mutation": "abend before WRITE TRANFILE",
+      "obligationRef": "POSTTRAN-OBL-008"
+    },
+    {
+      "transition": "TRANREPT-T009",
+      "reject_mutation": "out-of-range produces detail/accrual",
+      "obligationRef": "TRANREPT-OBL-003"
+    },
+    {
+      "transition": "INTCALC-T006",
+      "reject_mutation": "EOF flushes final account update",
+      "obligationRef": "INTCALC-OBL-007"
+    }
+  ],
+  "exposureNotes": [
+    "This v3 run observed P3 sibling names and WORKSPACE-NOTES.md context during path discovery because the user-provided composed-accent path did not exist on disk; content used for model authoring remained restricted to input-v1, draft-v2, and review-v2."
+  ]
+}

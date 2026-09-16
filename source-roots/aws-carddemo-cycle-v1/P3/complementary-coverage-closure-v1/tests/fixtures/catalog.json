@@ -1,0 +1,127 @@
+{
+  "kind": "test-catalog",
+  "denominators": {
+    "obligationsTotal": 2,
+    "contractsTotal": 2,
+    "candidateApplicableObligationContractCells": 4,
+    "obligationOperationCellsIllustrative": 12
+  },
+  "contracts": [
+    {
+      "contractId": "C1",
+      "arm": "zero-shot",
+      "operations": [
+        {
+          "operationId": "posting",
+          "track": "posting"
+        },
+        {
+          "operationId": "interest",
+          "track": "interest"
+        },
+        {
+          "operationId": "reporting",
+          "track": "reporting"
+        }
+      ]
+    },
+    {
+      "contractId": "C2",
+      "arm": "few-shot",
+      "operations": [
+        {
+          "operationId": "posting",
+          "track": "posting"
+        },
+        {
+          "operationId": "interest",
+          "track": "interest"
+        },
+        {
+          "operationId": "reporting",
+          "track": "reporting"
+        }
+      ]
+    }
+  ],
+  "scenarioRecords": [
+    {
+      "obligationId": "P-1",
+      "track": "posting",
+      "boundaryPartitions": [
+        {
+          "id": "ok"
+        },
+        {
+          "id": "neg"
+        }
+      ]
+    },
+    {
+      "obligationId": "I-1",
+      "track": "interest",
+      "boundaryPartitions": [
+        {
+          "id": "rate"
+        }
+      ]
+    }
+  ],
+  "obligationOperationMapping": [
+    {
+      "cellId": "P-1::C1::posting",
+      "obligationId": "P-1",
+      "contractId": "C1",
+      "operationId": "posting",
+      "operationTrack": "posting",
+      "obligationTrack": "posting",
+      "denominatorMembership": {
+        "semanticDenominator": true
+      }
+    },
+    {
+      "cellId": "P-1::C2::posting",
+      "obligationId": "P-1",
+      "contractId": "C2",
+      "operationId": "posting",
+      "operationTrack": "posting",
+      "obligationTrack": "posting",
+      "denominatorMembership": {
+        "semanticDenominator": true
+      }
+    },
+    {
+      "cellId": "I-1::C1::interest",
+      "obligationId": "I-1",
+      "contractId": "C1",
+      "operationId": "interest",
+      "operationTrack": "interest",
+      "obligationTrack": "interest",
+      "denominatorMembership": {
+        "semanticDenominator": true
+      }
+    },
+    {
+      "cellId": "I-1::C2::interest",
+      "obligationId": "I-1",
+      "contractId": "C2",
+      "operationId": "interest",
+      "operationTrack": "interest",
+      "obligationTrack": "interest",
+      "denominatorMembership": {
+        "semanticDenominator": true
+      }
+    },
+    {
+      "cellId": "P-1::C1::interest",
+      "obligationId": "P-1",
+      "contractId": "C1",
+      "operationId": "interest",
+      "operationTrack": "interest",
+      "obligationTrack": "posting",
+      "denominatorMembership": {
+        "semanticDenominator": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "status": "interrupted_local_process_ownership_failure",
+  "process": {
+    "sessionId": "proc_e027ef9a926b",
+    "pid": 89731,
+    "exitCode": -15,
+    "terminationSource": "runner_close",
+    "running": false
+  },
+  "probePassed": true,
+  "completed": [
+    "E1-1",
+    "E1-2",
+    "E1-3"
+  ],
+  "interrupted": [
+    "E2-1"
+  ],
+  "notSent": [
+    "E2-2",
+    "E2-3",
+    "E3-SDD-stage6r3"
+  ],
+  "counts": {
+    "expected": 7,
+    "completed": 3,
+    "interrupted": 1,
+    "notSent": 3
+  },
+  "evidence": [
+    {
+      "label": "E1-1",
+      "requestSha256": "a01794ccff48d48a94264a0d210dd1a705ffaa646eb1b8311080a3ec90663dc7",
+      "previousResponseIdAbsent": true,
+      "sseBytes": 966207,
+      "sseSha256": "4efbfef8567e8d550ad746c1a5617956816cd49d69ecb232b700c26b5f428c73",
+      "terminalEvents": [
+        "response.completed"
+      ],
+      "receiptClassification": "complete",
+      "receiptHashVerified": true
+    },
+    {
+      "label": "E1-2",
+      "requestSha256": "bdc15f1441ba8be10536cdda9f161b661018e7c18fe48d56658bbea5b14bc684",
+      "previousResponseIdAbsent": true,
+      "sseBytes": 1042194,
+      "sseSha256": "586ec5b6fb31c7832f591e2f13e9c151b9abd477cc985614537953c319844386",
+      "terminalEvents": [
+        "response.completed"
+      ],
+      "receiptClassification": "complete",
+      "receiptHashVerified": true
+    },
+    {
+      "label": "E1-3",
+      "requestSha256": "324efda6ecf4fb1051296f7efa7842402a13f287cc69543b16ddcb2d057bed51",
+      "previousResponseIdAbsent": true,
+      "sseBytes": 1072558,
+      "sseSha256": "547c16eedba0133f553aabc1aa1b9c2fd0dcbc9edd29c3606b87f50800f71a3f",
+      "terminalEvents": [
+        "response.completed"
+      ],
+      "receiptClassification": "complete",
+      "receiptHashVerified": true
+    },
+    {
+      "label": "E2-1",
+      "requestSha256": "f4a953edb6383f8e53a8c8372d0373dfe7e1a8163ecf73fbdbc6a756efd68775",
+      "previousResponseIdAbsent": true,
+      "sseBytes": 163840,
+      "sseSha256": "b7099ce7529bfb9b9ed498458dda91d47aa91a38d89bf07da09f85f195c7deaa",
+      "terminalEvents": [],
+      "receiptClassification": null,
+      "receiptHashVerified": null
+    },
+    {
+      "label": "probe-synthetic-fresh",
+      "requestSha256": "854c232063ce35da2ebe3cc7da45e58735ba5056564b98ed91cc738c39a7de6d",
+      "previousResponseIdAbsent": true,
+      "sseBytes": 7023,
+      "sseSha256": "61b8dbfafc5da5ed2e2dfc4b4fa64a024ebf7c9f93f49b22c117fd5cd0f526f9",
+      "terminalEvents": [
+        "response.completed"
+      ],
+      "receiptClassification": "complete",
+      "receiptHashVerified": true
+    }
+  ],
+  "originalSummaryPreserved": true,
+  "noAutomaticRetry": true,
+  "officialCampaignStarted": false,
+  "requiredDecision": "Authorize a versioned replacement E2-1 call and first calls E2-2 E2-3 SDD; preserve completed E1 and incomplete E2-1. No new probe needed for unchanged qualified payload. Main-process tracked runner, not auxiliary-run-owned."
+}

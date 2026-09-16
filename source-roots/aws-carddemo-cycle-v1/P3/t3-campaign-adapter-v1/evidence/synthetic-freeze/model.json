@@ -1,0 +1,1 @@
+{"capabilities": [{"id": "CAP-A", "initialState": "S0", "variables": {"x": {"type": "enum", "domain": ["go"], "initial": "go"}}, "states": [{"id": "S0"}, {"id": "S1"}], "transitions": [{"id": "TA", "from": "S0", "to": "S1", "guard": {"op": "eq", "left": {"var": "x"}, "right": {"value": "go", "type": "enum"}}, "effects": [], "obligationRefs": ["OBL-A"]}]}]}

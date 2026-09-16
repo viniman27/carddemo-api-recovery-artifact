@@ -1,0 +1,199 @@
+{
+  "sdd": [
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-posting",
+      "suite_id": "SDD-SMOKE",
+      "origin": "SDD:E3-01:stage6r3:posting",
+      "request": {
+        "method": "POST",
+        "path": "/posting",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "body_kind": "json",
+        "body_b64": "e30="
+      },
+      "resource_package_id": "fixture-copy-current",
+      "expectation": {
+        "expectation_id": "documented-status",
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        }
+      },
+      "timeout_seconds": 180.0,
+      "parameters": {
+        "track": "posting",
+        "arm": "sdd"
+      },
+      "sequence": [],
+      "provenance": [
+        "SDD:E3-01:stage6r3:posting"
+      ]
+    },
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-interest",
+      "suite_id": "SDD-SMOKE",
+      "origin": "SDD:E3-01:stage6r3:interest",
+      "request": {
+        "method": "POST",
+        "path": "/interest",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "body_kind": "json",
+        "body_b64": "e30="
+      },
+      "resource_package_id": "fixture-copy-current",
+      "expectation": {
+        "expectation_id": "documented-status",
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        }
+      },
+      "timeout_seconds": 180.0,
+      "parameters": {
+        "track": "interest",
+        "arm": "sdd"
+      },
+      "sequence": [],
+      "provenance": [
+        "SDD:E3-01:stage6r3:interest"
+      ]
+    },
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-reporting",
+      "suite_id": "SDD-SMOKE",
+      "origin": "SDD:E3-01:stage6r3:reporting",
+      "request": {
+        "method": "POST",
+        "path": "/reporting",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "body_kind": "json",
+        "body_b64": "e30="
+      },
+      "resource_package_id": "fixture-copy-current",
+      "expectation": {
+        "expectation_id": "documented-status",
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        }
+      },
+      "timeout_seconds": 180.0,
+      "parameters": {
+        "track": "reporting",
+        "arm": "sdd"
+      },
+      "sequence": [],
+      "provenance": [
+        "SDD:E3-01:stage6r3:reporting"
+      ]
+    }
+  ],
+  "fewshotCurrentRepresentative": {
+    "case_id": "FEWSHOT-SMOKE-E2-2-interest-current",
+    "suite_id": "FEWSHOT-SMOKE",
+    "origin": "FEWSHOT:E2-2:current:interest",
+    "request": {
+      "method": "POST",
+      "path": "/interest",
+      "headers": [
+        [
+          "content-type",
+          "application/json"
+        ]
+      ],
+      "body_kind": "json",
+      "body_b64": "e30="
+    },
+    "resource_package_id": "fixture-copy-current",
+    "expectation": {
+      "expectation_id": "documented-status",
+      "checks": {
+        "status": [
+          200,
+          400,
+          500,
+          503
+        ]
+      }
+    },
+    "timeout_seconds": 180.0,
+    "parameters": {
+      "track": "interest",
+      "arm": "fewshot",
+      "sourceFacadeSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "sourceSampleSha256": "1f92bee43a9900edc475d50301d04352063d38753dc53fadb9fa43205f15f6c5"
+    },
+    "sequence": [],
+    "provenance": [
+      "FEWSHOT:E2-2:current:interest"
+    ]
+  },
+  "zeroshotCurrentRepresentative": {
+    "case_id": "ZEROSHOT-SMOKE-E1-1-posting-current",
+    "suite_id": "ZEROSHOT-SMOKE",
+    "origin": "ZEROSHOT:E1-1:current:posting",
+    "request": {
+      "method": "POST",
+      "path": "/posting",
+      "headers": [
+        [
+          "content-type",
+          "application/json"
+        ]
+      ],
+      "body_kind": "json",
+      "body_b64": "e30="
+    },
+    "resource_package_id": "fixture-copy-current",
+    "expectation": {
+      "expectation_id": "documented-status",
+      "checks": {
+        "status": [
+          200,
+          400,
+          500,
+          503
+        ]
+      }
+    },
+    "timeout_seconds": 180.0,
+    "parameters": {
+      "track": "posting",
+      "arm": "zeroshot",
+      "sourceFacadeSha256": "a1f6c52c6ab7bf578f1bc09bb67987b7c4a69963665ceac08c5c4a0f3f1dfc00",
+      "sourceSampleSha256": "3dc25db6d1717133599ac790d6f7bbd5b5e910a9f700d5a36b24794d97595247"
+    },
+    "sequence": [],
+    "provenance": [
+      "ZEROSHOT:E1-1:current:posting"
+    ]
+  },
+  "note": "technical smoke uses approved empty-body P2b API path; full P2c bodies are pinned as current-source evidence, not public expected results"
+}

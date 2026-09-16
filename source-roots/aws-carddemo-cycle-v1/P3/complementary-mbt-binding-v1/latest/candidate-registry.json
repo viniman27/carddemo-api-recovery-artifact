@@ -1,0 +1,2731 @@
+{
+  "artifactPins": [
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json",
+      "bytes": 2540,
+      "label": "pinned-input-freeze",
+      "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json",
+      "sha256": "9470dec264574fea15b428476c9e5ae945cfbbf67d74f5f70dc3f91228dd8f0c"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+      "bytes": 24419,
+      "label": "essential-fixture-evidence",
+      "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+      "sha256": "2ef0aaae7dfe81b204986d73e5c6887bb3cddf7caafa30b0de4f23855908852f"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json",
+      "bytes": 1674,
+      "label": "pinned-input-freeze",
+      "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json",
+      "sha256": "822ab22387debaeab4aa67dbbb6708e45666ac62e4c94c1b7d68fd4756067048"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+      "bytes": 18550,
+      "label": "essential-fixture-evidence",
+      "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+      "sha256": "f17505cd8550129bb278aa6bd455fdedb5c3ab2a3af830546776513dbbdc5a5c"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "bytes": 57142,
+      "label": "essential-fixture-evidence",
+      "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+      "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "bytes": 31689,
+      "label": "essential-fixture-evidence",
+      "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+      "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/executable_reference.py",
+      "bytes": 19747,
+      "label": "reference-executable-v4/executable_reference.py",
+      "path": "P3/reference-executable-v4/executable_reference.py",
+      "sha256": "443ef90519ae11828577669567d2d3a2fc5678a7e83f1e7f3c559aa7d12049e2"
+    },
+    {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/model.json",
+      "bytes": 112525,
+      "label": "reference-executable-v4/model.json",
+      "path": "P3/reference-executable-v4/model.json",
+      "sha256": "26b3a23d2e682726d7b9e7ea309149ada93e72133a13c5c0ab2b743b7aab48f1"
+    }
+  ],
+  "candidateRegistryContract": {
+    "notRetroactive": "previously observed complementary results are not converted into official T3; this registry is a recipe/input qualification for future authorized execution",
+    "officialT3": false,
+    "prospectiveOnly": true,
+    "t1T2Fixed": "T1/T2 first-campaign material remains fixed; this tool does not generate or rewrite T1/T2"
+  },
+  "cases": [
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "valid-new-tcatbal",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "lookup_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T008",
+          "valuation": {
+            "xref_exists": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tcatbal_update_attempt"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "account_exists"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "within_limit"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-003",
+            "POSTTRAN-OBL-007"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                467,
+                542
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                10
+              ],
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+            }
+          ],
+          "state": "P_VALIDATE_ACCOUNT",
+          "transitionId": "POSTTRAN-T012",
+          "valuation": {
+            "account_exists": true,
+            "not_expired_textual": true,
+            "within_limit": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "account_rewrite_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "tcatbal_status"
+            },
+            "op": "in",
+            "values": [
+              "00",
+              "23"
+            ]
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-007",
+            "POSTTRAN-OBL-008"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                440,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                545,
+                559
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_TCATBAL",
+          "transitionId": "POSTTRAN-T013",
+          "valuation": {
+            "tcatbal_status": "23"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tranfile_write_attempt_pending"
+          ],
+          "guard": {
+            "left": {
+              "var": "rewrite_invalid_key"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": false
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-008",
+            "POSTTRAN-OBL-009"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                440,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                545,
+                559
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                424,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                562,
+                578
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_ACCOUNT_REWRITE",
+          "transitionId": "POSTTRAN-T019",
+          "valuation": {
+            "rewrite_invalid_key": false
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tranfile_write_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "tranfile_write_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-009"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                424,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                562,
+                578
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_TRANFILE_WRITE",
+          "transitionId": "POSTTRAN-T021",
+          "valuation": {
+            "tranfile_write_status": "00"
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "valid-existing-tcatbal",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "lookup_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T008",
+          "valuation": {
+            "xref_exists": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tcatbal_update_attempt"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "account_exists"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "within_limit"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-003",
+            "POSTTRAN-OBL-007"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                467,
+                542
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                10
+              ],
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+            }
+          ],
+          "state": "P_VALIDATE_ACCOUNT",
+          "transitionId": "POSTTRAN-T012",
+          "valuation": {
+            "account_exists": true,
+            "not_expired_textual": true,
+            "within_limit": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "account_rewrite_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "tcatbal_status"
+            },
+            "op": "in",
+            "values": [
+              "00",
+              "23"
+            ]
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-007",
+            "POSTTRAN-OBL-008"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                440,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                545,
+                559
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_TCATBAL",
+          "transitionId": "POSTTRAN-T013",
+          "valuation": {
+            "tcatbal_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tranfile_write_attempt_pending"
+          ],
+          "guard": {
+            "left": {
+              "var": "rewrite_invalid_key"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": false
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-008",
+            "POSTTRAN-OBL-009"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                440,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                545,
+                559
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                424,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                562,
+                578
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_ACCOUNT_REWRITE",
+          "transitionId": "POSTTRAN-T019",
+          "valuation": {
+            "rewrite_invalid_key": false
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tranfile_write_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "tranfile_write_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-009"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                424,
+                442
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                562,
+                578
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_TRANFILE_WRITE",
+          "transitionId": "POSTTRAN-T021",
+          "valuation": {
+            "tranfile_write_status": "00"
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "reject-card-missing",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "reject_write_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": false
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            },
+            {
+              "lines": [
+                211,
+                216
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                227,
+                231
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T007",
+          "valuation": {
+            "xref_exists": false
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "reject-account-missing",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "lookup_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T008",
+          "valuation": {
+            "xref_exists": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "reject_write_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "account_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": false
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                393,
+                421
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                17
+              ],
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+            }
+          ],
+          "state": "P_VALIDATE_ACCOUNT",
+          "transitionId": "POSTTRAN-T009",
+          "valuation": {
+            "account_exists": false
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "reject-limit",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "lookup_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T008",
+          "valuation": {
+            "xref_exists": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "reject_write_attempt"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "account_exists"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "within_limit"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": false
+                }
+              },
+              {
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                393,
+                421
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                17
+              ],
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+            }
+          ],
+          "state": "P_VALIDATE_ACCOUNT",
+          "transitionId": "POSTTRAN-T010",
+          "valuation": {
+            "account_exists": true,
+            "not_expired_textual": true,
+            "within_limit": false
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN02C_POSTTRAN",
+      "caseId": "reject-expiry",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "bytes": 57142,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-posting-essential-v1/evidence/posting-essential-report.json",
+          "sha256": "86929508b1a7b960afda8501eeb24d0545d5cfdb36cd97f665e43b5b8a248734"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                61
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                193,
+                200
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_START",
+          "transitionId": "POSTTRAN-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "daily_read_attempt",
+            "daily_record_counted"
+          ],
+          "guard": {
+            "left": {
+              "var": "read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-002"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                202,
+                219
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                345,
+                369
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            }
+          ],
+          "state": "P_OPENED",
+          "transitionId": "POSTTRAN-T003",
+          "valuation": {
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "lookup_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "xref_exists"
+            },
+            "op": "eq",
+            "right": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-004",
+            "POSTTRAN-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                370,
+                392
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                8
+              ],
+              "path": "app/cpy/CVACT03Y.cpy",
+              "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370"
+            }
+          ],
+          "state": "P_VALIDATE_XREF",
+          "transitionId": "POSTTRAN-T008",
+          "valuation": {
+            "xref_exists": true
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "reject_write_attempt"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "account_exists"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": true
+                }
+              },
+              {
+                "left": {
+                  "var": "not_expired_textual"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "bool",
+                  "value": false
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "POSTTRAN-OBL-005",
+            "POSTTRAN-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                393,
+                421
+              ],
+              "path": "app/cbl/CBTRN02C.cbl",
+              "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f"
+            },
+            {
+              "lines": [
+                4,
+                17
+              ],
+              "path": "app/cpy/CVACT01Y.cpy",
+              "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728"
+            }
+          ],
+          "state": "P_VALIDATE_ACCOUNT",
+          "transitionId": "POSTTRAN-T011",
+          "valuation": {
+            "account_exists": true,
+            "not_expired_textual": false
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "posting"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBACT04C_INTCALC",
+      "caseId": "rates-specific-default-zero",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+          "bytes": 24419,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/result.json",
+          "sha256": "2ef0aaae7dfe81b204986d73e5c6887bb3cddf7caafa30b0de4f23855908852f"
+        },
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json",
+          "bytes": 2540,
+          "label": "pinned-input-freeze",
+          "path": "P3/complementary-interest-essential-v1/evidence/rates-specific-default-zero/input-freeze.json",
+          "sha256": "9470dec264574fea15b428476c9e5ae945cfbbf67d74f5f70dc3f91228dd8f0c"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "intcalc_open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                28,
+                56
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                175,
+                186
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_START",
+          "transitionId": "INTCALC-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tcatbal_read_attempt",
+            "group_start"
+          ],
+          "guard": {
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-003"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                188,
+                222
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                4,
+                10
+              ],
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+            },
+            {
+              "lines": [
+                200,
+                205
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                372,
+                413
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_OPENED",
+          "transitionId": "INTCALC-T003",
+          "valuation": {
+            "tcatbal_read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "interest_compute_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "op": "in",
+            "values": [
+              "specific",
+              "default"
+            ]
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-004",
+            "INTCALC-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                210,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                415,
+                460
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                213,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                462,
+                470
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_GROUP",
+          "transitionId": "INTCALC-T007",
+          "valuation": {
+            "disc_rate_path": "specific"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "interest_write_attempt"
+          ],
+          "guard": {
+            "op": "true"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-005",
+            "INTCALC-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                213,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                462,
+                470
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_RATE",
+          "transitionId": "INTCALC-T009",
+          "valuation": {}
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "account_update_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "interest_write_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-006",
+            "INTCALC-OBL-007"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                473,
+                515
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                4,
+                18
+              ],
+              "path": "app/cpy/CVTRA05Y.cpy",
+              "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+            }
+          ],
+          "state": "I_WRITE_INTEREST",
+          "transitionId": "INTCALC-T010",
+          "valuation": {
+            "interest_write_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "interest_rate_zero_no_interest_write"
+          ],
+          "guard": {
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "zero"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-004",
+            "INTCALC-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                210,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                415,
+                460
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                213,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                462,
+                470
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_GROUP",
+          "transitionId": "INTCALC-T009Z",
+          "valuation": {
+            "disc_rate_path": "zero"
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "interest"
+    },
+    {
+      "candidateKind": "source_defect_observation_not_financial_correctness",
+      "capability": "CBACT04C_INTCALC",
+      "caseId": "single-final-eof",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+          "bytes": 18550,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/result.json",
+          "sha256": "f17505cd8550129bb278aa6bd455fdedb5c3ab2a3af830546776513dbbdc5a5c"
+        },
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json",
+          "bytes": 1674,
+          "label": "pinned-input-freeze",
+          "path": "P3/complementary-interest-essential-v1/evidence/single-final-eof/input-freeze.json",
+          "sha256": "822ab22387debaeab4aa67dbbb6708e45666ac62e4c94c1b7d68fd4756067048"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "intcalc_open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                28,
+                56
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                175,
+                186
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_START",
+          "transitionId": "INTCALC-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tcatbal_read_attempt",
+            "group_start"
+          ],
+          "guard": {
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-002",
+            "INTCALC-OBL-003"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                188,
+                222
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                4,
+                10
+              ],
+              "path": "app/cpy/CVTRA01Y.cpy",
+              "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba"
+            },
+            {
+              "lines": [
+                200,
+                205
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                372,
+                413
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_OPENED",
+          "transitionId": "INTCALC-T003",
+          "valuation": {
+            "tcatbal_read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "interest_compute_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "disc_rate_path"
+            },
+            "op": "in",
+            "values": [
+              "specific",
+              "default"
+            ]
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-004",
+            "INTCALC-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                210,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                415,
+                460
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                213,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                462,
+                470
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_GROUP",
+          "transitionId": "INTCALC-T007",
+          "valuation": {
+            "disc_rate_path": "specific"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "interest_write_attempt"
+          ],
+          "guard": {
+            "op": "true"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-005",
+            "INTCALC-OBL-006"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                213,
+                217
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                462,
+                470
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_RATE",
+          "transitionId": "INTCALC-T009",
+          "valuation": {}
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "account_update_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "interest_write_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-006",
+            "INTCALC-OBL-007"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                473,
+                515
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                4,
+                18
+              ],
+              "path": "app/cpy/CVTRA05Y.cpy",
+              "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec"
+            }
+          ],
+          "state": "I_WRITE_INTEREST",
+          "transitionId": "INTCALC-T010",
+          "valuation": {
+            "interest_write_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "tcatbal_read_attempt",
+            "intcalc_eof_no_final_account_update",
+            "close_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "tcatbal_read_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "10"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "INTCALC-OBL-008"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                194,
+                203
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            },
+            {
+              "lines": [
+                350,
+                370
+              ],
+              "path": "app/cbl/CBACT04C.cbl",
+              "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4"
+            }
+          ],
+          "state": "I_OPENED",
+          "transitionId": "INTCALC-T006",
+          "valuation": {
+            "tcatbal_read_status": "10"
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "interest"
+    },
+    {
+      "candidateKind": "source_guided_transition_trace",
+      "capability": "CBTRN03C_TRANREPT",
+      "caseId": "date-boundaries-in-out-v1",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "eligible_t3_candidate",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "bytes": 31689,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": null,
+          "events": [
+            "report_open_attempt"
+          ],
+          "guard": {
+            "left": {
+              "var": "open_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "TRANREPT-OBL-001"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                29,
+                57
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                19,
+                80
+              ],
+              "path": "app/jcl/TRANREPT.jcl",
+              "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571"
+            }
+          ],
+          "state": "R_START",
+          "transitionId": "TRANREPT-T001",
+          "valuation": {
+            "open_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "report_read_attempt",
+            "lookup_attempt",
+            "report_detail_attempt",
+            "account_accrual_attempt"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "read_status"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "enum",
+                  "value": "00"
+                }
+              },
+              {
+                "left": {
+                  "var": "date_window"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "enum",
+                  "value": "in_range"
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "TRANREPT-OBL-002",
+            "TRANREPT-OBL-004",
+            "TRANREPT-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                122,
+                125
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                219,
+                243
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                274,
+                290
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                324,
+                341
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            }
+          ],
+          "state": "R_LOOP",
+          "transitionId": "TRANREPT-T003",
+          "valuation": {
+            "date_window": "in_range",
+            "read_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [],
+          "guard": {
+            "left": {
+              "var": "write_status"
+            },
+            "op": "eq",
+            "right": {
+              "type": "enum",
+              "value": "00"
+            }
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "TRANREPT-OBL-005"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                274,
+                290
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                324,
+                341
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            }
+          ],
+          "state": "R_DETAIL",
+          "transitionId": "TRANREPT-T014",
+          "valuation": {
+            "write_status": "00"
+          }
+        },
+        {
+          "blockReason": null,
+          "events": [
+            "report_read_attempt",
+            "tranrept_skip_detail_out_of_range"
+          ],
+          "guard": {
+            "args": [
+              {
+                "left": {
+                  "var": "read_status"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "enum",
+                  "value": "00"
+                }
+              },
+              {
+                "left": {
+                  "var": "date_window"
+                },
+                "op": "eq",
+                "right": {
+                  "type": "enum",
+                  "value": "out_of_range"
+                }
+              }
+            ],
+            "op": "and"
+          },
+          "guardResult": true,
+          "obligationRefs": [
+            "TRANREPT-OBL-003"
+          ],
+          "qualified": true,
+          "sourceAnchors": [
+            {
+              "lines": [
+                170,
+                206
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                248,
+                272
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            }
+          ],
+          "state": "R_LOOP",
+          "transitionId": "TRANREPT-T009",
+          "valuation": {
+            "date_window": "out_of_range",
+            "read_status": "00"
+          }
+        }
+      ],
+      "sharedOnlyReason": null,
+      "sourceAuthorityChecked": true,
+      "track": "reporting"
+    },
+    {
+      "candidateKind": "shared_only",
+      "capability": "CBTRN03C_TRANREPT",
+      "caseId": "empty-in-range-v1",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "shared_only",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "bytes": 31689,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+        }
+      ],
+      "modelTrace": [
+        {
+          "blockReason": "guard_unknown",
+          "events": [
+            "unknown_eof_receiver_path"
+          ],
+          "guard": {
+            "op": "unknown",
+            "var": "read_status"
+          },
+          "guardResult": "unknown",
+          "obligationRefs": [
+            "TRANREPT-OBL-007"
+          ],
+          "qualified": false,
+          "sourceAnchors": [
+            {
+              "lines": [
+                197,
+                203
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            },
+            {
+              "lines": [
+                287,
+                322
+              ],
+              "path": "app/cbl/CBTRN03C.cbl",
+              "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef"
+            }
+          ],
+          "state": "R_LOOP",
+          "transitionId": "TRANREPT-T013",
+          "valuation": {
+            "read_status": "UnknownEOF"
+          }
+        }
+      ],
+      "sharedOnlyReason": "unknown_guard_blocked",
+      "sourceAuthorityChecked": true,
+      "track": "reporting"
+    },
+    {
+      "candidateKind": "shared_only",
+      "capability": "CBTRN03C_TRANREPT",
+      "caseId": "card-break-two-groups-v1",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "shared_only",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "bytes": 31689,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+        }
+      ],
+      "modelTrace": [],
+      "sharedOnlyReason": "model_lacks_card_break_transition",
+      "sourceAuthorityChecked": true,
+      "track": "reporting"
+    },
+    {
+      "candidateKind": "shared_only",
+      "capability": "CBTRN03C_TRANREPT",
+      "caseId": "pagination-threshold-20-v1",
+      "checkerCompatibility": "shared complementary checker may evaluate preserved artifacts without prompts/feedback; candidate registry is prospective only",
+      "classification": "shared_only",
+      "fixturePins": [
+        {
+          "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "bytes": 31689,
+          "label": "essential-fixture-evidence",
+          "path": "P3/complementary-reporting-essential-v1/evidence/reporting-essential-results.json",
+          "sha256": "2f2425c591cff084322db4523894facec5b7fcf90567b33d0121b7feb932f4f2"
+        }
+      ],
+      "modelTrace": [],
+      "sharedOnlyReason": "model_lacks_pagination_threshold_transition",
+      "sourceAuthorityChecked": true,
+      "track": "reporting"
+    }
+  ],
+  "contracts21OpsMapping": {
+    "contractCount": 7,
+    "contracts": [
+      {
+        "contractId": "E1-1",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E1-2",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E1-3",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E2-1",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E2-2",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E2-3",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      },
+      {
+        "contractId": "E3-SDD-stage6r3",
+        "operationCount": 3,
+        "trackOps": [
+          "posting",
+          "interest",
+          "reporting"
+        ]
+      }
+    ],
+    "operationCount": 21
+  },
+  "createdUtc": "2026-09-16T11:19:03Z",
+  "kind": "complementary-mbt-binding-v1-candidate-registry",
+  "recommendedNextAction": "If an official T3/T4 campaign is still desired, freeze this registry prospectively as a new recipe and run the authorized runner only on eligible_t3_candidate cases; keep shared_only cases in the complementary shared-checker ledger.",
+  "scope": "Evaluate pinned essential-fixture inputs against real reference-executable-v4 model guards/traces only. No API reruns, no COBOL reruns, no model calls, no invented T1/T2 generation.",
+  "summary": {
+    "apiReruns": false,
+    "caseCountsByTrack": {
+      "interest": 2,
+      "posting": 6,
+      "reporting": 4
+    },
+    "eligibleT3CandidateCount": 9,
+    "essentialCaseCount": 12,
+    "modelCalls": false,
+    "modelValidationErrors": [],
+    "originalCampaignReruns": false,
+    "sharedOnlyCount": 3,
+    "sourcePinErrors": []
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "input_hashes_before": {
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md": "6cba102f8335843b46e75a77b1a71d4e56373a95d5ac63cf645491556c443b27",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01/specs/adapter-behavior-carddemo-r2/requirements.md": "b53c471116dfa0c3831fc810964bddca3eb1fa0d3b8e7d459181ba71e54b3d8f",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/POST-PIPELINE-READINESS.md": "aee4ee2a78e56befe51c1e96c7ec98fe9d5cfbbe83e79c8628d52c21ca2e7952",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/PROTOCOLO.md": "af40d9018405fe88a23029b0bbcafcf264a7d6212f3e2244d53fa98e326a0fa7",
+    "<REDACTED_LOCAL_PATH>/WORKSPACE-NOTES.md": "be2e0ea2e3ce50ab7d85c9d22a05c1ccb9801d5fac63e2e1318a68cdec9b1e45"
+  },
+  "operation_count": 3,
+  "paths": [
+    "/posting",
+    "/interest",
+    "/reporting"
+  ],
+  "schema_count": 28,
+  "mapping": [
+    {
+      "component": "PostingRequest",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4 Requests/D-14/C-9",
+        "note": "Required empty closed JSON object; missing body/null/array/properties invalid"
+      }
+    },
+    {
+      "component": "InterestRequest",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4 Requests/D-14/C-9",
+        "note": "Required empty closed JSON object; missing body/null/array/properties invalid"
+      }
+    },
+    {
+      "component": "ReportingRequest",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4 Requests/D-14/C-9",
+        "note": "Required empty closed JSON object; missing body/null/array/properties invalid"
+      }
+    },
+    {
+      "component": "PostingCandidate",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-5",
+        "note": "Posting candidate/source daily fields"
+      }
+    },
+    {
+      "component": "PostingTransaction",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-5",
+        "note": "Prepared posted transaction fields"
+      }
+    },
+    {
+      "component": "PostingRejection",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-5",
+        "note": "Posting rejection content"
+      }
+    },
+    {
+      "component": "PostingProgress",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-5/D-16",
+        "note": "Progress counts; not committed/durable output counts"
+      }
+    },
+    {
+      "component": "InterestCategoryBasis",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-6",
+        "note": "External description only; not request"
+      }
+    },
+    {
+      "component": "InterestIdentifierBasis",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-6",
+        "note": "External identifier basis only; not request"
+      }
+    },
+    {
+      "component": "GeneratedInterestTransaction",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.2/C-6",
+        "note": "Generated interest transaction fields; no fee/suffix public"
+      }
+    },
+    {
+      "component": "ReportingTransactionBasis",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.3",
+        "note": "External description only; not request"
+      }
+    },
+    {
+      "component": "ReportingDateBasis",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.3",
+        "note": "External date basis only; not request"
+      }
+    },
+    {
+      "component": "ReportDetail",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.3/C-7",
+        "note": "Report receiver detail fields"
+      }
+    },
+    {
+      "component": "ReportHeaderContext",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.3/C-7",
+        "note": "Report header context"
+      }
+    },
+    {
+      "component": "ReportTotal",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.3/C-7/C-8",
+        "note": "Report total occurrence"
+      }
+    },
+    {
+      "component": "ReportRecord",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/C-7/C-8/D-15",
+        "note": "Mixed ordered reporting records union"
+      }
+    },
+    {
+      "component": "PostingTransactionAvailability",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/D-15/D-16",
+        "note": "PostingTransactionAvailability availability oneOf; unavailable items forbidden"
+      }
+    },
+    {
+      "component": "PostingRejectionAvailability",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/C-5/D-16",
+        "note": "PostingRejectionAvailability availability oneOf; unavailable items forbidden"
+      }
+    },
+    {
+      "component": "InterestOutputAvailability",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/C-6/D-16",
+        "note": "InterestOutputAvailability availability oneOf; unavailable items forbidden"
+      }
+    },
+    {
+      "component": "ReportRecordAvailability",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/C-8/D-16",
+        "note": "ReportRecordAvailability availability oneOf; unavailable items forbidden"
+      }
+    },
+    {
+      "component": "ProgressAvailability",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/C-5/D-16",
+        "note": "Posting progress availability"
+      }
+    },
+    {
+      "component": "PostingEnvelope",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/D-16/C-10/C-12",
+        "note": "Posting envelope; any available outputs/rejections/progress required for 200"
+      }
+    },
+    {
+      "component": "InterestEnvelope",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/D-16/C-11/C-12",
+        "note": "Interest envelope; outputs available required for 200"
+      }
+    },
+    {
+      "component": "ReportingEnvelope",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/D-16/C-8/C-12",
+        "note": "Reporting envelope; records available required for 200"
+      }
+    },
+    {
+      "component": "PostingInterfaceError",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/§5/C-12/D-13/D-16",
+        "note": "posting error envelope; known failure 500 precedence; no internal diagnostics"
+      }
+    },
+    {
+      "component": "InterestInterfaceError",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/§5/C-12/D-13/D-16",
+        "note": "interest error envelope; known failure 500 precedence; no internal diagnostics"
+      }
+    },
+    {
+      "component": "ReportingInterfaceError",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/§5/C-12/D-13/D-16",
+        "note": "reporting error envelope; known failure 500 precedence; no internal diagnostics"
+      }
+    },
+    {
+      "component": "InterfaceError",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "§3.4/§5/C-12",
+        "note": "Track-specific interface errors"
+      }
+    },
+    {
+      "operation": "posting",
+      "route": "/posting",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "C-1/C-5/C-9/C-10/C-12-C-14",
+        "note": "posting operation; no selector/reset/polling/telemetry/default business fields"
+      }
+    },
+    {
+      "operation": "interest",
+      "route": "/interest",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "C-2/C-6/C-9/C-11-C-14",
+        "note": "interest operation; no selector/reset/polling/telemetry/default business fields"
+      }
+    },
+    {
+      "operation": "reporting",
+      "route": "/reporting",
+      "traceability": {
+        "source": "sdd-runs/E3-01/specs/api-contract-carddemo-r3/requirements.md",
+        "clause": "C-3/C-7-C-9/C-12-C-14",
+        "note": "reporting operation; no selector/reset/polling/telemetry/default business fields"
+      }
+    }
+  ],
+  "blocked_semantic_defaults": [
+    "authentication/authorization unspecified, not declared absent",
+    "no dataset selector/upload/reset/polling/status/readiness/idempotency/retry",
+    "no units/ranges/rounding/calendar/encoding/coercion/durability defaults",
+    "no public reason 109/file-status/internal telemetry",
+    "no runtime binding or COBOL execution claim"
+  ]
+}

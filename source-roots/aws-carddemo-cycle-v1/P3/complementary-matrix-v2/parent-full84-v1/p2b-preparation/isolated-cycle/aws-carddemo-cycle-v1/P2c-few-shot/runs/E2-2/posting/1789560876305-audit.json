@@ -1,0 +1,63 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-2",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+  "contractOriginalSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+  "track": "posting",
+  "path": "/transaction-posting-runs",
+  "status": 200,
+  "requestBody": {
+    "bindings": {
+      "accounts": "p3-local-technical-fixture-selection:accounts",
+      "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances",
+      "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+      "rejectionOutput": "p3-local-technical-fixture-selection:rejectionOutput",
+      "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput"
+    },
+    "transactions": [
+      {
+        "amount": 25.0,
+        "cardNumber": "9999999999999999",
+        "categoryCode": 1,
+        "description": "LOCAL SYNTHETIC FIXTURE",
+        "filler": "",
+        "merchantCity": "TEST CITY",
+        "merchantId": 1,
+        "merchantName": "TEST MERCHANT",
+        "merchantZip": "0000000000",
+        "originalTimestamp": "2025-01-01-00.00.00.000000",
+        "processingTimestamp": "",
+        "source": "TEST",
+        "transactionId": "REJCARDMISS00001",
+        "typeCode": "01"
+      }
+    ]
+  },
+  "requestBodySha256": "bf5bf6781153a221ff61c893f8c393d5e8f2ffbb3b44d7f09d599ffd7ac1a865",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-k0fashxf",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-card-missing/registry.json",
+    "registrySha256": "c3e3f3ee1ac523b0c40b12886d076cf2cb7df494c694d134d2c1e137b6577419"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "transactionsProcessed": 1,
+    "transactionsRejected": 1,
+    "returnCode": 4,
+    "postedTransactions": [],
+    "rejections": [],
+    "diagnostics": [
+      "START OF EXECUTION OF PROGRAM CBTRN02C",
+      "TRANSACTIONS PROCESSED :000000001",
+      "TRANSACTIONS REJECTED  :000000001",
+      "END OF EXECUTION OF PROGRAM CBTRN02C"
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-k0fashxf/audit.json",
+  "durationSeconds": 0.042
+}

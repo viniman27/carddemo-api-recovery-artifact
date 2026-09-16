@@ -1,0 +1,49 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "verify_campaign_config.py",
+      "campaign-config-v2.json"
+    ],
+    "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"contracts\": 7,\n  \"operations\": 21,\n  \"official_campaigns_started\": false,\n  \"provider_calls_allowed_by_config\": false,\n  \"t1_payloads\": 7,\n  \"sources_checked\": 29,\n  \"fixtures_candidate_not_official\": 3\n}\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "python3",
+      "-m",
+      "unittest",
+      "tests/test_campaign_harness.py",
+      "tests/test_lifecycle_bounded.py",
+      "-v"
+    ],
+    "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_body_absent_empty_and_empty_json_are_distinct_in_identity_and_wire (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_case_ids_preserved_but_workdir_paths_are_opaque_contained_and_symlink_safe (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_cli_accepts_only_synthetic_qualification_and_fails_closed_for_official_label (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_expectations_are_structural_and_do_not_confuse_transport_completed_with_pass (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_freeze_hashes_detect_suite_tampering (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_http_preserves_duplicate_header_order_on_wire (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_per_application_lifecycle_binds_server_to_fresh_workdir_and_resets_state (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_timeout_on_uncontrolled_target_aborts_remaining_not_executed (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_union_stable_order_provenance_and_distinct_expectations (tests.test_campaign_harness.CampaignHarnessTests) ... ok\ntest_external_watchdog_does_not_kill_harness_for_infinite_handler (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_infinite_handler_is_not_retried_and_next_case_is_not_started_when_quiet_unproved (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_slow_controlled_handler_is_reaped_before_fast_next_case (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_startup_failure_aborts_remaining_not_executed (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok\ntest_stop_failure_escalates_to_kill_reaps_and_leaves_no_target_process (tests.test_lifecycle_bounded.LifecycleBoundedTests) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 5.429s\n\nOK\n"
+  },
+  {
+    "cmd": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+      "-c",
+      "import jsonschema,sys; print(\"python\",sys.executable); print(\"jsonschema\",jsonschema.__version__)"
+    ],
+    "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1",
+    "exit_code": 0,
+    "stdout": "python <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python\njsonschema 4.26.0\n",
+    "stderr": "<string>:1: DeprecationWarning: Accessing jsonschema.__version__ is deprecated and will be removed in a future release. Use importlib.metadata directly to query for jsonschema's version.\n"
+  },
+  {
+    "cmd": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/.venv-fuzz-preflight/bin/python",
+      "-c",
+      "from importlib.metadata import version; import sys; print(\"python\",sys.executable); [print(p, version(p)) for p in [\"schemathesis\",\"hypothesis\"]]"
+    ],
+    "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3",
+    "exit_code": 0,
+    "stdout": "python <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/.venv-fuzz-preflight/bin/python\nschemathesis 4.27.1\nhypothesis 6.168.0\n",
+    "stderr": ""
+  }
+]

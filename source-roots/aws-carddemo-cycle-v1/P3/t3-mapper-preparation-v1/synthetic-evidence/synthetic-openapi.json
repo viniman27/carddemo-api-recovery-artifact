@@ -1,0 +1,67 @@
+{
+  "info": {
+    "title": "Synthetic T3 mapper qualification; NOT CardDemo",
+    "version": "1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/sdd": {
+      "post": {
+        "operationId": "sdd",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {},
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
+    "/synthetic": {
+      "post": {
+        "operationId": "syntheticPost",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "payload": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "payload",
+                  "name"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "400": {
+            "description": "bad"
+          }
+        }
+      }
+    }
+  }
+}

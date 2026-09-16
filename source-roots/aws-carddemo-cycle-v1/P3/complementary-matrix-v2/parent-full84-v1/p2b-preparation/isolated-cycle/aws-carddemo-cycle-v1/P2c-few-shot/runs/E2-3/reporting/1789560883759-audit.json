@@ -1,0 +1,65 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-3",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+  "contractOriginalSha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+  "track": "reporting",
+  "path": "/transaction-report-runs",
+  "status": 200,
+  "requestBody": {
+    "dateParameterRecords": [
+      "2022-09-01 2022-09-30                                                           "
+    ],
+    "transactions": [
+      {
+        "amount": 5.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": 5,
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": 1,
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-07-15-10.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-JULY--001",
+        "typeCode": "01"
+      },
+      {
+        "amount": 6.0,
+        "cardNumber": "4111111111111111",
+        "categoryCode": 5,
+        "description": "Reporting boundary fixture",
+        "filler": "",
+        "merchantCity": "Sometown",
+        "merchantId": 1,
+        "merchantName": "Report Merchant",
+        "merchantZip": "10000000",
+        "originalTimestamp": "2022-07-01-00.00.00.000000",
+        "processingTimestamp": "2022-08-15-10.00.00.000000",
+        "source": "System",
+        "transactionId": "REPORT-AUG---001",
+        "typeCode": "01"
+      }
+    ]
+  },
+  "requestBodySha256": "f7fe829beceb646740ee3a6b21d94823f99ab23cf3ec6288bcfaa2eaf5c0cee9",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-zblwqt2q",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/reporting/empty-in-range-v1/registry.json",
+    "registrySha256": "6bbc443e54912ad44cb34c731b25b2e87feb965ddbe16d044e20cba56cf4c065"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "lines": []
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-zblwqt2q/audit.json",
+  "durationSeconds": 0.014
+}

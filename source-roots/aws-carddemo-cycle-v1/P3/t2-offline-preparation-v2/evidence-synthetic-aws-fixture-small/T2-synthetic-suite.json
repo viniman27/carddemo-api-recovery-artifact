@@ -1,0 +1,1632 @@
+{
+  "cases": [
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-posting-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-posting-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-posting-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-posting-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-interest-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-interest-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-interest-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-interest-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-transaction-report-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-transaction-report-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-1-POST-transaction-report-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-1",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-1-POST-transaction-report-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-transaction-postings-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-transaction-postings-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-transaction-postings-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-transaction-postings-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-interest-transactions-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-interest-transactions-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-interest-transactions-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-interest-transactions-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transactions"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-transaction-reports-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-transaction-reports-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-2-POST-transaction-reports-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-2",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-2-POST-transaction-reports-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-transaction-postings-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-transaction-postings-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-transaction-postings-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-transaction-postings-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-interest-transaction-generations-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-interest-transaction-generations-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-interest-transaction-generations-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-interest-transaction-generations-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-transaction-reports-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-transaction-reports-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E1-3-POST-transaction-reports-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E1-3",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E1-3-POST-transaction-reports-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-transaction-postings-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-transaction-postings-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-transaction-postings-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-transaction-postings-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-postings"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-interest-transaction-generations-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-interest-transaction-generations-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-interest-transaction-generations-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-interest-transaction-generations-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-transaction-generations"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-transaction-reports-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-transaction-reports-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-1-POST-transaction-reports-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-1",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-1-POST-transaction-reports-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-reports"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-transaction-posting-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-transaction-posting-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-transaction-posting-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-transaction-posting-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-interest-generation-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-interest-generation-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-interest-generation-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-interest-generation-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-transaction-report-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-transaction-report-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-2-POST-transaction-report-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-2",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-2-POST-transaction-report-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-transaction-posting-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "positive",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-transaction-posting-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-transaction-posting-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "negative",
+        "operationId": "postDailyTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-transaction-posting-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-interest-generation-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "positive",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-interest-generation-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-interest-generation-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "negative",
+        "operationId": "generateInterestTransactions",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-interest-generation-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-transaction-report-runs-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "positive",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-transaction-report-runs-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E2-3-POST-transaction-report-runs-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E2-3",
+        "direction": "negative",
+        "operationId": "generateTransactionReport",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E2-3-POST-transaction-report-runs-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/transaction-report-runs"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-posting-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "positive",
+        "operationId": "posting",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-posting-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-posting-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "negative",
+        "operationId": "posting",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-posting-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-interest-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "positive",
+        "operationId": "interest",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-interest-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-interest-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "negative",
+        "operationId": "interest",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-interest-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-reporting-seed104729-positive-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "positive",
+        "operationId": "reporting",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-reporting-seed104729-positive-0"
+      ],
+      "request": {
+        "body_b64": "eyJzeW50aGV0aWNDYXNlIjoiIn0=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T2-SYNTHETIC-SYNTHETIC-AWS-T2-CANDIDATE-E3-SDD-stage6r3-POST-reporting-seed104729-negative-0",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE",
+      "parameters": {
+        "contractId": "E3-SDD-stage6r3",
+        "direction": "negative",
+        "operationId": "reporting",
+        "seed": 104729
+      },
+      "provenance": [
+        "T2-SYNTHETIC:SYNTHETIC-AWS-T2-CANDIDATE:E3-SDD-stage6r3-POST-reporting-seed104729-negative-0"
+      ],
+      "request": {
+        "body_b64": "AA==",
+        "body_kind": "bytes",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "synthetic-offline",
+      "sequence": [],
+      "suite_id": "T2-SYNTHETIC",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "ec7458cae1c4249eb8fb540e83635dd12efb04fab879408e57eb1fcbd8784338",
+  "suite_id": "T2-SYNTHETIC"
+}

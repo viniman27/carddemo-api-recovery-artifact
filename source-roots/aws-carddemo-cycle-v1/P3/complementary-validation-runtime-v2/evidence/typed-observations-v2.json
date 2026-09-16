@@ -1,0 +1,229 @@
+{
+  "description": "Runtime-v1 API/COBOL observations enriched with byte provenance from preserved artifacts; no API re-execution.",
+  "fixtureId": "runtime-api-cobol-observations-v2-provenanced",
+  "observations": {
+    "interest": {
+      "observedInputPartitions": {
+        "accounts": {
+          "10000000001": "STANDARD",
+          "10000000002": "ZERORATE"
+        },
+        "balances": {
+          "10000000001": "50.00",
+          "10000000002": "70.00"
+        },
+        "cards": {
+          "10000000001": "4111111111111111",
+          "10000000002": "4222222222222222"
+        },
+        "rates": {
+          "DEFAULT": "1.00",
+          "STANDARD": "1.50",
+          "ZERORATE": "0.00"
+        }
+      },
+      "transactions": [
+        {
+          "amount": "0.06",
+          "annualRate": "1.50",
+          "card": "4111111111111111",
+          "category": "05",
+          "categoryBalance": "50.00",
+          "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          "id": "2022071800000001",
+          "merchant": "000000000",
+          "observedAccount": "10000000001",
+          "observedRateGroup": "STANDARD",
+          "rawBytes": "3230323230373138303030303030303130313030303553797374656d20202020496e742e20666f7220612f63203130303030303030303031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003030303030303030303036303030303030303030202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202034313131313131313131313131313131323032362d30392d31362d30372e34362e35362e313730303030323032362d30392d31362d30372e34362e35362e3137303030300000000000000000000000000000000000000000",
+          "source": "System",
+          "transactionWritten": true,
+          "type": "01",
+          "xrefCard": "4111111111111111",
+          "provenance": {
+            "kind": "raw_file_record",
+            "artifact": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/interest-hgku2snb/TRANSACT",
+            "sha256": "f9596a5f8ac3d9c101adf20567171c156c21c3493ee6f373401cc71ab9682b4c",
+            "observedFields": [
+              "rawBytes",
+              "amount",
+              "type",
+              "category",
+              "source",
+              "card"
+            ],
+            "recordOffset": 0,
+            "recordLength": 350
+          }
+        },
+        {
+          "annualRate": "0.00",
+          "categoryBalance": "70.00",
+          "id": "zero-rate-account-10000000002",
+          "observationBasis": "account/TCATBALF/DISCGRP raw physical files plus absence from TRANSACT output",
+          "observedAccount": "10000000002",
+          "observedRateGroup": "ZERORATE",
+          "transactionWritten": false,
+          "provenance": {
+            "kind": "raw_file_record",
+            "artifact": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/interest-hgku2snb/TCATBALF",
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+            "observedFields": [
+              "observedAccount",
+              "categoryBalance",
+              "annualRate",
+              "absenceFromTRANSACT"
+            ],
+            "recordOffset": 8043,
+            "recordLength": 50
+          }
+        }
+      ]
+    },
+    "posting": {
+      "acceptedTransactions": [
+        {
+          "daily": {
+            "amount": "12.00",
+            "card": "4111111111111111",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-PRESENT-001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2022-07-05-10.05.00.000000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "duplicatePrevalidated": false,
+          "effectOrder": [
+            "tranfile",
+            "reject"
+          ],
+          "id": "POST-PRESENT-001",
+          "posted": {
+            "amount": "12.00",
+            "card": "4111111111111111",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-PRESENT-001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2026-09-16-07.46.56.110000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "rawBytes": "504f53542d50524553454e542d303031303130303035496e7465726e6574202063616e64696461746520707572636861736520202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303132303031323334353637383946697874757265204d65726368616e742020202020202020202020202020202020202020202020202020202020202020202042726173696c69612020202020202020202020202020202020202020202020202020202020202020202020202020202020203730303030303030202034313131313131313131313131313131323032322d30372d30352d31302e30302e30302e303030303030323032362d30392d31362d30372e34362e35362e3131303030300000000000000000000000000000000000000000",
+          "traceBoundary": "no single-invocation physical order trace for TCATBAL/ACCOUNT vs TRANFILE; POSTTRAN-009 remains inconclusive",
+          "provenance": {
+            "kind": "raw_file_record",
+            "artifact": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/posting-ztqyj5wr/TRANFILE.after",
+            "sha256": "f7ab9de702f9dab7edb6d218b855796c3a1408e24412291756f3585fef38dc5c",
+            "observedFields": [
+              "rawBytes",
+              "posted",
+              "daily"
+            ],
+            "recordOffset": 0,
+            "recordLength": 350
+          }
+        }
+      ],
+      "rejects": [
+        {
+          "candidate": {
+            "amount": "34.00",
+            "card": "4999999999999999",
+            "category": "0005",
+            "description": "candidate purchase",
+            "id": "POST-ABSENT--001",
+            "merchant": "123456789",
+            "merchantCity": "Sometown",
+            "merchantName": "Fixture Merchant",
+            "merchantPostalText": "70000000",
+            "origTs": "2022-07-05-10.00.00.000000",
+            "procTs": "2022-07-05-10.05.00.000000",
+            "source": "Internet",
+            "type": "01"
+          },
+          "case": "missing-card",
+          "description": "INVALID CARD NUMBER FOUND",
+          "postedTransactionWritten": false,
+          "rawBytes": "504f53542d414253454e542d2d303031303130303035496e7465726e6574202063616e64696461746520707572636861736520202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303030303030303334303031323334353637383946697874757265204d65726368616e742020202020202020202020202020202020202020202020202020202020202020202042726173696c69612020202020202020202020202020202020202020202020202020202020202020202020202020202020203730303030303030202034393939393939393939393939393939323032322d30372d30352d31302e30302e30302e303030303030323032322d30372d30352d31302e30352e30302e303030303030202020202020202020202020202020202020202030313030494e56414c49442043415244204e554d42455220464f554e44202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020",
+          "reason": "100",
+          "rejectRecordWritten": true,
+          "provenance": {
+            "kind": "raw_file_record",
+            "artifact": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/posting-ztqyj5wr/DALYREJS",
+            "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+            "observedFields": [
+              "rawBytes",
+              "reason",
+              "description"
+            ],
+            "recordOffset": 0,
+            "recordLength": 430
+          }
+        }
+      ],
+      "returnCode": 4
+    },
+    "reporting": {
+      "dateRange": [
+        "2022-07-01",
+        "2022-07-31"
+      ],
+      "observedTotalsPresent": [],
+      "reportFraming": {
+        "bytes": 665,
+        "classification": "available",
+        "recordSize": 133,
+        "eofBeforeTotalsBranch": true,
+        "totalsEvidence": "TRANREPT ended after detail line; totals branch not selected in this run"
+      },
+      "transactions": [
+        {
+          "amount": "12.00",
+          "detailLine": "REPORT-IN---001  10000000001 01-Purchase        0005-Candidate category            Internet                12.00",
+          "detailWritten": true,
+          "id": "REPORT-IN---001",
+          "procDate": "2022-07-05",
+          "reportLineBytes": "5245504f52542d494e2d2d2d303031202031303030303030303030312030312d50757263686173652020202020202020303030352d43616e6469646174652063617465676f7279202020202020202020202020496e7465726e65742020202020202020202020202020202031322e3030202020202020202020202020202020202020202020",
+          "provenance": {
+            "kind": "report_line",
+            "artifact": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/reporting-ilz08apu/TRANREPT",
+            "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469",
+            "observedFields": [
+              "reportLineBytes",
+              "detailLine",
+              "amount"
+            ],
+            "recordOffset": 532,
+            "recordLength": 133
+          }
+        }
+      ]
+    }
+  },
+  "rawAuditPaths": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/interest-hgku2snb/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/posting-ztqyj5wr/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/reporting-ilz08apu/audit.json"
+  ],
+  "evidenceClass": "real_cobol_observation",
+  "runtimeEvidence": {
+    "sourceRuntime": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1",
+    "apiReexecution": false,
+    "audits": [
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/posting-ztqyj5wr/audit.json",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/interest-hgku2snb/audit.json",
+      "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/evidence/api-cobol-runs/reporting-ilz08apu/audit.json"
+    ],
+    "qualificationScope": "8 implemented representative semantic obligations over preserved three-track runtime-v1 observations; 17 catalog obligations remain pending and are not evaluated here"
+  }
+}

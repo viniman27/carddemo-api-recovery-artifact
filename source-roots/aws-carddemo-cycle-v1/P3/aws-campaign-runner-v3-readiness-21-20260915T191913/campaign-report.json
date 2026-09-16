@@ -1,0 +1,433 @@
+{
+  "bodyCapturePatch": {
+    "patched": true,
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "preserve raw response bytes for official structural measurement without editing harness-v3 file"
+  },
+  "createdUtc": "2026-09-15T19:19:13Z",
+  "experimentalViolations": [
+    "experimental_structural_violation:infra_transport"
+  ],
+  "harnessImport": {
+    "bytes": 26983,
+    "module": "campaign_harness",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "aws-carddemo-local-readiness-runner-v3-report",
+  "localReadinessExecution": true,
+  "measurementWarnings": [
+    {
+      "admissibility": "inadmissible_or_limited",
+      "case_id": "READINESS21-E1-1-posting-T3-0019-bb43244b06b8",
+      "reasons": [
+        "audit_missing_for_current_case_track"
+      ],
+      "track": "posting"
+    }
+  ],
+  "officialExecutionStarted": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only never-attempted case IDs; failed attempts are not replayed",
+    "stopPolicy": "transport/deadline/startup/lifecycle quietness stops; experimental expectation/structural violations are recorded and execution continues; measurement inadmissibility is recorded without fake zero"
+  },
+  "preparedTarget": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "isolatedContractSourceCopy": {
+      "contracts": [
+        {
+          "bytes": 30136,
+          "contractId": "E1-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+          "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt"
+        },
+        {
+          "bytes": 31102,
+          "contractId": "E1-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+          "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt"
+        },
+        {
+          "bytes": 30113,
+          "contractId": "E1-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+          "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt"
+        },
+        {
+          "bytes": 28899,
+          "contractId": "E2-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+          "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt"
+        },
+        {
+          "bytes": 29973,
+          "contractId": "E2-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+          "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt"
+        },
+        {
+          "bytes": 25822,
+          "contractId": "E2-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+          "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt"
+        }
+      ],
+      "count": 6,
+      "reason": "P2c facades load all E1/E2 response-original contracts by id inside isolated cycle"
+    },
+    "isolatedCoveragePatch": {
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair",
+      "patchedSha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "v2CommandLogPreservation": {
+        "alreadyPreservedByCoveragePatch": true,
+        "mechanical": true,
+        "patchedSha256AfterV2": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+        "scope": "isolated P2b copy only"
+      }
+    },
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-preparation",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "ac76fe1aafab3ce4a9ebaf9de1e501eab130742296b1c9fc420fc6d4e9a09003"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "bounded local readiness qualification only; not an official campaign run and not a T4 result",
+  "selectionCounts": {
+    "cases": 21,
+    "contracts": 7,
+    "tracks": 3
+  },
+  "selectionManifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/SELECTION-MANIFEST.json",
+  "stopPolicy": {
+    "reason": "wire_failure:transport",
+    "stopped": true
+  },
+  "suiteReports": [
+    {
+      "applications_inline": [
+        {
+          "case_id": "READINESS21-E1-1-posting-T3-0019-bb43244b06b8",
+          "failure_class": "transport",
+          "lifecycle": {
+            "pid": 97361,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-45889b26219365a0"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "cd9e295c193444e44a221f7b78a3a166320f33d681a88738c83302881a80eda2",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "43d6e170978859b5d7842c3b1a1cc054d055b04387e9d9a206ce8b81c1dce661",
+              "size": 3872
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "zero-shot-runs/http-requests.jsonl": {
+              "sha256": "bf6e16a9b25a72f69109210e31a8d2dbe815ed3048d73058e25c499c2d1e42d0",
+              "size": 443
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-45889b26219365a0"
+        }
+      ],
+      "attempted_case_count": 1,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "READINESS21-E1-1-posting-T3-0019-bb43244b06b8",
+            "failure_class": "transport",
+            "lifecycle": {
+              "pid": 97361,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-45889b26219365a0"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "cd9e295c193444e44a221f7b78a3a166320f33d681a88738c83302881a80eda2",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "43d6e170978859b5d7842c3b1a1cc054d055b04387e9d9a206ce8b81c1dce661",
+                "size": 3872
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "zero-shot-runs/http-requests.jsonl": {
+                "sha256": "bf6e16a9b25a72f69109210e31a8d2dbe815ed3048d73058e25c499c2d1e42d0",
+                "size": 443
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-45889b26219365a0"
+          },
+          "case_id": "READINESS21-E1-1-posting-T3-0019-bb43244b06b8",
+          "contractId": "E1-1",
+          "measurement": {
+            "admissibility": "inadmissible_or_limited",
+            "auditDelta": [],
+            "reasons": [
+              "audit_missing_for_current_case_track"
+            ],
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay/applications/0001-45889b26219365a0",
+            "track": "posting"
+          },
+          "operationId": "postDailyTransactions",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "READINESS21-E1-1-posting-T3-0019-bb43244b06b8",
+            "content_type": null,
+            "error": "Remote end closed connection without response",
+            "expectation_detail": {},
+            "expectation_result": "not_evaluated",
+            "failure_class": "transport",
+            "method": "POST",
+            "path": "/posting-runs",
+            "provenance": [
+              "reference-executable-v4:POSTTRAN-T001",
+              "t3-cell:POSTTRAN-OBL-001::E1-1::postDailyTransactions",
+              "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E1-1/T3.json:T3-0019-bb43244b06b8"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "358e1c6f25e5cc00c99a6811ef0e702c79a76c240657e51705cb6864d292b8c4",
+            "response_body_b64": null,
+            "response_bytes": 0,
+            "response_sha256": null,
+            "status": null
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3-readiness-21-20260915T191913/READINESS21-E1-1-posting/cases/READINESS21-E1-1-posting-T3-0019-bb43244b06b8/replay",
+          "structuralCheck": {
+            "classification": "infra_transport",
+            "detail": {
+              "reason": "no HTTP status"
+            },
+            "ok": false
+          },
+          "track": "posting"
+        }
+      ],
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-1/posting.json",
+      "suite_id": "READINESS21-E1-1-posting",
+      "totals": {
+        "attempted": 1,
+        "completed": 0,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 0,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 2,
+        "transport_failures": 1
+      }
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-1/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-1-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-1/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-1-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-2/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-2-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-2/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-2-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-2/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-2-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-3/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-3-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-3/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-3-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E1-3/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E1-3-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-1-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-1-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-1/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-1-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-2/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-2-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-2/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-2-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-2/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-2-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-3-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-3-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E2-3/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E2-3-reporting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E3-SDD-stage6r3/posting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E3-SDD-stage6r3-posting"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E3-SDD-stage6r3/interest.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E3-SDD-stage6r3-interest"
+    },
+    {
+      "attempted_case_count": 0,
+      "loaded_case_count": 1,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-campaign-runner-v3/readiness-selection-v1/E3-SDD-stage6r3/reporting.json",
+      "skippedReason": "previous_infra_stop_policy",
+      "suite_id": "READINESS21-E3-SDD-stage6r3-reporting"
+    }
+  ],
+  "totals": {
+    "attempted": 1,
+    "completed": 0,
+    "measurement_admissible": 0,
+    "planned": 21,
+    "structural_ok": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Synthetic 3.1 qualification schema; NOT CardDemo",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/synthetic": {
+      "post": {
+        "operationId": "syntheticPost",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "400": {
+            "description": "synthetic invalid"
+          },
+          "500": {
+            "description": "documented synthetic error"
+          }
+        }
+      }
+    }
+  }
+}

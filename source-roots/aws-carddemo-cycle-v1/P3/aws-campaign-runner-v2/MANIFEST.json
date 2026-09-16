@@ -1,0 +1,33 @@
+{
+  "kind": "aws-campaign-runner-v2-output-manifest",
+  "createdUtc": "2026-09-15T19:08:16Z",
+  "scope": "official-capable wrapper only; no official execution",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 3899,
+      "sha256": "31fc1e219fedf2c5002b9eaa6979fb08cfe8cd995ba7df9caf4ae08dbb2b2b00"
+    },
+    {
+      "path": "aws_campaign_runner_cli.py",
+      "bytes": 275,
+      "sha256": "892e1dbfe9b90290608ac6b48ae88120a99fb095a7132635b51fb79a5a17290b"
+    },
+    {
+      "path": "src/aws_campaign_runner.py",
+      "bytes": 29467,
+      "sha256": "39c8af398e1e7430d507afc83f995beffa04e8cb828ff49120c68d01dc788a16"
+    },
+    {
+      "path": "tests/test_aws_campaign_runner.py",
+      "bytes": 9216,
+      "sha256": "caf0d4476e7e02ebce18aec323c68848a5ded0c9c94d28fff0269d0d97ad82f8"
+    }
+  ],
+  "verification": {
+    "unitTests": "cd P3/aws-campaign-runner-v2 && ../../P2a/.venv/bin/python -m unittest discover -s tests -v",
+    "pyCompile": "cd P3/aws-campaign-runner-v2 && ../../P2a/.venv/bin/python -m py_compile src/aws_campaign_runner.py aws_campaign_runner_cli.py tests/test_aws_campaign_runner.py",
+    "cliHelp": "cd P3/aws-campaign-runner-v2 && ../../P2a/.venv/bin/python aws_campaign_runner_cli.py --help",
+    "officialExecutionStarted": false
+  }
+}

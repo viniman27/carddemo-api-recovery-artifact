@@ -1,0 +1,43 @@
+[
+  {
+    "body_kind": "absent",
+    "case_id": "slow",
+    "content_type": null,
+    "expectation_detail": {},
+    "expectation_result": "not_evaluated",
+    "failure_class": "deadline",
+    "method": "POST",
+    "path": "/slow",
+    "provenance": [
+      "PX:slow"
+    ],
+    "request_headers": [],
+    "request_identity": "232d13d6b37fd5903614ea23735d066d2a06f52fa30c5a64bd43530674f4110c",
+    "response_bytes": 0,
+    "response_sha256": null,
+    "status": null
+  },
+  {
+    "body_kind": "absent",
+    "case_id": "fast-after-slow",
+    "content_type": "application/json",
+    "expectation_detail": {
+      "allowed_status": [
+        200
+      ],
+      "status": 200
+    },
+    "expectation_result": "pass",
+    "failure_class": null,
+    "method": "POST",
+    "path": "/fast",
+    "provenance": [
+      "PX:fast-after-slow"
+    ],
+    "request_headers": [],
+    "request_identity": "b016153bb33a77e9d2a42a0b5c5a927a8b43f1ef049d65fc5abb43c1edeb99c9",
+    "response_bytes": 2,
+    "response_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "status": 200
+  }
+]

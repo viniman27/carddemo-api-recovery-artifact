@@ -1,0 +1,481 @@
+{
+  "authorized_inputs_read": [
+    "P3/reference-authoring-input-v1/README.md",
+    "P3/reference-authoring-input-v1/input-manifest.json",
+    "P3/reference-authoring-input-v1/corpus/app/cpy/*.cpy in manifest",
+    "P3/reference-authoring-input-v1/corpus/app/cbl/{CBTRN02C,CBACT04C,CBTRN03C}.cbl",
+    "P3/reference-authoring-input-v1/corpus/app/jcl/{POSTTRAN,INTCALC,TRANREPT}.jcl",
+    "P3/reference-authoring-input-v1/corpus/app/proc/REPROC.prc",
+    "P3/reference-executable-v4/{README.md,model.json}",
+    "P3/reference-independent-review-v4/REVIEW.md",
+    "P3/PROPOSTA-EXPERIMENTAL-PARA-ACEITE.md"
+  ],
+  "fixtures": [
+    {
+      "families": [
+        "posting.lookup.present",
+        "posting.lookup.absent"
+      ],
+      "id": "posting.lookup-mixed.v1",
+      "inputResources": [
+        "data/sequential/posting/DALYTRAN.dat"
+      ],
+      "reviewPurpose": "exercise daily transaction lookup present and absent branches with real 350-byte DALYTRAN records",
+      "stateResources": [
+        "data/indexed-logical/CARDXREF.jsonl",
+        "data/indexed-logical/ACCTFILE.jsonl",
+        "data/indexed-logical/TCATBALF.jsonl",
+        "data/indexed-logical/TRANSACT.jsonl"
+      ],
+      "track": "posting"
+    },
+    {
+      "families": [
+        "interest.rate.zero",
+        "interest.rate.nonzero"
+      ],
+      "id": "interest.rate-zero-nonzero.v1",
+      "inputResources": [
+        "data/sequential/interest/TCATBALF.dat"
+      ],
+      "parameters": {
+        "PARM": "2022071800"
+      },
+      "reviewPurpose": "cover zero and non-zero disclosure interest-rate partitions without calculating result output",
+      "stateResources": [
+        "data/indexed-logical/TCATBALF.jsonl",
+        "data/indexed-logical/CARDXREF.jsonl",
+        "data/indexed-logical/ACCTFILE.jsonl",
+        "data/indexed-logical/DISCGRP.jsonl"
+      ],
+      "track": "interest"
+    },
+    {
+      "families": [
+        "reporting.date-selection",
+        "reporting.empty-input",
+        "reporting.absent-input-blocked"
+      ],
+      "id": "reporting.date-selection-and-empty.v1",
+      "inputResources": [
+        "data/sequential/reporting/TRANFILE.dat",
+        "data/sequential/reporting/TRANFILE.empty.dat",
+        "data/sequential/reporting/DATEPARM.dat"
+      ],
+      "reviewPurpose": "separate date-selection bytes, empty sequential input bytes, and absent-input blocker",
+      "stateResources": [
+        "data/indexed-logical/CARDXREF.jsonl",
+        "data/indexed-logical/TRANTYPE.jsonl",
+        "data/indexed-logical/TRANCATG.jsonl"
+      ],
+      "track": "reporting"
+    }
+  ],
+  "indexed_resource_materialization": {
+    "blockers": [
+      "Berkeley DB/GnuCOBOL indexed files are environment-specific and require creation/rebuild support not included in the authorized source-only corpus.",
+      "Alternate-key/card-xref path components such as XREFFILE.1 may be required in addition to the primary logical dataset; JSONL logical bytes do not prove local BDB readiness.",
+      "No COBOL business program or official setup runner was executed for this candidate package."
+    ],
+    "delivered_instead": "logical record images and key metadata tied to original copybook layouts for later integration by an approved materializer",
+    "status": "blocked_for_physical_bdb_materialization"
+  },
+  "kind": "pretest-fixture-candidate-not-official-not-frozen",
+  "layout_copies": [
+    {
+      "bytes": 1538,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA06Y.cpy",
+      "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA06Y.cpy"
+    },
+    {
+      "bytes": 1546,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA05Y.cpy",
+      "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA05Y.cpy"
+    },
+    {
+      "bytes": 898,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA01Y.cpy",
+      "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA01Y.cpy"
+    },
+    {
+      "bytes": 898,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA02Y.cpy",
+      "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA02Y.cpy"
+    },
+    {
+      "bytes": 655,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA03Y.cpy",
+      "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA03Y.cpy"
+    },
+    {
+      "bytes": 817,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVTRA04Y.cpy",
+      "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVTRA04Y.cpy"
+    },
+    {
+      "bytes": 1125,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVACT01Y.cpy",
+      "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVACT01Y.cpy"
+    },
+    {
+      "bytes": 736,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/cpy/CVACT03Y.cpy",
+      "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+      "source": "reference-authoring-input-v1/corpus/app/cpy/CVACT03Y.cpy"
+    },
+    {
+      "bytes": 3246,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/jcl/POSTTRAN.jcl",
+      "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+      "source": "reference-authoring-input-v1/corpus/app/jcl/POSTTRAN.jcl"
+    },
+    {
+      "bytes": 2964,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/jcl/INTCALC.jcl",
+      "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+      "source": "reference-authoring-input-v1/corpus/app/jcl/INTCALC.jcl"
+    },
+    {
+      "bytes": 6427,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/jcl/TRANREPT.jcl",
+      "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+      "source": "reference-authoring-input-v1/corpus/app/jcl/TRANREPT.jcl"
+    },
+    {
+      "bytes": 2233,
+      "encoding": "ascii/source-text-preserved",
+      "kind": "authorized-layout-copy",
+      "path": "layouts/app/proc/REPROC.prc",
+      "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+      "source": "reference-authoring-input-v1/corpus/app/proc/REPROC.prc"
+    }
+  ],
+  "non_claims": [
+    "not an official fixture package",
+    "not a smoke promotion",
+    "not expected outputs or business oracle",
+    "not COBOL business execution",
+    "not campaign authorization",
+    "not portable Berkeley DB/GnuCOBOL indexed-file materialization"
+  ],
+  "preconditions": [
+    "Use only candidate package copies; do not fall back to smoke fixtures or previous technical packages.",
+    "Materialize indexed resources with an approved GnuCOBOL/BDB-aware loader before invoking programs that require ORGANIZATION INDEXED.",
+    "Bind every DD explicitly to the prepared workspace; inherited environment bindings are not allowed.",
+    "Review candidate content before any official freeze or campaign."
+  ],
+  "reset": {
+    "commands": [
+      "rm -rf /tmp/aws-carddemo-fixture-run && mkdir -p /tmp/aws-carddemo-fixture-run",
+      "cp -R P3/fixture-candidates-v1/data /tmp/aws-carddemo-fixture-run/",
+      "python3 P3/fixture-candidates-v1/tools/verify_manifest.py P3/fixture-candidates-v1/manifest.json"
+    ],
+    "policy": "fresh directory per attempted application; copy all resources from this package, verify sha256/bytes before use, then verify/reset from immutable source for next application"
+  },
+  "resources": [
+    {
+      "bytes": 700,
+      "encoding": "ascii-fixed-width-no-newline",
+      "kind": "sequential-fixed-records",
+      "materialization_status": "bytes_materialized_candidate",
+      "path": "data/sequential/posting/DALYTRAN.dat",
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 100,
+      "encoding": "ascii-fixed-width-no-newline",
+      "kind": "sequential-fixed-records",
+      "materialization_status": "bytes_materialized_candidate",
+      "path": "data/sequential/interest/TCATBALF.dat",
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 700,
+      "encoding": "ascii-fixed-width-no-newline",
+      "kind": "sequential-fixed-records",
+      "materialization_status": "bytes_materialized_candidate",
+      "path": "data/sequential/reporting/TRANFILE.dat",
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 0,
+      "encoding": "ascii-fixed-width-no-newline",
+      "kind": "sequential-fixed-records",
+      "materialization_status": "bytes_materialized_candidate",
+      "path": "data/sequential/reporting/TRANFILE.empty.dat",
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 80,
+      "encoding": "ascii-fixed-width-no-newline",
+      "kind": "sequential-fixed-records",
+      "materialization_status": "bytes_materialized_candidate",
+      "path": "data/sequential/reporting/DATEPARM.dat",
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 391,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/CARDXREF.jsonl",
+      "physical_components_required": [
+        "XREFFILE",
+        "XREFFILE.dat",
+        "XREFFILE.idx",
+        "XREFFILE.1 (alternate key path/component for FD-XREF-ACCT-ID)"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "490c21b45f1a181a4d6d0d72ca0935b8c48eeeebd3b27efcedd7175c6b003a60",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 728,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/ACCTFILE.jsonl",
+      "physical_components_required": [
+        "ACCTFILE",
+        "ACCTFILE.dat",
+        "ACCTFILE.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "75fba2089a4f61a82f0b735556f8ce0ba0ce55b09591241aa43bedae4b48a2ce",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 357,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/DISCGRP.jsonl",
+      "physical_components_required": [
+        "DISCGRP",
+        "DISCGRP.dat",
+        "DISCGRP.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "f08d8c8834729bf1869ddfd6a3c5f79fa8104b792a954a415f886340f2f8af03",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 240,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/TCATBALF.jsonl",
+      "physical_components_required": [
+        "TCATBALF",
+        "TCATBALF.dat",
+        "TCATBALF.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "edc8db924ee3c685aad83dc52ab3fa45678b917a0158c9d8e223e5bcbb4f8609",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 836,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/TRANSACT.jsonl",
+      "physical_components_required": [
+        "TRANFILE",
+        "TRANFILE.dat",
+        "TRANFILE.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "226c1e6b850967b0afde59f86323e42a89d27b2c9c029cc3da7692c0ab9fc5c5",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 115,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/TRANTYPE.jsonl",
+      "physical_components_required": [
+        "TRANTYPE",
+        "TRANTYPE.dat",
+        "TRANTYPE.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "e9ba420570bd8915d8487d76374f6386c78f64a15ade9a8c8fcf8208ea2f11f6",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    },
+    {
+      "bytes": 119,
+      "encoding": "utf-8-jsonl-with-ascii-record-image",
+      "kind": "indexed-logical-jsonl",
+      "materialization_status": "logical_bytes_only_candidate",
+      "path": "data/indexed-logical/TRANCATG.jsonl",
+      "physical_components_required": [
+        "TRANCATG",
+        "TRANCATG.dat",
+        "TRANCATG.idx"
+      ],
+      "provenance": {
+        "businessCobolExecuted": false,
+        "modelExecuted": false,
+        "officialCaseGenerated": false,
+        "sourceCommit": "59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e",
+        "sourcePackage": "P3/reference-authoring-input-v1"
+      },
+      "sha256": "0aae3dedfd0654c3c16010a018ab12facd80f320b9bcc73da6d26ff01071d527",
+      "source": "generated locally from authorized copybook layouts and JCL DD inventory"
+    }
+  ],
+  "scope": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "selection_families": [
+    {
+      "id": "posting.lookup.present",
+      "justification": "CARDXREF lookup is a required external indexed dependency; candidate includes one present card/account path.",
+      "track": "posting"
+    },
+    {
+      "id": "posting.lookup.absent",
+      "justification": "Absent card lookup is distinct from empty input and is required by POSTTRAN validation family.",
+      "track": "posting"
+    },
+    {
+      "id": "interest.rate.zero",
+      "justification": "Reviewed abstract reference specifically preserved the zero-rate branch with no interest write attempt.",
+      "track": "interest"
+    },
+    {
+      "id": "interest.rate.nonzero",
+      "justification": "Contrasts with zero-rate branch using same TCATBAL/account structure and nonzero DISCGRP logical record.",
+      "track": "interest"
+    },
+    {
+      "id": "reporting.date-selection",
+      "justification": "TRANREPT has separate DATEPARM and text date selection before report detail lookups.",
+      "track": "reporting"
+    },
+    {
+      "id": "reporting.empty-input",
+      "justification": "Empty sequential TRANFILE bytes are materially different from missing DD/resource.",
+      "track": "reporting"
+    },
+    {
+      "id": "reporting.absent-input-blocked",
+      "justification": "Absent resource is represented as a precondition/blocker, not silently replaced by empty bytes.",
+      "track": "reporting"
+    }
+  ],
+  "separation_of_data_and_expectations": {
+    "expectation_files_created": [],
+    "oracle_policy": "No expected output files are generated here; do not derive oracles from outputs produced by COBOL/adapters using this package."
+  },
+  "status": "candidate_needs_review"
+}

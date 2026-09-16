@@ -1,0 +1,219 @@
+#!/usr/bin/env python3
+"""Expanded CardDemo batch local exercise. Does not edit upstream source."""
+from pathlib import Path
+import hashlib, json, os, shutil, subprocess, textwrap
+
+ROOT = Path(__file__).resolve().parent
+PARENT = ROOT.parent
+UPSTREAM = Path('<UPSTREAM_CHECKOUT>/aws-samples__aws-mainframe-modernization-carddemo')
+SOURCE = UPSTREAM / 'full-source'
+COMMIT = '59cc6c2fd7ebd7ef7925cad552a01a4b8b6e4d5e'
+PROGRAMS = ['CBACT04C.cbl','CBTRN03C.cbl','CBSTM03A.CBL','CBSTM03B.CBL']
+JCLS = ['INTCALC.jcl','TRANREPT.jcl','CREASTMT.JCL','COMBTRAN.jcl']
+
+def digest(p: Path) -> str:
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+def run(cmd, cwd=None, env=None, timeout=120):
+    p = subprocess.run(cmd, cwd=cwd, env=env, text=True, capture_output=True, timeout=timeout)
+    return {'command': cmd, 'cwd': str(cwd or ROOT), 'rc': p.returncode, 'stdout': p.stdout, 'stderr': p.stderr}
+
+def write(p: Path, s: str):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(s)
+
+def fixed(s, n):
+    s = str(s)
+    return (s[:n]).ljust(n)
+
+def main():
+    for d in ['corpus/app/cbl','corpus/app/cpy','corpus/app/jcl','support','build/intcalc','build/report','build/stmt','runs']:
+        (ROOT/d).mkdir(parents=True, exist_ok=True)
+    inspection = json.loads((UPSTREAM/'inspection.json').read_text())
+    assert inspection['commit'] == COMMIT
+    selected = []
+    for name in PROGRAMS:
+        src = SOURCE/'app/cbl'/name; dst = ROOT/'corpus/app/cbl'/name
+        if not dst.exists(): shutil.copy2(src, dst)
+        assert digest(src) == digest(dst)
+        selected.append('app/cbl/'+name)
+    for name in JCLS:
+        src = SOURCE/'app/jcl'/name; dst = ROOT/'corpus/app/jcl'/name
+        if not dst.exists(): shutil.copy2(src, dst)
+        assert digest(src) == digest(dst)
+        selected.append('app/jcl/'+name)
+    for src in sorted((SOURCE/'app/cpy').glob('*')):
+        if src.is_file():
+            dst = ROOT/'corpus/app/cpy'/src.name
+            if not dst.exists(): shutil.copy2(src, dst)
+            assert digest(src) == digest(dst)
+            selected.append('app/cpy/'+src.name)
+    manifest = {'commit': COMMIT, 'source': str(SOURCE), 'files': [{'path': x, 'sha256': digest(SOURCE/x), 'bytes': (SOURCE/x).stat().st_size} for x in sorted(selected)]}
+    write(ROOT/'evidence/upstream-hashes.json', json.dumps(manifest, indent=2)+'\n')
+
+    # Local-only abend shims: two-argument LE-like shim for CBACT/CBTRN, no-arg shim for CBSTM03A.
+    write(ROOT/'support/CEE3ABD2.cbl', textwrap.dedent('''\
+        >>source format free
+        identification division. program-id. CEE3ABD.
+        data division. linkage section.
+        01 abcode pic s9(9) binary. 01 timing pic s9(9) binary.
+        procedure division using abcode timing.
+          display 'LOCAL-CEE3ABD/2 CODE=' abcode ' TIMING=' timing upon syserr
+          stop run returning 12.
+    '''))
+    write(ROOT/'support/CEE3ABD0.cbl', textwrap.dedent('''\
+        >>source format free
+        identification division. program-id. CEE3ABD.
+        procedure division.
+          display 'LOCAL-CEE3ABD/0 called' upon syserr
+          stop run returning 12.
+    '''))
+    write(ROOT/'support/CBACT04C_driver.cbl', textwrap.dedent('''\
+        >>source format free
+        identification division. program-id. CBACT04C_DRIVER.
+        data division. working-storage section.
+        01 external-parms.
+          05 parm-length pic s9(4) comp value 10.
+          05 parm-date pic x(10) value '2022071800'.
+        procedure division.
+          call 'CBACT04C' using external-parms
+          stop run.
+    '''))
+
+    # Loader/dumper helpers use file layouts only; business fields are assigned as fixture bytes.
+    write(ROOT/'support/intcalc_fixture.cbl', textwrap.dedent('''\
+        identification division. program-id. INTCALC_FIXTURE.
+        environment division. input-output section. file-control.
+          select TCATBAL-FILE assign to TCATBALF organization indexed access sequential record key FD-TRAN-CAT-KEY file status FS-TCAT.
+          select XREF-FILE assign to XREFFILE organization indexed access sequential record key FD-XREF-CARD-NUM alternate record key FD-XREF-ACCT-ID file status FS-XREF.
+          select ACCOUNT-FILE assign to ACCTFILE organization indexed access random record key FD-ACCT-ID file status FS-ACCT.
+          select DISCGRP-FILE assign to DISCGRP organization indexed access random record key FD-DISCGRP-KEY file status FS-DISC.
+        data division. file section.
+        fd TCATBAL-FILE. 01 FD-TRAN-CAT-BAL-RECORD. 05 FD-TRAN-CAT-KEY. 10 FD-TRANCAT-ACCT-ID pic 9(11). 10 FD-TRANCAT-TYPE-CD pic x(02). 10 FD-TRANCAT-CD pic 9(04). 05 FD-FD-TRAN-CAT-DATA pic x(33).
+        fd XREF-FILE. 01 FD-XREFFILE-REC. 05 FD-XREF-CARD-NUM pic x(16). 05 FD-XREF-CUST-NUM pic 9(09). 05 FD-XREF-ACCT-ID pic 9(11). 05 FD-XREF-FILLER pic x(14).
+        fd DISCGRP-FILE. 01 FD-DISCGRP-REC. 05 FD-DISCGRP-KEY. 10 FD-DIS-ACCT-GROUP-ID pic x(10). 10 FD-DIS-TRAN-TYPE-CD pic x(02). 10 FD-DIS-TRAN-CAT-CD pic 9(04). 05 FD-DISCGRP-DATA pic x(34).
+        fd ACCOUNT-FILE. 01 FD-ACCTFILE-REC. 05 FD-ACCT-ID pic 9(11). 05 FD-ACCT-DATA pic x(289).
+        working-storage section.
+          copy CVTRA01Y. copy CVACT03Y. copy CVTRA02Y. copy CVACT01Y.
+          01 FS-TCAT pic xx. 01 FS-XREF pic xx. 01 FS-ACCT pic xx. 01 FS-DISC pic xx.
+        procedure division.
+          open output TCATBAL-FILE XREF-FILE ACCOUNT-FILE DISCGRP-FILE
+          move 00000000001 to TRANCAT-ACCT-ID move '01' to TRANCAT-TYPE-CD move 0005 to TRANCAT-CD move 10000.00 to TRAN-CAT-BAL move TRAN-CAT-BAL-RECORD to FD-TRAN-CAT-BAL-RECORD write FD-TRAN-CAT-BAL-RECORD
+          move '4111111111111111' to FD-XREF-CARD-NUM move 000000001 to FD-XREF-CUST-NUM move 00000000001 to FD-XREF-ACCT-ID move spaces to FD-XREF-FILLER write FD-XREFFILE-REC
+          move 00000000001 to ACCT-ID move 'Y' to ACCT-ACTIVE-STATUS move 500.00 to ACCT-CURR-BAL move 10000.00 to ACCT-CREDIT-LIMIT move 5000.00 to ACCT-CASH-CREDIT-LIMIT move '2020-01-01' to ACCT-OPEN-DATE move '2030-01-01' to ACCT-EXPIRAION-DATE move '2025-01-01' to ACCT-REISSUE-DATE move 0 to ACCT-CURR-CYC-CREDIT ACCT-CURR-CYC-DEBIT move '99999' to ACCT-ADDR-ZIP move 'STANDARD  ' to ACCT-GROUP-ID move ACCOUNT-RECORD to FD-ACCTFILE-REC write FD-ACCTFILE-REC
+          move 'STANDARD  ' to DIS-ACCT-GROUP-ID move '01' to DIS-TRAN-TYPE-CD move 0005 to DIS-TRAN-CAT-CD move 12.00 to DIS-INT-RATE move DIS-GROUP-RECORD to FD-DISCGRP-REC write FD-DISCGRP-REC
+          close TCATBAL-FILE XREF-FILE ACCOUNT-FILE DISCGRP-FILE stop run.
+    '''))
+    write(ROOT/'support/report_fixture.cbl', textwrap.dedent('''\
+        identification division. program-id. REPORT_FIXTURE.
+        environment division. input-output section. file-control.
+          select XREF-FILE assign to CARDXREF organization indexed access sequential record key FD-XREF-CARD-NUM file status FS-XREF.
+          select TRANTYPE-FILE assign to TRANTYPE organization indexed access random record key FD-TRAN-TYPE file status FS-TYPE.
+          select TRANCATG-FILE assign to TRANCATG organization indexed access random record key FD-TRAN-CAT-KEY file status FS-CAT.
+        data division. file section.
+          fd XREF-FILE. 01 FD-CARDXREF-REC. 05 FD-XREF-CARD-NUM pic x(16). 05 FD-XREF-DATA pic x(34).
+          fd TRANTYPE-FILE. 01 FD-TRANTYPE-REC. 05 FD-TRAN-TYPE pic x(02). 05 FD-TRAN-DATA pic x(58).
+          fd TRANCATG-FILE. 01 FD-TRAN-CAT-RECORD. 05 FD-TRAN-CAT-KEY. 10 FD-TRAN-TYPE-CD pic x(02). 10 FD-TRAN-CAT-CD pic 9(04). 05 FD-TRAN-CAT-DATA pic x(54).
+        working-storage section. copy CVACT03Y. copy CVTRA03Y. copy CVTRA04Y. 01 FS-XREF pic xx. 01 FS-TYPE pic xx. 01 FS-CAT pic xx.
+        procedure division.
+          open output XREF-FILE TRANTYPE-FILE TRANCATG-FILE
+          move '4111111111111111' to XREF-CARD-NUM move 000000001 to XREF-CUST-ID move 00000000001 to XREF-ACCT-ID move CARD-XREF-RECORD to FD-CARDXREF-REC write FD-CARDXREF-REC
+          move '01' to TRAN-TYPE move 'System transaction' to TRAN-TYPE-DESC move TRAN-TYPE-RECORD to FD-TRANTYPE-REC write FD-TRANTYPE-REC
+          move '01' to TRAN-TYPE-CD of TRAN-CAT-KEY move 0005 to TRAN-CAT-CD of TRAN-CAT-KEY move 'Interest charge' to TRAN-CAT-TYPE-DESC move TRAN-CAT-RECORD to FD-TRAN-CAT-RECORD write FD-TRAN-CAT-RECORD
+          close XREF-FILE TRANTYPE-FILE TRANCATG-FILE stop run.
+    '''))
+
+    # Generic indexed loader for statement files prepared by transparent Python fixed-record transforms.
+    write(ROOT/'support/load_idx.cbl', textwrap.dedent('''\
+        >>source format free
+        identification division. program-id. LOADIDX.
+        environment division. input-output section. file-control.
+          select raw-file assign to RAW organization sequential file status fs.
+          select idx-file assign to IDX organization indexed access sequential record key idx-key file status ix.
+        data division. file section.
+        fd raw-file. 01 raw-rec pic x(500).
+        fd idx-file. 01 idx-rec. 05 idx-key pic x(32). 05 idx-rest pic x(468).
+        working-storage section. 01 fs pic xx. 01 ix pic xx. 01 op pic x(8). 01 reclen pic 9(4). 01 keylen pic 9(4).
+        procedure division.
+          accept reclen from environment 'REC_LEN'
+          accept keylen from environment 'KEY_LEN'
+          open input raw-file open output idx-file
+          perform until fs = '10'
+            read raw-file
+              at end move '10' to fs
+              not at end move spaces to idx-rec move raw-rec(1:reclen) to idx-rec(1:reclen) write idx-rec invalid key display 'LOADIDX duplicate/key error ' ix upon syserr stop run returning 12 end-write
+            end-read
+          end-perform
+          close raw-file idx-file stop run.
+    '''))
+
+    builds=[]
+    cp = str(ROOT/'corpus/app/cpy')
+    # Build INTCALC route with driver and 2-arg shim.
+    bd=ROOT/'build/intcalc'
+    builds.append(run(['cobc','-m','-std=ibm','-fsign=ascii','-I',cp,'-o',str(bd/'CBACT04C.dylib'),str(ROOT/'corpus/app/cbl/CBACT04C.cbl')], cwd=bd))
+    builds.append(run(['cobc','-m','-free','-std=ibm','-o',str(bd/'CEE3ABD.dylib'),str(ROOT/'support/CEE3ABD2.cbl')], cwd=bd))
+    builds.append(run(['cobc','-x','-free','-std=ibm','-fsign=ascii','-I',cp,'-L',str(bd),'-o',str(bd/'CBACT04C_driver'),str(ROOT/'support/CBACT04C_driver.cbl')], cwd=bd))
+    builds.append(run(['cobc','-x','-free','-std=ibm','-fsign=ascii','-I',cp,'-o',str(bd/'intcalc_fixture'),str(ROOT/'support/intcalc_fixture.cbl')], cwd=bd))
+    # Build report route.
+    rd=ROOT/'build/report'
+    builds.append(run(['cobc','-x','-std=ibm','-fsign=ascii','-I',cp,'-o',str(rd/'CBTRN03C'),str(ROOT/'corpus/app/cbl/CBTRN03C.cbl')], cwd=rd))
+    builds.append(run(['cobc','-m','-free','-std=ibm','-o',str(rd/'CEE3ABD.dylib'),str(ROOT/'support/CEE3ABD2.cbl')], cwd=rd))
+    builds.append(run(['cobc','-x','-free','-std=ibm','-fsign=ascii','-I',cp,'-o',str(rd/'report_fixture'),str(ROOT/'support/report_fixture.cbl')], cwd=rd))
+    # Build statement route.
+    sd=ROOT/'build/stmt'
+    builds.append(run(['cobc','-m','-std=ibm','-fsign=ascii','-I',cp,'-o',str(sd/'CBSTM03B.dylib'),str(ROOT/'corpus/app/cbl/CBSTM03B.CBL')], cwd=sd))
+    builds.append(run(['cobc','-x','-std=ibm','-fsign=ascii','-I',cp,'-L',str(sd),'-o',str(sd/'CBSTM03A'),str(ROOT/'corpus/app/cbl/CBSTM03A.CBL'),str(ROOT/'support/CEE3ABD0.cbl')], cwd=sd))
+    builds.append(run(['cobc','-x','-free','-std=ibm','-fsign=ascii','-o',str(sd/'load_idx'),str(ROOT/'support/load_idx.cbl')], cwd=sd))
+    write(ROOT/'evidence/build.json', json.dumps(builds, indent=2)+'\n')
+
+    runlog=[]
+    ok_build = all(x['rc']==0 for x in builds)
+    # Run INTCALC if all required build pieces are present.
+    irun=ROOT/'runs/intcalc-nominal'; shutil.rmtree(irun, ignore_errors=True); irun.mkdir(parents=True)
+    if all(x['rc']==0 for x in builds[:4]):
+        runlog.append(run([str(bd/'intcalc_fixture')], cwd=irun, env={**os.environ,'COB_COPY_DIR':cp}))
+        env={**os.environ, 'COB_LIBRARY_PATH':str(bd), 'DYLD_LIBRARY_PATH':str(bd)}
+        runlog.append(run([str(bd/'CBACT04C_driver')], cwd=irun, env=env))
+    # Run TRANREPT using real TRANSACT generated by INTCALC, if viable.
+    rrun=ROOT/'runs/tranrept-from-intcalc'; shutil.rmtree(rrun, ignore_errors=True); rrun.mkdir(parents=True)
+    if (irun/'TRANSACT').exists() and all(x['rc']==0 for x in builds[4:7]):
+        shutil.copy2(irun/'TRANSACT', rrun/'TRANFILE')
+        runlog.append(run([str(rd/'report_fixture')], cwd=rrun, env={**os.environ,'COB_COPY_DIR':cp}))
+        (rrun/'DATEPARM').write_text('2026-01-01 2026-12-31'.ljust(80)+'\n')
+        runlog.append(run([str(rd/'CBTRN03C')], cwd=rrun, env={**os.environ,'COB_LIBRARY_PATH':str(rd),'DYLD_LIBRARY_PATH':str(rd)}))
+    # Prepare/try statement route from INTCALC transaction, preserving explicit transform from transaction to TRNX key layout.
+    srun=ROOT/'runs/stmt-from-intcalc'; shutil.rmtree(srun, ignore_errors=True); srun.mkdir(parents=True)
+    if (irun/'TRANSACT').exists() and all(x['rc']==0 for x in builds[7:10]):
+        tr = (irun/'TRANSACT').read_bytes()
+        # CREASTMT sort/outrec: key is card number (263:278 1-based) + original transaction id (1:16), followed by transaction data excluding card number duplicate.
+        records = [tr[i:i+350] for i in range(0,len(tr),350) if len(tr[i:i+350])==350]
+        records.sort(key=lambda r: (r[262:278], r[0:16]))
+        (srun/'TRNX.raw').write_bytes(b''.join([r[262:278]+r[0:262]+r[278:328] for r in records]))
+        # Raw XREF/CUST/ACCT records are fixture bytes only; no validation or business branching.
+        (srun/'XREF.raw').write_bytes((fixed('4111111111111111',16)+'000000001'+'00000000001'+fixed('',14)).encode())
+        cust = ''.join([fixed('000000001',9),fixed('Ada',25),fixed('',25),fixed('Lovelace',25),fixed('410 Terry Ave N',50),fixed('',50),fixed('Seattle',50),fixed('WA',2),fixed('USA',3),fixed('99999',10),fixed('',15),fixed('',15),fixed('000000000',9),fixed('',20),fixed('1815-12-10',10),fixed('',10),fixed('Y',1),fixed('720',3),fixed('',168)])
+        acct = (irun/'ACCTFILE').read_bytes()[:300]
+        (srun/'CUST.raw').write_bytes(cust.encode())
+        (srun/'ACCT.raw').write_bytes(acct)
+        def load(raw, idx, reclen, keylen):
+            env={**os.environ,'RAW':str(raw),'IDX':str(idx),'REC_LEN':str(reclen),'KEY_LEN':str(keylen)}
+            # The helper always has 500-byte FD, so pad raw records to 500 for reading; idx stores same first reclen bytes.
+            data=raw.read_bytes(); recs=[data[i:i+reclen].ljust(500,b' ') for i in range(0,len(data),reclen) if len(data[i:i+reclen])==reclen]
+            raw.write_bytes(b''.join(recs))
+            return run([str(sd/'load_idx')], cwd=srun, env=env)
+        runlog.append(load(srun/'TRNX.raw', srun/'TRNXFILE',350,32))
+        runlog.append(load(srun/'XREF.raw', srun/'XREFFILE',50,16))
+        runlog.append(load(srun/'CUST.raw', srun/'CUSTFILE',500,9))
+        runlog.append(load(srun/'ACCT.raw', srun/'ACCTFILE',300,11))
+        runlog.append(run([str(sd/'CBSTM03A')], cwd=srun, env={**os.environ,'COB_LIBRARY_PATH':str(sd),'DYLD_LIBRARY_PATH':str(sd)}))
+    write(ROOT/'evidence/runlog.json', json.dumps(runlog, indent=2)+'\n')
+    # Summarize observed files and sha256s.
+    outs=[]
+    for p in sorted((ROOT/'runs').rglob('*')):
+        if p.is_file(): outs.append({'path': str(p.relative_to(ROOT)), 'bytes': p.stat().st_size, 'sha256': digest(p)})
+    summary = {'build_all_rc_zero': ok_build, 'build_rcs': [x['rc'] for x in builds], 'run_rcs': [x['rc'] for x in runlog], 'outputs': outs}
+    write(ROOT/'evidence/summary.json', json.dumps(summary, indent=2)+'\n')
+    print(json.dumps(summary, indent=2))
+    raise SystemExit(0 if ok_build else 1)
+if __name__ == '__main__': main()

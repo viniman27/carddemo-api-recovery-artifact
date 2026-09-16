@@ -1,0 +1,23 @@
+test_preserved_vertical_slice_has_linked_observations_not_http_only (test_collector.CollectorTest) ... FAIL
+test_snapshot_recovery_requires_historical_hash_and_distinguishes_mutation (test_collector.CollectorTest) ... FAIL
+
+======================================================================
+FAIL: test_preserved_vertical_slice_has_linked_observations_not_http_only (test_collector.CollectorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/test_collector.py", line 21, in test_preserved_vertical_slice_has_linked_observations_not_http_only
+    path=Path(__file__).with_name('collector.py'); self.assertTrue(path.exists(),'collector absent')
+AssertionError: False is not true : collector absent
+
+======================================================================
+FAIL: test_snapshot_recovery_requires_historical_hash_and_distinguishes_mutation (test_collector.CollectorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/retrospective-analysis-v1/test_collector.py", line 7, in test_snapshot_recovery_requires_historical_hash_and_distinguishes_mutation
+    self.assertTrue(path.exists(),'collector absent')
+AssertionError: False is not true : collector absent
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)

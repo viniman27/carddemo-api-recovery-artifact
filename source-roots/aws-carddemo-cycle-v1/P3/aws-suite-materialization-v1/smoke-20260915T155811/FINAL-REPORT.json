@@ -1,0 +1,125 @@
+{
+  "T2": {
+    "contractsSucceeded": 1,
+    "operationCountSucceeded": 3,
+    "perOperationPerSeed": {
+      "negative": 1,
+      "positive": 1,
+      "total": 2
+    },
+    "requestOccurrences": 18,
+    "resourcePackageCounts": {
+      "interest.candidate-v1-physical-v2": 6,
+      "posting.candidate-v1-physical-v2": 6,
+      "reporting.candidate-v1-physical-v2": 6
+    },
+    "status": "PARTIAL",
+    "suite": {
+      "bytes": 30200,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/T2-AWS-offline-all7-suite.json",
+      "sha256": "834c5b07aa40c41beabeaa2a3ce412d9961c78b0fcf2b3b1f867414152a9cdc9"
+    }
+  },
+  "T3": {
+    "budget": {
+      "maxDepth": 6,
+      "maxPathsPerTrackFixture": 1
+    },
+    "byContract": {
+      "E1-1": 13,
+      "E1-2": 13,
+      "E1-3": 13,
+      "E2-1": 6,
+      "E2-2": 13,
+      "E2-3": 6,
+      "E3-SDD-stage6r3": 18
+    },
+    "contractsSucceeded": 7,
+    "requestOccurrences": 82,
+    "resourcePackageCounts": {
+      "interest.candidate-v1-physical-v2": 25,
+      "posting.candidate-v1-physical-v2": 38,
+      "reporting.candidate-v1-physical-v2": 19
+    },
+    "status": "PASS",
+    "suite": {
+      "bytes": 522745,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/T3-AWS-offline-all7-suite.json",
+      "sha256": "7a79aed42f63b185ffa78942d2fca9e72947c6f93dbdab5087a3b4e409941173"
+    }
+  },
+  "errors": {
+    "T2": [
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E1-1",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-1/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-1/frozen-t2-requests.partial.json"
+      },
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E1-2",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-2/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-2/frozen-t2-requests.partial.json"
+      },
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E1-3",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-3/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E1-3/frozen-t2-requests.partial.json"
+      },
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E2-1",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-1/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-1/frozen-t2-requests.partial.json"
+      },
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E2-2",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-2/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-2/frozen-t2-requests.partial.json"
+      },
+      {
+        "classification": "generation_exception_preserved",
+        "contractId": "E2-3",
+        "error": "T2OfflineBridgeError('not an OpenAPI object: <REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/parsed.json')",
+        "partialReport": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-3/generation-report.partial.json",
+        "partialRequests": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/contracts/E2-3/frozen-t2-requests.partial.json"
+      }
+    ],
+    "T3": []
+  },
+  "finishedAtUnix": 1789498694.856673,
+  "fixturesStatus": "PASS",
+  "kind": "aws-suite-materialization-v1-final-report",
+  "networkCallsDuringGeneration": 0,
+  "officialCampaign": false,
+  "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811",
+  "runtimeExecuted": false,
+  "startedAtUnix": 1789498691.790132,
+  "status": "FAIL",
+  "verification": {
+    "kind": "aws-suite-materialization-v1-readback-verification",
+    "status": "FAIL",
+    "t2BadResourceBindings": 0,
+    "t2Cases": 18,
+    "t2SuitePin": {
+      "bytes": 30200,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T2/T2-AWS-offline-all7-suite.json",
+      "sha256": "834c5b07aa40c41beabeaa2a3ce412d9961c78b0fcf2b3b1f867414152a9cdc9"
+    },
+    "t3BadResourceBindings": 0,
+    "t3Cases": 82,
+    "t3SuitePin": {
+      "bytes": 522745,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/aws-suite-materialization-v1/smoke-20260915T155811/T3/T3-AWS-offline-all7-suite.json",
+      "sha256": "7a79aed42f63b185ffa78942d2fca9e72947c6f93dbdab5087a3b4e409941173"
+    }
+  }
+}

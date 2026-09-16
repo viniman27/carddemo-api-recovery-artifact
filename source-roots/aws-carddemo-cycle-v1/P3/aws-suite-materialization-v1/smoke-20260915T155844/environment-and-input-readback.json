@@ -1,0 +1,459 @@
+{
+  "environment": {
+    "executable": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/.venv-fuzz-preflight/bin/python",
+    "modules": {
+      "campaign_harness_v3": {
+        "bytes": 26983,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+        "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+      },
+      "sdd_external_selection_v3": {
+        "bytes": 35586,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-sdd-external-selection-v3/sdd_external_selection.py",
+        "sha256": "a9744fac60ff4ccb6a43cac7e52cafb669f6d9297834ee48f9d920550593d71a"
+      },
+      "t2_offline_bridge": {
+        "bytes": 21345,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t2-offline-preparation-v4/src/t2_offline_bridge.py",
+        "sha256": "d2ad81e18e868e1a2e6cfa19f27778e562794bfb2b31324e74083c005d99b198"
+      },
+      "t3_campaign_adapter": {
+        "bytes": 44269,
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-campaign-adapter-v3/src/t3_campaign_adapter.py",
+        "sha256": "952057dfe4052796eda98e6d3509363f3d4d72820fdd4acdf86d5ff5d91ed312"
+      }
+    },
+    "packages": {
+      "PyYAML": "6.0.3",
+      "hypothesis": "6.168.0",
+      "jsonschema": "4.26.0",
+      "requests": "2.34.2",
+      "schemathesis": "4.27.1"
+    },
+    "python": "3.12.2 (main, Feb  6 2024, 20:19:44) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+  },
+  "fixtures": {
+    "errors": [],
+    "manifest": {
+      "bytes": 16432,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    "packages": {
+      "interest": {
+        "files": [
+          {
+            "bytes": 8192,
+            "path": "ACCTFILE",
+            "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+          },
+          {
+            "bytes": 8192,
+            "path": "DISCGRP",
+            "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+          },
+          {
+            "bytes": 10,
+            "path": "PARMFILE",
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+          },
+          {
+            "bytes": 8192,
+            "path": "TCATBALF",
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+          },
+          {
+            "bytes": 8192,
+            "path": "XREFFILE",
+            "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+          },
+          {
+            "bytes": 8192,
+            "path": "XREFFILE.1",
+            "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+          }
+        ],
+        "fixtureId": "interest.candidate-v1-physical-v2",
+        "logicalResources": {
+          "indexed": [
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "TCATBALF",
+              "dumpRawSha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+              "keys": [
+                "10000000001010005",
+                "10000000002010005"
+              ],
+              "logicalJsonl": "TCATBALF",
+              "logicalRawSha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+              "physicalFiles": {
+                "TCATBALF": {
+                  "bytes": 8192,
+                  "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 50
+            },
+            {
+              "alternateKeyName": "FD-XREF-ACCT-ID",
+              "alternateKeys": [
+                "10000000001",
+                "10000000002"
+              ],
+              "dd": "XREFFILE",
+              "dumpRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "keys": [
+                "4111111111111111",
+                "4222222222222222"
+              ],
+              "logicalJsonl": "CARDXREF",
+              "logicalRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "physicalFiles": {
+                "XREFFILE": {
+                  "bytes": 8192,
+                  "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+                },
+                "XREFFILE.1": {
+                  "bytes": 8192,
+                  "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 50
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "ACCTFILE",
+              "dumpRawSha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+              "keys": [
+                "10000000001",
+                "10000000002"
+              ],
+              "logicalJsonl": "ACCTFILE",
+              "logicalRawSha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+              "physicalFiles": {
+                "ACCTFILE": {
+                  "bytes": 8192,
+                  "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 300
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "DISCGRP",
+              "dumpRawSha256": "2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a",
+              "keys": [
+                "STANDARD  010005",
+                "ZERORATE  010005",
+                "DEFAULT   010005"
+              ],
+              "logicalJsonl": "DISCGRP",
+              "logicalRawSha256": "2ec7cced37424be79c4dcfd26f9ba1b09f71fc4c243a018d0f04fface1db029a",
+              "physicalFiles": {
+                "DISCGRP": {
+                  "bytes": 8192,
+                  "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 3,
+              "recordSize": 50
+            }
+          ],
+          "sequential": [
+            {
+              "bytes": 10,
+              "dd": "PARMFILE",
+              "recordCount": 1,
+              "recordSize": 10,
+              "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+              "source": "explicit package-local X(10) PARMFILE from v1 manifest parameter, not default"
+            }
+          ]
+        },
+        "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/interest",
+        "resetPolicy": "fresh physical copy per case/application"
+      },
+      "posting": {
+        "files": [
+          {
+            "bytes": 8192,
+            "path": "ACCTFILE",
+            "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+          },
+          {
+            "bytes": 700,
+            "path": "DALYTRAN",
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+          },
+          {
+            "bytes": 8192,
+            "path": "TCATBALF",
+            "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+          },
+          {
+            "bytes": 8192,
+            "path": "TRANFILE",
+            "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+          },
+          {
+            "bytes": 8192,
+            "path": "XREFFILE",
+            "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+          },
+          {
+            "bytes": 8192,
+            "path": "XREFFILE.1",
+            "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+          }
+        ],
+        "fixtureId": "posting.candidate-v1-physical-v2",
+        "logicalResources": {
+          "indexed": [
+            {
+              "alternateKeyName": "FD-XREF-ACCT-ID",
+              "alternateKeys": [
+                "10000000001",
+                "10000000002"
+              ],
+              "dd": "XREFFILE",
+              "dumpRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "keys": [
+                "4111111111111111",
+                "4222222222222222"
+              ],
+              "logicalJsonl": "CARDXREF",
+              "logicalRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "physicalFiles": {
+                "XREFFILE": {
+                  "bytes": 8192,
+                  "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+                },
+                "XREFFILE.1": {
+                  "bytes": 8192,
+                  "sha256": "6bfb3927d6ab5f6d3b708cdafbaa497e5604f325edf2b0186a153596ccfa7da0"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 50
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "ACCTFILE",
+              "dumpRawSha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+              "keys": [
+                "10000000001",
+                "10000000002"
+              ],
+              "logicalJsonl": "ACCTFILE",
+              "logicalRawSha256": "d725acfa3b3a2eefb4a2627e8e098af70d186aa2190ebe349c4fd6074ee721c5",
+              "physicalFiles": {
+                "ACCTFILE": {
+                  "bytes": 8192,
+                  "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 300
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "TCATBALF",
+              "dumpRawSha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+              "keys": [
+                "10000000001010005",
+                "10000000002010005"
+              ],
+              "logicalJsonl": "TCATBALF",
+              "logicalRawSha256": "63e5263e53d6e8afa62e1159286e2a9eaaadf3538ade1cbd651ccbc72e10643d",
+              "physicalFiles": {
+                "TCATBALF": {
+                  "bytes": 8192,
+                  "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 50
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "TRANFILE",
+              "dumpRawSha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+              "keys": [
+                "REPORT-IN---001 ",
+                "REPORT-OUT--001 "
+              ],
+              "logicalJsonl": "TRANSACT",
+              "logicalRawSha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+              "physicalFiles": {
+                "TRANFILE": {
+                  "bytes": 8192,
+                  "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 350
+            }
+          ],
+          "sequential": [
+            {
+              "bytes": 700,
+              "dd": "DALYTRAN",
+              "recordCount": 2,
+              "recordSize": 350,
+              "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+              "source": "P3/fixture-candidates-v1/data/sequential/posting/DALYTRAN.dat"
+            }
+          ]
+        },
+        "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/posting",
+        "resetPolicy": "fresh physical copy per case/application"
+      },
+      "reporting": {
+        "files": [
+          {
+            "bytes": 8192,
+            "path": "CARDXREF",
+            "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+          },
+          {
+            "bytes": 80,
+            "path": "DATEPARM",
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237"
+          },
+          {
+            "bytes": 8192,
+            "path": "TRANCATG",
+            "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+          },
+          {
+            "bytes": 700,
+            "path": "TRANFILE",
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7"
+          },
+          {
+            "bytes": 0,
+            "path": "TRANFILE.empty",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 8192,
+            "path": "TRANTYPE",
+            "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+          }
+        ],
+        "fixtureId": "reporting.candidate-v1-physical-v2",
+        "logicalResources": {
+          "indexed": [
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "CARDXREF",
+              "dumpRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "keys": [
+                "4111111111111111",
+                "4222222222222222"
+              ],
+              "logicalJsonl": "CARDXREF",
+              "logicalRawSha256": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+              "physicalFiles": {
+                "CARDXREF": {
+                  "bytes": 8192,
+                  "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 2,
+              "recordSize": 50
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "TRANTYPE",
+              "dumpRawSha256": "770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa",
+              "keys": [
+                "01"
+              ],
+              "logicalJsonl": "TRANTYPE",
+              "logicalRawSha256": "770fd574d00f147a3618bf3aa93878b4070182f16f5b0e3c27b0cd68bda49dfa",
+              "physicalFiles": {
+                "TRANTYPE": {
+                  "bytes": 8192,
+                  "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 1,
+              "recordSize": 60
+            },
+            {
+              "alternateKeyName": null,
+              "alternateKeys": [],
+              "dd": "TRANCATG",
+              "dumpRawSha256": "5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629",
+              "keys": [
+                "010005"
+              ],
+              "logicalJsonl": "TRANCATG",
+              "logicalRawSha256": "5a713035394f700f34d577a04e76bb0eb8dd83dad6b011a99e12abb5eb3d0629",
+              "physicalFiles": {
+                "TRANCATG": {
+                  "bytes": 8192,
+                  "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+                }
+              },
+              "reader": "compiled GnuCOBOL IDXIO dump matched candidate logical record images",
+              "recordCount": 1,
+              "recordSize": 60
+            }
+          ],
+          "sequential": [
+            {
+              "bytes": 700,
+              "dd": "TRANFILE",
+              "recordCount": 2,
+              "recordSize": 350,
+              "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+              "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.dat"
+            },
+            {
+              "bytes": 0,
+              "dd": "TRANFILE.empty",
+              "recordCount": 0,
+              "recordSize": 350,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "source": "P3/fixture-candidates-v1/data/sequential/reporting/TRANFILE.empty.dat"
+            },
+            {
+              "bytes": 80,
+              "dd": "DATEPARM",
+              "recordCount": 1,
+              "recordSize": 80,
+              "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+              "source": "P3/fixture-candidates-v1/data/sequential/reporting/DATEPARM.dat"
+            }
+          ]
+        },
+        "packagePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/reporting",
+        "resetPolicy": "fresh physical copy per case/application"
+      }
+    },
+    "status": "PASS"
+  }
+}

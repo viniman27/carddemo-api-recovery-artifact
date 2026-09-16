@@ -1,0 +1,58 @@
+{
+  "fixtures": [
+    {
+      "contentSha256": "b8ddadd30923a9f8abc0e1417a94f6c96587eea48e17ae552f61632d30be35c0",
+      "exposure": {
+        "label": "technical-only",
+        "notExtractionInput": true,
+        "notOracle": true,
+        "notPublicRequest": true
+      },
+      "fixtureId": "posting-essential-reject-expiry",
+      "materializer": {
+        "filePins": {
+          "ACCTFILE": {
+            "bytes": 8192,
+            "sha256": "92297933b63b41d8ae4a80b3fec768176a14b2d54282be82be0f41dab8cc466e"
+          },
+          "DALYTRAN": {
+            "bytes": 350,
+            "sha256": "1319e2f9208cbf89f3d78f973b1ade6849aa24c953413f75e086f07a06073416"
+          },
+          "TCATBALF": {
+            "bytes": 8192,
+            "sha256": "754a2fd32464e54ceb6e1655d57a53e90ddfeddd280b514b781256ab79d8cd73"
+          },
+          "TRANFILE": {
+            "bytes": 8192,
+            "sha256": "b788d2b8722e64008980a86a96264e34c5e127dfdfde5a2b94cc8972f5bcc78f"
+          },
+          "XREFFILE": {
+            "bytes": 8192,
+            "sha256": "78cf561e9e7b7a5d93f5257c0bd437661ed042288b9c7178eb273b50f1ba7e15"
+          }
+        },
+        "files": {
+          "ACCTFILE": "posting/ACCTFILE",
+          "DALYTRAN": "posting/DALYTRAN",
+          "TCATBALF": "posting/TCATBALF",
+          "TRANFILE": "posting/TRANFILE",
+          "XREFFILE": "posting/XREFFILE"
+        },
+        "kind": "local_file_package"
+      },
+      "provenance": {
+        "caseId": "reject-expiry",
+        "class": "local_physical_input_changes",
+        "officialFixture": false,
+        "preservedSidecars": {}
+      },
+      "reset": {
+        "default": "fresh_dir_per_run",
+        "statefulSequence": "not_used"
+      },
+      "track": "posting"
+    }
+  ],
+  "kind": "p3-local-technical-fixture-selection"
+}

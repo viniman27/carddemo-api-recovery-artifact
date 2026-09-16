@@ -1,0 +1,132 @@
+{
+  "contract_id": "E1-1",
+  "contract_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+  "contract_sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+  "operation_id": "generateInterestTransactions",
+  "track": "interest",
+  "request_sha256": "87e197a82fba58e4e10bb12f6d1cad65f7692972782046c704c81bbf903be67f",
+  "request_policy": "original E1 schema with refs validated by jsonschema; request arrays/linkage fields materialized into exact COBOL input bytes before invocation",
+  "binding_policy": "opaque tokens resolved only by exact local preprovisioned map entries; unknown tokens fail; prefixes alone are never accepted",
+  "encoding_policy": "request raw bytes are preserved; structured transaction records are fixed-width ASCII transport materializations with filler retained when supplied",
+  "linkage_parameter_policy": "interest PARMFILE is exactly the ten request bytes; no date parsing, calendar normalization, rounding, suffix uniqueness or default substitution",
+  "request_materialization": {
+    "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/registry.json",
+    "files": {
+      "ACCTFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/ACCTFILE",
+        "bytes": 8192,
+        "sha256": "33a6282ca7b3413c9a34cbd0b50d6c5d5b665dda92a2d7354bc2dee4319402c8",
+        "requestOwned": false
+      },
+      "DISCGRP": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/DISCGRP",
+        "bytes": 8192,
+        "sha256": "b0279b60acb5fd6bb786fa45f0921bb4cd75b29a664f9dcc0c3d680f2a8f5348",
+        "requestOwned": false
+      },
+      "PARMFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/PARMFILE",
+        "bytes": 10,
+        "sha256": "e8a4e0434320371d18cbbf8e29332a77992d0129b52a7e1a426022caaa4200fe",
+        "requestOwned": true
+      },
+      "TCATBALF": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/TCATBALF",
+        "bytes": 8192,
+        "sha256": "6a6d9ede2fbf217488bcd77d1dc3f5bb5a3a33f9cad6636f999a32776665e88d",
+        "requestOwned": false
+      },
+      "XREFFILE": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/XREFFILE",
+        "bytes": 8192,
+        "sha256": "696222acb70901a6517720898e59450e15b7082310024e71f977c8d4790b0812",
+        "requestOwned": false
+      },
+      "XREFFILE.1": {
+        "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/XREFFILE.1",
+        "bytes": 8192,
+        "sha256": "cfdac869222d487f8296a922697563f2f9f405673f91565d6518cea7eca5b37c",
+        "requestOwned": false
+      }
+    },
+    "bindings": {
+      "TCATBALF": {
+        "field": "categoryBalanceFile",
+        "token": "p3:interest:TCATBALF",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/interest/single-final-eof/package/TCATBALF",
+        "sourceSha256": "6a6d9ede2fbf217488bcd77d1dc3f5bb5a3a33f9cad6636f999a32776665e88d",
+        "sourceBytes": 8192
+      },
+      "XREFFILE": {
+        "field": "crossReferenceFile",
+        "token": "p3:interest:XREFFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/interest/single-final-eof/package/XREFFILE",
+        "sourceSha256": "696222acb70901a6517720898e59450e15b7082310024e71f977c8d4790b0812",
+        "sourceBytes": 8192
+      },
+      "DISCGRP": {
+        "field": "disclosureGroupFile",
+        "token": "p3:interest:DISCGRP",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/interest/single-final-eof/package/DISCGRP",
+        "sourceSha256": "b0279b60acb5fd6bb786fa45f0921bb4cd75b29a664f9dcc0c3d680f2a8f5348",
+        "sourceBytes": 8192
+      },
+      "ACCTFILE": {
+        "field": "accountFile",
+        "token": "p3:interest:ACCTFILE",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/interest/single-final-eof/package/ACCTFILE",
+        "sourceSha256": "33a6282ca7b3413c9a34cbd0b50d6c5d5b665dda92a2d7354bc2dee4319402c8",
+        "sourceBytes": 8192
+      },
+      "XREFFILE.1": {
+        "field": "implicitAlternateIndexSidecar",
+        "token": "p3:interest:XREFFILE.1",
+        "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/interest/single-final-eof/package/XREFFILE.1",
+        "sourceSha256": "cfdac869222d487f8296a922697563f2f9f405673f91565d6518cea7eca5b37c",
+        "sourceBytes": 8192
+      }
+    },
+    "output_bindings": {
+      "TRANSACT": {
+        "field": "outputTransactionFile",
+        "token": "p3:interest:TRANSACT",
+        "dd": "TRANSACT",
+        "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+      },
+      "P2C_LINKAGE_CAPTURE": {
+        "field": "parameterLength",
+        "parameterLength": 10,
+        "parameterLengthCompHex": "000a",
+        "parameterValueHex": "32303236303931363030",
+        "policy": "transported through P2c local COBOL wrapper into CBACT04C linkage; capture is pre-call bytes"
+      }
+    },
+    "fixture_descriptor_sha256": "1b70013491539a6e6d515f23dfa7bcac91cf6fd32bbaef2ac80620ed3c45fbe2",
+    "linkage": {
+      "field": "parameterLength",
+      "parameterLength": 10,
+      "parameterLengthCompHex": "000a",
+      "parameterValueHex": "32303236303931363030",
+      "policy": "transported through P2c local COBOL wrapper into CBACT04C linkage; capture is pre-call bytes",
+      "capturePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/request-packages/E1-1-interest-1789560855121/P2C_LINKAGE_CAPTURE.bin",
+      "capturedRuntimeLinkageHex": "000a32303236303931363030",
+      "capturedRuntimeParameterLengthCompHex": "000a",
+      "capturedRuntimeParameterLength": 10,
+      "captureSha256": "bd9a7eba57d8872566d9a21fdc52925d1962a297ce9e126c6aff71a09613f717",
+      "captureBytes": 12
+    }
+  },
+  "semantic_ambiguities": [
+    {
+      "point": "CBACT04C alternate-key account lookup when multiple card rows exist for one account",
+      "recommendation": "Do not select a card in the facade; preserve runtime-selected XREFFILE alternate-key behavior and record as ambiguity if a case depends on which card is chosen."
+    }
+  ],
+  "p2b_audit_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/p2b-runs/interest-lzux_x5m/audit.json",
+  "p2b_new_run_dirs": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/p2b-runs/interest-lzux_x5m"
+  ],
+  "http_status": 200,
+  "response_path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-full84-v1/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7/cases/ESSENTIAL12x7-V2-E1-1-single-final-eof/replay/applications/0001-36434386638a5dfe/zero-shot-runs/E1-1/interest/E1-1-interest-1789560855121/response.json"
+}

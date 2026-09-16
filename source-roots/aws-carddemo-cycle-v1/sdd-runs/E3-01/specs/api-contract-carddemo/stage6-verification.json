@@ -1,0 +1,1861 @@
+{
+  "generated_at": "2026-09-12T20:00:00-03:00",
+  "scope": "Stage6 materialization and independent source-grounded documentary review; no regeneration, no COBOL execution, no OpenAPI standalone validation.",
+  "completion_receipt": {
+    "parsed_status": "completed",
+    "parsed_model": "gpt-6-astra",
+    "tools": [],
+    "previous_response_id": null,
+    "store": false,
+    "metadata_model": "gpt-6-astra",
+    "metadata_http_status": 200
+  },
+  "original_scope": {
+    "path": "prepared/api-contract-carddemo/execution/scope-original.md",
+    "sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7",
+    "bytes": 44132,
+    "request_sha256_recorded": "0e5d2063f232c500e94ff3513cb5a9a0640a82d16cc3bc2aa9cdbea33183f79d"
+  },
+  "materialization": {
+    "action": "blocked_existing_requirements_differs_no_overwrite",
+    "blocker": "Existing requirements.md is not byte-identical to parsed Stage6 response; no overwrite performed per task constraint.",
+    "requirements_path": "specs/api-contract-carddemo/requirements.md",
+    "requirements_sha256": "144750e350057971ee854856b8aa48ed7039904b7ab0a5bbc0bf8af96d8ded74",
+    "parsed_text_sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7",
+    "byte_identical_to_parsed_text": false
+  },
+  "hashes_before": {
+    "specs/api-contract-carddemo/requirements.md": {
+      "exists": true,
+      "sha256": "144750e350057971ee854856b8aa48ed7039904b7ab0a5bbc0bf8af96d8ded74",
+      "bytes": 239
+    },
+    "specs/api-contract-carddemo/spec.json": {
+      "exists": true,
+      "sha256": "07f36f79627b72a1bf391ca58e797d7f31bf7f92ed4cd0ca0cb59d8b94ef5ae7",
+      "bytes": 1512
+    },
+    "specs/api-contract-carddemo/init-metadata.json": {
+      "exists": true,
+      "sha256": "8271c068d0aedc14d815c955d03e4ca3272241d205a0da4b4f264da4cede9844",
+      "bytes": 343
+    },
+    "specs/api-contract-carddemo/input-pins.json": {
+      "exists": true,
+      "sha256": "c56d1b9e68db3f0e724702672c702c476564669a9dd706f9caccb3882ba4de12",
+      "bytes": 10809
+    },
+    "prepared/api-contract-carddemo/execution/parsed.json": {
+      "exists": true,
+      "sha256": "72597c2ad3d0034ddf3307692b1c468314f3159f3756d061ed232dfee97309de",
+      "bytes": 46538
+    },
+    "prepared/api-contract-carddemo/execution/metadata.json": {
+      "exists": true,
+      "sha256": "c50fafe749e6dda1973e890ed014a050b3e718b238b76677a124aa5998f3aeb7",
+      "bytes": 1378
+    },
+    "prepared/api-contract-carddemo/execution/scope-original.md": {
+      "exists": true,
+      "sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7",
+      "bytes": 44132
+    },
+    "stage6-generation-authorization.json": {
+      "exists": true,
+      "sha256": "a6f9017a08ab8c4a0ea133908525944f3b2724c7286d0244a296289779b88298",
+      "bytes": 509
+    }
+  },
+  "actual_counts": {
+    "stage6_lines": 542,
+    "stage6_text_bytes": 44132,
+    "unique_R_ids": 20,
+    "R_ids": [
+      "R-1",
+      "R-2",
+      "R-3",
+      "R-4",
+      "R-5",
+      "R-6",
+      "R-7",
+      "R-8",
+      "R-9",
+      "R-10",
+      "R-11",
+      "R-12",
+      "R-13",
+      "R-14",
+      "R-15",
+      "R-16",
+      "R-17",
+      "R-18",
+      "R-19",
+      "R-20"
+    ],
+    "unique_D_ids": 12,
+    "D_ids": [
+      "D-2",
+      "D-3",
+      "D-4",
+      "D-5",
+      "D-6",
+      "D-7",
+      "D-8",
+      "D-9",
+      "D-10",
+      "D-11",
+      "D-12",
+      "D-13"
+    ],
+    "unique_type_names_extracted": 17,
+    "type_names": [
+      "PostingCandidate",
+      "PostingTransaction",
+      "PostingRejection",
+      "PostingProgress",
+      "InterestCategoryBasis",
+      "InterestIdentifierBasis",
+      "GeneratedInterestTransaction",
+      "ReportingTransactionBasis",
+      "ReportingDateBasis",
+      "ReportDetail",
+      "ReportHeaderContext",
+      "ReportTotal",
+      "PostingAttemptState",
+      "InterestDisclosureBasis",
+      "InterestAttemptState",
+      "UpstreamReportSelectionBasis",
+      "ReportingAttemptState"
+    ],
+    "response_categories": 8,
+    "source_bodies": 19,
+    "derived_representation_pins": 19
+  },
+  "coverage_audit": {
+    "R": {
+      "R-1": {
+        "track": "posting",
+        "stage6_line_refs": [
+          132,
+          166,
+          190,
+          192,
+          193,
+          205,
+          305,
+          359,
+          389,
+          394,
+          395,
+          427
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-2": {
+        "track": "posting",
+        "stage6_line_refs": [
+          150,
+          298,
+          390,
+          391,
+          434,
+          450
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-3": {
+        "track": "posting",
+        "stage6_line_refs": [
+          150,
+          190,
+          191,
+          192,
+          359,
+          360,
+          389,
+          393,
+          394,
+          434,
+          451,
+          506
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-4": {
+        "track": "posting",
+        "stage6_line_refs": [
+          158,
+          176,
+          255,
+          392,
+          395,
+          430,
+          435,
+          436,
+          452
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-5": {
+        "track": "posting",
+        "stage6_line_refs": [
+          150,
+          166,
+          391,
+          434,
+          438,
+          453
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-6": {
+        "track": "posting",
+        "stage6_line_refs": [
+          166,
+          191,
+          193,
+          205,
+          255,
+          305,
+          360,
+          362,
+          365,
+          392,
+          393,
+          394
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-7": {
+        "track": "interest",
+        "stage6_line_refs": [
+          132,
+          211,
+          225,
+          257,
+          326,
+          362,
+          396,
+          397,
+          398,
+          401,
+          428,
+          432
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-8": {
+        "track": "interest",
+        "stage6_line_refs": [
+          397,
+          401,
+          403,
+          437,
+          456,
+          504
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-9": {
+        "track": "interest",
+        "stage6_line_refs": [
+          166,
+          256,
+          362,
+          399,
+          438,
+          457
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-10": {
+        "track": "interest",
+        "stage6_line_refs": [
+          150,
+          211,
+          213,
+          225,
+          256,
+          396,
+          399,
+          401,
+          434,
+          458
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-11": {
+        "track": "interest",
+        "stage6_line_refs": [
+          150,
+          176,
+          212,
+          213,
+          225,
+          257,
+          326,
+          360,
+          362,
+          398,
+          400,
+          402
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-12": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          132,
+          150,
+          231,
+          232,
+          234,
+          249,
+          259,
+          345,
+          404,
+          405,
+          429,
+          433
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-13": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          166,
+          231,
+          233,
+          235,
+          362,
+          407,
+          408,
+          409,
+          411,
+          414,
+          438,
+          461
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-14": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          150,
+          360,
+          410,
+          412,
+          462,
+          506
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-15": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          404,
+          410,
+          411,
+          412,
+          463,
+          504
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-16": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          150,
+          176,
+          231,
+          232,
+          233,
+          234,
+          235,
+          360,
+          405,
+          408,
+          409,
+          413
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-17": {
+        "track": "reporting",
+        "stage6_line_refs": [
+          249,
+          258,
+          404,
+          405,
+          406,
+          429,
+          433,
+          434,
+          465,
+          507
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-18": {
+        "track": "cross-track-failure",
+        "stage6_line_refs": [
+          158,
+          166,
+          255,
+          257,
+          259,
+          305,
+          326,
+          345,
+          362,
+          363,
+          364,
+          365
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-19": {
+        "track": "cross-track-operational",
+        "stage6_line_refs": [
+          132,
+          176,
+          258,
+          406,
+          415,
+          416,
+          417,
+          418,
+          430,
+          439,
+          467
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      },
+      "R-20": {
+        "track": "cross-track-operational",
+        "stage6_line_refs": [
+          132,
+          176,
+          305,
+          326,
+          345,
+          366,
+          402,
+          403,
+          414,
+          415,
+          416,
+          417
+        ],
+        "covered": true,
+        "audited_outcome": "contract_destination_or_gap_preserved",
+        "notes": "Mapped in Section 6/7 or gap register; no closure of unresolved source behavior."
+      }
+    },
+    "D": {
+      "D-2": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          106,
+          132,
+          142,
+          305,
+          326,
+          345,
+          427,
+          428,
+          429,
+          439
+        ],
+        "audited": true
+      },
+      "D-3": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          107,
+          142,
+          158,
+          176,
+          225,
+          255,
+          256,
+          257,
+          259,
+          430,
+          432,
+          435,
+          441,
+          506
+        ],
+        "audited": true
+      },
+      "D-4": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          108,
+          158,
+          166,
+          176,
+          205,
+          255,
+          364,
+          365,
+          366,
+          430,
+          431,
+          435,
+          436,
+          438,
+          439,
+          440,
+          506
+        ],
+        "audited": true
+      },
+      "D-5": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          109,
+          142,
+          150,
+          249,
+          361,
+          433,
+          434,
+          505
+        ],
+        "audited": true
+      },
+      "D-6": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          110,
+          205,
+          225,
+          257,
+          259,
+          305,
+          326,
+          431,
+          432,
+          435,
+          436,
+          437,
+          507
+        ],
+        "audited": true
+      },
+      "D-7": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          111,
+          142,
+          176,
+          249,
+          258,
+          345,
+          430,
+          433,
+          441,
+          507
+        ],
+        "audited": true
+      },
+      "D-8": {
+        "kind": "inherited_stage5",
+        "stage6_line_refs": [
+          112,
+          142,
+          176,
+          205,
+          225,
+          305,
+          326,
+          430,
+          431,
+          432,
+          475
+        ],
+        "audited": true
+      },
+      "D-9": {
+        "kind": "stage6_draft_decision",
+        "stage6_line_refs": [
+          128,
+          305,
+          326,
+          345,
+          427,
+          428,
+          429,
+          486
+        ],
+        "audited": true
+      },
+      "D-10": {
+        "kind": "stage6_draft_decision",
+        "stage6_line_refs": [
+          138,
+          239,
+          431,
+          432,
+          433,
+          434
+        ],
+        "audited": true
+      },
+      "D-11": {
+        "kind": "stage6_draft_decision",
+        "stage6_line_refs": [
+          146,
+          200,
+          237,
+          431,
+          432,
+          433,
+          434
+        ],
+        "audited": true
+      },
+      "D-12": {
+        "kind": "stage6_draft_decision",
+        "stage6_line_refs": [
+          154,
+          299,
+          401,
+          435,
+          449
+        ],
+        "audited": true
+      },
+      "D-13": {
+        "kind": "stage6_draft_decision",
+        "stage6_line_refs": [
+          162,
+          305,
+          326,
+          345,
+          370,
+          438
+        ],
+        "audited": true
+      }
+    },
+    "types": {
+      "PostingCandidate": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "PostingTransaction": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "PostingRejection": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "PostingProgress": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "InterestCategoryBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "InterestIdentifierBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "GeneratedInterestTransaction": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportingTransactionBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportingDateBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportDetail": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportHeaderContext": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportTotal": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "PostingAttemptState": {
+        "audited": true,
+        "published_payload_schema": false,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "InterestDisclosureBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "InterestAttemptState": {
+        "audited": true,
+        "published_payload_schema": false,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "UpstreamReportSelectionBasis": {
+        "audited": true,
+        "published_payload_schema": true,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      },
+      "ReportingAttemptState": {
+        "audited": true,
+        "published_payload_schema": false,
+        "note": "public schema/component or explicitly excluded/internal in Section 3/5.4"
+      }
+    },
+    "response_categories": [
+      {
+        "category": "Preliminary posting rejection",
+        "condition": "Selected nonzero preliminary reason",
+        "http_status": "Unassigned pending G-23",
+        "body_shape": "`PostingRejection` content"
+      },
+      {
+        "category": "Representable output content",
+        "condition": "Licensed output becomes available under a defined response boundary",
+        "http_status": "Unassigned pending G-23",
+        "body_shape": "Components in §3"
+      },
+      {
+        "category": "Request-representation rejection",
+        "condition": "Request falls outside a subsequently established schema policy",
+        "http_status": "Unassigned pending G-22",
+        "body_shape": "Not defined"
+      },
+      {
+        "category": "Dependency/local I/O failure",
+        "condition": "Relevant source failure path",
+        "http_status": "Unassigned pending G-23",
+        "body_shape": "No public diagnostic schema licensed"
+      },
+      {
+        "category": "External failure-call consequence",
+        "condition": "Behavior following external call",
+        "http_status": "Unsupported guarantee; G-23",
+        "body_shape": "Not defined"
+      },
+      {
+        "category": "Timeout/process termination",
+        "condition": "No approved observation or handling contract",
+        "http_status": "Unsupported",
+        "body_shape": "Not defined"
+      },
+      {
+        "category": "Partial durable effects",
+        "condition": "Actual persistence unknown",
+        "http_status": "Not a separately reportable status",
+        "body_shape": "No state snapshot"
+      },
+      {
+        "category": "Repeat outcome",
+        "condition": "Repetition safety unknown",
+        "http_status": "No retry-specific status",
+        "body_shape": "No idempotency receipt"
+      }
+    ]
+  },
+  "anchor_bounds_audit": {
+    "summary": {
+      "anchors_examined": 74,
+      "bounds_ok_count": 74,
+      "shorthand_count": 9,
+      "full_count": 65
+    },
+    "anchors": [
+      {
+        "anchor": "CBACT04C.cbl:214-217",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 214,
+        "line_end": 217,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:462-470",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 462,
+        "line_end": 470,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CVTRA06Y.cpy:5-7",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA06Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 7,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA06Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:425-427",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 425,
+        "line_end": 427,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CVTRA06Y.cpy:8-14",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA06Y.cpy"
+        ],
+        "line_start": 8,
+        "line_end": 14,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA06Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:428-434",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 428,
+        "line_end": 434,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:382-405",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 382,
+        "line_end": 405,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CVTRA06Y.cpy:16-17",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA06Y.cpy"
+        ],
+        "line_start": 16,
+        "line_end": 17,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA06Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:414-448",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 414,
+        "line_end": 448,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:424-442",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 424,
+        "line_end": 442,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CVTRA05Y.cpy:5-17",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA05Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 17,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA05Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:176-182",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 176,
+        "line_end": 182,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:184-186",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 184,
+        "line_end": 186,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CVACT01Y.cpy:5-14",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVACT01Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 14,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVACT01Y.cpy": 20
+        }
+      },
+      {
+        "anchor": "CVACT03Y.cpy:5-7",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVACT03Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 7,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVACT03Y.cpy": 11
+        }
+      },
+      {
+        "anchor": "CVTRA01Y.cpy:5-9",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA01Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 9,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA01Y.cpy": 13
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:188-218",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 188,
+        "line_end": 218,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:194-213",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 194,
+        "line_end": 213,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CVACT01Y.cpy:5-16",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVACT01Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 16,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVACT01Y.cpy": 20
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:415-460",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 415,
+        "line_end": 460,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CVTRA02Y.cpy:5-9",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA02Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 9,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA02Y.cpy": 13
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:175-180",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 175,
+        "line_end": 180,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "INTCALC.jcl:22-41",
+        "style": "full",
+        "resolved_paths": [
+          "app/jcl/INTCALC.jcl"
+        ],
+        "line_start": 22,
+        "line_end": 41,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/jcl/INTCALC.jcl": 44
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:168-169",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 168,
+        "line_end": 169,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:473-484",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 473,
+        "line_end": 484,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CVTRA05Y.cpy:5-8",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA05Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 8,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA05Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:485-515",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 485,
+        "line_end": 515,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CVTRA05Y.cpy:9-17",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA05Y.cpy"
+        ],
+        "line_start": 9,
+        "line_end": 17,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA05Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:188-228",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 188,
+        "line_end": 228,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:170-196",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 170,
+        "line_end": 196,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:122-125",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 122,
+        "line_end": 125,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "TRANREPT.jcl:37-74",
+        "style": "full",
+        "resolved_paths": [
+          "app/jcl/TRANREPT.jcl"
+        ],
+        "line_start": 37,
+        "line_end": 74,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/jcl/TRANREPT.jcl": 84
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:181-187",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 181,
+        "line_end": 187,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CVTRA03Y.cpy:5-6",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA03Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 6,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA03Y.cpy": 10
+        }
+      },
+      {
+        "anchor": "CVTRA04Y.cpy:5-8",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA04Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 8,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA04Y.cpy": 12
+        }
+      },
+      {
+        "anchor": "CVTRA07Y.cpy:20-26",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA07Y.cpy"
+        ],
+        "line_start": 20,
+        "line_end": 26,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA07Y.cpy": 73
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:365-368",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 365,
+        "line_end": 368,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:361-374",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 361,
+        "line_end": 374,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CVTRA07Y.cpy:15-31",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA07Y.cpy"
+        ],
+        "line_start": 15,
+        "line_end": 31,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA07Y.cpy": 73
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:274-284",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 274,
+        "line_end": 284,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CVTRA07Y.cpy:4-13",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA07Y.cpy"
+        ],
+        "line_start": 4,
+        "line_end": 13,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA07Y.cpy": 73
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:197-204",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 197,
+        "line_end": 204,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CVTRA07Y.cpy:50-66",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA07Y.cpy"
+        ],
+        "line_start": 50,
+        "line_end": 66,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA07Y.cpy": 73
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:170-213",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 170,
+        "line_end": 213,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:193-234",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 193,
+        "line_end": 234,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:370-422",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 370,
+        "line_end": 422,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:424-465",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 424,
+        "line_end": 465,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:440-442",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 440,
+        "line_end": 442,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:211-216",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 211,
+        "line_end": 216,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:221-234",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 221,
+        "line_end": 234,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:210-216",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 210,
+        "line_end": 216,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:166-173",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 166,
+        "line_end": 173,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "INTCALC.jcl:20-41",
+        "style": "full",
+        "resolved_paths": [
+          "app/jcl/INTCALC.jcl"
+        ],
+        "line_start": 20,
+        "line_end": 41,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/jcl/INTCALC.jcl": 44
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:159-243",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 159,
+        "line_end": 243,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:179-196",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 179,
+        "line_end": 196,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:274-322",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 274,
+        "line_end": 322,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:170-206",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 170,
+        "line_end": 206,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:274-374",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 274,
+        "line_end": 374,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CVTRA07Y.cpy:4-66",
+        "style": "full",
+        "resolved_paths": [
+          "app/cpy/CVTRA07Y.cpy"
+        ],
+        "line_start": 4,
+        "line_end": 66,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA07Y.cpy": 73
+        }
+      },
+      {
+        "anchor": "TRANREPT.jcl:19-80",
+        "style": "full",
+        "resolved_paths": [
+          "app/jcl/TRANREPT.jcl"
+        ],
+        "line_start": 19,
+        "line_end": 80,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/jcl/TRANREPT.jcl": 84
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:202-215",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 202,
+        "line_end": 215,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CVTRA06Y.cpy:5-17",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cpy/CVTRA06Y.cpy"
+        ],
+        "line_start": 5,
+        "line_end": 17,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cpy/CVTRA06Y.cpy": 21
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:545-560",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 545,
+        "line_end": 560,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:170-177",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 170,
+        "line_end": 177,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:707-711",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 707,
+        "line_end": 711,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:628-632",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 628,
+        "line_end": 632,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:626-630",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 626,
+        "line_end": 630,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:370-421",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 370,
+        "line_end": 421,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:545-559",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 545,
+        "line_end": 559,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:210-217",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 210,
+        "line_end": 217,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBACT04C.cbl:518-520",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBACT04C.cbl"
+        ],
+        "line_start": 518,
+        "line_end": 520,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBACT04C.cbl": 652
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:170-204",
+        "style": "full",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 170,
+        "line_end": 204,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      },
+      {
+        "anchor": "CBTRN02C.cbl:574-577",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN02C.cbl"
+        ],
+        "line_start": 574,
+        "line_end": 577,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN02C.cbl": 731
+        }
+      },
+      {
+        "anchor": "CBTRN03C.cbl:486-510",
+        "style": "shorthand",
+        "resolved_paths": [
+          "app/cbl/CBTRN03C.cbl"
+        ],
+        "line_start": 486,
+        "line_end": 510,
+        "bounds_ok": true,
+        "line_counts": {
+          "app/cbl/CBTRN03C.cbl": 649
+        }
+      }
+    ]
+  },
+  "upstream_traceability_limitations": [
+    "Stage6 text cites Stage5/Stage4 and inherited E/R anchors; it is not a replacement source package.",
+    "Some anchors are shorthand basename references in upstream reviews; bounds resolve only through the pinned corpus source map and are not standalone provenance.",
+    "No runtime execution was performed, so durable effects, EOF buffer state, external CEE3ABD behavior, and actual report completeness remain unresolved.",
+    "No standalone OpenAPI YAML/JSON artifact was emitted or validated; representability claims remain documentary."
+  ],
+  "recommendation": "not_ready_for_stage7_or_implementation_without_human_decisions_on_G-21_to_G-24; no automatic approval",
+  "hashes_after": {
+    "specs/api-contract-carddemo/requirements.md": {
+      "exists": true,
+      "sha256": "144750e350057971ee854856b8aa48ed7039904b7ab0a5bbc0bf8af96d8ded74",
+      "bytes": 239
+    },
+    "specs/api-contract-carddemo/spec.json": {
+      "exists": true,
+      "sha256": "d1da55b75c48eb0e02dcddfa0785bbe1962268fc257b5e4a2e0d9d77e1410dcf",
+      "bytes": 1622
+    },
+    "specs/api-contract-carddemo/init-metadata.json": {
+      "exists": true,
+      "sha256": "8271c068d0aedc14d815c955d03e4ca3272241d205a0da4b4f264da4cede9844",
+      "bytes": 343
+    },
+    "specs/api-contract-carddemo/input-pins.json": {
+      "exists": true,
+      "sha256": "c56d1b9e68db3f0e724702672c702c476564669a9dd706f9caccb3882ba4de12",
+      "bytes": 10809
+    },
+    "prepared/api-contract-carddemo/execution/parsed.json": {
+      "exists": true,
+      "sha256": "72597c2ad3d0034ddf3307692b1c468314f3159f3756d061ed232dfee97309de",
+      "bytes": 46538
+    },
+    "prepared/api-contract-carddemo/execution/metadata.json": {
+      "exists": true,
+      "sha256": "c50fafe749e6dda1973e890ed014a050b3e718b238b76677a124aa5998f3aeb7",
+      "bytes": 1378
+    },
+    "prepared/api-contract-carddemo/execution/scope-original.md": {
+      "exists": true,
+      "sha256": "753a60a5ee7b1fb6d94f6ab982afe415bc01adca040bb3d89e24ffc60342bba7",
+      "bytes": 44132
+    },
+    "stage6-generation-authorization.json": {
+      "exists": true,
+      "sha256": "a6f9017a08ab8c4a0ea133908525944f3b2724c7286d0244a296289779b88298",
+      "bytes": 509
+    },
+    "STAGE6-RESULT.md": {
+      "exists": true,
+      "sha256": "be395b9f876bdcdf95eadd68babf166d34172b1575e7f70a75852d6034269daf",
+      "bytes": 5140
+    },
+    "STAGE6-COUNTEREXAMPLE-REVIEW.md": {
+      "exists": true,
+      "sha256": "cd084eb31d91de5a3f3b580789c4da9a93a412bdca859eca85ed7c048fcbe1b4",
+      "bytes": 7698
+    }
+  },
+  "reports": {
+    "result": {
+      "path": "STAGE6-RESULT.md",
+      "sha256": "be395b9f876bdcdf95eadd68babf166d34172b1575e7f70a75852d6034269daf"
+    },
+    "counterexample_review": {
+      "path": "STAGE6-COUNTEREXAMPLE-REVIEW.md",
+      "sha256": "cd084eb31d91de5a3f3b580789c4da9a93a412bdca859eca85ed7c048fcbe1b4"
+    }
+  }
+}

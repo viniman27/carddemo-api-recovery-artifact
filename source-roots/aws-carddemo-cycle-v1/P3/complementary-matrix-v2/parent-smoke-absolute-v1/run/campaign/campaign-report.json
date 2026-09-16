@@ -1,0 +1,815 @@
+{
+  "bodyCapturePatch": {
+    "patched": true,
+    "patchedFunction": "campaign_harness._send_once",
+    "reason": "preserve raw response bytes for official structural measurement without editing harness-v3 file"
+  },
+  "createdUtc": "2026-09-16T12:13:43Z",
+  "experimentalViolations": [],
+  "harnessImport": {
+    "bytes": 26983,
+    "module": "campaign_harness",
+    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+    "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+  },
+  "kind": "aws-carddemo-local-readiness-runner-v3-report",
+  "localReadinessExecution": true,
+  "measurementWarnings": [],
+  "officialExecutionStarted": false,
+  "policies": {
+    "execution": "serial, one attempt per case, no retries, redirects disabled by http.client harness path",
+    "lifecycle": "Per-application target start/stop for each case; stop must prove quiet or campaign stops",
+    "measurement": "raw response bytes, request body bytes, application lifecycle, audit path, same-invocation coverage and gcov denominator links are recorded",
+    "resources": "fresh physical resources every case through P2b fixture registry; DD bindings reset in the isolated invocation environment",
+    "resume": "--resume loads prior receipts and constructs a subset containing only never-attempted case IDs; failed attempts are not replayed",
+    "stopPolicy": "transport/deadline/startup/lifecycle quietness stops; experimental expectation/structural violations are recorded and execution continues; measurement inadmissibility is recorded without fake zero"
+  },
+  "preparedTarget": {
+    "cycle": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1",
+    "fixturePackageCopy": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/package",
+    "isolatedContractSourceCopy": {
+      "contracts": [
+        {
+          "bytes": 30136,
+          "contractId": "E1-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt",
+          "sha256": "776b832ede1a7c5114b04cf335846c6e66b8fa2b23f040084dcffdacedd286a0",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-1/response-original.txt"
+        },
+        {
+          "bytes": 31102,
+          "contractId": "E1-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt",
+          "sha256": "33b071ffde1583bda61e96e4ae00ab0aa7299bbba571ea01e5fdf79c7f3b7014",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-2/response-original.txt"
+        },
+        {
+          "bytes": 30113,
+          "contractId": "E1-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt",
+          "sha256": "415f9cceb3bc96dff489552c19a916e63ccf14f22741a4b320c970104032faa4",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E1-3/response-original.txt"
+        },
+        {
+          "bytes": 28899,
+          "contractId": "E2-1",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt",
+          "sha256": "01a904a7c416b0788622dc20ced84fcf3cc8d52065088be97333314037494586",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-1/response-original.txt"
+        },
+        {
+          "bytes": 29973,
+          "contractId": "E2-2",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+          "sha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt"
+        },
+        {
+          "bytes": 25822,
+          "contractId": "E2-3",
+          "isolated": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt",
+          "sha256": "7e91d7c81738a95d97b7a2ece08fd13fb316348e03109885f4ac835ae68ea0a3",
+          "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/collection-01/E2-3/response-original.txt"
+        }
+      ],
+      "count": 6,
+      "reason": "P2c facades load all E1/E2 response-original contracts by id inside isolated cycle"
+    },
+    "isolatedCoveragePatch": {
+      "originalSha256": "dfbdf7e6575c34731d08ecb3220c981e9f0b9cc55e835f7d0dcf46ec917b4853",
+      "patchScope": "isolated P2b copy only; mechanics: coverage build, per-invocation GCOV_PREFIX, observable exceptions; no business source/contract/data repair",
+      "patchedSha256": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+      "v2CommandLogPreservation": {
+        "alreadyPreservedByCoveragePatch": true,
+        "mechanical": true,
+        "patchedSha256AfterV2": "d47a74b832eac31e8ae428ec47c9c680367663e60e99b84c98cc7e8e29560604",
+        "scope": "isolated P2b copy only"
+      }
+    },
+    "isolatedP2bBuild": {
+      "argv": [
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+        "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/p2b_binding.py",
+        "build"
+      ],
+      "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b",
+      "returncode": 0,
+      "stderrTail": "",
+      "stdoutTail": "\n      \"businessInstrumented\": false\n    }\n  ],\n  \"gcovPrefixPolicy\": \"per-invocation GCOV_PREFIX under each P2b run directory; no shared .gcda accumulation\",\n  \"immutableBuildPolicy\": \"single immutable coverage build reused for every server/application invocation; gcno not regenerated after first successful build\",\n  \"immutableArtifacts\": [\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C\",\n      \"sha256\": \"bf85daadbb0e3e250d5f458365cd2cf366b659aa75ab7fa2d9129f20ff9614c8\",\n      \"bytes\": 116872\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c\",\n      \"sha256\": \"72dd454e572546283a2df97ed8efe447035cee2236d4e73288135215a8d2b77e\",\n      \"bytes\": 155227\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno\",\n      \"sha256\": \"0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682\",\n      \"bytes\": 203444\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib\",\n      \"sha256\": \"7524c1fab3305c25ba56d9e0b1e8b5891e661edb9b531e33ce6e964b11248ced\",\n      \"bytes\": 100288\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.c\",\n      \"sha256\": \"85a300659858f94a1d3e2ed04c072b3f100e6179afc7a8e83ede516681d38d09\",\n      \"bytes\": 137322\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBACT04C.dylib-CBACT04C.gcno\",\n      \"sha256\": \"7c85d2696f71539baba48faf3655ca334202187c6891a38beaf3b119fa6ba066\",\n      \"bytes\": 186340\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C\",\n      \"sha256\": \"03500d0b2863cfd3b78a35cd02c008169eed7b376f8062c8e1191e6401b6a816\",\n      \"bytes\": 116840\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.c\",\n      \"sha256\": \"4ce3eb5e28e8ecb15c9fb5c509dafa0cbc0fb76b58f15b9a5c8e574b3926d8c8\",\n      \"bytes\": 152695\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN03C.gcno\",\n      \"sha256\": \"9455bcef768ad9ff6b73f2547d67c354397048188c541dad210d1b50f37304a8\",\n      \"bytes\": 206068\n    },\n    {\n      \"path\": \"<WORKSPACE>/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/P2B_INTEREST_DRIVER\",\n      \"sha256\": \"385f625f2306e3830895e734249e4348195f0e1e7d559e39e491861e44555541\",\n      \"bytes\": 52064\n    }\n  ]\n}\n"
+    },
+    "isolatedP2cFewshotCoveragePatch": {
+      "mechanicalAdaptations": [
+        "command_log_unredirected_to_isolated_p2b",
+        "posting_gcov_prefix",
+        "interest_gcov_prefix",
+        "reporting_gcov_prefix",
+        "audit_measurement_provenance"
+      ],
+      "originalSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+      "patchScope": "isolated P2c few-shot copy only",
+      "patchedSha256": "ddd9fc32cf39e7e6be55c915a7250f576d1f57f6b57a30e6be6cc0b2a008e2a8",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "provenance": "same-invocation coverage measurement plumbing only; no original COBOL/API/contracts/public response behavior changes"
+    },
+    "matrixV2FewshotPatch": {
+      "patched": true,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/p2c_facade.py",
+      "reason": "isolated copy only; allow per-case physical fixture registry without public request fields",
+      "sha256": "52284ec9a8b0c50f2af709a1b01c54ad8fbb5cae09d99b1025cae46b5440a074"
+    },
+    "prep": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-preparation",
+    "python": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registry_sha256": "0909de18c2b88976b0463c29783d7a2fd808beaa2769e830f7d7e4ec8ad85637"
+  },
+  "prerequisites": {
+    "campaignConfig": {
+      "bytes": 44582,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-configuration-v2/campaign-config-v2.json",
+      "sha256": "ef8788e2b483506e838d334aa673972780929b25a23820c22c34ae38a79a1bdb"
+    },
+    "contracts": {
+      "count": 7,
+      "operationCount": 21
+    },
+    "coverage": "uses unified-preflight-v3 coverage helpers; gcov errors/stamp mismatches/missing denominator are inadmissible, never fake zero",
+    "frozenSuites": "parent-supplied absolute suite paths required; this runner does not generate or invent T1/T2/T3/T4",
+    "harnessV3": {
+      "bytes": 26983,
+      "module": "campaign_harness",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/campaign-harness-v3/src/campaign_harness.py",
+      "sha256": "0e5a9606b7d1ec10c2c07929a2fd18b72748e90ebdc4987a937bdc8fed5dd36e"
+    },
+    "officialReadiness": "execute requires an explicit readiness JSON with officialReady=true and campaignAuthorized=true",
+    "oraclePolicy": "no evaluation-quarantine/model expected-output files are read by this runner during plan/execute",
+    "python": {
+      "exists": true,
+      "reason": "jsonschema/PyYAML qualified environment; do not use system python3 for campaign wrapper",
+      "required": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/.venv/bin/python"
+    }
+  },
+  "scope": "bounded local readiness qualification only; not an official campaign run and not a T4 result",
+  "stopPolicy": {
+    "reason": null,
+    "stopped": false
+  },
+  "suiteReports": [
+    {
+      "applications_inline": [
+        {
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 46603,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "8b605c8d711d2487606045401b67ef07c541818a6848046699b7f5d041aa8991",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+        },
+        {
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+          "failure_class": null,
+          "lifecycle": {
+            "pid": 46625,
+            "quiet_proven": true,
+            "quiet_tree_proven": true,
+            "reaped": true,
+            "spawn_method": "posix_spawn_setsidshell_exec",
+            "started": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+          },
+          "pins_after": {
+            "server.port": {
+              "sha256": "58761bb14c25e5a08b5cc08a88507ff5ff7f0d4f63d80b40ff9bf3709ee79c7a",
+              "size": 5
+            },
+            "server.stderr": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "server.stdout": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "pins_before": {},
+          "target_quiet": true,
+          "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+        }
+      ],
+      "attempted_case_count": 2,
+      "caseReplayRoot": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases",
+      "checks": [
+        {
+          "application": {
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 46603,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "8b605c8d711d2487606045401b67ef07c541818a6848046699b7f5d041aa8991",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay/applications/0001-94ec85bd19552403"
+          },
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+          "contractId": "E3-SDD-stage6r3",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "posting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "commandLog": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/command-log.jsonl",
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov",
+                  "GCOV_PREFIX_STRIP": "17",
+                  "P2B_INVOCATION": "posting-dy9jkh3f",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/write-observations.log"
+                },
+                "exit_code": 0
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN02C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 238,
+                  "taken_at_least_once": 126,
+                  "total": 288
+                },
+                "bytes": 209295,
+                "calls": {
+                  "executed": 91,
+                  "total": 154
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcno",
+                "lines": {
+                  "executed": 638,
+                  "total": 1120
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C.c.gcov",
+                "runs": 1,
+                "sha256": "6a83bc095e42157b9295af8a935c46ebb939518cb6c023165e48209a11414991",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116872,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                  "rel": "CBTRN02C",
+                  "sha256": "bf85daadbb0e3e250d5f458365cd2cf366b659aa75ab7fa2d9129f20ff9614c8"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3364,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                  "rel": "CBTRN02C-CBTRN02C.gcda",
+                  "sha256": "d30e1909d03dab315eb4b53bc7e30c8744ff79b664f642871ac5489b53e2fece"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 203444,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                  "rel": "CBTRN02C-CBTRN02C.gcno",
+                  "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116872,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                    "rel": "CBTRN02C",
+                    "sha256": "bf85daadbb0e3e250d5f458365cd2cf366b659aa75ab7fa2d9129f20ff9614c8"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3364,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                    "rel": "CBTRN02C-CBTRN02C.gcda",
+                    "sha256": "d30e1909d03dab315eb4b53bc7e30c8744ff79b664f642871ac5489b53e2fece"
+                  },
+                  "gcno": {
+                    "bytes": 203444,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                    "rel": "CBTRN02C-CBTRN02C.gcno",
+                    "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682"
+                  },
+                  "program": "CBTRN02C"
+                }
+              ],
+              "program": "CBTRN02C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "d30e1909d03dab315eb4b53bc7e30c8744ff79b664f642871ac5489b53e2fece",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov",
+              "duration_s": 0.019,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "d30e1909d03dab315eb4b53bc7e30c8744ff79b664f642871ac5489b53e2fece"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 209295,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C.c.gcov",
+                  "sha256": "6a83bc095e42157b9295af8a935c46ebb939518cb6c023165e48209a11414991"
+                },
+                {
+                  "bytes": 8871,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C.c.h.gcov",
+                  "sha256": "cf0b129b7020c611a903be4473918b86fcadc703aa614563d7ec47cc5d6c746e"
+                },
+                {
+                  "bytes": 11238,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C.c.l.h.gcov",
+                  "sha256": "32d385e8f556732087d5abee139605d3ceab67c4be20fefa8d39a4d1c3c33a90"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 203444,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov/CBTRN02C-CBTRN02C.gcno",
+                "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:56.96% of 1120\nBranches executed:82.64% of 288\nTaken at least once:43.75% of 288\nCalls executed:59.09% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:89.47% of 38\nTaken at least once:44.74% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:57.50% of 1134\n",
+              "summaryParsed": {
+                "branchesPercent": 89.47,
+                "branchesTotal": 38,
+                "callsPercent": 59.09,
+                "callsTotal": 154,
+                "linesPercent": 57.5,
+                "linesTotal": 1134,
+                "rawSummaryLines": [
+                  "Lines executed:56.96% of 1120",
+                  "Branches executed:82.64% of 288",
+                  "Taken at least once:43.75% of 288",
+                  "Calls executed:59.09% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:89.47% of 38",
+                  "Taken at least once:44.74% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:57.50% of 1134"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 0,
+            "requestInvocation": "posting-dy9jkh3f",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dy9jkh3f",
+            "track": "posting"
+          },
+          "operationId": "posting",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500,
+                503
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/posting",
+            "provenance": [
+              "complementary-matrix-v2:E3-SDD-stage6r3:posting:valid-new-tcatbal"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "37c62a75f6fa10b5b83532023b34f8a2ee1617f737d3fb1186414ad7f886ec5c",
+            "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgIm91dHB1dHMiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAiaXRlbXMiOiBbXX0sICJyZWplY3Rpb25zIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW119LCAicHJvZ3Jlc3MiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAidmFsdWUiOiB7InByb2Nlc3NlZFJlY29yZENvdW50IjogMSwgInByZWxpbWluYXJ5UmVqZWN0Q291bnQiOiAwfX19",
+            "response_bytes": 300,
+            "response_sha256": "40254a69ab25e10340b4c1f7885f871027cca32416dd67059aa2cbc8e66e4275",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "posting"
+        },
+        {
+          "application": {
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+            "failure_class": null,
+            "lifecycle": {
+              "pid": 46625,
+              "quiet_proven": true,
+              "quiet_tree_proven": true,
+              "reaped": true,
+              "spawn_method": "posix_spawn_setsidshell_exec",
+              "started": true,
+              "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+            },
+            "pins_after": {
+              "server.port": {
+                "sha256": "58761bb14c25e5a08b5cc08a88507ff5ff7f0d4f63d80b40ff9bf3709ee79c7a",
+                "size": 5
+              },
+              "server.stderr": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              },
+              "server.stdout": {
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "size": 0
+              }
+            },
+            "pins_before": {},
+            "target_quiet": true,
+            "workdir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay/applications/0001-fb5a08304ce3b21f"
+          },
+          "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+          "contractId": "E3-SDD-stage6r3",
+          "measurement": {
+            "admissibility": "admissible_preparatory",
+            "auditSelection": {
+              "auditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/audit.json",
+              "source": "current_replay_delta_or_case_workdir",
+              "track": "posting"
+            },
+            "businessCommandEnvEvidence": [
+              {
+                "cmd": [
+                  "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C"
+                ],
+                "commandLog": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/command-log.jsonl",
+                "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7",
+                "env_subset": {
+                  "COB_LIBRARY_PATH": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+                  "DD_ACCTFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/ACCTFILE",
+                  "DD_DALYREJS": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/DALYREJS",
+                  "DD_DALYTRAN": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/DALYTRAN",
+                  "DD_TCATBALF": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/TCATBALF",
+                  "DD_TRANFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/TRANFILE",
+                  "DD_XREFFILE": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/XREFFILE",
+                  "GCOV_PREFIX": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov",
+                  "GCOV_PREFIX_STRIP": "17",
+                  "P2B_INVOCATION": "posting-zz9gzui7",
+                  "P2B_WRITE_LOG": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/write-observations.log"
+                },
+                "exit_code": 4
+              }
+            ],
+            "businessGcdaPresent": true,
+            "businessProgram": "CBTRN02C",
+            "correctedParser": {
+              "mainGeneratedC": {
+                "branches": {
+                  "executed": 188,
+                  "taken_at_least_once": 101,
+                  "total": 288
+                },
+                "bytes": 209480,
+                "calls": {
+                  "executed": 45,
+                  "total": 154
+                },
+                "classification": "main_generated_c",
+                "data": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                "graph": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcno",
+                "lines": {
+                  "executed": 508,
+                  "total": 1120
+                },
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C.c.gcov",
+                "runs": 1,
+                "sha256": "05844080216570b6df46b6942717e4a54f94d1cdd89ab7bed30229725561de40",
+                "source": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c",
+                "sourceBasename": "CBTRN02C.c"
+              },
+              "selectionRule": "program.c only; no header/support fallback",
+              "unitCount": 3
+            },
+            "coverageArtifactLinks": {
+              "binaries": [
+                {
+                  "bytes": 116872,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                  "rel": "CBTRN02C",
+                  "sha256": "bf85daadbb0e3e250d5f458365cd2cf366b659aa75ab7fa2d9129f20ff9614c8"
+                }
+              ],
+              "buildDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build",
+              "complete": true,
+              "gcda": [
+                {
+                  "bytes": 3364,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                  "rel": "CBTRN02C-CBTRN02C.gcda",
+                  "sha256": "e2e309586dc0a9f958bc4bcdb6ea4ea9f8fc28d19f7a316a27b8f2f1d117019e"
+                }
+              ],
+              "gcno": [
+                {
+                  "bytes": 203444,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                  "rel": "CBTRN02C-CBTRN02C.gcno",
+                  "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682"
+                }
+              ],
+              "pairs": [
+                {
+                  "binary": {
+                    "bytes": 116872,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C",
+                    "rel": "CBTRN02C",
+                    "sha256": "bf85daadbb0e3e250d5f458365cd2cf366b659aa75ab7fa2d9129f20ff9614c8"
+                  },
+                  "complete": true,
+                  "gcda": {
+                    "bytes": 3364,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                    "rel": "CBTRN02C-CBTRN02C.gcda",
+                    "sha256": "e2e309586dc0a9f958bc4bcdb6ea4ea9f8fc28d19f7a316a27b8f2f1d117019e"
+                  },
+                  "gcno": {
+                    "bytes": 203444,
+                    "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno",
+                    "rel": "CBTRN02C-CBTRN02C.gcno",
+                    "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682"
+                  },
+                  "program": "CBTRN02C"
+                }
+              ],
+              "program": "CBTRN02C",
+              "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7"
+            },
+            "gcdaFiles": [
+              {
+                "business": true,
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                "rel": "gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "e2e309586dc0a9f958bc4bcdb6ea4ea9f8fc28d19f7a316a27b8f2f1d117019e",
+                "supportExcluded": false
+              }
+            ],
+            "gcov11": {
+              "cmd": [
+                "gcov-11",
+                "-b",
+                "-c",
+                "-o",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c"
+              ],
+              "cwd": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov",
+              "duration_s": 0.011,
+              "env_override": {},
+              "exit_code": 0,
+              "gcdaObjectFile": {
+                "bytes": 3364,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcda",
+                "sha256": "e2e309586dc0a9f958bc4bcdb6ea4ea9f8fc28d19f7a316a27b8f2f1d117019e"
+              },
+              "gcovFiles": [
+                {
+                  "bytes": 209480,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C.c.gcov",
+                  "sha256": "05844080216570b6df46b6942717e4a54f94d1cdd89ab7bed30229725561de40"
+                },
+                {
+                  "bytes": 8871,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C.c.h.gcov",
+                  "sha256": "11a387e64631ed998bd604a55a7cd1644a4ef4cc97a3ba2cdd72285e9e8ceec5"
+                },
+                {
+                  "bytes": 11238,
+                  "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C.c.l.h.gcov",
+                  "sha256": "bd3a4c9d30346a940cca5cd32874fad04efce5ad7fed1d417e77be8775192390"
+                }
+              ],
+              "pinnedNotesFile": {
+                "bytes": 203444,
+                "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov/CBTRN02C-CBTRN02C.gcno",
+                "sha256": "0291e56f9a31a5e49f3737ee1fa6fc3a1037c8a305b973df29371f3957b78682",
+                "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C-CBTRN02C.gcno"
+              },
+              "stderr": "",
+              "stdout": "File '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c'\nLines executed:45.36% of 1120\nBranches executed:65.28% of 288\nTaken at least once:35.07% of 288\nCalls executed:29.22% of 154\nCreating 'CBTRN02C.c.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.l.h'\nLines executed:100.00% of 2\nBranches executed:100.00% of 2\nTaken at least once:100.00% of 2\nNo calls\nCreating 'CBTRN02C.c.l.h.gcov'\n\nFile '<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/build/CBTRN02C.c.h'\nLines executed:100.00% of 12\nBranches executed:78.95% of 38\nTaken at least once:39.47% of 38\nNo calls\nCreating 'CBTRN02C.c.h.gcov'\n\nLines executed:46.03% of 1134\n",
+              "summaryParsed": {
+                "branchesPercent": 78.95,
+                "branchesTotal": 38,
+                "callsPercent": 29.22,
+                "callsTotal": 154,
+                "linesPercent": 46.03,
+                "linesTotal": 1134,
+                "rawSummaryLines": [
+                  "Lines executed:45.36% of 1120",
+                  "Branches executed:65.28% of 288",
+                  "Taken at least once:35.07% of 288",
+                  "Calls executed:29.22% of 154",
+                  "Creating 'CBTRN02C.c.gcov'",
+                  "Lines executed:100.00% of 2",
+                  "Branches executed:100.00% of 2",
+                  "Taken at least once:100.00% of 2",
+                  "Creating 'CBTRN02C.c.l.h.gcov'",
+                  "Lines executed:100.00% of 12",
+                  "Branches executed:78.95% of 38",
+                  "Taken at least once:39.47% of 38",
+                  "Creating 'CBTRN02C.c.h.gcov'",
+                  "Lines executed:46.03% of 1134"
+                ]
+              }
+            },
+            "gcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7/gcov",
+            "gcovPrefixObservedInCommandLog": true,
+            "gcovValidation": {
+              "classification": "valid_nonzero_coverage",
+              "reasons": [],
+              "valid": true
+            },
+            "inadmissibilityReasons": [],
+            "measurementAdmissibility": "admissible_preparatory",
+            "normalProcessExitObserved": true,
+            "programExit": 4,
+            "requestInvocation": "posting-zz9gzui7",
+            "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-zz9gzui7",
+            "track": "posting"
+          },
+          "operationId": "posting",
+          "receipt": {
+            "body_kind": "json",
+            "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+            "content_type": "application/json",
+            "expectation_detail": {
+              "allowed_status": [
+                200,
+                400,
+                500,
+                503
+              ],
+              "status": 200
+            },
+            "expectation_result": "pass",
+            "failure_class": null,
+            "method": "POST",
+            "path": "/posting",
+            "provenance": [
+              "complementary-matrix-v2:E3-SDD-stage6r3:posting:reject-card-missing"
+            ],
+            "request_headers": [
+              [
+                "content-type",
+                "application/json"
+              ]
+            ],
+            "request_identity": "98e043913a30bec54c288ad417fc6a6f02ba715a8641874b02b3a97ccb39c2a5",
+            "response_body_b64": "eyJ0cmFjayI6ICJwb3N0aW5nIiwgImNvbXBsZXRlbmVzcyI6ICJub3RfYXR0ZXN0ZWQiLCAiZHVyYWJpbGl0eSI6ICJ1bmtub3duIiwgIm91dHB1dHMiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAiaXRlbXMiOiBbXX0sICJyZWplY3Rpb25zIjogeyJhdmFpbGFiaWxpdHkiOiAiYXZhaWxhYmxlIiwgIml0ZW1zIjogW119LCAicHJvZ3Jlc3MiOiB7ImF2YWlsYWJpbGl0eSI6ICJhdmFpbGFibGUiLCAidmFsdWUiOiB7InByb2Nlc3NlZFJlY29yZENvdW50IjogMSwgInByZWxpbWluYXJ5UmVqZWN0Q291bnQiOiAxfX19",
+            "response_bytes": 300,
+            "response_sha256": "c38cc45a2be369a442f24f9d1b86c56deeb3becb8373a9ae552d2a3d212833cf",
+            "status": 200
+          },
+          "replayDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/run/campaign/P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE/cases/ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing/replay",
+          "structuralCheck": {
+            "classification": "schema_valid",
+            "detail": {
+              "status": 200
+            },
+            "ok": true
+          },
+          "track": "posting"
+        }
+      ],
+      "loaded_case_count": 2,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-smoke-absolute-v1/smoke-suite.freeze.json",
+      "suite_id": "P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE",
+      "totals": {
+        "attempted": 2,
+        "completed": 2,
+        "deadline_failures": 0,
+        "expectation_inconclusive": 0,
+        "expectation_passes": 2,
+        "expectation_violations": 0,
+        "http_failures": 0,
+        "not_executed": 0,
+        "planned": 4,
+        "transport_failures": 0
+      }
+    }
+  ],
+  "totals": {
+    "attempted": 2,
+    "completed": 2,
+    "measurement_admissible": 2,
+    "planned": 2,
+    "structural_ok": 2
+  }
+}

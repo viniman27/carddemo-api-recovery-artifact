@@ -1,0 +1,434 @@
+{
+  "cellJoinSummary": {
+    "blockedJoinedCells": 63,
+    "eligibleJoinedCells": 27,
+    "inconclusiveTransitionsWithoutCells": 0
+  },
+  "contractId": "E1-1",
+  "inputPins": {
+    "fixtures": {
+      "bytes": 16432,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/fixture-materialization-v2/package/manifest.json",
+      "sha256": "843965578898b540a9d2b42b599dcdc9c24e4a41ec0dfcf9128f333fe399d37a"
+    },
+    "matrix": {
+      "bytes": 1048080,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/applicability-mapping-v3/applicability_matrix.json",
+      "sha256": "70099753738d2a8942f60193d7b7877fcbd7c3d521b46bf897868fa3e43ef3fc"
+    },
+    "model": {
+      "bytes": 112525,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/reference-executable-v4/model.json",
+      "sha256": "26b3a23d2e682726d7b9e7ea309149ada93e72133a13c5c0ab2b743b7aab48f1"
+    },
+    "recipes": {
+      "bytes": 40556,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/recipes.json",
+      "sha256": "efa60e01a1eb0e6f97ce6a4bce8a56c790e487bd20b45a85a87f7ff13c81498d"
+    },
+    "schema": {
+      "bytes": 51697,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P2a/openapi-carddemo-stage6r3.yaml",
+      "sha256": "9ffb545df736591c56db381eb37bd0612136b6788714f5de758cc056d655c444"
+    }
+  },
+  "kind": "t3-campaign-adapter-v1-static-real-model-compatibility",
+  "modelValidation": {
+    "counts": {
+      "capabilities": 3,
+      "obligations": 25,
+      "states": 25,
+      "transitions": 40
+    },
+    "errors": [],
+    "status": "draft_needs_review"
+  },
+  "officialCampaign": false,
+  "officialSuiteGenerated": false,
+  "selectionPlan": {
+    "algorithm": "reference_engine_bfs_sorted_transitions_with_witnessed_guards",
+    "budgets": {
+      "maxDepth": 6,
+      "maxPathsPerCapability": 12
+    },
+    "capabilities": [
+      "CBTRN02C_POSTTRAN",
+      "CBACT04C_INTCALC",
+      "CBTRN03C_TRANREPT"
+    ],
+    "omissions": [
+      {
+        "capability": "CBTRN02C_POSTTRAN",
+        "path": [
+          "POSTTRAN-T001",
+          "POSTTRAN-T003",
+          "POSTTRAN-T008",
+          "POSTTRAN-T012",
+          "POSTTRAN-T013"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "POSTTRAN-T013"
+      },
+      {
+        "capability": "CBTRN02C_POSTTRAN",
+        "path": [
+          "POSTTRAN-T001",
+          "POSTTRAN-T003",
+          "POSTTRAN-T008",
+          "POSTTRAN-T012",
+          "POSTTRAN-T014"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "POSTTRAN-T014"
+      },
+      {
+        "capability": "CBACT04C_INTCALC",
+        "path": [
+          "INTCALC-T001",
+          "INTCALC-T003",
+          "INTCALC-T007",
+          "INTCALC-T009",
+          "INTCALC-T010"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "INTCALC-T010"
+      },
+      {
+        "capability": "CBACT04C_INTCALC",
+        "path": [
+          "INTCALC-T001",
+          "INTCALC-T003",
+          "INTCALC-T007",
+          "INTCALC-T009",
+          "INTCALC-T011"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "INTCALC-T011"
+      },
+      {
+        "capability": "CBACT04C_INTCALC",
+        "path": [
+          "INTCALC-T001",
+          "INTCALC-T003",
+          "INTCALC-T009Z",
+          "INTCALC-T003",
+          "INTCALC-T007"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "INTCALC-T007"
+      },
+      {
+        "capability": "CBACT04C_INTCALC",
+        "path": [
+          "INTCALC-T001",
+          "INTCALC-T003",
+          "INTCALC-T009Z",
+          "INTCALC-T003",
+          "INTCALC-T008"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "INTCALC-T008"
+      },
+      {
+        "capability": "CBACT04C_INTCALC",
+        "path": [
+          "INTCALC-T001",
+          "INTCALC-T003",
+          "INTCALC-T009Z",
+          "INTCALC-T003",
+          "INTCALC-T009Z"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "INTCALC-T009Z"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T010"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T010"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T011"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T011"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T012"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T012"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T013"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T013"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T010",
+          "TRANREPT-T016"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T016"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T003"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T003"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T009"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T009"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T010"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T010"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T011"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T011"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T012"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T012"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T003",
+          "TRANREPT-T014",
+          "TRANREPT-T013"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T013"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T003",
+          "TRANREPT-T014"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T014"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T003",
+          "TRANREPT-T015"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T015"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T003"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T003"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T009"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T009"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T010"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T010"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T011"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T011"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T012"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T012"
+      },
+      {
+        "capability": "CBTRN03C_TRANREPT",
+        "path": [
+          "TRANREPT-T001",
+          "TRANREPT-T009",
+          "TRANREPT-T009",
+          "TRANREPT-T013"
+        ],
+        "reason": "max_paths_per_capability",
+        "transitionId": "TRANREPT-T013"
+      }
+    ],
+    "transitionCount": 62,
+    "traversalSummaries": {
+      "CBACT04C_INTCALC": {
+        "budget": {
+          "maxDepth": 6,
+          "maxPaths": 12
+        },
+        "completed": 6,
+        "frontier": 0,
+        "loopVisits": {
+          "I_OPENED": 2
+        },
+        "omittedCount": 5,
+        "unknown": 0
+      },
+      "CBTRN02C_POSTTRAN": {
+        "budget": {
+          "maxDepth": 6,
+          "maxPaths": 12
+        },
+        "completed": 8,
+        "frontier": 0,
+        "loopVisits": {
+          "P_OPENED": 1
+        },
+        "omittedCount": 2,
+        "unknown": 1
+      },
+      "CBTRN03C_TRANREPT": {
+        "budget": {
+          "maxDepth": 6,
+          "maxPaths": 12
+        },
+        "completed": 5,
+        "frontier": 0,
+        "loopVisits": {
+          "R_LOOP": 3
+        },
+        "omittedCount": 14,
+        "unknown": 3
+      }
+    }
+  },
+  "status": "candidate_static_only",
+  "traversalSummaries": {
+    "CBACT04C_INTCALC": {
+      "budget": {
+        "maxDepth": 6,
+        "maxPaths": 12
+      },
+      "completed": 6,
+      "frontier": 0,
+      "loopVisits": {
+        "I_OPENED": 2
+      },
+      "omittedCount": 5,
+      "unknown": 0
+    },
+    "CBTRN02C_POSTTRAN": {
+      "budget": {
+        "maxDepth": 6,
+        "maxPaths": 12
+      },
+      "completed": 8,
+      "frontier": 0,
+      "loopVisits": {
+        "P_OPENED": 1
+      },
+      "omittedCount": 2,
+      "unknown": 1
+    },
+    "CBTRN03C_TRANREPT": {
+      "budget": {
+        "maxDepth": 6,
+        "maxPaths": 12
+      },
+      "completed": 5,
+      "frontier": 0,
+      "loopVisits": {
+        "R_LOOP": 3
+      },
+      "omittedCount": 14,
+      "unknown": 3
+    }
+  }
+}

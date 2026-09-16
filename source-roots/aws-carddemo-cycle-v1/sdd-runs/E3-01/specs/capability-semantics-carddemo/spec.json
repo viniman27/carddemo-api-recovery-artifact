@@ -1,0 +1,80 @@
+{
+  "feature_name": "capability-semantics-carddemo",
+  "artifact_type": "capability-semantics",
+  "pipeline_stage": 4,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/capability-semantics-carddemo/requirements.md",
+  "upstream_specs": [
+    "specs/legacy-evidence-carddemo-r2/spec.json"
+  ],
+  "created_at": "2026-09-12T08:37:45-03:00",
+  "updated_at": "2026-09-12T16:28:44.265098+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-12",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 4,
+        "artifact_type": "capability-semantics"
+      },
+      "artifact": {
+        "path": "specs/capability-semantics-carddemo/requirements.md",
+        "sha256": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93"
+      },
+      "upstream_specs": [
+        {
+          "path": "specs/legacy-evidence-carddemo-r2/spec.json",
+          "sha256": "d34866601d0156c103dc850148e32748da75c0134dbb6b6f6d4b58324a7d61a7"
+        }
+      ],
+      "authorization": {
+        "path": "reviews/stage-4-authorization.json",
+        "sha256": "405caf0960e1a13dfbc8a8965340e9f4957571b8eea0b895b09b125e21025ee9"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage4",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 4",
+    "pipeline-sdd-v3 stage 4 Capability Semantics Spec"
+  ],
+  "generation": {
+    "original_path": "prepared/capability-semantics-carddemo/execution/scope-original.md",
+    "sha256": "2f9d3ee52dd7788e206810e38c9173b19d21dfc44270cdd06d05e62dec95eb93",
+    "model": "gpt-6-astra",
+    "status": "generated_pending_human_review"
+  }
+}

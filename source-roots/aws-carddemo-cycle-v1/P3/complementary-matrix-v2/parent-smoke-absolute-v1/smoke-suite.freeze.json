@@ -1,0 +1,154 @@
+{
+  "cases": [
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-valid-new-tcatbal",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "qualified-semantic-checker:posting:valid-new-tcatbal"
+      },
+      "origin": "complementary-matrix-v2",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-004",
+          "POSTTRAN-OBL-006",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "SDD",
+        "contractId": "E3-SDD-stage6r3",
+        "effectiveInputSha256": "2c02556c153206538a4dd792f59ba44fbc32b161a7c2ffb44798358660ef8be1",
+        "essentialScenarioId": "valid-new-tcatbal",
+        "officialCampaign": false,
+        "operationId": "posting",
+        "requestInputAuthority": "external_physical_fixture_registry_only_public_contract_body_is_empty_object",
+        "requestSchemaValidation": "jsonschema_Draft202012Validator_full_original_request_schema_allOf_refs",
+        "resetPolicy": "fresh application/workdir per case; registry selected by v2 target factory, not public JSON",
+        "runtimeFixtureRegistry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-new-tcatbal/registry.json",
+        "runtimeFixtureRegistryPin": {
+          "bytes": 1815,
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-new-tcatbal/registry.json",
+          "sha256": "1e3b174ea43cbd566857850f5b25f38bfb66b704e9e375c7bb52c0ba04566bad"
+        },
+        "runtimeFixtureSourceRegistryPin": {
+          "bytes": 1815,
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/packages/valid-new-tcatbal/registry.json",
+          "sha256": "1e3b174ea43cbd566857850f5b25f38bfb66b704e9e375c7bb52c0ba04566bad"
+        },
+        "semanticCheckerMode": "qualified-field-values-not-file-existence",
+        "semanticCheckerPackage": "P3/complementary-validation-implementation-v3",
+        "sourceCaseId": "valid-new-tcatbal",
+        "track": "posting",
+        "wireInputPins": [
+          {
+            "base64Sha256": "acce0f644199762eb255d9d99e3527ed9c3356baca20a2e34e7f9e79d655b899",
+            "bytes": 350,
+            "dd": "DALYTRAN",
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/valid-new-tcatbal/posting/DALYTRAN",
+            "sha256": "c28742adffd4799194bf495a68df0d42c8b29aebe0564a8fedacf514f2361224"
+          }
+        ]
+      },
+      "provenance": [
+        "complementary-matrix-v2:E3-SDD-stage6r3:posting:valid-new-tcatbal"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "runtime-fixture-registry:posting:valid-new-tcatbal",
+      "suite_id": "P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7",
+      "timeout_seconds": 120.0
+    },
+    {
+      "case_id": "ESSENTIAL12x7-V2-E3-SDD-stage6r3-reject-card-missing",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "qualified-semantic-checker:posting:reject-card-missing"
+      },
+      "origin": "complementary-matrix-v2",
+      "parameters": {
+        "checkerObligations": [
+          "POSTTRAN-OBL-003",
+          "POSTTRAN-OBL-004",
+          "POSTTRAN-OBL-006",
+          "POSTTRAN-OBL-009"
+        ],
+        "contractArm": "SDD",
+        "contractId": "E3-SDD-stage6r3",
+        "effectiveInputSha256": "4f12ca10ed26fd9d0af502c986ff58084612eb18c2edd982fffe43b32e15d9df",
+        "essentialScenarioId": "reject-card-missing",
+        "officialCampaign": false,
+        "operationId": "posting",
+        "requestInputAuthority": "external_physical_fixture_registry_only_public_contract_body_is_empty_object",
+        "requestSchemaValidation": "jsonschema_Draft202012Validator_full_original_request_schema_allOf_refs",
+        "resetPolicy": "fresh application/workdir per case; registry selected by v2 target factory, not public JSON",
+        "runtimeFixtureRegistry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-card-missing/registry.json",
+        "runtimeFixtureRegistryPin": {
+          "bytes": 1819,
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-card-missing/registry.json",
+          "sha256": "c3e3f3ee1ac523b0c40b12886d076cf2cb7df494c694d134d2c1e137b6577419"
+        },
+        "runtimeFixtureSourceRegistryPin": {
+          "bytes": 1819,
+          "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-posting-essential-v1/evidence/packages/reject-card-missing/registry.json",
+          "sha256": "c3e3f3ee1ac523b0c40b12886d076cf2cb7df494c694d134d2c1e137b6577419"
+        },
+        "semanticCheckerMode": "qualified-field-values-not-file-existence",
+        "semanticCheckerPackage": "P3/complementary-validation-implementation-v3",
+        "sourceCaseId": "reject-card-missing",
+        "track": "posting",
+        "wireInputPins": [
+          {
+            "base64Sha256": "976a8307885905ea813aa953df91cbbc7b9ae2fda5c566dca59eab05026be3da",
+            "bytes": 350,
+            "dd": "DALYTRAN",
+            "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-matrix-v2/parent-plan-absolute-v1/fixture-registries/posting/reject-card-missing/posting/DALYTRAN",
+            "sha256": "d97df6f262edbc3cfbdd00ffee6fbe3f9b53dfc2e78e2d9ba17e1a4504fba5d1"
+          }
+        ]
+      },
+      "provenance": [
+        "complementary-matrix-v2:E3-SDD-stage6r3:posting:reject-card-missing"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ]
+        ],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "runtime-fixture-registry:posting:reject-card-missing",
+      "suite_id": "P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7",
+      "timeout_seconds": 120.0
+    }
+  ],
+  "suite_freeze_sha256": "5d860dc7e971b55d0c127d3ed025eeff5bea1d0017c65e0a35233f9e265b64cb",
+  "suite_id": "P3-COMPLEMENTARY-MATRIX-V2-ESSENTIAL12x7-SMOKE"
+}

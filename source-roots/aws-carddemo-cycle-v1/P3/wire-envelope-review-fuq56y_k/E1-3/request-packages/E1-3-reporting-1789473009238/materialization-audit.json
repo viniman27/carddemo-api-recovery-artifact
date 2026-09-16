@@ -1,0 +1,68 @@
+{
+  "package": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238",
+  "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/registry.json",
+  "files": {
+    "CARDXREF": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/CARDXREF",
+      "bytes": 8192,
+      "sha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+      "requestOwned": false
+    },
+    "DATEPARM": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/DATEPARM",
+      "bytes": 80,
+      "sha256": "62a357c8edf5052634c159c986d42db3ea0c5e3f68d38d27f8bd25a374ef551f",
+      "requestOwned": true
+    },
+    "TRANCATG": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/TRANCATG",
+      "bytes": 8192,
+      "sha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+      "requestOwned": false
+    },
+    "TRANFILE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/TRANFILE",
+      "bytes": 350,
+      "sha256": "4d21bc9270e06d21dce5889665902573ef848128474d57bffb72731bef4fc063",
+      "requestOwned": true
+    },
+    "TRANTYPE": {
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/wire-envelope-review-fuq56y_k/E1-3/request-packages/E1-3-reporting-1789473009238/TRANTYPE",
+      "bytes": 8192,
+      "sha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+      "requestOwned": false
+    }
+  },
+  "bindings": {
+    "CARDXREF": {
+      "field": "cardCrossReference",
+      "token": "p3:reporting:CARDXREF",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/CARDXREF",
+      "sourceSha256": "478821660015bb3876030578161860659d90ac4b1bfd51174fdae2c814e14cff",
+      "sourceBytes": 8192
+    },
+    "TRANTYPE": {
+      "field": "transactionTypes",
+      "token": "p3:reporting:TRANTYPE",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANTYPE",
+      "sourceSha256": "a9d30ff8fb3c126dc40ca68510c0f682b6d049081626cbfbe92794cc2878aedd",
+      "sourceBytes": 8192
+    },
+    "TRANCATG": {
+      "field": "transactionCategories",
+      "token": "p3:reporting:TRANCATG",
+      "sourcePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/reporting/TRANCATG",
+      "sourceSha256": "33202770c6f2e746f6eceea6642b4cee2ac04f0242bfc85266b3453dd23d214b",
+      "sourceBytes": 8192
+    }
+  },
+  "output_bindings": {
+    "TRANREPT": {
+      "field": "reportOutput",
+      "token": "p3:reporting:TRANREPT",
+      "dd": "TRANREPT",
+      "policy": "exact local output resource name; COBOL creates/captures it in the invocation workdir"
+    }
+  },
+  "fixture_descriptor_sha256": "562b7645c185f7141f93f44be6f12ed8a2685c9d27f5ba6df14b2a2a5970230c"
+}

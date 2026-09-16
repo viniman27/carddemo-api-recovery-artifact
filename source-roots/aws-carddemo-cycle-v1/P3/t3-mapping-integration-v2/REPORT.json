@@ -1,0 +1,62 @@
+{
+  "exports": {
+    "officialAwsRequests": false,
+    "officialAwsSuite": false
+  },
+  "inputs": {
+    "applicabilityMatrixV3": {
+      "bytes": 1048080,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/applicability-mapping-v3/applicability_matrix.json",
+      "sha256": "70099753738d2a8942f60193d7b7877fcbd7c3d521b46bf897868fa3e43ef3fc"
+    },
+    "preservedOldMapperHash": {
+      "bytes": 30670,
+      "note": "recorded only; old mapper not edited by this integration",
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapper-preparation-v1/src/t3_mapper.py",
+      "sha256": "ddbf291f3d94a0535aa9d0c32d3afd955389f4dd99adec50b5669d2f8e9531e4"
+    },
+    "recipesV1": {
+      "bytes": 40556,
+      "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/recipes.json",
+      "sha256": "efa60e01a1eb0e6f97ce6a4bce8a56c790e487bd20b45a85a87f7ff13c81498d"
+    }
+  },
+  "kind": "t3-mapping-integration-v2-report",
+  "officialCampaign": false,
+  "results": {
+    "enrichedSummary": {
+      "blockedCellsWithoutSelectors": 131,
+      "cellsTotal": 175,
+      "classificationTotals": {
+        "contractually_impossible": 7,
+        "implementation_missing": 82,
+        "missing_fixture_variant": 28,
+        "observation_without_authority": 14,
+        "recipe_available_unexercised": 44
+      },
+      "duplicateRecipeJoinKeys": [],
+      "executableEligibleCellsWithLinkedRecipe": 44,
+      "recipeExistsButNotExecutableEligible": 75,
+      "recipesTotal": 21,
+      "uniqueRecipeJoinKeys": 21,
+      "v3AllowedCellsMissingRecipe": 0,
+      "v3AllowedCellsWithLinkedRecipe": 119
+    },
+    "inventoryTotals": {
+      "contractually_impossible": 7,
+      "implementation_missing": 82,
+      "missing_fixture_variant": 28,
+      "observation_without_authority": 14,
+      "recipe_available_unexercised": 44
+    },
+    "recipeValidation": {
+      "compileFailures": [],
+      "kind": "t3-integrated-recipes-static-validation",
+      "officialCampaign": false,
+      "operationRecipes": 21,
+      "recipeSchemaValidated": true,
+      "status": "candidate"
+    }
+  },
+  "status": "candidate"
+}

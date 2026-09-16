@@ -1,0 +1,286 @@
+{
+  "auditPaths": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/interest-_qo4gc7e/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/posting-21wpuaev/audit.json",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/api-cobol-runs/reporting-6nbfkq4u/audit.json"
+  ],
+  "boundaries": [
+    "inputs are local physical technical fixture packages, not official campaign fixtures",
+    "observations are extracted from HTTP responses, P2b audit JSON and raw run files only",
+    "no expected output fields were inserted as observations",
+    "effect ordering is conclusive only for write-observer events; account/tcatbal order without trace is boundary-labeled"
+  ],
+  "freeze": {
+    "createdUtc": "2026-09-16T10:44:03Z",
+    "fixtureRegistrySha256": "75eb8ae8b5f89243ba6b4a99401167590d47ae03f9426f889275afbd636d2614",
+    "kind": "complementary-validation-runtime-freeze-v1",
+    "nonClaims": [
+      "not official campaign",
+      "not expected output oracle",
+      "not T1/T2/T3/T4 full campaign"
+    ],
+    "sourceFixtureIndex": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/t3-mapping-recipes-v1/fixture-index.json",
+    "sourceFixtureIndexSha256": "6f49b6448cbad125d50a48213ea7d38e2ae348394216749fd860ad30bb9bec6d",
+    "tracks": [
+      {
+        "files": {
+          "ACCTFILE": {
+            "bytes": 8192,
+            "sha256": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199"
+          },
+          "DALYTRAN": {
+            "bytes": 700,
+            "sha256": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88"
+          },
+          "TCATBALF": {
+            "bytes": 8192,
+            "sha256": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f"
+          },
+          "TRANFILE": {
+            "bytes": 8192,
+            "sha256": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f"
+          },
+          "XREFFILE": {
+            "bytes": 8192,
+            "sha256": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+          }
+        },
+        "fixtureId": "runtime-posting.candidate-v1-physical-v2",
+        "track": "posting"
+      },
+      {
+        "files": {
+          "ACCTFILE": {
+            "bytes": 8192,
+            "sha256": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a"
+          },
+          "DISCGRP": {
+            "bytes": 8192,
+            "sha256": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e"
+          },
+          "PARMFILE": {
+            "bytes": 10,
+            "sha256": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc"
+          },
+          "TCATBALF": {
+            "bytes": 8192,
+            "sha256": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec"
+          },
+          "XREFFILE": {
+            "bytes": 8192,
+            "sha256": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67"
+          },
+          "XREFFILE.1": {
+            "bytes": 8192,
+            "sha256": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+          }
+        },
+        "fixtureId": "runtime-interest.candidate-v1-physical-v2",
+        "track": "interest"
+      },
+      {
+        "files": {
+          "CARDXREF": {
+            "bytes": 8192,
+            "sha256": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656"
+          },
+          "DATEPARM": {
+            "bytes": 80,
+            "sha256": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237"
+          },
+          "TRANCATG": {
+            "bytes": 8192,
+            "sha256": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453"
+          },
+          "TRANFILE": {
+            "bytes": 700,
+            "sha256": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7"
+          },
+          "TRANTYPE": {
+            "bytes": 8192,
+            "sha256": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+          }
+        },
+        "fixtureId": "runtime-reporting.candidate-v1-physical-v2",
+        "track": "reporting"
+      }
+    ]
+  },
+  "freezeManifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/frozen-inputs/freeze-manifest.json",
+  "httpResults": [
+    {
+      "durationSeconds": 0.103,
+      "requestBytes": 2,
+      "requestSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "responseBytes": 1617,
+      "responseHeaders": {
+        "Date": "Wed, 16 Sep 2026 10:44:03 GMT",
+        "Server": "BaseHTTP/0.6 Python/3.10.20",
+        "content-length": "1617",
+        "content-type": "application/json"
+      },
+      "responseJson": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "amount": "00000001200",
+              "cardReference": "4111111111111111",
+              "categoryCode": "0005",
+              "description": "candidate purchase                                                                                  ",
+              "merchantCity": "Sometown                                          ",
+              "merchantId": "123456789",
+              "merchantName": "Fixture Merchant                                  ",
+              "merchantPostalText": "70000000  ",
+              "originalTimestamp": "2022-07-05-10.00.00.000000",
+              "processingTimestamp": "2026-09-16-07.44.03.590000",
+              "source": "Internet  ",
+              "transactionId": "POST-PRESENT-001",
+              "typeCode": "01"
+            }
+          ]
+        },
+        "progress": {
+          "availability": "available",
+          "value": {
+            "preliminaryRejectCount": 1,
+            "processedRecordCount": 2
+          }
+        },
+        "rejections": {
+          "availability": "available",
+          "items": [
+            {
+              "candidate": {
+                "amount": "00000003400",
+                "cardReference": "4999999999999999",
+                "categoryCode": "0005",
+                "description": "candidate purchase                                                                                  ",
+                "merchantCity": "Sometown                                          ",
+                "merchantId": "123456789",
+                "merchantName": "Fixture Merchant                                  ",
+                "merchantPostalText": "70000000  ",
+                "originalTimestamp": "2022-07-05-10.00.00.000000",
+                "source": "Internet  ",
+                "suppliedProcessingTimestamp": "2022-07-05-10.05.00.000000",
+                "transactionId": "POST-ABSENT--001",
+                "typeCode": "01"
+              },
+              "description": "INVALID CARD NUMBER FOUND                                                   ",
+              "reason": "100"
+            }
+          ]
+        },
+        "track": "posting"
+      },
+      "responseSha256": "b78cc841f3fb65ba637980d7850453aa491cd1f79b460260ef281d8ed10efaaa",
+      "status": 200,
+      "track": "posting"
+    },
+    {
+      "durationSeconds": 0.026,
+      "requestBytes": 2,
+      "requestSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "responseBytes": 990,
+      "responseHeaders": {
+        "Date": "Wed, 16 Sep 2026 10:44:03 GMT",
+        "Server": "BaseHTTP/0.6 Python/3.10.20",
+        "content-length": "990",
+        "content-type": "application/json"
+      },
+      "responseJson": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "outputs": {
+          "availability": "available",
+          "items": [
+            {
+              "amount": "00000000006",
+              "cardReference": "4111111111111111",
+              "categoryCode": "0005",
+              "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+              "merchantCity": "",
+              "merchantId": "000000000",
+              "merchantName": "",
+              "merchantPostalText": "",
+              "originalTimestamp": "2026-09-16-07.44.03.660000",
+              "processingTimestamp": "2026-09-16-07.44.03.660000",
+              "source": "System",
+              "transactionId": "2022071800000001",
+              "typeCode": "01"
+            }
+          ]
+        },
+        "track": "interest"
+      },
+      "responseSha256": "2e2e00a33cf7a43369d5c9cbb2574b4aec0bf73e9a1faf75e836a159ab8a1db7",
+      "status": 200,
+      "track": "interest"
+    },
+    {
+      "durationSeconds": 0.017,
+      "requestBytes": 2,
+      "requestSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "responseBytes": 565,
+      "responseHeaders": {
+        "Date": "Wed, 16 Sep 2026 10:44:03 GMT",
+        "Server": "BaseHTTP/0.6 Python/3.10.20",
+        "content-length": "565",
+        "content-type": "application/json"
+      },
+      "responseJson": {
+        "completeness": "not_attested",
+        "durability": "unknown",
+        "records": {
+          "availability": "available",
+          "items": [
+            {
+              "kind": "header",
+              "value": {
+                "endText": "2022-07-31",
+                "reportLongNameText": "Daily Transaction Report",
+                "reportShortNameText": "DALYREPT",
+                "startText": "2022-07-01"
+              }
+            },
+            {
+              "kind": "detail",
+              "value": {
+                "accountReference": "10000000001",
+                "amountText": "12.00",
+                "categoryCode": "0005",
+                "categoryDescription": "Candidate category",
+                "source": "Internet",
+                "transactionId": "REPORT-IN---001",
+                "typeCode": "01",
+                "typeDescription": "Purchase"
+              }
+            }
+          ]
+        },
+        "track": "reporting"
+      },
+      "responseSha256": "4aeac5ca0e14d1321d1c3d68c335fdcc12462e57d5ab749d1b938e647ed042fc",
+      "status": 200,
+      "track": "reporting"
+    }
+  ],
+  "kind": "complementary-validation-runtime-v1",
+  "localhostPort": 53821,
+  "semanticCheckerCommand": [
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-runtime-v1/../../P2a/.venv/bin/python",
+    "-m",
+    "semantic_checkers",
+    "--verify-source",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/typed-observations.json",
+    "--out",
+    "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/semantic-check-results.json"
+  ],
+  "semanticCheckerResults": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/semantic-check-results.json",
+  "semanticCheckerReturncode": 1,
+  "semanticCheckerStderr": "Traceback (most recent call last):\n  File \"<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/runpy.py\", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"<REDACTED_LOCAL_PATH>/.local/share/uv/python/cpython-3.10-macos-aarch64-none/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/__main__.py\", line 40, in <module>\n    raise SystemExit(main())\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/__main__.py\", line 28, in main\n    \"results\": [result.to_json_dict() for result in run_fixture_checks(fixture)],\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/runner.py\", line 32, in run_fixture_checks\n    outcome = CHECKERS[obligation_id](fixture)\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/checkers.py\", line 104, in check_intcalc_005\n    zero = [t for t in transactions if _money(t.get(\"annualRate\", \"0\")) == Decimal(\"0.00\")]\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/checkers.py\", line 104, in <listcomp>\n    zero = [t for t in transactions if _money(t.get(\"annualRate\", \"0\")) == Decimal(\"0.00\")]\n  File \"<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-validation-implementation-v1/semantic_checkers/checkers.py\", line 10, in _money\n    return Decimal(str(value)).quantize(Decimal(\"0.01\"), rounding=ROUND_HALF_UP)\ndecimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]\n",
+  "semanticCheckerStdout": "",
+  "typedObservations": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/evidence/typed-observations.json"
+}

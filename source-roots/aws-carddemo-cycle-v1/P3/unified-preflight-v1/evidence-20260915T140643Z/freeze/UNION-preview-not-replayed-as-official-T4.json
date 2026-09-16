@@ -1,0 +1,135 @@
+{
+  "cases": [
+    {
+      "case_id": "T4-0001",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "track": "posting"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-posting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0002",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "track": "interest"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-interest"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0003",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "track": "reporting"
+      },
+      "provenance": [
+        "SDD-SMOKE:SDD-SMOKE-E3-01-stage6r3-reporting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "T4-0004",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "T4-union",
+      "parameters": {
+        "postPatchFewshotSha256": "3865e68048e9aee864fcd5085758972912b54826d7449b277ca2e00b18b3c39d",
+        "track": "interest"
+      },
+      "provenance": [
+        "FEWSHOT-SMOKE:FEWSHOT-SMOKE-E2-2-fewshot-e2-2-interest-post-patch"
+      ],
+      "request": {
+        "body_b64": "eyJiaW5kaW5ncyI6eyJkaXNjbG9zdXJlR3JvdXBzIjoicDMtbG9jYWwtdGVjaG5pY2FsLWZpeHR1cmUtc2VsZWN0aW9uOmRpc2Nsb3N1cmVHcm91cHMiLCJjYXRlZ29yeUJhbGFuY2VzIjoicDMtbG9jYWwtdGVjaG5pY2FsLWZpeHR1cmUtc2VsZWN0aW9uOmNhdGVnb3J5QmFsYW5jZXMiLCJhY2NvdW50cyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjphY2NvdW50cyIsImNyb3NzUmVmZXJlbmNlcyI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjpjcm9zc1JlZmVyZW5jZXMiLCJ0cmFuc2FjdGlvbk91dHB1dCI6InAzLWxvY2FsLXRlY2huaWNhbC1maXh0dXJlLXNlbGVjdGlvbjp0cmFuc2FjdGlvbk91dHB1dCJ9LCJwYXJhbWV0ZXJEYXRlIjoiMjAyMjA3MTgwMCIsInBhcmFtZXRlckxlbmd0aCI6MTB9",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest-generation-runs"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "T4",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "6e19197543e05ae9a66a146dea20bb6e8f33df8d77ffdf0a04e6864a6a810c6b",
+  "suite_id": "T4"
+}

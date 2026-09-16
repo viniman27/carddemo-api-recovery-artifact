@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "case_id": "READINESS21-E2-3-posting-T1-REAL-E2-3-E2-3-posting-positive-02",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500
+          ]
+        },
+        "expectation_id": "documented-status-contract-assertion-not-independent-oracle"
+      },
+      "origin": "T1-real-import-v2:E2-3",
+      "parameters": {
+        "category": "positive",
+        "contractId": "E2-3",
+        "executionEligibility": "executable_stimulus_schema_valid",
+        "expectedAssertionsPolicy": "contract_assertion_quarantined_not_oracle",
+        "expectedAssertionsQuarantined": true,
+        "fixtureStatus": "candidate_needs_review",
+        "importClassification": "executable_schema_valid",
+        "operationAdmissibility": "operation_in_original_contract",
+        "operationId": "postDailyTransactions",
+        "oracleExpectedOutputs": "quarantined_not_used",
+        "originalCategoryPreserved": "positive",
+        "originalScenarioId": "posting-positive-02",
+        "schemaAdmissibility": "schema_valid",
+        "sourceBodyKind": "json",
+        "sourceHeadersState": "absent",
+        "sourceQueryState": "absent",
+        "sourceRequestCanonicalSha256": "7bd2a0b4709c6c19f6abd3598d99eed720d67210acab6fb1bee080edd7c410fe",
+        "sourceScenarioCanonicalSha256": "2a2373c92b427d814a833bd27def23b599ec608f5558e2bd904c0728c80761c7",
+        "track": "posting"
+      },
+      "provenance": [
+        "t1-generation-real:E2-3:posting-positive-02",
+        "local-readiness-v3:selected-from:P3/campaign-freeze-package-v1/E2-3/T1.json:T1-REAL-E2-3-E2-3-posting-positive-02"
+      ],
+      "request": {
+        "body_b64": "eyJ0cmFuc2FjdGlvbnMiOlt7InRyYW5zYWN0aW9uSWQiOiIiLCJ0eXBlQ29kZSI6IiIsImNhdGVnb3J5Q29kZSI6MCwic291cmNlIjoiIiwiZGVzY3JpcHRpb24iOiIiLCJhbW91bnQiOjAsIm1lcmNoYW50SWQiOjAsIm1lcmNoYW50TmFtZSI6IiIsIm1lcmNoYW50Q2l0eSI6IiIsIm1lcmNoYW50WmlwIjoiIiwiY2FyZE51bWJlciI6IiIsIm9yaWdpbmFsVGltZXN0YW1wIjoiIiwicHJvY2Vzc2luZ1RpbWVzdGFtcCI6IiIsImZpbGxlciI6IiJ9XX0=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/transaction-posting-runs"
+      },
+      "resource_package_id": "posting.candidate-v1-physical-v2",
+      "sequence": [],
+      "suite_id": "READINESS21-E2-3-posting",
+      "timeout_seconds": 180.0
+    }
+  ],
+  "suite_freeze_sha256": "d1f1c95b26f3c52da794944b0ff8b29c647a64d0232cfd41a449707c7f3fae65",
+  "suite_id": "READINESS21-E2-3-posting"
+}

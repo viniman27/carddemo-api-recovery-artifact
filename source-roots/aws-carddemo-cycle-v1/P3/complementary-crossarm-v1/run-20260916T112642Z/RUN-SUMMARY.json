@@ -1,0 +1,837 @@
+{
+  "campaignReport": {
+    "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/campaign-report.json",
+    "bytes": 603847,
+    "label": "campaign-report",
+    "path": "P3/complementary-crossarm-v1/run-20260916T112642Z/run/campaign-report.json",
+    "sha256": "708a37cd7840d4dd471fb309a0ea8e07fa6302a9f9fc93313769504372b1f324"
+  },
+  "comparison": {
+    "cases": [
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-1-posting/replay/applications/0001-aa847e6805348cfa/zero-shot-runs/p2b-runs/posting-99t8q1sc/TRANFILE.after",
+              "sha256": "37168a36f731ed54f02234227846d279331b2ba00f5cbd2360e5cf185992cad0"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-1-posting/replay/applications/0001-aa847e6805348cfa/zero-shot-runs/p2b-runs/posting-99t8q1sc/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-1-posting",
+        "contractId": "E1-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "5e52b703c1a6ccecb536dcbbd96e93865a9201a7ae21c96f6bd1459c1d787b25",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-1-interest/replay/applications/0001-cfcd6259a056c195/zero-shot-runs/p2b-runs/interest-x82jvs5l/TRANSACT",
+              "sha256": "507dea766b9dd6147e9df95cd57b1fb083e35e26080aec35169713b5c6900c12"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-1-interest",
+        "contractId": "E1-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "6827679842e7590e21c99eca7ab2590df1adca9886a49073bb0142a9ac4d44a3",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-1-reporting/replay/applications/0001-e1dd801af12fc622/zero-shot-runs/p2b-runs/reporting-fukfalwk/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-1-reporting",
+        "contractId": "E1-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "d5722913a45cb0c5b0a407ed5c04c67d7c2b14b0e24fa56d0841eb363a922b22",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-2-posting/replay/applications/0001-269da95548897485/zero-shot-runs/p2b-runs/posting-251qd73w/TRANFILE.after",
+              "sha256": "bfd0735eae8e0fd11fccc4814deb544ad37bc76ba15a25235e1062fb6672019d"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-2-posting/replay/applications/0001-269da95548897485/zero-shot-runs/p2b-runs/posting-251qd73w/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-2-posting",
+        "contractId": "E1-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "3419cebf30fc55a56d2c7a08cb7d9d20c85d2c5a2144cf2b092156000f0810f6",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-2-interest/replay/applications/0001-dd6de0a72b6428fd/zero-shot-runs/p2b-runs/interest-9e6kxamg/TRANSACT",
+              "sha256": "01ba7fa9c519804406958ba2fc67689788b5af99c405ebf2128a17388fec7522"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-2-interest",
+        "contractId": "E1-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "0031b6094418f2f520ac44f3e200b2c53193b4861837b74a78f8dce168bb7b70",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-2-reporting/replay/applications/0001-42e80260d51cc147/zero-shot-runs/p2b-runs/reporting-2ux6etcs/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-2-reporting",
+        "contractId": "E1-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "848434f4eb67e94ed5117a6c96f11b5e19d1ecaf3eea32d47200237f71c8ecbe",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-3-posting/replay/applications/0001-27e461b6adc19950/zero-shot-runs/p2b-runs/posting-64oltkmm/TRANFILE.after",
+              "sha256": "9aef017177c4b867f69b6d33a8fa5243f9a5167efa04c2006fcc1bfcb27f5cf9"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-3-posting/replay/applications/0001-27e461b6adc19950/zero-shot-runs/p2b-runs/posting-64oltkmm/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-3-posting",
+        "contractId": "E1-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "95bb3fc7d6af09785bfcd3818b71ccd9d74a8367bd4d4f61ee2b555e9ccc033e",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-3-interest/replay/applications/0001-380d3fe5f6e90a6e/zero-shot-runs/p2b-runs/interest-cf_1iv0f/TRANSACT",
+              "sha256": "4e07ece9181b1efa496871c9a8b155bea2ab51c5bde0477d390c163c9d4e745e"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-3-interest",
+        "contractId": "E1-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "0c8305888f6e522bf1e5f0a17636dfb347765542d91bb503a1085db76da472c4",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/P3-COMPLEMENTARY-CROSSARM-V1/cases/CROSSARM-E1-3-reporting/replay/applications/0001-c744d7deee041a77/zero-shot-runs/p2b-runs/reporting-e17gqz1p/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E1-3-reporting",
+        "contractId": "E1-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "4afc07cf3f7131db36369cf8c3eddff5f52dd5e9f3ca8f1f6a6a52aae08a5273",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-vjsmaad1/TRANFILE.after",
+              "sha256": "70b9a8a28e98d7d115bd71b76df1d5d60782e8e6a239425fc061492afac2f960"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-vjsmaad1/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-1-posting",
+        "contractId": "E2-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "10aafa17742efe788c38f0c758c77aeaec05410e5041fba2c456ce44f529a895",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-ok4pfuz6/TRANSACT",
+              "sha256": "47e5f315b74709219ce438eaa567c399ab8f216e7a1491cae0246848ad0d12ab"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-1-interest",
+        "contractId": "E2-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "8045ede1f6fa586632f7422fb4f7feae85a02e88d1dd3056052c38d1d3a7dfaf",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-aerk_izy/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-1-reporting",
+        "contractId": "E2-1",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "49f62b61fd891923f29a62f8b00a3b3f36e7e16f46a7abb40316cfd99b0db184",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-byd8hbpo/TRANFILE.after",
+              "sha256": "1905bf3da2af51835c317044a49d76eddb2367bcd5449e1cfada023462a567cd"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-byd8hbpo/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-2-posting",
+        "contractId": "E2-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "29cc79bb14f11b78d41b91885209a62e475889e8f4342cc7dcf6988a908957f8",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-9y2mbvf2/TRANSACT",
+              "sha256": "10a0b1f981f8e69ff9eea70b93188355a3492cf1a0f9411f2b10456ed4134830"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-2-interest",
+        "contractId": "E2-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "89a43aa314727105740b9b90d81c4bc23255e81b0b64599488ad952167d87ccb",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-yha6u2qj/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-2-reporting",
+        "contractId": "E2-2",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "d5722913a45cb0c5b0a407ed5c04c67d7c2b14b0e24fa56d0841eb363a922b22",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-5xppwtxy/TRANFILE.after",
+              "sha256": "06815e73023ccaaa8dbaef836bd5806d481fff6b50df1f1aff3e0c0f498fa659"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/posting-5xppwtxy/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-3-posting",
+        "contractId": "E2-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "postDailyTransactions",
+        "responseSha256": "10aafa17742efe788c38f0c758c77aeaec05410e5041fba2c456ce44f529a895",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-zrodauhx/TRANSACT",
+              "sha256": "6796108e06b146380c03a74b48fa59b327a2dd2b5ef8969dbd6340fa44b4d10d"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-3-interest",
+        "contractId": "E2-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateInterestTransactions",
+        "responseSha256": "01bd67ec3ee430b009ea4532768867a30f50e929af171fe0a9b32481f7ea1a8a",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/reporting-uwwpplx7/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E2-3-reporting",
+        "contractId": "E2-3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "generateTransactionReport",
+        "responseSha256": "49f62b61fd891923f29a62f8b00a3b3f36e7e16f46a7abb40316cfd99b0db184",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "posted transaction output bytes observed",
+          "checker": "posting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-1q81rtmv/TRANFILE.after",
+              "sha256": "65b4c281dba569321987885b85f2b4af523b39dd75a123083bddfdb32b6a25a9"
+            },
+            {
+              "bytes": 430,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-1q81rtmv/DALYREJS",
+              "sha256": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E3-SDD-stage6r3-posting",
+        "contractId": "E3-SDD-stage6r3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "posting",
+        "responseSha256": "149ba07997cbb928b24086bcde76ac342134235bb2704cd9b4b2c7e2218d97da",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "posting"
+      },
+      {
+        "businessCheck": {
+          "assertion": "interest transaction bytes observed",
+          "checker": "interest-byte-effects",
+          "evidence": [
+            {
+              "bytes": 350,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-l41hhy7l/TRANSACT",
+              "sha256": "9cbfbd7305b68bc5f60052422b3530a0ca50bc7e485f30971211a0b909a4f07d"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E3-SDD-stage6r3-interest",
+        "contractId": "E3-SDD-stage6r3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "interest",
+        "responseSha256": "aa4fd232df11d659c76f1100809fba1436bb37538ac02cf406bae9f39ace13a3",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "interest"
+      },
+      {
+        "businessCheck": {
+          "assertion": "report bytes observed",
+          "checker": "reporting-byte-effects",
+          "evidence": [
+            {
+              "bytes": 665,
+              "path": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/run/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-s7b90gxo/TRANREPT",
+              "sha256": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469"
+            }
+          ],
+          "status": "pass"
+        },
+        "caseId": "CROSSARM-E3-SDD-stage6r3-reporting",
+        "contractId": "E3-SDD-stage6r3",
+        "httpStatus": 200,
+        "measurementAdmissibility": "admissible_preparatory",
+        "operationId": "reporting",
+        "responseSha256": "0f861f093624be396c0be047499c2e0f7919cecbf1290ff46ccf6869a131f1ca",
+        "structural": {
+          "classification": "schema_valid",
+          "ok": true
+        },
+        "track": "reporting"
+      }
+    ],
+    "kind": "complementary-crossarm-v1-comparison",
+    "summary": {
+      "attempted": 21,
+      "boundedLocalApiCallLimit": 21,
+      "businessStatusCounts": {
+        "pass": 21
+      },
+      "byContract": {
+        "E1-1": {
+          "pass": 3
+        },
+        "E1-2": {
+          "pass": 3
+        },
+        "E1-3": {
+          "pass": 3
+        },
+        "E2-1": {
+          "pass": 3
+        },
+        "E2-2": {
+          "pass": 3
+        },
+        "E2-3": {
+          "pass": 3
+        },
+        "E3-SDD-stage6r3": {
+          "pass": 3
+        }
+      },
+      "byTrack": {
+        "interest": {
+          "pass": 7
+        },
+        "posting": {
+          "pass": 7
+        },
+        "reporting": {
+          "pass": 7
+        }
+      },
+      "officialCampaign": false
+    }
+  },
+  "kind": "complementary-crossarm-v1-run",
+  "materialization": {
+    "cases": [
+      {
+        "bodySha256": "1c341f37bdd7d7942c0d41df6d6c4f9fb5763e5f60ccb5ee8eda04fb8968d7ad",
+        "caseId": "CROSSARM-E1-1-posting",
+        "contractId": "E1-1",
+        "operationId": "postDailyTransactions",
+        "path": "/posting-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "c2757c9f9a996f4bb44cbb70e5ef4d71c9923e336ffd1bfb306b61c0e81095dd",
+        "caseId": "CROSSARM-E1-1-interest",
+        "contractId": "E1-1",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "77d808b5370ae65f141258b04c78901290e69851763af4760e1d22c2ba50df9c",
+        "caseId": "CROSSARM-E1-1-reporting",
+        "contractId": "E1-1",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-report-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "5981934ea4613d3fe2092758548b5c68b338a72d05c5ddda63226ff61e390403",
+        "caseId": "CROSSARM-E1-2-posting",
+        "contractId": "E1-2",
+        "operationId": "postDailyTransactions",
+        "path": "/transaction-postings",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "f6f03640bf96b70f0285ca714a2e2c7e62f0f41449f60547fafa9cf242af7e99",
+        "caseId": "CROSSARM-E1-2-interest",
+        "contractId": "E1-2",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-transactions",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "0ee11cc016a00d13fbec56d278dc8a000fe585da801859787626aebbc4765a47",
+        "caseId": "CROSSARM-E1-2-reporting",
+        "contractId": "E1-2",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-reports",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "99c477c7c479f575334d71ec7d35056e4432349f56b12a52da5b630c67be91d6",
+        "caseId": "CROSSARM-E1-3-posting",
+        "contractId": "E1-3",
+        "operationId": "postDailyTransactions",
+        "path": "/transaction-postings",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "5d216108ccc3a40a439b0fe12eaf0313b052b2b1de67bd15234b41186367db17",
+        "caseId": "CROSSARM-E1-3-interest",
+        "contractId": "E1-3",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-transaction-generations",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "c8f8249cc6d72b88c6edc968968c475bf2b2e5e49c509fb66f7b419c7a42180e",
+        "caseId": "CROSSARM-E1-3-reporting",
+        "contractId": "E1-3",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-reports",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "fe97ffa71b8b90d17dc46490546cfe530a0c62f4a5d3297b23a4e7cc0e16a46e",
+        "caseId": "CROSSARM-E2-1-posting",
+        "contractId": "E2-1",
+        "operationId": "postDailyTransactions",
+        "path": "/transaction-postings",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "1b6d813a84c289f5c45c5428a34482efdb77bc4f5051f171a1bf391c538525b2",
+        "caseId": "CROSSARM-E2-1-interest",
+        "contractId": "E2-1",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-transaction-generations",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "ebd8b5267548401b4c337cccd364b70d1e738d2bcda8836b5703d99f889d0c8b",
+        "caseId": "CROSSARM-E2-1-reporting",
+        "contractId": "E2-1",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-reports",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "d9db0b5a326dd33de2ff503f575427366fa17c9a2f4b5bdcec745213f4916894",
+        "caseId": "CROSSARM-E2-2-posting",
+        "contractId": "E2-2",
+        "operationId": "postDailyTransactions",
+        "path": "/transaction-posting-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "9e5c4c0254730bc070079fcf1a13cc7767642f73005b49226627e8662767a73e",
+        "caseId": "CROSSARM-E2-2-interest",
+        "contractId": "E2-2",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-generation-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "914b46a0be56b2c58af4d0f0bbc87106fe43f46408ba0b34b05652f5d95fabf7",
+        "caseId": "CROSSARM-E2-2-reporting",
+        "contractId": "E2-2",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-report-runs",
+        "source": "t3-binding-closure-v1-amended-case",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "47e5bab70500ddda7dc0df3c9fae83b421409d4a1a7e81eb863815899d9b3939",
+        "caseId": "CROSSARM-E2-3-posting",
+        "contractId": "E2-3",
+        "operationId": "postDailyTransactions",
+        "path": "/transaction-posting-runs",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "1b6d813a84c289f5c45c5428a34482efdb77bc4f5051f171a1bf391c538525b2",
+        "caseId": "CROSSARM-E2-3-interest",
+        "contractId": "E2-3",
+        "operationId": "generateInterestTransactions",
+        "path": "/interest-generation-runs",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "74da9a0c8e732d6a6ad43c3cf0ddb22983c7c1eb07f286b260b0470a265dfa4c",
+        "caseId": "CROSSARM-E2-3-reporting",
+        "contractId": "E2-3",
+        "operationId": "generateTransactionReport",
+        "path": "/transaction-report-runs",
+        "source": "source-guided-shape-adapted-from-E2-2-essential-fixture",
+        "track": "reporting"
+      },
+      {
+        "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "caseId": "CROSSARM-E3-SDD-stage6r3-posting",
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "posting",
+        "path": "/posting",
+        "source": "PublicSDD{}",
+        "track": "posting"
+      },
+      {
+        "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "caseId": "CROSSARM-E3-SDD-stage6r3-interest",
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "interest",
+        "path": "/interest",
+        "source": "PublicSDD{}",
+        "track": "interest"
+      },
+      {
+        "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "caseId": "CROSSARM-E3-SDD-stage6r3-reporting",
+        "contractId": "E3-SDD-stage6r3",
+        "operationId": "reporting",
+        "path": "/reporting",
+        "source": "PublicSDD{}",
+        "track": "reporting"
+      }
+    ],
+    "createdUtc": "2026-09-16T11:26:43Z",
+    "inputs": {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/freeze/input-freeze.json",
+      "bytes": 5200,
+      "label": "crossarm-input-freeze",
+      "path": "P3/complementary-crossarm-v1/run-20260916T112642Z/freeze/input-freeze.json",
+      "sha256": "b88c2d58cd1b6e9c79aacfc80ec4c8246e44ab0c9384aaabf936927cdd6b6a94"
+    },
+    "kind": "complementary-crossarm-v1-materialization",
+    "suite": {
+      "absolutePath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/complementary-crossarm-v1/run-20260916T112642Z/freeze/suite.freeze.json",
+      "bytes": 50582,
+      "label": "crossarm-suite-freeze",
+      "path": "P3/complementary-crossarm-v1/run-20260916T112642Z/freeze/suite.freeze.json",
+      "sha256": "4d74b8500a7e26b95b474c89be793273e4e6f55288e7a31119838be281fb0e9d"
+    },
+    "summary": {
+      "caseCount": 21,
+      "contractCount": 7,
+      "operationCount": 21,
+      "tracks": [
+        "posting",
+        "interest",
+        "reporting"
+      ]
+    }
+  },
+  "scope": "bounded prospective local cross-arm complement; 7 contracts x 3 tracks; one attempt; no external calls; no official campaign promotion"
+}

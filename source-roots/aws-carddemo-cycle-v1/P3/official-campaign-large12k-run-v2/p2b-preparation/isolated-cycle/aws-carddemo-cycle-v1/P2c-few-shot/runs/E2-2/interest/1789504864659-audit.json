@@ -1,0 +1,62 @@
+{
+  "kind": "p2c-few-shot-facade-invocation",
+  "contractId": "E2-2",
+  "contractOriginal": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/collection-01/E2-2/response-original.txt",
+  "contractOriginalSha256": "c79c27b56fee0ee985e8c3642c494869c2701054dce7a06cff90fa2519259820",
+  "track": "interest",
+  "path": "/interest-generation-runs",
+  "status": 200,
+  "requestBody": {
+    "bindings": {
+      "accounts": "p3-local-technical-fixture-selection:accounts",
+      "categoryBalances": "p3-local-technical-fixture-selection:categoryBalances",
+      "crossReferences": "p3-local-technical-fixture-selection:crossReferences",
+      "disclosureGroups": "p3-local-technical-fixture-selection:disclosureGroups",
+      "transactionOutput": "p3-local-technical-fixture-selection:transactionOutput"
+    },
+    "parameterDate": "2022071800",
+    "parameterLength": 10
+  },
+  "requestBodySha256": "9e5c4c0254730bc070079fcf1a13cc7767642f73005b49226627e8662767a73e",
+  "requestMaterialization": {
+    "arraysAreSequentialFiles": true,
+    "p2bRunDirectory": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-ck95zfgl",
+    "registry": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P3/technical-packages-v3-argument/registry.json",
+    "registrySha256": "787d746273e79435907a498817b6d387bcabc63c64f68ef50aac6b70141ec01c"
+  },
+  "semanticLimits": [
+    "P2c uses P3 local technical resources as preprovisioned DD resources only; request arrays/arguments are materialized per invocation and are not fixture selectors.",
+    "Binding prefix is resolved locally to DD resources and rejected if malformed; it is not accepted and ignored.",
+    "Raw receiver bytes and decode/framing failures are preserved in audits."
+  ],
+  "response": {
+    "generatedTransactions": [
+      {
+        "transactionId": "2022071800000001",
+        "typeCode": "01",
+        "categoryCode": 5,
+        "source": "System",
+        "description": "Int. for a/c 10000000001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "amount": 0.06,
+        "merchantId": 0,
+        "merchantName": "",
+        "merchantCity": "",
+        "originalTimestamp": "2026-09-15-17.41.05.090000",
+        "processingTimestamp": "2026-09-15-17.41.05.090000",
+        "filler": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "cardNumber": "4111111111111111",
+        "merchantZip": ""
+      }
+    ],
+    "diagnostics": [
+      "P2C-PARM-LENGTH=+00010",
+      "P2C-PARM-VALUE=2022071800",
+      "START OF EXECUTION OF PROGRAM CBACT04C",
+      "1000000000101000500000005000                      ",
+      "1000000000201000500000007000                      ",
+      "END OF EXECUTION OF PROGRAM CBACT04C"
+    ]
+  },
+  "p2bAuditPath": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/official-campaign-large12k-run-v2/p2b-preparation/isolated-cycle/aws-carddemo-cycle-v1/P2c-few-shot/runs/p2b-redirected/interest-ck95zfgl/audit.json",
+  "durationSeconds": 0.441
+}

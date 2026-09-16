@@ -1,0 +1,142 @@
+{
+  "cases": [
+    {
+      "case_id": "t3-json-empty-object",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "nominal"
+      },
+      "origin": "T3",
+      "parameters": {},
+      "provenance": [
+        "T3:t3-json-empty-object"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T3",
+      "timeout_seconds": 1.0
+    },
+    {
+      "case_id": "t3-doc-500",
+      "expectation": {
+        "checks": {
+          "status": [
+            500
+          ]
+        },
+        "expectation_id": "doc-500"
+      },
+      "origin": "T3",
+      "parameters": {},
+      "provenance": [
+        "T3:t3-doc-500"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/documented-500"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T3",
+      "timeout_seconds": 1.0
+    },
+    {
+      "case_id": "t3-unsupported-check",
+      "expectation": {
+        "checks": {
+          "jsonSchema": {}
+        },
+        "expectation_id": "unsupported"
+      },
+      "origin": "T3",
+      "parameters": {},
+      "provenance": [
+        "T3:t3-unsupported-check"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/ok"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T3",
+      "timeout_seconds": 1.0
+    },
+    {
+      "case_id": "t3-deadline",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            500
+          ]
+        },
+        "expectation_id": "nominal"
+      },
+      "origin": "T3",
+      "parameters": {},
+      "provenance": [
+        "T3:t3-deadline"
+      ],
+      "request": {
+        "body_b64": null,
+        "body_kind": "absent",
+        "headers": [
+          [
+            "X-Synthetic",
+            "qualification"
+          ]
+        ],
+        "method": "POST",
+        "path": "/deadline"
+      },
+      "resource_package_id": "pkg-a",
+      "sequence": [],
+      "suite_id": "T3",
+      "timeout_seconds": 0.05
+    }
+  ],
+  "resources": {
+    "pkg-a": {
+      "state.txt": {
+        "sha256": "25718360e05d3c2d0963d1381e9dd4dae5fca789244ee4b9f861adcc0cc96218",
+        "size": 9
+      }
+    }
+  },
+  "suite_freeze_sha256": "44ee9d8c70c6028c0bd9d081a8b4f94e090b3abe127f36071b8609bd36b58b14",
+  "suite_id": "T3"
+}

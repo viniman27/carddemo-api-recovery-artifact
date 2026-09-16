@@ -1,0 +1,48 @@
+{
+  "timestamp_utc": "2026-09-10T22:35:46.561241+00:00",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "runs": [
+    {
+      "label": "tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "optimized": false,
+      "exit_code": 0
+    },
+    {
+      "label": "tests-optimized",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "optimized": true,
+      "exit_code": 0
+    },
+    {
+      "label": "snapshot",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "verify_snapshot.py"
+      ],
+      "optimized": false,
+      "exit_code": 0
+    }
+  ],
+  "static_scan_matches": [],
+  "missing_new_references": [],
+  "independent_review": "pending",
+  "human_approval": false,
+  "aws_executed": false
+}

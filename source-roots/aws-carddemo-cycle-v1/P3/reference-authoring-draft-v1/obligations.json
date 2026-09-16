@@ -1,0 +1,792 @@
+{
+  "status": "draft_needs_independent_review",
+  "scope": [
+    "CBTRN02C/POSTTRAN",
+    "CBACT04C/INTCALC",
+    "CBTRN03C/TRANREPT"
+  ],
+  "authority": "source_packet_only",
+  "non_execution_statement": "Nenhum COBOL, caso, fixture, contrato de braço ou output esperado foi executado/consultado.",
+  "obligations": [
+    {
+      "id": "POSTTRAN-OBL-001",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Arquivos externos e abertura",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            29,
+            61
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            193,
+            200
+          ]
+        },
+        {
+          "path": "app/jcl/POSTTRAN.jcl",
+          "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+          "lines": [
+            23,
+            42
+          ]
+        }
+      ],
+      "preconditions": "DDs do JCL disponíveis.",
+      "guard_or_transition": "Abre DALYTRAN input, TRANFILE output, XREF input, DALYREJS output, ACCOUNT I-O e TCATBAL I-O; status diferente de 00 em qualquer open leva a erro/abend.",
+      "required_observation": "status de abertura, mensagens e abend",
+      "decidable_expectation": "Execução só entra no loop após todos os OPEN status 00.",
+      "limits_and_review_notes": "JCL é evidência documental; não prova alocação local nem durabilidade."
+    },
+    {
+      "id": "POSTTRAN-OBL-002",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Loop DALYTRAN",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            202,
+            219
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            345,
+            369
+          ]
+        }
+      ],
+      "preconditions": "Arquivos abertos.",
+      "guard_or_transition": "READ status 00 processa, status 10 marca EOF, outros abendem.",
+      "required_observation": "contador TRANSACTIONS PROCESSED e número de registros considerados",
+      "decidable_expectation": "WS-TRANSACTION-COUNT incrementa apenas em leitura status 00.",
+      "limits_and_review_notes": "EOF não tem expectativa de registro; não inventar comportamento além do status 10."
+    },
+    {
+      "id": "POSTTRAN-OBL-003",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Layout e cópia para transação postada",
+      "source_anchors": [
+        {
+          "path": "app/cpy/CVTRA06Y.cpy",
+          "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+          "lines": [
+            4,
+            18
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "lines": [
+            4,
+            18
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            424,
+            439
+          ]
+        }
+      ],
+      "preconditions": "Transação validada.",
+      "guard_or_transition": "Move campos DALYTRAN para TRAN e substitui TRAN-PROC-TS por timestamp DB2-formatado.",
+      "required_observation": "registro TRANFILE escrito",
+      "decidable_expectation": "Campos homônimos de id/tipo/categoria/source/desc/amount/merchant/card/orig-ts vêm do DALYTRAN; proc-ts vem de CURRENT-DATE formatado.",
+      "limits_and_review_notes": "Formato/calendário do timestamp é fonte; valor real é ambiente."
+    },
+    {
+      "id": "POSTTRAN-OBL-004",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Validação de cartão",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            370,
+            392
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        }
+      ],
+      "preconditions": "Registro diário lido; razão zerada.",
+      "guard_or_transition": "Busca XREF por DALYTRAN-CARD-NUM; invalid key define razão 100 e descrição INVALID CARD NUMBER FOUND.",
+      "required_observation": "DALYREJS e ausência de postagem",
+      "decidable_expectation": "Cartão ausente rejeita a transação com trailer 100.",
+      "limits_and_review_notes": "Não há validação de formato além da busca."
+    },
+    {
+      "id": "POSTTRAN-OBL-005",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Validação de conta, limite e expiração",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            393,
+            421
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "lines": [
+            4,
+            17
+          ]
+        }
+      ],
+      "preconditions": "XREF encontrado.",
+      "guard_or_transition": "Conta ausente razão 101; conta presente calcula credit-debit+amount e razão 102 se excede limite; depois compara expiration >= orig-ts(1:10) e pode mover razão 103.",
+      "required_observation": "trailer de rejeição ou postagem",
+      "decidable_expectation": "Conta inexistente rejeita 101; overlimit rejeita 102 salvo se expiração também falhar, caso em que a razão final sustentada é 103.",
+      "limits_and_review_notes": "Comparação de datas é textual X(10); calendário real não é decidido."
+    },
+    {
+      "id": "POSTTRAN-OBL-006",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Rejeitos e return-code",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            211,
+            216
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            227,
+            231
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            446,
+            465
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            176,
+            182
+          ]
+        }
+      ],
+      "preconditions": "Razão de validação diferente de zero.",
+      "guard_or_transition": "Incrementa contador, escreve 350 bytes originais + trailer 80; ao final RC=4 se reject count>0.",
+      "required_observation": "DALYREJS, contador e RETURN-CODE",
+      "decidable_expectation": "Cada rejeição gera um registro de rejeito; execução normal com algum rejeito retorna 4.",
+      "limits_and_review_notes": "Não afirma rollback de sucessos anteriores."
+    },
+    {
+      "id": "POSTTRAN-OBL-007",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "TCATBAL create/update",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            467,
+            542
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Transação aceita.",
+      "guard_or_transition": "Chave = XREF-ACCT-ID + type + category; status 23 cria registro inicializado, status 00 atualiza; ambos somam DALYTRAN-AMT.",
+      "required_observation": "registro TCATBAL",
+      "decidable_expectation": "Ausente cria saldo com amount; existente reescreve saldo+amount.",
+      "limits_and_review_notes": "Status aceitos 00/23; sem atomicidade."
+    },
+    {
+      "id": "POSTTRAN-OBL-008",
+      "capability": "CBTRN02C/POSTTRAN",
+      "title": "Atualização ACCOUNT e ordem de efeitos",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            440,
+            442
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN02C.cbl",
+          "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+          "lines": [
+            545,
+            579
+          ]
+        }
+      ],
+      "preconditions": "Transação aceita e conta carregada.",
+      "guard_or_transition": "Ordem: TCATBAL, ACCOUNT, TRANFILE; conta soma amount ao saldo e ao credit se amount>=0, senão ao debit.",
+      "required_observation": "ACCOUNT e TRANFILE",
+      "decidable_expectation": "Efeitos seguem a ordem fonte e debit recebe soma do valor negativo conforme código.",
+      "limits_and_review_notes": "Estado após falha intermediária indecidível."
+    },
+    {
+      "id": "INTCALC-OBL-001",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Arquivos, parâmetro e abertura",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            28,
+            56
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            175,
+            186
+          ]
+        },
+        {
+          "path": "app/jcl/INTCALC.jcl",
+          "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+          "lines": [
+            22,
+            41
+          ]
+        }
+      ],
+      "preconditions": "Job INTCALC com PARM e DDs.",
+      "guard_or_transition": "Abre TCATBAL input sequencial, XREF/DISCGRP input, ACCOUNT I-O, TRANSACT output; falha abende.",
+      "required_observation": "status e registros de saída",
+      "decidable_expectation": "PARM-DATE participa de TRAN-ID nas transações geradas.",
+      "limits_and_review_notes": "Data do JCL é exemplo de fonte, não calendário universal."
+    },
+    {
+      "id": "INTCALC-OBL-002",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Varredura e agrupamento por conta",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            188,
+            222
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA01Y.cpy",
+          "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "TCATBAL disponível.",
+      "guard_or_transition": "A cada registro status 00, se TRANCAT-ACCT-ID muda, atualiza conta anterior exceto primeira, zera total e carrega nova conta/xref.",
+      "required_observation": "updates ACCOUNT por grupo",
+      "decidable_expectation": "Modelo depende de registros contíguos por conta; conta reaparecida depois vira novo grupo.",
+      "limits_and_review_notes": "Ordenação não é verificada pelo programa/JCL."
+    },
+    {
+      "id": "INTCALC-OBL-003",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Leitura ACCOUNT e XREF por conta",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            200,
+            205
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            372,
+            413
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT01Y.cpy",
+          "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+          "lines": [
+            4,
+            17
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        }
+      ],
+      "preconditions": "Novo grupo.",
+      "guard_or_transition": "Lê ACCOUNT por TRANCAT-ACCT-ID e XREF por alternate key FD-XREF-ACCT-ID; status não 00 abende.",
+      "required_observation": "abend ou campos usados",
+      "decidable_expectation": "ACCOUNT fornece grupo/id; XREF fornece cartão para transação de juros.",
+      "limits_and_review_notes": "Índice alternativo é evidenciado no JCL, mas ambiente VSAM não é executado."
+    },
+    {
+      "id": "INTCALC-OBL-004",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Taxa específica ou DEFAULT",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            210,
+            217
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            415,
+            460
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "lines": [
+            4,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Conta e TCATBAL carregados.",
+      "guard_or_transition": "Lê DISCGRP por group/type/category; status 23 tenta group DEFAULT preservando type/category.",
+      "required_observation": "DIS-INT-RATE ou abend",
+      "decidable_expectation": "Usa taxa específica se existe; se ausente, tenta DEFAULT; default ausente abende.",
+      "limits_and_review_notes": "Sem fallback adicional."
+    },
+    {
+      "id": "INTCALC-OBL-005",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Fórmula e guarda de juros",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            213,
+            217
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            462,
+            470
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA02Y.cpy",
+          "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+          "lines": [
+            9,
+            10
+          ]
+        }
+      ],
+      "preconditions": "Taxa lida.",
+      "guard_or_transition": "Só se DIS-INT-RATE != 0 calcula (TRAN-CAT-BAL*DIS-INT-RATE)/1200, acumula WS-TOTAL-INT e escreve TX.",
+      "required_observation": "TRAN-AMT e total acumulado",
+      "decidable_expectation": "Taxa zero não gera transação; taxa diferente de zero gera valor pela fórmula fonte.",
+      "limits_and_review_notes": "Arredondamento/truncamento/overflow dependem de PIC/compilador."
+    },
+    {
+      "id": "INTCALC-OBL-006",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Campos da transação de juros",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            473,
+            515
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA05Y.cpy",
+          "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+          "lines": [
+            4,
+            18
+          ]
+        }
+      ],
+      "preconditions": "Juros calculados.",
+      "guard_or_transition": "TRAN-ID=PARM-DATE+sufixo; type 01; cat 05; source System; desc Int. for a/c + ACCT-ID; amount mensal; merchant zero/spaces; card XREF; timestamps current.",
+      "required_observation": "TRANSACT output",
+      "decidable_expectation": "Cada cálculo escreve uma transação de sistema com esses MOVEs.",
+      "limits_and_review_notes": "Representação física de PIC 9(04) após MOVE literal 05 requer revisão COBOL, não fixture."
+    },
+    {
+      "id": "INTCALC-OBL-007",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Update de conta em quebra de grupo",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            194,
+            203
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            350,
+            370
+          ]
+        }
+      ],
+      "preconditions": "Mudança de conta depois da primeira.",
+      "guard_or_transition": "1050 soma WS-TOTAL-INT ao saldo, zera credit/debit e reescreve.",
+      "required_observation": "ACCOUNT",
+      "decidable_expectation": "Contas de grupos anteriores ao último são atualizadas na quebra.",
+      "limits_and_review_notes": "Não é update por cada categoria."
+    },
+    {
+      "id": "INTCALC-OBL-008",
+      "capability": "CBACT04C/INTCALC",
+      "title": "Última conta no EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            188,
+            222
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            325,
+            348
+          ]
+        },
+        {
+          "path": "app/cbl/CBACT04C.cbl",
+          "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+          "lines": [
+            350,
+            370
+          ]
+        }
+      ],
+      "preconditions": "EOF normal após registros.",
+      "guard_or_transition": "READ status 10 move END-OF-FILE=Y dentro de iteração iniciada com END=N; PERFORM UNTIL termina antes do ELSE externo.",
+      "required_observation": "ACCOUNT do último grupo",
+      "decidable_expectation": "Pela fonte, o update final 1050 é inalcançável no EOF normal; última conta não recebe total nessa rotina.",
+      "limits_and_review_notes": "Achado estático para revisão; não confirmado por execução."
+    },
+    {
+      "id": "TRANREPT-OBL-001",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Contexto JCL e arquivos",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            29,
+            57
+          ]
+        },
+        {
+          "path": "app/jcl/TRANREPT.jcl",
+          "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+          "lines": [
+            19,
+            80
+          ]
+        },
+        {
+          "path": "app/proc/REPROC.prc",
+          "sha256": "4562039d1c7b90f05cc946dd1cd1cb93571bb279740c5c9777acfa3ea23fbc9f",
+          "lines": [
+            18,
+            28
+          ]
+        }
+      ],
+      "preconditions": "JCL TRANREPT.",
+      "guard_or_transition": "REPROC descarrega, SORT ordena por card e filtra por proc date, STEP10 roda CBTRN03C com arquivos de lookup e report.",
+      "required_observation": "TRANFILE efetivo e TRANREPT",
+      "decidable_expectation": "Modelo espera input ordenado por cartão para que quebras façam sentido.",
+      "limits_and_review_notes": "JCL não foi executado; datas do SORT podem divergir do DATEPARM."
+    },
+    {
+      "id": "TRANREPT-OBL-002",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "DATEPARM e filtro textual",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            122,
+            125
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            219,
+            243
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            178
+          ]
+        }
+      ],
+      "preconditions": "DATEPARM disponível.",
+      "guard_or_transition": "Lê start/end X(10); status 00 permite filtro TRAN-PROC-TS(1:10) >= start e <= end.",
+      "required_observation": "mensagem e detalhes",
+      "decidable_expectation": "Apenas registros no intervalo textual são candidatos a detalhe.",
+      "limits_and_review_notes": "Sem validação calendárica; NEXT SENTENCE precisa revisão."
+    },
+    {
+      "id": "TRANREPT-OBL-003",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Leitura TRANFILE e EOF",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            170,
+            206
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            248,
+            272
+          ]
+        }
+      ],
+      "preconditions": "Arquivos abertos e DATEPARM ok.",
+      "guard_or_transition": "READ status 00 processa; status 10 marca EOF; outros abendem.",
+      "required_observation": "relatório ou abend",
+      "decidable_expectation": "O loop é limitado por registros status 00 + leitura EOF.",
+      "limits_and_review_notes": "Arquivo vazio deixa campos de transação sem expectativa decidível."
+    },
+    {
+      "id": "TRANREPT-OBL-004",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Quebra por cartão e lookups",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            181,
+            196
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            484,
+            512
+          ]
+        },
+        {
+          "path": "app/cpy/CVACT03Y.cpy",
+          "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+          "lines": [
+            4,
+            8
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA03Y.cpy",
+          "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+          "lines": [
+            4,
+            7
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA04Y.cpy",
+          "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+          "lines": [
+            4,
+            9
+          ]
+        }
+      ],
+      "preconditions": "Transação no intervalo.",
+      "guard_or_transition": "Em card novo escreve total anterior se não primeira, lê XREF; para todo registro lê tipo e categoria; chave ausente abende.",
+      "required_observation": "detalhe ou abend",
+      "decidable_expectation": "Detalhe usa account id e descrições dos arquivos de referência.",
+      "limits_and_review_notes": "Não há linha de erro/rejeição para lookup ausente."
+    },
+    {
+      "id": "TRANREPT-OBL-005",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Cabeçalhos e paginação",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            274,
+            290
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            324,
+            341
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            4,
+            49
+          ]
+        }
+      ],
+      "preconditions": "Primeiro detalhe ou boundary.",
+      "guard_or_transition": "Primeiro detalhe escreve headers com date range; quando MOD(line-counter,20)=0 escreve page total e headers.",
+      "required_observation": "linhas de relatório",
+      "decidable_expectation": "Headers contêm DALYREPT, Daily Transaction Report, Date Range e colunas do copybook.",
+      "limits_and_review_notes": "Page-size conta linhas de header/totais; não é 20 detalhes."
+    },
+    {
+      "id": "TRANREPT-OBL-006",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Linha de detalhe",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            361,
+            374
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            15,
+            31
+          ]
+        }
+      ],
+      "preconditions": "Lookups concluídos.",
+      "guard_or_transition": "Move id, account, type code/desc, category code/desc, source e amount para detail.",
+      "required_observation": "TRANREPT detail",
+      "decidable_expectation": "Cada transação processada gera uma linha com esses campos.",
+      "limits_and_review_notes": "Edição monetária é a do PIC; sem arredondamento inventado."
+    },
+    {
+      "id": "TRANREPT-OBL-007",
+      "capability": "CBTRN03C/TRANREPT",
+      "title": "Totais e EOF duplicável",
+      "source_anchors": [
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            287,
+            322
+          ]
+        },
+        {
+          "path": "app/cbl/CBTRN03C.cbl",
+          "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+          "lines": [
+            197,
+            203
+          ]
+        },
+        {
+          "path": "app/cpy/CVTRA07Y.cpy",
+          "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+          "lines": [
+            50,
+            66
+          ]
+        }
+      ],
+      "preconditions": "Detalhes acumulados.",
+      "guard_or_transition": "Detalhe soma TRAN-AMT a page/account; page total soma ao grand e zera page; no EOF ramo fonte soma TRAN-AMT corrente antes dos totais finais.",
+      "required_observation": "Page/Account/Grand Total",
+      "decidable_expectation": "Totais seguem esses acumuladores; no EOF normal há risco sustentado de duplicar o último TRAN-AMT em memória.",
+      "limits_and_review_notes": "Sem expectativa para nenhum registro anterior."
+    }
+  ]
+}

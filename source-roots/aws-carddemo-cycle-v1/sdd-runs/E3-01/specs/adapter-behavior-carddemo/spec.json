@@ -1,0 +1,51 @@
+{
+  "feature_name": "adapter-behavior-carddemo",
+  "artifact_type": "adapter-behavior",
+  "pipeline_stage": 7,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/adapter-behavior-carddemo/requirements.md",
+  "upstream_specs": [
+    "specs/api-contract-carddemo-r3/spec.json"
+  ],
+  "created_at": "2026-09-13T18:14:38-03:00",
+  "updated_at": "2026-09-13T18:45:13.266651-03:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": false
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": false,
+    "gate_review_date": null,
+    "blocking_gaps": [],
+    "review": null
+  },
+  "ready_for_implementation": false,
+  "mandatory_tracks": [
+    "posting",
+    "interest",
+    "reporting"
+  ],
+  "bridge": "local-explicit-adapter-not-native-slash-command:stage7",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init --stage 7",
+    "pipeline-sdd-v3 stage 7 Adapter Behavior Spec"
+  ]
+}

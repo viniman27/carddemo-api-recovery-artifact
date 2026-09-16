@@ -1,0 +1,538 @@
+{
+  "kind": "unified-preflight-v3-evidence-manifest",
+  "status": "completed_success",
+  "scope": "technical preflight only; no campaign authorization; no data/request changes",
+  "output": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean",
+  "report": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/unified-preflight-report.json",
+  "candidateManifest": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/candidate-manifest.json",
+  "testCommand": "../../P2a/.venv/bin/python -m unittest discover -s tests -v",
+  "preflightCommand": "../../P2a/.venv/bin/python unified_preflight_cli.py --mode preflight --output evidence-20260915T-v3-fixed-current5x2-gcovclean",
+  "verifiedCounts": {
+    "checks_total": 10,
+    "technical_smoke_cases": 5,
+    "union_reset_cases": 5,
+    "http_completed": 10,
+    "checker_ok": 10,
+    "reached_cobol": 10,
+    "business_gcda_present": 10,
+    "gcov_prefix_observed": 10,
+    "admissible_preparatory_coverage": 10,
+    "gcov_valid_clean": 10,
+    "gcov_stderr_clean": 10,
+    "gcov_exit_zero": 10,
+    "coverage_artifact_links_complete": 10,
+    "gcno_gcda_complete_pairs": 10,
+    "program_exit_zero": 6,
+    "program_exit_nonzero_positive_preserved": 4,
+    "program_exit_signal": 0,
+    "reset_rows_total": 5,
+    "reset_rows_verified": 5,
+    "reset_rows_effective_resource_hashes_compared": 5,
+    "reset_rows_with_resource_paths": 5,
+    "reset_resource_paths_total_across_rows": 47,
+    "generated_p2b_py_compile_exit": 0,
+    "generated_p2b_py_compile_stderr": ""
+  },
+  "coverageRows": [
+    {
+      "case_id": "T4-0001",
+      "path": "/posting",
+      "status": 200,
+      "programExit": 4,
+      "program": "CBTRN02C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 58.64,
+      "linesTotal": 1134,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-pc01t_cl"
+    },
+    {
+      "case_id": "T4-0002",
+      "path": "/interest",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBACT04C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 57.43,
+      "linesTotal": 1043,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-cpctxoof"
+    },
+    {
+      "case_id": "T4-0003",
+      "path": "/reporting",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBTRN03C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 56.03,
+      "linesTotal": 1244,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-b2i6i0zv"
+    },
+    {
+      "case_id": "T4-0004",
+      "path": "/interest",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBACT04C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 57.43,
+      "linesTotal": 1043,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nq696ab9"
+    },
+    {
+      "case_id": "T4-0005",
+      "path": "/posting",
+      "status": 200,
+      "programExit": 4,
+      "program": "CBTRN02C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 58.64,
+      "linesTotal": 1134,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dcodsgxh"
+    },
+    {
+      "case_id": "T4-0001",
+      "path": "/posting",
+      "status": 200,
+      "programExit": 4,
+      "program": "CBTRN02C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 58.64,
+      "linesTotal": 1134,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3acdkbf0"
+    },
+    {
+      "case_id": "T4-0002",
+      "path": "/interest",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBACT04C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 57.43,
+      "linesTotal": 1043,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-v10czkbl"
+    },
+    {
+      "case_id": "T4-0003",
+      "path": "/reporting",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBTRN03C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 56.03,
+      "linesTotal": 1244,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-57wey0ea"
+    },
+    {
+      "case_id": "T4-0004",
+      "path": "/interest",
+      "status": 200,
+      "programExit": 0,
+      "program": "CBACT04C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 57.43,
+      "linesTotal": 1043,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-vm2sx18_"
+    },
+    {
+      "case_id": "T4-0005",
+      "path": "/posting",
+      "status": 200,
+      "programExit": 4,
+      "program": "CBTRN02C",
+      "admissibility": "admissible_preparatory",
+      "linesPercent": 58.64,
+      "linesTotal": 1134,
+      "stderrClean": true,
+      "pairsComplete": true,
+      "pairCount": 1,
+      "runDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-c4oqwlu2"
+    }
+  ],
+  "resetComparisonRows": [
+    {
+      "case_id": "T4-0001",
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-pc01t_cl",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3acdkbf0",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-pc01t_cl/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-3acdkbf0/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee"
+      },
+      "businessGcdaBothPresent": true,
+      "firstResourcePreHashes": {
+        "ACCTFILE": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+        "TRANFILE": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+      },
+      "firstResourcePostHashes": {
+        "ACCTFILE": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+        "ACCTFILE.after": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+        "DALYREJS": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+        "TCATBALF.after": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+        "TRANFILE": "2d8b259a2f8c6cdaa0951a481e413864b679506f2e9c2cb06cafc2c004efa691",
+        "TRANFILE.after": "efc9045950c9e69e9e6bbb14e7269bcc6cf1d8f4a7b293b6deb4c4e2445cab02",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+        "XREFFILE.after": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee",
+        "write-observations.log": "c4d9d5b4ca2492ba132ac3aece16d5cff6e5f5d57edf59335bec5b6b71df9985"
+      },
+      "secondResourcePreHashes": {
+        "ACCTFILE": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+        "TRANFILE": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+      },
+      "secondResourcePostHashes": {
+        "ACCTFILE": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+        "ACCTFILE.after": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+        "DALYREJS": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+        "TCATBALF.after": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+        "TRANFILE": "800638b2fa2aab96c48f580294c027516b67d21c7ac344cf46bfc32a4f95d0d9",
+        "TRANFILE.after": "df02c50b6842e9de63663936cfe8f4fc929067304f38371e3962ae426bf97bc7",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+        "XREFFILE.after": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee",
+        "write-observations.log": "d02e8ba91947ce80b8da0ddc398858088c7a57dcd3c3046e2113e5adb43874b6"
+      },
+      "resourcePathsCompared": [
+        "ACCTFILE",
+        "ACCTFILE.after",
+        "DALYREJS",
+        "DALYTRAN",
+        "TCATBALF",
+        "TCATBALF.after",
+        "TRANFILE",
+        "TRANFILE.after",
+        "XREFFILE",
+        "XREFFILE.after",
+        "gcov/CBTRN02C-CBTRN02C.gcda",
+        "write-observations.log"
+      ],
+      "resourcePathSetComparison": "integral_pre_and_post_sets",
+      "effectiveResourceHashesCompared": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0002",
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-cpctxoof",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-v10czkbl",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-cpctxoof/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-v10czkbl/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "businessGcdaBothPresent": true,
+      "firstResourcePreHashes": {
+        "ACCTFILE": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+      },
+      "firstResourcePostHashes": {
+        "ACCTFILE": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "TRANSACT": "03f0b3ea4734186a83a4d46d9bcc9a3503e05aedebb443faad9a1f5ee8c607ec",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "secondResourcePreHashes": {
+        "ACCTFILE": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+      },
+      "secondResourcePostHashes": {
+        "ACCTFILE": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "TRANSACT": "56c37097ed4d928a2911a0766c89d3a44a31da253df4c6f6bed9ce78ba3b3058",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "resourcePathsCompared": [
+        "ACCTFILE",
+        "DISCGRP",
+        "PARMFILE",
+        "TCATBALF",
+        "TRANSACT",
+        "XREFFILE",
+        "XREFFILE.1",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda"
+      ],
+      "resourcePathSetComparison": "integral_pre_and_post_sets",
+      "effectiveResourceHashesCompared": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0003",
+      "track": "reporting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-b2i6i0zv",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-57wey0ea",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-b2i6i0zv/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/reporting-57wey0ea/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN03C.gcda": "2c59c661e550eb3b6073418af22c2b8bbe9a3180c978037cbea73b837f9cbb40"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN03C.gcda": "2c59c661e550eb3b6073418af22c2b8bbe9a3180c978037cbea73b837f9cbb40"
+      },
+      "businessGcdaBothPresent": true,
+      "firstResourcePreHashes": {
+        "CARDXREF": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "DATEPARM": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "TRANCATG": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "TRANFILE": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "TRANTYPE": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+      },
+      "firstResourcePostHashes": {
+        "CARDXREF": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "DATEPARM": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "TRANCATG": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "TRANFILE": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "TRANREPT": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469",
+        "TRANTYPE": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "gcov/CBTRN03C.gcda": "2c59c661e550eb3b6073418af22c2b8bbe9a3180c978037cbea73b837f9cbb40"
+      },
+      "secondResourcePreHashes": {
+        "CARDXREF": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "DATEPARM": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "TRANCATG": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "TRANFILE": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "TRANTYPE": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128"
+      },
+      "secondResourcePostHashes": {
+        "CARDXREF": "e637ca265e7a7a2847f5ad906ef24f83ae8afe38ffebe712d134e5fed3af1656",
+        "DATEPARM": "5a47e35736982d76dd9c9125257df9cfd6511b8fce3a2ec07f588aa5badd8237",
+        "TRANCATG": "1489e2f39a42b03c128e176f84308c3b37d68939ea3554ad130f71bbca8d2453",
+        "TRANFILE": "f4950998dcf5ae388651921faec4e3ce7de601322c377ec3102e71d4aa19c3b7",
+        "TRANREPT": "e9361063d269b1830e16d402efd62d978417598c64d469989efaefb7284d1469",
+        "TRANTYPE": "40508f2dd4dc7c4e759df9fc57fcff4ffe00925081aef2fee9fcb584d7ed8128",
+        "gcov/CBTRN03C.gcda": "2c59c661e550eb3b6073418af22c2b8bbe9a3180c978037cbea73b837f9cbb40"
+      },
+      "resourcePathsCompared": [
+        "CARDXREF",
+        "DATEPARM",
+        "TRANCATG",
+        "TRANFILE",
+        "TRANREPT",
+        "TRANTYPE",
+        "gcov/CBTRN03C.gcda"
+      ],
+      "resourcePathSetComparison": "integral_pre_and_post_sets",
+      "effectiveResourceHashesCompared": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0004",
+      "track": "interest",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nq696ab9",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-vm2sx18_",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-nq696ab9/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/interest-vm2sx18_/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "businessGcdaBothPresent": true,
+      "firstResourcePreHashes": {
+        "ACCTFILE": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+      },
+      "firstResourcePostHashes": {
+        "ACCTFILE": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "TRANSACT": "fc3b6fa6c1e1f39f542802926f8614485ebe5581b84b60310f416df23590fa41",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "secondResourcePreHashes": {
+        "ACCTFILE": "6a8a9cbbc21dfa19153a9c03f13841b074f6a98a222f221e5be7da2ed8b76c6a",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc"
+      },
+      "secondResourcePostHashes": {
+        "ACCTFILE": "411e57fe24ab48782e4d1bd85f311cdd738f5eaeee83ede6398097b78ff4c03e",
+        "DISCGRP": "9288e2a411603aa066052e4c57cba9b585f32dd4388afcdd7bffd20827f1f26e",
+        "PARMFILE": "6e4cb321820e1046693df8d5ce43726b6f740a902030fb18e39ef3a9e25aafdc",
+        "TCATBALF": "c4a169d921ea88e7875ec31a30beeef4197843203df3c74d4de21be6e2ef53ec",
+        "TRANSACT": "c237a1341304c4b265b2a87c227ed8707c110bb312e76ab4c47b2f278cab66c1",
+        "XREFFILE": "c5e8421089e50217dae204227e85c441164a93495323030ba2b4b4cc224b2b67",
+        "XREFFILE.1": "167837f50b32a7a26695de9cd05d1c3087118043bb2e28a1c2049ad9995538cc",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda": "3927a26e685f038fab5001134b8bdc28f524abe3ddd9b5fb9fc3baa28384e616"
+      },
+      "resourcePathsCompared": [
+        "ACCTFILE",
+        "DISCGRP",
+        "PARMFILE",
+        "TCATBALF",
+        "TRANSACT",
+        "XREFFILE",
+        "XREFFILE.1",
+        "gcov/CBACT04C.dylib-CBACT04C.gcda"
+      ],
+      "resourcePathSetComparison": "integral_pre_and_post_sets",
+      "effectiveResourceHashesCompared": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    },
+    {
+      "case_id": "T4-0005",
+      "track": "posting",
+      "firstRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dcodsgxh",
+      "secondRunDir": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-c4oqwlu2",
+      "distinctRunDirs": true,
+      "firstGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-dcodsgxh/gcov",
+      "secondGcovPrefix": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/P3/unified-preflight-v3/evidence-20260915T-v3-fixed-current5x2-gcovclean/isolated-cycle/aws-carddemo-cycle-v1/P2b/runs/posting-c4oqwlu2/gcov",
+      "distinctGcovPrefixes": true,
+      "firstBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee"
+      },
+      "secondBusinessGcda": {
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee"
+      },
+      "businessGcdaBothPresent": true,
+      "firstResourcePreHashes": {
+        "ACCTFILE": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+        "TRANFILE": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+      },
+      "firstResourcePostHashes": {
+        "ACCTFILE": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+        "ACCTFILE.after": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+        "DALYREJS": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+        "TCATBALF.after": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+        "TRANFILE": "a97a05b8c0ab219af3fae73bceff1f5d3e6987162390fe434426d3b4d931e950",
+        "TRANFILE.after": "61836ec9ff5280d7c14ec1fbd91ace00a6592dbefdcdb0e06b74b2c2750fdbd9",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+        "XREFFILE.after": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee",
+        "write-observations.log": "431f402493fd804ea7c6eceb3759fd494bedf564427ebd3c2e55e61743a92751"
+      },
+      "secondResourcePreHashes": {
+        "ACCTFILE": "2bf173c203b6d935f0005dc4192e374c0d74c96a72e969ec88eb7b7b2e863199",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "62d8d5251078ef18e2faf71f55acabe6cb468ddc8dd1678d45ffae8e14a0642f",
+        "TRANFILE": "8ff68f8600efee5886f673c52363ec2aee24a0c4f60e5a50f9af29d708d0e31f",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023"
+      },
+      "secondResourcePostHashes": {
+        "ACCTFILE": "3f3774c9922b85dd74e06d03ecc5b39c5bde8ced8784a06359f5f41cb0890b22",
+        "ACCTFILE.after": "ac7ceab3d3d0adc04bfa3a3ae947189f606bb31e62e53f2cad6f4b16d85aa955",
+        "DALYREJS": "f8fd3b48155f77a976c043a6e8a97a09549bb9279ebf1a51f53165d9d08041dd",
+        "DALYTRAN": "c1b8044fc500000f57518660c61ee1f45e037395703d25941d71e669b2957b88",
+        "TCATBALF": "9b17d1ceb94355d2f8878cfd7130aabf64287eb507f7b76beee9a95125dacef1",
+        "TCATBALF.after": "d064d45e7a4024d3d029d38c1664f6b6f2b03a62dd901a59a54856b6ae706024",
+        "TRANFILE": "57b5fe864fc63a43eef92440e1a3f4b2274d0a38e036470ce55d0779e9b6f300",
+        "TRANFILE.after": "c065a11b28327a87457ff82e36e033b19c1b3f0005e71532b7f973395bb106d6",
+        "XREFFILE": "63fab945fdfc6af66418c04dbf1a861a844e81c9eb3b43638d314cfd0cadf023",
+        "XREFFILE.after": "d4b33468f8c0fd1283d897701866f78fb616a0d15fa0755a52acdd5132853fa3",
+        "gcov/CBTRN02C-CBTRN02C.gcda": "d78c769ef7a7c4a4184adf59dca83cb5f94f9d47e132c3b123901e37bf895bee",
+        "write-observations.log": "32c9964e890151f9a83547f1264745dcece63ca712dedf55c1bcd29f06448c4f"
+      },
+      "resourcePathsCompared": [
+        "ACCTFILE",
+        "ACCTFILE.after",
+        "DALYREJS",
+        "DALYTRAN",
+        "TCATBALF",
+        "TCATBALF.after",
+        "TRANFILE",
+        "TRANFILE.after",
+        "XREFFILE",
+        "XREFFILE.after",
+        "gcov/CBTRN02C-CBTRN02C.gcda",
+        "write-observations.log"
+      ],
+      "resourcePathSetComparison": "integral_pre_and_post_sets",
+      "effectiveResourceHashesCompared": true,
+      "counterHashesCompared": true,
+      "resetVerifiedBeyondDifferentDirs": true
+    }
+  ],
+  "limits": [
+    "No campaign authorization is created by this preflight.",
+    "Union qualification is dependent smoke only and not official T4.",
+    "Absence of business .gcda is inadmissible, not zero coverage.",
+    "gcov stderr/return-code/stamp mismatch is inadmissible, not zero coverage.",
+    "program_exit=4 is preserved as a normal non-zero precondition/status, not rewritten to success.",
+    "Manifest is candidate-only and contains no campaign authorization."
+  ]
+}

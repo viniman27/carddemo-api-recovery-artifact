@@ -1,0 +1,64 @@
+{
+  "feature_name": "pipeline-scope-carddemo",
+  "artifact_type": "pipeline-scope",
+  "pipeline_stage": 1,
+  "capability": "unselected-stage-1-scope-only",
+  "run_id": "E3-01",
+  "artifact_path": "specs/pipeline-scope-carddemo/requirements.md",
+  "upstream_specs": [],
+  "created_at": "2026-09-11T13:46:39-03:00",
+  "updated_at": "2026-09-11T16:55:15.697309+00:00",
+  "language": "en",
+  "phase": "requirements-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": false,
+      "approved": false
+    },
+    "tasks": {
+      "generated": false,
+      "approved": false
+    }
+  },
+  "gate": {
+    "completeness_gate_passed": true,
+    "gate_review_date": "2026-09-11",
+    "blocking_gaps": [],
+    "review": {
+      "decision": "approve",
+      "reviewer": "Researcher",
+      "context": {
+        "run_id": "E3-01",
+        "capability": "unselected-stage-1-scope-only",
+        "pipeline_stage": 1,
+        "artifact_type": "pipeline-scope"
+      },
+      "artifact": {
+        "path": "specs/pipeline-scope-carddemo/requirements.md",
+        "sha256": "1362fab5d55b77ef6121328606ae974295cd5723849520e9a246f4bd45e64cc9"
+      },
+      "upstream_specs": [],
+      "authorization": {
+        "path": "reviews/stage-1-authorization.json",
+        "sha256": "0ec9d89962c088507775523f266816b5c3c13f7631c7a6409b45bc13352542da"
+      }
+    }
+  },
+  "ready_for_implementation": false,
+  "bridge": "local-explicit-adapter-not-native-slash-command",
+  "roots": {
+    "RUN_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-cycle-v1/sdd-runs/E3-01",
+    "FRAMEWORK_ROOT": "<REDACTED_LOCAL_PATH>/pipeline-sdd-v3/pipeline",
+    "CORPUS_ROOT": "<REDACTED_LOCAL_PATH>/casos/aws-carddemo-preparation/research-corpus"
+  },
+  "adapted_from": [
+    "/sdd:spec-init",
+    "pipeline-sdd-v3 stage 1 Pipeline Scope Spec"
+  ],
+  "generation_evidence": "prepared/pipeline-scope-carddemo/execution/metadata.json",
+  "artifact_sha256": "1362fab5d55b77ef6121328606ae974295cd5723849520e9a246f4bd45e64cc9"
+}

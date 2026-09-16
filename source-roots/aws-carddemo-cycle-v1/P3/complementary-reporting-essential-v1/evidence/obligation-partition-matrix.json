@@ -1,0 +1,118 @@
+[
+  {
+    "caseStatuses": {
+      "date-boundaries-in-out-v1": "pass"
+    },
+    "evidence": "detail order contains start-date record",
+    "group": "date",
+    "notCountsProxy": true,
+    "obligation": "R-DATE-START",
+    "partition": "inclusive start boundary",
+    "qualification": "source-grounded",
+    "relatedCases": [
+      "date-boundaries-in-out-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "date-boundaries-in-out-v1": "pass"
+    },
+    "evidence": "detail order contains end-date record",
+    "group": "date",
+    "notCountsProxy": true,
+    "obligation": "R-DATE-END",
+    "partition": "inclusive end boundary",
+    "qualification": "source-grounded",
+    "relatedCases": [
+      "date-boundaries-in-out-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "date-boundaries-in-out-v1": "pass"
+    },
+    "evidence": "before-range id absent from details",
+    "group": "date",
+    "notCountsProxy": true,
+    "obligation": "R-DATE-OUT-BEFORE",
+    "partition": "exclude before range",
+    "qualification": "source-grounded",
+    "relatedCases": [
+      "date-boundaries-in-out-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "date-boundaries-in-out-v1": "pass"
+    },
+    "evidence": "after-range id absent from details",
+    "group": "date",
+    "notCountsProxy": true,
+    "obligation": "R-DATE-OUT-AFTER",
+    "partition": "exclude after range",
+    "qualification": "source-grounded",
+    "relatedCases": [
+      "date-boundaries-in-out-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "empty-in-range-v1": "pass"
+    },
+    "evidence": "known empty/no-detail output only, no positive total claim",
+    "group": "date",
+    "notCountsProxy": true,
+    "obligation": "R-EMPTY",
+    "partition": "empty in-range partition",
+    "qualification": "runtime-observed",
+    "relatedCases": [
+      "empty-in-range-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "card-break-two-groups-v1": "pass"
+    },
+    "evidence": "detail order across two cards; totals guarded",
+    "group": "grouping",
+    "notCountsProxy": true,
+    "obligation": "R-GROUP-CARDBREAK",
+    "partition": "card/account break partition",
+    "qualification": "runtime-observed/source-limited",
+    "relatedCases": [
+      "card-break-two-groups-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "pagination-threshold-20-v1": "pass"
+    },
+    "evidence": "20 detail records and raw pagination records preserved",
+    "group": "pagination",
+    "notCountsProxy": true,
+    "obligation": "R-PAGINATION-20",
+    "partition": "WS-PAGE-SIZE=20 threshold",
+    "qualification": "source-grounded/runtime-observed",
+    "relatedCases": [
+      "pagination-threshold-20-v1"
+    ]
+  },
+  {
+    "caseStatuses": {
+      "card-break-two-groups-v1": "pass",
+      "date-boundaries-in-out-v1": "pass",
+      "pagination-threshold-20-v1": "pass"
+    },
+    "evidence": "not used as final arithmetic oracle because source adds stale TRAN-AMT on EOF path",
+    "group": "totals",
+    "notCountsProxy": true,
+    "obligation": "R-TOTALS-EOF-GUARD",
+    "partition": "EOF totals branch qualification",
+    "qualification": "inconclusive-by-source",
+    "relatedCases": [
+      "date-boundaries-in-out-v1",
+      "card-break-two-groups-v1",
+      "pagination-threshold-20-v1"
+    ]
+  }
+]

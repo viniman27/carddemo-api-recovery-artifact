@@ -1,0 +1,102 @@
+{
+  "cases": [
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-posting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "SDD-SMOKE:E3-01-stage6r3",
+      "parameters": {
+        "track": "posting"
+      },
+      "provenance": [
+        "SDD-SMOKE:E3-01-stage6r3:posting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/posting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "SDD-SMOKE",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-interest",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "SDD-SMOKE:E3-01-stage6r3",
+      "parameters": {
+        "track": "interest"
+      },
+      "provenance": [
+        "SDD-SMOKE:E3-01-stage6r3:interest"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/interest"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "SDD-SMOKE",
+      "timeout_seconds": 5.0
+    },
+    {
+      "case_id": "SDD-SMOKE-E3-01-stage6r3-reporting",
+      "expectation": {
+        "checks": {
+          "status": [
+            200,
+            400,
+            500,
+            503
+          ]
+        },
+        "expectation_id": "status"
+      },
+      "origin": "SDD-SMOKE:E3-01-stage6r3",
+      "parameters": {
+        "track": "reporting"
+      },
+      "provenance": [
+        "SDD-SMOKE:E3-01-stage6r3:reporting"
+      ],
+      "request": {
+        "body_b64": "e30=",
+        "body_kind": "json",
+        "headers": [],
+        "method": "POST",
+        "path": "/reporting"
+      },
+      "resource_package_id": "fixture-copy-current",
+      "sequence": [],
+      "suite_id": "SDD-SMOKE",
+      "timeout_seconds": 5.0
+    }
+  ],
+  "suite_freeze_sha256": "7a2ea9a5fa1176166cd58acbe7653e280ee97891da2135324b7294da60c46c73",
+  "suite_id": "SDD-SMOKE"
+}
